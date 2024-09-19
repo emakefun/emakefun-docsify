@@ -1,0 +1,3 @@
+- :globe_with_meridians:
+  - [:uk: English](/en/)
+  - [:cn: 简体中文](/zh-cn/)
