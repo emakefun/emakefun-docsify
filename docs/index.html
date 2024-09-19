@@ -5,36 +5,33 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css" />
-    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css" />
+    <link rel="stylesheet" href="//unpkg.com/@sujaykumarh/docsify-plugin-footer/dist/plugin.min.css" />
+    <script>
+      if (typeof navigator.serviceWorker !== 'undefined') {
+        navigator.serviceWorker.register('sw.js')
+      }
+    </script>
   </head>
   <body>
     <style>
-      img[src*="?logo"] {
+      img[src*='?logo'] {
         width: 50%;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
       }
-      img {
+      .content img {
         max-height: 400px;
       }
-      .button {
-        padding: 0.75em 1.25em;
-        display: inline-block;
-        line-height: 1;
-        text-decoration: none;
-        white-space: nowrap;
-        cursor: pointer;
-        border: 1px solid #6190e8;
-        border-radius: 5px;
-        background-color: #6190e8;
-        color: #fff !important;
-        outline: none;
-        font-size: 0.75em;
-        font-weight: normal !important;
+      .cover img {
+        width: 80%;
       }
       .markdown-section {
         max-width: 960px;
+      }
+      .docsify-pagination-container {
+        padding: 10px 20px;
+        height: auto;
       }
       code.lang-bash {
         position: relative !important;
@@ -43,43 +40,21 @@
         overflow-y: hidden !important;
       }
       code.lang-bash::before {
-        content: "$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$";
+        content: '$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$\a$';
         position: absolute;
         left: 0;
-      }
-      svg.markmap {
-        width: 100%;
-        height: 500px;
-      }
-      div.markmap {
-        margin: 0 auto;
-        width: 90%;
-        border: 1px solid rgb(0 0 0 / 0.15);
-        border-radius: 8px;
-      }
-      .docsify-pagination-container {
-        padding: 10px 20px 0;
-        height: auto;
-        z-index: 15;
-      }
-      .close .docsify-pagination-container {
-        padding-left: 40px;
       }
       .pagination-item-title {
         font-size: 1em;
       }
-      .pagination-item-subtitle {
-        font-size: 0.85rem;
-      }
-      #gitalk-container {
-        padding-bottom: 100px;
-      }
     </style>
-    <div id="app">加载中…</div>
+    <div id="app"></div>
     <script>
       window.$docsify = {
-        name: "BlockCode Lab",
-        nameLink: "https://github.com/blockcodelab",
+        name: 'emakefun文档中心',
+        coverpage: ['/', '/zh-cn/'],
+        onlyCover: true,
+        loadNavbar: true,
         loadSidebar: true,
         subMaxLevel: 4,
         autoHeader: true,
@@ -88,39 +63,54 @@
 
         search: {
           maxAge: 86400000,
-          paths: "auto",
-          placeholder: "搜索",
-          noData: "找不到结果",
+          paths: 'auto',
+          placeholder: {
+            '/zh-cn/': '搜索',
+            '/': 'Type to search',
+          },
+          noData: {
+            '/zh-cn/': '找不到结果',
+            '/': 'No Results',
+          },
           depth: 2,
           hideOtherSidebarContent: false,
         },
         copyCode: {
-          buttonText: "点击复制",
-          errorText: "错误",
-          successText: "复制",
+          buttonText: {
+            '/zh-cn/': '点击复制',
+            '/': 'Copy to clipboard',
+          },
+          errorText: {
+            '/zh-cn/': '错误',
+            '/': 'Error',
+          },
+          successText: {
+            '/zh-cn/': '复制',
+            '/': 'Copied',
+          },
         },
         pagination: {
-          previousText: "上一篇",
-          nextText: "下一篇",
+          previousText: {
+            '/zh-cn/': '上一篇',
+            '/': 'PREVIOUS',
+          },
+          nextText: {
+            '/zh-cn/': '下一篇',
+            '/': 'NEXT',
+          },
           crossChapter: true,
           crossChapterText: true,
         },
+        customPageFooter: {
+          copyrightYear: '2024',
+          copyrightOwnerName: 'emakefun文档中心',
+          copyrightOwnerLink: 'https://github.com/emakefun/emakefun-docsify/',
+        },
         plugins: [
           function (hook, vm) {
-            hook.doneEach(function () {
-              if (vm.route.path === "/") {
-                const url = document.querySelector(".sidebar-nav li li a").href;
-                window.open(url, "_self");
-              }
-
-              const body = document.querySelector("body");
-              const gitalkContainer = document.getElementById("gitalk-container");
-              if (vm.route.path.includes("/slide/")) {
-                body.classList.add("close");
-                gitalkContainer.style.display = "none";
-              } else {
-                body.classList.remove("close");
-                gitalkContainer.style.display = "inherit";
+            hook.ready(function () {
+              if (vm.route.path === '/') {
+                location.href = '#/zh-cn/';
               }
             });
           },
@@ -128,20 +118,14 @@
       };
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-
     <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
     <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
     <script src="//unpkg.com/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
     <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
     <script src="//unpkg.com/docsify-pangu/lib/pangu.min.js"></script>
-    <script src="//unpkg.com/docsify-slides/dist/docsify-slides.min.js"></script>
+    <script src="//unpkg.com/docsify-bilibili/bilibili.min.js"></script>
+    <script src="//unpkg.com/docsify-footnote/dist/docsify-footnote.min.js"></script>
     <script src="//unpkg.com/@h-hg/docsify-image-caption/dist/docsify-image-caption.min.js"></script>
-    <script src="//unpkg.com/docsify-chat/lib/docsify-chat.min.js"></script>
-
-    <script src="//unpkg.com/markmap-autoloader"></script>
-    <script src="//unpkg.com/docsify-terminal-block"></script>
-    <script src="//unpkg.com/docsify-markmap.js/docsify-markmap.min.js"></script>
-
-    <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+    <script src="//unpkg.com/@sujaykumarh/docsify-plugin-footer/dist/plugin.min.js"></script>
   </body>
 </html>
