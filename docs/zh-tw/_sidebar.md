@@ -1,4 +1,5 @@
 <!-- docs/_sidebar.md -->
+![emakefun](/zh-cn/_media/favicon.jpg)
 
 - [首页](/zh-cn/homepage.md)
 
@@ -149,8 +150,8 @@
     - [microbit micropython介绍](/zh-cn/micro_bit/microbit_micropython/microbit_micropython.md)
     - [io:bit](/zh-cn/micro_bit/iot_bit.md)
     - [sensor:bit](/zh-cn/micro_bit/sensorbit.md)
-    - [motor:bit] (/zh-cn/micro_bit/motorbit.md)
-    - [joysitck:bit] (/zh-cn/micro_bit/joystickbit.md)
+    - [motor:bit](/zh-cn/micro_bit/motorbit.md)
+    - [joysitck:bit](/zh-cn/micro_bit/joystickbit.md)
 
 - 乐鑫esp系类
     - ESP32 Dev Kit主板

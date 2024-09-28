@@ -1,9 +1,15 @@
+<!-- docs/_sidebar.md -->
+![emakefun](/zh-cn/_media/favicon.jpg)
+
 - [首页](/zh-cn/homepage.md)
 
 - 软件介绍
-  - [软件下载](/zh-cn/software_download.md)
-  - [Mixly2.0使用方法](/zh-cn/mixly.md)
-  - [Thonny使用方法](/zh-cn/details.md)
+  - [软件下载](/zh-cn/software/software_download.zh-CN.md)
+  - [ArduinoIDE2.0介绍](/zh-cn/software/arduino_ide.zh-CN.md)
+  - [Mixly2.0使用介绍](/zh-cn/software/mixly.zh-CN.md)
+  - [Mind+使用介绍](/zh-cn/software/)
+  - [Thonny使用介绍](/zh-cn/software/thonny/thonny.zh-CN.md)
+  - [手机编程软件介绍](/zh-cn/software/)
 
 - 驱动安装
   - [Arduino官方驱动安装](/zh-cn/details.md)
@@ -15,7 +21,7 @@
   - 基础输入模块
     - [按键模块](/zh-cn/gallery.md)
     - [触摸模块](/zh-cn/gallery.md)
-    - [触碰模块](/zh-cn/gallery.md)
+    - [碰撞开关](/zh-cn/gallery.md)
     - [旋转电位器](/zh-cn/gallery.md)
     - [滑动变阻器](/zh-cn/gallery.md)
     - [旋转编码器](/zh-cn/gallery.md)
@@ -34,35 +40,46 @@
     - [LM35温度传感器](/zh-cn/gallery.md)
     - [NL50温度传感器](/zh-cn/gallery.md)
     - [DS18B20温度传感器](/zh-cn/gallery.md)
+    - [火焰传感器](/zh-cn/ph2.0_sensors/sensors/flame_sensor.md)
+    - [土壤湿度传感器](/zh-cn/ph2.0_sensors/sensors/soil_moisture_sensor.md)
+    - [雨滴传感器](/zh-cn/ph2.0_sensors/sensors/water_droplets_sensor.md)
+    - [水深传感器](/zh-cn/ph2.0_sensors/sensors/water_depth_sensor.md)
+    - [气体传感器](/zh-cn/ph2.0_sensors/sensors/mq_gas_sensor.md)
+    - [人体热释电传感器](/zh-cn/ph2.0_sensors/sensors/human_body_sensor.md)
+    - [磁簧开关](/zh-cn/ph2.0_sensors/sensors/magnetic-switch_sensor.md)
+    - [霍尔开关](/zh-cn/ph2.0_sensors/sensors/magnetic-switch_sensor.md)
+    - [灰度传感器](/zh-cn/ph2.0_sensors/sensors/grayscale_sensor.md)
+    - [震动传感器](/zh-cn/ph2.0_sensors/sensors/shock_sensor.md)
+    - [四向倾斜开关](/zh-cn/ph2.0_sensors/sensors/tilt_switch_sensor.md)
+    - [压力传感器](/zh-cn/ph2.0_sensors/sensors/pressure_sensor.md
+    - [RGB超声波传感器](/zh-cn/ph2.0_sensors/sensors/rus_04.md)
     - [红外接收模块](/zh-cn/sensors/irReceiverModel.md)
     - [红外避障](/zh-cn/gallery.md)
-    - [红外寻光模块](/zh-cn/gallery.md)
-    - [红外循迹模块](/zh-cn/gallery.md)
+    - [红外寻光避障](/zh-cn/gallery.md)
     - [红外计数传感器](/zh-cn/gallery.md)
+    - [红外循迹模块](/zh-cn/ph2.0_sensors/sensors/tracking_sensor.md)
     - [五路红外循迹V3.0](/zh-cn/gallery.md)
     - [单路灰度循迹模块](/zh-cn/gallery.md)
     - [五路灰度循迹模块](/zh-cn/gallery.md)
-    - [触摸矩阵键盘V3.0](/zh-cn/gallery.md)
-    - [触摸钢琴V3.0](/zh-cn/gallery.md)
     - [HX711称重模块](/zh-cn/)
     - [LTR553]()
-    - [VL53L1X激光测距]()
+    - [VL53L1X FOV激光测距]()
     - [PM2.5粉尘传感器]()
 
   - 执行器
-    - [有源蜂鸣器模块](/zh-cn/sensors/actuators/buzzerModel.md)
-    - [无源蜂鸣器模块](/zh-cn/sensors/actuators/passiveBuzzerModel.md)
+    - [有源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/buzzerModel.md)
+    - [无源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/passiveBuzzerModel.md)
     - [空心杯610电机风扇](/zh-cn/ph2.0_sensors/actuators/motorModelV2.md)
+    - [R300C电机风扇]( /zh-cn/ph2.0_sensors/actuators/highPowerMotorModule.md
     - [继电器模块](/zh-cn/ph2.0_sensors/actuators/relayModel.md
     - [激光发射模块](/zh-cn/ph2.0_sensors/actuators/laserEmissionModel.md
     - [振动马达](/zh-cn/ph2.0_sensors/actuators/vibrationMotorModule.md
-    - [R300C电机风扇]( /zh-cn/ph2.0_sensors/actuators/highPowerMotorModule.md
     - [8002A功放喇叭](/zh-cn/ph2.0_sensors/actuators/bigSpeakerModule.md)
     - [舵机扩展](/zh-cn/ph2.0_sensors/actuators/servoModel.md)
     - [单路电机驱动模块](/zh-cn/ph2.0_sensors/actuators/)
     - [双路电机驱动模块](/zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel.md)
     - [四路编码电机驱动模块](/zh-cn/ph2.0_sensors/actuators/)
-    - [I2S-功放模块](/zh-cn/gallery.md)
+    - [I2S音频放大器](/zh-cn/gallery.md)
     - [小型雾化器]()
     - [串行总线舵机驱动板]()
 
@@ -76,9 +93,9 @@
     - [MAX7289_8x8点阵屏](/zh-cn/ph2.0_sensors/displayers/8x8LedDisplay.md)
     - [MAX7289_8x32点阵屏](/zh-cn/ph2.0_sensors/displayers/8x32LedDisplay.md)
     - [交通信号灯](/zh-cn/ph2.0_sensors/displayers/trafficLights.md)
-    - [RGB七彩灯](/zh-cn/ph2.0_sensors/displayers/RGB.md)
-    - [WS2812B-RGB灯环](/zh-cn/ph2.0_sensors/displayers/RGBRing.md)
-    - [中文字库OLED](/zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED.md)
+    - [RGB全彩灯](/zh-cn/ph2.0_sensors/displayers/RGB.md)
+    - [WS2812B RGB灯环](/zh-cn/ph2.0_sensors/displayers/RGBRing.md)
+    - [中文字库0.96OLED](/zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED.md)
 
   - 智能模块
     - [BMP280大气压传感器](/zh-cn/gallery.md)
@@ -136,8 +153,8 @@
     - [microbit micropython介绍](/zh-cn/micro_bit/microbit_micropython/microbit_micropython.md)
     - [io:bit](/zh-cn/micro_bit/iot_bit.md)
     - [sensor:bit](/zh-cn/micro_bit/sensorbit.md)
-    - [motor:bit] (/zh-cn/micro_bit/motorbit.md)
-    - [joysitck:bit] (/zh-cn/micro_bit/joystickbit.md)
+    - [motor:bit](/zh-cn/micro_bit/motorbit.md)
+    - [joysitck:bit](/zh-cn/micro_bit/joystickbit.md)
 
 - 乐鑫esp系类
     - ESP32 Dev Kit主板
@@ -149,7 +166,7 @@
     - [ESP32-CAM_V2]()
     - [esp32-uno]
 - 树莓派
-    - [串行总线舵机调试板](/raspberrypi/RaspberryPi-Sensor-Board/README_zh.md)
+    - [树莓派传感器扩展板](/raspberrypi/RaspberryPi-Sensor-Board/README_zh.md)
     - [树莓派电机驱动板](/raspberrypi/RaspberryPi-MotorDriverBoard/README.md)
 
 - [k210产品](/zh-cn/)
@@ -157,7 +174,7 @@
 - [开源硬件](/zh-cn/)
   - [机器人驱动板]()
 
-- 外设/配件]
+- 外设/配件
   - [PS2手柄]()
   - [PS3蓝牙手柄]()
   - [gamepad](/Arduino/gamepad/README.zh-CN.md)

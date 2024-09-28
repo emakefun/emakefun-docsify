@@ -147,8 +147,8 @@
     - [microbit micropython介绍](/zh-cn/micro_bit/microbit_micropython/microbit_micropython.md)
     - [io:bit](/zh-cn/micro_bit/iot_bit.md)
     - [sensor:bit](/zh-cn/micro_bit/sensorbit.md)
-    - [motor:bit] (/zh-cn/micro_bit/motorbit.md)
-    - [joysitck:bit] (/zh-cn/micro_bit/joystickbit.md)
+    - [motor:bit](/zh-cn/micro_bit/motorbit.md)
+    - [joysitck:bit](/zh-cn/micro_bit/joystickbit.md)
 
 - esp serial
     - ESP32 Dev Kit
@@ -162,8 +162,6 @@
 - RaspberryPi
     - [RaspberryPi Sensor Expansion Board](/raspberrypi/RaspberryPi-Sensor-Board/README_zh.md)
     - [RaspberryPi Motor Driver Board](/raspberrypi/RaspberryPi-MotorDriverBoard/README.md)
-
-- [k210产品](/zh-cn/)
 
 - [open source hardware](/zh-cn/)
   - [robot driver board]()
