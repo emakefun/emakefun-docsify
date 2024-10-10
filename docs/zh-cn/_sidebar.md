@@ -100,7 +100,7 @@
   - 智能模块
     - [BMP280大气压传感器](/zh-cn/gallery.md)
     - [TCS34725颜色识别](/zh-cn/gallery.md)
-    - [NLCS11颜色识别](/zh-cn/ph2.0_sensors/sensors/smart_module/color_recognition_nlcs11.md)
+    - [NLCS11颜色识别](/zh-cn/ph2.0_sensors/sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
     - [QMC5883L电子指南针罗盘模块](/zh-cn/gallery.md)
     - [DS1302时钟模块](/zh-cn/gallery.md)
     - [MPU6050六轴陀螺仪](/zh-cn/gallery.md)
@@ -122,13 +122,13 @@
     - [GPS模块]()
 
 - 电源模块
-    - [5V电源]()
-    - [升降压舵机电源]()
-    - [MPPT太阳能充电板]()
-    - [3.7V升压充电模块](/zh-cn//power_module/3.7v_battery_module.md)
-    - [7.4V充电电池模块] (/zh-cn/power_module/16340_2s_li_battery_module.md)
-    - [双节18650锂电池充电模块](/zh-cn//power_module/18650_2s_li_battery_module.md)
-    - [三节18650锂电池充电模块](/zh-cn//power_module/18650_3s_li_battery_module.md)
+  - [5V电源]()
+  - [升降压舵机电源]()
+  - [MPPT太阳能充电板]()
+  - [3.7V升压充电模块](/zh-cn//power_module/3.7v_battery_module.md)
+  - [7.4V充电电池模块] (/zh-cn/power_module/16340_2s_li_battery_module.md)
+  - [双节18650锂电池充电模块](/zh-cn//power_module/18650_2s_li_battery_module.md)
+  - [三节18650锂电池充电模块](/zh-cn//power_module/18650_3s_li_battery_module.md)
 
 - Arduino产品
   - Nano
@@ -148,26 +148,26 @@
     - [传感器套件介绍]()
 
 - micro:bit
-    - [microbit主板介绍](https://microbit.org/zh-cn/get-started/features/overview/)
-    - [makecode介绍](/zh-cn/microbit/makecode/MakeCode使用介绍.md)
-    - [microbit micropython介绍](/zh-cn/micro_bit/microbit_micropython/microbit_micropython.md)
-    - [io:bit](/zh-cn/micro_bit/iot_bit.md)
-    - [sensor:bit](/zh-cn/micro_bit/sensorbit.md)
-    - [motor:bit](/zh-cn/micro_bit/motorbit.md)
-    - [joysitck:bit](/zh-cn/micro_bit/joystickbit.md)
+  - [microbit主板介绍](https://microbit.org/zh-cn/get-started/features/overview/)
+  - [makecode介绍](/zh-cn/microbit/makecode/MakeCode使用介绍.md)
+  - [microbit micropython介绍](/zh-cn/micro_bit/microbit_micropython/microbit_micropython.md)
+  - [io:bit](/zh-cn/micro_bit/iot_bit.md)
+  - [sensor:bit](/zh-cn/micro_bit/sensorbit.md)
+  - [motor:bit](/zh-cn/micro_bit/motorbit.md)
+  - [joysitck:bit](/zh-cn/micro_bit/joystickbit.md)
 
 - 乐鑫esp系类
-    - ESP32 Dev Kit主板
-      - [ESP32 ArduinoIDE介绍]()
-      - [Mixly安装ESP32主板介绍]()
-      - [ESP32 micropython介绍](https://www.micropython.org.cn/nav/micropython/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/esp32)
-    - [maker-esp32]
-    - [esp32-iot-board](/esp32/esp32_iot_board.md)
-    - [ESP32-CAM_V2]()
-    - [esp32-uno]
+  - ESP32 Dev Kit主板
+    - [ESP32 ArduinoIDE介绍]()
+    - [Mixly安装ESP32主板介绍]()
+    - [ESP32 micropython介绍](https://www.micropython.org.cn/nav/micropython/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/esp32)
+  - [maker-esp32]
+  - [esp32-iot-board](/esp32/esp32_iot_board.md)
+  - [ESP32-CAM_V2]()
+  - [esp32-uno]
 - 树莓派
-    - [树莓派传感器扩展板](/raspberrypi/RaspberryPi-Sensor-Board/README_zh.md)
-    - [树莓派电机驱动板](/raspberrypi/RaspberryPi-MotorDriverBoard/README.md)
+  - [树莓派传感器扩展板](/raspberrypi/RaspberryPi-Sensor-Board/README_zh.md)
+  - [树莓派电机驱动板](/raspberrypi/RaspberryPi-MotorDriverBoard/README.md)
 
 - [k210产品](/zh-cn/)
 
@@ -182,6 +182,3 @@
   - [编码电机]()
 
 - [关于我们](/zh-cn/about.md)
-
-
-
