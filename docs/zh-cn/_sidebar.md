@@ -100,7 +100,7 @@
   - 智能模块
     - [BMP280大气压传感器](/zh-cn/gallery.md)
     - [TCS34725颜色识别](/zh-cn/gallery.md)
-    - [NLCS11颜色识别](/zh-cn/ph2.0_sensors/sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
+    - [NLCS11颜色识别](ph2.0_sensors/sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
     - [QMC5883L电子指南针罗盘模块](/zh-cn/gallery.md)
     - [DS1302时钟模块](/zh-cn/gallery.md)
     - [MPU6050六轴陀螺仪](/zh-cn/gallery.md)
