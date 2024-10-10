@@ -107,7 +107,7 @@
     - [录音播放模块](/zh-cn/gallery.md)
     - [MQTT模块](/zh-cn/gallery.md)
     - [LD3320语音识别V2.1](/zh-cn/gallery.md)
-    - [离线特定语音识别ASR-V2(/zh-cn/gallery.md)
+    - [离线特定语音识别ASR-V2](/zh-cn/gallery.md)
     - [TTS语音合成V2.1](/zh-cn/gallery.md)
     - [TTS语音合成V3.0](/zh-cn/gallery.md)
     - [I2C-IO扩展模块](/zh-cn/gallery.md)
