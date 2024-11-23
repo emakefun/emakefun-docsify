@@ -1,0 +1,179 @@
+- [HomePage](/zh-cn/homepage.md)
+
+- Software
+  - [软件下载](/zh-cn/software_download.md)
+  - [Mixly2.0使用方法](/zh-cn/mixly.md)
+  - [Thonny使用方法](/zh-cn/details.md)
+
+- Driver Installation
+  - [Arduino官方驱动安装](/zh-cn/details.md)
+  - [CH340驱动安装方法](/zh-cn/details.md)
+  - [microbit daplink驱动安装](/zh-cn/driver/microbit_daplink_driver.md)
+  - [esp32 usb驱动安装](/zh-cn/driver/esp32_driver.md)
+
+- PH2.0 Module
+  - Base Input Module
+    - [Button module](/zh-cn/gallery.md)
+    - [Touch module](/zh-cn/gallery.md)
+    - [Collision switch](/zh-cn/gallery.md)
+    - [Rotary potentiometer](/zh-cn/gallery.md)
+    - [slide rheostat](/zh-cn/gallery.md)
+    - [Rotary encoder](/zh-cn/gallery.md)
+    - [Joystic Module](/zh-cn/gallery.md)
+    - [Touch matrix keyboard V3.0](/zh-cn/gallery.md)
+    - [Touch piano](/zh-cn/gallery.md)
+    - [Wireless controller](/zh-cn/gallery.md)
+    - [Self generating switch]()
+
+  - Sensor
+    - [sound sensor](/zh-cn/gallery.md)
+    - [DHT11 Temperature humidity](/zh-cn/gallery.md)
+    - [AT20 Temperature humidity](/zh-cn/gallery.md)
+    - [photosensitive](/zh-cn/gallery.md)
+    - [NTC thermistor](/zh-cn/gallery.md)
+    - [LM35 temperature](/zh-cn/gallery.md)
+    - [NL50 temperature](/zh-cn/gallery.md)
+    - [DS18B20 temperature](/zh-cn/gallery.md)
+    - [Flame sensor](/zh-cn/ph2.0_sensors/sensors/flame_sensor.md)
+    - [Soil moisture sensor](/zh-cn/ph2.0_sensors/sensors/soil_moisture_sensor.md)
+    - [Water droplets sensor](/zh-cn/ph2.0_sensors/sensors/water_droplets_sensor.md)
+    - [Water depth sensor](/zh-cn/ph2.0_sensors/sensors/water_depth_sensor.md)
+    - [MQ gas sensor](/zh-cn/ph2.0_sensors/sensors/mq_gas_sensor.md)
+    - [Human body sensor](/zh-cn/ph2.0_sensors/sensors/human_body_sensor.md)
+    - [Magnetic switch](/zh-cn/ph2.0_sensors/sensors/magnetic-switch_sensor.md)
+    - [Hall switch](/zh-cn/ph2.0_sensors/sensors/Hall_witch_sensor.md)
+    - [grayscale sensor](/zh-cn/ph2.0_sensors/sensors/grayscale_sensor.md)
+    - [shock sensor](/zh-cn/ph2.0_sensors/sensors/shock_sensor.md)
+    - [4way tilt switch](/zh-cn/ph2.0_sensors/sensors/tilt_switch_sensor.md)
+    - [Pressure sensor](/zh-cn/ph2.0_sensors/sensors/pressure_sensor.md
+    - [RGB Ultrasonic sensor](/zh-cn/ph2.0_sensors/sensors/rus_04.md)
+    - [Infrared receiver](/zh-cn/sensors/irReceiverModel.md)
+    - [Infrared obstacle avoidance](/zh-cn/gallery.md)
+    - [Infrared light seeking and obstacle avoidance](/zh-cn/gallery.md)
+    - [Infrared counting](/zh-cn/gallery.md)
+    - [Infrared tracking](/zh-cn/gallery.md)
+    - [5line Infrared trackingV3.0](/zh-cn/gallery.md)
+    - [Single grayscale tracking](/zh-cn/gallery.md)
+    - [5line grayscale tracking](/zh-cn/gallery.md)
+    - [HX711](/zh-cn/)
+    - [LTR553](/zh-cn/gallery.md)
+    - [VL53L1X FOV Sensor]()
+    - [PM2.5 Sensor]()
+
+  - Actuator
+    - [Active buzzer](/zh-cn/sensors/actuators/buzzerModel.md)
+    - [Passive buzzer](/zh-cn/sensors/actuators/passiveBuzzerModel.md)
+    - [Hollow cup 610 motor fan](/zh-cn/ph2.0_sensors/actuators/motorModelV2.md)
+    - [R300C motor fan](/zh-cn/ph2.0_sensors/actuators/highPowerMotorModule.md
+    - [Relay module](/zh-cn/ph2.0_sensors/actuators/relayModel.md
+    - [Laser emission](/zh-cn/ph2.0_sensors/actuators/laserEmissionModel.md
+    - [Vibration motor](/zh-cn/ph2.0_sensors/actuators/vibrationMotorModule.md
+    - [8002A AMP speaker](/zh-cn/ph2.0_sensors/actuators/8002A_amp_speaker.md)
+    - [Servo Model](/zh-cn/ph2.0_sensors/actuators/servoModel.md)
+    - [Single motor driver](/zh-cn/ph2.0_sensors/actuators/)
+    - [Dule motor driver](/zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel.md)
+    - [4line encoder motor driver](/zh-cn/ph2.0_sensors/actuators/4line_encoder_motor_driver.md)
+    - [I2S Audio amp ](/zh-cn/ph2.0_sensors/I2S_audio_amp.md)
+    - [Small atomizer](/zh-cn/ph2.0_sensors/amall_atomizer.md)
+    - [Serial bus servo driver](/zh-cn/ph2.0_sensors/serial_bus_servo_driver.md)
+
+  - Display
+    - [LED](/zh-cn/ph2.0_sensors/displayers/LED.md)
+    - [Infrared Emission](/zh-cn/ph2.0_sensors/actuators/infraredEmissionModel.md)
+    - [LCD1602](/zh-cn/ph2.0_sensors/displayers/LCD1602.md)
+    - [TM1650](/zh-cn/ph2.0_sensors/displayers/TM1650.md)
+    - [TM1637](/zh-cn/ph2.0_sensors/displayers/TM1637.md)
+    - [VK16K33](/zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0.md)
+    - [MAX7289_8x8Dot matrix](/zh-cn/ph2.0_sensors/displayers/8x8LedDisplay.md)
+    - [MAX7289_8x32Dot matrix](/zh-cn/ph2.0_sensors/displayers/8x32LedDisplay.md)
+    - [Traffic light](/zh-cn/ph2.0_sensors/displayers/trafficLights.md)
+    - [RGB Full-color light](/zh-cn/ph2.0_sensors/displayers/RGB.md)
+    - [WS2812B RGB Ring](/zh-cn/ph2.0_sensors/displayers/RGBRing.md)
+    - [0.961OLED with front](/zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED.md)
+
+  - Smart Module
+    - [BMP280 atmos sensor](/zh-cn/ph2.0_sensors/smart_module/BMP280_atmos_sensor.md)
+    - [TCS34725 colour sensor](/zh-cn/ph2.0_sensors/smart_module/TCS34725_colour_sensor.md)
+    - [NLCS11 colour sensor](/zh-cn/ph2.0_sensors/smart_module/NLCS11_colour_sensor.md)
+    - [HMC5883L compass](/zh-cn/gallery.md)
+    - [DS1302 clock module](/zh-cn/gallery.md)
+    - [MPU6050 6axis gyroscope](/zh-cn/ph2.0_sensors/smart_module/MPU6050_6axis_gyroscope.md)
+    - [Step_counting_sensor](/zh-cn/gallery.md)
+    - [NL4009 Gesture recognition](/zh-cn/gallery.md)
+    - [MP3 player module](/zh-cn/gallery.md)
+    - [Recording&playback module](/zh-cn/gallery.md)
+    - [MQTT IOT Module](/zh-cn/gallery.md)
+    - [LD3320 ASRV2.1](/zh-cn/gallery.md)
+    - [ASR-V2(/zh-cn/gallery.md)
+    - [TTS V2.1](/zh-cn/gallery.md)
+    - [TTS V3.0](/zh-cn/gallery.md)
+    - [I2C-IO expansion board](/zh-cn/gallery.md)
+    - [I2C cascade expansion board](/zh-cn/)
+    - [RFID-RC522 module](/zh-cn/gallery.md)
+    - [I2S-MEMS microphone](/zh-cn/gallery.md)
+    - [Fingerprint identification]()
+    - [Millimeter wave radar]()
+    - [GPS module]()
+
+- Power Module
+    - [5V电源]()
+    - [升降压舵机电源]()
+    - [MPPT太阳能充电板]()
+    - [3.7V升压充电模块](/zh-cn//power_module/3.7v_battery_module.md)
+    - [7.4V充电电池模块] (/zh-cn/power_module/16340_2s_li_battery_module.md)
+    - [双节18650锂电池充电模块](/zh-cn//power_module/18650_2s_li_battery_module.md)
+    - [三节18650锂电池充电模块](/zh-cn//power_module/18650_3s_li_battery_module.md)
+
+- Arduino 
+  - Nano
+    - [nano-v3.0](/general/algorithm/data-structures/stack/README.zh-CN.md)
+    - [ble-nano](/general/algorithm/data-structures/queue/README.zh-CN.md)
+    - [rf-nano](/general/algorithm/data-structures/queue/README.zh-CN.md)
+    - [nano开发者套件] ()
+  - Uno
+    - [arduino_uno_r3](/Arduino/UnoR3/README.zh-CN.md)
+    - [ble-uno](/Arduino/ble-uno/README.zh-CN.md)
+    - [maker-uno](/Arduino/maker-uno/README.zh-CN.md)
+    - [PH2.0传感器扩展板](/Arduino/PH2.0_externtion_borad/README.zh-CN.md)
+    - [motor_driver_board](/Arduino/motor_driver_board/README.zh-CN.md)
+    - [starter-bot]()
+    - [hummer-bot]()
+    - [panter-tank]()
+    - [传感器套件介绍]()
+
+- micro:bit
+    - [microbit主板介绍](https://microbit.org/zh-cn/get-started/features/overview/)
+    - [makecode介绍](/zh-cn/microbit/makecode/MakeCode使用介绍.md)
+    - [microbit micropython介绍](/zh-cn/micro_bit/microbit_micropython/microbit_micropython.md)
+    - [io:bit](/zh-cn/micro_bit/iot_bit.md)
+    - [sensor:bit](/zh-cn/micro_bit/sensorbit.md)
+    - [motor:bit](/zh-cn/micro_bit/motorbit.md)
+    - [joysitck:bit](/zh-cn/micro_bit/joystickbit.md)
+
+- esp serial
+    - ESP32 Dev Kit
+      - [ESP32 ArduinoIDE介绍]()
+      - [Mixly安装ESP32主板介绍]()
+      - [ESP32 micropython介绍](https://www.micropython.org.cn/nav/micropython/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/esp32)
+    - [maker-esp32]
+    - [esp32-iot-board](/esp32/esp32_iot_board.md)
+    - [ESP32-CAM_V2]()
+    - [esp32-uno]
+- RaspberryPi
+    - [RaspberryPi Sensor Expansion Board](/raspberrypi/RaspberryPi-Sensor-Board/README_zh.md)
+    - [RaspberryPi Motor Driver Board](/raspberrypi/RaspberryPi-MotorDriverBoard/README.md)
+
+- [open source hardware](/zh-cn/)
+  - [robot driver board]()
+
+- peripheral/accessory
+  - [PS2]()
+  - [PS3]()
+  - [gamepad](//gamepad/README.zh-CN.md)
+  - [makeymakey]()
+  - [encoder]()
+
+- [About me](/zh-cn/about.md)
+
+
+
