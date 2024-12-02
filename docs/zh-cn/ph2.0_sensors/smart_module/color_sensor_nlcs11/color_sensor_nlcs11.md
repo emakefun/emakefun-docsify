@@ -14,14 +14,6 @@ NLCS11设备可进行色温测量、亮度传感。内部状态机提供了将�
 
 此设备可以应用于亮度传感器、彩色温度传F感器、小笔记本、穿戴设备、工业及医疗等领域。
 
-### 原理图
-
-[点击下载NLCS11原理图](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/NLCS11_sch.pdf ':ignore')
-
-### 芯片规格书
-
-[点击下载NLCS11规格书](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/NLCS11_datassheet.pdf ':ignore')
-
 ### 尺寸图
 
 待补充
@@ -63,39 +55,28 @@ NLCS11设备可进行色温测量、亮度传感。内部状态机提供了将�
 
 ### 测试
 
-1.将下方Arduino示例程序下载并解压至Arduino的libraries中，默认路径为
+1.将下方资料中的Arduino库导入Arduino中
 
-`C:\Users\Documents\Arduino\libraries`
+![安装Arduino库](1.gif)
 
-![解压文件](15.png)
-
-2.打开文件夹下examples里的示例程序
-
-![打开示例程序](16.png)
-
-![打开示例程序](17.png)
-
-3.选择开发板Arduino Uno，
-
+2.选择开发板Arduino Uno，
 工具->开发板->Arduino AVR Boards->Arduino Uno
 
 ![选择开发板](3.png)
 
-4.将主板通过USB线插入电脑，并在Arduino IDE上选择相应COM口。
+3.将主板通过USB线插入电脑，并在Arduino IDE上选择相应COM口。
 
 ![选择相应COM口](4.png)
 
-5.将程序烧录至主板
+4.将程序烧录至主板
 
 ![烧录](5.png)
 
-6.打开串口监视器，并选择波特率为115200
-
-![选择波特率](13.png)
+5.打开串口监视器，并选择波特率为115200
 
 ![选择波特率](14.png)
 
-7.测试RGB读值
+6.测试RGB读值
 
 将颜色识别传感器放至红色面板上（距离尽量近些，约1~2CM）只要测试R丶G丶B相应的读值明显变大即识别成功。
 
@@ -113,25 +94,23 @@ NLCS11设备可进行色温测量、亮度传感。内部状态机提供了将�
 
 ![读取B值](12.png)
 
-## Arduino示例程序（C/C++）
+## 开发板
 
-| 支持开发板系列    |
-| :---------------- |
-| Arduino UNO R3    |
-| Arduino Nano      |
-| Arduino Mega 2560 |
-| ESP32             |
+| 支持开发板系列 |
+| :------------- |
+| Arduino UNO R3 |
+| Arduino Nano   |
+| ESP32          |
+| Micro:Bit      |
 
-[点击下载Arduino库以及示例程序](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/emakefun_color_sensor_nlcs11.zip ':ignore')
+## 资料下载
 
-## Micropython示例程序
+| 资料目录                                |
+| --------------------------------------- |
+| Arduino库和示例程序（C/C++）            |
+| ESP32库和示例程序（C/C++，MicroPython） |
+| Micro:Bit库和示例程序（MicroPython）    |
+| NLCS11原理图                            |
+| NLCS11数据手册                          |
 
-[点击下载Micropython库和示例程序](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/read_rgb_py.zip ':ignore')
-
-## Mixly图形化示例
-
-待补充
-
-## Mind+图形化示例
-
-待补充
+[上述资料点击此处下载](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/data_collection.zip ':ignore')
