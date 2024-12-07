@@ -14,6 +14,14 @@ NLCS11设备可进行色温测量、亮度传感。内部状态机提供了将�
 
 此设备可以应用于亮度传感器、彩色温度传感器、小笔记本、穿戴设备、工业及医疗等领域。
 
+### 原理图
+
+[点击下载NLCS11原理图](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/NLCS11_sch.pdf ':ignore')
+
+### 芯片规格书
+
+[点击下载NLCS11数据手册规格书](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/NLCS11_datasheet.pdf ':ignore')
+
 ### 尺寸图
 
 待补充
