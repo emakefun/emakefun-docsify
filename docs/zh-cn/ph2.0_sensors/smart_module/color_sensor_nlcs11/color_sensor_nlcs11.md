@@ -63,7 +63,7 @@ NLCS11设备可进行色温测量、亮度传感。内部状态机提供了将�
 
 ### 测试
 
-1.将下方资料中的Arduino库导入Arduino中
+1.将[资料](#jump)中的Arduino库导入Arduino中
 
 ![安装Arduino库](1.gif)
 
@@ -121,4 +121,5 @@ NLCS11设备可进行色温测量、亮度传感。内部状态机提供了将�
 | NLCS11原理图                            |
 | NLCS11数据手册                          |
 
-[上述资料点击此处下载](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/data_collection.zip ':ignore')
+<span id="jump">[上述资料点击此处下载](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/data_collection.zip ':ignore')</span>
+
