@@ -10,6 +10,7 @@ RaspberryPi 多功能电机驱动扩展板由[深圳市易创空间科技有限�
 由于我们驱动板是使用I2C控制PCA9685芯片输出16路PWM，所有驱动直流电机或者舵机，不存在所谓的树莓派IO口和控制电机对应关系
 
 详情可以看 [树莓派驱动板电路原理图](zh-cn/raspberrypi/raspberrypi_motordriver_board/RaspBerryDriverBoard.pdf ':ignore')
+
 还可以查看驱动板正反面的丝印标注。
 
 ## 特点
@@ -26,7 +27,8 @@ RaspberryPi 多功能电机驱动扩展板由[深圳市易创空间科技有限�
 ## 安装I2C库并使能
 
 在使用驱动板之前，必须要先安装I2C库并使能。
-打开树莓派终端输入"sudo raspi-config"命令，然后按照下图顺序依次操作即可。
+
+打开树莓派终端输入`sudo raspi-config`命令，然后按照下图顺序依次操作即可。
 
 ![输入raspi-config命令](picture1.png)
 
@@ -36,17 +38,18 @@ RaspberryPi 多功能电机驱动扩展板由[深圳市易创空间科技有限�
 
 ![输入raspi-config命令](picture4.png)
 
-以上就是开启树莓派I2C，接下来我们安装树莓I2C库在终端输入“sudo apt-get install i2c-tools”，输入完成后就可以看到正在下载I2C库，安装完成之后可以在终端输入“sudo i2cdetect -l”检测是否安装正确，若出现类似于下面的信息就说明安装正常。
+以上就是开启树莓派I2C，接下来我们安装树莓I2C库在终端入`sudo apt-get install i2c-tools`，输入完成后就可以看到正在下载I2C库，安装完成之后可以在终端输入`sudo i2cdetect -l`检测是否安装正确，若出现类似于下面的信息就说明安装正常。
 
 ![检测I2C安装是否成功](picture5.png)
 
-在终端输入“sudo i2cdetect -y 1”命令即可扫描接在I2C总线上的所有I2C设备，并打印出该设备的I2C总线地址，且我们的扩展板的I2C地址为0x60，如下图。
+在终端输入`sudo i2cdetect -y 1`命令即可扫描接在I2C总线上的所有I2C设备，并打印出该设备的I2C总线地址，且我们的扩展板的I2C地址为0x60，如下图。
+
 另外用i2cdetect检测出还有一个0x70地址一直存在，这是一个通用地址，可以给所有从机下达指令
 ![检测I2C地址](picture6.png)
 
 重新启动树莓派，使新的设置生效:
 
-sudo reboot
+`sudo reboot`
 
 ## 功能介绍
 
@@ -111,23 +114,28 @@ while (True):
 #include "Emakefun_MotorShield.h"
 
 int main() {
-  Emakefun_MotorShield Pwm;
-  Emakefun_StepperMotor *StepperMotor_1 = Pwm.getStepper(200, 1);
-  Emakefun_StepperMotor *StepperMotor_2 = Pwm.getStepper(200, 2);
-  Pwm.begin(1600);
-  StepperMotor_1->setSpeed(400);
-  StepperMotor_2->setSpeed(400);
+  Emakefun_MotorShield Pwm = Emakefun_MotorShield();
+  Pwm.begin(50);
+  Emakefun_DCMotor *DCmotor1 = Pwm.getMotor(1);
+  Emakefun_DCMotor *DCmotor2 = Pwm.getMotor(2);
+  Emakefun_DCMotor *DCmotor3 = Pwm.getMotor(3);
+  Emakefun_DCMotor *DCmotor4 = Pwm.getMotor(4);
+
+  DCmotor1->setSpeed(255);
+  DCmotor2->setSpeed(255);
+  DCmotor3->setSpeed(255);
+  DCmotor4->setSpeed(255);
 
   while (1) {
-    StepperMotor_1->step(200, FORWARD, DOUBLE);  // 电机1正转1圈 200步
-    StepperMotor_1->release();
-    StepperMotor_2->step(200, FORWARD, SINGLE);  // 电机2正转1圈 200步
-    StepperMotor_2->release();
+    DCmotor1->run(FORWARD);
+    DCmotor2->run(FORWARD);
+    DCmotor3->run(FORWARD);
+    DCmotor4->run(FORWARD);
     delay(1000);
-    StepperMotor_1->step(200, BACKWARD, DOUBLE);  // 电机1反转1圈 200步
-    StepperMotor_1->release();
-    StepperMotor_2->step(200, BACKWARD, SINGLE);  // 电机2反转1圈 200步
-    StepperMotor_2->release();
+    DCmotor1->run(BACKWARD);
+    DCmotor2->run(BACKWARD);
+    DCmotor3->run(BACKWARD);
+    DCmotor4->run(BACKWARD);
     delay(1000);
   }
 }
