@@ -1,12 +1,8 @@
 # Arduino官方驱动安装
 
-打开解压后的文件，打开**“drivers”**文件夹 　　如果你的电脑是32位系统，就运行dpinst-x86.exe 　　如果是64位系统，就运行dpinst-amd64.exe 　　然后在弹出的对话框中点击“下一步”，即可完成安装，如下图：
+打开解压后的文件，打开**“drivers”**文件夹如果你的电脑是32位系统，就运行dpinst-x86.exe如果是64位系统，就运行dpinst-amd64.exe然后在弹出的对话框中点击“下一步”，即可完成安装，如下图：
 
-![](picture/1.png)
-
-![](picture/2.png)
-
-![](picture/3.png)
+![](picture/1.gif)
 
 ## 可能遇到的问题
 

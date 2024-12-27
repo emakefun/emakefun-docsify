@@ -16,7 +16,7 @@
 
 ![](picture\1.png)
 
-2.下载驱动 :  由于Windows  7的内置驱动可能不支持所有USB转串口设备，因此需要从制造商官网下载合适的驱动程序。文件名可能是“USB驱动适合win7系统”这样的表述，这表明它是专为Windows 7优化的驱动。
+2.下载驱动 :  由于Windows  7的内置驱动可能不支持所有USB转串口设备，因此需要[下载驱动程序](https://dl.espressif.com/dl/idf-driver/idf-driver-esp32-usb-jtag-2021-07-15.zip)。文件名可能是“USB驱动适合win7系统”这样的表述，这表明它是专为Windows 7优化的驱动。
 
 3.安装驱动 : 下载完成后，找到下载的驱动文件，一般为.exe或.zip格式。如果是.exe可执行文件，双击运行并按照提示操作；如果是.zip压缩包，需要先解压，然后找到setup.exe或其他安装文件进行安装。
 
