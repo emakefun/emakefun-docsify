@@ -163,7 +163,7 @@
     - [ESP32 ArduinoIDE介绍]()
     - [Mixly安装ESP32主板介绍]()
     - [ESP32 micropython介绍](https://www.micropython.org.cn/nav/micropython/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/esp32)
-  - [maker-esp32]
+  - [maker-esp32-pro](zh-cn/esp32/maker_esp32_pro/maker_esp32_pro.md)
   - [esp32-iot-board](/esp32/esp32_iot_board.md)
   - [ESP32-CAM_V2](zh-cn/esp32/ESP32_CAM/ESP32_CAM.md)
   - [esp32-uno]
