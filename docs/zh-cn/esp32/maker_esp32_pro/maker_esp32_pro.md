@@ -2,7 +2,7 @@
 
 ## 模块实物图
 
-![实物图](maker-esp32.jpg)
+待补充
 
 ## 概述
 
@@ -26,14 +26,13 @@
 
 ## 原理图
 
-待补充
+[点击查看原理图](zh-cn/esp32/maker_esp32_pro/maker-esp32_pro.pdf  ':ignore')
 
 ## 产品参数
 
 * 4个电机端口；2个步进电机端口；电流最大达到3.5A
-* 板载4个RGB灯(16引脚)
 * 5个I2C插针接口,1个SPI插针接口
-* 4个舵机接口（25、26、32、33）
+* 5个舵机接口（0丶25、26、32、33）
 * 8个IO引脚(12、14、15、17、34、35、36、39)
 * 输入电压： 6-24V
 * 产品尺寸：80mm×57mm；PCB厚度：1.6mm；净重：35g
@@ -42,7 +41,7 @@
 
 ## 引脚说明
 
-![引脚图 ](esp32_pic.png)
+待补充
 
 <font color="red" size="5">**注:**</font>
 
@@ -121,12 +120,7 @@
 
 2. 安装ESP32库；
 
-   1) 点击Arduino IDE菜单栏：【文件】-->【首选项】
-      把`https://dl.espressif.com/dl/package_esp32_index.json`添加到【附加开发板管理器网址】 如下图；
-
-   ![附加开发板管理器网址](select_link.png)
-
-   2) 点击菜单栏点击 【工具】->【开发板】->【开发板管理器】搜索esp32，然后安装，如下图：
+   点击菜单栏点击 【工具】->【开发板】->【开发板管理器】搜索esp32，然后安装，如下图：
 
 ![安装esp32库](esp32_install.png)
 
@@ -216,11 +210,9 @@
 |       蓝色       |        A03         |
 |       黄色       |        A04         |
 
-### 驱动编码电机
+### 驱动编码电机与直流电机
 
-[点击下载编码电机库](zh-cn/esp32/maker_esp32_pro/esp32_arduino/em_esp32_encoder_motor-latest.zip ':ignore')
-
-[点击查看编码电机示例程序](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/)
+[点击查看编码电机以及直流电机库和示例程序](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/)
 
 ## ESP32系列连接使用PS3蓝牙无线手柄
 
@@ -264,7 +256,7 @@
 
 1. 电机需要DC头供电，6-24V，建议使用两节3.7V锂电池，电源开关是否打到ON；
 
-2. 第一步已经完成的话，还出现问题，请检查Motor and IO Switch开关是否拨到电机方向(即 标有ON的方       向)；
+2. 第一步已经完成的话，还出现问题，请检查Motor and IO Switch开关是否拨到电机方向(即标有ON的方向)；
 3. 检测程序设置的电机引脚是否和电机实际引脚一一对应；
 
 ## 联系我们
