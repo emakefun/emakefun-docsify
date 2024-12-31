@@ -1,21 +1,21 @@
 <!-- docs/_sidebar.md -->
-![emakefun](/zh-cn/_media/favicon.jpg)
+![emakefun](zh-cn/_media/favicon.jpg)
 
 - [首页](/zh-cn/homepage.md)
 
 - 软件介绍
   - [软件下载](/zh-cn/software/software_download.zh-CN.md)
   - [ArduinoIDE2.0介绍](/zh-cn/software/arduino_ide/arduino_ide.zh-CN.md)
-  - [Mixly2.0使用介绍](/zh-cn/software/mixly.zh-CN.md)
+  - [Mixly2.0使用介绍](/zh-cn/software/mixly/mixly.zh-CN.md)
   - [Mind+使用介绍](/zh-cn/software/)
   - [Thonny使用介绍](/zh-cn/software/thonny/thonny.zh-CN.md)
-  - [手机编程软件介绍](/zh-cn/software/)
+  - [手机编程软件介绍](/zh-cn/software/Mobile_programming/Mobile_programming.md)
 
 - 驱动安装
-  - [Arduino官方驱动安装](/zh-cn/details.md)
-  - [CH340驱动安装方法](/zh-cn/details.md)
-  - [microbit daplink驱动安装](/zh-cn/driver/microbit_daplink_driver.md)
-  - [esp32 usb驱动安装](/zh-cn/driver/esp32_driver.md)
+  - [Arduino官方驱动安装](/zh-cn/driver/Arduino_official_driver/Arduino_official_driver.md)
+  - [CH340驱动安装方法](/zh-cn/driver/ch340_driver/ch340_driver.md)
+  - [microbit daplink驱动安装](/zh-cn/driver/microbit_daplink_driver/microbit_daplink_driver.md)
+  - [esp32 usb驱动安装](/zh-cn/driver/esp32_driver/esp32_driver.md)
 
 - PH2.0模块
   - 基础输入模块
