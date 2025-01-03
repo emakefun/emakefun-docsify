@@ -45,51 +45,13 @@
 
 ## MAKER-ESP32-PRO驱动安装
 
-驱动安装请参考此文档：[ESP32驱动安装](zh-cn/driver/ch340_driver.md)
+驱动安装请参考此文档：[CH340G驱动安装](zh-cn/driver/ch340_driver/ch340_driver.md)
 
-## MAKER-ESP32-PRO 通过Arduino IDE下载程序
+## MAKER-ESP32-PRO 上传程序方法
 
-请前往 [Arduino官网](https://www.arduino.cc/en/Main/Software)  下载最新IDE
+各平台程序上传方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
 
-1. 打开Ardunio IDE;
-
-2. 安装ESP32库；
-
-   点击菜单栏点击 【工具】->【开发板】->【开发板管理器】搜索esp32，然后安装，如下图：
-
-![安装esp32库](install_esp32.png)
-
-## 通过Arduino IDE上传程序
-
-和Arduino上传程序一样，先选择主板，如下图
-
-![选择主板](select_esp32.png)
-
-将写好程序点击上传按钮，等待程序上传成功，如下图。
-
-![上传成功](download.png)
-
-点击串口工具就可以看到串口的打印。如下图
-
-![串口打印](serial.png)
-
-## Mixly使用(以Mixly2.0为例)
-
-1. ### 板卡选择
-
-   ![select_board](Mixly_Board.png)
-
-2. ### 主板选择
-
-   ![esp32_main_board](esp32_main_board.png)
-
-3. ### 导入案例
-
-   ![export_example](esp32_open_example.png)
-
-4. ### 下载
-
-   ![download_success](esp32_mixly_download_success.png)
+**注意**：使用Arduino IDE开发时，请将esp32更新至最新版本。
 
 ## Mixly示例程序
 
@@ -99,6 +61,12 @@
 
 [点击下载OLED示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_oled_test.zip ':ignore')
 
+## Mind+示例程序
+
+   [点击下载电机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/esp32MindplusMotor.zip ':ignore')
+
+   [点击下载Maker-esp32Mind+库文件](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext ':ignore')
+
 ## Arduino示例程序
 
 [点击下载舵机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_arduino/servoTest.zip ':ignore')
@@ -107,44 +75,97 @@
 
 ### 驱动编码电机与直流电机
 
-[点击查看编码电机以及直流电机库和示例程序](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/)
+[点击查看编码电机以及直流电机库和示例程序](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/docs_zh-CN/index.html)
+
 点击上述链接此处即可下载库文件
 
 ![下载库](101.png)
 
 #### 驱动电机示例文件以及常用函数说明
 
-##### 示例文件说明
-
-| 文件名                    | 功能说明                                                     |
-| ------------------------- | ------------------------------------------------------------ |
-| detect_phase_relation     | 帮助用户检测编码电机在正转时编码器A相和B相的实际相位关系。通过让电机正转并读取其转速，程序会判断编码器的相位关系，并将结果通过串口打印出来。 |
-| drive_dc_motor            | 通过ESP32平台的PWM输出控制四个直流电机的正反转。程序在启动时初始化四个电机对象，然后在主循环中依次将这些电机设置为正转和反转，每种状态持续1秒。使用库文件中的`Motor`类和相关的初始化及控制方法来实现这一功能。 |
-| forward_stop_backward     | 控制四个电机依次进行前进、停止、后退的操作，并通过串口输出实时的电机转速、PWM占空比及脉冲计数。这使得用户可以在运行过程中监控电机的状态，验证电机控制逻辑的正确性。 |
-| run_pwm                   | 通过PWM占空比控制四个编码器电机的转动，并实时输出电机的转速、PWM占空比和编码器脉冲计数等信息。 |
-| run_rpm_with_analog_input | 根据 ESP32 上的特定 GPIO 引脚（这里为 26）的模拟输入值动态地设置四个编码电机的速度。它利用了 `encoder_motor.h` 和 `encoder_motor_lib.h` 提供的类和函数来实现电机控制，并通过串口输出调试信息，以便跟踪电机的状态。 |
-| run_speed                 | 控制四个电机以指定的速度（100RPM）旋转，并通过串口输出每个电机的实时状态信息，包括目标速度、当前速度、PWM占空比和编码器脉冲计数。这有助于了解电机的实际运行情况，并对电机驱动系统进行调试和优化。 |
+##### 示例文件说明( [Emakefun Encoder Motor: 示例文件](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/docs_zh-CN/examples.html)  )
 
 详情可查看上述链接的如下位置：
 
 ![示例文件说明](102.png)
 
-##### 常用函数说明
-
-| 函数名                                                   | 功能说明                                                     |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
-| Init()                                                   | 初始化电机设置。                                             |
-| SetSpeedPid(const float p, const float i, const float d) | 使用给定的比例（P）、积分（I）、微分（D）参数值来设置速度PID控制器的参数。 |
-| RunPwmDuty(const int16_t pwm_duty)                       | 直接设置电机的PWM占空比。                                    |
-| RunSpeed(const int16_t speed_rpm)                        | 以设定的速度值（RPM）运行电机。                              |
-| EncoderPulseCount()                                      | 获取编码器脉冲计数。该计数值是在A相下降沿的时候计数，如果是正转会加一，反转则减一。 |
-| SpeedRpm()                                               | 获取电机当前的转速（RPM）。                                  |
-| PwmDuty()                                                | 获取电机驱动器的PWM占空比。                                  |
-| TargetRpm()                                              | 获取电机的目标转速（RPM）。                                  |
+##### 常用函数说明( [Emakefun Encoder Motor: 类成员 - 函数](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/docs_zh-CN/functions_func.html) )
 
 更多函数可以参考上方链接的如下位置：
 
 ![常用函数说明](103.png)
+
+#### 使用Arduino IDE调试编码电机
+
+##### 接线说明
+
+将编码电机的信号线连接到电机驱动板的对应引脚，并外接DC电源，通过typeC接口连接电脑。如下图所示：
+
+![接线说明](Wiringdiagram.png)
+
+##### 添加库文件
+
+打开Arduino IDE，点击项目->导入库->添加.ZIP库，选择下载好的库文件，点击打开，然后点击确定。
+
+![添加库文件](104.png)
+
+![选择库文件](105.png)
+
+等待库文件安装完即可。
+
+选择主板型号，比如我的是ESP32 Dev Module，然后点击确定。
+
+![选择主板型号](107.png)
+
+#### 打开示例程序
+
+打开Arduino IDE，点击文件->示例->Emakefun Encoder Motor->detect_phase_relation，然后点击打开。
+
+![打开示例程序](106.png)
+
+选择COM口，然后点击上传。
+
+![上传程序](108.png)
+
+打开电源开关。
+
+![打开电源开关](109.png)
+
+打开串口监视器。
+
+![打开串口监视器](110.png)
+
+我们发现电机开始转动，串口监视器中的RPM为负值。而我们设置的PWM为正值，所以我们应该将构造函数中的phase_relation参数应设置为em::EncoderMotor::kBPhaseLeads。
+
+![串口监视器](111.png)
+
+![修改参数](114.png)
+
+修改参数后，我们在上传程序，后发现电机开始转动，串口监视器中的RPM为正值。
+
+![串口监视器](115.png)
+
+至此，我们这个示例函数的任务就结束啦。以后我们使用这个编码电机构造函数时，用现在这个参数就可以了。例如下个程序：
+
+打开示例程序run_speed。
+
+![打开示例程序run_speed](116.png)
+
+我们用一个编码电机E0并以上面的示例参数为例，我们应该将构造函数中的phase_relation参数设置为em::EncoderMotor::kBPhaseLeads。
+
+![修改参数](117.png)
+
+修改参数后，我们在上传程序。后发现我们RPM的输出和我们设置的RPM值基本一致。
+
+![串口监视器](118.png)
+
+我们在将目标速度蛇者为-20，看看效果。
+
+![串口监视器](119.png)
+
+观察到与我们设置的RPM值基本一致，电机方向也正确。
+
+至此我们编码电机已经调试结束。若发现与我们的预期不符，请再次检查电机连接是否正确，电机驱动板是否有问题，以及电机是否有问题。
 
 ## ESP32系列连接使用PS3蓝牙无线手柄
 
@@ -159,17 +180,6 @@
 [点击下载PS3手柄 Mind+库](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-ps3.zip ':ignore')
 
 [点击下载PS3手柄 Mind+示例](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/ps3_test.zip ':ignore')
-
-## Mind+示例程序
-
-### 主板选择
-
-   点击选择FireBeetle ESP32-E主板，如下图
-
-   ![选择主板](mindplusSelectMainBoard.png)
-
-   [点击下载电机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/esp32MindplusMotor.zip ':ignore')
-   [点击下载Maker-esp32Mind+库文件](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext ':ignore')
 
 ## FAQ
 
@@ -190,7 +200,3 @@
 
 2. 第一步已经完成的话，还出现问题，请检查Motor and IO Switch开关是否拨到电机方向(即标有ON的方向)；
 3. 检测程序设置的电机引脚是否和电机实际引脚一一对应；
-
-## 联系我们
-
-**技术 + 合作：TEL:  13242991035(WX同号)**
