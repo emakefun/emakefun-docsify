@@ -162,7 +162,7 @@
   - [esp32软件使用](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
   - [maker-esp32-pro](zh-cn/esp32/maker_esp32_pro/maker_esp32_pro.md)
   - [maker-esp32](zh-cn/esp32/maker_esp32/maker_esp32.md)
-  - [esp32-iot-board](/esp32/esp32_iot_board.md)
+  - [esp32-iot-board](zh-cn/esp32/esp32_iot_board/esp32_iot_board.md)
   - [ESP32-CAM_V2](zh-cn/esp32/ESP32_CAM/ESP32_CAM.md)
   - [esp32-uno]
 - 树莓派
