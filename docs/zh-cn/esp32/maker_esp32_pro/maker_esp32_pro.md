@@ -75,7 +75,7 @@
 
 ### 驱动编码电机与直流电机
 
-[点击查看编码电机以及直流电机库和示例程序](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/docs_zh-CN/index.html)
+[点击查看编码电机以及直流电机库和示例程序](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/index.html)
 
 点击上述链接此处即可下载库文件
 
@@ -83,13 +83,13 @@
 
 #### 驱动电机示例文件以及常用函数说明
 
-##### 示例文件说明( [Emakefun Encoder Motor: 示例文件](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/docs_zh-CN/examples.html)  )
+##### 示例文件说明( [Emakefun Encoder Motor: 示例文件](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/examples.html) )
 
 详情可查看上述链接的如下位置：
 
 ![示例文件说明](102.png)
 
-##### 常用函数说明( [Emakefun Encoder Motor: 类成员 - 函数](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/docs_zh-CN/functions_func.html) )
+##### 常用函数说明( [Emakefun Encoder Motor: 类成员 - 函数](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/classem_1_1_encoder_motor.html#a69db8b9fc364d4d8f2509473d759ed0f) )
 
 更多函数可以参考上方链接的如下位置：
 
