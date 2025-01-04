@@ -163,8 +163,8 @@
   - [maker-esp32-pro](zh-cn/esp32/maker_esp32_pro/maker_esp32_pro.md)
   - [maker-esp32](zh-cn/esp32/maker_esp32/maker_esp32.md)
   - [esp32-iot-board](zh-cn/esp32/esp32_iot_board/esp32_iot_board.md)
+  - [esp32-devkit-32e](zh-cn/esp32/esp32_devkit_32e/esp32_devkit_32e.md)
   - [ESP32-CAM_V2](zh-cn/esp32/ESP32_CAM/ESP32_CAM.md)
-  - [esp32-uno]
 - 树莓派
   - [树莓派传感器扩展板](zh-cn/raspberrypi/raspberrypi_motordriver_board.md)
   - [树莓派电机驱动板](zh-cn/raspberrypi/raspberrypi_motordriver_board/raspberrypi_motordriver_board.md)
