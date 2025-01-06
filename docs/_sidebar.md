@@ -70,6 +70,7 @@
     - [有源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/buzzerModel.md)
     - [无源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/passiveBuzzerModel.md)
     - [空心杯610电机风扇](/zh-cn/ph2.0_sensors/actuators/motorModelV2.md)
+    - [DM11电机驱动模块](zh-cn/ph2.0_sensors/actuators/dm11/dm11.md)
     - [R300C电机风扇]( /zh-cn/ph2.0_sensors/actuators/highPowerMotorModule.md)
     - [继电器模块](/zh-cn/ph2.0_sensors/actuators/relayModel.md)
     - [激光发射模块](/zh-cn/ph2.0_sensors/actuators/laserEmissionModel.md)
