@@ -118,7 +118,7 @@
     - [TTS语音合成V3.0](/zh-cn/gallery.md)
     - [I2C-IO扩展模块](/zh-cn/gallery.md)
     - [I2C级联扩展器](/zh-cn/)
-    - [RFID-RC522模块](/zh-cn/gallery.md)
+    - [RFID-I2C模块](zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/rfid_mfrc522.md)
     - [I2S-MEMS麦克风模块](/zh-cn/gallery.md)
     - [指纹识别模块]()
     - [毫米波雷达模块]()
