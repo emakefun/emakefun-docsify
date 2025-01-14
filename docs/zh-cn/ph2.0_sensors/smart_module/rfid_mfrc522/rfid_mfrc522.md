@@ -10,7 +10,7 @@
 
 ## 芯片规格书
 
-[芯片规格书点击此处查看](zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/mfrc522_chip_manual.PDF )
+[芯片规格书点击此处查看](zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/mfrc522_chip_manual.PDF ':ignore')
 
 ## 尺寸图
 

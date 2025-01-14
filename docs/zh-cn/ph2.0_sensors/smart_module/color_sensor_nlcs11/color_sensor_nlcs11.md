@@ -2,7 +2,7 @@
 
 ## 模块实物图
 
-![颜色识别传感器模块](color_sensor_nlcs11.jpg )
+![颜色识别传感器模块](color_sensor_nlcs11.png )
 
 ## 概述
 
