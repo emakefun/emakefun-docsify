@@ -115,12 +115,12 @@ NLCS11设备可进行色温测量、亮度传感。内部状态机提供了将�
 
 ## 资料下载
 
-| 资料目录                                |
-| --------------------------------------- |
-| Arduino库和示例程序（C/C++）            |
-| ESP32库和示例程序（C/C++，MicroPython） |
-| Micro:Bit库和示例程序（MicroPython）    |
-| NLCS11原理图                            |
-| NLCS11数据手册                          |
+| 资料目录                                                     |
+| ------------------------------------------------------------ |
+| Arduino库和示例程序（C/C++）                                 |
+| ESP32库和示例程序（C/C++，MicroPython）                      |
+| Micro:Bit库和示例程序（MicroPython,MakeCode）[点击查看Makecode示例程序](https://makecode.microbit.org/S81407-77066-42131-87420) |
+| NLCS11原理图                                                 |
+| NLCS11数据手册                                               |
 
 <span id="jump">[上述资料点击此处下载](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/data_collection.zip ':ignore')</span>
