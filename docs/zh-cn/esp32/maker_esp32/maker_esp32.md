@@ -2,7 +2,7 @@
 
 ## [淘宝购买链接](https://item.taobao.com/item.htm?spm=a21dvs.23580594.0.0.3c3a3d0dhaSOlC&ft=t&id=688324885925)
 
-![Maker-ESP32](maker-esp32.jpg)
+![Maker-ESP32](picture/maker-esp32.jpg)
 
 ## 产品简介
 
@@ -50,7 +50,7 @@
 
 ## 引脚说明
 
-![引脚图](esp32_pic.png)
+![引脚图](picture/esp32_pic.png)
 
 <font color="red" size="5">**注:**</font>  
 

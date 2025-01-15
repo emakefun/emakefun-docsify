@@ -2,7 +2,7 @@
 
 ## 模块实物图
 
-![Maker-esp32-pro正视图](Maker-esp32-pro正视图.png)
+![Maker-esp32-pro正视图](picture/Maker-esp32-pro正视图.png)
 
 ## 概述
 
@@ -42,7 +42,7 @@
 
 ## 引脚说明
 
-![引脚说明](1bd20944ce3774a14fe19d55e94e8ad.png)
+![引脚说明](picture/1bd20944ce3774a14fe19d55e94e8ad.png)
 
 ## MAKER-ESP32-PRO驱动安装
 
@@ -80,7 +80,7 @@
 
 点击上述链接此处即可下载库文件
 
-![下载库](101.png)
+![下载库](picture/101.png)
 
 #### 驱动电机示例文件以及常用函数说明
 
@@ -88,13 +88,13 @@
 
 详情可查看上述链接的如下位置：
 
-![示例文件说明](102.png)
+![示例文件说明](picture/102.png)
 
 ##### 常用函数说明( [Emakefun Encoder Motor: 类成员 - 函数](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/classem_1_1_encoder_motor.html#a69db8b9fc364d4d8f2509473d759ed0f) )
 
 更多函数可以参考上方链接的如下位置：
 
-![常用函数说明](103.png)
+![常用函数说明](picture/103.png)
 
 #### 使用Arduino IDE调试编码电机
 
@@ -102,67 +102,67 @@
 
 将编码电机的信号线连接到电机驱动板的对应引脚，并外接DC电源，通过typeC接口连接电脑。如下图所示：
 
-![接线说明](Wiringdiagram.png)
+![接线说明](picture/Wiringdiagram.png)
 
 ##### 添加库文件
 
 打开Arduino IDE，点击项目->导入库->添加.ZIP库，选择下载好的库文件，点击打开，然后点击确定。
 
-![添加库文件](104.png)
+![添加库文件](picture/104.png)
 
-![选择库文件](105.png)
+![选择库文件](picture/105.png)
 
 等待库文件安装完即可。
 
 选择主板型号，比如我的是ESP32 Dev Module，然后点击确定。
 
-![选择主板型号](107.png)
+![选择主板型号](picture/107.png)
 
 #### 打开示例程序
 
 打开Arduino IDE，点击文件->示例->Emakefun Encoder Motor->detect_phase_relation，然后点击打开。
 
-![打开示例程序](106.png)
+![打开示例程序](picture/106.png)
 
 选择COM口，然后点击上传。
 
-![上传程序](108.png)
+![上传程序](picture/108.png)
 
 打开电源开关。
 
-![打开电源开关](109.png)
+![打开电源开关](picture/109.png)
 
 打开串口监视器。
 
-![打开串口监视器](110.png)
+![打开串口监视器](picture/110.png)
 
 我们发现电机开始转动，串口监视器中的RPM为负值。而我们设置的PWM为正值，所以我们应该将构造函数中的phase_relation参数应设置为em::EncoderMotor::kBPhaseLeads。
 
-![串口监视器](111.png)
+![串口监视器](picture/111.png)
 
-![修改参数](114.png)
+![修改参数](picture/114.png)
 
 修改参数后，我们在上传程序，后发现电机开始转动，串口监视器中的RPM为正值。
 
-![串口监视器](115.png)
+![串口监视器](picture/115.png)
 
 至此，我们这个示例函数的任务就结束啦。以后我们使用这个编码电机构造函数时，用现在这个参数就可以了。例如下个程序：
 .
 打开示例程序run_speed。
 
-![打开示例程序run_speed](116.png)
+![打开示例程序run_speed](picture/116.png)
 
 我们用一个编码电机E0并以上面的示例参数为例，我们应该将构造函数中的phase_relation参数设置为em::EncoderMotor::kBPhaseLeads。
 
-![修改参数](117.png)
+![修改参数](picture/117.png)
 
 修改参数后，我们在上传程序。后发现我们RPM的输出和我们设置的RPM值基本一致。
 
-![串口监视器](118.png)
+![串口监视器](picture/118.png)
 
 我们在将目标速度设置为-20，看看效果。
 
-![串口监视器](119.png)
+![串口监视器](picture/119.png)
 
 观察到与我们设置的RPM值基本一致，电机方向也正确。
 
