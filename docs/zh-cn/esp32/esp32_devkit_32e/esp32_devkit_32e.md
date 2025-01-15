@@ -2,7 +2,7 @@
 
 ## 一、[淘宝购买链接](https://item.taobao.com/item.htm?ali_refid=a3_430582_1006:1209150026:N:bHry0KBYQUueXMqvQBLQ7A==:ae7ad87b821c162939f1053fd9a53067&ali_trackid=162_ae7ad87b821c162939f1053fd9a53067&id=778630577370&skuId=5318380828567&spm=a21n57.1.0.0)
 
-![实物图](1.png)
+![实物图](picture/1.png)
 
 ## 二、产品介绍
 
@@ -12,7 +12,7 @@ ESP32 DevKit 32E是基于乐鑫科技的 ESP32-WROOM-32基础上开发的一款�
 | ------------ | ----------- | ------------ | ---------- |
 | **电源输入** | **Type-C**  | **串口芯片** | **GH340G** |
 
-![尺寸图](4.png)
+![尺寸图](picture/4.png)
 
 ### 2.1 ESP32 DevKit 32E 芯片参数
 
@@ -39,7 +39,7 @@ ESP32 DevKit 32E是基于乐鑫科技的 ESP32-WROOM-32基础上开发的一款�
 
 ### 2.3 引脚说明
 
-![引脚图](a15e3f689abda1ab3321a5b257e02f7.png)
+![引脚图](picture/a15e3f689abda1ab3321a5b257e02f7.png)
 
 1. GH340G模块，用于USB转串口与ESP32对接
 2. Type-C接口，用于程序下载、固件升级和电源输入
@@ -48,7 +48,7 @@ ESP32 DevKit 32E是基于乐鑫科技的 ESP32-WROOM-32基础上开发的一款�
 5. BOOT按键
 6. ESP32模组引出GPIO
 
-![引脚图](5.png)
+![引脚图](picture/5.png)
 
 下表显示了哪些管脚最适合用作输入和输出，哪些管脚需要谨慎使用。
 

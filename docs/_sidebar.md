@@ -108,7 +108,7 @@
     - [DS1302时钟模块](/zh-cn/gallery.md)
     - [MPU6050六轴陀螺仪](/zh-cn/gallery.md)
     - [计步传感器](/zh-cn/gallery.md)
-    - [NL手势识别传感器](/zh-cn/gallery.md)
+    - [GS20手势识别传感器](zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer.md)
     - [MP3播放模块](/zh-cn/gallery.md)
     - [录音播放模块](/zh-cn/gallery.md)
     - [MQTT模块](/zh-cn/.md)
