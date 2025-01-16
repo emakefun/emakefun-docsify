@@ -162,6 +162,7 @@
 - 乐鑫esp系类
   - [esp32软件使用](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
   - [esp32-devkit-32e](zh-cn/esp32/esp32_devkit_32e/esp32_devkit_32e.md)
+  - [esp32-uno](zh-cn/esp32/esp32-uno/esp32-uno.md)
   - [esp32-iot-board](zh-cn/esp32/esp32_iot_board/esp32_iot_board.md)
   - [maker-esp32](zh-cn/esp32/maker_esp32/maker_esp32.md)
   - [maker-esp32-pro](zh-cn/esp32/maker_esp32_pro/maker_esp32_pro.md)

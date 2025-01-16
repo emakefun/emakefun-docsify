@@ -69,7 +69,7 @@ MicroPython则选择
 
 [Mind+基础使用可以查看前面的介绍](/zh-cn/software/mind_plus/mindplus.zh-CN.md)这里只介绍，如何安装ESP32主板在Mind+里面如何选择
 
-1、安装打开软件，
+1、安装打开软件选择模式和语言，从扩展中进去选择主板![mind_plus_mode_select](picture/mind_plus_mode_select.png)
 
 2、点击选择FireBeetle ESP32-E主板，如下图
 
