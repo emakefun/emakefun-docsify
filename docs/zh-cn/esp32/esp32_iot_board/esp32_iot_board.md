@@ -2,11 +2,11 @@
 
 ## [一、淘宝购买链接](https://item.taobao.com/item.htm?ali_refid=a3_430582_1006:1209150026:N:bHry0KBYQUueXMqvQBLQ7A==:ae7ad87b821c162939f1053fd9a53067&ali_trackid=162_ae7ad87b821c162939f1053fd9a53067&id=778630577370&skuId=5318380828567&spm=a21n57.1.0.0)
 
-![eSP32_board](eSP32_board.png)
+![eSP32_board](esp32_iot_board.png)
 
 ## 二、产品介绍
 
-ESP32 IOT是基于乐鑫科技的 [ESP32-WROOM-32](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf) 模组基础上开发的一款适用于创客教育的标志性产品，Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。采用东芝的电机驱动芯片，电流最大可达1.2A。
+ESP32 IOT BOARD是基于乐鑫科技的 [ESP32-WROOM-32](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf) 原装模组基础上开发的一款适用于创客教育的产品。Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。本主板板载2路AT8833电机驱动芯片，电流最大可达1.2A。支持DC头供电，所有可用引脚全部PH2.0接口的方式引出，方便外接传感器，搭建应用场景。
 
 ### 2.1 模组参数
 
@@ -24,26 +24,25 @@ ESP32 IOT是基于乐鑫科技的 [ESP32-WROOM-32](https://www.espressif.com/sit
 - 带有专用 DMA 的以太网 MAC 接口，支持 IEEE 1588
 - 双线汽车接口（TWAI®，兼容 ISO11898-1） • IR (TX/RX)
 
-### 2.2 产品参数
+### 2.2 主板参数
 
 - 采用乐鑫原装V3版本模组ESP32-WROOM-32E
 - 采用PH2.0端口，防止反接，导致元器件短路烧坏
 - 烧录端口使用Type-C接口
-- 2个直流电机端口(14和15,16和17)；1个步进电机端口（P15）；电流最大达到1.2A
+- 2个直流电机端口(14和15,16和17)；电流最大达到1.2A
 - 2个I2C插针接口(SCL SDA 5V G)
 - 2个舵机接口(25,0)
-- 输入电压： 6-12V
+- 输入电压：DC输入5.5-2.1mm  6-12V
 - 产品尺寸：80mm×56mm；PCB厚度：1.6mm；净重：25.3g
 - M4定位孔直径：4.7mm，兼容乐高
-- 软件支持Mixly、Arduino IDE、MicroPython
 
 ### 2.3 尺寸说明
 
-![1722306334249](1722306334249.png)
+![esp32_iot_board_size_mark](esp32_iot_board_size_mark.png)
 
 ### 2.4 引脚说明
 
-![pin](pin.jpg)
+![esp32_iot_board_pin](esp32_iot_board_pin.jpg)
 
 **注**:
 
@@ -75,14 +74,14 @@ ESP32 IOT是基于乐鑫科技的 [ESP32-WROOM-32](https://www.espressif.com/sit
 
 **Q**: Mixly下载程序不成功？
 
-**A**：1. Mixly的安装路径不要包含中文、空格等特殊字符；放在电脑的根目录下，层级目录不要太深；比如 D:\mixly2.0-win32-x64就是根目录安装；
+**A**：1. Mixly的安装路径不要包含中文、空格等特殊字符；放在电脑盘符的根目录下，层级目录不要太深；比如 D:\mixly2.0-win32-x64就是根目录安装；
 
 1. 查看串口是否选择正确，如果没有串口，请先安装CH340G驱动；串口不要被其他应用占用；
 2. 检查程序是否有错误；
 
 **Q**: 电机程序上传成功，但是电机不转？
 
-**A**: 1. 电机需要DC头供电，6-12V，建议使用两节3.7V锂电池，电源开关是否打到ON；
+**A**: 1. 电机需要DC头供电，6-12V，建议使用7.4V锂电池，电源开关是否打到ON；
 
 1. 第一步已经完成的话，还出现问题，请检查Motor and IO Switch开关是否拨到电机方向(即 标有ON的方 向)；
-2. 检测程序设置的电机引脚是否和电机实际引脚一一对应；
+2. 检测程序设置的电机引脚是否和电机实际引脚对应；

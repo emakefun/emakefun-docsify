@@ -6,7 +6,7 @@
 
 ## 概述
 
-   MAKER-ESP32-PRO是基于乐鑫科技的 [ESP32-WROOM-32](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf) 模组基础上开发的一款适用于创客教育的标志性产品，Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。采用东芝的电机驱动芯片，电流最大可达3.5A。
+   MAKER-ESP32-PRO是基于乐鑫科技的 [ESP32-WROOM-32](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf) 模组基础上开发的一款适用于创客教育的标志性产品，Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。板载4路编码电机和直流电机，最大驱动电流3A，编码电机和直流电机共用驱动引脚，即同一个端口，不同同时驱动编码电机和直流电机。
 
 ## ESP32模组参数
 
@@ -35,7 +35,7 @@
 * 5个I2C插针接口,1个SPI插针接口
 * 4个舵机接口（25、26、32、33）
 * 13个IO引脚(5、12、14、15、16、17、18、19、23、34、35、36、39)
-* 输入电压： 6-24V
+* 输入电压： 6-16V
 * 产品尺寸：80mm×57mm；PCB厚度：1.6mm；净重：35g
 * M4定位孔直径：4.6mm，兼容乐高
 * 软件支持Mixly、Arduino IDE、Python
@@ -48,9 +48,9 @@
 
 驱动安装请参考此文档：[CH340G驱动安装](zh-cn/driver/ch340_driver/ch340_driver.md)
 
-## MAKER-ESP32-PRO 上传程序方法
+## MAKER-ESP32-PRO Arduino，mixly，mind+使用方法
 
-各平台程序上传方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
+各平台程序使用方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
 
 **注意**：使用Arduino IDE开发时，请将esp32更新至最新版本。
 

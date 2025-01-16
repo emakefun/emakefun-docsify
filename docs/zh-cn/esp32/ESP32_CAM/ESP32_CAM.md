@@ -6,15 +6,32 @@
 
 ## 概述
 
-ESP32-CAM是小尺寸的摄像头模组该模块可以作为最小系统独立工作，尺寸仅为 `27*40.5*4.5mm`，可广泛应用于各种物联网场合，适用于家庭智能设备、工业无线控制、无线监控、QR无线识别，无线定位系统信号以及其它物联网应用，是物联网应用的理想解决方案。
+ESP32-CAM V2是基于乐鑫ESP32-DOWD-V3芯片而开发的一款小尺寸的摄像头模组该模块可以作为最小系统独立工作，尺寸仅为 `27*40*4.5mm`。本产品基于市面上已存在的ESP32-CAM优化而开发，主要解决市面上，下载程序需要外接下载底部，发热巨大，不稳定等问题。尺寸和使用功能完全兼容现有的ESP32-CAM，网上有大量使用教程，可以直接使用参考。
 
-## 模块使用方法
+## 主板参数
 
-### 安装CH343驱动
+- 采用乐鑫原装 ESP32-DOWD-V3芯片，板载天线和IPEX天线座
+- 芯片内置448 KB ROM，520 KB SRAM，外挂4M SPI FLASH，2M PSRAM
+- Type-C接口，usb转串口芯片为沁恒的CH343P 
+- 输入电压：5V 1A
+- 板载复位按键
+- 板载micro-SD卡插槽
+- 支持2百万像素的OV2640摄像头， 内置 LED 闪光灯 
+
+- 尺寸27mmx40mmx4.5mm
+
+## 板子尺寸标注
+![尺寸标注](picture/esp32_cam_size_mark.jpg)
+
+###  [原理图](zh-cn/esp32/ESP32_CAM/esp32-cam2.0.pdf ':ignore')
+
+![esp32-cam2.0_sch](./esp32-cam2.0_sch.png)
+
+### 安装CH343P驱动
+
+[点击此处下载CH343P驱动](https://www.wch.cn/downloads/CH343SER_EXE.html)
 
 [安装驱动方法点击此处查看]([CH343芯片应用—Windows驱动安装与使用_ch343驱动-CSDN博客](https://blog.csdn.net/wch_techgroup/article/details/124801135))
-
-[点击此处下载CH343驱动](zh-cn/esp32/ESP32_CAM/CH343SER.EXE ':ignore')
 
 ### 配置Arduino中的开发板
 
@@ -57,3 +74,15 @@ Arduino IDE上传方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/e
 点击Start Stream即可打开摄像头调参。
 
 ![调参](picture/11.png)
+
+
+
+## micropython应用
+
+直接访问esp32-cam的开源项目https://github.com/lemariva/micropython-camera-driver
+
+## Edge Impuls AI教程
+
+## APP监控和控制
+
+如上资料请联系客服获取资料
