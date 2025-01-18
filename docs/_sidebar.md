@@ -7,7 +7,7 @@
   - [软件下载](/zh-cn/software/software_download.zh-CN.md)
   - [ArduinoIDE2.0介绍](/zh-cn/software/arduino_ide/arduino_ide.zh-CN.md)
   - [Mixly2.0使用介绍](/zh-cn/software/mixly/mixly.zh-CN.md)
-  - [Mind+使用介绍](/zh-cn/software/)
+  - [Mind+使用介绍](/zh-cn/software/mind_plus/mindplus.zh-CN.md)
   - [Thonny使用介绍](/zh-cn/software/thonny/thonny.zh-CN.md)
   - [手机编程软件介绍](/zh-cn/software/Mobile_programming/Mobile_programming.md)
 
@@ -27,7 +27,7 @@
     - [旋转编码器](/zh-cn/gallery.md)
     - [摇杆模块](/zh-cn/gallery.md)
     - [触摸矩阵键盘V3.0](/zh-cn/gallery.md)
-    - [触摸钢琴V2.0](zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano.md)
+    - [触摸钢琴V2.0](/zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano.md)
     - [无线小手柄](/zh-cn/gallery.md)
     - [自发电无线开关](/zh-cn/gallery.md)
 
@@ -38,7 +38,7 @@
     - [光敏传感器](/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor.md)
     - [NTC热敏传感器](/zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor.md)
     - [LM35温度传感器](/zh-cn/gallery.md)
-    - [NL50温度传感器](zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/temperature_sensor_nl50.md)
+    - [NL50温度传感器](/zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/temperature_sensor_nl50.md)
     - [DS18B20温度传感器](/zh-cn/gallery.md)
     - [火焰传感器](/zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor.md)
     - [土壤湿度传感器](/zh-cn/ph2.0_sensors/sensors/soil_moisture_sensor.md)
@@ -70,6 +70,7 @@
     - [有源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/buzzerModel.md)
     - [无源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/passiveBuzzerModel.md)
     - [空心杯610电机风扇](/zh-cn/ph2.0_sensors/actuators/motorModelV2.md)
+    - [DM11两路电机驱动模块](/zh-cn/ph2.0_sensors/actuators/dm11/dm11.md)
     - [R300C电机风扇]( /zh-cn/ph2.0_sensors/actuators/highPowerMotorModule.md)
     - [继电器模块](/zh-cn/ph2.0_sensors/actuators/relayModel.md)
     - [激光发射模块](/zh-cn/ph2.0_sensors/actuators/laserEmissionModel.md)
@@ -101,23 +102,23 @@
   - 智能模块
     - [BMP280大气压传感器](/zh-cn/gallery.md)
     - [TCS34725颜色识别](/zh-cn/gallery.md)
-    - [NLCS11颜色识别](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
-    - [Atomizer_5V_Module](zh-cn/ph2.0_sensors/smart_module/Atomizer_5V_Module/Atomizer_5V_Module.md)
+    - [NLCS11颜色识别](/zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
+    - [Atomizer_5V_Module](/zh-cn/ph2.0_sensors/smart_module/Atomizer_5V_Module/Atomizer_5V_Module.md)
     - [QMC5883L电子指南针罗盘模块](/zh-cn/gallery.md)
     - [DS1302时钟模块](/zh-cn/gallery.md)
-    - [MPU6050六轴陀螺仪](/zh-cn/gallery.md)
+    - [MPU6050六轴陀螺仪](zh-cn/ph2.0_sensors/smart_module/mpu6050/mpu6050.md)
     - [计步传感器](/zh-cn/gallery.md)
-    - [NL手势识别传感器](/zh-cn/gallery.md)
+    - [GS20手势识别传感器](/zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer.md)
     - [MP3播放模块](/zh-cn/gallery.md)
     - [录音播放模块](/zh-cn/gallery.md)
     - [MQTT模块](/zh-cn/.md)
     - [LD3320语音识别V2.1](/zh-cn/gallery.md)
-    - [离线特定语音识别ASR-V2(/zh-cn/gallery.md)
+    - [离线特定语音识别ASR-V2](/zh-cn/gallery.md)
     - [TTS语音合成V2.1](/zh-cn/gallery.md)
     - [TTS语音合成V3.0](/zh-cn/gallery.md)
     - [I2C-IO扩展模块](/zh-cn/gallery.md)
     - [I2C级联扩展器](/zh-cn/)
-    - [RFID-RC522模块](/zh-cn/gallery.md)
+    - [RFID-I2C模块](/zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/rfid_mfrc522.md)
     - [I2S-MEMS麦克风模块](/zh-cn/gallery.md)
     - [指纹识别模块]()
     - [毫米波雷达模块]()
@@ -126,7 +127,7 @@
 - 电源模块
   - [5V电源]()
   - [升降压舵机电源]()
-  - [MPPT太阳能充电板](zh-cn/ph2.0_sensors/smart_module/MPPT_Module/MPPT_Module.md)
+  - [MPPT太阳能充电板](/zh-cn/ph2.0_sensors/smart_module/MPPT_Module/MPPT_Module.md)
   - [3.7V升压充电模块](/zh-cn//power_module/3.7v_battery_module.md)
   - [7.4V充电电池模块] (/zh-cn/power_module/16340_2s_li_battery_module.md)
   - [双节18650锂电池充电模块](/zh-cn//power_module/18650_2s_li_battery_module.md)
@@ -137,7 +138,7 @@
     - [nano-v3.0](/general/algorithm/data-structures/stack/README.zh-CN.md)
     - [ble-nano](/general/algorithm/data-structures/queue/README.zh-CN.md)
     - [rf-nano](/general/algorithm/data-structures/queue/README.zh-CN.md)
-    - [nano开发者套件] ()
+    - [nano开发者套件]()
   - Uno系类
     - [arduino_uno_r3](/Arduino/UnoR3/README.zh-CN.md)
     - [ble-uno](/Arduino/ble-uno/README.zh-CN.md)
@@ -159,16 +160,15 @@
   - [joysitck:bit](/zh-cn/micro_bit/joystickbit.md)
 
 - 乐鑫esp系类
-  - ESP32 Dev Kit主板
-    - [ESP32 ArduinoIDE介绍]()
-    - [Mixly安装ESP32主板介绍]()
-    - [ESP32 micropython介绍](https://www.micropython.org.cn/nav/micropython/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/esp32)
-  - [maker-esp32]
-  - [esp32-iot-board](/esp32/esp32_iot_board.md)
-  - [ESP32-CAM_V2](zh-cn/esp32/ESP32_CAM/ESP32_CAM.md)
-  - [esp32-uno]
+  - [esp32软件使用](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
+  - [esp32-devkit-32e](zh-cn/esp32/esp32_devkit_32e/esp32_devkit_32e.md)
+  - [esp32-uno](zh-cn/esp32/esp32-uno/esp32-uno.md)
+  - [esp32-iot-board](zh-cn/esp32/esp32_iot_board/esp32_iot_board.md)
+  - [maker-esp32](zh-cn/esp32/maker_esp32/maker_esp32.md)
+  - [maker-esp32-pro](zh-cn/esp32/maker_esp32_pro/maker_esp32_pro.md)
+  - [esp32-cam V2](zh-cn/esp32/ESP32_CAM/ESP32_CAM.md)
 - 树莓派
-  - [树莓派传感器扩展板](zh-cn/raspberrypi/raspberrypi_motordriver_board.md)
+  - [树莓派传感器扩展板](zh-cn/raspberrypi/raspberrypi_sensor_board/raspberrypi_sensor_board.md)
   - [树莓派电机驱动板](zh-cn/raspberrypi/raspberrypi_motordriver_board/raspberrypi_motordriver_board.md)
 
 - [k210产品]
@@ -181,6 +181,6 @@
   - [PS3蓝牙手柄](zh-cn/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
   - [gamepad](/Arduino/gamepad/README.zh-CN.md)
   - [makeymakey]()
-  - [编码电机]()
+  - [编码电机](zh-cn/ph2.0_sensors\actuators/hall_encoder_sensor/hall_encoder_sensor.md)
 
 - [关于我们](/zh-cn/about.md)

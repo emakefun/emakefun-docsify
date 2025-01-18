@@ -2,66 +2,87 @@
 
 ## 模块实物图
 
-![产品实物图](ESP32_CAM.png)
+![产品实物图](picture/ESP32_CAM.png)
 
 ## 概述
 
-ESP32-CAM是小尺寸的摄像头模组该模块可以作为最小系统独立工作，尺寸仅为 `27*40.5*4.5mm`，可广泛应用于各种物联网场合，适用于家庭智能设备、工业无线控制、无线监控、QR无线识别，无线定位系统信号以及其它物联网应用，是物联网应用的理想解决方案。
+ESP32-CAM V2是基于乐鑫ESP32-DOWD-V3芯片而开发的一款小尺寸的摄像头模组该模块可以作为最小系统独立工作，尺寸仅为 `27*40*4.5mm`。本产品基于市面上已存在的ESP32-CAM优化而开发，主要解决市面上，下载程序需要外接下载底部，发热巨大，不稳定等问题。尺寸和使用功能完全兼容现有的ESP32-CAM，网上有大量使用教程，可以直接使用参考。
 
-## 模块使用方法
+## 主板参数
+
+- 采用乐鑫原装 ESP32-DOWD-V3芯片，板载天线和IPEX天线座
+- 芯片内置448 KB ROM，520 KB SRAM，外挂4M SPI FLASH，2M PSRAM
+- Type-C接口，usb转串口芯片为沁恒的CH343P 
+- 输入电压：5V 1A
+- 板载复位按键
+- 板载micro-SD卡插槽
+- 支持2百万像素的OV2640摄像头， 内置 LED 闪光灯 
+
+- 尺寸27mmx40mmx4.5mm
+
+## 板子尺寸标注
+![尺寸标注](picture/esp32_cam_size_mark.jpg)
+
+###  [原理图](zh-cn/esp32/ESP32_CAM/esp32-cam2.0.pdf ':ignore')
+
+![esp32-cam2.0_sch](./esp32-cam2.0_sch.png)
+
+### 安装CH343P驱动
+
+[点击此处下载CH343P驱动](https://www.wch.cn/downloads/CH343SER_EXE.html)
+
+[安装驱动方法点击此处查看]([CH343芯片应用—Windows驱动安装与使用_ch343驱动-CSDN博客](https://blog.csdn.net/wch_techgroup/article/details/124801135))
 
 ### 配置Arduino中的开发板
 
-打开arduino，在最上方的选项中选择
-
-文件——>首选项
-
-在附加开发板管理器中添加网址：<https://dl.espressif.com/dl/package_esp32_index.json>
-
-![添加开发板管理器](01.png)
-
-添加完成后，点击工具——>开发板——>开发板管理器
-
-![打开开发板管理器](02.png)
-
-安装最新版1.0.4即可。
-
-![安装最新版1.0.4](03.png)
+Arduino IDE上传方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
 
 安装完成后即可选择对应的开发板：
 
-![选择开发板](04.png)
+![选择开发板](picture/04.png)
 
 ### 上传示例程序
 
 1.将usb转串口模块连接电脑，然后在工具栏串口选择对应的端口，如果未找到端口请检查驱动是否安装，或重启arduino。
 
-![选择串口](05.png)
+![选择串口](picture/05.png)
 
 2.打开示例例程CameraWebServer
 
-![打开示例例程](06.png)
+![打开示例例程](picture/06.png)
 
 3.修改代码
 
 **要先将如下宏定义取消注释，把其他的宏定义注释掉即可（若未这样做，则会导致报错）**
 
-![取消注释宏定义](07.png)
+![取消注释宏定义](picture/07.png)
 
 再将路由器信息给填好再上传程序即可。
 
-![补充路由器信息](08.png)
+![补充路由器信息](picture/08.png)
 
 ### 测试效果
 
 打开串口监视器，打开网页输入以下链接进入相机调试页面。
 
-![调试页面](09.png)
+![调试页面](picture/09.png)
 
 串口显示以上信息，说明程序植入正确，若未出现以上信息，需要按上面的步骤逐一对照。
 
-![串口显示](10.png)
+![串口显示](picture/10.png)
 
 点击Start Stream即可打开摄像头调参。
 
-![调参](11.png)
+![调参](picture/11.png)
+
+
+
+## micropython应用
+
+直接访问esp32-cam的开源项目https://github.com/lemariva/micropython-camera-driver
+
+## Edge Impuls AI教程
+
+## APP监控和控制
+
+如上资料请联系客服获取资料

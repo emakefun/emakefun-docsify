@@ -2,7 +2,7 @@
 
 ## 实物图
 
-![实物图](touch_piano.png)
+![实物图](picture/touch_piano.png)
 
 ## 概述
 
@@ -25,7 +25,7 @@
 
 [下载原理图](zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano_schematic.pdf ':ignore')
 
-![原理图](touch_piano_schematic.png)
+![原理图](picture/touch_piano_schematic.png)
 
 ## 模块参数
 
@@ -46,7 +46,7 @@
 
 ## 机械尺寸图
 
-![原理图](touch_piano_assembly.png)
+![原理图](picture/touch_piano_assembly.png)
 
 ## Arduino示例程序
 
