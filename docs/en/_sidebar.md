@@ -151,14 +151,13 @@
     - [joysitck:bit](/zh-cn/micro_bit/joystickbit.md)
 
 - esp serial
-    - ESP32 Dev Kit
-      - [ESP32 ArduinoIDE介绍]()
-      - [Mixly安装ESP32主板介绍]()
-      - [ESP32 micropython介绍](https://www.micropython.org.cn/nav/micropython/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/esp32)
-    - [maker-esp32]
-    - [esp32-iot-board](/esp32/esp32_iot_board.md)
-    - [ESP32-CAM_V2]()
-    - [esp32-uno]
+    - [esp32-software](en/esp32/esp32_software_instructions/esp32_software_instructions.md)
+    - [esp32-devkit-32e](en/esp32/esp32_devkit_32e/esp32_devkit_32e.md)
+    - [esp32-uno](en/esp32/esp32-uno/esp32-uno.md)
+    - [esp32-iot-board](en/esp32/esp32_iot_board/esp32_iot_board.md)
+    - [maker-esp32](en/esp32/maker_esp32/maker_esp32.md)
+    - [maker-esp32-pro](en/esp32/maker_esp32_pro/maker_esp32_pro.md)
+    - [esp32-cam V2](en/esp32/ESP32_CAM/ESP32_CAM.md)
 - RaspberryPi
     - [RaspberryPi Sensor Expansion Board](/raspberrypi/RaspberryPi-Sensor-Board/README_zh.md)
     - [RaspberryPi Motor Driver Board](/raspberrypi/RaspberryPi-MotorDriverBoard/README.md)
