@@ -116,3 +116,9 @@
 3.说出相应的命令，Arduino会返回相应的识别结果。
 
 ![识别指令](picture\15.png)
+
+## micro:bit MakeCode示例程序
+
+[点击查看micro:bit MakeCode示例程序](https://makecode.microbit.org/S15398-86855-41727-87467)
+
+[点击查看用户库网址](https://github.com/emakefun-makecode-extensions/emakefun_asr_speech_recognition)
