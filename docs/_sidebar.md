@@ -91,7 +91,7 @@
     - [LCD1602显示屏](/zh-cn/ph2.0_sensors/displayers/LCD1602.md)
     - [TM1650四位数码管](/zh-cn/ph2.0_sensors/displayers/TM1650.md)
     - [TM1637四位时钟数码管](/zh-cn/ph2.0_sensors/displayers/TM1637.md)
-    - [VK16K33四位数码管](/zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0.md)
+    - [VK16K33四位数码管](zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/4_digit_7_segment_v2.0.md)
     - [MAX7289_8x8点阵屏](/zh-cn/ph2.0_sensors/displayers/8x8LedDisplay.md)
     - [MAX7289_8x32点阵屏](/zh-cn/ph2.0_sensors/displayers/8x32LedDisplay.md)
     - [交通信号灯](/zh-cn/ph2.0_sensors/displayers/trafficLights.md)
