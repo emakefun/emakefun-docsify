@@ -62,3 +62,5 @@ TODO
 ## micro:bit MakeCode 示例程序
 
 [点击查看micro:bit MakeCode示例程序](https://makecode.microbit.org/S02939-66350-35638-80078)
+
+[点击查看用户库链接](https://github.com/emakefun-makecode-extensions/emakefun_vk16k33)
