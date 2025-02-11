@@ -104,7 +104,7 @@
     - [TCS34725颜色识别](/zh-cn/gallery.md)
     - [NLCS11颜色识别](/zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
     - [Atomizer_5V_Module](/zh-cn/ph2.0_sensors/smart_module/Atomizer_5V_Module/Atomizer_5V_Module.md)
-    - [QMC5883L电子指南针罗盘模块](/zh-cn/gallery.md)
+    - [QMC5883L电子指南针罗盘模块](zh-cn/ph2.0_sensors/smart_module/compass/compass.md)
     - [DS1302时钟模块](zh-cn/ph2.0_sensors/smart_module/ds1302/ds1302_rtc.md)
     - [MPU6050六轴陀螺仪](zh-cn/ph2.0_sensors/smart_module/mpu6050/mpu6050.md)
     - [计步传感器](/zh-cn/gallery.md)
