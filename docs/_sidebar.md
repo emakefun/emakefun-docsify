@@ -19,7 +19,7 @@
 
 - PH2.0模块
   - 基础输入模块
-    - [按键模块](/zh-cn/gallery.md)
+    - [按键模块](zh-cn/ph2.0_sensors/base_input_module/button_module/button_module.md)
     - [触摸模块](/zh-cn/gallery.md)
     - [碰撞开关](/zh-cn/gallery.md)
     - [旋转电位器](/zh-cn/gallery.md)
