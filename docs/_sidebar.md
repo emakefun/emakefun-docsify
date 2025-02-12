@@ -100,7 +100,7 @@
     - [中文字库0.96OLED](/zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED.md)
 
   - 智能模块
-    - [BMP280大气压传感器](/zh-cn/gallery.md)
+    - [BMP280大气压传感器](zh-cn/ph2.0_sensors/smart_module/atmospheric_pressure_sensor/atmospheric_pressure_sensor.md)
     - [TCS34725颜色识别](/zh-cn/gallery.md)
     - [NLCS11颜色识别](/zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
     - [Atomizer_5V_Module](/zh-cn/ph2.0_sensors/smart_module/Atomizer_5V_Module/Atomizer_5V_Module.md)
