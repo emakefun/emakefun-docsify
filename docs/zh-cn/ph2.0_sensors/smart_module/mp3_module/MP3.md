@@ -168,11 +168,11 @@ void loop()  {
 
 [点击下载Mixly示例](zh-cn/ph2.0_sensors/smart_module/mp3_module/MP3.zip ':ignore')
 
-## Micro:bit示例程序
+## micro:bit示例程序
 
-Microbit扩展链接：<https://github.com/emakefun/pxt-mp3>
+micro:bit扩展链接：<https://github.com/emakefun/pxt-mp3>
 
-[点击打开Microbit示例](https://makecode.microbit.org/_3fwbxTici47R)
+[点击打开micro:bit示例](https://makecode.microbit.org/_3fwbxTici47R)
 
 ### Mind+示例程序
 
