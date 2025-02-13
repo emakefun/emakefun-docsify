@@ -109,7 +109,7 @@
     - [MPU6050六轴陀螺仪](zh-cn/ph2.0_sensors/smart_module/mpu6050/mpu6050.md)
     - [计步传感器](/zh-cn/gallery.md)
     - [GS20手势识别传感器](/zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer.md)
-    - [MP3播放模块](/zh-cn/gallery.md)
+    - [MP3播放模块](zh-cn/ph2.0_sensors/smart_module/mp3_module/MP3.md)
     - [录音播放模块](/zh-cn/gallery.md)
     - [MQTT模块](/zh-cn/.md)
     - [LD3320语音识别V2.1](/zh-cn/gallery.md)
