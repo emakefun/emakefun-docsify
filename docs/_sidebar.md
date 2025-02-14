@@ -86,18 +86,17 @@
     - [串行总线舵机驱动板]()
 
   - 显示器
-    - [LED灯](/zh-cn/ph2.0_sensors/displayers/LED.md)
-    - [红外发射模块](/zh-cn/ph2.0_sensors/actuators/infraredEmissionModel.md)
-    - [LCD1602显示屏](/zh-cn/ph2.0_sensors/displayers/LCD1602.md)
-    - [TM1650四位数码管](/zh-cn/ph2.0_sensors/displayers/TM1650.md)
-    - [TM1637四位时钟数码管](/zh-cn/ph2.0_sensors/displayers/TM1637.md)
+    - [LED灯](zh-cn/ph2.0_sensors/displayers/led_module/LED.md)
+    - [LCD1602显示屏](zh-cn/ph2.0_sensors/displayers/lcd1602/LCD1602.md)
+    - [TM1650四位数码管](zh-cn/ph2.0_sensors/displayers/tm1650/TM1650.md)
+    - [TM1637四位时钟数码管](zh-cn/ph2.0_sensors/displayers/tm1637/TM1637.md)
     - [VK16K33四位数码管](zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/4_digit_7_segment_v2.0.md)
-    - [MAX7289_8x8点阵屏](/zh-cn/ph2.0_sensors/displayers/8x8LedDisplay.md)
+    - [MAX7289_8x8点阵屏](zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/8x8LedDisplay.md)
     - [MAX7289_8x32点阵屏](/zh-cn/ph2.0_sensors/displayers/8x32LedDisplay.md)
-    - [交通信号灯](/zh-cn/ph2.0_sensors/displayers/trafficLights.md)
-    - [RGB全彩灯](/zh-cn/ph2.0_sensors/displayers/RGB.md)
-    - [WS2812B RGB灯环](/zh-cn/ph2.0_sensors/displayers/RGBRing.md)
-    - [中文字库0.96OLED](/zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED.md)
+    - [交通信号灯](zh-cn/ph2.0_sensors/displayers/trafficlight_module/trafficLights.md)
+    - [RGB全彩灯](zh-cn/ph2.0_sensors/displayers/rgb_module/RGB.md)
+    - [WS2812B RGB灯环](zh-cn/ph2.0_sensors/displayers/12-bit_RGB_lamp_ring/RGBRing.md)
+    - [中文字库0.96OLED](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED.md)
 
   - 智能模块
     - [BMP280大气压传感器](zh-cn/ph2.0_sensors/smart_module/atmospheric_pressure_sensor/atmospheric_pressure_sensor.md)
