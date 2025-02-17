@@ -152,10 +152,10 @@
 - micro:bit
   - [microbit主板介绍](https://microbit.org/zh-cn/get-started/features/overview/)
   - [makecode介绍](/zh-cn/microbit/makecode/MakeCode使用介绍.md)
-  - [microbit micropython介绍](/zh-cn/micro_bit/microbit_micropython/microbit_micropython.md)
-  - [io:bit](/zh-cn/micro_bit/iot_bit.md)
-  - [sensor:bit](/zh-cn/micro_bit/sensorbit.md)
-  - [motor:bit](/zh-cn/micro_bit/motorbit.md)
+  - [microbit micropython介绍](zh-cn/microbit/microbit_micropython/microbit_micropython.md)
+  - [io:bit](zh-cn/microbit/IObit/IObit.md)
+  - [sensor:bit](zh-cn/microbit/sensorbit/sensorbit.md)
+  - [motor:bit](zh-cn/microbit/motorbit/motorbit.md)
   - [joysitck:bit](/zh-cn/micro_bit/joystickbit.md)
 
 - 乐鑫esp系类
