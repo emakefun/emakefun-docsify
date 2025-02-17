@@ -1,13 +1,9 @@
 # RaspberryPi-Sensor-Board V4.0
-[English](README.md) 中文版   
- 树莓派传感器扩展板是由[深圳市易创空间科技有限公司](http://www.emakefun.com)专门为方便树莓派外接传感器而设计。本扩展板适用于 Raspberry Pi Zero/Zero W/Zero WH/A+/B+/2B/3B/3B+/4B。 可以通过5.5-2.1mm的DC头或者接线柱可以给树莓派供电。预留了RF24L01模块，HC-SR04超声波模块，I2C接口，UART接口，支持8路ADC。同时空出摄像头和 DIP 显示屏排线接口。 
 
+[English](README.md) 中文版
+ 树莓派传感器扩展板是由[深圳市易创空间科技有限公司](http://www.emakefun.com)专门为方便树莓派外接传感器而设计。本扩展板适用于 Raspberry Pi Zero/Zero W/Zero WH/A+/B+/2B/3B/3B+/4B。 可以通过5.5-2.1mm的DC头或者接线柱可以给树莓派供电。预留了RF24L01模块，HC-SR04超声波模块，I2C接口，UART接口，支持8路ADC。同时空出摄像头和 DIP 显示屏排线接口。
 
-
-![raspberrypi_sensor_board](./picture/raspberrypi_sensor_boardv4.0 .jpg)
-
-
-
+![raspberrypi_sensor_board](picture/raspberrypi_sensor_boardv4.0.jpg)
 
 ## 特点
 
@@ -18,6 +14,7 @@
 - 板载DC-DC降压芯片 宽电压输入：5~36V 电压输出：5V 最大电流输出: 5A ，可以给树莓派直接供电
 
 ## MCU规格
+
 - 工作电压：3.3V和5V 根据跳线帽选择 ADC检查电压
 - 与树莓派通信方式: I2C 速率 1~400K
 - I2C地址： 0x24，背面可以配置地址
@@ -28,9 +25,9 @@
 
 &ensp;&ensp;&ensp;&ensp;扩展板MCU I2C地址为0x24，寄存地址说明如下：
 
-![picture9.png](./picture/picture10.png)
+![picture9.png](picture/picture10.png)
 
-  - 0x01寄存器为模式设置
+- 0x01寄存器为模式设置
 
     如下模式可以设置
 
@@ -43,19 +40,19 @@
     | 0x10 | ADC模式      | 可把引脚配置为ADC模式，然后读取引脚的ADC值，精度10位，ADC值范围为0 ~ 1023 |
     | 0x20 | PWM输出模式  | 可配置扩展板的PWM输出频率（1 ~ 10000Hz），然后把引脚为PWM输出模式，再配置引脚PWM输出的占空比(12位精度：0 ~ 4095)，然后使引脚输出PWM，可用于驱动**舵机** |
 
-  - 0x10 ~ 0x17: 读取ADC原始数据
+- 0x10 ~ 0x17: 读取ADC原始数据
 
-  - 0x20 ~ 0x27: 读取输入电压，单位是mv
+- 0x20 ~ 0x27: 读取输入电压，单位是mv
 
-  - 0x30 ~ 0x37: 读取输入电压与输出电压的比,输入电压/输出电压(0~100)
+- 0x30 ~ 0x37: 读取输入电压与输出电压的比,输入电压/输出电压(0~100)
 
-  - 0x40 ~ 0x47: 读取或者是设置A0-A7的数字值
+- 0x40 ~ 0x47: 读取或者是设置A0-A7的数字值
 
-  - 0x51 ~ 0x52: 设置A1-A2的PWM占空比
+- 0x51 ~ 0x52: 设置A1-A2的PWM占空比
 
-  - 0x61 ~ 0x62: 设置A1-A2的PWM的频率
+- 0x61 ~ 0x62: 设置A1-A2的PWM的频率
 
-##    树莓派I2C库安装
+## 树莓派I2C库安装
 
 &ensp;&ensp;&ensp;&ensp;打开树莓派终端输入"sudo raspi-config"命令，然后按照下图顺序依次操作即可。
 
@@ -97,7 +94,6 @@
 
 &ensp;&ensp;&ensp;&ensp;模拟传感器将模拟电压输入10位模数转换器。模数转换器将模拟数据转换成数字数据后，通过I2C将数字数据输入到树莓派中。
 
-
 ### Python代码
 
 ```
@@ -135,7 +131,6 @@
 
 ![本地图片](./picture/picture8.png)
 
-
 &ensp;&ensp;&ensp;&ensp;如果出现这种问题时请修改生成命令入下图设置：
 
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Compile&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;gcc -Wall -c "%f"
@@ -146,22 +141,14 @@
 
 ![本地图片](./picture/picture9.png)
 
-##  数字高低电平输入
-
-
-
+## 数字高低电平输入
 
 ## 数字高低电平输出
 
+## PWM输出
 
-
-
-##  PWM输出
 树莓派原本的硬件pwm只有GPIO1 GPIO26 GIPIO23 GPIO24对应的WiringPi就是1，26，23，24但是不同库支持的输出不一样，使用和树莓派本身的硬件资源冲突，比如声卡，定时器等。所以本扩展板外扩2路pwm可以很好解决这个问题。但是只有A1和A2两个引脚支持
 
-
-
-
 ## 舵机控制
-有了PWM的支持，那么我们也可以将此pwm扩展成驱动舵机的接口
 
+有了PWM的支持，那么我们也可以将此pwm扩展成驱动舵机的接口
