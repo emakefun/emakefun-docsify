@@ -2,7 +2,7 @@
 
 ## 实物图
 
-待补充
+![实物图](picture\3a163ad37b03118028591609304835f.jpg)
 
 ## 概述
 
@@ -38,7 +38,7 @@ SSD1306是一款用于有机/聚合物发光二极管点阵图形显示系统的
 
 ## 接线示例
 
-## arduino 应用场景
+## Arduino 应用场景
 
 显示中文、英文、数字、标点字符
 
@@ -61,7 +61,7 @@ void loop() {
 }
 ```
 
-### arduino函数介绍
+### Arduino函数介绍
 
 ```c++
 显示字体
@@ -71,7 +71,7 @@ void loop() {
 uint8_t ShowFont(uint8_t x, uint8_t y, uint8_t *str);
 ```
 
-### arduino示例程序
+### Arduino示例程序
 
 [下载最新库程序](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED.zip ':ignore')
 
@@ -83,6 +83,6 @@ uint8_t ShowFont(uint8_t x, uint8_t y, uint8_t *str);
 
 [点击下载Mixly示例程序](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/oled_mixly.zip ':ignore')
 
-### microbit makecode块
+### micro:bit MakeCode块
 
-[点击查看Microbit示例程序](https://makecode.microbit.org/_1xP2br2C10zX)
+[点击查看micro:bit示例程序](https://makecode.microbit.org/_1xP2br2C10zX)
