@@ -81,7 +81,6 @@
     - [双路电机驱动](/zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel.md)
     - [I2C双路电机驱动](/zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel.md)
     - [四路编码电机驱动](/zh-cn/ph2.0_sensors/actuators/)
-    - [I2S音频放大器](/zh-cn/gallery.md)
     - [小型雾化器](/zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer.md)
     - [串行总线舵机驱动板]()
 
@@ -102,7 +101,6 @@
     - [BMP280大气压传感器](zh-cn/ph2.0_sensors/smart_module/atmospheric_pressure_sensor/atmospheric_pressure_sensor.md)
     - [TCS34725颜色识别](zh-cn/ph2.0_sensors/smart_module/color_recognition/color_recognition.md)
     - [NLCS11颜色识别](/zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
-    - [Atomizer_5V_Module](/zh-cn/ph2.0_sensors/smart_module/Atomizer_5V_Module/Atomizer_5V_Module.md)
     - [QMC5883L电子指南针罗盘模块](zh-cn/ph2.0_sensors/smart_module/compass/compass.md)
     - [DS1302时钟模块](zh-cn/ph2.0_sensors/smart_module/ds1302/ds1302_rtc.md)
     - [MPU6050六轴陀螺仪](zh-cn/ph2.0_sensors/smart_module/mpu6050/mpu6050.md)
@@ -138,12 +136,12 @@
     - [ble-nano](zh-cn/arduino_products/nano/ble-nano/README_zh.md)
     - [rf-nano](zh-cn/arduino_products/nano/RF-Nano_pic_zh/RF-Nano.md)
     - [nano开发者套件]()
-  - Uno系类
+  - Uno系列
     - [arduino_uno_r3](zh-cn/arduino_products/uno/arduino_uno_r3/arduino_uno_r3.md)
     - [ble-uno](zh-cn/arduino_products/uno/ble-uno/ble_uno.md)
     - [maker-uno](zh-cn/arduino_products/uno/maker-uno/maker_uno.md)
     - [PH2.0传感器扩展板](zh-cn/arduino_products/uno/sensorkit/SensorKit.md)
-    - [motor_driver_board](/Arduino/motor_driver_board/README.zh-CN.md)
+    - [motor_driver_board](zh-cn/arduino_products/uno/motor_driver_board/MotorDriverBoard.md)
     - [starter-bot]()
     - [hummer-bot]()
     - [panter-tank]()
