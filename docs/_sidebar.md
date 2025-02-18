@@ -142,7 +142,7 @@
     - [arduino_uno_r3](zh-cn/arduino_products/uno/arduino_uno_r3/arduino_uno_r3.md)
     - [ble-uno](zh-cn/arduino_products/uno/ble-uno/ble_uno.md)
     - [maker-uno](zh-cn/arduino_products/uno/maker-uno/maker_uno.md)
-    - [PH2.0传感器扩展板](/Arduino/PH2.0_externtion_borad/README.zh-CN.md)
+    - [PH2.0传感器扩展板](zh-cn/arduino_products/uno/sensorkit/SensorKit.md)
     - [motor_driver_board](/Arduino/motor_driver_board/README.zh-CN.md)
     - [starter-bot]()
     - [hummer-bot]()
