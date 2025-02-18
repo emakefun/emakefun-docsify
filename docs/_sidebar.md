@@ -135,7 +135,7 @@
 - Arduino产品
   - Nano
     - [nano-v3.0](zh-cn/arduino_products/nano/RF-Nano_pic_zh/rf-nano_v3_0.md)
-    - [ble-nano](/general/algorithm/data-structures/queue/README.zh-CN.md)
+    - [ble-nano](zh-cn/arduino_products/nano/ble-nano/README_zh.md)
     - [rf-nano](zh-cn/arduino_products/nano/RF-Nano_pic_zh/RF-Nano.md)
     - [nano开发者套件]()
   - Uno系类
