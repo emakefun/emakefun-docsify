@@ -29,6 +29,8 @@
 
 ### 接线图
 
+[I2S音频放大模块使用说明点击此处查看](zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/i2s_audio_amplifier_module.md)
+
 |       名称        | 数量 |
 | :---------------: | :--: |
 |  ESP32-IOT_BOARD  |  1   |
