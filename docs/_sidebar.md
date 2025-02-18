@@ -139,7 +139,7 @@
     - [rf-nano](zh-cn/arduino_products/nano/RF-Nano_pic_zh/RF-Nano.md)
     - [nano开发者套件]()
   - Uno系类
-    - [arduino_uno_r3](/Arduino/UnoR3/README.zh-CN.md)
+    - [arduino_uno_r3](zh-cn/arduino_products/uno/arduino_uno_r3/arduino_uno_r3.md)
     - [ble-uno](/Arduino/ble-uno/README.zh-CN.md)
     - [maker-uno](/Arduino/maker-uno/README.zh-CN.md)
     - [PH2.0传感器扩展板](/Arduino/PH2.0_externtion_borad/README.zh-CN.md)
