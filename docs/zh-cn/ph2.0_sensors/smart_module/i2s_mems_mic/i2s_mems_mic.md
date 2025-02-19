@@ -12,6 +12,8 @@
 
 ![原理图](picture/企业微信截图_17397591702741.png)
 
+[原理图点击此处查看](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/MSM261S4030H0_MEMS_MIC.pdf ':ignore')
+
 ## 芯片规格书
 
 [点击查看I2S麦克风模块规格书](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/ICS-43434.pdf ':ignore')

@@ -9,6 +9,7 @@
   - [Mixly2.0使用介绍](/zh-cn/software/mixly/mixly.zh-CN.md)
   - [Mind+使用介绍](/zh-cn/software/mind_plus/mindplus.zh-CN.md)
   - [Thonny使用介绍](/zh-cn/software/thonny/thonny.zh-CN.md)
+  - [MagicBlock使用介绍](zh-cn/software/MagicBlock_pic_zh/magicblock.md)
   - [手机编程软件介绍](/zh-cn/software/Mobile_programming/Mobile_programming.md)
 
 - 驱动安装
@@ -144,7 +145,7 @@
     - [motor_driver_board](zh-cn/arduino_products/uno/motor_driver_board/MotorDriverBoard.md)
     - [starter-bot]()
     - [hummer-bot](zh-cn/arduino_products/uno/hummer-bot/hummer-bot.md)
-    - [panter-tank]()
+    - [panther-tank](zh-cn/arduino_products/uno/panther_tank/panther_tank.md)
     - [传感器套件介绍]()
 
 - micro:bit
