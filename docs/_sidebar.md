@@ -177,7 +177,7 @@
 - 外设/配件
   - [PS2手柄]()
   - [PS3蓝牙手柄](zh-cn/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
-  - [gamepad](/Arduino/gamepad/README.zh-CN.md)
+  - [gamepad](zh-cn/peripheral/arduino_gamepad/Programmable_controller.md)
   - [makeymakey]()
   - [编码电机](zh-cn/ph2.0_sensors\actuators/hall_encoder_sensor/hall_encoder_sensor.md)
 
