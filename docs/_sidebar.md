@@ -143,7 +143,7 @@
     - [PH2.0传感器扩展板](zh-cn/arduino_products/uno/sensorkit/SensorKit.md)
     - [motor_driver_board](zh-cn/arduino_products/uno/motor_driver_board/MotorDriverBoard.md)
     - [starter-bot]()
-    - [hummer-bot]()
+    - [hummer-bot](zh-cn/arduino_products/uno/hummer-bot/hummer-bot.md)
     - [panter-tank]()
     - [传感器套件介绍]()
 
