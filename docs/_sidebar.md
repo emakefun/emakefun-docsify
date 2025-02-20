@@ -155,7 +155,7 @@
   - [io:bit](zh-cn/microbit/IObit/IObit.md)
   - [sensor:bit](zh-cn/microbit/sensorbit/sensorbit.md)
   - [motor:bit](zh-cn/microbit/motorbit/motorbit.md)
-  - [joysitck:bit](/zh-cn/micro_bit/joystickbit.md)
+  - [joysitck:bit](zh-cn/microbit/joystickbit/joystickbit.md)
 
 - 乐鑫esp系类
   - [esp32软件使用](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
