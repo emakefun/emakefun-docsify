@@ -126,9 +126,9 @@
   - [5V电源]()
   - [升降压舵机电源]()
   - [MPPT太阳能充电板](/zh-cn/ph2.0_sensors/smart_module/MPPT_Module/MPPT_Module.md)
-  - [3.7V升压充电模块](/zh-cn//power_module/3.7v_battery_module.md)
-  - [7.4V充电电池模块] (/zh-cn/power_module/16340_2s_li_battery_module.md)
-  - [双节18650锂电池充电模块](/zh-cn//power_module/18650_2s_li_battery_module.md)
+  - [3.7V升压充电模块](zh-cn/power_module/3.7V_Battery_Module/3.7v_battery_module.md)
+  - [7.4V充电电池模块](zh-cn/power_module/16340_2s_li_battery_module/16340_2s_li_battery_module.md)
+  - [双节18650锂电池充电模块](zh-cn/power_module/18650_2s_li_battery_module/18650_2s_li_battery_module.md)
   - [三节18650锂电池充电模块](/zh-cn//power_module/18650_3s_li_battery_module.md)
 
 - Arduino产品
