@@ -74,7 +74,7 @@
     - [DM11两路电机驱动模块](/zh-cn/ph2.0_sensors/actuators/dm11/dm11.md)
     - [R300C电机风扇](zh-cn/ph2.0_sensors/actuators/highPowerMotorModule/highPowerMotorModule.md)
     - [继电器模块](zh-cn/ph2.0_sensors/actuators/relayModule/relayModel.md)
-    - [激光发射模块](/zh-cn/ph2.0_sensors/actuators/laserEmissionModel.md)
+    - [激光发射模块](zh-cn/ph2.0_sensors/actuators/laserEmissionModule/laserEmissionModel.md)
     - [振动马达](/zh-cn/ph2.0_sensors/actuators/vibrationMotorModule.md)
     - [8002A功放喇叭](/zh-cn/ph2.0_sensors/actuators/bigSpeakerModule.md)
     - [舵机扩展](/zh-cn/ph2.0_sensors/actuators/servoModel.md)
