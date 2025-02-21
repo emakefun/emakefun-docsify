@@ -68,8 +68,8 @@
     - [PM2.5粉尘传感器]()
 
   - 执行器
-    - [有源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/buzzerModel.md)
-    - [无源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/passiveBuzzerModel.md)
+    - [有源蜂鸣器模块](zh-cn/ph2.0_sensors/actuators/buzzerModule/buzzerModel.md)
+    - [无源蜂鸣器模块](zh-cn/ph2.0_sensors/actuators/passiveBuzzerModule/passiveBuzzerModel.md)
     - [空心杯610电机风扇](zh-cn/ph2.0_sensors/motorModule2/motorModelV2.md)
     - [DM11两路电机驱动模块](/zh-cn/ph2.0_sensors/actuators/dm11/dm11.md)
     - [R300C电机风扇](zh-cn/ph2.0_sensors/actuators/highPowerMotorModule/highPowerMotorModule.md)
