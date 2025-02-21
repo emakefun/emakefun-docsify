@@ -79,7 +79,7 @@
     - [8002A功放喇叭](/zh-cn/ph2.0_sensors/actuators/bigSpeakerModule.md)
     - [舵机扩展](/zh-cn/ph2.0_sensors/actuators/servoModel.md)
     - [单路电机驱动](/zh-cn/ph2.0_sensors/actuators/)
-    - [双路电机驱动](/zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel.md)
+    - [双路电机驱动](zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel/highSpeedMiniMotorDriveBoardModel.md)
     - [I2C双路电机驱动](/zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel.md)
     - [四路编码电机驱动](/zh-cn/ph2.0_sensors/actuators/)
     - [小型雾化器](/zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer.md)
