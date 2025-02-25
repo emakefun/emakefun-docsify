@@ -42,7 +42,7 @@ ESP32-Uno是基于乐鑫科技的 ESP32-DOWD-V3 模组基础上开发的一款�
 
 ## 引脚说明
 
-待补充
+![引脚说明图](picture\Esp32_UNO_标注图.png)
 
 ## 在Arduino IDE中驱动编码电机和直流电机
 

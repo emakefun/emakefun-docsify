@@ -24,6 +24,13 @@ ESP32 AI小智聊天机器人模块是一款基于ESP32芯片的AI聊天机器�
 
 ### 硬件准备
 
+- [I2S麦克风模块](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/i2s_mems_mic.md) x1
+- [I2S音频放大器模块](zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/i2s_audio_amplifier_module.md) x1
+- [OLED屏模块](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED.md) x1
+- [按键模块](zh-cn/ph2.0_sensors/base_input_module/button_module/button_module.md) x3
+- 电源模块 x1
+- ESP32系列主板
+
 [视频教程链接](https://www.bilibili.com/video/BV1XnmFYLEJN/?vd_source=ebdd12013edf6ee0e6759b8884b4e1eb)
 
 | ESP32 引脚编号 | 连接外设                            |
