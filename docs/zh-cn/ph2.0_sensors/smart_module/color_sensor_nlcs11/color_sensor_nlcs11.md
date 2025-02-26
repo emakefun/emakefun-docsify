@@ -119,7 +119,7 @@ NLCS11设备可进行色温测量、亮度传感。内部状态机提供了将�
 | ------------------------------------------------------------ |
 | Arduino库和示例程序（C/C++）                                 |
 | ESP32库和示例程序（C/C++，MicroPython）                      |
-| micro:bit库和示例程序（MicroPython,MakeCode）[点击查看Makecode示例程序](https://makecode.microbit.org/S81407-77066-42131-87420) |
+| micro:bit库和示例程序（MicroPython,MakeCode）[点击查看Makecode示例程序](https://makecode.microbit.org/S81407-77066-42131-87420)<br>用户库网址：<https://github.com/emakefun-makecode-extensions/emakefun_nlcs11> |
 | NLCS11原理图                                                 |
 | NLCS11数据手册                                               |
 
