@@ -24,7 +24,7 @@
     - [触摸模块](zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module.md)
     - [碰撞开关](zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module.md)
     - [旋转电位器](/zh-cn/gallery.md)
-    - [滑动变阻器](/zh-cn/gallery.md)
+    - [滑动变阻器](zh-cn/ph2.0_sensors/base_input_module/slide_potentiometer/slide_potentiometer.md)
     - [旋转编码器](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_module.md)
     - [摇杆模块](/zh-cn/gallery.md)
     - [触摸矩阵键盘V3.0](/zh-cn/gallery.md)
