@@ -75,7 +75,7 @@
     - [R300C电机风扇](zh-cn/ph2.0_sensors/actuators/highPowerMotorModule/highPowerMotorModule.md)
     - [继电器模块](zh-cn/ph2.0_sensors/actuators/relayModule/relayModel.md)
     - [激光发射模块](zh-cn/ph2.0_sensors/actuators/laserEmissionModule/laserEmissionModel.md)
-    - [振动马达](/zh-cn/ph2.0_sensors/actuators/vibrationMotorModule.md)
+    - [振动马达](zh-cn/ph2.0_sensors/actuators/vibrationMotorModule/vibrationMotorModule.md)
     - [8002A功放喇叭](/zh-cn/ph2.0_sensors/actuators/bigSpeakerModule.md)
     - [舵机扩展](/zh-cn/ph2.0_sensors/actuators/servoModel.md)
     - [单路电机驱动](/zh-cn/ph2.0_sensors/actuators/)
