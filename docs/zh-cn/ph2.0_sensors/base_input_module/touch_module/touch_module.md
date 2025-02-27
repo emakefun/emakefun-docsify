@@ -76,7 +76,7 @@ void loop()
 
 [下载示例程序](zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_Mixly_demo.zip ':ignore')
 
-### 6.2 microbit示例程序
+### 6.2 micro:bit示例程序
 
 <a href="https://makecode.microbit.org/_5bXfq63TiM3m" target="_blank">动手试一试</a>
 

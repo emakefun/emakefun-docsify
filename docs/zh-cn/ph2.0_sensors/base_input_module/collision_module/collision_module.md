@@ -65,6 +65,6 @@ void loop()
 
 [下载示例程序](zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module.zip ':ignore')
 
-## microbit示例程序
+## micro:bit示例程序
 
 <a href="https://makecode.microbit.org/_RDJbzTDUX2RW" target="_blank">动手试一试</a>

@@ -93,7 +93,7 @@ void loop(){
 
 [点击下载MicroPython示例程序](zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano_py.zip ':ignore')
 
-## Microbit示例程序
+## Micro:bit示例程序
 
 钢琴模块 V1：<a href="https://makecode.microbit.org/_Ve9WmrP1k6WE" target="_blank">动手试一试</a>
 钢琴模块 V2：<a href="https://makecode.microbit.org/_c0cAijCb05w1" target="_blank">动手试一试</a>
