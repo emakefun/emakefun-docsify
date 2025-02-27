@@ -22,7 +22,7 @@
   - 基础输入模块
     - [按键模块](zh-cn/ph2.0_sensors/base_input_module/button_module/button_module.md)
     - [触摸模块](zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module.md)
-    - [碰撞开关](/zh-cn/gallery.md)
+    - [碰撞开关](zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module.md)
     - [旋转电位器](/zh-cn/gallery.md)
     - [滑动变阻器](/zh-cn/gallery.md)
     - [旋转编码器](/zh-cn/gallery.md)
