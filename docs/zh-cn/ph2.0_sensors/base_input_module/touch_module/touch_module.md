@@ -90,9 +90,9 @@ LED模块通过3Pin线接在主板P2（2号）口；
 
 ![all](picture/all.png)
 
-[示例程序下载](touch_module/MicroPython 示例程序.zip)
+[示例程序下载](zh-cn/ph2.0_sensors/base_input_module/touch_module/MicroPython示例程序.zip ':ignore')
 
-```c
+```python
 from machine import Pin
 button = Pin(5, Pin.IN)  #按键端口
 led = Pin(2, Pin.OUT)  #LED端口
