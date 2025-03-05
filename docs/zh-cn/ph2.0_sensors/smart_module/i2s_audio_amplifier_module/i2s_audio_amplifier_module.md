@@ -27,7 +27,7 @@
 
 ## 原理图
 
-![原理图原理图](1739948630901.jpg)
+![原理图原理图](schematic_diagram.png)
 
 [点击此处查看原理图](zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/MAX98375_i2s_dac_amp.pdf ':ignore')
 
