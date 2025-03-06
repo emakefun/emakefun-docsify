@@ -1,31 +1,34 @@
-# I2S麦克风模块使用说明
+# I2S MEMS麦克风模块
 
 ## 实物图
 
-![实物图](picture\fe4db4fa6d60ad4f65a781c77422d75.jpg)
+![实物图](picture/physical_model.jpg)
 
 ## 概述
 
-该款MEMS数字I2S麦克风模块以ICS43434位主控芯片，凭借其小巧的体积、高灵敏度和低噪音特性，非常适合用于各种需要高质量音频输入的应用场景。结合ESP32等主控设备的强大处理能力，用户可以轻松实现语音识别、录音、AI学习等功能。
+该款MEMS数字I2S麦克风模块是以MSM261S4030H0声音传感器为核心，内置一个对声音敏感的电容式驻极体话筒。声波使话筒内的驻极体薄膜振动导致电容的变化，而产生与之对应变化的微小电压。这一电压随后被转化成0-5V的电压，经过A/D转换被数据采集器接收通过I2S协议和主控通讯。
+
+该模块不仅具有小巧的体积，还具有高灵敏度和低噪音特性，非常适合用于各种需要高质量音频输入的应用场景。结合ESP32等主控设备的强大处理能力，用户可以轻松实现语音识别、录音、AI学习等功能。
 
 ## 原理图
 
-![原理图](picture/企业微信截图_17397591702741.png)
+![原理图](picture/schematic_diagram.png)
 
 [原理图点击此处查看](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/MSM261S4030H0_MEMS_MIC.pdf ':ignore')
 
 ## 芯片规格书
 
-[点击查看I2S麦克风模块规格书](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/ICS-43434.pdf ':ignore')
+[点击查看I2S麦克风规格书](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/MSM261S4030H0.pdf ':ignore')
 
 ## 模块参数
 
-- 工作电压：DC 3.3V
+- 工作电压：3.3~5V
 - 麦克风封装工艺：MEMS
-- 方向性：全向
+- 方向性：全向 顶进音
 - 数据接口：I2S
-- 声压等级：140dB
-- 信噪比：59dB
+- 灵敏度：-26dB
+- 声压等级：124dB
+- 信噪比：61dB
 
 ## ESP32 Arduino 使用示例
 
@@ -54,14 +57,14 @@
 | LRLCK          | 32    |
 | DIN            | 23    |
 
-![接线图](picture\0d78779d3037b02b210861fc6a63f5b.jpg)
+![接线图](picture/circuit_diagram.png)
 
-### Arduino使用示例
+### ESP32 Arduino使用示例
 
-[点击下载Arduino示例代码](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/esp32_i2s_rw.zip ':ignore')
+[点击下载ESP32的Arduino示例代码](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/esp32_i2s_rw.zip ':ignore')
 
-将上述代码下载后解压打开test.ino文件，直接烧录至单片机即可运行。
+下载后解压打开test.ino文件，通过ArduinoIDE上传到ESP32主板中。
 
-![alt text](picture/1739764056471.jpg)
+![alt text](picture/test.jpg)
 
-上传后，对着麦克风说话，即可在喇叭模块上听到声音。
+上传后，对准麦克风说话，即可在喇叭模块上实时听到麦克风录制的声音。
