@@ -21,6 +21,7 @@
 - PH2.0模块
   - 基础输入模块
     - [按键模块](zh-cn/ph2.0_sensors/base_input_module/button_module/button_module.md)
+    - [ADC按键模块](zh-cn/ph2.0_sensors/base_input_module/adc_button_module/adc_button_module.md)
     - [触摸模块](zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module.md)
     - [碰撞开关](zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module.md)
     - [旋转电位器](zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer.md)
@@ -118,7 +119,7 @@
     - [I2C级联扩展器](/zh-cn/)
     - [RFID-I2C模块](/zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/rfid_mfrc522.md)
     - [I2S-MEMS麦克风模块](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/i2s_mems_mic.md)
-    - [ESP32 小智AI聊天机器人](zh-cn/ph2.0_sensors/smart_module/esp32_ai_xiaozhi/esp32_ai_xiaozhi.md)
+    <!-- - [ESP32 小智AI聊天机器人](zh-cn/ph2.0_sensors/smart_module/esp32_ai_xiaozhi/esp32_ai_xiaozhi.md) -->
     - [指纹识别模块]()
     - [毫米波雷达模块]()
     - [GPS模块]()
