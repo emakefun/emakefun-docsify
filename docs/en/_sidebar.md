@@ -159,8 +159,8 @@
     - [maker-esp32-pro](en/esp32/maker_esp32_pro/maker_esp32_pro.md)
     - [esp32-cam V2](en/esp32/ESP32_CAM/ESP32_CAM.md)
 - RaspberryPi
-    - [RaspberryPi Sensor Expansion Board](/raspberrypi/RaspberryPi-Sensor-Board/README_zh.md)
-    - [RaspberryPi Motor Driver Board](/raspberrypi/RaspberryPi-MotorDriverBoard/README.md)
+    - [RaspberryPi Sensor Expansion Board](en/raspberrypi/raspberrypi_sensor_board/raspberrypi_sensor_board.md)
+    - [RaspberryPi Motor Driver Board](en/raspberrypi/raspberrypi_motordriver_board/raspberrypi_motordriver_board.md)
 
 - [open source hardware](/zh-cn/)
   - [robot driver board]()
