@@ -52,7 +52,7 @@
     - [Infrared Light Seeking and Obstacle Avoidance](/zh-cn/gallery.md)
     - [Infrared Counting](/zh-cn/gallery.md)
     - [Infrared Tracking](/zh-cn/gallery.md)
-    - [5line Infrared TrackingV3.0](/zh-cn/gallery.md)
+    - [5line Infrared TrackingV3.0](/en/ph2.0_sensors/sensors/five_line_tracker_v3/five_line_tracker_v3.md)
     - [Single Grayscale Tracking](/zh-cn/gallery.md)
     - [5line Grayscale Tracking](/zh-cn/gallery.md)
     - [HX711](/zh-cn/)
