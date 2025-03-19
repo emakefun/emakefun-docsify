@@ -60,9 +60,9 @@ void loop() {
 
 可通过调整声音传感器上电阻阻值，调整传感器阈值。
 
-## Micropython示例程序
+## MicroPython示例程序
 
-### Esp32 Micropython示例程序
+### Esp32 MicroPython示例程序
 
 ```python
 from machine import ADC,Pin
@@ -82,7 +82,7 @@ while True:
 
 ```
 
-### micro:bit示例程序
+### micro:bit MicroPython示例程序
 
 ```python
 from microbit import *
@@ -95,7 +95,7 @@ while True:
     sleep(1000)
 ```
 
-## Makecode示例程序
+## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_JC4WUuDjj2oi" target="_blank">动手试一试</a>
+<a href="https://makecode.microbit.org/_FaF5Xx1C2Tvb">动手试一试</a>
 

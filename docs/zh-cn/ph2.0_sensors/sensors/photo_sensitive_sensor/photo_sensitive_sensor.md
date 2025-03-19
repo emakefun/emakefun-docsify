@@ -36,30 +36,24 @@
 
 ```c++
 #define PhotosensitivePin  A3//定义光敏传感器模块引脚
-#define LedPin 3//定义LED模块引脚
-int  PhotosensitiveValue = 0 ;//定义数字变量,读取光敏值
+int  PhotosensitiveValue = 0 ;//定义变量,读取光敏值
+
 void setup()
 {
   Serial.begin(9600);//设置串口波特率
   pinMode(PhotosensitivePin, INPUT);//设置光敏传感器模块引脚为输入
-  pinMode(LedPin, OUTPUT);//设置LED模块引脚为输出
 }
 void loop()
 {
   PhotosensitiveValue = analogRead(PhotosensitivePin);//读取光敏值
   Serial.print("Photosensitive Data:  ");
   Serial.println(PhotosensitiveValue);//打印光敏值
-  if (PhotosensitiveValue < 50) { //打印光敏值
-    digitalWrite(LedPin, HIGH);//如果光敏值小于50则执行此处,LED引脚为高电平
-  } else {
-    digitalWrite(LedPin, LOW);//如果光敏值小于50则执行此处,LED引脚为低电平
-  }
 }
 ```
 
-## Micropython示例程序
+## MicroPython示例程序
 
-### Esp32 Micropython示例程序
+### Esp32 MicroPython示例程序
 
 ```python
 from machine import ADC,Pin
@@ -68,19 +62,14 @@ import time
 AnalogPin = 2  # 定义光敏传感器模拟接口引脚
 
 p = ADC(AnalogPin)
-P4 = Pin(4, Pin.OUT)
 
 while True:
     AnalogValue = p.read_u16()  # 读取光敏传感器模拟值
     print("Photosensitive Data:", AnalogValue)  # 打印光敏传感器模拟值
     time.sleep_ms(200)
-    if AnalogValue < 50:
-        P4.on()  # 如果光敏值小于50则执行此处,LED引脚为高电平
-    else:
-        P4.off()  # 如果光敏值大于等于50则执行此处,LED引脚为低电平
 ```
 
-### micro:bit示例程序
+### micro:bit MicroPython示例程序
 
 ```python
 from microbit import *
@@ -91,8 +80,7 @@ while True:
     sleep(1000)
 ```
 
-## Makecode示例程序
+## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_iHV8rCMPMUj4" target="_blank">动手试一试</a>
+<a href="https://makecode.microbit.org/_ePdgoM28qVgV">动手试一试</a>
 
-![机械尺寸图](picture/06.jpg)

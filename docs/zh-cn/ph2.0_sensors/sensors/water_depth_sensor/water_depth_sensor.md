@@ -37,35 +37,20 @@
 [下载示例程序](zh-cn\ph2.0_sensors\sensors\water_depth_sensor\water_depth_sensor.zip ':ignore')
 
 ```c++
-#define DepthPin A3  // 定义水深传感器模拟接口引脚
-#define BuzzerPin 3  // 定义水蜂鸣器引脚
-
-int DepthValue;
-Buzzer buzzer(BuzzerPin);
-
 void setup() {
     Serial.begin(9600);  // 初始化串口通信
-    pinMode(DepthPin, INPUT);  // 设置水深传感器引脚为输入
+    pinMode(A3, INPUT);  // 设置水深传感器引脚为输入
 }
 
 void loop() {
-    buzzer.noTone();  // 停止蜂鸣器音调
-    DepthValue = analogRead(DepthPin);
-    if (DepthValue > 500) {		//如果水深大于500
-        for (int i = 200; i <= 800; i++) {
-            buzzer.tone(i, 10);  // 播放升调音调
-        }
-        for (int i = 800; i >= 200; i--) {
-            buzzer.tone(i, 10);  // 播放降调音调
-        }
-    } 
+ 	Serial.print(analogRead(A3));//打印水深传感器模拟值
     delay(200);  // 延时200毫秒
 }
 ```
 
-## Micropython示例程序
+## MicroPython示例程序
 
-### Esp32 Micropython示例程序
+### Esp32 MicroPython示例程序
 
 ```python
 from machine import ADC,Pin
@@ -74,59 +59,26 @@ import time
 AnalogPin = 15  # 定义水深传感器模拟接口引脚
 
 p1 = ADC(AnalogPin)
-buzzer_pin = Pin(2, Pin.OUT)  # 定义蜂鸣器引脚
-
-def alarm():
-    for i in range(100):
-        # 设置频率声音
-        buzzer_pin.on()
-        time.sleep_ms(1)
-        buzzer_pin.off()
-        time.sleep_ms(1)
-        
+      
 while True:
     AnalogValue = p1.read_u16()  # 读取水深传感器模拟值
     print("Analog Data:", AnalogValue)  # 打印水深传感器模拟值
-    if p2.value() > 500:	#如果水深大于500
-        alarm()
-    else:
-        buzzer_pin.off()
     time.sleep_ms(200)
-
-
 ```
 
-### micro:bit示例程序
+### micro:bit MicroPython示例程序
 
 ```python
 from microbit import *
 
 AnalogPin = pin1  # 定义水深传感器模拟接口引脚
-DigitalPin = pin0  # 定义水深传感器数字接口引脚
-
-buzzer_pin = pin2  # # 定义蜂鸣器引脚
-
-def alarm():
-    for i in range(100):
-        # 设置频率声音
-        buzzer_pin.write_digital(1)
-        sleep(1)
-        buzzer_pin.write_digital(0)
-        sleep(1)
 
 while True:
     AnalogValue = AnalogPin.read_analog()  # 读取水深传感器模拟值
-    print("Analog Data:", AnalogValue)  # 打印水深传感器模拟值
-    print("Digital Data:", DigitalPin.read_digital())  # 打印水深传感器数字值
-    if DigitalPin.read_digital() == 0:
-        alarm()  # 如果水深传感器值为低电平则调用警报函数
-    else:
-        buzzer_pin.write_digital(0)  # 如果水深传感器值为高电平则蜂鸣器输出低电平
+    print( AnalogValue)  # 打印水深传感器模拟值
     sleep(0.2)
 ```
 
-## Makecode示例程序
+## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_i1ALFJiz18yE" target="_blank">动手试一试</a>
-
-![](picture/01.jpg)
+<a href="https://makecode.microbit.org/_e1XeY08vy2kx">动手试一试</a>
