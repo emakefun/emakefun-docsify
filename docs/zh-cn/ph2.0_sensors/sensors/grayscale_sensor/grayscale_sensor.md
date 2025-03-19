@@ -52,9 +52,9 @@ void loop(){
 }
 ```
 
-## Micropython示例程序
+## MicroPython示例程序
 
-### Esp32 Micropython示例程序
+### Esp32 MicroPython示例程序
 
 ```python
 from machine import ADC,Pin
@@ -70,7 +70,7 @@ while True:
     time.sleep_ms(200)
 ```
 
-### micro:bit示例程序
+### micro:bit MicroPython示例程序
 
 ```python
 from microbit import *
@@ -81,8 +81,7 @@ while True:
     sleep(200)
 ```
 
-## Makecode示例程序
+## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_hj7ektMpLhXF" target="_blank">动手试一试</a>
+<a href="https://makecode.microbit.org/_fakY8cFmMMch">动手试一试</a>
 
-![](picture/03.jpg)

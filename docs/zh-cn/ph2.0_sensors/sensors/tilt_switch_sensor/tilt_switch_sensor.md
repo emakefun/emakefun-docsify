@@ -39,29 +39,33 @@
  [下载示例程序](zh-cn\ph2.0_sensors\sensors\tilt_switch_sensor\tilt_switch_sensor.zip ':ignore') 
 
 ```c++
+#define DigitalPin  7//定义倾斜传感器数字引脚
+#define AnalogPin   A0//定义倾斜传感器模拟引脚
+
+int  AnalogValue = 0 ;//定义数字变量,读取倾斜传感器模拟值
+int  DigitalValue = 0 ;//定义数字变量,读取倾斜传感器数字值
+
 void setup()
 {
-    Serial.begin(9600); //设置串口波特率为9600
-	pinMode(A3, INPUT);  //设置A3口为输入模式
-	pinMode(3, OUTPUT);  //设置3口为输入模式
+  Serial.begin(9600);//设置串口波特率
+  pinMode(DigitalPin, INPUT);//设置倾斜传感器数字引脚为输入
+  pinMode(AnalogPin, INPUT);//设置倾斜传感器模拟引脚为输入
 }
-
 void loop()
 {
-    if (digitalRead(A3) == 0) //判断物体是否倾斜
-    {  
-		digitalWrite(3, HIGH);  //点亮灯
-	}
-	else
-	{
-		digitalWrite(3, LOW); //熄灭灯
-	}
+  FlamelAnalogValue = analogRead(AnalogPin);//读取倾斜传感器模拟值
+  FlamelDigitalValue = digitalRead(DigitalPin);//读取倾斜传感器数字值
+  Serial.print("Analog Data:  ");
+  Serial.print(AnalogValue);//打印倾斜传感器模拟值
+  Serial.print("Digital Data:  ");
+  Serial.println(DigitalValue);//打印倾斜传感器数字值
+  delay(200);
 }
 ```
 
-## Micropython示例程序
+## MicroPython示例程序
 
-### Esp32 Micropython示例程序
+### Esp32 MicroPython示例程序
 
 ```python
 from machine import ADC, Pin
@@ -72,20 +76,15 @@ DigitalPin = 14  # 定义数字引脚
 
 p1 = ADC(AnalogPin)
 p2 = Pin(DigitalPin, Pin.IN)
-P4 = Pin(4, Pin.OUT)  # 定义输出引脚
 
 while True:
     AnalogValue = p1.read_u16()
     print("Analog Data:", AnalogValue)  # 打印模拟值
     print("Digital Data:", p2.value())  # 打印数字值
-    if AnalogValue == 0:  # 判断物体是否倾斜，倾斜则点亮LED
-        P4.on()
-    else:
-        P4.off()
     time.sleep_ms(200)
 ```
 
-### micro:bit示例程序
+### micro:bit MicroPython示例程序
 
 ```python
 from microbit import *
@@ -95,15 +94,16 @@ while True:
     p2 = pin2.read_digital()
     print("Analog Data:", p1)  # 打印模拟数据
     print("Digital Data:", p2)  # 打印数字数据
-    if p1 == 0:
-        print("Tilted")  # 如果模拟数据为0，则打印"倾斜"
-    else:
-        print("Not Tilted")  # 如果模拟数据不为0，则打印"未倾斜"
     sleep(1000)
 ```
 
-## Makecode示例程序
+## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_DhRKX9fpCL3a" target="_blank">动手试一试</a>
+<a href="https://makecode.microbit.org/_5Roamecfp27z">动手试一试</a>
 
-![](picture/03.jpg)
+
+
+
+
+
+

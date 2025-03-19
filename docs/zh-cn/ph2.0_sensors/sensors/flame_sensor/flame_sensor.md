@@ -43,48 +43,33 @@
 [下载示例程序](zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor.rar) 
 
 ```c
-#include "Buzzer.h"
-
 #define FlamelDigitalPin  7//定义火焰传感器数字引脚
 #define FlamelAnalogPin   A0//定义火焰传感器模拟引脚
-#define BuzzerPin A3//定义无源蜂鸣器块引脚
 
-Buzzer buzzer(BuzzerPin) ;
 int  FlamelAnalogValue = 0 ;//定义数字变量,读取火焰模拟值
 int  FlamelDigitalValue = 0 ;//定义数字变量,读取火焰数字值
+
 void setup()
 {
   Serial.begin(9600);//设置串口波特率
   pinMode(FlamelDigitalPin, INPUT);//设置火焰传感器数字引脚为输入
   pinMode(FlamelAnalogPin, INPUT);//设置火焰传感器模拟引脚为输入
-  pinMode(BuzzerPin, OUTPUT);//设置无源蜂鸣器模块引脚为输出
 }
 void loop()
 {
-  buzzer.noTone();//蜂鸣器停止
   FlamelAnalogValue = analogRead(FlamelAnalogPin);//读取火焰传感器模拟值
   FlamelDigitalValue = digitalRead(FlamelDigitalPin);//读取火焰传感器数字值
   Serial.print("FlamelAnalog Data:  ");
   Serial.print(FlamelAnalogValue);//打印火焰传感器模拟值
   Serial.print("FlamelDigital Data:  ");
   Serial.println(FlamelDigitalValue);//打印火焰传感器数字值
-  if (FlamelDigitalValue == 0) {//判断火焰传感器是否检测到火焰  检测到火焰  蜂鸣器报警 
-     for(int i = 200; i <= 800; i++)
-     {
-       buzzer.tone(i, 10);
-     }
-     for(int i= 800; i >= 200; i--)
-     {
-        buzzer.tone(i, 10);
-     }
-  }
   delay(200);
 }
 ```
 
-## Micropython示例程序
+## MicroPython示例程序
 
-### Esp32 Micropython示例程序
+### Esp32 MicroPython示例程序
 
 ```python
 from machine import ADC,Pin
@@ -95,30 +80,15 @@ DigitalPin = 14  # 定义火焰传感器数字接口引脚
 
 p1 = ADC(AnalogPin)
 p2 = Pin(DigitalPin, Pin.IN)  
-buzzer_pin = Pin(2, Pin.OUT)  # 定义蜂鸣器引脚
-
-def alarm():
-    for i in range(100):
-        # 设置频率声音
-        buzzer_pin.on()
-        time.sleep_ms(1)
-        buzzer_pin.off()
-        time.sleep_ms(1)
         
 while True:
     AnalogValue = p1.read_u16()  # 读取火焰传感器模拟值
     print("Analog Data:", AnalogValue)  # 打印火焰传感器模拟值
     print("Digital Data:", p2.value())  # 打印火焰传感器数字值
-    if p2.value() == 0:
-        alarm()# 如果火焰传感器值为高电平则调用警报函数
-    else:
-        buzzer_pin.off() # 如果火焰传感器值为高电平则蜂鸣器输出低电平
     time.sleep_ms(200)
-
-
 ```
 
-### micro:bit示例程序
+### micro:bit MicroPython示例程序
 
 ```python
 from microbit import *
@@ -126,29 +96,13 @@ from microbit import *
 AnalogPin = pin1  # 定义火焰传感器模拟接口引脚
 DigitalPin = pin0  # 定义火焰传感器数字接口引脚
 
-buzzer_pin = pin2  # # 定义蜂鸣器引脚
-
-def alarm():
-    for i in range(100):
-        # 设置频率声音
-        buzzer_pin.write_digital(1)
-        sleep(1)
-        buzzer_pin.write_digital(0)
-        sleep(1)
-
 while True:
     AnalogValue = AnalogPin.read_analog()  # 读取火焰传感器模拟值
     print("Analog Data:", AnalogValue)  # 打印火焰传感器模拟值
     print("Digital Data:", DigitalPin.read_digital())  # 打印火焰传感器数字值
-    if DigitalPin.read_digital() == 0:
-        alarm()  # 如果火焰传感器值为低电平则调用警报函数
-    else:
-        buzzer_pin.write_digital(0)  # 如果火焰传感器值为高电平则蜂鸣器输出低电平
     sleep(0.2)
 ```
 
-## Makecode示例程序
+## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_gmPdAJ7CX6zX" target="_blank">动手试一试</a>
-
-![](picture/1.jpg)
+<a href="https://makecode.microbit.org/_FoqM4TLuUdzW">动手试一试</a>

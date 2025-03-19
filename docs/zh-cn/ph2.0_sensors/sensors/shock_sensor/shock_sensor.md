@@ -38,12 +38,8 @@
 [下载示例程序](zh-cn\ph2.0_sensors\sensors\shock_sensor\shock_sensor.rar ':ignore') 
 
 ```c++
-#include "Buzzer.h"
-
 #define ShockAnalogPin A0  // 定义震动传感器模拟引脚
 #define ShockDigitalPin 7  // 定义震动传感器数字引脚
-#define BuzzerPin A3  // 定义蜂鸣器引脚
-Buzzer buzzer(BuzzerPin);
 
 void setup()
 {
@@ -54,26 +50,16 @@ void setup()
 
 void loop()
 {
-    buzzer.noTone();  // 停止蜂鸣器音调
     Serial.println("Shock Analog Data: ");
     Serial.println(analogRead(ShockAnalogPin));  // 打印震动传感器模拟数据
-    if (digitalRead(ShockDigitalPin) == 0) {  // 如果震动传感器数字值为低电平
-        for (int i = 200; i <= 800; i++)
-        {
-            buzzer.tone(i, 10);  // 播放升调音调
-        }
-        for (int i = 800; i >= 200; i--)
-        {
-            buzzer.tone(i, 10);  // 播放降调音调
-        }
-    } 
+    Serial.println(digitalRead(ShockDigitalPin));  // 打印震动传感器数字数据
     delay(1000);  // 延时1秒
 }
 ```
 
-## Micropython示例程序
+## MicroPython示例程序
 
-### Esp32 Micropython示例程序
+### Esp32 MicroPython示例程序
 
 ```python
 from machine import ADC,Pin
@@ -84,30 +70,16 @@ DigitalPin = 14  # 定义震动传感器数字接口引脚
 
 p1 = ADC(AnalogPin)
 p2 = Pin(DigitalPin, Pin.IN)  
-buzzer_pin = Pin(2, Pin.OUT)  # 定义蜂鸣器引脚
-
-def alarm():
-    for i in range(100):
-        # 设置频率声音
-        buzzer_pin.on()
-        time.sleep_ms(1)
-        buzzer_pin.off()
-        time.sleep_ms(1)
-        
+       
 while True:
     AnalogValue = p1.read_u16()  # 读取震动传感器模拟值
     print("Analog Data:", AnalogValue)  # 打印震动传感器模拟值
     print("Digital Data:", p2.value())  # 打印震动传感器数字值
-    if p2.value() == 0:
-        alarm()# 如果震动传感器值为低电平则调用警报函数
-    else:
-        buzzer_pin.off() # 如果震动传感器值为高电平则蜂鸣器输出低电平
     time.sleep_ms(200)
-
 
 ```
 
-### micro:bit示例程序
+### micro:bit MicroPython示例程序
 
 ```python
 from microbit import *
@@ -115,29 +87,13 @@ from microbit import *
 AnalogPin = pin1  # 定义震动传感器模拟接口引脚
 DigitalPin = pin0  # 定义震动传感器数字接口引脚
 
-buzzer_pin = pin2  # # 定义蜂鸣器引脚
-
-def alarm():
-    for i in range(100):
-        # 设置频率声音
-        buzzer_pin.write_digital(1)
-        sleep(1)
-        buzzer_pin.write_digital(0)
-        sleep(1)
-
 while True:
     AnalogValue = AnalogPin.read_analog()  # 读取震动传感器模拟值
     print("Analog Data:", AnalogValue)  # 打印震动传感器模拟值
     print("Digital Data:", DigitalPin.read_digital())  # 打印震动传感器数字值
-    if DigitalPin.read_digital() == 0:
-        alarm()  # 如果震动传感器值为高电平则调用警报函数
-    else:
-        buzzer_pin.write_digital(0)  # 如果震动传感器值为高电平则蜂鸣器输出低电平
     sleep(0.2)
 ```
 
-## Makecode示例程序
+## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_fCchCF8pUWdR" target="_blank">动手试一试</a>
-
-![](picture/03.jpg)
+<a href="https://makecode.microbit.org/_0Jy1249E9U4K" target="_blank">动手试一试</a>

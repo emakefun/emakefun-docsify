@@ -36,63 +36,51 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn\ph2.0_sensors\sensors\human_body_sensor\human_body_sensor.zip ':ignore') 
+[下载示例程序](zh-cn\ph2.0_sensors\sensors\grayscale_sensor\grayscale_sensor.zip ':ignore') 
 
 ```c
 void setup()
 {
     Serial.begin(9600); 
 	pinMode(A3, INPUT); 
-	pinMode(3, OUTPUT); 
 }
 
 void loop()
 {
-    if (digitalRead(A3) == 1)   
-    {  
-        digitalWrite(3, HIGH);  
-    } else {
-        digitalWrite(3, LOW); 
-    }
+    Serial.println(digitalRead(A3));	// 打印人体热释电传感器数字值
+    delay(200);
 }
 ```
 
-## Micropython示例程序
+## MicroPython示例程序
 
-### Esp32 Micropython示例程序
+### Esp32 MicroPython示例程序
 
 ```python
 from machine import ADC,Pin
 import time
 
-DigitalPin = 2  # 定义人体热释电传感器模拟值引脚
-
+DigitalPin = 2  # 定义人体热释电传感器数字值引脚
 p2 = Pin(DigitalPin, Pin.IN)
-P4 = Pin(4, Pin.OUT)
 
 while True:
-    if p2.value() == 1:
-        P4.on()	# 如果人体热释电传感器值为高电平则执行此处,LED引脚为高电平
-    else:
-        P4.off() # 如果人体热释电传感器值为低电平则执行此处,LED引脚为高电平
+    Value = p2.value()  # 读取人体热释电传感器数字值
+    print(Value)  # 打印人体热释电传感器数字值
+    time.sleep_ms(200)
 ```
 
-### micro:bit示例程序
+### micro:bit MicroPython示例程序
 
 ```python
 from microbit import *
 
 while True:
     p = pin8.read_digital() # 读取传感器数字值
-    if p == 1:
-        print("human detected")
-    else:
-        print("no human detected")
+    print(p)	# 打印传感器数字值
     sleep(1000)
 ```
 
-## Makecode示例程序
+## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_C6J5cuMMF8FU" target="_blank">动手试一试</a>
+<a href="https://makecode.microbit.org/_Vhka6M8PFXyh">动手试一试</a>
 
-![](picture/05.jpg)
