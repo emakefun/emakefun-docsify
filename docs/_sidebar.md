@@ -79,7 +79,7 @@
     - [振动马达](zh-cn/ph2.0_sensors/actuators/vibrationMotorModule/vibrationMotorModule.md)
     - [8002A功放喇叭](zh-cn/ph2.0_sensors/actuators/bigSpeakerModule/bigSpeakerModule.md)
     - [舵机扩展](/zh-cn/ph2.0_sensors/actuators/servoModel.md)
-    - [单路电机驱动](/zh-cn/ph2.0_sensors/actuators/)
+    - [单路电机驱动](zh-cn/ph2.0_sensors/actuators/motor_module/motor_module.md)
     - [双路电机驱动](zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel/highSpeedMiniMotorDriveBoardModel.md)
     - [I2C双路电机驱动](/zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel.md)
     - [四路编码电机驱动](/zh-cn/ph2.0_sensors/actuators/)
