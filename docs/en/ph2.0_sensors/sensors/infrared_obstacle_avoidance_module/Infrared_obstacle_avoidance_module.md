@@ -1,6 +1,6 @@
-# [Infrared Obstacle Avoidance Sensor](http://localhost:3000/#/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=红外避障传感器模块)
+# Infrared Obstacle Avoidance Sensor
 
-## [Physical picture](http://localhost:3000/#/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=实物图)
+## Physical picture
 
 
 
@@ -8,15 +8,15 @@
 
 
 
-## [Overview](http://localhost:3000/#/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=概述)
+## Overview
 
 The infrared obstacle avoidance sensor is a sensor device that is widely used in robot obstacle avoidance, obstacle avoidance vehicles, assembly line counting and many other occasions. The sensor module has a strong adaptability to ambient light. It has a bunch of infrared transmitting and receiving tubes. The transmitting tube emits infrared rays of a certain frequency. When the detection direction encounters an obstacle (reflective surface), the infrared rays are reflected back and received by the receiving tube. After being processed by the comparator circuit, the blue indicator light will light up, and the signal output interface will output a digital signal (a low-level signal). The detection distance can be adjusted by the potentiometer knob. The effective distance range is 2 to 30cm, and the working voltage is 3.3V-5V. The detection distance of the sensor can be adjusted by the potentiometer, and it has the characteristics of low interference, easy assembly, and easy use.
 
-## [Schematic](http://localhost:3000/#/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=原理图)
+## Schematic
 
-[View Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/InfraredObstacleAvoidance_schematic.pdf) ![1](http://localhost:3000/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/picture/infrared_obstacle_avoidance_module_schematic.png)
+[View Schematic](en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/InfraredObstacleAvoidance_schematic.pdf) ![1](http://localhost:3000/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/picture/infrared_obstacle_avoidance_module_schematic.png)
 
-## [Module parameters](http://localhost:3000/#/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=模块参数)
+## Module parameters
 
 | Pin Name | describe            |
 | -------- | ------------------- |
@@ -30,17 +30,15 @@ The infrared obstacle avoidance sensor is a sensor device that is widely used in
 - Module size: 40 x 22.5 mm
 - Installation method: M4 screw compatible with Lego socket
 
-## [Mechanical Dimensions](http://localhost:3000/#/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=机械尺寸)
-
-
+## Mechanical Dimensions
 
 ![2](http://localhost:3000/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/picture/infrared_obstacle_avoidance_module_assembly.png)
 
 
 
-## [Arduino Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=arduino示例程序)
+## Arduino Example Program
 
-[Download the sample program](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/InfraredObstacleAvoidanceModule.zip)
+[Download the sample program](en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/InfraredObstacleAvoidanceModule.zip)
 
 ```c++
 #define DigitalPin 7 // Define the digital pin of the infrared obstacle avoidance module
@@ -68,9 +66,9 @@ delay(200);
 }Copy to clipboardErrorCopied
 ```
 
-## [MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=micropython示例程序)
+## MicroPython Example Program
 
-### [Esp32 MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=esp32-micropython示例程序)
+### [Esp32 MicroPython Example Program](en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=esp32-micropython示例程序)
 
 
 
@@ -91,9 +89,7 @@ print("InfraredObstacleAvoidanceModuleDigital Data:", p2.value()) # Print infrar
 time.sleep_ms(200)Copy to clipboardErrorCopied
 ```
 
-### [Micro:bit MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=microbit-micropython示例程序)
-
-
+### Micro:bit MicroPython Example Program
 
 ```python
 from microbit import *
@@ -108,6 +104,6 @@ print("Digital Data:", DigitalPin.read_digital()) # Print the infrared obstacle 
 sleep(0.2)Copy to clipboardErrorCopied
 ```
 
-## [MakeCode Example Programs](http://localhost:3000/#/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=makecode示例程序)
+## MakeCode Example Programs
 
 [Try it yourself](https://makecode.microbit.org/_9zWVg7hvCJHy)

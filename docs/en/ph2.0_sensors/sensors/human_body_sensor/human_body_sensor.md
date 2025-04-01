@@ -1,6 +1,6 @@
-# [Human Body Sensor](http://localhost:3000/#/en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor?id=人体热释电传感器)
+# Human Body Sensor
 
-## [Physical picture](http://localhost:3000/#/en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor?id=实物图)
+## Physical picture
 
 
 
@@ -8,13 +8,13 @@
 
 
 
-## [Overview](http://localhost:3000/#/en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor?id=概述)
+## Overview
 
 The human body sensing module is an automatic control product based on infrared technology, with high sensitivity, strong reliability, ultra-small size, and ultra-low voltage working mode. It is widely used in various automatic sensing electrical equipment, especially automatic control products powered by dry batteries. Fully automatic sensing, it outputs a high level when a person enters its sensing range, and automatically delays the high level to turn off the high level and outputs a low level when the person leaves the sensing range. Repeatable triggering mode: that is, after the sensing output is high, within the delay time period, if there is a human body moving within its sensing range, its output will remain high until the person leaves, and then delay the high level to a low level. After the sensing module detects each human activity, it will automatically extend a delay time period (5S), and the time of the last activity is the starting point of the delay time.
 
-## [Schematic](http://localhost:3000/#/en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor?id=原理图)
+## Schematic
 
-[View Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor_schematic.pdf)
+[View Schematic](en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor_schematic.pdf)
 
 
 
@@ -22,7 +22,7 @@ The human body sensing module is an automatic control product based on infrared 
 
 
 
-## [Module parameters](http://localhost:3000/#/en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor?id=模块参数)
+## Module parameters
 
 | Pin Name | describe                                                     |
 | -------- | ------------------------------------------------------------ |
@@ -35,7 +35,7 @@ The human body sensing module is an automatic control product based on infrared 
 - Module size: 40 x 22.5 mm
 - Installation method: M4 screw compatible with Lego socket
 
-## [Mechanical Dimensions](http://localhost:3000/#/en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor?id=机械尺寸图)
+## Mechanical Dimensions
 
 
 
@@ -43,9 +43,9 @@ The human body sensing module is an automatic control product based on infrared 
 
 
 
-## [Arduino Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor?id=arduino示例程序)
+## Arduino Example Program
 
-[Download the sample program](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.zip)
+[Download the sample program](en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.zip)
 
 ```c
 void setup()
@@ -61,9 +61,9 @@ delay(200);
 }Copy to clipboardErrorCopied
 ```
 
-## [MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor?id=micropython示例程序)
+## MicroPython Example Program
 
-### [Esp32 MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor?id=esp32-micropython示例程序)
+### Esp32 MicroPython Example Program
 
 
 
@@ -80,9 +80,7 @@ print(Value) # Print the human body pyroelectric sensor digital value
 time.sleep_ms(200)Copy to clipboardErrorCopied
 ```
 
-### [Micro:bit MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor?id=microbit-micropython示例程序)
-
-
+### Micro:bit MicroPython Example Program
 
 ```python
 from microbit import *
@@ -93,6 +91,6 @@ print(p) # Print the digital value of the sensor
 sleep(1000)Copy to clipboardErrorCopied
 ```
 
-## [MakeCode Example Programs](http://localhost:3000/#/en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor?id=makecode示例程序)
+## MakeCode Example Programs
 
 [Try it yourself](https://makecode.microbit.org/_Vhka6M8PFXyh)

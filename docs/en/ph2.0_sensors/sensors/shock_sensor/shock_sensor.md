@@ -1,6 +1,6 @@
-# [Shock Sensor](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor?id=震动传感器)
+# Shock Sensor
 
-## [Physical picture](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor?id=实物图)
+## Physical picture
 
 
 
@@ -8,15 +8,15 @@
 
 
 
-## [Overview](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor?id=概述)
+## Overview
 
 The shock sensor module is essentially a switch, which contains a metal sheet and a spring. When the product is not vibrating, the vibration switch is in the off state, and the output end outputs a high level. When the product is vibrating, the vibration switch is instantly turned on due to the spring and the metal sheet, and the output end outputs a low level. The output end can be directly connected to the microcontroller, and the high and low levels can be detected by the microcontroller to detect whether the environment is vibrating, thereby serving as an alarm.
 
-## [Schematic](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor?id=原理图)
+## Schematic
 
-[View Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor_schematic.pdf) ![Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/shock_sensor/picture/shock_sensor_schematic.png)
+[View Schematic](en/ph2.0_sensors/sensors/shock_sensor/shock_sensor_schematic.pdf) ![Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/shock_sensor/picture/shock_sensor_schematic.png)
 
-## [Module parameters](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor?id=模块参数)
+## Module parameters
 
 | Pin Name | describe           |
 | -------- | ------------------ |
@@ -30,17 +30,15 @@ The shock sensor module is essentially a switch, which contains a metal sheet an
 - Module size: 40 x 22.5 mm
 - Installation method: M4 screw compatible with Lego socket
 
-## [Mechanical Dimensions](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor?id=机械尺寸图)
-
-
+## Mechanical Dimensions
 
 ![Mechanical Dimensions](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/shock_sensor/picture/shock_sensor_schematic_assembly.png)
 
 
 
-## [Arduino Example Program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor?id=arduino示例程序)
+## Arduino Example Program
 
-[Download the sample program](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor.rar)
+[Download the sample program](en/ph2.0_sensors/sensors/shock_sensor/shock_sensor.rar)
 
 ```c++
 #define ShockAnalogPin A0 // Define shock sensor analog pin
@@ -62,11 +60,9 @@ delay(1000); // Delay 1 second
 }Click Copymistakecopy
 ```
 
-## [MicroPython Example Program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor?id=micropython示例程序)
+## MicroPython Example Program
 
-### [Esp32 MicroPython Example Program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor?id=esp32-micropython示例程序)
-
-
+### Esp32 MicroPython Example Program
 
 ```python
 from machine import ADC,Pin
@@ -86,9 +82,7 @@ time.sleep_ms(200)
 Click Copymistakecopy
 ```
 
-### [Micro:bit MicroPython Example Program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor?id=microbit-micropython示例程序)
-
-
+### Micro:bit MicroPython Example Program
 
 ```python
 from microbit import *
@@ -103,6 +97,6 @@ print("Digital Data:", DigitalPin.read_digital()) # Print the digital value of t
 sleep(0.2)Click Copymistakecopy
 ```
 
-## [MakeCode Example Programs](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor?id=makecode示例程序)
+## MakeCode Example Programs
 
 [Try it yourself](https://makecode.microbit.org/_0Jy1249E9U4K)

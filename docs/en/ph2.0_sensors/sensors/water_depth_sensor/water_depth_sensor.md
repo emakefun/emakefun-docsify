@@ -1,4 +1,4 @@
-# [Water Depth Sensor](http://localhost:3000/#/en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor?id=水深传感器)
+# Water Depth Sensor
 
 
 
@@ -6,15 +6,15 @@
 
 
 
-## [Overview](http://localhost:3000/#/en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor?id=概述)
+## Overview
 
 The water depth sensor is designed for water quality detection and can be widely used to sense rainfall, water level, and even liquid leaks. The working principle of this sensor is to connect a series of exposed traces to ground and interleave between the ground traces, which are the sensing traces. The sensor trace has a weak pull-up resistor of 1MΩ. The resistor pulls the sensor trace value high until a drop of water shorts the sensor trace to the ground trace. It can be used with an analog pin to detect the amount of water contact between the ground and sensor traces.
 
-## [Schematic](http://localhost:3000/#/en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor?id=原理图)
+## Schematic
 
-[View Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor_schematic.pdf) ![Schematic](http://localhost:3000/en/ph2.0_sensors/sensors/water_depth_sensor/picture/water_depth_sensor_schematic.png)
+[View Schematic](en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor_schematic.pdf) ![Schematic](http://localhost:3000/en/ph2.0_sensors/sensors/water_depth_sensor/picture/water_depth_sensor_schematic.png)
 
-## [Module parameters](http://localhost:3000/#/en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor?id=模块参数)
+## Module parameters
 
 | Pin Name | describe                                                  |
 | -------- | --------------------------------------------------------- |
@@ -27,19 +27,13 @@ The water depth sensor is designed for water quality detection and can be widely
 - Module size: 56 x 22mm
 - Installation method: M3 screw fixation
 
-## [Mechanical Dimensions](http://localhost:3000/#/en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor?id=机械尺寸图)
-
-
+## Mechanical Dimensions
 
 ![Mechanical Dimensions](http://localhost:3000/en/ph2.0_sensors/sensors/water_depth_sensor/picture/water_depth_sensor_assembly.png)
 
+## Arduino Example Program
 
-
-## [Arduino Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor?id=arduino示例程序)
-
-[Download the sample program](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor.zip)
-
-
+[Download the sample program](en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor.zip)
 
 ```c++
 void setup() {
@@ -53,11 +47,9 @@ delay(200); // Delay 200 milliseconds
 }Copy to clipboardErrorCopied
 ```
 
-## [MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor?id=micropython示例程序)
+## MicroPython Example Program
 
-### [Esp32 MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor?id=esp32-micropython示例程序)
-
-
+### Esp32 MicroPython Example Program
 
 ```python
 from machine import ADC,Pin
@@ -73,9 +65,7 @@ print("Analog Data:", AnalogValue) # Print the analog value of the water depth s
 time.sleep_ms(200)Copy to clipboardErrorCopied
 ```
 
-### [Micro:bit MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor?id=microbit-micropython示例程序)
-
-
+### Micro:bit MicroPython Example Program
 
 ```python
 from microbit import *
@@ -88,6 +78,6 @@ print(AnalogValue) # Print the analog value of the water depth sensor
 sleep(0.2)Copy to clipboardErrorCopied
 ```
 
-## [MakeCode Example Programs](http://localhost:3000/#/en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor?id=makecode示例程序)
+## MakeCode Example Programs
 
 [Try it yourself](https://makecode.microbit.org/_e1XeY08vy2kx)
