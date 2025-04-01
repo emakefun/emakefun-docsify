@@ -1,28 +1,28 @@
-# [Flame Sensor](http://localhost:3000/#/en/ph2.0_sensors/sensors/flame_sensor/flame_sensor?id=火焰传感器)
+# Flame Sensor
 
-## [Physical picture](http://localhost:3000/#/en/ph2.0_sensors/sensors/flame_sensor/flame_sensor?id=实物图)
-
-
-
-![Physical picture](http://localhost:3000/en/ph2.0_sensors/sensors/flame_sensor/picture/flame_sensor.png)
+## Physical picture
 
 
 
-## [Overview](http://localhost:3000/#/en/ph2.0_sensors/sensors/flame_sensor/flame_sensor?id=概述)
+![Physical picture](picture/flame_sensor.png)
+
+
+
+## Overview
 
 In public places, such as hotels, buildings and other places, fire alarms are equipped. How do they sense fires? As we all know, when a fire breaks out, there will be particularly strong infrared rays. This device can detect fires through infrared rays. The flame sensor is a sensor that the robot uses to search for fire sources. Of course, the flame sensor can also be used to detect the brightness of light, but this sensor is particularly sensitive to flames. The flame sensor uses the characteristics of infrared rays being very sensitive to flames, uses a special infrared receiving tube to detect flames, and then converts the brightness of the flame into a high and low level signal, which is input into the central processing unit. The central processing unit makes corresponding program processing according to the changes in the signal.
 
-## [Schematic](http://localhost:3000/#/en/ph2.0_sensors/sensors/flame_sensor/flame_sensor?id=原理图)
+## Schematic
 
-[View Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor_schematic.pdf)
-
-
-
-![Schematic](http://localhost:3000/en/ph2.0_sensors/sensors/flame_sensor/picture/flame_sensor_schematic.png)
+[View Schematic](en/ph2.0_sensors/sensors/flame_sensor/flame_sensor_schematic.pdf ':ignore')
 
 
 
-## [Module parameters](http://localhost:3000/#/en/ph2.0_sensors/sensors/flame_sensor/flame_sensor?id=模块参数)
+![Schematic](picture/flame_sensor_schematic.png)
+
+
+
+## Module parameters
 
 | Pin Name | describe            |
 | -------- | ------------------- |
@@ -36,7 +36,7 @@ In public places, such as hotels, buildings and other places, fire alarms are eq
 - Module size: 40 x 22.5 mm
 - Installation method: M4 screw compatible with Lego socket
 
-## [Mechanical Dimensions](http://localhost:3000/#/en/ph2.0_sensors/sensors/flame_sensor/flame_sensor?id=机械尺寸图)
+## Mechanical Dimensions
 
 
 
@@ -44,9 +44,9 @@ In public places, such as hotels, buildings and other places, fire alarms are eq
 
 
 
-## [Arduino Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/flame_sensor/flame_sensor?id=arduino示例程序)
+## Arduino Example Program
 
-[Download the sample program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor.rar)
+[Download the sample program](en/ph2.0_sensors/sensors/flame_sensor/flame_sensor.rar)
 
 ```c
 #define FlamelDigitalPin 7 // Define the digital pin of the flame sensor
@@ -73,11 +73,9 @@ delay(200);
 }Copy to clipboardErrorCopied
 ```
 
-## [MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/flame_sensor/flame_sensor?id=micropython示例程序)
+## MicroPython Example Program
 
-### [Esp32 MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/flame_sensor/flame_sensor?id=esp32-micropython示例程序)
-
-
+### Esp32 MicroPython Example Program
 
 ```python
 from machine import ADC,Pin
@@ -96,9 +94,7 @@ print("Digital Data:", p2.value()) # Print the flame sensor digital value
 time.sleep_ms(200)Copy to clipboardErrorCopied
 ```
 
-### [Micro:bit MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/flame_sensor/flame_sensor?id=microbit-micropython示例程序)
-
-
+### Micro:bit MicroPython Example Program
 
 ```python
 from microbit import *
@@ -113,6 +109,6 @@ print("Digital Data:", DigitalPin.read_digital()) # Print the flame sensor digit
 sleep(0.2)Copy to clipboardErrorCopied
 ```
 
-## [MakeCode Example Programs](http://localhost:3000/#/en/ph2.0_sensors/sensors/flame_sensor/flame_sensor?id=makecode示例程序)
+## MakeCode Example Programs
 
 [Try it yourself](https://makecode.microbit.org/_FoqM4TLuUdzW)

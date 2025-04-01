@@ -1,6 +1,6 @@
-# [Sound Sensor](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor?id=声音传感器模块规格书)
+# Sound Sensor
 
-## [Physical picture](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor?id=实物图)
+## Physical picture
 
 
 
@@ -8,15 +8,15 @@
 
 
 
-## [Overview](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor?id=概述)
+## Overview
 
 The function of the sound sensor module is equivalent to a microphone. It is used to receive sound waves and display the vibration image of the sound, but it cannot measure the intensity of the noise. The sensor has a built-in capacitive electret microphone that is sensitive to sound. The sound wave causes the electret film in the microphone to vibrate, resulting in a change in capacitance, which generates a small voltage corresponding to the change. This voltage is then converted into a 0-5V voltage, which is received by the data acquisition device after A/D conversion and transmitted to the main control chip.
 
-## [Schematic](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor?id=原理图)
+## Schematic
 
-[View Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor_schematic.pdf) ![Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/sound_sensor/picture/sound_sensor_schematic.png)
+[View Schematic](en/ph2.0_sensors/sensors/sound_sensor/sound_sensor_schematic.pdf) ![Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/sound_sensor/picture/sound_sensor_schematic.png)
 
-## [Module parameters](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor?id=模块参数)
+## Module parameters
 
 | Pin Name | describe            |
 | -------- | ------------------- |
@@ -30,17 +30,13 @@ The function of the sound sensor module is equivalent to a microphone. It is use
 - Module size: 40 x 22.5 mm
 - Installation method: M4 screw compatible with Lego socket
 
-## [Mechanical Dimensions](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor?id=机械尺寸图)
-
-
+## Mechanical Dimensions
 
 ![Mechanical Dimensions](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/sound_sensor/picture/sound_sensor_assembly.png)
 
+## Arduino Example Program
 
-
-## [Arduino Example Program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor?id=arduino示例程序)
-
-[Download the sample program](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor.zip)
+[Download the sample program](en/ph2.0_sensors/sensors/sound_sensor/sound_sensor.zip)
 
 ```c++
 #define AnalogPin 15//Define the analog interface pin of the sound sensor
@@ -68,11 +64,9 @@ delay(200);
 
 The sensor threshold can be adjusted by adjusting the resistance value on the sound sensor.
 
-## [MicroPython Example Program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor?id=micropython示例程序)
+## MicroPython Example Program
 
-### [Esp32 MicroPython Example Program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor?id=esp32-micropython示例程序)
-
-
+### Esp32 MicroPython Example Program
 
 ```python
 from machine import ADC,Pin
@@ -92,9 +86,7 @@ time.sleep_ms(200)
 Click Copymistakecopy
 ```
 
-### [Micro:bit MicroPython Example Program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor?id=microbit-micropython示例程序)
-
-
+### Micro:bit MicroPython Example Program
 
 ```python
 from microbit import *
@@ -107,6 +99,6 @@ print("Digital Data:", p2) # Print the digital value of the sound sensor
 sleep(1000)Click Copymistakecopy
 ```
 
-## [MakeCode Example Programs](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor?id=makecode示例程序)
+## MakeCode Example Programs
 
 [Try it yourself](https://makecode.microbit.org/_FaF5Xx1C2Tvb)
