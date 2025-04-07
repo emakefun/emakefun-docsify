@@ -2,7 +2,7 @@
 
 ## [一、淘宝购买链接](https://item.taobao.com/item.htm?ali_refid=a3_430582_1006:1209150026:N:bHry0KBYQUueXMqvQBLQ7A==:ae7ad87b821c162939f1053fd9a53067&ali_trackid=162_ae7ad87b821c162939f1053fd9a53067&id=778630577370&skuId=5318380828567&spm=a21n57.1.0.0)
 
-![eSP32_board](esp32_iot_board.png)
+![eSP32_board](picture/esp32_iot_board.png)
 
 ## 二、产品介绍
 
@@ -36,13 +36,19 @@ ESP32 IOT BOARD是基于乐鑫科技的 [ESP32-WROOM-32](https://www.espressif.c
 - 产品尺寸：80mm×56mm；PCB厚度：1.6mm；净重：25.3g
 - M4定位孔直径：4.7mm，兼容乐高
 
-### 2.3 尺寸说明
+### 2.3 原理图
 
-![esp32_iot_board_size_mark](esp32_iot_board_size_mark.png)
+![原理图](picture/schematic_diagram.png)
 
-### 2.4 引脚说明
+[点击此处查看原理图](zh-cn/esp32/esp32_iot_board/esp32_ph2.0_mainboard.pdf ':ignore')
 
-![esp32_iot_board_pin](esp32_iot_board_pin.jpg)
+### 2.4 尺寸说明
+
+![esp32_iot_board_size_mark](picture/esp32_iot_board_size_mark.png)
+
+### 2.5 引脚说明
+
+![esp32_iot_board_pin](picture/esp32_iot_board_pin.jpg)
 
 **注**:
 
