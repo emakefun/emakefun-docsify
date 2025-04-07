@@ -1,22 +1,20 @@
-# [Photo Sensitive Sensor](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor?id=光敏传感器模块规格书)
+# Photo Sensitive Sensor
 
-## [Physical picture](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor?id=实物图)
+## Physical picture
 
 
 
 ![Physical picture](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/picture/photo_sensitive_sensor.png)
 
-
-
-## [Overview](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor?id=概述)
+## Overview
 
 As we all know, the voice-controlled lights in the corridor have a sensor in addition to voice control, namely a photosensitive sensor. Photoelectric sensors are also called photoresistors. It (photoresistor, abbreviated as LDR) is usually made of cadmium sulfide. When the incident light rises, the resistance value will decrease; when the incident light weakens, the resistance value will increase. Photoresistors are often used for light measurement, control and conversion (changes between light and electricity), which will change (light becomes electricity). It can also be widely used in various light-controlled circuits, such as controlling and adjusting lights and light switches. Photoresistor modules are most sensitive to ambient light and are generally used to detect the brightness of the light in the surrounding environment, trigger microcontrollers or relay modules, etc.
 
-## [Schematic](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor?id=原理图)
+## Schematic
 
-[View Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor_schematic.pdf) ![Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/picture/photo_sensitive_sensor_schematic.png)
+[View Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor_schematic.pdf) ![Schematic](en/ph2.0_sensors/sensors/photo_sensitive_sensor/picture/photo_sensitive_sensor_schematic.png)
 
-## [Module parameters](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor?id=模块参数)
+## Module parameters
 
 | Pin Name | describe                                                  |
 | -------- | --------------------------------------------------------- |
@@ -29,17 +27,15 @@ As we all know, the voice-controlled lights in the corridor have a sensor in add
 - Module size: 40 x 22.5 mm
 - Installation method: M4 screw compatible with Lego socket
 
-## [Mechanical Dimensions](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor?id=机械尺寸图)
-
-
+## Mechanical Dimensions
 
 ![Mechanical Dimensions](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/picture/photo_sensitive_sensor_assembly.png)
 
 
 
-## [Arduino Example Program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor?id=arduino示例程序)
+## Arduino Example Program
 
-[Download the sample program](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor.zip)
+[Download the sample program](en/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor.zip)
 
 ```c++
 #define PhotosensitivePin A3 //Define the pin of the photosensor module
@@ -58,11 +54,9 @@ Serial.println(PhotosensitiveValue); //Print photosensitivity value
 }Click Copymistakecopy
 ```
 
-## [MicroPython Example Program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor?id=micropython示例程序)
+## MicroPython Example Program
 
-### [Esp32 MicroPython Example Program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor?id=esp32-micropython示例程序)
-
-
+### Esp32 MicroPython Example Program
 
 ```python
 from machine import ADC,Pin
@@ -78,9 +72,7 @@ print("Photosensitive Data:", AnalogValue) # Print the photosensitive sensor ana
 time.sleep_ms(200)Click Copymistakecopy
 ```
 
-### [Micro:bit MicroPython Example Program](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor?id=microbit-micropython示例程序)
-
-
+### Micro:bit MicroPython Example Program
 
 ```python
 from microbit import *
@@ -91,6 +83,6 @@ print("Photosensitive Data:", p) # Print the analog value of the photosensitive 
 sleep(1000)Click Copymistakecopy
 ```
 
-## [MakeCode Example Programs](http://localhost:3000/#/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor?id=makecode示例程序)
+## MakeCode Example Programs
 
 [Try it yourself](https://makecode.microbit.org/_ePdgoM28qVgV)

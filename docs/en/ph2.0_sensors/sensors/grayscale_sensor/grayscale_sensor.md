@@ -1,6 +1,6 @@
-# [Grayscale Sensor](http://localhost:3000/#/en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor?id=灰度传感器)
+# Grayscale Sensor
 
-## [Physical picture](http://localhost:3000/#/en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor?id=实物图)
+## Physical picture
 
 
 
@@ -8,13 +8,13 @@
 
 
 
-## [Overview](http://localhost:3000/#/en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor?id=概述)
+## Overview
 
 Grayscale sensor is an analog sensor, which has a light-emitting diode and a photoresistor installed on the same surface. Grayscale sensor uses the principle that different colors of detection surfaces reflect light to different degrees, and the photoresistor has different resistance values to the light returned by different detection surfaces to detect the depth of color. Within the effective detection distance, the light-emitting diode emits white light, which shines on the detection surface. The detection surface reflects part of the light, and the photoresistor detects the intensity of this light and converts it into a recognizable signal. It outputs a continuous analog signal. It can be used as a line patrol sensor for a line patrol car or as a field grayscale recognition for a football robot.
 
-## [Schematic](http://localhost:3000/#/en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor?id=原理图)
+## Schematic
 
-[View Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor_schematic.pdf)
+[View Schematic](en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor_schematic.pdf)
 
 
 
@@ -22,7 +22,7 @@ Grayscale sensor is an analog sensor, which has a light-emitting diode and a pho
 
 
 
-## [Module parameters](http://localhost:3000/#/en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor?id=模块参数)
+## Module parameters
 
 | Pin Name | describe           |
 | -------- | ------------------ |
@@ -35,7 +35,7 @@ Grayscale sensor is an analog sensor, which has a light-emitting diode and a pho
 - Module size: 40 x 22.5 mm
 - Installation method: M4 screw compatible with Lego socket
 
-## [Mechanical Dimensions](http://localhost:3000/#/en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor?id=机械尺寸图)
+## Mechanical Dimensions
 
 
 
@@ -43,9 +43,9 @@ Grayscale sensor is an analog sensor, which has a light-emitting diode and a pho
 
 
 
-## [Arduino Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor?id=arduino示例程序)
+## Arduino Example Program
 
-[Download the sample program](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.zip)
+[Download the sample program](en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.zip)
 
 ```c
 void setup(){
@@ -59,11 +59,9 @@ delay(200); // Delay 200ms
 }Copy to clipboardErrorCopied
 ```
 
-## [MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor?id=micropython示例程序)
+## MicroPython Example Program
 
-### [Esp32 MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor?id=esp32-micropython示例程序)
-
-
+### Esp32 MicroPython Example Program
 
 ```python
 from machine import ADC,Pin
@@ -79,9 +77,7 @@ print(AnalogValue) # Print grayscale sensor analog value
 time.sleep_ms(200)Copy to clipboardErrorCopied
 ```
 
-### [Micro:bit MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor?id=microbit-micropython示例程序)
-
-
+### Micro:bit MicroPython Example Program
 
 ```python
 from microbit import *
@@ -92,6 +88,6 @@ print( p) # Print grayscale sensor analog value
 sleep(200)Copy to clipboardErrorCopied
 ```
 
-## [MakeCode Example Programs](http://localhost:3000/#/en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor?id=makecode示例程序)
+## MakeCode Example Programs
 
 [Try it yourself](https://makecode.microbit.org/_fakY8cFmMMch)

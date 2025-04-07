@@ -1,6 +1,6 @@
-# [Tilt Switch Sensor](http://localhost:3000/#/en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor?id=倾斜传感器)
+# Tilt Switch Sensor
 
-## [Physical picture](http://localhost:3000/#/en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor?id=实物图)
+## Physical picture
 
 
 
@@ -8,15 +8,15 @@
 
 
 
-## [Overview](http://localhost:3000/#/en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor?id=概述)
+## Overview
 
 The tilt switch module is also called a bead switch, steel ball switch, and is actually a vibration switch. It has different names, but the working principle remains the same. The ball controls the connection or disconnection of the circuit by contacting or not contacting the metal plate. Simply put, it is like turning a light on or off, if the switch touches the metal plate inside, the light will be on, and when the switch is off, the light will go out. Contact with the metal terminal or changing the path of light with a small bead in the switch will be able to produce a conduction effect.
 
-## [Schematic](http://localhost:3000/#/en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor?id=原理图)
+## Schematic
 
-[View Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor_schematic.pdf) ![Schematic](http://localhost:3000/en/ph2.0_sensors/sensors/tilt_switch_sensor/picture/tilt_switch_sensor_schematic.png)
+[View Schematic](en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor_schematic.pdf) ![Schematic](http://localhost:3000/en/ph2.0_sensors/sensors/tilt_switch_sensor/picture/tilt_switch_sensor_schematic.png)
 
-## [Module parameters](http://localhost:3000/#/en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor?id=模块参数)
+## Module parameters
 
 | Pin Name | describe            |
 | -------- | ------------------- |
@@ -30,17 +30,15 @@ The tilt switch module is also called a bead switch, steel ball switch, and is a
 - Module size: 40 x 22.5 mm
 - Installation method: M4 screw compatible with Lego socket
 
-## [Mechanical Dimensions](http://localhost:3000/#/en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor?id=机械尺寸)
-
-
+## Mechanical Dimensions
 
 ![Mechanical Dimensions](http://localhost:3000/en/ph2.0_sensors/sensors/tilt_switch_sensor/picture/tilt_switch_sensor_assembly.png)
 
 
 
-## [Arduino Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor?id=arduino示例程序)
+## Arduino Example Program
 
-[Download the sample program](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor.zip)
+[Download the sample program](en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor.zip)
 
 ```c++
 #define DigitalPin 7 // Define the digital pin of the tilt sensor
@@ -68,11 +66,9 @@ delay(200);
 }Copy to clipboardErrorCopied
 ```
 
-## [MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor?id=micropython示例程序)
+## MicroPython Example Program
 
-### [Esp32 MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor?id=esp32-micropython示例程序)
-
-
+### Esp32 MicroPython Example Program
 
 ```python
 from machine import ADC, Pin
@@ -91,9 +87,7 @@ print("Digital Data:", p2.value()) # Print digital value
 time.sleep_ms(200)Copy to clipboardErrorCopied
 ```
 
-### [Micro:bit MicroPython Example Program](http://localhost:3000/#/en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor?id=microbit-micropython示例程序)
-
-
+### Micro:bit MicroPython Example Program
 
 ```python
 from microbit import *
@@ -106,6 +100,6 @@ print("Digital Data:", p2) # Print digital data
 sleep(1000)Copy to clipboardErrorCopied
 ```
 
-## [MakeCode Example Programs](http://localhost:3000/#/en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor?id=makecode示例程序)
+## MakeCode Example Programs
 
 [Try it yourself](https://makecode.microbit.org/_5Roamecfp27z)
