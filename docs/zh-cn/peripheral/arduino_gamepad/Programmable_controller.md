@@ -541,8 +541,6 @@ bool ButtonReleased(const ButtonType button_type) const {
 
 以上函数直接调用即可
 
-若遇上解决不了的问题
+### Mixly示例程序
 
-## 联系我们
-
-**技术 + 合作：WX号:  EmakefunService**
+[点击下载Mixly库](zh-cn/peripheral/arduino_gamepad/arduinoGamePadMlxly.zip ":ignore")
