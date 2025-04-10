@@ -1,6 +1,6 @@
 # Joystick:Bit
 
-Joystick:Bit为   [深圳市易创空间科技有限公司](www.emakefun.com)出品的针对micro:bit开发的无线可编程手柄，支持micro:Bit V1、 V2;
+Joystick:Bit为**深圳市易创空间科技有限公司**出品的针对micro:bit开发的无线可编程手柄，支持micro:Bit V1、 V2;
 
  **MakeCode扩展链接为**: **<https://github.com/emakefun/pxt-joystickbit>**
 
@@ -82,4 +82,71 @@ Joystick:Bit为   [深圳市易创空间科技有限公司](www.emakefun.com)出
 
 ### micro:bit MicroPython扩展库
 
-[点击下载micro:bit MicroPython扩展库](zh-cn/microbit/joystickbit/microbit_joystick_controller.zip ':ignore')
+[点击下载micro:bit MicroPython扩展库以及示例程序](zh-cn/microbit/joystickbit/microbit_joystick_controller.zip ':ignore')
+
+### ESP32 MicroPython扩展库
+
+[点击下载ESP32 MicroPython扩展库以及示例程序](zh-cn/microbit/joystickbit/esp32_joystick_controller.zip ':ignore')
+
+### MicroPython API详细说明
+
+#### 1.read_joystick_left_x(self)
+
+这是JoystickController类下的成员函数，用于接收手柄左摇杆x轴的模拟值。
+
+```python
+read_joystick_left_x(self)
+
+参数:无
+返回值：返回0~255的模拟值
+
+```
+
+#### 2.read_joystick_left_y(self)
+
+这是JoystickController类下的成员函数，用于接收手柄左摇杆y轴的模拟值。
+
+```python
+read_joystick_left_y(self)
+
+参数:无
+返回值：返回0~255的模拟值
+
+```
+
+#### 3.read_joystick_right_x(self)
+
+这是JoystickController类下的成员函数，用于接收手柄右摇杆x轴的模拟值。
+
+```python
+read_joystick_right_x(self)
+
+参数:无
+返回值：返回0~255的模拟值
+
+```
+
+#### 4.read_joystick_right_y(self)
+
+这是JoystickController类下的成员函数，用于接收手柄右摇杆y轴的模拟值。
+
+```python
+read_joystick_right_y(self)
+
+参数:无
+返回值：返回0~255的模拟值
+
+```
+
+#### 5.read_button_status(self, button)
+
+这是JoystickController类下的成员函数，用于接收手柄按钮的按下状态。
+
+```python
+read_button_status(self, button)
+
+参数:
+button: 按钮类型，取值范围为BUTTON_LEFT_REG、BUTTON_RIGHT_REG、JOYSTICK_BUTTON_RIGHT、JOYSTICK_BUTTON_LEFT，分别表示左侧按键、右侧按键、左摇杆按键、右摇杆按键。
+返回值：返回Button_Status类成员变量，表示按钮的按下状态，取值范围为JOYSTICK_PRESS_DOWN、JOYSTICK_PRESS_UP、JOYSTICK_SINGLE_CLICK、JOYSTICK_DOUBLE_CLICK、JOYSTICK_LONG_PRESS。分别表示按下、释放、单击、双击、长按。
+
+```
