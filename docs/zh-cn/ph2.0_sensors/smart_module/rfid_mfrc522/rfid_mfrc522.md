@@ -84,5 +84,7 @@ RFID模块接在拓展板I2C端口上即可。
 | Arduino库和示例程序（C/C++）                                 |
 | ESP32库和示例程序（C/C++，MicroPython）                      |
 | Micro:Bit库和示例程序（MicroPython,MakeCode）[MakeCode示例程序点击此处查看](https://makecode.microbit.org/S24813-08297-06583-21878) |
+| Mixly示例程序                                  |
+| Mind+库和示例程序                                                      |
 
 <span id="jump">[上述资料点击此处下载](zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/data_collection.zip ':ignore')</span>
