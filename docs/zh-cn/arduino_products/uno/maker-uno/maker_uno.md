@@ -86,13 +86,39 @@ void loop() {
 }
 ```
 
+
+
 **Mixly 电机测试案例**
 
-![1723533310321](picture/12.png)
+在Mixly 2.0平台选择板卡Arduino AVR
+
+![](picture\mixly_board_selecting.png)
+
+选择主板及端口后即可将代码上传至设备
+
+![](picture\mixly_serial_selecting.jpg)
+
+参考代码
+
+![1723533310321](picture/mixly_code.png)
 
 ## Mind+电机测试案例
 
+在“拓展”中选择主板
+
+![](picture\mindplus_expension.png)
+
+![](picture\mindplus_board_selecting.png)
+
+选择端口后即可将代码上传至设备
+
+![](picture\mindplus_serial_selecting.jpg)
+
+参考代码
+
 ![1723687860610](picture/13.png)
+
+
 
 ## 指示灯说明
 
