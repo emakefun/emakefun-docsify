@@ -110,7 +110,7 @@
     - [GS20手势识别传感器](/zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer.md)
     - [MP3播放模块](zh-cn/ph2.0_sensors/smart_module/mp3_module/MP3.md)
     - [I2S音频放大器模块](zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/i2s_audio_amplifier_module.md)
-    - [MQTT模块](/zh-cn/.md)
+    - [MQTT模块](zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/esp8266_mqtt.md)
     - [LD3320语音识别V2.1](zh-cn/ph2.0_sensors/smart_module/speech_recognizer/speech_recognizer.md)
     - [离线特定语音识别ASR-V2](zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/asr_speech_recognition.md)
     - [TTS语音合成V2.1](zh-cn/ph2.0_sensors/smart_module/tts_module/text_to_speech_synthesizer.md)
