@@ -56,6 +56,8 @@
 
 ## Mixly示例程序
 
+[点击下载编码电机库](zh-cn/esp32/maker_esp32_pro/maker-esp32-pro-mixly.zip ':ignore')
+
 [点击下载电机舵机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_motor_servo_test.zip ':ignore')
 
 [点击下载舵机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_servo_test.zip ':ignore')
