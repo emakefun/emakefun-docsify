@@ -1,28 +1,26 @@
 # Joystick:Bit
 
-Joystick:Bit为**深圳市易创空间科技有限公司**出品的针对micro:bit开发的无线可编程手柄，支持micro:Bit V1、 V2;
-
- **MakeCode扩展链接为**: **<https://github.com/emakefun/pxt-joystickbit>**
-
-#### **[淘宝链接](https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-21556097795.24.720864faiazDSE&id=650591965479)**
+Joystick:Bit是一款针对类似micro:bit金手指插卡式开发板而开发的可编程手柄，支持micro:Bit V1、 V2、iot:bit、掌控板。
 
 ![image](picture/joystickbit.jpg)
 
 ## 特点
 
-- 左右双摇杆
+- 左右双摇杆，带按下按键；
 
-- 手柄扩展Micro:Bit A，B按键
+- 手柄扩展Micro:Bit主板上的A，B按键；
 
-- 左右可独立编程按键
+- L，R两个可编程独立按键；
 
-- 板子蜂鸣器和震动电机
+- 板载无源蜂鸣器和震动电机；
 
-- 2节7号电池供电
+- 2节7号电池供电；
 
 - 1个PH2.0-4Pin i2c接口
 
 ## 图像化编程块说明
+
+ **Microbit MakeCode扩展链接为**: **<https://github.com/emakefun/pxt-joystickbit>
 
 - 《游戏手柄摇杆获取 左/右侧 x/y轴 的值》:该模块用于获取手柄左或者右摇杆x轴或者y轴方向的坐标值，其获取的值为数值类型，其值可以通过‘显示数字’模块显示在Micro:Bit板上
 
@@ -69,13 +67,9 @@ Joystick:Bit为**深圳市易创空间科技有限公司**出品的针对micro:b
 
   ![image](picture/43.jpg)
 
-### micro:bit MicroPython扩展库
+## 掌控板/物联板IOT:BIT（ESP32主控）MicroPython扩展库
 
-[点击下载micro:bit MicroPython扩展库以及示例程序](zh-cn/microbit/joystickbit/microbit_joystick_controller.zip ':ignore')
-
-### ESP32掌控板  MicroPython扩展库
-
-[点击下载ESP32掌控板 MicroPython扩展库以及示例程序](zh-cn/microbit/joystickbit/esp32_joystick_controller.zip ':ignore')
+[点击下载掌控板/物联板IOT:BIT（ESP32） MicroPython扩展库以及示例程序](zh-cn/microbit/joystickbit/esp32_joystick_controller.zip ':ignore')
 
 ### MicroPython API详细说明
 

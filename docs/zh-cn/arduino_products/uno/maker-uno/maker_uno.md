@@ -129,9 +129,7 @@ void loop() {
 
 ## CH340G驱动安装
 
-[CH340G驱动下载链接](https://www.wch.cn/downloads/CH341SER_ZIP.html)
-
-安装方法请自行百度
+驱动安装请参考此文档：[CH340G驱动安装](zh-cn/driver/ch340_driver/ch340_driver.md)
 
 ## FAQ
 
@@ -152,7 +150,3 @@ void loop() {
 a、先确定板子上的ON灯是否亮起，如果供电正确，ON不亮代表，主板有地方短路，可能芯片或者电源烧了
 
 b、检查bootloard是否正常，如不正常请重新上传或者返厂维修。
-
-## 联系我们
-
-**技术 + 合作：WX号:  EmakefunService**

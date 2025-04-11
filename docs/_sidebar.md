@@ -9,7 +9,7 @@
   - [Mixly2.0使用介绍](/zh-cn/software/mixly/mixly.zh-CN.md)
   - [Mind+使用介绍](/zh-cn/software/mind_plus/mindplus.zh-CN.md)
   - [Thonny使用介绍](/zh-cn/software/thonny/thonny.zh-CN.md)
-  - [MagicBlock使用介绍](zh-cn/software/MagicBlock_pic_zh/magicblock.md)
+  - [MagicBlock使用介绍](/zh-cn/software/MagicBlock_pic_zh/magicblock.md)
   - [手机编程软件介绍](/zh-cn/software/Mobile_programming/Mobile_programming.md)
 
 - 驱动安装
@@ -146,7 +146,6 @@
     - [maker-uno](zh-cn/arduino_products/uno/maker-uno/maker_uno.md)
     - [PH2.0传感器扩展板](zh-cn/arduino_products/uno/sensorkit/SensorKit.md)
     - [motor_driver_board](zh-cn/arduino_products/uno/motor_driver_board/MotorDriverBoard.md)
-    - [starter-bot]()
     - [hummer-bot](zh-cn/arduino_products/uno/hummer-bot/hummer-bot.md)
     - [panther-tank](zh-cn/arduino_products/uno/panther_tank/panther_tank.md)
     - [传感器套件介绍]()
@@ -168,13 +167,15 @@
   - [maker-esp32](zh-cn/esp32/maker_esp32/maker_esp32.md)
   - [maker-esp32-pro](zh-cn/esp32/maker_esp32_pro/maker_esp32_pro.md)
   - [esp32-cam V2](zh-cn/esp32/ESP32_CAM/ESP32_CAM.md)
+  - [物联板iot:bit](zh-cn/esp32/iotbit/iotbit.md)
+  - [scratch arcade](https://arcade.blockcode.fun/#/zh-cn/intro)
 - 树莓派
   - [树莓派传感器扩展板](zh-cn/raspberrypi/raspberrypi_sensor_board/raspberrypi_sensor_board.md)
   - [树莓派电机驱动板](zh-cn/raspberrypi/raspberrypi_motordriver_board/raspberrypi_motordriver_board.md)
 
-- [k210产品]
+- k210产品
 
-- [开源硬件]
+- 开源硬件
   - [机器人驱动板]()
 
 - 外设/配件
