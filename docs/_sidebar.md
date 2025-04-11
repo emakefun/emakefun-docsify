@@ -94,7 +94,7 @@
     - [TM1637四位时钟数码管](zh-cn/ph2.0_sensors/displayers/tm1637/TM1637.md)
     - [VK16K33四位数码管](zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/4_digit_7_segment_v2.0.md)
     - [MAX7289_8x8点阵屏](zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/8x8LedDisplay.md)
-    - [MAX7289_8x32点阵屏](/zh-cn/ph2.0_sensors/displayers/8x32LedDisplay.md)
+    - [MAX7289_8x32点阵屏](zh-cn/ph2.0_sensors/displayers/8x32_dot_matrix/8x32_dot_matrix.md)
     - [交通信号灯](zh-cn/ph2.0_sensors/displayers/trafficlight_module/trafficLights.md)
     - [RGB全彩灯](zh-cn/ph2.0_sensors/displayers/rgb_module/RGB.md)
     - [WS2812B RGB灯环](zh-cn/ph2.0_sensors/displayers/12-bit_RGB_lamp_ring/RGBRing.md)

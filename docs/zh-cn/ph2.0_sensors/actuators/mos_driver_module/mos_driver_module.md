@@ -2,6 +2,8 @@
 
 ## 模块实物图
 
+![module_photo](picture/MOS_driver_module.jpg)
+
 ## 概述
 
 该模块主要用于实现电平转换和功率放大功能，以适配低电平信号（如单片机或微控制器的 PWM 输出）驱动高功率设备（如继电器或电机）。适用于工业控制、电机驱动、继电器控制等需要低电平信号驱动高功率设备的场景，特别适合对可靠性要求较高的应用。
@@ -25,6 +27,10 @@
 ## Arduino 驱动电机示例
 
 ### 硬件连接
+
+下图为 水弹枪通过 MOS 驱动电机模块连接Arduino的接线图：
+
+![hardware_connection](picture/wiring_diagram.jpg)
 
 ### 示例程序
 
