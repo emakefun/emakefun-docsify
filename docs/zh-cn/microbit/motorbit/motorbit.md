@@ -161,11 +161,11 @@ Motor:Bit是[易创空间](https://www.emakefun.com/) 专门针对Micro:Bit而�
 
 > 舵机控制实验例程
 
-![MotorBitservo_code_zh](picture/MotorBit_servo_code_zh.png)
+![MotorBitservo_code_zh](picture/motorbit_servo_code_zh.png)
 
 > 实物连接图，例程实验选择S1引脚，实物连接也接在S1引脚
 
-![MotorBitservo_zh](picture/MotorBit_servo_zh.png)
+![MotorBitservo_zh](picture/motorbit_servo_zh.png)
 > 控制舵机转动到角度160，延时500ms，以速度3再转动到角度30，延时500ms，如此循环， [舵机实验源码](https://makecode.microbit.org/_Ea1cH3JwmehY)
 
 ## 步进电机接口
@@ -176,11 +176,11 @@ Motor:Bit是[易创空间](https://www.emakefun.com/) 专门针对Micro:Bit而�
 
 > 步进电机实验例程
 
-![MotorBitmotor_code_zh](picture/MotorBit_stepper_code_zh.png)
+![MotorBitmotor_code_zh](picture/motorbit_stepper_code_zh.png)
 
 > 实物连接图，例程实验选择STPM1_2引脚，实物连接也接在相应的引脚，注意不同引脚接线的颜色
 
-![MotorBitmotor_zh](picture/MotorBit_stepper_zh.png)
+![MotorBitmotor_zh](picture/motorbit_stepper_zh.png)
 > 步进电机驱动实验，实验结果为：接在STPM1_2引脚的步进电机转动50°，停止延时500ms，再转动，如此循环 ， [步进电机实验源码](https://makecode.microbit.org/_41a2Trhpfe55)
 
 ## RGB超声波
@@ -191,11 +191,11 @@ Motor:Bit是[易创空间](https://www.emakefun.com/) 专门针对Micro:Bit而�
 
 > 超声波RGB使用例程实验
 
-![MotorBitRGBCSB_code_zh](picture/MotorBit_RGBCSB_code_zh.png)
+![MotorBitRGBCSB_code_zh](picture/motorbit_RGBCSB_code_zh.png)
 
 > 实物连接图，RGB超声波的引脚选择P2
 
-![MotorBitRGBCSB_zh](picture/MotorBit_RGBCSB_zh.png)
+![MotorBitRGBCSB_zh](picture/motorbit_RGBCSB_zh.png)
 > 当超声波检测到前方距离小于10cm时，超声波的RGB灯 **全部**会显示**靛蓝**，并且有**闪烁**的特效  [RGB超声波实验源码](https://makecode.microbit.org/_TUqXfUJ2c19c)
 
 ## 8Pin_IO口引出
@@ -214,17 +214,17 @@ Motor:Bit是[易创空间](https://www.emakefun.com/) 专门针对Micro:Bit而�
 
 > I2C使用例程（控制LCD1602显示）
 
- ![MotorBitI2C_code_zh](picture/MotorBit_I2C_code_zh.png)
+ ![MotorBitI2C_code_zh](picture/motorbit_I2C_code_zh.png)
 
 > 实验实物图，在接线时，需要注意LCD1602液晶的SDA引脚接在扩展板的SDA引脚、SCL引脚接在扩展板的SCL引脚、GND引脚接在扩展板的黑色GND引脚、VCC引脚接在扩展板的红色5V引脚，不同的I2C模块需要的电压不同，LCD1602液晶需要5V(注意调节液晶背面的旋钮、以调整显示效果达到最好的显示)
 
-![MotorBitI2C_zh](picture/MotorBit_I2C_zh.png)
+![MotorBitI2C_zh](picture/motorbit_I2C_zh.png)
 
 > 实验现象为：LCD1602液晶第一行显示**`Hello! emakefun!`**    ，第二行显示**`2020 2 2`** [LCD1602液晶实验源码](https://makecode.microbit.org/_6s8UXUHCo67w)
 
 ## 电压引脚
 
-![image-20200305102121549](picture/MotorBit_V_PCB_zh.jpg)
+![image-20200305102121549](picture/motorbit_V_PCB_zh.jpg)
 
 - Motor:Bit 扩展板设计有三种电压引脚，分别为3V3、5V、VIN(+，没有经过降压的电压接口）
 - 对于8个IO口、可以通过IO口跳线帽进行选择不同的电压：对于8个PWM舵机接口，可以通过跳线帽选择不同的电压，需要注意，当选择5V的时候，供电来源于开关选择的电源直接相关，选择‘ +’   的时候，供电来源为接线柱电源，与开关选择无关
@@ -238,36 +238,36 @@ Motor:Bit是[易创空间](https://www.emakefun.com/) 专门针对Micro:Bit而�
 ### 新建项目
 
 - 点击黑色箭头指向的**`新建项目`** ，进入到编程界面
-![MotorBitproject_zh](picture/MotorBit_project_zh.png)
+![MotorBitproject_zh](picture/motorbit_project_zh.png)
 
 ### 添加包
 
 - 点击**`高级`**—>**`扩展`**—>输入网址**`https://github.com/emakefun/pxt-picture.git`**点击搜索—>点击picture包
-![MotorBithighpackage_zh](picture/MotorBit_highpackage_zh.png)
+![MotorBithighpackage_zh](picture/motorbit_highpackage_zh.png)
 
-![MotorBitextend_zh](picture/MotorBit_extend_zh.png)
+![MotorBitextend_zh](picture/motorbit_extend_zh.png)
 
-![MotorBitaddpackage_zh](picture/MotorBit_addpackage_zh.png)
+![MotorBitaddpackage_zh](picture/motorbit_addpackage_zh.png)
 
-![MotorBitclick_zh](picture/MotorBit_click_zh.png)
+![MotorBitclick_zh](picture/motorbit_click_zh.png)
 
-![MotorBitcomplete_zh](picture/MotorBit_complete_zh.png)
+![MotorBitcomplete_zh](picture/motorbit_complete_zh.png)
 
 ## 程序下载
 
 ### 点击下载按钮
 
-- 点击**`下载`**,     红色箭头所指的按扭![MotorBitdatadown_zh](picture/MotorBit_datadown_zh.png)
+- 点击**`下载`**,     红色箭头所指的按扭![MotorBitdatadown_zh](picture/motorbit_datadown_zh.png)
 
 ### 保存到Microbit的U盘上，在保存过程中micro:bit指示灯会闪烁
 
 - 选择**`MICROBIT`**，点击确定 (使用的是QQ浏览器进行在线的下载)
 
-![MotorBitdatasave_zh](picture/MotorBit_datasave1_zh.png)
+![MotorBitdatasave_zh](picture/motorbit_datasave1_zh.png)
 
 - 点击下载（只要把microbit程序文件下载或保存到microbit主板的名为**`MICROBIT`**的内存盘，程序就会在microbit中运行）
 
-![MotorBitdatasave2_zh](picture/MotorBit_datasave2_zh.png)
+![MotorBitdatasave2_zh](picture/motorbit_datasave2_zh.png)
 
 ## MicroPython示例程序
 
