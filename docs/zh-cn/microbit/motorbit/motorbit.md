@@ -269,13 +269,15 @@ Motor:Bit是[易创空间](https://www.emakefun.com/) 专门针对Micro:Bit而�
 
 ![MotorBitdatasave2_zh](picture/MotorBit_datasave2_zh.png)
 
-## micropython语法
+## MicroPython示例程序
 
-如果需要支持python语法，需要将固件下载到Micro:Bit
+### micro:bit MicroPython示例程序
 
-[点击下载Micro:Bit V1最新固件](zh-cn/microbit/motorbit/firmware_v1.hex ':ignore')
+ [点击下载motorbit micro:bit MicroPython库](zh-cn/microbit/motorbit/motorbit_microbit_micropython_library.zip ':ignore')
 
-[点击下载Micro:Bit V2最新固件](zh-cn/microbit/motorbit/firmware_v2.hex ':ignore')
+### ESP32 MicroPython示例程序
+
+ [点击下载moborbit ESP32 MicroPython库](zh-cn/microbit/motorbit/moborbit_esp32_micropython_library.zip ':ignore')
 
 - 直流电机控制：
 
@@ -315,7 +317,7 @@ picture = motor.init()
 picture.servo(1, 90)
 ```
 
-```
+```python
 #控制连接在S1引脚的舵机以 5 速度转动到90°位置
 import motor
 picture = motor.init()
@@ -326,14 +328,6 @@ picture.servo(1, 90, speed=5)
 
 1. [红外遥控器控制麦轮小车](https://makecode.microbit.org/_iX6Toq4saVHL)
 2. JOYSTICKBIT手柄无线控制麦轮小车    [手柄程序](https://makecode.microbit.org/_bVj0r32qUaVo)   [麦轮小车程序](https://makecode.microbit.org/_5CzePW2wTTm8)
-
-### motorbit独立micropython库支持
-
- [**点击下载motorbit microbit micropython库**](zh-cn/microbit/motorbit/motorbit_microbit_micropython_library.zip ':ignore')
-
-### motorbit也支持掌控板（ESP32) micropython库支持
-
- [**点击下载moborbit esp32 micropython库**](zh-cn/microbit/motorbit/moborbit_esp32_micropython_library.zip ':ignore')
 
 # FAQ
 
