@@ -105,7 +105,7 @@ Motor:Bit是[易创空间](https://www.emakefun.com/) 专门针对Micro:Bit而�
 
 > 无源蜂鸣器播放音乐 例程实验
 
-![MotorBitbuzzer_code_zh](picture/MotorBit_buzzer_code_zh.png)
+![MotorBitbuzzer_code_zh](picture/motorbit_buzzer_code_zh.png)
 
 > 实验现象为：当按下Micro:Bit主板A按键播放 生日歌： 当B按键按下时，播放 铃声[蜂鸣器实验源码](https://makecode.microbit.org/_7T6XPUbgYhcb)
 
@@ -130,7 +130,7 @@ Motor:Bit是[易创空间](https://www.emakefun.com/) 专门针对Micro:Bit而�
 
 > 板载RGB实验例程
 
-![MotorBitRGB_code_zh](picture/MotorBit_RGB_code_zh.png)
+![MotorBitRGB_code_zh](picture/motorbit_RGB_code_zh.png)
 
 > RGB流水灯实验设计 ，实验结果为：板载RGB灯红绿蓝三色间隔1s显示  [RGB实验源码](https://makecode.microbit.org/_XD8L8u8s77cD)
 
@@ -140,11 +140,11 @@ Motor:Bit是[易创空间](https://www.emakefun.com/) 专门针对Micro:Bit而�
 
 > 控制直流电机例程实验
 
-![MotorBitDCmotor_code_zh](picture/MotorBit_DCmotor_code_zh.png)
+![MotorBitDCmotor_code_zh](picture/motorbit_DCmotor_code_zh.png)
 
 >实物接线图(DC供电口供电，开关拨动到on(DC))
 
-![MotorBitDCmotor_zh](picture/MotorBit_DCmotor_zh.png)
+![MotorBitDCmotor_zh](picture/motorbit_DCmotor_zh.png)
 
 > 实验结果：当Micro:Bit主板的按下A键、接在M1(A01A02)的电机顺时针旋转，按下B键，电机反方向旋转 [直流电机实验源码](https://makecode.microbit.org/_6pTH0XCLjYdb)
 
