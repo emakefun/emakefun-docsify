@@ -93,3 +93,54 @@ constexpr uint8_t kPcmData[]  /*数组名修改成该变量名*/
 
 - DAC只支持8位数据
 - 不能和I2S同时使用
+
+## 蓝牙音响实验
+
+[点击出下载示例代码以及zip库文件](zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/music.zip ':ignore')
+
+在本次实验中，我们在Arduino IDE中运行。
+
+在编写程序之前，先选择相应主板型号。
+
+![up_esp32](picture/up_esp32.png)
+
+源代码：
+
+```c
+#include "AudioTools.h"
+#include "BluetoothA2DPSink.h"
+
+AnalogAudioStream out;
+//由于库文件原因，功放喇叭默认接25号端口；
+BluetoothA2DPSink a2dp_sink(out);
+
+void setup() {
+  //在此修改蓝牙设备名称
+  a2dp_sink.start("EmakeFun DAC");  
+}
+
+void loop() {
+}
+```
+
+![选择板型号](picture/IDE.png)
+
+在上传此程序之前，需要先导入相关库文件，步骤如下：
+
+![导入库文件](picture/add_lib_1.png)
+
+![导入库文件](picture/add_lib_2.png)
+
+更新库文件后，重启IDE，再打开示例程序，正常上传。
+
+再按如下选择内存选项以免编译时报内存溢出错误。
+
+![选择内存](picture/option.jpg)
+
+### 实验结果
+
+上传示例程序后，打开手机蓝牙设置（电脑蓝牙设置），搜索周围蓝牙设备，例如本实验中设备名称为“Emakefun DAC”，点击连接配对，配对成功后，即可外放音频，达到蓝牙音响的效果。
+
+| ![s1](picture/s1.jpg) | ![s2](picture/s2.jpg) | ![s3](picture/s3.jpg) |
+| ---------------------- | ---------------------- | ---------------------- |
+|                        |                        |                        |
