@@ -40,3 +40,7 @@
 本模块可搭配I2S麦克风模块使用。
 
 [点击查看使用示例](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/i2s_mems_mic.md#Arduino使用示例)
+
+## 蓝牙音响实验
+
+[点击查看蓝牙音响实验](zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/8002a_amp_speaker.md#蓝牙音响实验)

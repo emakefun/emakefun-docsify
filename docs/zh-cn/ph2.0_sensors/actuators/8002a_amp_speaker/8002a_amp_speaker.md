@@ -144,3 +144,11 @@ void loop() {
 | ![s1](picture/s1.jpg) | ![s2](picture/s2.jpg) | ![s3](picture/s3.jpg) |
 | ---------------------- | ---------------------- | ---------------------- |
 |                        |                        |                        |
+
+### 用I2S音频放大器模块播放音频
+
+和上述操作一致，打开示例程序'bt_music_receiver_arduino_i2s',如下图所示：
+
+![i2s_music_receiver](picture/example.jpg)
+
+再将引脚改成所需引脚再烧录程序即可。
