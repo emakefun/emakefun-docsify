@@ -26,12 +26,6 @@
 - 电压选择接口：当跳线帽连接 5V 与 VCC 引脚时、扩展板的引脚(VCC)输出电压为 5V；当跳线帽连接 3V3 与 VCC 引脚时、扩展板的引脚(VCC)输出电压为 3.3V。
 - 电压输出/输入接口：Sensor:bit 设计有一个多功能电压引脚，当采用 micro usb 接口供电时、该引脚可以输出 5V 为其它扩展板供电；另一方面、该引脚也可以通过杜邦线连接电源(5V)，为Sensor:bit 扩展板供电。<font color=red>**注意: 不能同时使用该接口与 micro usb 接口供电，以免造成损坏！**</font>
 
-# Sensor:bit 与 PH2.0接口传感器
+## Sensor:bit 与 PH2.0接口传感器
 
 Sensor:bit 是专为 Micro:bit 与各种传感器连接所设计的，对与 PH2.0 接口的 Sensor:bit 、设计有一套量身定做的 PH2.0接口传感器套件。传感器种类多样，按照其作用类型可分为四大类：输入模块、传感器、执行类、显示器。
-
-要支持如下micropython语法需要下载最新固件到microbit
-
-[Micro:bit V1固件](zh-cn/microbit/sensorbit/firmware_v1.hex ':ignore')
-
-[Micro:bit V2固件](zh-cn/microbit/sensorbit/firmware_v2.hex ':ignore')
