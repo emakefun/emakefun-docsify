@@ -61,7 +61,7 @@
 
 也可以使用我们的示例固件进行测试。
 
-[点击此处下载示例固件](zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/sfw2025012210105760772297.zip ':ignore')
+[点击此处下载示例固件](zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/Asr_Speech_Recognition_v1.0.0.zip ':ignore')
 
 下载后解压文件，打开烧录软件。
 
@@ -71,9 +71,9 @@
 
 ![烧录步骤](picture\8.png)
 
-打开软件后，点击固件升级。
+打开软件后,选择CI1302芯片，再点击固件升级。
 
-![点击固件升级](picture\9.png)
+![点击固件升级](picture\9.jpg)
 
 ![选择固件](picture\10.png)
 
@@ -93,7 +93,7 @@
 
 [点击查看Arduino库函数说明](https://emakefun-arduino-library.github.io/em_asr_speech_recognition/html/zh-CN/classem_1_1_asr_speech_recognition.html)
 
-[点击下载Arduino库](zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/Asr_Speech_Recognition_v1.0.0.zip ':ignore')
+[点击下载Arduino库](zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/em_asr_speech_recognition-main.zip ':ignore')
 
 将相应的库添加至Arduino IDE中。软件使用方法可参照[Arduino IDE使用说明](zh-cn/software/arduino_ide/arduino_ide.zh-CN.md)
 
