@@ -99,6 +99,16 @@
 
 ### 接线图
 
+| 语音模块接口 | esp32接口 |
+| ------------ | --------- |
+| RX           | D14       |
+| TX           | D15       |
+
+| 语音模块接口 | Arduino接口 |
+| ------------ | --------- |
+| RX           | D13       |
+| TX           | D12       |
+
 按下图所示，将喇叭模块连接至语音模块相应接口，再将语音模块的TX端接D12，RX端接D13。
 
 ![接线图](picture\12.png)
@@ -122,3 +132,5 @@
 [点击查看micro:bit MakeCode示例程序](https://makecode.microbit.org/S15398-86855-41727-87467)
 
 [点击查看用户库网址](https://github.com/emakefun-makecode-extensions/emakefun_asr_speech_recognition)
+
+**注意**: 普通的命令码为0x81，欢迎语的命令码为0x82。客户根据自己设计的命令码进行相应的识别。

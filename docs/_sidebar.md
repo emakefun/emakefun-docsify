@@ -35,7 +35,7 @@
 
   - 传感器
     - [声音传感器](zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor.md)
-    - [DHT11温湿度](/zh-cn/gallery.md)
+    - [DHT11温湿度](zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/temperature_humidity_sensor.md)
     - [AT20温湿度](/zh-cn/gallery.md)
     - [光敏传感器](/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor.md)
     - [NTC热敏传感器](/zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor.md)
