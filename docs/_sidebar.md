@@ -48,7 +48,7 @@
     - [水深传感器](/zh-cn/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor.md)
     - [气体传感器](/zh-cn/ph2.0_sensors/sensors/mq_gas_sensor/mq_gas_sensor.md)
     - [人体热释电传感器](/zh-cn/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor.md)
-    - [磁簧开关](/zh-cn/ph2.0_sensors/sensors/magnetic-switch_sensor.md)
+    - [磁簧开关](zh-cn/ph2.0_sensors/sensors/magnetic_switch_sensor/magnetic_switch_sensor.md)
     - [霍尔开关](/zh-cn/ph2.0_sensors/sensors/magnetic-switch_sensor.md)
     - [灰度传感器](/zh-cn/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.md)
     - [震动传感器](/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor.md)
