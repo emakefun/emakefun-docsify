@@ -41,7 +41,7 @@
     - [NTC热敏传感器](/zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor.md)
     - [LM35温度传感器](/zh-cn/gallery.md)
     - [NL50温度传感器](/zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/temperature_sensor_nl50.md)
-    - [DS18B20温度传感器](/zh-cn/gallery.md)
+    - [DS18B20温度传感器](zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_sensor.md)
     - [火焰传感器](/zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor.md)
     - [土壤湿度传感器](/zh-cn/ph2.0_sensors/sensors/soil_moisture_sensor.md)
     - [雨滴传感器](/zh-cn/ph2.0_sensors/sensors/water_droplets_sensor.md)
