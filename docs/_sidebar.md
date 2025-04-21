@@ -60,7 +60,7 @@
     - [红外寻光避障](/zh-cn/gallery.md)
     - [红外计数传感器](/zh-cn/gallery.md)
     - [红外循迹模块](/zh-cn/ph2.0_sensors/sensors/tracking_sensor.md)
-    - [五路红外循迹V3.0](/zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/five_line_tracker_v3.md)
+    - [五路红外循迹V3.0](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/five_line_tracker_v3.md)
     - [单路灰度循迹模块](/zh-cn/gallery.md)
     - [五路灰度循迹模块](/zh-cn/gallery.md)
     - [HX711称重模块](/zh-cn/)
