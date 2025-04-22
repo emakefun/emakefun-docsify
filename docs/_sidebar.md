@@ -44,7 +44,7 @@
     - [DS18B20温度传感器](zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_sensor.md)
     - [火焰传感器](/zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor.md)
     - [土壤湿度传感器](zh-cn/ph2.0_sensors/sensors/soil_moisture_sensor/soil_moisture_sensor.md)
-    - [雨滴传感器](/zh-cn/ph2.0_sensors/sensors/water_droplets_sensor.md)
+    - [雨滴传感器](zh-cn/ph2.0_sensors/sensors/water_droplets_sensor/water_droplets_sensor.md)
     - [水深传感器](/zh-cn/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor.md)
     - [气体传感器](/zh-cn/ph2.0_sensors/sensors/mq_gas_sensor/mq_gas_sensor.md)
     - [人体热释电传感器](/zh-cn/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor.md)
