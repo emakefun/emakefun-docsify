@@ -8,7 +8,7 @@
 
 ## 原理图
 
-[查看原理图](zh-cn\ph2.0_sensors\sensors\water_depth_sensor\water_depth_sensor_schematic.pdf ':ignore') 
+[查看原理图](zh-cn\ph2.0_sensors\sensors\water_depth_sensor\water_depth_sensor_schematic.pdf ':ignore')
 ![原理图](picture/water_depth_sensor_schematic.png)
 
 ## 模块参数
@@ -25,8 +25,7 @@
 
 - 模块尺寸：56 x 22mm
 
-- 安装方式： M3螺钉固定 
-
+- 安装方式： M3螺钉固定
 
 ## 机械尺寸图
 
@@ -43,7 +42,7 @@ void setup() {
 }
 
 void loop() {
- 	Serial.print(analogRead(A3));//打印水深传感器模拟值
+  Serial.print(analogRead(A3));//打印水深传感器模拟值
     delay(200);  // 延时200毫秒
 }
 ```

@@ -10,7 +10,7 @@
 
 ## 原理图
 
- [查看原理图](zh-cn\ph2.0_sensors\sensors\photo_sensitive_sensor\photo_sensitive_sensor_schematic.pdf ':ignore') 
+ [查看原理图](zh-cn\ph2.0_sensors\sensors\photo_sensitive_sensor\photo_sensitive_sensor_schematic.pdf ':ignore')
 ![原理图](picture/photo_sensitive_sensor_schematic.png)
 
 ## 模块参数
@@ -22,17 +22,17 @@
 |    S     | 光线强时,读取的模拟值则越大 |
 
 - 供电电压:3v3/5V
--  连接方式:3PIN防反接杜邦线
--  模块尺寸:40 x 22.5 mm
--  安装方式:M4螺钉兼容乐高插孔固定
+- 连接方式:3PIN防反接杜邦线
+- 模块尺寸:40 x 22.5 mm
+- 安装方式:M4螺钉兼容乐高插孔固定
 
-## 机械尺寸图 
+## 机械尺寸图
 
 ![机械尺寸图](picture/photo_sensitive_sensor_assembly.png)
 
 ## Arduino示例程序
 
- [下载示例程序](zh-cn\ph2.0_sensors\sensors\photo_sensitive_sensor\photo_sensitive_sensor.zip ':ignore') 
+ [下载示例程序](zh-cn\ph2.0_sensors\sensors\photo_sensitive_sensor\photo_sensitive_sensor.zip ':ignore')
 
 ```c++
 #define PhotosensitivePin  A3//定义光敏传感器模块引脚
@@ -83,4 +83,3 @@ while True:
 ## MakeCode示例程序
 
 <a href="https://makecode.microbit.org/_ePdgoM28qVgV">动手试一试</a>
-

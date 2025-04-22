@@ -9,7 +9,8 @@
 震动传感器模块实质是一个开关,其内部是一个金属片和一个弹簧, 产品不震动时，震动开关呈断开状态，输出端输出高电平；产品震动时，震动开关由于弹簧和金属片瞬间导通，输出端输出低电平；输出端可以与单片机直接相连，通过单片机来检测高低电平，由此来检测环境是否有震动，起到报警作用。
 
 ## 原理图
- [查看原理图](zh-cn\ph2.0_sensors\sensors\shock_sensor\shock_sensor_schematic.pdf ':ignore') 
+
+ [查看原理图](zh-cn\ph2.0_sensors\sensors\shock_sensor\shock_sensor_schematic.pdf ':ignore')
 ![原理图](picture/shock_sensor_schematic.png)
 
 ## 模块参数
@@ -35,7 +36,7 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn\ph2.0_sensors\sensors\shock_sensor\shock_sensor.rar ':ignore') 
+[下载示例程序](zh-cn\ph2.0_sensors\sensors\shock_sensor\shock_sensor.rar ':ignore')
 
 ```c++
 #define ShockAnalogPin A0  // 定义震动传感器模拟引脚

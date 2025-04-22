@@ -9,7 +9,8 @@
 声音传感器模块的作用相当于一个话筒(麦克风)。它用来接收声波，显示声音的振动图象，但不能对噪声的强度进行测量。该传感器内置一个对声音敏感的电容式驻极体话筒。声波使话筒内的驻极体薄膜振动，导致电容的变化，而产生与之对应变化的微小电压。这一电压随后被转化成0-5V的电压，经过A/D转换被数据采集器接受，并传送给主控芯片。
 
 ## 原理图
- [查看原理图](zh-cn\ph2.0_sensors\sensors\sound_sensor\sound_sensor_schematic.pdf ':ignore') 
+
+ [查看原理图](zh-cn\ph2.0_sensors\sensors\sound_sensor\sound_sensor_schematic.pdf ':ignore')
 ![原理图](picture/sound_sensor_schematic.png)
 
 ## 模块参数
@@ -21,10 +22,10 @@
 |    A     | 模拟信号引脚 |
 |    D     | 数字信号引脚 |
 
-*  供电电压:5V
-*  连接方式:3PIN防反接杜邦线
-*  模块尺寸:40 x 22.5 mm
-*  安装方式:M4螺钉兼容乐高插孔固定
+* 供电电压:5V
+* 连接方式:3PIN防反接杜邦线
+* 模块尺寸:40 x 22.5 mm
+* 安装方式:M4螺钉兼容乐高插孔固定
 
 ## 机械尺寸图
 
@@ -98,4 +99,3 @@ while True:
 ## MakeCode示例程序
 
 <a href="https://makecode.microbit.org/_FaF5Xx1C2Tvb">动手试一试</a>
-
