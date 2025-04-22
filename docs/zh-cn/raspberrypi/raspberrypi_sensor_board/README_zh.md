@@ -80,33 +80,61 @@
 ### Python代码
 
 ```
-     import time
-     import smbus as smbus
+    from sensor_expansion_board_i2c import IoExpansionBoardI2c
+    from smbus2 import SMBus
+    import time
     
-     ADC=smbus.SMBus(1)    # Declare to use I2C 1
+    # 初始化I2C总线
+    i2c_bus = 1  # 树莓派上的I2C总线号
+    i2c_address = 0x24  # I2C设备地址
     
-     while True:
-          ADC.write_byte(0x24, 0x10)    # Write a byte to the slave
-          print(ADC.read_word_data(0x24, 0x10))    # Raspberry Pi reads the data returned by the expansion board and prints it out
-          time.sleep(1)#
+    # 创建IoExpansionBoardI2c对象
+    io_expansion_board_i2c = IoExpansionBoardI2c(i2c_bus, i2c_address)
+    
+    # 设置引脚7为ADC模式
+    io_expansion_board_i2c[7].mode = IoExpansionBoardI2c.ADC_MODE
+    
+    # 循环读取ADC值
+    try:
+        while True:
+            adc_value = io_expansion_board_i2c[7].adc_value
+            print(adc_value)
+            time.sleep(1)  # 延时1秒
+    except KeyboardInterrupt:
+        # print("程序已停止")
+        pass
 ```
 
-### C代码
+### C++代码
 
 ```
-    #include<stdio.h>    // 导入基础库
-    #include<wiringPi.h>    // 导入树莓派WiringPi编码IO控制库
-    #include<wiringPiI2C.h>    // 导入树莓派WiringPi编码I2C控制库
-    int value;//定义一个变量
-    int main (void){
-        wiringPiSetup();    // 初始化WiringPi编码。
-        wiringPiI2CSetup(0x24);    // 打开I2C设备,0x24为扩展板上MCU I2C地址
-        while(1){
-            wiringPiI2CWrite(0x24,0x10);    // 往从机写一个字节
-            value = wiringPiI2CReadReg16(0x24,0x10);    // 读取从机指定地址的两个字节，并赋值给value
-            printf("%d\r\n",value);    // 打印value
-            delay(100);
-        }
+    #include <iostream>
+    #include <chrono>
+    #include <thread>
+    #include "gpio_expansion_board.h"
+    
+    // 创建 GpioExpansionBoard 实例
+    GpioExpansionBoard gpio_expansion_board;
+    
+    int main() {
+      std::cout << "Setup" << std::endl;
+    
+      // 配置E0为ADC模式
+      if (!gpio_expansion_board.SetGpioMode(GpioExpansionBoard::kGpioPinE0, GpioExpansionBoard::kAdc)) {
+        std::cerr << "Failed to set GPIO mode for E0" << std::endl;
+        return -1;
+      }
+    
+      while (true) {
+        // 读取E0的ADC值并打印
+        uint16_t adc_value = gpio_expansion_board.GetGpioAdcValue(GpioExpansionBoard::kGpioPinE0);
+        std::cout << "ADC value: " << adc_value << std::endl;
+    
+        // 延时100毫秒
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+      }
+    
+      return 0;
     }
 ```
 
