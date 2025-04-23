@@ -57,7 +57,7 @@
 
 ### micro:bit MicroPython示例程序
 
-敬请期待.....
+[点击此处下载micro:bitMicroPython示例程序](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/five_line_tracker_v3_microbit_micropython.zip ':ignore')
 
 ## Mixly图形化块
 
@@ -75,4 +75,6 @@
 
 ## micro:bit MakeCode示例程序
 
-敬请期待.....
+[点击查看用户库](https://github.com/LT000-ops/emakefun_five_line_tracker_v3)
+
+[点击查看示例程序](https://makecode.microbit.org/S86187-63310-35826-36943)
