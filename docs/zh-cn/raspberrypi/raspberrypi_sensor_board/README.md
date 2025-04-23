@@ -79,37 +79,68 @@ Reboot the Raspberry Pi to make the new Settings take effect:
 
 &ensp;&ensp;&ensp;&ensp;The analog sensor inputs the analog voltage into the 10-bit analog-to-digital converter. After the analog-to-digital converter converts the analog data into digital data, it transmits the digital data to the Raspberry Pi via I2C.
 
-
+### Python Demo
+[Demo](https://gitee.com/jiexinjx/sensor_expansion_board/repository/archive/master.zip)
 ### Python code
 
 ```
+     from sensor_expansion_board_i2c import IoExpansionBoardI2c
+     from smbus2 import SMBus
      import time
-     import smbus as smbus
-    
-     ADC=smbus.SMBus(1)    # Declare to use I2C 1
-    
-     while True:
-          ADC.write_byte(0x24,0x10)    # Write a byte to the slave
-          print(ADC.read_word_data(0x24,0x10))    # Raspberry Pi reads the data returned by the expansion board and prints it out
-          time.sleep(1)
+     
+     # 初始化I2C总线
+     i2c_bus = 1  # 树莓派上的I2C总线号，通常是1
+     i2c_address = 0x24  # I2C设备地址
+     
+     # 创建IoExpansionBoardI2c对象
+     io_expansion_board_i2c = IoExpansionBoardI2c(i2c_bus, i2c_address)
+     
+     # 设置引脚7为ADC模式
+     io_expansion_board_i2c[7].mode = IoExpansionBoardI2c.ADC_MODE
+     
+     # 循环读取ADC值
+     try:
+         while True:
+             adc_value = io_expansion_board_i2c[7].adc_value
+             print(adc_value)
+             time.sleep(1)  # 延时1秒
+     except KeyboardInterrupt:
+         # print("程序已停止")
+         pass
 ```
 
-### C code
+### C++ Demo
+[Demo](https://gitee.com/jiexinjx/sensor_board/repository/archive/master.zip)
+### C++ code
 
 ```
-    #include<stdio.h>    // Import basic library
-    #include<wiringPi.h>    // Import Raspberry Pi WiringPi encoding IO control library
-    #include<wiringPiI2C.h>    // Import Raspberry Pi WiringPi coded I2C control library
-    int value;    // Define a variable
-    int main (void){
-        wiringPiSetup();    // Initialize WiringPi encoding.
-        wiringPiI2CSetup(0x24);    // Open the I2C device, 0x24 is the MCU I2C address on the expansion board
-        while(1){
-            wiringPiI2CWrite(0x24,0x10);    // Write a byte to the slave
-            value = wiringPiI2CReadReg16(0x24,0x10);    // Read two bytes from the specified address of the slave and assign it to value
-            printf("%d\r\n",value);    // Print value
-            delay(100);
-        }
+    #include <iostream>
+    #include <chrono>
+    #include <thread>
+    #include "gpio_expansion_board.h"
+    
+    // 创建 GpioExpansionBoard 实例
+    GpioExpansionBoard gpio_expansion_board;
+    
+    int main() {
+      std::cout << "Setup" << std::endl;
+    
+      // 配置E0为ADC模式
+      if (!gpio_expansion_board.SetGpioMode(GpioExpansionBoard::kGpioPinE0, GpioExpansionBoard::kAdc)) {
+        std::cerr << "Failed to set GPIO mode for E0" << std::endl;
+        return -1;
+      }
+    
+      while (true) {
+        // 读取E0的ADC值并打印
+        uint16_t adc_value = gpio_expansion_board.GetGpioAdcValue(GpioExpansionBoard::kGpioPinE0);
+        std::cout << "ADC value: " << adc_value << std::endl;
+    
+        // 延时100毫秒
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+      }
+    
+      return 0;
     }
 ```
 
