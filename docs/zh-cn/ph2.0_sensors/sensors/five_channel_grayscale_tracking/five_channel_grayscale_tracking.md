@@ -1,0 +1,72 @@
+# 五路灰度循迹模块
+
+## 实物图
+
+![实物图](picture/five_channel_grayscale_tracking.jpg)
+
+## 概述
+
+五路灰度循迹模块是智能机器人导航的核心传感器组件，采用五组红外对管阵列式排布，通过检测地面反射光强度差异实现路径识别。各探头独立输出数字/模拟信号，可精准判断黑线偏离方向及角度，具有高灵敏度、快速响应和抗干扰特性。模块支持实时反馈轨道位置信息，配合PID算法可优化运动控制精度，广泛应用于智能车竞赛、工业AGV及教育机器人领域，为自动化导航提供可靠的轨迹追踪解决方案。
+
+## 产品参数
+
+- 工作电压：3~5V
+- 通信方式：IIC
+- 接口类型：PH2.0-4Pin (G V SDA SCL)
+- 检测高度：0.5cm ~ 4 cm
+- 输出值：模拟值和数字值
+
+## 引脚定义
+
+| 引脚名称 | 描述       |
+| ---- | -------- |
+| V    | 3~5V电源引脚 |
+| G    | GND 地线   |
+| SDA  | IIC数据引脚  |
+| SCL  | IIC时钟引脚  |
+
+## 模块尺寸
+
+## 使用说明
+
+循迹模块中可读取每个光敏探头的接收模拟值和数字值。每个探头设有高阈值和低阈值。当模拟值高于高阈值时，数字值为 0；当模拟值低于低阈值时，数字值为 1。若模拟值处于高阈值与低阈值之间，则数字值不会发生变化。换言之，模拟值增大时，需高于高阈值，数字值才会变为 0；模拟值减小时，需低于低阈值，数字值才会变为 1，从而达到延迟反向的效果。
+
+高低阈值可以由用户根据实际场景自行设置。若用户未设置，则会采用出厂固件中的默认值。建议先将模块安装在小车上，使探头离地约 1CM。然后，将车放在线上，让所有探头能够检测到线，此时使用程序读取出模拟值并计算平均值，记为`X`。接着，把车放离线上，使所有探头能检测到非线地面，再次使用程序读取出模拟值并计算平均值，记为`Y`。高阈值可设置为`(X - Y) * 2 / 3 + Y`，低阈值设置为`(X - Y) / 3 + Y`。
+
+**注意**：五路灰度循迹模块与五路红外循迹模块的软件库及示例程序共用！
+
+## Arduino(C/C++)示例代码
+
+### Arduino库和示例代码
+
+[点击这里下载Arduino库和示例代码](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/emakefun_five_line_tracker_v3.zip ':ignore')
+
+## MicroPython示例代码
+
+### ESP32 MicroPython示例程序
+
+[点击此处下载ESP32MicroPython示例代码](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/five_line_tracker_v3_esp32_micropython.zip ':ignore')
+
+### micro:bit MicroPython示例程序
+
+[点击此处下载micro:bitMicroPython示例程序](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/five_line_tracker_v3_microbit_micropython.zip ':ignore')
+
+## Mixly图形化块
+
+![loading-ag-147](./picture/mixly_select.png)
+
+[点击下载米思齐五路循迹获取模拟值示例程序](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/mixly_get_analog.zip ':ignore')
+
+[点击下载米思齐五路循迹获取数字值示例程序](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/mixly_get_digital.zip ':ignore')
+
+## Mind+图形化
+
+[点击下载Mind+五路循迹用户库以及示例程序](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/mindplus_example.zip ':ignore')
+
+![mindplus_select](./picture/mindplus_select.png "mind+选择五路循迹V3.0")
+
+## micro:bit MakeCode示例程序
+
+[点击查看用户库](https://github.com/LT000-ops/emakefun_five_line_tracker_v3)
+
+[点击查看示例程序](https://makecode.microbit.org/S86187-63310-35826-36943)

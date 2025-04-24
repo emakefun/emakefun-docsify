@@ -59,6 +59,8 @@ esp-c2-mqtt无线模块是emakefun公司基于乐鑫科技的wifi芯片ESP8684�
 
 ### 机械尺寸图
 
+![尺寸图](picture/size.png)
+
 ## 功能说明
 
 ![mqtt_framework](picture/mqtt_framwork.jpg)
