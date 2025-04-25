@@ -82,6 +82,10 @@ Arduino需要控制探头的发光，需要专门的RGB库支持。
 
  [点击下载](zh-cn/ph2.0_sensors/sensors/rus_04/ESP32_RGBUltrasonicModule.zip ':ignore')
 
+### MicroPython示例程序
+
+[点击下载ESP32 MicroPython示例程序](zh-cn/ph2.0_sensors/sensors/rus_04/rgb_ultrasonic_esp32_micropython.zip ':ignore')
+
 ## micro:bit MakeCode示例程序
 
 <a href="https://makecode.microbit.org/_PtqVy7dDj4PJ" target="_blank">动手试一试</a>

@@ -12,8 +12,6 @@
 
  [查看原理图](zh-cn\ph2.0_sensors\sensors\grayscale_sensor\grayscale_sensor_schematic.pdf ':ignore' )
 
-
-
 ![原理图](picture/grayscale_sensor_schematic.png)
 
 ## 模块参数
@@ -26,7 +24,7 @@
 
 - 供电电压:3v3/5V
 
-- 连接方式:4PIN防反接杜邦线
+- 连接方式:3PIN防反接杜邦线
 
 - 模块尺寸:40 x 22.5 mm
 
@@ -38,7 +36,7 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn\ph2.0_sensors\sensors\grayscale_sensor\grayscale_sensor.zip ':ignore') 
+[下载示例程序](zh-cn\ph2.0_sensors\sensors\grayscale_sensor\grayscale_sensor.zip ':ignore')
 
 ```c
 void setup(){
@@ -84,4 +82,3 @@ while True:
 ## MakeCode示例程序
 
 <a href="https://makecode.microbit.org/_fakY8cFmMMch">动手试一试</a>
-
