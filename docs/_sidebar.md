@@ -53,7 +53,7 @@
     - [灰度传感器](/zh-cn/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.md)
     - [震动传感器](/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor.md)
     - [四向倾斜开关](/zh-cn/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor.md)
-    - [压力传感器](/zh-cn/ph2.0_sensors/sensors/pressure_sensor.md)
+    - [压力传感器](zh-cn/ph2.0_sensors/sensors/pressure_sensor/pressure_sensor.md)
     - [RGB超声波传感器](zh-cn/ph2.0_sensors/sensors/rus_04/rus_04.md)
     - [红外接收模块](zh-cn/ph2.0_sensors/sensors/irReceiver/irReceiverModel.md)
     - [红外避障](/zh-cn/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module.md)
