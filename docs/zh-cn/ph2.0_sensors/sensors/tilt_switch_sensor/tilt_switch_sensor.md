@@ -11,6 +11,7 @@
 ## 原理图
 
 [查看原理图](zh-cn\ph2.0_sensors\sensors\tilt_switch_sensor\tilt_switch_sensor_schematic.pdf ':ignore')
+
 ![原理图](picture/tilt_switch_sensor_schematic.png)
 
 ## 模块参数

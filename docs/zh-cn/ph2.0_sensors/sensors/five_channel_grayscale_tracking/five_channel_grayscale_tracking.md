@@ -16,6 +16,16 @@
 
 建议探头距离地面1CM左右最佳。
 
+## 原理图
+
+![原理图](picture/schematic_diagram.jpg)
+
+[点击此处查看原理图](zh-cn/ph2.0_sensors/sensors/five_channel_grayscale_tracking/5line_grayscale_tacking.pdf ':ignore')
+
+## 尺寸图
+
+![尺寸图](picture/size.png)
+
 ## 产品参数
 
 - 工作电压：3~5V
@@ -32,8 +42,6 @@
 | G    | GND 地线   |
 | SDA  | IIC数据引脚  |
 | SCL  | IIC时钟引脚  |
-
-## 模块尺寸
 
 ## 使用说明
 

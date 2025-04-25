@@ -6,7 +6,7 @@
 
 ## 概述
 
-​  编码器是一种将旋转位移转换为一连串数字脉冲信号的旋转式传感器，旋转编码器可通过旋转可以计数正方向和反方向转动过程中输出脉冲的次数，旋转计数不像电位计，这种转动计数是没有限制的。配合旋转编码器上的按键，可以实现某些特定功能。读数系统通常采用差分方式，即将两个波形一样但相位差为180°的不同信号进行比较，以便提高输出信号的质量和稳定性。编码器广泛用于汽车音量、空调调节等应用场景。
+  编码器是一种将旋转位移转换为一连串数字脉冲信号的旋转式传感器，旋转编码器可通过旋转可以计数正方向和反方向转动过程中输出脉冲的次数，旋转计数不像电位计，这种转动计数是没有限制的。配合旋转编码器上的按键，可以实现某些特定功能。读数系统通常采用差分方式，即将两个波形一样但相位差为180°的不同信号进行比较，以便提高输出信号的质量和稳定性。编码器广泛用于汽车音量、空调调节等应用场景。
 
 ## 原理图
 
@@ -34,50 +34,27 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_module.zip ':ignore')
+硬件接线如下表格所示
 
-```c
-#define encoder_A 3 //A端口输入引脚3
-#define encoder_B 5 //A端口输入引脚5
-#define switch_pin 6 //D端口输入引脚5
-int counter =0; //count变量记录计数值
-int aState; //A相输出当前状态
-int aLastState; //A相输出前一个状态 
-void setup() 
-{
-  pinMode (encoder_A,INPUT); //设置A端口输入引脚为输入模式
-  pinMode (encoder_B,INPUT); //设置B端口输入引脚为输入模式
-  pinMode (switch_pin,INPUT);//设置D端口输入引脚为输入模式  
-  Serial.begin (9600); //设置串口波特率9600
-  aLastState = digitalRead(encoder_A); //读取A端口状态
-}
-void loop() 
-{
-  if (digitalRead(switch_pin) == LOW)
-  {
-    delay(10);
-    if (digitalRead(switch_pin) == LOW)
-    {
-      Serial.println("Switch Pressed"); //如果按键被按下，串口打印Switch Pressed 
-    }
-  }    
- aState = digitalRead(encoder_A); //读取A端口状态
- if (aState != aLastState) //如果状态改变了
- {     
-   if (digitalRead(encoder_B) != aState) //读取B端口状态，如果与A相反
-   {
-     counter ++; //顺时针转动了一个位置
-   } 
-   else 
-   {
-     counter --; //顺时针转动了一个位置
-    }
-   Serial.print("Position: ");
-   Serial.println(counter); //打印当前位置
-  }
- aLastState = aState; //更新A端口当前状态
-}
-```
+| Arduino | 旋转编码器 |
+| ------- | ---------- |
+| VCC     | V          |
+| GND     | G          |
+| IO 2    | A          |
+| IO 3    | B          |
+| IO 4    | D          |
+
+[点击此处下载zip库](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/a21-master.zip ':ignore')
+
+下载好上述zip库后，打开Arduino IDE，选择项目->导入库->添加.ZIP库，选择刚下载的zip库，等待安装完成。
+
+![导入库](picture/01.jpg)
+
+导入库完成后，点击文件->示例->a21->a21-ec11-example，将示例程序烧录到Arduino上。
+
+![烧录程序](picture/02.jpg)
+
+烧录完成后，打开串口助手，设置波特率为115200，点击“打开串口”按钮，等待程序运行。
 
 ## Mixly示例程序
 
