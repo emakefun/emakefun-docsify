@@ -1,4 +1,4 @@
-# 倾斜传感器
+# 四项倾斜开关
 
 ## 实物图
 
@@ -9,7 +9,8 @@
 倾斜开关模块也称为珠形开关，钢球开关，实际上是一种振动开关。它有不同的名称，但工作原理保持不变。滚珠通过与金属板接触或不接触来控制电路的连接或断开。简单地说，就像打开或关闭灯一样，如果开关接触内部的金属板，灯将亮，当开关离开时，灯将熄灭。与金属端子接触或在开关中用小珠子改变光的行进路径将能够产生传导效应。
 
 ## 原理图
-[查看原理图](zh-cn\ph2.0_sensors\sensors\tilt_switch_sensor\tilt_switch_sensor_schematic.pdf ':ignore') 
+
+[查看原理图](zh-cn\ph2.0_sensors\sensors\tilt_switch_sensor\tilt_switch_sensor_schematic.pdf ':ignore')
 ![原理图](picture/tilt_switch_sensor_schematic.png)
 
 ## 模块参数
@@ -29,14 +30,13 @@
 
 - 安装方式:M4螺钉兼容乐高插孔固定
 
-
 ## 机械尺寸
 
 ![机械尺寸图](picture/tilt_switch_sensor_assembly.png)
 
 ## Arduino示例程序
 
- [下载示例程序](zh-cn\ph2.0_sensors\sensors\tilt_switch_sensor\tilt_switch_sensor.zip ':ignore') 
+ [下载示例程序](zh-cn\ph2.0_sensors\sensors\tilt_switch_sensor\tilt_switch_sensor.zip ':ignore')
 
 ```c++
 #define DigitalPin  7//定义倾斜传感器数字引脚
@@ -100,10 +100,3 @@ while True:
 ## MakeCode示例程序
 
 <a href="https://makecode.microbit.org/_5Roamecfp27z">动手试一试</a>
-
-
-
-
-
-
-

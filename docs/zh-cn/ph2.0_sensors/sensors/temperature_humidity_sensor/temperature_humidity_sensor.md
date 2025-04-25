@@ -40,6 +40,10 @@ DHT11数字温度 - 湿度传感器是一种包含校准数字信号输出的复
 
 ![机械尺寸图](picture/temperature_humidity_sensor_assembly.png)
 
+## 规格书
+
+[点击此处查看规格书](zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/DHT11-As数字型模块中性规格书.doc ':ignore')
+
 ## Arduino示例程序
 
 [下载示例程序](zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/temperature_humidity_sensor.zip ':ignore')
