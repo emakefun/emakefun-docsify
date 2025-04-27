@@ -66,7 +66,7 @@
     - [HX711称重模块](/zh-cn/)
     - [LTR553]()
     - [VL53L1X FOV激光测距]()
-    - [PM2.5粉尘传感器]()
+    - [PM2.5粉尘传感器](zh-cn/ph2.0_sensors/sensors/PM2.5_dust_sensor/PM2.5_dust_sensor.md)
 
   - 执行器
     - [有源蜂鸣器模块](zh-cn/ph2.0_sensors/actuators/buzzerModule/buzzerModel.md)

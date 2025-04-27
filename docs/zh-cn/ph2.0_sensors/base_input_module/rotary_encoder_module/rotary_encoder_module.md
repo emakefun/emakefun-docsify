@@ -32,6 +32,32 @@
 
 - 安装方式：M4螺钉兼容乐高插孔固定
 
+## 旋转编码器工作原理
+
+编码器内部有一个开槽圆盘，连接到公共接地引脚 C。它还具有两个接触针 A 和 B，如下所示。
+
+![圆盘](picture/2.png)
+
+当您转动旋钮时，A 和 B 按照特定顺序与公共接地引脚 C 接触，具体顺序取决于转动旋钮的方向。
+
+当它们与公共地接触时，会产生两个信号。这些信号存在 90° 异相，因为一个引脚先于另一个引脚接触公共地。它被称为**正交编码**。
+
+![接触针](picture/3.gif)
+
+当顺时针旋转旋钮时，A 引脚先于 B 引脚接地。当逆时针旋转旋钮时，B 引脚先于 A 引脚接地。
+
+通过监控每个引脚何时连接或断开接地，我们可以确定旋钮旋转的方向。这可以通过简单地观察 A 的状态改变时 B 的状态来完成。
+
+当A改变状态时：
+
+1.如果 B != A，则顺时针转动旋钮。
+
+![图示](picture/4.png)
+
+2.如果 B = A，则逆时针转动旋钮。
+
+![图示](picture/5.png)
+
 ## Arduino示例程序
 
 硬件接线如下表格所示
@@ -56,11 +82,27 @@
 
 烧录完成后，打开串口助手，设置波特率为115200，点击“打开串口”按钮，等待程序运行。
 
+按下按钮则串口显示'Button pressed'，按下按钮后旋转编码器，串口显示旋转的次数。
+
+顺时针转1级则加1，逆时针转1级则减1。一圈为15级。
+
+![运行结果](picture/uart.jpg)
+
 ## Mixly示例程序
 
 [下载示例程序](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_Mixly_demo.zip ':ignore')
 
+## ESP32 MicroPython示例程序
+
+[点击此处下载ESP32 MicroPython示例程序](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/ec11_esp32_micropython.zip ':ignore')
+
 ## micro:bit示例程序
+
+### micro:bit Python 示例程序
+
+[点击此处下载micro:bit Python示例程序](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/ec11_microbit_micropython.zip ':ignore')
+
+### micro:bit MakeCode 示例程序
 
 <a href="https://makecode.microbit.org/_Aspg3ah3sXL0" target="_blank">动手试一试</a>
 

@@ -14,13 +14,7 @@
 
 该模块也可以直接读取五路灰度接收传感器上的模拟电压值， 当检测到黑线或者越靠近黑线时数值越大，反之越小。
 
-建议探头距离地面1CM左右最佳。
-
-## 原理图
-
-![原理图](picture/schematic_diagram.jpg)
-
-[点击此处查看原理图](zh-cn/ph2.0_sensors/sensors/five_channel_grayscale_tracking/5line_grayscale_tacking.pdf ':ignore')
+建议探头距离地面1
 
 ## 尺寸图
 
