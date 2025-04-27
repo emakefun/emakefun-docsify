@@ -10,7 +10,13 @@
 
 ## 原理图
 
+![原理图](picture/pressure_sensor_module_schematic.png)
+
+[点击此处查看原理图](zh-cn/ph2.0_sensors/sensors/pressure_sensor/Pressure_Sensor.pdf ':ignore')
+
 ## 尺寸图
+
+![尺寸图](picture/pressure_sensor_module_assembly.png)
 
 ## 模块参数
 
