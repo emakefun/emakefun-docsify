@@ -7,13 +7,11 @@
 ## 概述
 
  在公共场所，比如酒店，建筑物和其他地方都配备了火灾报警器，那么它如何感知火灾？ 众所周知，当火灾爆发时，会有特别强烈的红外线，该设备可以通过红外线探测火灾。
-​		火焰传感器是机器人专门用来搜寻火源的传感器，当然火焰传感器也可以用来检测光线的亮度，只是本传感器对火焰特别灵敏。火焰传感器利用红外线对对火焰非常敏感的特点，使用特制的红外线接受管来检测火焰，然后把火焰的亮度转化为高低变化的电平信号，输入到中央处理器中，中央处理器根据信号的变化做出相应的程序处理。
+​  火焰传感器是机器人专门用来搜寻火源的传感器，当然火焰传感器也可以用来检测光线的亮度，只是本传感器对火焰特别灵敏。火焰传感器利用红外线对对火焰非常敏感的特点，使用特制的红外线接受管来检测火焰，然后把火焰的亮度转化为高低变化的电平信号，输入到中央处理器中，中央处理器根据信号的变化做出相应的程序处理。
 
 ## 原理图
 
- [查看原理图](zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor_schematic.pdf ':ignore') 
-
-
+ [查看原理图](zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor_schematic.pdf ':ignore')
 
 ![原理图](picture/flame_sensor_schematic.png)
 
@@ -40,7 +38,7 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor.rar) 
+[下载示例程序](zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor.rar)
 
 ```c
 #define FlamelDigitalPin  7//定义火焰传感器数字引脚

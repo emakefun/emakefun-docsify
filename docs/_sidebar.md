@@ -49,7 +49,7 @@
     - [气体传感器](/zh-cn/ph2.0_sensors/sensors/mq_gas_sensor/mq_gas_sensor.md)
     - [人体热释电传感器](/zh-cn/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor.md)
     - [磁簧开关](zh-cn/ph2.0_sensors/sensors/magnetic_switch_sensor/magnetic_switch_sensor.md)
-    - [霍尔开关](/zh-cn/ph2.0_sensors/sensors/magnetic-switch_sensor.md)
+    - [霍尔开关](zh-cn/ph2.0_sensors/sensors/hall_switch/hall_switch.md)
     - [灰度传感器](/zh-cn/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.md)
     - [震动传感器](/zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor.md)
     - [四向倾斜开关](/zh-cn/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor.md)
@@ -65,7 +65,7 @@
     - [五路灰度循迹模块](zh-cn/ph2.0_sensors/sensors/five_channel_grayscale_tracking/five_channel_grayscale_tracking.md)
     - [HX711称重模块](/zh-cn/)
     - [LTR553]()
-    - [VL53L1X FOV激光测距]()
+    - [VL53L1X FOV激光测距](zh-cn/ph2.0_sensors/sensors/laser_ranging_sensor/laser_ranging_sensor.md)
     - [PM2.5粉尘传感器](zh-cn/ph2.0_sensors/sensors/PM2.5_dust_sensor/PM2.5_dust_sensor.md)
 
   - 执行器
