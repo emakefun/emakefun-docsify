@@ -2,13 +2,13 @@
 
 ## 一、实物图
 
-![蓝牙手柄正面图](1722406687857.png)
+![蓝牙手柄正面图](picture/1722406687857.png)
 
 ## 二、介绍
 
 此款手柄是使用经典蓝牙与ESP32芯片系列进行直连控制，用户在开发板受控端的代码中输入手柄背部的蓝牙配对码连接使用，不会与其他手柄或者开发板串扰。使用方法简单方便，相对于上一个版本手柄，省去了读取ESP32蓝牙MAC地址再配置到手柄的这一繁琐的过程。
 
-![蓝牙手柄背面图](1722406763110.png)
+![蓝牙手柄背面图](picture/1722406763110.png)
 
 ## 三、规格参数
 
@@ -35,7 +35,7 @@
 
 **请前往乐鑫官网（链接：<https://www.espressif.com.cn/zh-hans/products/socs>）确认你的开发板或者模组对应的芯片系列，此款手柄不能用于ESP32芯片系列以外的芯片。**
 
-  ![蓝牙手柄按键说明图](1722406833331.png)
+  ![蓝牙手柄按键说明图](picture/1722406833331.png)
 
 ## 四、使用步骤
 
@@ -49,7 +49,7 @@
 
 打开库管理器搜索PS3 Controller Host（下方若显示已安装，则需要移除该库）
 
-![打开库管理器搜索PS3 Controller Host](28.png)
+![打开库管理器搜索PS3 Controller Host](picture/28.png)
 
 然后点击下方链接下载安装库`emakefun_esp32_ps3`
 
@@ -57,27 +57,27 @@
 
 下在完压缩包后，再在Arduino IED上导入该库：**项目->导入库->添加zip库**，再将上方下载的zip包导入即可。
 
-![导入该库](29.png)
+![导入该库](picture/29.png)
 
 #### 4.1.2 输入蓝牙配对码并运行示例代码
 
 将ESP32主板与电脑连接，主板型号选择ESP32-WROOM-DA Module，如下图：
 
-![主板型号选择ESP32-WROOM-DA Module](5.png)
+![主板型号选择ESP32-WROOM-DA Module](picture/5.png)
 
 Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino IDE -> 文件 -> 示例 -> PS3 Controller Host -> Ps3Connect**
 
-![打开PS3 Controller Host的示例代码](3.png)
+![打开PS3 Controller Host的示例代码](picture/3.png)
 
 将手柄背部的`蓝牙配对码`输入到代码中运行，例如手柄蓝牙配对码为`02:00:01:23:45:67`
 
 在示例代码中，找到`setup`函数中的代码`Ps3.begin("01:02:03:04:05:06");`，将其修改为`Ps3.begin("02:00:01:23:45:67");`，注意！每个手柄的配对码都不同！！！
 
-![修改蓝牙配对码](4.png)
+![修改蓝牙配对码](picture/4.png)
 
 保存后编译烧录到ESP32，烧录完成按下板子复位键进行复位，运行成功后串口（示例代码中设置的串口波特率为115200）会有如下打印：
 
-![串口打印信息](6.png)
+![串口打印信息](picture/6.png)
 
 #### 4.1.3 配对连接
 
@@ -89,19 +89,19 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 
 4. 连接到ESP32后，ESP32串口会循环打印Connected，这样就代表连接成功，如下所示：
 
-   ![打印信息](7.png)
+   ![打印信息](picture/7.png)
 
 5. 连接成功后1灯会常亮，断线后约10秒会自动关机
 
 6. 可以使用`setPlayer(int player)`函数来控制连接成功后4个指示灯的亮灭。例如：若是想要led1常亮则给参数1，led2常亮则给参数2等等（支持参数1~4）。
 
-   ![setPlayer函数](30.png)
+   ![setPlayer函数](picture/30.png)
 
 #### 4.1.4 按键测试
 
 手柄按键摇杆等测试，请自行运行和学习`PS3 Controller Host`的测试代码
 
-![PS3 Controller Host的测试代码](8.png)
+![PS3 Controller Host的测试代码](picture/8.png)
 
 - 测试手柄右边4个按键的测试代码：**Arduino IDE -> 文件 -> 示例 -> PS3 Controller Host -> Ps3Data**
 
@@ -115,17 +115,17 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 
 打开mixly，选择Arduino ESP32 为主板模式，将ESP32主板与电脑连接。
 
-![选择Arduino ESP32 为主板模式](9.png)
+![选择Arduino ESP32 为主板模式](picture/9.png)
 
 点击软件左上角设置——管理库，添加Emakefun传感器库。
 
-![添加Emakefun传感器库](10.png)
+![添加Emakefun传感器库](picture/10.png)
 
-![添加Emakefun传感器库](11.png)
+![添加Emakefun传感器库](picture/11.png)
 
 安装后，在EmakefunSensors—通信模块 类别中可找到PS3相关编程指令。
 
-![PS3相关编程指令](12.png)
+![PS3相关编程指令](picture/12.png)
 
 #### 4.2.2 输入蓝牙配对码并运行示例代码
 
@@ -133,7 +133,7 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 
 参照示例编写程序或使用示例程序，注意输入手柄背面的蓝牙配对码，每个手柄在出厂时已设置不同的配对码。
 
-![示例程序](13.png)
+![示例程序](picture/13.png)
 
 #### 4.2.3 配对连接
 
@@ -142,7 +142,7 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 3. 长按手柄一下中间的`单圆键`，手柄的**4个指示灯**会同时**快闪**，这时手柄会自动查询连接ESP32，如果是第一次连接可能要再按一下ESP32的复位键，或多次，不同的主板可能反应速度不一样
 4. 连接到ESP32后，ESP32串口会循环打印Connected，这样就代表连接成功，如下所示：
 
-![串口打印信息](14.png)
+![串口打印信息](picture/14.png)
 
 #### 4.2.4 按键测试
 
@@ -150,11 +150,11 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 
 经测试，所有按键在按下时反馈数字1，未按下为0；
 
-![示例程序](15.png)
+![示例程序](picture/15.png)
 
 左右摇杆值为-128-127之间，中间值为0;
 
-![示例程序](16.png)
+![示例程序](picture/16.png)
 
 ### 4.3 Mind+
 
@@ -164,31 +164,31 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 
 打开Mind+，选择FireBeetle ESP32-E 为主板模式，将ESP32主板与电脑连接。
 
-![选择FireBeetle ESP32-E 为主板模式](23.png)
+![选择FireBeetle ESP32-E 为主板模式](picture/23.png)
 
 右上角点击“用户库”，然后点击导入用户库。
 
-![导入用户库](27.png)
+![导入用户库](picture/27.png)
 
 找到下载的库文件，打开。
 
-![打开库文件](24.png)
+![打开库文件](picture/24.png)
 
 打开成功后出现如下界面。
 
-![打开页面](25.png)
+![打开页面](picture/25.png)
 
-![打开页面](26.png)
+![打开页面](picture/26.png)
 
 库文件安装成功后，返回编程主界面，在“用户库”中可找到PS3相关编程指令。
 
-![PS3相关编程指令](21.png)
+![PS3相关编程指令](picture/21.png)
 
 #### 4.3.2 输入蓝牙配对码并运行示例代码
 
 参照示例编写程序或使用示例程序，注意输入手柄背面的蓝牙配对码，每个手柄在出厂时已设置不同的配对码。
 
-![设置蓝牙配对码](17.png)
+![设置蓝牙配对码](picture/17.png)
 
 #### 4.3.3 配对连接
 
@@ -200,17 +200,17 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 
 4. 连接到ESP32后，ESP32串口会循环打印Connected，这样就代表连接成功，如下所示：
 
-![打印信息](18.png)
+![打印信息](picture/18.png)
 
 #### 4.3.4 按键测试
 
 经测试，所有按键在按下时反馈数字1，未按下为0；
 
-![示例程序](19.png)
+![示例程序](picture/19.png)
 
 左右摇杆值为-128-127之间，中间值为0;
 
-![示例程序](20.png)
+![示例程序](picture/20.png)
 
 ## 充电说明
 
@@ -228,8 +228,14 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 
 1. 如果要使用手柄的按键或摇杆进行操控，例如控制小车等，可将接收到的值进行判断，然后进行操作，例如：
 
-![示例程序](22.png)
+![示例程序](picture/22.png)
 
 2.若将设备连接到手柄，未对手柄进行任何操作，大概多久进入休眠状态？
 
 答：若将设备连接到手柄，未对手柄进行操作，大概五分钟进入休眠状态，若想重新使用，则需要重新连接。
+
+#### **特别注意：**
+
+若手柄出现上述方法不能解决的问题，可以按下手柄的复位键（用杜邦线公头或者其他工具），感觉到按键按下即可恢复出厂设置。再进行配对连接即可。
+
+![复位](picture/31.png)

@@ -2,7 +2,7 @@
 
 ## 模块实物图
 
-![颜色识别传感器模块](color_sensor_nlcs11.jpg )
+![颜色识别传感器模块](picture/color_sensor_nlcs11.png )
 
 ## 概述
 
@@ -16,7 +16,7 @@ NLCS11设备可进行色温测量、亮度传感。内部状态机提供了将�
 
 ### 原理图
 
-![NLCS11原理图](NLCS11_sch.png)
+![NLCS11原理图](picture/NLCS11_sch.png)
 
 [点击下载NLCS11原理图](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/NLCS11_sch.pdf ':ignore')
 
@@ -61,30 +61,30 @@ NLCS11设备可进行色温测量、亮度传感。内部状态机提供了将�
 
 即将颜色识别模块插入I2C接口即可。
 
-![接线图](1.jpg)
+![接线图](picture/1.jpg)
 
 ### 测试
 
 1.将[资料](#jump)中的Arduino库导入Arduino中
 
-![安装Arduino库](1.gif)
+![安装Arduino库](picture/1.gif)
 
 2.选择开发板Arduino Uno，
 工具->开发板->Arduino AVR Boards->Arduino Uno
 
-![选择开发板](3.png)
+![选择开发板](picture/3.png)
 
 3.将主板通过USB线插入电脑，并在Arduino IDE上选择相应COM口。
 
-![选择相应COM口](4.png)
+![选择相应COM口](picture/4.png)
 
 4.将程序烧录至主板
 
-![烧录](5.png)
+![烧录](picture/5.png)
 
 5.打开串口监视器，并选择波特率为115200
 
-![选择波特率](14.png)
+![选择波特率](picture/14.png)
 
 6.测试RGB读值
 
@@ -92,17 +92,17 @@ NLCS11设备可进行色温测量、亮度传感。内部状态机提供了将�
 
 可以观察到R值为170左右，明显变大，则识别出红色。
 
-![实验图](10.png)
+![实验图](picture/10.png)
 
-![读取R值](8.png)
+![读取R值](picture/8.png)
 
 将颜色识别传感器放至绿色面板上的读值，g值达到200左右，明显变大，成功识别出绿色。
 
-![读取G值](11.png)
+![读取G值](picture/11.png)
 
 将颜色识别传感器放至蓝色面板上的读值，b值从30几变成130多，明显变大，成功识别出蓝色。
 
-![读取B值](12.png)
+![读取B值](picture/12.png)
 
 ## 开发板
 
@@ -111,16 +111,16 @@ NLCS11设备可进行色温测量、亮度传感。内部状态机提供了将�
 | Arduino UNO R3 |
 | Arduino Nano   |
 | ESP32          |
-| Micro:Bit      |
+| micro:bit      |
 
 ## 资料下载
 
-| 资料目录                                |
-| --------------------------------------- |
-| Arduino库和示例程序（C/C++）            |
-| ESP32库和示例程序（C/C++，MicroPython） |
-| Micro:Bit库和示例程序（MicroPython）    |
-| NLCS11原理图                            |
-| NLCS11数据手册                          |
+| 资料目录                                                     |
+| ------------------------------------------------------------ |
+| Arduino库和示例程序（C/C++）                                 |
+| ESP32库和示例程序（C/C++，MicroPython）                      |
+| micro:bit库和示例程序（MicroPython,MakeCode）[点击查看Makecode示例程序](https://makecode.microbit.org/S81407-77066-42131-87420)<br>用户库网址：<https://github.com/emakefun-makecode-extensions/emakefun_nlcs11> |
+| NLCS11原理图                                                 |
+| NLCS11数据手册                                               |
 
 <span id="jump">[上述资料点击此处下载](zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/data_collection.zip ':ignore')</span>

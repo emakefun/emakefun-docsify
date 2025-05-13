@@ -28,7 +28,7 @@ Micro:bit是一款无需安装IDE产品，只需要在网页上进行编程下�
 
 ![Img](./media/img-20230509132315.png)
 
-## 2. Micro:bit驱动安装说明：
+## 2. Micro:bit驱动安装说明
 
 Micro:bit是可以免安装USB驱动的。如果你的电脑识别不了Micro:bit主板，则需要安装一下Micro:bit驱动，我们提供有Micro:bit 驱动文件![Img](./media/img-20230324085252.png)和安装Micro:bit驱动说明书，你可以进入相关文件夹中根据安装说明书进行安装。
 
@@ -82,7 +82,7 @@ Micro:bit 将在您的电脑上显示为一个名为'MICROBIT'的驱动器。但
 
 ![Img](./media/img-20230417113900.png)
 
-#### 步骤 3: 下载代码 
+#### 步骤 3: 下载代码
 
 单击编辑器中的“**下载**”按钮。 这将下载一个“hex”文件，该文件是Micro:bit主板可以读取的紧凑程序格式。 十六进制文件下载后，将其复制到你的Micro:bit主板，就像将文件复制到USB驱动器一样。 在Windows上，你还可以右键单击并选择“发送到→MICROBIT（E）”将“hex”文件拷贝到Micro:bit主板。
 
@@ -96,7 +96,7 @@ Micro:bit 将在您的电脑上显示为一个名为'MICROBIT'的驱动器。但
 
 <span style="color: rgb(255, 76, 65);">将下载好的“hex”文件拷贝到Micro:bit主板过程中，Micro:bit主板背面的黄色信号灯会闪烁，当拷贝完成后黄色信号灯停止闪烁，保持长亮。</span>
 
-#### 步骤 4: 运行程序 
+#### 步骤 4: 运行程序
 
 代码程序上传Micro: bit 主板后，通过Micro USB线或外接电源给Micro: bit主板供电，Micro: bit 主板上的5 x 5 LED点阵显示心跳的图案。
 
@@ -120,18 +120,18 @@ micro USB线供电
 
 ![Img](./media/img-20230417113322.png)
 
-点击 “**新建项目**”,出现“**创建项目**”对话框，在对话框中输入“**心跳**”，单击“**创建**”进入MakeCode 编译器，MakeCode 编译器如下: 
+点击 “**新建项目**”,出现“**创建项目**”对话框，在对话框中输入“**心跳**”，单击“**创建**”进入MakeCode 编译器，MakeCode 编译器如下:
 
 ![Img](./media/img-20230417115412.png)
 
-在代码编辑区中，有两个固定的指令方块“**当开机时**”和“**无限循环**”。 
+在代码编辑区中，有两个固定的指令方块“**当开机时**”和“**无限循环**”。
 上电或复位后，“**当开机时**”指令方块中的代码将仅执行一次；并且“**无限循环**”指令方块中的代码将循环执行。
 
-### （3）快速下载   
+### （3）快速下载
 
-使用MakeCode的浏览器版本下载编写好的代码程序可能需要更多步骤。 但是，如果您将Google Chrome 用于Android，ChromeOS，Linux，macOS和Windows 10系统，则可以实现快速下载功能。 
+使用MakeCode的浏览器版本下载编写好的代码程序可能需要更多步骤。 但是，如果您将Google Chrome 用于Android，ChromeOS，Linux，macOS和Windows 10系统，则可以实现快速下载功能。
 
-在这里，我们使用Chrome的webUSB功能，该功能允许网页访问您的Micro USB硬件设备。 我们将按照以下步骤完成Micro：bit设备与网页的连接和配对。 
+在这里，我们使用Chrome的webUSB功能，该功能允许网页访问您的Micro USB硬件设备。 我们将按照以下步骤完成Micro：bit设备与网页的连接和配对。
 
 **配对装置：**
 
@@ -149,11 +149,11 @@ micro USB线供电
 
 ![Img](./media/img-20230417120843.png)
 
-在弹出窗口中选中对应的“**设备**”，然后单击“**连接**”按钮。 如果弹出窗口中没有设备，请参考以下内容：[https://makecode.microbit.org/device/usb/webusb/troubleshoot](https://makecode.microbit.org/device/usb/webusb/troubleshoot) 
+在弹出窗口中选中对应的“**设备**”，然后单击“**连接**”按钮。 如果弹出窗口中没有设备，请参考以下内容：[https://makecode.microbit.org/device/usb/webusb/troubleshoot](https://makecode.microbit.org/device/usb/webusb/troubleshoot)
 
 当然，如果你不想点击链接进入相关页面中查看，你也可以在本教程的“其他相关资料”文件夹中直接阅读“**用WebUSB排除下载过程中的故障**”文件。
 
-如果你的Micro:bit主板出现问题是需要更新Micro:bit主板的固件，在“其他相关资料”文件夹中的“**如何更新micro:bit主板的固件**”文件介绍了如何更新Micro:bit主板的固件，其内容来自：[https://microbit.org/guide/firmware/](https://microbit.org/guide/firmware/) 
+如果你的Micro:bit主板出现问题是需要更新Micro:bit主板的固件，在“其他相关资料”文件夹中的“**如何更新micro:bit主板的固件**”文件介绍了如何更新Micro:bit主板的固件，其内容来自：[https://microbit.org/guide/firmware/](https://microbit.org/guide/firmware/)
 
 ![Img](./media/img-20230417121112.png)
 
@@ -177,13 +177,13 @@ micro USB线供电
 
 ![Img](./media/img-20230417114305.png)
 
-## 3. MakeCode扩展库：
+## 3. MakeCode扩展库
 
 为了轻松学会添加MakeCode扩展库，我们以添加和删除<span style="color: rgb(255, 76, 65);">**Mecanum&nbsp;Robot&nbsp;Car V2.0**</span>扩展库为例，方法如下：
 
-#### （1）添加Mecanum Robot Car V2.0扩展库： 
+#### （1）添加Mecanum Robot Car V2.0扩展库
 
-您可以通过以下方法添加Mecanum Robot Car V2.0扩展库文件。 
+您可以通过以下方法添加Mecanum Robot Car V2.0扩展库文件。
 
 打开MakeCode，先点击右上角的齿轮图标![Img](./media/img-20230324110032.png)（设置），再点击“扩展”。
 
@@ -193,7 +193,7 @@ micro USB线供电
 
 ![Img](./media/img-20230417131804.png)
 
-在搜索框中输入链接：[https://github.com/keyestudio2019/mecanum_robot_v2.git](https://github.com/keyestudio2019/mecanum_robot_v2.git) ，然后单击搜索。 
+在搜索框中输入链接：[https://github.com/keyestudio2019/mecanum_robot_v2.git](https://github.com/keyestudio2019/mecanum_robot_v2.git) ，然后单击搜索。
 
 单击搜索结果MecanumRobotV2以下载并安装。 该过程可能需要几秒钟。
 
@@ -205,9 +205,9 @@ micro USB线供电
 
 <span style="color: rgb(255, 76, 65);">注意：添加到项目中的扩展库仅对该项目有效，而不会出现在其他项目中。 因此，当你创建新项目代码时，需要再次添加MecanumRobotV2扩展库。</span>
 
-#### （2）更新或删除MecanumRobotV2扩展库：
+#### （2）更新或删除MecanumRobotV2扩展库
 
-如果您需要更新或删除MecanumRobotV2扩展库文件，请按照以下说明进行操作。 
+如果您需要更新或删除MecanumRobotV2扩展库文件，请按照以下说明进行操作。
 
 点击 "Js JavaScript" 按钮切换到文本代码。
 
@@ -221,7 +221,7 @@ micro USB线供电
 
 ![Img](./media/img-20230426115408.png)
 
-## 4. 导入代码：  
+## 4. 导入代码  
 
 我们为每个项目提供十六进制代码文件（项目文件）。十六进制代码文件包含项目的所有内容，可以直接导入，你也可以手动拖动代码块来完成每个项目的代码程序。如果选择通过手动拖动代码块来完成项目代码，则可能需要添加必要的扩展库。
 
@@ -256,5 +256,3 @@ micro USB线供电
 ![Img](./media/img-20230417131528.png)
 
 <span style="color: rgb(255, 76, 65);">注意：如果你的电脑系统是Windows7/8而不是Windows 10，则在Google Chrome中是无法进行设备配对，从而读取不了一些传感器/模块的数字信号或模拟信号，可是又需要读取相应的传感器/模块的数字信号或模拟信号，那怎么办呢？这里就可以使用CoolTerm软件来读取串口数据的，下面是CoolTerm安装方法。</span>
-
-
