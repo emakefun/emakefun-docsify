@@ -1,6 +1,6 @@
-# Joystick:Bit
+# joystick:bit
 
-Joystick:Bit是一款针对类似micro:bit金手指插卡式开发板而开发的可编程手柄，支持micro:Bit V1、 V2、iot:bit、掌控板。
+joystick:bit是一款针对类似micro:bit的金手指插卡式开发板而开发的可编程手柄，支持micro:bit V1、 V2、iot:bit、掌控板、开源大师兄。
 
 ![image](picture/joystickbit.jpg)
 
@@ -20,7 +20,7 @@ Joystick:Bit是一款针对类似micro:bit金手指插卡式开发板而开发�
 
 ## 图像化编程块说明
 
- **Microbit MakeCode扩展链接为**: **<https://github.com/emakefun/pxt-joystickbit>
+ **Microbit MakeCode扩展链接为**: **<https://github.com/emakefun/pxt-joystickbit>**
 
 - 《游戏手柄摇杆获取 左/右侧 x/y轴 的值》:该模块用于获取手柄左或者右摇杆x轴或者y轴方向的坐标值，其获取的值为数值类型，其值可以通过‘显示数字’模块显示在Micro:Bit板上
 
@@ -39,12 +39,15 @@ Joystick:Bit是一款针对类似micro:bit金手指插卡式开发板而开发�
 ### 独立按键编程图形块
 
 - 按键 L/R/左摇杆按键/右摇杆按键 是否是 按下/释放 状态
+
 - 下面模块是对按键状态进行一个判断：当你按了按键R，则显示字符串"right button is pressed！"
 
    ![image](picture/3.jpg)
 
 - 同理，下面两个模块也是对按键的单击双击或者长按为真则显示显示相应信息
 
+   注意如果使用单机、双击、长按的时候，无线循环里面不能有延时，否则有可能主板捕获不到这个事件
+   
    ![image](picture/4.jpg)
 
 ### 震动电机编程图形块
@@ -67,9 +70,19 @@ Joystick:Bit是一款针对类似micro:bit金手指插卡式开发板而开发�
 
   ![image](picture/43.jpg)
 
+microbit makecode测试程序https://makecode.microbit.org/_aFpi2fPow8Tk
+
+如果要传看查看结果请直接点击microbit串口监听窗口查看
+
+![joystickbit_test](./picture/joystickbit_test.png)
+
+[点击下载microbit MicroPython扩展库以及示例程序](zh-cn/microbit/joystickbit/joystickbit_microbit_micropython_demo.zip ':ignore')
+
+
+
 ## 掌控板/物联板IOT:BIT（ESP32主控）MicroPython扩展库
 
-[点击下载掌控板/物联板IOT:BIT（ESP32） MicroPython扩展库以及示例程序](zh-cn/microbit/joystickbit/esp32_joystick_controller.zip ':ignore')
+[点击下载掌控板/物联板IOT:BIT（ESP32） MicroPython扩展库以及示例程序](zh-cn/microbit/joystickbit/iobit_joystick_test.zip ':ignore')
 
 ### MicroPython API详细说明
 
@@ -130,6 +143,12 @@ read_button_status(self, button)
 
 参数:
 button: 按钮类型，取值范围为BUTTON_LEFT_REG、BUTTON_RIGHT_REG、JOYSTICK_BUTTON_RIGHT、JOYSTICK_BUTTON_LEFT，分别表示左侧按键、右侧按键、左摇杆按键、右摇杆按键。
-返回值：返回Button_Status类成员变量，表示按钮的按下状态，取值范围为JOYSTICK_PRESS_DOWN、JOYSTICK_PRESS_UP、JOYSTICK_SINGLE_CLICK、JOYSTICK_DOUBLE_CLICK、JOYSTICK_LONG_PRESS。分别表示按下、释放、单击、双击、长按。
+返回值：返回Button_Status类成员变量，表示按钮的按下状态，取值范围为
+    JOYSTICK_PRESS_DOWN = 0  //按下
+    JOYSTICK_PRESS_UP = 1    //释放
+    JOYSTICK_SINGLE_CLICK = 3//单击
+    JOYSTICK_DOUBLE_CLICK = 4//双击
+    JOYSTICK_LONG_PRESS_HOLD = 6//长按
+    JOYSTICK_NONE_PRESS = 8  //无
 
 ```
