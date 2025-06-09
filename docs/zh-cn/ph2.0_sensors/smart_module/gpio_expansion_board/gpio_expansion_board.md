@@ -6,7 +6,7 @@
 
 ## 概述
 
-该模块是`emakefun`为了解决创客在使用中，主板的 ADC/IO/I2C/PWM 不够用的场景而开发的一块扩展板，可以扩展出4路I2C接口，8路GPIO口；8路GPIO口可以通过软件分别配置成ADC、输入、输出或者PWM输出模式(1 ~ 10kHz)，其中PWM模式可以驱动**舵机**。配置接口为I2C接口，地址为0x24。
+该模块是易创空间为了解决创客在使用中，主板的ADC/IO/I2C/PWM 不够用的场景而开发的一块扩展板，可以扩展出4路I2C接口，8路GPIO口；8路GPIO口可以通过软件分别配置成ADC、输入、输出或者PWM输出模式(1 ~ 10kHz)，其中PWM模式可以驱动**舵机**。配置接口为I2C接口，地址为0x24，背面有电阻焊接位可以修改I2C从机地址。
 
 ### 扩展引脚
 
@@ -46,26 +46,33 @@
 | SDA      | I2C数据引脚  |
 | SDL      | I2C时钟引脚  |
 
-## Arduino 应用场景
+### Arduino 库和示例程序
 
-### Arduino 示例程序
+[下载Arduino库](https://github.com/emakefun-arduino-library/emakefun_gpio_expansion_board/archive/refs/tags/release.zip)，包含Arduino库文件和[示例程序](https://github.com/emakefun-arduino-library/emakefun_gpio_expansion_board#%E7%A4%BA%E4%BE%8B%E7%A8%8B%E5%BA%8F)
 
-[下载Arduino库](https://github.com/emakefun-arduino-library/emakefun_gpio_expansion_board/archive/refs/tags/release.zip)，包含Arduino库文件和示例代码
+### MicroBit库和示例程序
 
-### Arduino 库使用文档
+[Micropython库和示例程序](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/io_expansion_board_i2c_microbit_micropython.zip ':ignore')
 
-[说明文档](https://github.com/emakefun-arduino-library/emakefun_gpio_expansion_board#gpioexpansionboard%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3)
+[Microbit MakeCode库链接](https://github.com/emakefun-makecode-extensions/emakefun_io_extension_board)
 
-### Arduino 库示例程序
+```
+https://github.com/emakefun-makecode-extensions/emakefun_io_extension_board
+```
 
-[示例程序](https://github.com/emakefun-arduino-library/emakefun_gpio_expansion_board#%E7%A4%BA%E4%BE%8B%E7%A8%8B%E5%BA%8F)
+### ESP32 MicroPython示例程序
 
-### MicroPython示例程序
+[库和示例程序](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/io_expansion_board_i2c_esp32_micropython ':ignore')
 
-[示例程序](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/io_expansion_board_i2c.zip ':ignore')
+### Mixly图形化库
 
 ![Mixly示例程序](picture/gpio_expansion_board_mixly.png)
 
 ![Mixly示例程序](picture/gpio_expansion_board_mixly.png)
 
-[下载mixly示例程序](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/gpio_expansion_board_mixly.zip ':ignore')
+[下载mixly库和示例程序](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/gpio_expansion_board_mixly.zip ':ignore')
+
+### Mind+图形化库
+
+[下载Mind+库和示例程序](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/emakefun-ext-i2c-expansion-thirdex-V2.0.0.mpext ':ignore')
+
