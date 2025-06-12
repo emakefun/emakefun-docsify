@@ -2,7 +2,7 @@
 
 ## 一、Mixly2.0软件下载
 
-​		Mixly是北京师范大学教育学部创客教育实验室负责人傅骞老师及其团队开发的，是一款面向Arduino创意电子的图形化编程工具，完全免费。它完美地支持了Arduino、MicroPython等语言的编程。提供了图形化界面和代码界面对比显示的支持。Mixly还支持自定义第三方扩展库，可以拓展出丰富的功能。
+​        Mixly是北京师范大学教育学部创客教育实验室负责人傅骞老师及其团队开发的，是一款面向Arduino创意电子的图形化编程工具，完全免费。它完美地支持了Arduino、MicroPython等语言的编程。提供了图形化界面和代码界面对比显示的支持。Mixly还支持自定义第三方扩展库，可以拓展出丰富的功能。
 
 [点击跳转到Mixly官网下载](https://mixly.cn/bnu-maker/mixl2.0rc)
 
@@ -60,3 +60,9 @@ Mixly2.0只介绍云端导入，离线导入请自行研究。
 ![mixlySensor](./picture/mixlySensor.png)
 
 该库的分类和我们传感器的分类一一匹配。可以按照文档目录索引找到相应的传感器。
+
+[点击下载Arduino米思齐传感器离线库](./emakefun_sensor.zip)
+
+[点击下载ESP32米思齐传感器离线库](./emakefun_sensors_esp32.zip)
+
+
