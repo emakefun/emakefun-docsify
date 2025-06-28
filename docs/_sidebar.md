@@ -139,7 +139,7 @@
   - Nano
     - [nano-v3.0](zh-cn/arduino_products/nano/nano/nano.md)
     - [ble-nano](zh-cn/arduino_products/nano/ble-nano/README_zh.md)
-    - [rf-nano](zh-cn/arduino_products/nano/RF-Nano_pic_zh/RF-Nano.md)
+    - [rf-nano](zh-cn/arduino_products/nano/rf-nano/README_zh.md)
     - [nano开发者套件]()
   - Uno系列
     - [arduino_uno_r3](zh-cn/arduino_products/uno/arduino_uno_r3/arduino_uno_r3.md)

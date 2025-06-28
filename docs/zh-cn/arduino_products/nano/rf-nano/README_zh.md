@@ -6,7 +6,7 @@
 
 ## 简介
 
-​  rf-nano是emakefun公司基于官方标准Arduino Nano V3.0主板集成nrf24L01+无线芯片而开发一款2.4G无线开发板 。它的尺寸，引脚完全兼容标准nanoV3.0开发板，直接兼容[RF24 开源库](https://github.com/maniacbug/RF24)，可进行功耗，传输速率，频道等设置，支持Mixly、Mblock5、Magicblock图像化编程;优化板载天线设传输距离达30m，板载IPEX贴片天线座，使用外置天线传输距离可达100m。
+  rf-nano是emakefun公司基于官方标准Arduino Nano V3.0主板集成nrf24L01+无线芯片而开发一款2.4G无线开发板 。它的尺寸，引脚完全兼容标准nanoV3.0开发板，直接兼容[RF24 开源库](https://github.com/maniacbug/RF24)，可进行功耗，传输速率，频道等设置，支持Mixly、Mblock5、Magicblock图像化编程;优化板载天线设传输距离达30m，板载IPEX贴片天线座，使用外置天线传输距离可达100m。
 
 ![rf-nano_nrf24L01+](image/rf-nano_nrf24L01+.png)
 
@@ -27,11 +27,11 @@
 
 ## 版本升级点
 
-NanoV3.0，rf-nanoV1.0，RF-NANOV3.0三个产品参数对比
+NanoV3.0，rf-nanoV1.0 2.0，RF-NANOV3.0三个产品参数对比
 
-|  功能  | NANO   3.0 | RF-NANO (老版本V1.0) |RF-NANO (新版本V3.0)  |
+|  功能  | NANO   3.0 | RF-NANO (老版本V1.0 V2.0) |RF-NANO (新版本V3.0)  |
 |  :--:  | :--:  |:--:  |:--:  |
-| 实拍图 | <img src="image/nano3.0.png"  style="zoom: 50%;" /> | <img src="image/rf-nano_v1.0.png"  style="zoom: 56%;" /> | <img src="image/rf-nano.png" style="zoom:56%;"/> |
+| 实拍图 | <img src="image/nano3.0.png"  style="zoom: 50%;" /> | <img src="image/rf-nano_v1.0.png"  style="zoom: 56%;" /><img src="image/rf-nano_v2.0.png"  style="zoom: 59%;" /> | <img src="image/rf-nano.png" style="zoom:56%;"/> |
 | 主控芯片 | ATmega328P-AU | ATmega328P-MU | ATmega328PB-AU |
 | USB接口 | Mini USB | Micro USB |Type-C  |
 | 尺寸 | 18mm x 45mm | 19mm x 49mm |18mm x 48mm  |
@@ -40,7 +40,7 @@ NanoV3.0，rf-nanoV1.0，RF-NANOV3.0三个产品参数对比
 
 **注**：rf-nano3.0相对于rf-nano除了功能点进行了升级外，PCB设计版图也进行了全新优化，精心布局，除此以外，电源器件和外围器件也全部优化，采样知名元器件原装芯片，大大提升了整体产品的射频性能和产品稳定性。
 
-rf-nanoV1.0早已停产，但市面上依然有大量销售的V1.0外形的主板均为克隆版本，做工粗糙，器件很多为翻新物料，质量不可靠，请注意分辨。
+**rf-nanoV1.0早已停产，但市面上依然有大量销售的V1.0外形的主板均为抄板山寨品，做工粗糙，器件多为翻新物料，不稳定，请注意分辨**。
 
 ## 板载天线和IPEX外置天线切换
 
@@ -219,7 +219,7 @@ void setup() {
 }
 ```
 
-[点击下载自检程序](zh-cn/arduino_products/nano/RF-Nano_pic_zh/example/HardTest.zip ':ignore')
+[点击下载自检程序](zh-cn/arduino_products/nano/rf-nano/example/HardTest.zip ':ignore')
 
 ## 点对点收发测试
 
@@ -327,7 +327,7 @@ void loop() {
 }
 ```
 
-[点击下载点对点收发程序](zh-cn/arduino_products/nano/RF-Nano_pic_zh/example/Peer2peer.zip ':ignore')
+[点击下载点对点收发程序](zh-cn/arduino_products/nano/rf-nano/example/Peer2peer.zip ':ignore')
 
 **点对点收发测试结果如下：**
 
@@ -348,14 +348,6 @@ void loop() {
 方法二 地址相同，频道不同
 
 ### 图像化编程软件支持
-
-#### Mixly
-
-#### MagicBlock
-
-#### Mblock5
-
-#### Mind+
 
 开发中......
 
