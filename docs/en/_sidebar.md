@@ -127,8 +127,8 @@
 - Arduino 
   - Nano
     - [nano-v3.0](/general/algorithm/data-structures/stack/README.zh-CN.md)
-    - [ble-nano](/general/algorithm/data-structures/queue/README.zh-CN.md)
-    - [rf-nano](/general/algorithm/data-structures/queue/README.zh-CN.md)
+    - [ble-nano](/general/algorithm/data-structures/queue/README.zh-CN.md)(/zh-cn/arduino_products/nano/ble-nano/README.md)
+    - [rf-nano](/zh-cn/arduino_products/nano/rf-nano/README.md)
     - [nano开发者套件] ()
   - Uno
     - [arduino_uno_r3](/Arduino/UnoR3/README.zh-CN.md)
