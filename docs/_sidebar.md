@@ -13,8 +13,8 @@
   - [手机编程软件介绍](/zh-cn/software/Mobile_programming/Mobile_programming.md)
 
 - 驱动安装
-  - [Arduino官方驱动安装](/zh-cn/driver/Arduino_official_driver/Arduino_official_driver.md)
-  - [CH340驱动安装方法](/zh-cn/driver/ch340_driver/ch340_driver.md)
+  - [arduino官方驱动安装](/zh-cn/driver/arduino_official_driver/arduino_official_driver.md)
+  - [ch340驱动安装方法](/zh-cn/driver/ch340_driver/ch340_driver.md)
   - [microbit daplink驱动安装](/zh-cn/driver/microbit_daplink_driver/microbit_daplink_driver.md)
   - [esp32 usb驱动安装](/zh-cn/driver/esp32_driver/esp32_driver.md)
 

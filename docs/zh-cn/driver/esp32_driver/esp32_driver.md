@@ -1,10 +1,14 @@
-# ESP32 USB驱动安装
+# ESP32S3 USB驱动安装
 
-安装USB驱动是使用外部设备时的关键步骤。从网站中下载驱动文件后，根据用户计算机系统选择安装步骤：
+我们在使用ESP32S3自带的usb时候，就不得不考虑驱动问题，尤其是老旧电脑win7系统，非常麻烦，不同版本，不同系统出现的问题也不一样。但是耐心操作，绝大部分情况下能安装成功。
 
 ## Windows10/11
 
-系统自带驱动不需要额外安装。
+右击windows的开始图标<img src="./picture/windows.svg" alt="windows10" style="zoom: 25%;" />选择**设备管理器**
+
+![com_port](./picture/com_port.png)
+
+如果看到如上已经有端口直接显示了，拔掉usb数据线，端口消失，那就代表系统已自带驱动不需要额外再安装。
 
 ## macOS
 
@@ -12,30 +16,63 @@
 
 ## Windows 7
 
-1.识别设备 :  连接USB转串口适配器到计算机的USB端口，系统会尝试自动检测并安装驱动。如果未能成功，可以通过设备管理器，右键选择”扫描检测硬件改动“。查看未识别或带有黄色惊叹号的设备。
+### 安装方法一
 
-![](picture\1.png)
+单击windows 7的开始图标<img src="./picture/ic_windows7.svg" alt="windows10" style="zoom: 25%;" />，右击**计算机**，选择**设备管理器**
 
-2.下载驱动 :  由于Windows  7的内置驱动可能不支持所有USB转串口设备，因此需要[下载驱动程序](https://dl.espressif.com/dl/idf-driver/idf-driver-esp32-usb-jtag-2021-07-15.zip)。文件名可能是“USB驱动适合win7系统”这样的表述，这表明它是专为Windows 7优化的驱动。
+1、 先按住ESP32S3 boot按键，然后按一下复位按键，让ESP32S3进入，连接电脑ESP32S3自带USB接口，系统会尝试自动检测并安装驱动。如果未能成功，可以通过设备管理器，右键选择”扫描检测硬件改动“。查看如下感叹号设备。
 
-3.安装驱动 : 下载完成后，找到下载的驱动文件，一般为.exe或.zip格式。如果是.exe可执行文件，双击运行并按照提示操作；如果是.zip压缩包，需要先解压，然后找到setup.exe或其他安装文件进行安装。
+![win7](picture\win7_installdriver_1.png)
 
-4.手动安装 : 如果自动安装失败，可以尝试在设备管理器中手动更新驱动，选择“浏览我的电脑以查找驱动程序软件”， 然后指向解压后的驱动文件夹路径。
+2、需要[下载ESP32S3官方驱动程序](zh-cn/driver/esp32_driver/idf-driver-esp32-usb-jtag-2021-07-15.zip ':ignore')，然后解压。按如下步骤浏览我的电脑选择，下载驱动程序文件夹
 
-<img src="picture\2.png" style="zoom: 50%;" /><img src="picture\3.png" style="zoom: 50%;" />
+<img src="./picture/win7_installdriver_2.png" style="zoom: 50%;" />           <img src="./picture\win7_installdriver_3.png" style="zoom: 50%;" />
 
-点击“从磁盘安装“”浏览”
+3、点击下一步，勾选信任，点击安装
 
-![](picture\4.png)
+![](./picture/win7_installdriver_4.png)
 
-找到解压得到的.inf文件—
+4、验证安装 : 如果出现如下截图，就代表USB JTAG 和USB CDC已经安装成功了。
 
-![](picture\5.png)
+![win7_installdriver_ok](./picture/win7_installdriver_ok.png)
 
-点击”确定“”下一步“后等待安装完成。
+### 安装方法二
 
-5.验证安装 : 安装完成后，重新检查设备管理器，确保USB转串口设备已正确识别并显示为COM端口。此时，应该可以使用串口通信软件（如HyperTerminal或RealTerm)与连接的设备进行通讯了。
+不管你是win7还是win10都可以尝试。
 
-如果安装不成功就需要用 [Zadig](https://zadig.akeo.ie/) 先给usb安装一个驱动：
+如果没有出现上面安装成功的截图，提示失败，或者任意一个有黄色感叹号，那就代表安装还是不成功，则说明win7缺乏系统文件，或者驱动被误识别，就需要用终极大招-------大名鼎鼎的[下载zadig](zh-cn/driver/esp32_driver/zadig-2.9.exe ':ignore') 来修复驱动
 
- [Zadig安装usb驱动](https://blog.csdn.net/qq_62078117/article/details/135510767) 
+到这里 我和大家理一下，ESP32S3 USB其实是有三种用法和驱动
+
+- 烧录模式下，usb jtag dbug调试功能，需要usb jtag debug驱动；
+- 烧录模式下，需要cdc做串口下载，这个时候需要usb cdc驱动；
+- 用户模式下，代码开启了usb（Tinyusb）功能，比如usb转串口，usb键盘鼠标等hid，usb需要安装和程序对应的驱动程序。
+
+1、首先需要安装usb jtag debug驱动，先按住ESP32S3 的boot按键，然后按一下 reset按键，让esp32s3进入烧录模式。
+
+**Options** -> **List ALL Dvices**
+
+![zadig_1](./picture/zadig_1.png)
+
+选择 **USB JTAG/serial debug_unit (Interface 2)**选择**Install Driver**或者**Replace Driver**如下
+
+![zadig_1](./picture/zadig_2.png)
+
+成功后，我们在设备管理器就可以看到如下，就代表USB JTAG 调试驱动安装成功了![zadig_3](./picture/zadig_3.png)
+
+2、烧录模式下安装串口CDC驱动
+
+![zadig_4](./picture/zadig_4.png)
+
+选择 **USB JTAG/serial debug_unit (Interface 0)**选择**Install Driver**或者**Replace Driver**如下
+
+3、ESP32S3我们在正常用户模式下，有时候也从来没有安装过通用CDC驱动，那么有可能显示如下情况
+
+![Board_CDC](./picture/Board_CDC.png)
+
+这个时候 我们也可以直接用zadig安装一个CDC驱动
+
+![zadig_5](./picture/zadig_5.png)
+
+这样ESP32S3在工作代码打开usb转串口（CDC）功能驱动也可以使用了。
+
