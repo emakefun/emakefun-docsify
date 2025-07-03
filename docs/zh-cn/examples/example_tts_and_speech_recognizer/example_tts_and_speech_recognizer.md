@@ -19,7 +19,7 @@
 ### 代码
 
 ```c++
-#include<arduino.h>
+#include <Arduino.h>
 
 #include "speech_recognizer.h"
 #include "tts.h"

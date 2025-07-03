@@ -37,7 +37,7 @@
 在手柄上安装好Arduino Nano，请注意检查安装方向是否正确，将示例程序`examples/gamepad/gamepad.ino`下载到Arduino Nano，内容如下:
 
 ```c++
-#include<arduino.h>
+#include <Arduino.h>
 
 #include "gamepad.h"
 
@@ -125,7 +125,7 @@ joystick coordinate: 108, 127
 将示例程序`examples/gamepad_publish_rf24/gamepad_publish_rf24.ino`下载到手柄端, 内容如下:
 
 ```c++
-#include<arduino.h>
+#include <Arduino.h>
 
 #include "gamepad.h"
 #include "gamepad_publisher_rf24.h"
@@ -215,7 +215,7 @@ void loop() {
 代码内容如下:
 
 ```c++
-#include<arduino.h>
+#include <Arduino.h>
 
 #include "gamepad.h"
 #include "gamepad_subscriber_rf24.h"
@@ -309,7 +309,7 @@ void loop() {
 将示例程序`examples/gamepad_publish_ble/gamepad_publish_ble.ino`下载手柄端, 内容如下:
 
 ```c++
-#include<arduino.h>
+#include <Arduino.h>
 
 #include "gamepad.h"
 #include "gamepad_publisher_ble.h"
@@ -339,7 +339,7 @@ void loop() { g_gamepad.Tick(); }
 将示例程序`examples/gamepad_subscibe_ble/gamepad_subscibe_ble.ino`下载到接收端, 内容如下:
 
 ```c++
-#include<arduino.h>
+#include <Arduino.h>
 
 #include "gamepad.h"
 #include "gamepad_subscriber_ble.h"

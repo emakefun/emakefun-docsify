@@ -401,7 +401,7 @@ class EncoderMotor {
 ### PWM直驱电机
 
 ```c++
-#include<arduino.h>
+#include <Arduino.h>
 #include <string.h>
 
 #include "encoder_motor.h"
@@ -451,7 +451,7 @@ void loop() {
 ### 相对位置移动闭环控制
 
 ```c++
-#include<arduino.h>
+#include <Arduino.h>
 #include <string.h>
 
 #include "encoder_motor.h"
@@ -515,7 +515,7 @@ void loop() {
 ### 绝对位置移动闭环控制
 
 ```c++
-#include<arduino.h>
+#include <Arduino.h>
 #include <string.h>
 
 #include "encoder_motor.h"
@@ -575,7 +575,7 @@ void loop() {
 ### 速度闭环控制
 
 ```c++
-#include<arduino.h>
+#include <Arduino.h>
 #include <string.h>
 
 #include "encoder_motor.h"
@@ -638,7 +638,7 @@ void loop() {
 ### 综合示例程序: PS2控制编码电机
 
 ```c++
-#include<arduino.h>
+#include <Arduino.h>
 
 #include "PS2X_lib.h"
 #include "encoder_motor.h"
