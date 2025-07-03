@@ -36,7 +36,7 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn\ph2.0_sensors\sensors\shock_sensor\shock_sensor.rar ':ignore')
+<a href="zh-cn\ph2.0_sensors\sensors\shock_sensor\shock_sensor.rar" download>下载示例程序</a>
 
 ```c++
 #define ShockAnalogPin A0  // 定义震动传感器模拟引脚

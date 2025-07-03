@@ -36,7 +36,7 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn\ph2.0_sensors\sensors\grayscale_sensor\grayscale_sensor.zip ':ignore')
+<a href="zh-cn\ph2.0_sensors\sensors\grayscale_sensor\grayscale_sensor.zip" download>下载示例程序</a>
 
 ```c
 void setup(){

@@ -36,7 +36,7 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module.zip" download>下载示例程序</a>
 
 ```c
 int led_out = 4;//定义LED引脚
@@ -63,7 +63,7 @@ void loop()
 
 ## Mixly示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module.zip" download>下载示例程序</a>
 
 ## micro:bit示例程序
 

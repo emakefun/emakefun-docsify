@@ -37,7 +37,7 @@
 
 ## Arduino示例程序
 
- [下载示例程序](zh-cn\ph2.0_sensors\sensors\tilt_switch_sensor\tilt_switch_sensor.zip ':ignore')
+<a href="zh-cn\ph2.0_sensors\sensors\tilt_switch_sensor\tilt_switch_sensor.zip" download>下载示例程序</a>
 
 ```c++
 #define DigitalPin  7//定义倾斜传感器数字引脚

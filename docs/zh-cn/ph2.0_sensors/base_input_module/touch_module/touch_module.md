@@ -45,7 +45,7 @@
 
 #### 6.1.2 Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module.zip" download>下载示例程序</a>
 
 ```c
 int touch_pin = A3; //定义触摸按键引脚
@@ -74,7 +74,7 @@ void loop()
 
 ![1719976611125](picture/1719976611125.png)
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_Mixly_demo.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_Mixly_demo.zip" download>下载示例程序</a>
 
 ### 6.2 micro:bit示例程序
 
@@ -90,7 +90,7 @@ LED模块通过3Pin线接在主板P2（2号）口；
 
 ![all](picture/all.png)
 
-[示例程序下载](zh-cn/ph2.0_sensors/base_input_module/touch_module/MicroPython示例程序.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/touch_module/MicroPython示例程序.zip" download>下载示例程序</a>
 
 ```python
 from machine import Pin

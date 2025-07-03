@@ -38,7 +38,7 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_module.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_module.zip" download>下载示例程序</a>
 
 ```c
 #define JOYSTICK_X    A5  //定义X输入引脚
@@ -69,7 +69,7 @@ void loop()
 
 ## Mixly示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_Mixly_demo.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_Mixly_demo.zip" download>下载示例程序</a>
 
 ## micro:bit示例程序
 

@@ -70,7 +70,7 @@
 
 通过连接线连接矩阵键盘的I2C接口，将程序下载到Arduino主板，触摸键盘Arduino串口打印相对应的键盘值。
 
-[点击下载mixly案例](zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/mixly_example.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/mixly_example.zip" download>点击下载mixly案例</a>
 
 ### MicroPython
 

@@ -17,7 +17,7 @@ SSD1306是一款用于有机/聚合物发光二极管点阵图形显示系统的
 
 - [点击下载SSD1306数据手册](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/SSD1306.pdf ':ignore')
 
-- [点击下载字库芯片GT20L16S1Y数据手册](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED/GT20L16S1Ydatasheet.pdf ':ignore')
+- [点击下载字库芯片GT20L16S1Y数据手册](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Ydatasheet.pdf ':ignore')
 
 ## 模块特点
 
@@ -73,7 +73,7 @@ uint8_t ShowFont(uint8_t x, uint8_t y, uint8_t *str);
 
 ### Arduino示例程序
 
-[下载最新库程序](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED.zip" download>下载最新库程序</a>
 
 ### MagicBlock图形化编程块
 
@@ -81,7 +81,7 @@ uint8_t ShowFont(uint8_t x, uint8_t y, uint8_t *str);
 
 ![oled_mixly](picture/oled.png)
 
-[点击下载Mixly示例程序](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/oled_mixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/oled_mixly.zip" download>点击下载Mixly示例程序</a>
 
 ### micro:bit MakeCode块
 

@@ -35,17 +35,17 @@
 
 ## Arduino IDE示例程序
 
-[点击下载Arduino IDE示例程序](zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/dot_matrix_module.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/dot_matrix_module.zip" download>点击下载Arduino IDE示例程序</a>
 
 ## MicroPython示例程序
 
-[点击下载micro:bit MicroPython示例程序](zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/microbit_max7219_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/microbit_max7219_micropython.zip" download>点击下载micro:bit MicroPython示例程序</a>
 
-[点击下载esp32 MicroPython示例程序](zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/esp32_max7219_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/esp32_max7219_micropython.zip" download>点击下载esp32 MicroPython示例程序</a>
 
 ## Mixly示例程序
 
-[点击下载Mixly示例程序](zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/max7219_mixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/max7219_mixly.zip" download>点击下载Mixly示例程序</a>
 
 ## micro:bit MakeCode示例程序
 

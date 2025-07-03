@@ -12,21 +12,21 @@ MAX7219驱动的8x32点阵屏由4个8x8 LED模块级联组成，通过SPI接口�
 
 ## Arduino IDE示例程序
 
-[点击下载Arduino IDE示例程序](zh-cn/ph2.0_sensors/displayers/8x32_dot_matrix/8x32_dot_matrix.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/8x32_dot_matrix/8x32_dot_matrix.zip" download>点击下载Arduino IDE示例程序</a>
 
 ## MicroPython 示例程序
 
 ### ESP32 MicroPython示例程序
 
-[点击下载ESP32 MicroPython示例程序](zh-cn/ph2.0_sensors/displayers/8x32_dot_matrix/8x32_dot_matrix_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/8x32_dot_matrix/8x32_dot_matrix_esp32_micropython.zip" download>点击下载ESP32 MicroPython示例程序</a>
 
 ### micro:bit MicroPython示例程序
 
-[点击下载micro:bit MicroPython示例程序](zh-cn/ph2.0_sensors/displayers/8x32_dot_matrix/microbit_max7219_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/8x32_dot_matrix/microbit_max7219_micropython.zip" download>点击下载micro:bit MicroPython示例程序</a>
 
 ## Mixly 示例程序
 
-[点击下载Mixly示例程序](zh-cn/ph2.0_sensors/displayers/8x32_dot_matrix/max7219_mixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/8x32_dot_matrix/max7219_mixly.zip" download>点击下载Mixly示例程序</a>
 
 ## micro:bit 示例程序
 

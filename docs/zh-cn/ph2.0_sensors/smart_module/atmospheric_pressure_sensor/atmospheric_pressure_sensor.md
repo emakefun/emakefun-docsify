@@ -76,11 +76,11 @@ BMP280是专为移动应用设计的绝对气压传感器。传感器模块安�
 
 ## Arduino示例程序
 
-[点击下载Arduino示例程序](zh-cn/ph2.0_sensors/smart_module/atmospheric_pressure_sensor/bmp280.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/atmospheric_pressure_sensor/bmp280.zip" download>点击下载Arduino示例程序</a>
 
 ## ESP32 MicroPython示例程序
 
-[点击下载ESP32 MicroPython示例程序](zh-cn/ph2.0_sensors/smart_module/atmospheric_pressure_sensor/bmp280_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/atmospheric_pressure_sensor/bmp280_esp32_micropython.zip" download>点击下载ESP32 MicroPython示例程序</a>
 
 ## Micro:Bit示例程序
 

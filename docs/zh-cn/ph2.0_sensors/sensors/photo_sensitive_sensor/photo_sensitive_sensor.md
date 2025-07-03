@@ -32,7 +32,7 @@
 
 ## Arduino示例程序
 
- [下载示例程序](zh-cn\ph2.0_sensors\sensors\photo_sensitive_sensor\photo_sensitive_sensor.zip ':ignore')
+<a href="zh-cn\ph2.0_sensors\sensors\photo_sensitive_sensor\photo_sensitive_sensor.zip" download>下载示例程序</a>
 
 ```c++
 #define PhotosensitivePin  A3//定义光敏传感器模块引脚

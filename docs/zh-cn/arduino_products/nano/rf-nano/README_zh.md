@@ -56,9 +56,9 @@ NanoV3.0，rf-nanoV1.0 2.0，RF-NANOV3.0三个产品参数对比
 
 ## 原理图
 
-[点击下载原理图](zh-cn/arduino_products/nano/RF-Nano_pic_zh/schematic/rf-nano_sch_v3.0.pdf ':ignore')
+[点击下载原理图](zh-cn/arduino_products/nano/rf-nano/schematic/rf-nano_sch_v3.0.pdf  ':ignore')
 
-[点击下载nrf24L01+数据手册](zh-cn/arduino_products/nano/RF-Nano_pic_zh/datasheet/nrf24L01+_datasheet.pdf ':ignore')
+[点击下载nrf24L01+数据手册](zh-cn/arduino_products/nano/rf-nano/datasheet/nrf24L01+_datasheet.pdf ':ignore')
 
 ![RF-Nano-schematic](image/RF-Nano-schematic.png)
 
@@ -219,7 +219,7 @@ void setup() {
 }
 ```
 
-[点击下载自检程序](zh-cn/arduino_products/nano/rf-nano/example/HardTest.zip ':ignore')
+<a href="zh-cn/arduino_products/nano/rf-nano/example/HardTest.zip" download>点击下载自检程序</a>
 
 ## 点对点收发测试
 
@@ -327,7 +327,7 @@ void loop() {
 }
 ```
 
-[点击下载点对点收发程序](zh-cn/arduino_products/nano/rf-nano/example/Peer2peer.zip ':ignore')
+<a href="zh-cn/arduino_products/nano/rf-nano/example/Peer2peer.zip" download>点击下载点对点收发程序</a>
 
 **点对点收发测试结果如下：**
 

@@ -61,7 +61,7 @@
 
 也可以使用我们的示例固件进行测试。
 
-[点击此处下载示例固件](zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/Asr_Speech_Recognition_v1.0.0.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/Asr_Speech_Recognition_v1.0.0.zip" download>点击此处下载示例固件</a>
 
 下载后解压文件，打开烧录软件。
 
@@ -93,7 +93,7 @@
 
 [点击查看Arduino库函数说明](https://emakefun-arduino-library.github.io/em_asr_speech_recognition/html/zh-CN/classem_1_1_asr_speech_recognition.html)
 
-[点击下载Arduino库](zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/em_asr_speech_recognition-main.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/em_asr_speech_recognition-main.zip" download>点击下载Arduino库</a>
 
 将相应的库添加至Arduino IDE中。软件使用方法可参照[Arduino IDE使用说明](zh-cn/software/arduino_ide/arduino_ide.zh-CN.md)
 

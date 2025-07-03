@@ -38,7 +38,7 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor.rar)
+<a href="zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor.rar" download>下载示例程序</a>
 
 ```c
 #define FlamelDigitalPin  7//定义火焰传感器数字引脚

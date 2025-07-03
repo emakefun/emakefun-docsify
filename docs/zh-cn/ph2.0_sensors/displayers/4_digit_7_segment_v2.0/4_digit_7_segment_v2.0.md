@@ -63,11 +63,11 @@ TODO
 
 ### ESP32 MicroPython示例程序
 
-[点击下载ESP32 MicroPython示例程序](zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/vk16k33_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/vk16k33_esp32_micropython.zip" download>点击下载ESP32 MicroPython示例程序</a>
 
 ### micro:bit MicroPython示例程序
 
-[点击下载micro:bit MicroPython示例程序](zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/vk16k33_microbit_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/vk16k33_microbit_micropython.zip" download>点击下载micro:bit MicroPython示例程序</a>
 
 ## micro:bit MakeCode 示例程序
 

@@ -296,7 +296,7 @@ while (True):
 
 有提供一个C# demo，有兴趣可以研究，不提供技术支持
 
-[点击下载上述代码](zh-cn/raspberrypi/raspberrypi_motordriver_board/Demo.zip ':ignore')
+<a href="zh-cn/raspberrypi/raspberrypi_motordriver_board/Demo.zip" download>点击下载上述代码</a>
 
 ### 注意事项
 

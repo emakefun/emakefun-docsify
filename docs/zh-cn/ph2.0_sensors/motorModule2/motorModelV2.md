@@ -54,7 +54,7 @@ void loop()
 
 ![3pinMotorMixly](./picture/3pinMotorMixly.png)
 
-[点击下载Mixly案例](zh-cn/ph2.0_sensors/motorModule2/3pinMotorMixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/motorModule2/3pinMotorMixly.zip" download>点击下载Mixly案例</a>
 
 ## microbit示例程序
 

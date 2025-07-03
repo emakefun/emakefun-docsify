@@ -14,7 +14,7 @@ Atomizer_5V_module可通过单片机I/O口控制，也可通过板上自带的�
 
 ### 原理图
 
-[点击下载原理图](zh-cn/ph2.0_sensors/actuators/small_atomize/small_atomizer.pdf ':ignore')
+[点击下载原理图](zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer_sch.pdf ':ignore')
 
 ### 芯片规格书
 

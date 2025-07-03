@@ -53,7 +53,7 @@
 | IO15  | LRCK      |
 | IO22  | DIN      |
 
-[点击出下载示例代码以及zip库文件](zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/ESP32-A2DP.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/ESP32-A2DP.zip" download>点击出下载示例代码以及zip库文件</a>
 
 在本次实验中，我们在Arduino IDE中运行。
 

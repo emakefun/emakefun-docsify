@@ -33,7 +33,7 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn\ph2.0_sensors\sensors\sound_sensor\sound_sensor.zip ':ignore')
+<a href="zh-cn\ph2.0_sensors\sensors\sound_sensor\sound_sensor.zip" download>下载示例程序</a>
 
 ```c++
 #define AnalogPin 15//定义声音传感器模拟接口引脚

@@ -12,9 +12,6 @@
 
  [查看原理图](zh-cn\ph2.0_sensors\sensors\human_body_sensor\human_body_sensor_schematic.pdf ':ignore')
 
-
-
-
 ![原理图](picture/human_body_sensor_schematic.png)
 
 ## 模块参数
@@ -36,18 +33,18 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn\ph2.0_sensors\sensors\grayscale_sensor\grayscale_sensor.zip ':ignore') 
+<a href="zh-cn\ph2.0_sensors\sensors\grayscale_sensor\grayscale_sensor.zip" download>下载示例程序</a>
 
 ```c
 void setup()
 {
     Serial.begin(9600); 
-	pinMode(A3, INPUT); 
+ pinMode(A3, INPUT); 
 }
 
 void loop()
 {
-    Serial.println(digitalRead(A3));	// 打印人体热释电传感器数字值
+    Serial.println(digitalRead(A3)); // 打印人体热释电传感器数字值
     delay(200);
 }
 ```
@@ -76,11 +73,10 @@ from microbit import *
 
 while True:
     p = pin8.read_digital() # 读取传感器数字值
-    print(p)	# 打印传感器数字值
+    print(p) # 打印传感器数字值
     sleep(1000)
 ```
 
 ## MakeCode示例程序
 
 <a href="https://makecode.microbit.org/_Vhka6M8PFXyh">动手试一试</a>
-

@@ -543,4 +543,4 @@ bool ButtonReleased(const ButtonType button_type) const {
 
 ### Mixly示例程序
 
-[点击下载Mixly库](zh-cn/peripheral/arduino_gamepad/arduinoGamePadMlxly.zip ":ignore")
+<a href="zh-cn/peripheral/arduino_gamepad/arduinoGamePadMlxly.zip" download>点击下载Mixly库</a>

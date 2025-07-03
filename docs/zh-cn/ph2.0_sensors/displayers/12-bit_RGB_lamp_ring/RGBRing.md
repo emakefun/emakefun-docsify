@@ -54,7 +54,7 @@ void loop() {
 }
 ```
 
-[Arduino程序下载](zh-cn/ph2.0_sensors/displayers/12-bit_RGB_lamp_ring/WS2812B.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/12-bit_RGB_lamp_ring/WS2812B.zip" download>Arduino程序下载</a>
 
 ## micro:bit示例
 

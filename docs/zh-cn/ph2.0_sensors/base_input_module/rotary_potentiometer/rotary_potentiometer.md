@@ -40,7 +40,7 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer.zip" download>下载示例程序</a>
 
 ```c
 float Voltage = 0,data; //定义电压和模拟值变量
@@ -62,7 +62,7 @@ void loop() {
 
 ## Mixly示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer_Mixly_demo.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer_Mixly_demo.zip" download>下载示例程序</a>
 
 ## micro:bit示例程序
 

@@ -49,29 +49,29 @@
 
 ### Arduino库和示例代码
 
-[点击这里下载Arduino库和示例代码](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/emakefun_five_line_tracker_v3.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/emakefun_five_line_tracker_v3.zip" download>点击这里下载Arduino库和示例代码</a>
 
 ## MicroPython示例代码
 
 ### ESP32 MicroPython示例程序
 
-[点击此处下载ESP32MicroPython示例代码](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/five_line_tracker_v3_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/five_line_tracker_v3_esp32_micropython.zip" download>点击此处下载ESP32MicroPython示例代码</a>
 
 ### micro:bit MicroPython示例程序
 
-[点击此处下载micro:bitMicroPython示例程序](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/five_line_tracker_v3_microbit_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/five_line_tracker_v3_microbit_micropython.zip" download>点击此处下载micro:bitMicroPython示例程序</a>
 
 ## Mixly图形化块
 
 ![loading-ag-147](./picture/mixly_select.png)
 
-[点击下载米思齐五路循迹获取模拟值示例程序](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/mixly_get_analog.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/mixly_get_analog.zip" download>点击下载米思齐五路循迹获取模拟值示例程序</a>
 
-[点击下载米思齐五路循迹获取数字值示例程序](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/mixly_get_digital.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/mixly_get_digital.zip" download>点击下载米思齐五路循迹获取数字值示例程序</a>
 
 ## Mind+图形化
 
-[点击下载Mind+五路循迹用户库以及示例程序](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/mindplus_example.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/mindplus_example.zip" download>点击下载Mind+五路循迹用户库以及示例程序</a>
 
 ![mindplus_select](./picture/mindplus_select.png "mind+选择五路循迹V3.0")
 

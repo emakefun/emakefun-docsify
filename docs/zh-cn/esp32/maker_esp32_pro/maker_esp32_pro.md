@@ -56,25 +56,25 @@
 
 ## Mixly示例程序
 
-[点击下载编码电机库](zh-cn/esp32/maker_esp32_pro/maker-esp32-pro-mixly.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/maker-esp32-pro-mixly.zip" download>点击下载编码电机库</a>
 
-[点击下载电机舵机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_motor_servo_test.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_motor_servo_test.zip" download>点击下载电机舵机示例程序</a>
 
-[点击下载舵机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_servo_test.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_servo_test.zip" download>点击下载舵机示例程序</a>
 
-[点击下载OLED示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_oled_test.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_oled_test.zip" download>点击下载OLED示例程序</a>
 
 ## Mind+示例程序
 
-   [点击下载电机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/esp32MindplusMotor.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/esp32MindplusMotor.zip" download>点击下载电机示例程序</a>
 
-   [点击下载Maker-esp32Mind+库文件](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext" download>点击下载Maker-esp32Mind+库文件</a>
 
 ## Arduino示例程序
 
-[点击下载舵机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_arduino/servoTest.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/servoTest.zip" download>点击下载舵机示例程序</a>
 
-[点击下载OLED示例程序](zh-cn/esp32/maker_esp32_pro/esp32_arduino/oledTest.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/oledTest.zip" download>点击下载OLED示例程序</a>
 
 ### 驱动编码电机与直流电机
 
@@ -174,15 +174,15 @@
 
 [点击查看ESP32系列连接使用PS3蓝牙无线手柄](zh-cn/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
 
-[点击下载PS3控制电机舵机案例](zh-cn/esp32/maker_esp32_pro/esp32_arduino/esp32PS3ControlTest.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/esp32PS3ControlTest.zip" download>点击下载PS3控制电机舵机案例</a>
 
-[点击下载Mixly库PS3手柄](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_emakefun_sensors_mixly.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_emakefun_sensors_mixly.zip" download>点击下载Mixly库PS3手柄</a>
 
-[点击下载PS3手柄Mixly示例](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_ps3_rock_test.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_ps3_rock_test.zip" download>点击下载PS3手柄Mixly示例</a>
 
-[点击下载PS3手柄 Mind+库](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-ps3.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-ps3.zip" download>点击下载PS3手柄 Mind+库</a>
 
-[点击下载PS3手柄 Mind+示例](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/ps3_test.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/ps3_test.zip" download>点击下载PS3手柄 Mind+示例</a>
 
 ## FAQ
 

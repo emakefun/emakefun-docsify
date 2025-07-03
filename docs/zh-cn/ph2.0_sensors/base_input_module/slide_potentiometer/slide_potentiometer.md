@@ -36,7 +36,7 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/slide_potentiometer/slide_potentiometer.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/slide_potentiometer/slide_potentiometer.zip" download>下载示例程序</a>
 
 ``` c
 float Voltage = 0, data; //定义刚获取的模拟值 data 模数转化后的数值 i 实际的电阻大小 j
@@ -62,7 +62,7 @@ void loop() {
 
 ## Mixly示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/slide_potentiometer/slide_potentiometer_Mixly_demo.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/slide_potentiometer/slide_potentiometer_Mixly_demo.zip" download>下载示例程序</a>
 
 ## micro:bit示例程序
 

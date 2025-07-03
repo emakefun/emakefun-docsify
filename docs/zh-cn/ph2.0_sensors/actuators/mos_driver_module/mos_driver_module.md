@@ -53,4 +53,4 @@ void loop(){
 }
 ```
 
-[点击此处下载 Arduino 驱动电机示例程序](zh-cn/ph2.0_sensors/actuators/mos_driver_module/motor_driver.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/actuators/mos_driver_module/motor_driver.zip" download>点击此处下载 Arduino 驱动电机示例程序</a>

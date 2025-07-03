@@ -47,7 +47,7 @@ joystick:bit是一款针对类似micro:bit的金手指插卡式开发板而开�
 - 同理，下面两个模块也是对按键的单击双击或者长按为真则显示显示相应信息
 
    注意如果使用单机、双击、长按的时候，无线循环里面不能有延时，否则有可能主板捕获不到这个事件
-   
+
    ![image](picture/4.jpg)
 
 ### 震动电机编程图形块
@@ -70,19 +70,17 @@ joystick:bit是一款针对类似micro:bit的金手指插卡式开发板而开�
 
   ![image](picture/43.jpg)
 
-microbit makecode测试程序https://makecode.microbit.org/_aFpi2fPow8Tk
+microbit makecode测试程序<https://makecode.microbit.org/_aFpi2fPow8Tk>
 
 如果要传看查看结果请直接点击microbit串口监听窗口查看
 
 ![joystickbit_test](./picture/joystickbit_test.png)
 
-[点击下载microbit MicroPython扩展库以及示例程序](zh-cn/microbit/joystickbit/joystickbit_microbit_micropython_demo.zip ':ignore')
-
-
+<a href="zh-cn/microbit/joystickbit/joystickbit_microbit_micropython_demo.zip" download>点击下载microbit MicroPython扩展库以及示例程序</a>
 
 ## 掌控板/物联板IOT:BIT（ESP32主控）MicroPython扩展库
 
-[点击下载掌控板/物联板IOT:BIT（ESP32） MicroPython扩展库以及示例程序](zh-cn/microbit/joystickbit/iobit_joystick_test.zip ':ignore')
+<a href="zh-cn/microbit/joystickbit/iobit_joystick_test.zip" download>点击下载掌控板/物联板IOT:BIT（ESP32） MicroPython扩展库以及示例程序</a>
 
 ### MicroPython API详细说明
 

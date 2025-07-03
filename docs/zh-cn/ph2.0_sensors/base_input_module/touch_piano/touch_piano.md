@@ -50,7 +50,7 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano.zip" download>下载示例程序</a>
 
 ```c
 
@@ -87,11 +87,11 @@ void loop(){
 
 ## Mixly示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano_Mixly_demo.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano_Mixly_demo.zip" download>下载示例程序</a>
 
 ## MicroPython示例程序
 
-[点击下载MicroPython示例程序](zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano_py.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano_py.zip" download>点击下载MicroPython示例程序</a>
 
 ## Micro:bit示例程序
 

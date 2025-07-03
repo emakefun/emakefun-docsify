@@ -105,10 +105,10 @@ SOFT_RST被置“1”时对QMC5883L进行软复位，软复位可以发生于任
 
 ## Mixly示例程序
 
-[点击mixly示例程序下载](zh-cn/ph2.0_sensors/smart_module/compass/compass_Mixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/compass/compass_Mixly.zip" download>点击mixly示例程序下载</a>
 
 ## Esp32 MicroPython示例程序
 
-[点击esp32示例程序下载](zh-cn/ph2.0_sensors/smart_module/compass/ESP32--CompassModule-GY-271-QMC5883L-main.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/compass/ESP32--CompassModule-GY-271-QMC5883L-main.zip" download>点击esp32示例程序下载</a>
 
 由于micro:bit 自带指南针模块，所以此处不再提供示例程序。

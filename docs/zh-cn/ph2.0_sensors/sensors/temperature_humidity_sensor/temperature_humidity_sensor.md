@@ -42,11 +42,11 @@ DHT11数字温度 - 湿度传感器是一种包含校准数字信号输出的复
 
 ## 规格书
 
-[点击此处查看规格书](zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/DHT11-As数字型模块中性规格书.doc ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/DHT11.doc" download>点击此处查看规格书</a>
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/temperature_humidity_sensor.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/temperature_humidity_sensor.zip" download>下载示例程序</a>
 
 ```c++
 #include <Wire.h>//导入通信库
@@ -76,11 +76,11 @@ void loop() {
 
 ### ESP32 MicroPython
 
-[点击下载ESP32 MicroPython示例程序](zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/dht11_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/dht11_esp32_micropython.zip" download>点击下载ESP32 MicroPython示例程序</a>
 
 ### micro:bit MicroPython
 
-[点击下载micro:bit MicroPython示例程序](zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/dht11_microbit_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/dht11_microbit_micropython.zip" download>点击下载micro:bit MicroPython示例程序</a>
 
 ## micro:bit MakeCode示例程序
 

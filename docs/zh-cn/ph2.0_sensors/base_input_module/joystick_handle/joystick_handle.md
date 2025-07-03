@@ -34,7 +34,7 @@
 
 ### Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/joystick_handle/joystick_handle.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/joystick_handle/joystick_handle.zip" download>下载示例程序</a>
 
 ```c
 #include "JoystickHandle.h"
@@ -71,7 +71,7 @@ void loop(){
 
 ## Mixly示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/joystick_handle/joystick_handle_Mixly_demo.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/joystick_handle/joystick_handle_Mixly_demo.zip" download>下载示例程序</a>
 
 ## micro:bit示例程序
 

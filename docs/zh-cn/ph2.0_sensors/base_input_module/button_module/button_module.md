@@ -50,7 +50,7 @@
 
 #### Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/button_module/button_module.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/button_module/button_module.zip" download>下载示例程序</a>
 
 ```c
 int led_out = 3;//定义LED引脚
@@ -79,7 +79,7 @@ void loop()
 
 ![1719974799216](picture/1719974799216.png)
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/button_module/Button_Mixly_demo.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/button_module/Button_Mixly_demo.zip" download>下载示例程序</a>
 
 ### micro:bit示例程序
 
@@ -95,7 +95,7 @@ LED模块通过3Pin线接在主板P2（2号）口；
 
 ![all](picture/all.png)
 
-[示例程序下载](zh-cn/ph2.0_sensors/base_input_module/button_module/MicroPython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/button_module/MicroPython.zip" download>示例程序下载</a>
 
 ```
 from machine import Pin

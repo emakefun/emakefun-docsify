@@ -9,7 +9,8 @@
 热敏电阻器是敏感元件的一类，按照温度系数不同分为正温度系数热敏电阻器(PTC)和负温度系数热敏电阻器(NTC)。热敏电阻器的典型特点是对温度敏感，不同的温度下表现出不同的电阻值。正温度系数热敏电阻器(PTC)在温度越高时电阻值越大，负温度系数热敏电阻器(NTC)在温度越高时电阻值越低，它们同属于半导体器件。  
 
 ## 原理图
-[查看原理图](zh-cn\ph2.0_sensors\sensors\thermal_sensor\thermal_sensor_schematic.pdf ':ignore') 
+
+[查看原理图](zh-cn\ph2.0_sensors\sensors\thermal_sensor\thermal_sensor_schematic.pdf ':ignore')
 ![原理图](picture/thermal_sensor_schematic.png)
 
 ## 模块参数
@@ -28,14 +29,13 @@
 
 - 安装方式:M4螺钉兼容乐高插孔固定
 
-
 ## 机械尺寸图
 
 ![机械尺寸图](picture/thermal_sensor_assembly.png)
 
 ## Arduino示例程序
 
- [下载示例程序](zh-cn\ph2.0_sensors\sensors\thermal_sensor\thermal_sensor.zip ':ignore') 
+<a href="zh-cn\ph2.0_sensors\sensors\thermal_sensor\thermal_sensor.zip" download>下载示例程序</a>
 
 ```c++
 #define ThermalePin  A3//定义热敏传感器模块引脚

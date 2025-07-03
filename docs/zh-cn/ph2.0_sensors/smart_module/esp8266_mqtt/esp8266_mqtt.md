@@ -341,7 +341,7 @@ esp8266-mqtt无线模块是emakefun公司基于乐鑫科技的wifi芯片ESP8266�
 
 ### **6.1 AT串口测试**
 
-[下载最新示例程序](zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/AT_test.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/AT_test.zip" download>下载最新示例程序</a>
 
 ```c++
 #include "Arduino.h"
@@ -413,7 +413,7 @@ void loop()
 
 **Mixly示例程序**
 
-在Mixly编程界面右上角点击设置——导入库，选择EmakeFun的库文件从云端导入。[示例程序下载](zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/uno-mixly示例程序.zip ':ignore')
+在Mixly编程界面右上角点击设置——导入库，选择EmakeFun的库文件从云端导入。<a href="zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/uno-mixly示例程序.zip" download>示例程序下载</a>
 
 ![mixly_importing_library](./esp8266_mqtt_pic/mixly_importing_library.png)
 
@@ -441,7 +441,7 @@ void loop()
 
 **Arduino IDE示例程序**
 
-[Arduino IDE示例程序下载](zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/uno-IDE示例程序.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/uno-IDE示例程序.zip" download>Arduino IDE示例程序下载</a>
 
 硬件接收服务器信息示例。
 

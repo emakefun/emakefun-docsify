@@ -1,6 +1,6 @@
 # MQ-4气体传感器规格书
 
-##  实物图
+## 实物图
 
 ![实物图](picture/mq_gas_sensor.png)
 
@@ -10,7 +10,7 @@ MQ-4天然气传感器所使用的气敏材料是在清洁空气中电导率较�
 
 ## 原理图
 
-[查看原理图](zh-cn\ph2.0_sensors\sensors\mq_gas_sensor\mq_gas_sensor_schematic.pdf ':ignore' ) 
+[查看原理图](zh-cn\ph2.0_sensors\sensors\mq_gas_sensor\mq_gas_sensor_schematic.pdf ':ignore' )
 ![原理图](picture/mq_gas_sensor_schematic.png)
 
 ## 模块参数
@@ -36,7 +36,7 @@ MQ-4天然气传感器所使用的气敏材料是在清洁空气中电导率较�
 
 ## Arduino示例程序
 
- [下载示例程序](zh-cn\ph2.0_sensors\sensors\mq_gas_sensor\mq_gas_sensor.zip ':ignore')
+<a href="zh-cn\ph2.0_sensors\sensors\mq_gas_sensor\mq_gas_sensor.zip" download>下载示例程序</a>
 
 ```c++
 #define GaslDigitalPin  7//定义气体传感器数字引脚

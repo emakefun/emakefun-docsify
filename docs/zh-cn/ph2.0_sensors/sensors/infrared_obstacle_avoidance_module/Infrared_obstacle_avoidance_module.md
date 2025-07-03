@@ -10,18 +10,18 @@
 
 ## 原理图
 
- [查看原理图](zh-cn\ph2.0_sensors\sensors\infrared_obstacle_avoidance_module\InfraredObstacleAvoidance_schematic.pdf ':ignore') 
+ [查看原理图](zh-cn\ph2.0_sensors\sensors\infrared_obstacle_avoidance_module\InfraredObstacleAvoidance_schematic.pdf ':ignore')
 ![1](picture/infrared_obstacle_avoidance_module_schematic.png)
 
-
-
 ## 模块参数
+
 | 引脚名称 |     描述     |
 | :------: | :----------: |
 |    G     |     GND      |
 |    V     |     VCC      |
 |    A     | 模拟信号引脚 |
 |    D     | 数字信号引脚 |
+
 - 供电电压:3v3/5V
 
 - 连接方式:4PIN防反接杜邦线
@@ -30,13 +30,13 @@
 
 - 安装方式:M4螺钉兼容乐高插孔固定
 
-
 ## 机械尺寸
 
 ![2](picture/infrared_obstacle_avoidance_module_assembly.png)
+
 ## Arduino示例程序
 
-[下载示例程序](zh-cn\ph2.0_sensors\sensors\infrared_obstacle_avoidance_module\InfraredObstacleAvoidanceModule.zip ':ignore')
+<a href="zh-cn\ph2.0_sensors\sensors\infrared_obstacle_avoidance_module\InfraredObstacleAvoidanceModule.zip" download>下载示例程序</a>
 
 ```c++
 #define DigitalPin  7//定义红外避障模块数字引脚

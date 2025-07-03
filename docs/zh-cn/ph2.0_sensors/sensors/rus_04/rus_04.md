@@ -60,7 +60,7 @@
 ​  RUS-04收发探头分别各集成了3个RGB灯珠。只需一条信号线来控制各个RGB灯发光
 Arduino需要控制探头的发光，需要专门的RGB库支持。
 
-### 详情可以看 [WS2812B规格书](zh-cn/ph2.0_sensors/sensors/rus_04/WS2812B.PDF ':ignore')
+### 详情可以看<a href="zh-cn/ph2.0_sensors/sensors/rus_04/WS2812B.PDF" download>WS2812B规格书</a>
 
 ### 应用注意
 
@@ -70,21 +70,21 @@ Arduino需要控制探头的发光，需要专门的RGB库支持。
 
 ### Arduino Uno示例程序
 
- [点击下载](zh-cn/ph2.0_sensors/sensors/rus_04/RGBUltrasonicModule.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/rus_04/RGBUltrasonicModule.zip" download>点击下载</a>
 
 ### Mixly
 
 ![rus_04_mixly](picture/rus_04_mixly.png)
 
- [点击下载Mixly程序](zh-cn/ph2.0_sensors/sensors/rus_04/rus_04_mixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/rus_04/rus_04_mixly.zip" download>点击下载Mixly程序</a>
 
 ### ESP8266/ESP32示例程序
 
- [点击下载](zh-cn/ph2.0_sensors/sensors/rus_04/ESP32_RGBUltrasonicModule.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/rus_04/ESP32_RGBUltrasonicModule.zip" download>点击下载</a>
 
 ### MicroPython示例程序
 
-[点击下载ESP32 MicroPython示例程序](zh-cn/ph2.0_sensors/sensors/rus_04/rgb_ultrasonic_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/rus_04/rgb_ultrasonic_esp32_micropython.zip" download>点击下载ESP32 MicroPython示例程序</a>
 
 ## micro:bit MakeCode示例程序
 

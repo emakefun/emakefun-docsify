@@ -102,15 +102,15 @@
 
 ### Arduino 库示例程序
 
-在使用IDE进行编程前，请先下载并安装Arduino库：[点击此处链接下载](zh-cn/ph2.0_sensors/smart_module/tts_module/emakefun_tts-latest.zip ':ignore')
+在使用IDE进行编程前，请先下载并安装Arduino库：<a href="zh-cn/ph2.0_sensors/smart_module/tts_module/emakefun_tts-latest.zip" download>点击下载Arduino库</a>
 
-- 文本播放： [点击此处链接下载](zh-cn/ph2.0_sensors/smart_module/tts_module/play.zip ':ignore')
+- 文本播放：<a href="zh-cn/ph2.0_sensors/smart_module/tts_module/play.zip" download>点击此处链接下载</a>
 
-- 缓存文本播放： [点击此处链接下载](zh-cn/ph2.0_sensors/smart_module/tts_module/play_from_cache.zip ':ignore')
+- 缓存文本播放：<a href="zh-cn/ph2.0_sensors/smart_module/tts_module/play_from_cache.zip" download>点击此处链接下载</a>
 
-- 播放流程控制： [点击此处链接下载](zh-cn/ph2.0_sensors/smart_module/tts_module/play_flow_control.zip ':ignore')
+- 播放流程控制：<a href="zh-cn/ph2.0_sensors/smart_module/tts_module/play_flow_control.zip" download>点击此处链接下载</a>
 
-- 设置播放参数： [点击此处链接下载](zh-cn/ph2.0_sensors/smart_module/tts_module/play_with_parameters.zip ':ignore')
+- 设置播放参数：<a href="zh-cn/ph2.0_sensors/smart_module/tts_module/play_with_parameters.zip" download>点击此处链接下载</a>
 
 ### Mixly示例程序
 
@@ -118,9 +118,9 @@
 
 程序解析：语音合成模块先播放程序设定的"小爱同学"文字，然后将"你好，世界"上传到缓存块中，再播放一次。
 
-[点击下载Mixly示例](zh-cn/ph2.0_sensors/smart_module/tts_module/tts_mixly_example.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/tts_module/tts_mixly_example.zip" download>点击下载Mixly示例</a>
 
-[点击下载语音识别和语音识别Mixly综合程序](zh-cn/ph2.0_sensors/smart_module/tts_module/ttsAndLD3320.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/tts_module/ttsAndLD3320.zip" download>点击下载语音识别和语音识别Mixly综合程序</a>
 
 ### Mind+示例程序
 
@@ -128,7 +128,7 @@
 
 程序解析：语音合成模块初始化播放"hello world"和"我爱创客"，之后一直播报当前的温度。
 
-[点击下载语音合成Mind+库和示例](zh-cn/ph2.0_sensors/smart_module/tts_module/tts_mindplus.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/tts_module/tts_mindplus.zip" download>点击下载语音合成Mind</a>
 
 ## 语音识别模块和语音合成模块的综合程序(Arduino)
 

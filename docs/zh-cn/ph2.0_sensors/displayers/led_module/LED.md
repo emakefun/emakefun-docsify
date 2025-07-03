@@ -28,7 +28,7 @@
 
 ## Arduino IDE示例程序
 
-[点击下载Arduino IDE示例程序](zh-cn/ph2.0_sensors/displayers/led_module/Led.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/led_module/Led.zip" download>点击下载Arduino IDE示例程序</a>
 
 ## micro:bit示例程序
 

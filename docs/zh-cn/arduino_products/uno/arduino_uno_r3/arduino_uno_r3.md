@@ -59,8 +59,8 @@
 
 - 如果您使用Windows系统，可以从Arduino IDE软件自带的驱动目录或Arduino官网下载驱动程序。找到Arduino安装目录下的\drivers文件夹，在该文件夹中找到“arduino.inf”文件并右键单击，然后选择“安装”。
 
-  [点击下载驱动](zh-cn/arduino_products/uno/arduino_uno_r3/drivers.zip ':ignore')
-
+<a href="zh-cn/arduino_products/uno/arduino_uno_r3/drivers.zip" download>点击下载驱动</a>
+  
   如下图:
 
   ![gif](picture/driver.gif)
@@ -155,7 +155,7 @@ Arduino Uno 6个模拟输入引脚，可使用analogRead()读取模拟值。每�
 
 复位端口。接低电平会使Arduino复位，复位按键按下时，会使该端口接到低电平，从而让Arduino复位。
 
-##### 指示灯（LED)
+##### 指示灯（LED）
 
 Arduino Uno R3带有4个LED指示灯，作用分别如下：
 

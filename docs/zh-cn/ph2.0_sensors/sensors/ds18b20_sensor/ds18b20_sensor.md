@@ -33,7 +33,7 @@
 
 ### Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_sensor.rar ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_sensor.rar" download>下载示例程序</a>
 
 ```c++
 #include "OneWire.h"
@@ -62,7 +62,7 @@ void loop(void)
 
 ### ESP32 MicroPython示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_esp32_micropython.zip" download>下载示例程序</a>
 
 ## micro:bit MakeCode 示例程序
 
