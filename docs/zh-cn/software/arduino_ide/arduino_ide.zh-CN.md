@@ -88,7 +88,7 @@
 
 点击我同意接受协议
 
-![](picture\7.png)
+![](picture/7.png)
 
 安装选项选择默认个人。点击下一步
 
@@ -226,7 +226,6 @@ examples
 └── three
     └── three.ino
 
-
 2.src 文件夹
 
 src文件夹是用来存放库源代码的文件。比如.cpp文件和.h文件。
@@ -248,7 +247,7 @@ KEYWORD_TOKENTYPE 的取值为 KEYWORD1, KEYWORD2, KEYWORD3, LITERAL1, LITERAL2�
 
 在Arduino IDE的关键字高亮中，会识别KEYWORD1为数据类型高亮，KEYWORD2为函数高亮，KEYWORD3为结构体高亮，LITERAL1为常量。
 
-![](picture\30.png)
+![](picture/30.png)
 
 5.library.properties文件
 
@@ -304,15 +303,15 @@ Arduino库的根文件夹名称必须以基本字母（A-Z或a-z）或数字（0
 
 在Arduino IDE中，为了方便开发者学习，IDE内部集成了很多Arduino的例程，点击文件->示例可打开环境内置示例程序。Arduino自带非常多的例程，包括基础、数字、模拟、通讯、显示等。我们所用的是 Basic(基础例程的) Blink 也就是点灯 ，相当于Arduino的Hello,World。
 
-![](picture\39.png)
+![](picture/39.png)
 
 先点击“Verify”图标，确认程序是否可编译通过：
 
-![](picture\40.png)
+![](picture/40.png)
 
 点击上传图标，将代码下载到Arduino中去
 
-![](picture\41.png)
+![](picture/41.png)
 
 然后你就能观察到开发板上的LED指示灯在以 1 秒为间隔不断地亮、灭。
 
@@ -324,7 +323,7 @@ Arduino库的根文件夹名称必须以基本字母（A-Z或a-z）或数字（0
 
 1.Arduino的扩展库都是放在 libraries目录下的。完整路径为：C:\Users\用户名\AppData\Local\Arduino15\libraries。所以我们需要在这个目录下创建一个文件夹，比如上面的例子是esp32上led灯控制程序，于是我创建了 m_led文件夹（前面加m是为了和官方库区分开，这只是我自己的习惯而已）。然后把写好的.cpp 和 .h文件拷贝到里面去，这样就OK了。
 
-![](picture\42.png)
+![](picture/42.png)
 
 或者（把led.h和led.cpp复制到C:\Users\41861\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.6\cores\esp32路径下。不推荐这种写法，因为这种方法会跟系统库文件混合在一起，不方便管理）
 

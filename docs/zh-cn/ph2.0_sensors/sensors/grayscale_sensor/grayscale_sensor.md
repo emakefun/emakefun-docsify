@@ -10,7 +10,7 @@
 
 ## 原理图
 
- [查看原理图](zh-cn\ph2.0_sensors\sensors\grayscale_sensor\grayscale_sensor_schematic.pdf ':ignore' )
+<a href="zh-cn/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor_schematic.pdf" target="_blank">查看原理图</a>
 
 ![原理图](picture/grayscale_sensor_schematic.png)
 
@@ -36,17 +36,17 @@
 
 ## Arduino示例程序
 
-<a href="zh-cn\ph2.0_sensors\sensors\grayscale_sensor\grayscale_sensor.zip" download>下载示例程序</a>
+<a href="zh-cn/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.zip" download>下载示例程序</a>
 
 ```c
-void setup(){
+void setup() {
   Serial.begin(9600);  // 将串口波特率设置为9600
-  pinMode(A3, INPUT);   // 将A3设置为输入引脚
+  pinMode(A3, INPUT);  // 将A3设置为输入引脚
 }
 
-void loop(){
+void loop() {
   Serial.println(analogRead(A3));  // 打印A3引脚获取的数据
-  delay(200); // 延迟200ms
+  delay(200);                      // 延迟200ms
 }
 ```
 
@@ -58,13 +58,13 @@ void loop(){
 from machine import ADC,Pin
 import time
 
-AnalogPin = 2  # 定义灰度传感器模拟接口引脚
+analog_pin = 2  # 定义灰度传感器模拟接口引脚
 
-p = ADC(AnalogPin)
+p = ADC(analog_pin)
 
 while True:
-    AnalogValue = p.read_u16()  # 读取灰度传感器模拟值
-    print( AnalogValue)  # 打印灰度传感器模拟值
+    analog_value = p.read_u16()  # 读取灰度传感器模拟值
+    print( analog_value)  # 打印灰度传感器模拟值
     time.sleep_ms(200)
 ```
 
@@ -81,4 +81,4 @@ while True:
 
 ## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_fakY8cFmMMch">动手试一试</a>
+<a href="https://makecode.microbit.org/_fakY8cFmMMch" target="_blank">动手试一试</a>

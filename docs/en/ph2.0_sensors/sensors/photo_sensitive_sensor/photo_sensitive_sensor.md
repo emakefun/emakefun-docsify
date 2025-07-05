@@ -2,9 +2,7 @@
 
 ## Physical picture
 
-
-
-![Physical picture](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/picture/photo_sensitive_sensor.png)
+![Physical picture](picture/photo_sensitive_sensor.png)
 
 ## Overview
 
@@ -12,7 +10,7 @@ As we all know, the voice-controlled lights in the corridor have a sensor in add
 
 ## Schematic
 
-[View Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor_schematic.pdf) ![Schematic](en/ph2.0_sensors/sensors/photo_sensitive_sensor/picture/photo_sensitive_sensor_schematic.png)
+<a href="en/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor_schematic.pdf" target="_blank">View Schematic</a> ![Schematic](picture/photo_sensitive_sensor_schematic.png)
 
 ## Module parameters
 
@@ -29,29 +27,25 @@ As we all know, the voice-controlled lights in the corridor have a sensor in add
 
 ## Mechanical Dimensions
 
-![Mechanical Dimensions](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/picture/photo_sensitive_sensor_assembly.png)
-
-
+![Mechanical Dimensions](picture/photo_sensitive_sensor_assembly.png)
 
 ## Arduino Example Program
 
-[Download the sample program](en/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor.zip)
+<a href="en/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor.zip" download>Download the sample program</a>
 
 ```c++
-#define PhotosensitivePin A3 //Define the pin of the photosensor module
-int PhotosensitiveValue = 0 ; //Define variables, read photosensitivity value
+#define PHOTOSENSITIVE_PIN A3  // Define the pin of the photosensor module
+int photosensitive_value = 0;  // Define variables, read photosensitivity value
 
-void setup()
-{
-Serial.begin(9600); //Set the serial port baud rate
-pinMode(PhotosensitivePin, INPUT); //Set the pin of the photosensor module as input
+void setup() {
+  Serial.begin(9600);                 // Set the serial port baud rate
+  pinMode(PHOTOSENSITIVE_PIN, INPUT);  // Set the pin of the photosensor module as input
 }
-void loop()
-{
-PhotosensitiveValue = analogRead(PhotosensitivePin); //Read photosensitivity value
-Serial.print("Photosensitive Data: ");
-Serial.println(PhotosensitiveValue); //Print photosensitivity value
-}Click Copymistakecopy
+void loop() {
+  photosensitive_value = analogRead(PHOTOSENSITIVE_PIN);  // Read photosensitivity value
+  Serial.print("Photosensitive Data: ");
+  Serial.println(photosensitive_value);  // Print photosensitivity value
+}
 ```
 
 ## MicroPython Example Program
@@ -59,17 +53,17 @@ Serial.println(PhotosensitiveValue); //Print photosensitivity value
 ### Esp32 MicroPython Example Program
 
 ```python
-from machine import ADC,Pin
+from machine import ADC, Pin
 import time
 
-AnalogPin = 2 # Define the photosensitive sensor analog interface pin
+analog_pin = 2 # Define the photosensitive sensor analog interface pin
 
-p = ADC(AnalogPin)
+p = ADC(analog_pin)
 
 while True:
-AnalogValue = p.read_u16() # Read the photosensitive sensor analog value
-print("Photosensitive Data:", AnalogValue) # Print the photosensitive sensor analog value
-time.sleep_ms(200)Click Copymistakecopy
+    analog_value = p.read_u16() # Read the photosensitive sensor analog value
+    print("Photosensitive Data:", analog_value) # Print the photosensitive sensor analog value
+    time.sleep_ms(200)
 ```
 
 ### Micro:bit MicroPython Example Program
@@ -78,9 +72,9 @@ time.sleep_ms(200)Click Copymistakecopy
 from microbit import *
 
 while True:
-p = pin1.read_analog() # Read the analog value of the photosensitive sensor
-print("Photosensitive Data:", p) # Print the analog value of the photosensitive sensor
-sleep(1000)Click Copymistakecopy
+    p = pin1.read_analog() # Read the analog value of the photosensitive sensor
+    print("Photosensitive Data:", p) # Print the analog value of the photosensitive sensor
+    sleep(1000)
 ```
 
 ## MakeCode Example Programs

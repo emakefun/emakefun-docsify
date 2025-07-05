@@ -10,7 +10,8 @@
 
 ## 原理图
 
-[查看原理图](zh-cn\ph2.0_sensors\sensors\thermal_sensor\thermal_sensor_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor_schematic.pdf" target="_blank">查看原理图</a>
+
 ![原理图](picture/thermal_sensor_schematic.png)
 
 ## 模块参数
@@ -35,23 +36,22 @@
 
 ## Arduino示例程序
 
-<a href="zh-cn\ph2.0_sensors\sensors\thermal_sensor\thermal_sensor.zip" download>下载示例程序</a>
+<a href="zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor.zip" download>下载示例程序</a>
 
 ```c++
-#define ThermalePin  A3//定义热敏传感器模块引脚
+#define THERMALE_PIN A3  // 定义热敏传感器模块引脚
 
-int  ThermalValue = 0 ;//定义变量,读取热敏值
+int thermal_value = 0;  // 定义变量,读取热敏值
 
-void setup()
-{
-  Serial.begin(9600);//设置串口波特率
-  pinMode(ThermalePin, INPUT);//设置热敏传感器模块引脚为输入
+void setup() {
+  Serial.begin(9600);           // 设置串口波特率
+  pinMode(THERMALE_PIN, INPUT);  // 设置热敏传感器模块引脚为输入
 }
-void loop()
-{
-  ThermalValue = analogRead(ThermalePin);//读取热敏值，并赋值给ThermalValue
+
+void loop() {
+  thermal_value = analogRead(THERMALE_PIN);  // 读取热敏值，并赋值给ThermalValue
   Serial.print("Thermal Data:  ");
-  Serial.println(ThermalValue);//打印热敏值
+  Serial.println(thermal_value);  // 打印热敏值
   delay(200);
 }
 ```
@@ -64,13 +64,13 @@ void loop()
 from machine import ADC,Pin
 import time
 
-AnalogPin = 15  # 定义热敏传感器模拟接口引脚
+analog_pin = 15  # 定义热敏传感器模拟接口引脚
 
-p1 = ADC(AnalogPin)
+p1 = ADC(analog_pin)
     
 while True:
-    AnalogValue = p1.read_u16()  # 读取热敏传感器模拟值
-    print(AnalogValue)  # 打印热敏传感器模拟值
+    analog_value = p1.read_u16()  # 读取热敏传感器模拟值
+    print(analog_value)  # 打印热敏传感器模拟值
     time.sleep_ms(200)
 ```
 
@@ -79,14 +79,14 @@ while True:
 ```python
 from microbit import *
 
-AnalogPin = pin1  # 定义热敏传感器模拟接口引脚
+analog_pin = pin1  # 定义热敏传感器模拟接口引脚
 
 while True:
-    AnalogValue = AnalogPin.read_analog()  # 读取热敏传感器模拟值
-    print("Analog Data:", AnalogValue)  # 打印热敏传感器模拟值
+    analog_value = AnalogPin.read_analog()  # 读取热敏传感器模拟值
+    print("Analog Data:", analog_value)  # 打印热敏传感器模拟值
     sleep(0.2)
 ```
 
 ## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_LTdekc9H3b9u">动手试一试</a>
+<a href="https://makecode.microbit.org/_LTdekc9H3b9u" target="_blank">动手试一试</a>

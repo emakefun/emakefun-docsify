@@ -56,9 +56,9 @@ NanoV3.0，rf-nanoV1.0 2.0，RF-NANOV3.0三个产品参数对比
 
 ## 原理图
 
-[点击下载原理图](zh-cn/arduino_products/nano/rf-nano/schematic/rf-nano_sch_v3.0.pdf  ':ignore')
+<a href="zh-cn/arduino_products/nano/rf-nano/schematic/rf-nano_sch_v3.0.pdf" target="_blank">点击下载原理图</a>
 
-[点击下载nrf24L01+数据手册](zh-cn/arduino_products/nano/rf-nano/datasheet/nrf24L01+_datasheet.pdf ':ignore')
+<a href="zh-cn/arduino_products/nano/rf-nano/datasheet/nrf24L01+_datasheet.pdf" target="_blank">点击下载nrf24L01+数据手册</a>
 
 ![RF-Nano-schematic](image/RF-Nano-schematic.png)
 
@@ -188,34 +188,35 @@ nrf2401只有一个射频模块，任意时候只能接收一份数据。
 ## 模块自检程序
 
 ```c
+#include <RF24.h>
 #include <SPI.h>
 #include <Wire.h>
-#include <RF24.h>
 #include <printf.h>
 
-RF24 Radio(7,8);
+RF24 radio(7, 8);
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
   printf_begin();
   Serial.println();
   Serial.println(F("RF_NANO v3.0 Test"));
-  //
+  
   // Setup and configure rf radio
-  //
-  Radio.begin();
-  Radio.setAddressWidth(5);
-  Radio.openReadingPipe(0, 0x1212121212LL);
-  Radio.openReadingPipe(1, 0x3434343431LL);
-  Radio.openReadingPipe(2, 0x3434343432LL);
-  Radio.openReadingPipe(3, 0x3434343433LL);
-  Radio.openReadingPipe(4, 0x3434343434LL);
-  Radio.openReadingPipe(5, 0x3434343435LL);
-  Radio.setChannel(115);            //115 band above WIFI signals
-  Radio.setPALevel(RF24_PA_MAX);    //MIN power low rage
-  Radio.setDataRate(RF24_1MBPS) ;   //Minimum speed
+  
+  radio.begin();
+  radio.setAddressWidth(5);
+  radio.openReadingPipe(0, 0x1212121212LL);
+  radio.openReadingPipe(1, 0x3434343431LL);
+  radio.openReadingPipe(2, 0x3434343432LL);
+  radio.openReadingPipe(3, 0x3434343433LL);
+  radio.openReadingPipe(4, 0x3434343434LL);
+  radio.openReadingPipe(5, 0x3434343435LL);
+  radio.setChannel(115);          // 115 band above WIFI signals
+  radio.setPALevel(RF24_PA_MAX);  // MIN power low rage
+  radio.setDataRate(RF24_1MBPS);  // Minimum speed
   Serial.println("Setup Initialized");
-  Radio.printDetails();
+  radio.printDetails();
 }
 ```
 
@@ -226,19 +227,19 @@ void setup() {
 **发送**
 
 ```c
+#include <RF24.h>
 #include <SPI.h>
 #include <Wire.h>
-#include <RF24.h>
 #include <printf.h>
-RF24 SendRadio(7,8);
 
-int value;
+RF24 send_radio(7, 8);
 
-void WriteData()
-{
-  value = random(255); //随机一个0-255的值，并赋给value
-  SendRadio.openWritingPipe(0xF0F0F0F066);//Sends data on this 40-bit address
-  SendRadio.write(&value, sizeof(value));//发送value的值
+int value = 0;
+
+void WriteData() {
+  value = random(255);                      // 随机一个0-255的值，并赋给value
+  send_radio.openWritingPipe(0xF0F0F0F066);  // Sends data on this 40-bit address
+  send_radio.write(&value, sizeof(value));   // 发送value的值
   Serial.print("WriteData");
   Serial.print(".........");
   Serial.println(value);
@@ -250,20 +251,18 @@ void setup() {
   printf_begin();
   Serial.println(F("RF-NANO v4.0 Send Test"));
 
-  //
   // Setup and configure rf radio
-  //
   // Get into standby mode
 
-  SendRadio.begin();
-  SendRadio.setAddressWidth(5);
-  SendRadio.openWritingPipe(0xF0F0F0F066LL);
-  SendRadio.setChannel(115);           //115 band above WIFI signals
-  SendRadio.setPALevel(RF24_PA_MAX);   //MIN power low rage
-  SendRadio.setDataRate(RF24_1MBPS) ;  //Minimum speed
-  SendRadio.stopListening(); //Stop Receiving and start transminitng
+  send_radio.begin();
+  send_radio.setAddressWidth(5);
+  send_radio.openWritingPipe(0xF0F0F0F066LL);
+  send_radio.setChannel(115);          // 115 band above WIFI signals
+  send_radio.setPALevel(RF24_PA_MAX);  // MIN power low rage
+  send_radio.setDataRate(RF24_1MBPS);  // Minimum speed
+  send_radio.stopListening();          // Stop Receiving and start transminitng
   Serial.print("Send Setup Initialized");
-  SendRadio.printDetails();
+  send_radio.printDetails();
   delay(500);
 }
 
@@ -276,28 +275,25 @@ void loop() {
 **接收**
 
 ```c
-#include <SPI.h>
-#include<Wire.h>
 #include <RF24.h>
+#include <SPI.h>
+#include <Wire.h>
 #include <printf.h>
 
-RF24 ReceiveRadio (7, 8);
+RF24 receive_radio(7, 8);
 
 byte value[32];
 
-void ReadData()
-{
+void ReadData() {
   uint8_t bytes;
-  if (ReceiveRadio.available())
-  {
-    while (ReceiveRadio.available())
-    { 
-      bytes = ReceiveRadio.getPayloadSize();
-      ReceiveRadio.read(value, bytes);//接收数据，并将数据赋值给value
+  if (receive_radio.available()) {
+    while (receive_radio.available()) {
+      bytes = receive_radio.getPayloadSize();
+      receive_radio.read(value, bytes);  // 接收数据，并将数据赋值给value
     }
     Serial.print("ReadData");
     Serial.print(".........");
-    Serial.println(value[0]);//打印所接收的值
+    Serial.println(value[0]);  // 打印所接收的值
   }
 }
 
@@ -307,18 +303,17 @@ void setup() {
   printf_begin();
   Serial.println(F("RF-NANO v4.0 Receive Test"));
 
-  //
   // Setup and configure rf radio
-  //
-  ReceiveRadio.begin();
-  ReceiveRadio.setAddressWidth(5);
-  ReceiveRadio.openReadingPipe(1, 0xF0F0F0F066LL);
-  ReceiveRadio.setChannel(115);  //115 band above WIFI signals
-  ReceiveRadio.setPALevel(RF24_PA_MAX); //MIN power low rage
-  ReceiveRadio.setDataRate(RF24_1MBPS) ;  //Minimum speed
-  ReceiveRadio.startListening();
+
+  receive_radio.begin();
+  receive_radio.setAddressWidth(5);
+  receive_radio.openReadingPipe(1, 0xF0F0F0F066LL);
+  receive_radio.setChannel(115);          // 115 band above WIFI signals
+  receive_radio.setPALevel(RF24_PA_MAX);  // MIN power low rage
+  receive_radio.setDataRate(RF24_1MBPS);  // Minimum speed
+  receive_radio.startListening();
   Serial.println("Receive Setup Initialized");
-  ReceiveRadio.printDetails();
+  receive_radio.printDetails();
   delay(500);
 }
 

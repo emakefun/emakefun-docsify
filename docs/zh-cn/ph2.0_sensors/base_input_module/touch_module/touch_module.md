@@ -12,7 +12,7 @@
 
 ![原理图](picture/touch_module_schematic.png)
 
-[点击查看原理图](zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module_schematic.pdf" target="_blank">点击查看原理图</a>
 
 ## 4. 模块参数
 
@@ -48,25 +48,22 @@
 <a href="zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module.zip" download>下载示例程序</a>
 
 ```c
-int touch_pin = A3; //定义触摸按键引脚
-int led_out = 3; //定义Arduino LED引脚
-int value = 0 ;
-void setup()
-{
-  pinMode(touch_pin, INPUT); //初始化触摸按键连接的引脚为输入
-  pinMode(led_out, OUTPUT); //初始化LED连接的引脚为输出引脚
+int touch_pin = A3;  // 定义触摸按键引脚
+int led_out = 3;     // 定义Arduino LED引脚
+int value = 0;
+
+void setup() {
+  pinMode(touch_pin, INPUT);  // 初始化触摸按键连接的引脚为输入
+  pinMode(led_out, OUTPUT);   // 初始化LED连接的引脚为输出引脚
 }
-void loop()
-{
-  value = digitalRead(touch_pin); //读取触摸按键输入引脚的值
-   if (value == LOW)
-   {
-    digitalWrite(led_out,HIGH); //如果读取值为低即被触摸到了，LED亮
-    }
-   else
-   {
-      digitalWrite(led_out,LOW); //如果读取值为高即没有触摸按键，LED灭
-    }
+
+void loop() {
+  value = digitalRead(touch_pin);  // 读取触摸按键输入引脚的值
+  if (value == LOW) {
+    digitalWrite(led_out, HIGH);  // 如果读取值为低即被触摸到了，LED亮
+  } else {
+    digitalWrite(led_out, LOW);  // 如果读取值为高即没有触摸按键，LED灭
+  }
 }
 ```
 

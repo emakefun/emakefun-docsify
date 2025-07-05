@@ -12,7 +12,7 @@
 
 ![原理图](picture/schematic_diagram.jpg)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/5line_tracking_v3.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/5line_tracking_v3.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 尺寸图
 
@@ -75,6 +75,6 @@
 
 ## micro:bit MakeCode示例程序
 
-[点击查看用户库](https://github.com/LT000-ops/emakefun_five_line_tracker_v3)
+<a href="https://github.com/LT000-ops/emakefun_five_line_tracker_v3" target="_blank">点击查看用户库</a>
 
-[点击查看示例程序](https://makecode.microbit.org/S86187-63310-35826-36943)
+<a href="https://makecode.microbit.org/S86187-63310-35826-36943" target="_blank">点击查看示例程序</a>

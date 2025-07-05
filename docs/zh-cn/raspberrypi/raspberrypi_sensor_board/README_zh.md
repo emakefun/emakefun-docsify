@@ -80,71 +80,72 @@
 
 ### Python 代码
 
-[Python 代码](https://gitee.com/jiexinjx/sensor_expansion_board/repository/archive/master.zip)
+<a href="https://gitee.com/jiexinjx/sensor_expansion_board/repository/archive/master.zip" download>Python 代码</a>
 
 ### Python 示例
 
-```
-     from sensor_expansion_board_i2c import IoExpansionBoardI2c
-     from smbus2 import SMBus
-     import time
-     
-     # 初始化I2C总线
-     i2c_bus = 1  # 树莓派上的I2C总线号，通常是1
-     i2c_address = 0x24  # I2C设备地址
-     
-     # 创建IoExpansionBoardI2c对象
-     io_expansion_board_i2c = IoExpansionBoardI2c(i2c_bus, i2c_address)
-     
-     # 设置引脚7为ADC模式
-     io_expansion_board_i2c[7].mode = IoExpansionBoardI2c.ADC_MODE
-     
-     # 循环读取ADC值
-     try:
-         while True:
-             adc_value = io_expansion_board_i2c[7].adc_value
-             print(adc_value)
-             time.sleep(1)  # 延时1秒
-     except KeyboardInterrupt:
-         # print("程序已停止")
-         pass
+```python
+from sensor_expansion_board_i2c import IoExpansionBoardI2c
+from smbus2 import SMBus
+import time
+
+# 初始化I2C总线
+i2c_bus = 1  # 树莓派上的I2C总线号，通常是1
+i2c_address = 0x24  # I2C设备地址
+
+# 创建IoExpansionBoardI2c对象
+io_expansion_board_i2c = IoExpansionBoardI2c(i2c_bus, i2c_address)
+
+# 设置引脚7为ADC模式
+io_expansion_board_i2c[7].mode = IoExpansionBoardI2c.ADC_MODE
+
+# 循环读取ADC值
+try:
+    while True:
+        adc_value = io_expansion_board_i2c[7].adc_value
+        print(adc_value)
+        time.sleep(1)  # 延时1秒
+except KeyboardInterrupt:
+    # print("程序已停止")
+    pass
 ```
 
 ### C++ 代码
 
-[C++ 代码](https://gitee.com/jiexinjx/sensor_board/repository/archive/master.zip)
+<a href="https://gitee.com/jiexinjx/sensor_board/repository/archive/master.zip" download>C++ 代码</a>
 
 ### C++ 示例
 
-```
-    #include <iostream>
-    #include <chrono>
-    #include <thread>
-    #include "gpio_expansion_board.h"
-    
-    // 创建 GpioExpansionBoard 实例
-    GpioExpansionBoard gpio_expansion_board;
-    
-    int main() {
-      std::cout << "Setup" << std::endl;
-    
-      // 配置E0为ADC模式
-      if (!gpio_expansion_board.SetGpioMode(GpioExpansionBoard::kGpioPinE0, GpioExpansionBoard::kAdc)) {
-        std::cerr << "Failed to set GPIO mode for E0" << std::endl;
-        return -1;
-      }
-    
-      while (true) {
-        // 读取E0的ADC值并打印
-        uint16_t adc_value = gpio_expansion_board.GetGpioAdcValue(GpioExpansionBoard::kGpioPinE0);
-        std::cout << "ADC value: " << adc_value << std::endl;
-    
-        // 延时100毫秒
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
-      }
-    
-      return 0;
-    }
+```c++
+#include <chrono>
+#include <iostream>
+#include <thread>
+
+#include "gpio_expansion_board.h"
+
+// 创建 GpioExpansionBoard 实例
+GpioExpansionBoard gpio_expansion_board;
+
+int main() {
+  std::cout << "Setup" << std::endl;
+
+  // 配置E0为ADC模式
+  if (!gpio_expansion_board.SetGpioMode(GpioExpansionBoard::kGpioPinE0, GpioExpansionBoard::kAdc)) {
+    std::cerr << "Failed to set GPIO mode for E0" << std::endl;
+    return -1;
+  }
+
+  while (true) {
+    // 读取E0的ADC值并打印
+    uint16_t adc_value = gpio_expansion_board.GetGpioAdcValue(GpioExpansionBoard::kGpioPinE0);
+    std::cout << "ADC value: " << adc_value << std::endl;
+
+    // 延时100毫秒
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+  }
+
+  return 0;
+}
 ```
 
 &ensp;&ensp;&ensp;&ensp;如果在生成当前文件时出现以下错误：

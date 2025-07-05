@@ -2,7 +2,7 @@
 
 ## 模块实物图
 
-![实物图](picture\fd3bbc53febcc0be1a72f704a733148.jpg)
+![实物图](picture/fd3bbc53febcc0be1a72f704a733148.jpg)
 
 ## 概述
 
@@ -39,25 +39,25 @@
 
 点击上述链接后，点击新建项目。
 
-![新建项目](picture\1.png)
+![新建项目](picture/1.png)
 
 按照下图所示，填写项目信息，点击创建。
 
-![填写项目信息](picture\2.png)
+![填写项目信息](picture/2.png)
 
 填写以下信息后，点击继续。
 
-![image-20250122174305993](picture\3.png)
+![image-20250122174305993](picture/3.png)
 
 按照下图所示，填写配置信息后，点击继续。
 
-![image-20250122174813979](picture\4.png)
+![image-20250122174813979](picture/4.png)
 
 按照下图所示选择自己需要的语音功能后，点击立即提交。
 
 提交后等待编译完成，点击下载固件。
 
-![下载固件](picture\5.png)
+![下载固件](picture/5.png)
 
 也可以使用我们的示例固件进行测试。
 
@@ -65,21 +65,21 @@
 
 下载后解压文件，打开烧录软件。
 
-![打开烧录软件](picture\6.png)
+![打开烧录软件](picture/6.png)
 
-![烧录固件步骤](picture\7.png)
+![烧录固件步骤](picture/7.png)
 
-![烧录步骤](picture\8.png)
+![烧录步骤](picture/8.png)
 
 打开软件后,选择CI1302芯片，再点击固件升级。
 
-![点击固件升级](picture\9.jpg)
+![点击固件升级](picture/9.jpg)
 
-![选择固件](picture\10.png)
+![选择固件](picture/10.png)
 
 将语音模块通过Type-C数据线连接电脑，选择对应的COM口。
 
-![选择相应COM口](picture\11.png)
+![选择相应COM口](picture/11.png)
 
 按下复位按钮，等待固件烧录完成即可。烧录完成后取消勾选相应COM口。
 
@@ -111,26 +111,26 @@
 
 按下图所示，将喇叭模块连接至语音模块相应接口，再将语音模块的TX端接D12，RX端接D13。
 
-![接线图](picture\12.png)
+![接线图](picture/12.png)
 
 ### 测试
 
 1.打开Arduino IDE，打开示例文件。
 
-![打开示例程序](picture\13.png)
+![打开示例程序](picture/13.png)
 
 2.将程序烧录至Arduino后，打开串口，选择波特率为9600。
 
-![选择波特率](picture\14.png)
+![选择波特率](picture/14.png)
 
 3.说出相应的命令，Arduino会返回相应的识别结果。
 
-![识别指令](picture\15.png)
+![识别指令](picture/15.png)
 
 ## micro:bit MakeCode示例程序
 
-[点击查看micro:bit MakeCode示例程序](https://makecode.microbit.org/S15398-86855-41727-87467)
+<a href="https://makecode.microbit.org/S15398-86855-41727-87467" target="_blank">点击查看micro:bit MakeCode示例程序</a>
 
-[点击查看用户库网址](https://github.com/emakefun-makecode-extensions/emakefun_asr_speech_recognition)
+<a href="https://github.com/emakefun-makecode-extensions/emakefun_asr_speech_recognition" target="_blank">点击查看用户库网址</a>
 
 **注意**: 普通的命令码为0x81，欢迎语的命令码为0x82。客户根据自己设计的命令码进行相应的识别。

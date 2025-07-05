@@ -60,7 +60,7 @@
 ​  RUS-04收发探头分别各集成了3个RGB灯珠。只需一条信号线来控制各个RGB灯发光
 Arduino需要控制探头的发光，需要专门的RGB库支持。
 
-### 详情可以看<a href="zh-cn/ph2.0_sensors/sensors/rus_04/WS2812B.PDF" download>WS2812B规格书</a>
+### 详情可以看<a href="zh-cn/ph2.0_sensors/sensors/rus_04/WS2812B.PDF" target="_blank">WS2812B规格书</a>
 
 ### 应用注意
 

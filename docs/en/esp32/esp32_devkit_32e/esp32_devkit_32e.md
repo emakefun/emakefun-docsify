@@ -27,7 +27,7 @@ The ESP32 DevKit 32E development board is based on the ESP32-DOWD-V3 chip develo
 
 - Espressif's original ESP32-DOWD-V3 chip is used, and the antenna is onboard
 - The chip has a built-in 448 KB ROM, 520 KB SRAM, and an external 4M SPI FLASH
-- Type-C interface, USB to serial port chip is Qinheng's CH340G 
+- Type-C interface, USB to serial port chip is Qinheng's CH340G
 - Input voltage: 5V 1A
 - M3 positioning hole diameter: 3mm
 - On-board reset button and BOOT button
@@ -61,7 +61,7 @@ The table below shows which pins are best used as inputs and outputs, and which 
 - You can't use the ADC2 pins when using Wi-Fi. So, if you're using Wi-Fi and can't get values from the ADC2 GPIO, you might consider using the ADC1 GPIO instead.
 - Enable (EN) is the enable pin of the 3.3V regulator. It was pulled up, so the ground disable the 3.3V regulator. This means that you can use that pin connected to the button to restart the ESP32.
 
-### 2.4 [Schematic](zh-cn/esp32/esp32_devkit_32e/ch340G_esp32.pdf)
+### 2.4 <a href="en/esp32/esp32_devkit_32e/ch340G_esp32.pdf" target="_blank">Schematic</a>
 
 ![ch340G_esp32](ch340G_esp32.png)
 
@@ -69,12 +69,12 @@ The table below shows which pins are best used as inputs and outputs, and which 
 
 ![Dimensional drawings](picture/4.png)
 
-### 2.5 [Three-dimensional drawing of the product](zh-cn/esp32/esp32_devkit_32e/ch340G_esp32_pico.step)
+### 2.5 <a href="en/esp32/esp32_devkit_32e/ch340G_esp32_pico.step" target="_blank">Three-dimensional drawing of the product</a>
 
 ## 3. Install the ESP32 DevKit 32E driver
 
-For details about how to install the driver, see this document: [Installing the CH340G Driver](zh-cn/driver/ch340_driver/ch340_driver.md)
+For details about how to install the driver, see this document: [Installing the CH340G Driver](en/driver/ch340_driver/ch340_driver.md)
 
 ## 4. ESP32 DevKit 32E download program
 
-For details on how to upload programs on each platform, please refer to: [ESP32 Series Upload Program Methods](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
+For details on how to upload programs on each platform, please refer to: [ESP32 Series Upload Program Methods](en/esp32/esp32_software_instructions/esp32_software_instructions.md)

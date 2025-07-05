@@ -10,7 +10,7 @@
 
 ## 原理图
 
-[查看原理图](zh-cn\ph2.0_sensors\sensors\tilt_switch_sensor\tilt_switch_sensor_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor_schematic.pdf" target="_blank">查看原理图</a>
 
 ![原理图](picture/tilt_switch_sensor_schematic.png)
 
@@ -37,29 +37,28 @@
 
 ## Arduino示例程序
 
-<a href="zh-cn\ph2.0_sensors\sensors\tilt_switch_sensor\tilt_switch_sensor.zip" download>下载示例程序</a>
+<a href="zh-cn/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor.zip" download>下载示例程序</a>
 
 ```c++
-#define DigitalPin  7//定义倾斜传感器数字引脚
-#define AnalogPin   A0//定义倾斜传感器模拟引脚
+#define DIGITAL_PIN 7  // 定义倾斜传感器数字引脚
+#define ANALOG_PIN A0  // 定义倾斜传感器模拟引脚
 
-int  AnalogValue = 0 ;//定义数字变量,读取倾斜传感器模拟值
-int  DigitalValue = 0 ;//定义数字变量,读取倾斜传感器数字值
+int analog_value = 0;   // 定义数字变量,读取倾斜传感器模拟值
+int digital_value = 0;  // 定义数字变量,读取倾斜传感器数字值
 
-void setup()
-{
-  Serial.begin(9600);//设置串口波特率
-  pinMode(DigitalPin, INPUT);//设置倾斜传感器数字引脚为输入
-  pinMode(AnalogPin, INPUT);//设置倾斜传感器模拟引脚为输入
+void setup() {
+  Serial.begin(9600);          // 设置串口波特率
+  pinMode(DIGITAL_PIN, INPUT);  // 设置倾斜传感器数字引脚为输入
+  pinMode(ANALOG_PIN, INPUT);   // 设置倾斜传感器模拟引脚为输入
 }
-void loop()
-{
-  FlamelAnalogValue = analogRead(AnalogPin);//读取倾斜传感器模拟值
-  FlamelDigitalValue = digitalRead(DigitalPin);//读取倾斜传感器数字值
+
+void loop() {
+  analog_value = analogRead(ANALOG_PIN);     // 读取倾斜传感器模拟值
+  digital_value = digitalRead(DIGITAL_PIN);  // 读取倾斜传感器数字值
   Serial.print("Analog Data:  ");
-  Serial.print(AnalogValue);//打印倾斜传感器模拟值
+  Serial.print(analog_value);  // 打印倾斜传感器模拟值
   Serial.print("Digital Data:  ");
-  Serial.println(DigitalValue);//打印倾斜传感器数字值
+  Serial.println(digital_value);  // 打印倾斜传感器数字值
   delay(200);
 }
 ```
@@ -72,15 +71,15 @@ void loop()
 from machine import ADC, Pin
 import time
 
-AnalogPin = 15  # 定义模拟引脚
-DigitalPin = 14  # 定义数字引脚
+analog_pin = 15  # 定义模拟引脚
+digital_pin = 14  # 定义数字引脚
 
-p1 = ADC(AnalogPin)
-p2 = Pin(DigitalPin, Pin.IN)
+p1 = ADC(analog_pin)
+p2 = Pin(digital_pin, Pin.IN)
 
 while True:
-    AnalogValue = p1.read_u16()
-    print("Analog Data:", AnalogValue)  # 打印模拟值
+    analog_value = p1.read_u16()
+    print("Analog Data:", analog_value)  # 打印模拟值
     print("Digital Data:", p2.value())  # 打印数字值
     time.sleep_ms(200)
 ```
@@ -100,4 +99,4 @@ while True:
 
 ## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_5Roamecfp27z">动手试一试</a>
+<a href="https://makecode.microbit.org/_5Roamecfp27z" target="_blank">动手试一试</a>

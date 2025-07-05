@@ -201,7 +201,7 @@ Arduino Uno上有一个自恢复保险丝，当短路或过流时，电流超过
 在Arduino Uno使用ATmega328p 芯片上，存储有bootloader程序，使得用户可以上传程序到开发板上，而不需要使用额外的编程器。这个上传程序的过程使用STK500协议完成。
 你也可以不使用bootloader，通过ICSP接口连接编程器给Arduino Uno上传程序。
 
-[点击下载《Arduino语法手册》](zh-cn/arduino_products/uno/arduino_uno_r3/ArduinoGrammarHandbook.pdf ':ignore')
+<a href="zh-cn/arduino_products/uno/arduino_uno_r3/ArduinoGrammarHandbook.pdf" target="_blank">点击下载《Arduino语法手册》</a>
 
 #### Arduino IDE上传Blink程序
 
@@ -209,4 +209,4 @@ Arduino Uno上有一个自恢复保险丝，当短路或过流时，电流超过
 
 上传成功之后，我们可以看到主板的D13引脚指示灯亮1秒，灭1秒，如此循环。(不同的电脑端口不一样，请选择对应的端口)
 
- 如果需要了解更多，请参阅[328P官方的手册](zh-cn/arduino_products/uno/arduino_uno_r3/ATmega328P_Datasheet.pdf ':ignore')
+如果需要了解更多，请参阅<a href="zh-cn/arduino_products/uno/arduino_uno_r3/ATmega328P_Datasheet.pdf" target="_blank">328P官方的手册</a>

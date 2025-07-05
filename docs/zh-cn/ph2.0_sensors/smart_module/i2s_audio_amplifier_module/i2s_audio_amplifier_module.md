@@ -29,11 +29,11 @@
 
 ![原理图原理图](schematic_diagram.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/MAX98375_i2s_dac_amp.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/MAX98375_i2s_dac_amp.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 芯片规格书
 
-[点击此处查看芯片规格书](http://www.szczkjgs.com/UploadFiles/fujian/3725/NS4168.pdf)
+<a href="http://www.szczkjgs.com/UploadFiles/fujian/3725/NS4168.pdf" target="_blank">点击此处查看芯片规格书</a>
 
 ## 使用示例
 

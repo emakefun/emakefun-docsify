@@ -10,7 +10,8 @@
 
 ## 原理图
 
- [查看原理图](zh-cn\ph2.0_sensors\sensors\infrared_obstacle_avoidance_module\InfraredObstacleAvoidance_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/InfraredObstacleAvoidance_schematic.pdf" target="_blank">查看原理图</a>
+
 ![1](picture/infrared_obstacle_avoidance_module_schematic.png)
 
 ## 模块参数
@@ -36,29 +37,28 @@
 
 ## Arduino示例程序
 
-<a href="zh-cn\ph2.0_sensors\sensors\infrared_obstacle_avoidance_module\InfraredObstacleAvoidanceModule.zip" download>下载示例程序</a>
+<a href="zh-cn/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/InfraredObstacleAvoidanceModule.zip" download>下载示例程序</a>
 
 ```c++
-#define DigitalPin  7//定义红外避障模块数字引脚
-#define AnalogPin  A0//定义红外避障模块模拟引脚
+#define DIGITAL_PIN 7  // 定义红外避障模块数字引脚
+#define ANALOG_PIN A0  // 定义红外避障模块模拟引脚
 
-int  AnalogValue = 0 ;//定义数字变量,读取红外避障模块模拟值
-int  DigitalValue = 0 ;//定义数字变量,读取红外避障模块数字值
+int analog_value = 0;   // 定义数字变量,读取红外避障模块模拟值
+int digital_value = 0;  // 定义数字变量,读取红外避障模块数字值
 
-void setup()
-{
-  Serial.begin(9600);//设置串口波特率
-  pinMode(DigitalPin, INPUT);//设置红外避障模块数字引脚为输入
-  pinMode(AnalogPin, INPUT);//设置红外避障模块模拟引脚为输入
+void setup() {
+  Serial.begin(9600);          // 设置串口波特率
+  pinMode(DIGITAL_PIN, INPUT);  // 设置红外避障模块数字引脚为输入
+  pinMode(ANALOG_PIN, INPUT);   // 设置红外避障模块模拟引脚为输入
 }
-void loop()
-{
-  AnalogValue = analogRead(AnalogPin);//读取红外避障模块模拟值
-  DigitalValue = digitalRead(DigitalPin);//读取红外避障模块数字值
+
+void loop() {
+  analog_value = analogRead(ANALOG_PIN);     // 读取红外避障模块模拟值
+  digital_value = digitalRead(DIGITAL_PIN);  // 读取红外避障模块数字值
   Serial.print("InfraredObstacleAvoidanceModuleAnalog Data:");
-  Serial.print(AnalogValue);//打印红外避障模块模拟值
+  Serial.print(analog_value);  // 打印红外避障模块模拟值
   Serial.print("InfraredObstacleAvoidanceModuleDigital Data:");
-  Serial.println(DigitalValue);//打印红外避障模块数字值
+  Serial.println(digital_value);  // 打印红外避障模块数字值
   delay(200);
 }
 ```
@@ -71,15 +71,15 @@ void loop()
 from machine import ADC,Pin
 import time
 
-AnalogPin = 15  # 定义红外避障模块模拟接口引脚
-DigitalPin = 14  # 定义红外避障模块数字接口引脚
+analog_pin = 15  # 定义红外避障模块模拟接口引脚
+digital_pin = 14  # 定义红外避障模块数字接口引脚
 
-p1 = ADC(AnalogPin)
-p2 = Pin(DigitalPin, Pin.IN)  
+p1 = ADC(analog_pin)
+p2 = Pin(digital_pin, Pin.IN)  
         
 while True:
-    AnalogValue = p1.read_u16()  # 读取红外避障模块模拟值
-    print("InfraredObstacleAvoidanceModuleAnalog Data:", AnalogValue)  # 打印红外避障模块模拟值
+    analog_value = p1.read_u16()  # 读取红外避障模块模拟值
+    print("InfraredObstacleAvoidanceModuleAnalog Data:", analog_value)  # 打印红外避障模块模拟值
     print("InfraredObstacleAvoidanceModuleDigital Data:", p2.value())  # 打印红外避障模块数字值
     time.sleep_ms(200)
 ```
@@ -89,16 +89,16 @@ while True:
 ```python
 from microbit import *
 
-AnalogPin = pin1  # 定义红外避障模块模拟接口引脚
-DigitalPin = pin0  # 定义红外避障模块数字接口引脚
+analog_pin = pin1  # 定义红外避障模块模拟接口引脚
+digital_pin = pin0  # 定义红外避障模块数字接口引脚
 
 while True:
-    AnalogValue = AnalogPin.read_analog()  # 读取红外避障模块模拟值
-    print("Analog Data:", AnalogValue)  # 打印红外避障模块模拟值
-    print("Digital Data:", DigitalPin.read_digital())  # 打印红外避障模块数字值
+    analog_value = analog_pin.read_analog()  # 读取红外避障模块模拟值
+    print("Analog Data:", analog_value)  # 打印红外避障模块模拟值
+    print("Digital Data:", digital_pin.read_digital())  # 打印红外避障模块数字值
     sleep(0.2)
 ```
 
 ## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_9zWVg7hvCJHy">动手试一试</a>
+<a href="https://makecode.microbit.org/_9zWVg7hvCJHy" target="_blank">动手试一试</a>

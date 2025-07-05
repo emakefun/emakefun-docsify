@@ -12,7 +12,7 @@ LED是发光二极管的缩写，由混合化合物制成，即镓（Ga），砷
 
 ![原理图](picture/3.png)
 
-[点击查看原理图](zh-cn/ph2.0_sensors/displayers/trafficlight_module/红绿交通灯.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/trafficlight_module/红绿交通灯.pdf" target="_blank">点击查看原理图</a>
 
 ## 模块参数
 

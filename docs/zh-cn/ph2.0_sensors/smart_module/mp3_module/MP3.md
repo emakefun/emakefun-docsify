@@ -141,19 +141,18 @@ para1 para2: 00 0E 表示音量大小<br>
 ## Arduino示例程序
 
 ```c++
+#include "GD5800_Serial.h"
 
-include "GD5800_Serial.h"
-
-GD5800_Serial mp345(5, 6);                           // 初始化MP3
+GD5800_Serial mp345(5, 6);  // 初始化MP3
 
 void setup() {
   mp345.begin(9600);
-  mp345.setVolume(50);                                   // 设置音量为50
-  mp345.setLoopMode(MP3_LOOP_ALL);      // 设置循环模式为全部循环
-  mp345.setEqualizer(MP3_EQ_NORMAL);    // 设置音效为普通
+  mp345.setVolume(50);                // 设置音量为50
+  mp345.setLoopMode(MP3_LOOP_ALL);    // 设置循环模式为全部循环
+  mp345.setEqualizer(MP3_EQ_NORMAL);  // 设置音效为普通
 }
-void loop()  {
-   mp345.play();                                                  //  播放音乐
+void loop() {
+  mp345.play();  //  播放音乐
 }
 
 ```

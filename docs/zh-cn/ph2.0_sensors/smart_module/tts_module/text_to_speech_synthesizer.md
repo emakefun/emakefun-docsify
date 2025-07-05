@@ -2,7 +2,7 @@
 
 ## 实物图
 
-![实物图](picture\17583e3722a3da5fb675f0b799d5564.jpg)
+![实物图](picture/17583e3722a3da5fb675f0b799d5564.jpg)
 
 ## 概述
 
@@ -18,7 +18,7 @@
 | UTF16LE |
 | UTF8 |
 
-[点击查看芯片手册](zh-cn/ph2.0_sensors/smart_module/tts_module/ttsDataSheet.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/tts_module/ttsDataSheet.pdf" target="_blank">点击查看芯片手册</a>
 
 ## 模块参数
 
@@ -140,6 +140,6 @@
 
 ## micro:bit示例程序
 
-[点击打开micro:bit示例](https://makecode.microbit.org/_UF1dX0M0zi4E)
+<a href="https://makecode.microbit.org/_UF1dX0M0zi4E" target="_blank">点击打开micro:bit示例</a>
 
-[点击打开micro:bit语音识别和语音合成综合示例](https://makecode.microbit.org/_5W9gtHP0V96u)
+<a href="https://makecode.microbit.org/_5W9gtHP0V96u" target="_blank">点击打开micro:bit语音识别和语音合成综合示例</a>

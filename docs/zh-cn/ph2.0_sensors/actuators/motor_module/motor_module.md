@@ -24,19 +24,20 @@ TIDO
 ## Arduino代码示例
 
 ```c++
-#define INA 5   //定义电机A.B端口
-#define INB 6   //
+#define INA 5  // 定义电机A.B端口
+#define INB 6  //
+
 void setup() {
-  pinMode(INB, OUTPUT);  //设置电机端口为输出模式
+  pinMode(INB, OUTPUT);  // 设置电机端口为输出模式
   pinMode(INA, OUTPUT);  //
 }
 
 void loop() {
-  analogWrite(INA, 255);  //设置A端口为高电平
-  analogWrite(INB, 0);    //设置B端口为低电平
+  analogWrite(INA, 255);  // 设置A端口为高电平
+  analogWrite(INB, 0);    // 设置B端口为低电平
   delay(2000);            // 2s之后电机反转
-  analogWrite(INA, 0);    //设置A端口为低电平
-  analogWrite(INB, 255);  //设置B端口为高电平
-  delay(2000);            //电机反转2s然后正转
+  analogWrite(INA, 0);    // 设置A端口为低电平
+  analogWrite(INB, 255);  // 设置B端口为高电平
+  delay(2000);            // 电机反转2s然后正转
 }
 ```

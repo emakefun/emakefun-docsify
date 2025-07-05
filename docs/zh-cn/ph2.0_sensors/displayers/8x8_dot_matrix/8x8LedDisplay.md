@@ -12,7 +12,7 @@
 
 ![原理图](picture/6.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/8×8点阵.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/8×8点阵.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 

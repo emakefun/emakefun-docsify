@@ -12,7 +12,7 @@
 
 ![原理图](picture/water_droplets_sensor_schematic.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/sensors/water_droplets_sensor/water_droplets_sensor_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/water_droplets_sensor/water_droplets_sensor_schematic.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -38,26 +38,26 @@
 ## Arduino示例程序
 
 ```c++
-#define AnalogPin 15//定义传感器模拟接口引脚
-#define DigitalPin 14//定义传感器数字接口引脚
-int AnalogValue=0;
-byte DigitalValue=0;
+#define ANALOG_PIN 15   // 定义传感器模拟接口引脚
+#define DIGITAL_PIN 14  // 定义传感器数字接口引脚
 
-void setup()
-{
-  Serial.begin(9600);//设置串口波特率
-  pinMode(AnalogPin, INPUT);//将传感器模拟接口引脚设置为输入
-  pinMode(DigitalPin,INPUT);//将声传感器音数字接口引脚设置为输入
+int analog_value = 0;
+byte digital_value = 0;
+
+void setup() {
+  Serial.begin(9600);          // 设置串口波特率
+  pinMode(ANALOG_PIN, INPUT);   // 将传感器模拟接口引脚设置为输入
+  pinMode(DIGITAL_PIN, INPUT);  // 将声传感器音数字接口引脚设置为输入
 }
 
 void loop() {
-    AnalogValue= analogRead(AnalogPin);//读取传感器模拟值
-    DigitalValue=digitalRead(DigitalPin);//读取传感器数字值
-    Serial.print("Analog Data:");
-    Serial.println(AnalogValue);//打印传感器模拟值
-    Serial.print("Digital Data:");
-    Serial.println(DigitalValue);//打印传感器数字值
-    delay(200);
+  analog_value = analogRead(ANALOG_PIN);     // 读取传感器模拟值
+  digital_value = digitalRead(DIGITAL_PIN);  // 读取传感器数字值
+  Serial.print("Analog Data:");
+  Serial.println(analog_value);  // 打印传感器模拟值
+  Serial.print("Digital Data:");
+  Serial.println(digital_value);  // 打印传感器数字值
+  delay(200);
 }
 ```
 
@@ -69,15 +69,15 @@ void loop() {
 from machine import ADC,Pin
 import time
 
-AnalogPin = 15  # 定义传感器模拟接口引脚
-DigitalPin = 14  # 定义传感器数字接口引脚
+analog_pin = 15  # 定义传感器模拟接口引脚
+digital_pin = 14  # 定义传感器数字接口引脚
 
-p1 = ADC(AnalogPin)
-p2 = Pin(DigitalPin, Pin.IN)     # create input pin on GPIO2
+p1 = ADC(analog_pin)
+p2 = Pin(digital_pin, Pin.IN)     # create input pin on GPIO2
 
 while True:
-    AnalogValue = p1.read_u16()  # 读取传感器模拟值
-    print("Analog Data:", AnalogValue)  # 打印传感器模拟值
+    analog_value = p1.read_u16()  # 读取传感器模拟值
+    print("Analog Data:", analog_value)  # 打印传感器模拟值
     print("Digital Data:", p2.value())  # 打印传感器数字值
     time.sleep_ms(200)
 
@@ -98,4 +98,4 @@ while True:
 
 ## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_FaF5Xx1C2Tvb">动手试一试</a>
+<a href="https://makecode.microbit.org/_FaF5Xx1C2Tvb" target="_blank">动手试一试</a>

@@ -12,7 +12,7 @@
 
 ![2](picture/2.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/actuators/buzzerModule/有源蜂鸣器.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/actuators/buzzerModule/有源蜂鸣器.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -34,16 +34,17 @@
 ## Arduino IDE示例程序
 
 ```c++
-#define buzzer_pin A3  // Set the buzzer port to A3
+#define BUZZER_PIN A3  // Set the buzzer port to A3
+
 void setup() {
-  pinMode(buzzer_pin, OUTPUT);  // Set the buzzer port to output mode
+  pinMode(BUZZER_PIN, OUTPUT);  // Set the buzzer port to output mode
 }
 
-void loop()  {
-  digitalWrite(buzzer_pin,HIGH);  // Set the buzzer port to high level
-  delay(1);                       // Delay 1 ms
-  digitalWrite(buzzer_pin,LOW);   // Set the buzzer port to low level
-  delay(1);                       // Delay 1 ms
+void loop() {
+  digitalWrite(BUZZER_PIN, HIGH);  // Set the buzzer port to high level
+  delay(1);                        // Delay 1 ms
+  digitalWrite(BUZZER_PIN, LOW);   // Set the buzzer port to low level
+  delay(1);                        // Delay 1 ms
 }
 ```
 

@@ -18,7 +18,7 @@ DHT11数字温度 - 湿度传感器是一种包含校准数字信号输出的复
 
 ![原理图](picture/temperature_humidity_sensor_schematic.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/temperature_humidity_sensor_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/temperature_humidity_sensor_schematic.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -49,24 +49,26 @@ DHT11数字温度 - 湿度传感器是一种包含校准数字信号输出的复
 <a href="zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/temperature_humidity_sensor.zip" download>下载示例程序</a>
 
 ```c++
-#include <Wire.h>//导入通信库
-#include"dht11.h"//导入DHT11库
+#include <Wire.h>  //导入通信库
 
-#define DHT11Pin 3 //定义温湿度传感器引脚
+#include "dht11.h"  //导入DHT11库
 
-dht11 DHT11;//创建DHT11对象
+
+#define DHT11_PIN 3  // 定义温湿度传感器引脚
+
+dht11 dht;  // 创建DHT11对象
 
 void setup() {
-  Serial.begin(9600);//设置串口波特率
+  Serial.begin(9600);  // 设置串口波特率
 }
 
 void loop() {
-  DHT11.read(DHT11Pin);//初始化温湿度引脚
+  dht.read(DHT11_PIN);  // 初始化温湿度引脚
   Serial.print("Tep: ");
-  Serial.print((float)DHT11.temperature);//打印温度
-  Serial.print("C"); 
+  Serial.print((float)dht.temperature);  // 打印温度
+  Serial.print("C");
   Serial.print("     Hum: ");
-  Serial.print((float)DHT11.humidity);//打印湿度
+  Serial.print((float)dht.humidity);  // 打印湿度
   Serial.println("%");
   delay(200);
 }

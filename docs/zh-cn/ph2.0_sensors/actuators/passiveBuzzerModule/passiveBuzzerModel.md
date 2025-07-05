@@ -12,7 +12,7 @@
 
 ![9](picture/9.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/actuators/passiveBuzzerModule/无源.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/actuators/passiveBuzzerModule/无源.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -36,23 +36,19 @@
 ```c
 #define BUZZER_PIN A0
 
-void setup()  
-{  
-    pinMode(BUZZER_PIN,OUTPUT);  
-}  
-   
-void loop()  
-{  
-    for(int i = 200; i <= 800; i++)   // 200HZ ~ 800HZ  
-    {  
-        tone(BUZZER_PIN, i);
-    }  
-    delay(1000);                    //Max Frequency hold 1s   
-    for(int i= 800; i >= 200; i--)   // 800HZ ~ 200HZ
-    {  
-        tone(BUZZER_PIN, i);  
-        delay(10);  
-    }  
+void setup() {
+  pinMode(BUZZER_PIN, OUTPUT);
+}
+
+void loop() {
+  for (int i = 200; i <= 800; i++) {  // 200HZ ~ 800HZ
+    tone(BUZZER_PIN, i);
+  }
+  delay(1000);                      // Max Frequency hold 1s
+  for (int i = 800; i >= 200; i--) {  // 800HZ ~ 200HZ
+    tone(BUZZER_PIN, i);
+    delay(10);
+  }
 }
 ```
 

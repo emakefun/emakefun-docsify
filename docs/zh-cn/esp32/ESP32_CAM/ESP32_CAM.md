@@ -24,7 +24,7 @@ ESP32-CAM V2是基于乐鑫ESP32-DOWD-V3芯片而开发的一款小尺寸的摄�
 
 ![尺寸标注](picture/esp32_cam_size_mark.jpg)
 
-### [原理图](zh-cn/esp32/ESP32_CAM/esp32-cam2.0.pdf ':ignore')
+### <a href="zh-cn/esp32/ESP32_CAM/esp32-cam2.0.pdf" target="_blank">原理图</a>
 
 ![esp32-cam2.0_sch](./esp32-cam2.0_sch.png)
 

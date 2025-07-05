@@ -2,7 +2,7 @@
 
 ## 实物图
 
-![实物图](picture\ld3320.jpg)
+![实物图](picture/ld3320.jpg)
 
 ## 概述
 
@@ -20,7 +20,7 @@
 - 该模块采用MCU+`LD3320`设计，和应用主控采用I2C通讯，大大简化了用户接线和编程难度。
 - 支持多种工作模式：自动识别、按键触发识别、关键词触发识别、按键或关键词触发识别，让用户可以在不同工作场景中使用。
 
-- [点击查看芯片手册](zh-cn/ph2.0_sensors/smart_module/speech_recognizer/LD3320DataSheet.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/speech_recognizer/LD3320DataSheet.pdf" target="_blank">点击查看芯片手册</a>
 
 ## 模块参数
 

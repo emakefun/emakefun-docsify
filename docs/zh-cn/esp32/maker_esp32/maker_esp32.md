@@ -6,7 +6,7 @@
 
 ## 产品简介
 
-   Maker-ESP32是基于乐鑫科技的 [ESP32-WROOM-32](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf) 模组基础上开发的一款适用于创客教育的标志性产品，Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。采用东芝的电机驱动芯片，电流最大可达3.5A。
+   Maker-ESP32是基于乐鑫科技的 <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf" target="_blank">ESP32-WROOM-32</a> 模组基础上开发的一款适用于创客教育的标志性产品，Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。采用东芝的电机驱动芯片，电流最大可达3.5A。
 
 ## ESP32模组参数
 
@@ -58,9 +58,9 @@
 
 2.因为ESP32芯片特性，在Arduino框架下，主板的34、35、36、39引脚不能作为输出；并且34、35、36、39引脚做为输入时，不能设置上拉或下拉模式。
 
-[点击查看产品原理图](zh-cn/esp32/maker_esp32/Esp32_V1.5.pdf ':ignore')
+<a href="zh-cn/esp32/maker_esp32/Esp32_V1.5.pdf" target="_blank">点击查看产品原理图</a>
 
-[点击查看三维模型图](zh-cn/esp32/maker_esp32/maker-esp32.step ':ignore')
+<a href="zh-cn/esp32/maker_esp32/maker-esp32.step" target="_blank">点击查看三维模型图</a>
 
 ## Maker-ESP32驱动安装
 

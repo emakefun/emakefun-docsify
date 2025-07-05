@@ -12,7 +12,7 @@
 
 ![原理图](picture/5.png)
 
-[点击查看led灯模块原理图](zh-cn/ph2.0_sensors/displayers/led_module/LED灯.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/led_module/LED灯.pdf" target="_blank">点击查看led灯模块原理图</a>
 
 ## 模块参数
 

@@ -12,7 +12,7 @@ ADC按键模块是一种利用模数转换技术（ADC）实现按键检测的�
 
 ![ADC按键模块原理图](picture/schematic_diagram.jpg)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/base_input_module/adc_button_module/ADC_keyboard.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/adc_button_module/ADC_keyboard.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 

@@ -6,7 +6,7 @@
 
 ## 2. Product Introduction
 
- Based on Espressif's [ESP32-WROOM-32](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf) module, the Maker-ESP32 is  a 4MB Flash and 2.4 GHz, Wi-Fi, and Bluetooth dual-mode single-chip solution. Using Toshiba's motor driver chip, the current can reach up to 3.5A. 
+ Based on Espressif's <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf" target="_blank">ESP32-WROOM-32</a> module, the Maker-ESP32 is  a 4MB Flash and 2.4 GHz, Wi-Fi, and Bluetooth dual-mode single-chip solution. Using Toshiba's motor driver chip, the current can reach up to 3.5A.
 
 ## 3. ESP32 module parameters
 
@@ -46,9 +46,9 @@
 
 2. Due to the characteristics of the ESP32 chip, pins 34, 35, 36, and 39 of the motherboard cannot be used as output under the Arduino framework; In addition, when pins 34, 35, 36, and 39 are used as inputs, the pull-up or pull-down mode cannot be set.
 
-[Click to view the product schematic](en/esp32/maker_esp32/Esp32_V1.5.pdf)
+<a href="en/esp32/maker_esp32/Esp32_V1.5.pdf" target="_blank">Click to view the product schematic</a>
 
-[Click to view the 3D model diagram](en/esp32/maker_esp32/maker-esp32.step)
+<a href="en/esp32/maker_esp32/maker-esp32.step" target="_blank">Click to view the 3D model diagram</a>
 
 ## 6. Install the Maker-ESP32 driver
 
@@ -58,23 +58,23 @@ For details about how to install the driver, see this document: [Installing the 
 
 For details on how to upload programs on each platform, please refer to: [ESP32 Series Upload Program Methods](en/esp32/esp32_software_instructions/esp32_software_instructions.md)
 
-**Note**: When developing with the Arduino IDE, please update esp32 to the latest version. 
+**Note**: When developing with the Arduino IDE, please update esp32 to the latest version.
 
 ## 8. Mixly sample program
 
-[Click to download a sample program for the motor](en/esp32/maker_esp32/esp32_mixly/esp32_motor_test.zip)
+<a href="en/esp32/maker_esp32/esp32_mixly/esp32_motor_test.zip" download>Click to download a sample program for the motor</a>
 
-[Click to download a sample program for RGB lights](en/esp32/maker_esp32/esp32_mixly/esp32_rgb_test.zip)
+<a href="en/esp32/maker_esp32/esp32_mixly/esp32_rgb_test.zip" download>Click to download a sample program for RGB lights</a>
 
-[Click to download the pilot example program](en/esp32/maker_esp32/esp32_mixly/esp32_servo_test.zip)
+<a href="en/esp32/maker_esp32/esp32_mixly/esp32_servo_test.zip" download>Click to download the pilot example program</a>
 
-[Click to download the OLED sample program](en/esp32/maker_esp32/esp32_mixly/esp32_oled_test.zip)
+<a href="en/esp32/maker_esp32/esp32_mixly/esp32_oled_test.zip" download>Click to download the OLED sample program</a>
 
-[Click to download the comprehensive example program](en/esp32/maker_esp32/esp32_mixly/esp32_motor_servo_test.zip)
+<a href="en/esp32/maker_esp32/esp32_mixly/esp32_motor_servo_test.zip" download>Click to download the comprehensive example program</a>
 
 When the motor and servo are used together, do not use the motor drive block that comes with Mixly, but use the operation pin to control it, because when the servo motor is used together, the PWM pipe conflict of the drive block that comes with mixly belongs to the problem of the mixly software library itself.
 
-[Click here to download a sample program for stepper motors](en/esp32/maker_esp32/esp32_mixly/esp32_stepper_test.zip)
+<a href="en/esp32/maker_esp32/esp32_mixly/esp32_stepper_test.zip" download>Click here to download a sample program for stepper motors</a>
 
 Take the 28BYJ-48 stepper motor with Stepper1 interface as an example, and the wiring method is as follows:
 
@@ -88,17 +88,17 @@ Take the 28BYJ-48 stepper motor with Stepper1 interface as an example, and the w
 
 ## 9. Arduino sample program
 
-[Click here to download a sample program for the motor](en/esp32/maker_esp32/esp32_arduino/motorTest.zip)
+<a href="en/esp32/maker_esp32/esp32_arduino/motorTest.zip" download>Click here to download a sample program for the motor</a>
 
-[Click here to download a sample program for RGB lights](en/esp32/maker_esp32/esp32_arduino/rgbTest.zip)
+<a href="en/esp32/maker_esp32/esp32_arduino/rgbTest.zip" download>Click here to download a sample program for RGB lights</a>
 
-[Click here to download a sample servo program](en/esp32/maker_esp32/esp32_arduino/servoTest.zip)
+<a href="en/esp32/maker_esp32/esp32_arduino/servoTest.zip" download>Click here to download a sample servo program</a>
 
-[Click here to download the OLED sample program](en/esp32/maker_esp32/esp32_arduino/oledTest.zip)
+<a href="en/esp32/maker_esp32/esp32_arduino/oledTest.zip" download>Click here to download the OLED sample program</a>
 
-[Click here to download a comprehensive sample program for motor servos](en/esp32/maker_esp32/esp32_arduino/motorServotTest.zip)
+<a href="en/esp32/maker_esp32/esp32_arduino/motorServotTest.zip" download>Click here to download a comprehensive sample program for motor servos</a>
 
-[Click here to download a sample program for stepper motors](en/esp32/maker_esp32/esp32_arduino/stepperTest.zip)
+<a href="en/esp32/maker_esp32/esp32_arduino/stepperTest.zip" download>Click here to download a sample program for stepper motors</a>
 
 Take the 28BYJ-48 stepper motor with Stepper1 interface as an example, the wiring method is as follows:
 
@@ -112,35 +112,35 @@ Take the 28BYJ-48 stepper motor with Stepper1 interface as an example, the wirin
 
 ## 10. The ESP32 series connects using the PS3 Bluetooth wireless controller
 
-[Click here to view the ESP32 series connected using the PS3 Bluetooth wireless controller](en/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
+<a href="en/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md" target="_blank">Click here to view the ESP32 series connected using the PS3 Bluetooth wireless controller</a>
 
-[Click here to download the PS3 control motor servo case](en/esp32/maker_esp32/esp32_arduino/esp32PS3ControlTest.zip)
+<a href="en/esp32/maker_esp32/esp32_arduino/esp32PS3ControlTest.zip" download>Click here to download the PS3 control motor servo case</a>
 
-[Click to download the Mixly library PS3 controller](en/esp32/maker_esp32/esp32_mixly/esp32_emakefun_sensors_mixly.zip)
+<a href="en/esp32/maker_esp32/esp32_mixly/esp32_emakefun_sensors_mixly.zip" download>Click to download the Mixly library PS3 controller</a>
 
-[Click here to download the PS3 controller Mixly sample](en/esp32/maker_esp32/esp32_mixly/esp32_ps3_rock_test.zip)
+<a href="en/esp32/maker_esp32/esp32_mixly/esp32_ps3_rock_test.zip" download>Click here to download the PS3 controller Mixly sample</a>
 
-[Click here to download the PS3 controller Mind+ library](en/esp32/maker_esp32/esp32_mindplus/emakefun-ps3.zip)
+<a href="en/esp32/maker_esp32/esp32_mindplus/emakefun-ps3.zip" download>Click here to download the PS3 controller Mind+ library</a>
 
-[Click here to download the PS3 controller Mind+ sample](en/esp32/maker_esp32/esp32_mindplus/ps3_test.zip)
+<a href="en/esp32/maker_esp32/esp32_mindplus/ps3_test.zip" download>Click here to download the PS3 controller Mind+ sample</a>
 
 ## Mind+ sample program
 
-[Click here to download a sample program for the motor](en/esp32/maker_esp32/esp32_mindplus/esp32MindplusMotor.zip)
+<a href="en/esp32/maker_esp32/esp32_mindplus/esp32MindplusMotor.zip" download>Click here to download a sample program for the motor</a>
 
-[Click here to download the Maker-esp32Mind+ library](en/esp32/maker_esp32/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext)
+<a href="en/esp32/maker_esp32/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext" download>Click here to download the Maker-esp32Mind+ library</a>
 
 ## FAQ
 
-**Q**: The Mixly downloader is unsuccessful? 
+**Q**: The Mixly downloader is unsuccessful?
 
-**A**：1. The installation path of Mixly should not contain special characters such as Chinese and spaces; Put it in the root directory of the computer, and the hierarchical directory should not be too deep; For example, D:\mixly2.0-win32-x64 is the root directory installation; 
+**A**：1. The installation path of Mixly should not contain special characters such as Chinese and spaces; Put it in the root directory of the computer, and the hierarchical directory should not be too deep; For example, D:\mixly2.0-win32-x64 is the root directory installation;
 
 \2. Check whether the serial port is selected correctly, if there is no serial port, please install the CH340G driver first; The serial port should not be occupied by other applications;
 
 \3. Check the program for errors;
 
-**Q**: The motor program is uploaded successfully, but the motor does not rotate? 
+**Q**: The motor program is uploaded successfully, but the motor does not rotate?
 
 **A**: 1. The motor needs DC head power supply, 6-24V, it is recommended to use two 3.7V lithium batteries, whether the power switch is on or not
 

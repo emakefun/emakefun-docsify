@@ -11,7 +11,7 @@
 
 ## 原理图
 
- [查看原理图](zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor_schematic.pdf" target="_blank">查看原理图</a>
 
 ![原理图](picture/flame_sensor_schematic.png)
 
@@ -41,26 +41,25 @@
 <a href="zh-cn/ph2.0_sensors/sensors/flame_sensor/flame_sensor.rar" download>下载示例程序</a>
 
 ```c
-#define FlamelDigitalPin  7//定义火焰传感器数字引脚
-#define FlamelAnalogPin   A0//定义火焰传感器模拟引脚
+#define FLAMEL_DIGITAL_PIN 7  // 定义火焰传感器数字引脚
+#define FLAMEL_ANALOG_PIN A0  // 定义火焰传感器模拟引脚
 
-int  FlamelAnalogValue = 0 ;//定义数字变量,读取火焰模拟值
-int  FlamelDigitalValue = 0 ;//定义数字变量,读取火焰数字值
+int flamel_analog_value = 0;   // 定义数字变量,读取火焰模拟值
+int flamel_digital_value = 0;  // 定义数字变量,读取火焰数字值
 
-void setup()
-{
-  Serial.begin(9600);//设置串口波特率
-  pinMode(FlamelDigitalPin, INPUT);//设置火焰传感器数字引脚为输入
-  pinMode(FlamelAnalogPin, INPUT);//设置火焰传感器模拟引脚为输入
+void setup() {
+  Serial.begin(9600);                // 设置串口波特率
+  pinMode(FLAMEL_DIGITAL_PIN, INPUT);  // 设置火焰传感器数字引脚为输入
+  pinMode(FLAMEL_ANALOG_PIN, INPUT);   // 设置火焰传感器模拟引脚为输入
 }
-void loop()
-{
-  FlamelAnalogValue = analogRead(FlamelAnalogPin);//读取火焰传感器模拟值
-  FlamelDigitalValue = digitalRead(FlamelDigitalPin);//读取火焰传感器数字值
+
+void loop() {
+  flamel_analog_value = analogRead(FLAMEL_ANALOG_PIN);     // 读取火焰传感器模拟值
+  flamel_digital_value = digitalRead(FLAMEL_DIGITAL_PIN);  // 读取火焰传感器数字值
   Serial.print("FlamelAnalog Data:  ");
-  Serial.print(FlamelAnalogValue);//打印火焰传感器模拟值
+  Serial.print(flamel_analog_value);  // 打印火焰传感器模拟值
   Serial.print("FlamelDigital Data:  ");
-  Serial.println(FlamelDigitalValue);//打印火焰传感器数字值
+  Serial.println(flamel_digital_value);  // 打印火焰传感器数字值
   delay(200);
 }
 ```
@@ -70,18 +69,18 @@ void loop()
 ### Esp32 MicroPython示例程序
 
 ```python
-from machine import ADC,Pin
+from machine import ADC, Pin
 import time
 
-AnalogPin = 15  # 定义火焰传感器模拟接口引脚
-DigitalPin = 14  # 定义火焰传感器数字接口引脚
+analog_pin = 15  # 定义火焰传感器模拟接口引脚
+digital_pin = 14  # 定义火焰传感器数字接口引脚
 
-p1 = ADC(AnalogPin)
-p2 = Pin(DigitalPin, Pin.IN)  
+p1 = ADC(analog_pin)
+p2 = Pin(digital_pin, Pin.IN)  
         
 while True:
-    AnalogValue = p1.read_u16()  # 读取火焰传感器模拟值
-    print("Analog Data:", AnalogValue)  # 打印火焰传感器模拟值
+    analog_value = p1.read_u16()  # 读取火焰传感器模拟值
+    print("Analog Data:", analog_value)  # 打印火焰传感器模拟值
     print("Digital Data:", p2.value())  # 打印火焰传感器数字值
     time.sleep_ms(200)
 ```
@@ -91,16 +90,16 @@ while True:
 ```python
 from microbit import *
 
-AnalogPin = pin1  # 定义火焰传感器模拟接口引脚
-DigitalPin = pin0  # 定义火焰传感器数字接口引脚
+analog_pin = pin1  # 定义火焰传感器模拟接口引脚
+digital_pin = pin0  # 定义火焰传感器数字接口引脚
 
 while True:
-    AnalogValue = AnalogPin.read_analog()  # 读取火焰传感器模拟值
-    print("Analog Data:", AnalogValue)  # 打印火焰传感器模拟值
-    print("Digital Data:", DigitalPin.read_digital())  # 打印火焰传感器数字值
+    analog_value = analog_pin.read_analog()  # 读取火焰传感器模拟值
+    print("Analog Data:", analog_value)  # 打印火焰传感器模拟值
+    print("Digital Data:", digital_pin.read_digital())  # 打印火焰传感器数字值
     sleep(0.2)
 ```
 
 ## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_FoqM4TLuUdzW">动手试一试</a>
+<a href="https://makecode.microbit.org/_FoqM4TLuUdzW" target="_blank">动手试一试</a>

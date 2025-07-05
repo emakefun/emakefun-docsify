@@ -91,9 +91,8 @@ microbit makecode测试程序<https://makecode.microbit.org/_aFpi2fPow8Tk>
 ```python
 read_joystick_left_x(self)
 
-参数:无
-返回值：返回0~255的模拟值
-
+# 参数:无
+# 返回值：返回0~255的模拟值
 ```
 
 #### 2.read_joystick_left_y(self)
@@ -103,8 +102,8 @@ read_joystick_left_x(self)
 ```python
 read_joystick_left_y(self)
 
-参数:无
-返回值：返回0~255的模拟值
+# 参数:无
+# 返回值：返回0~255的模拟值
 
 ```
 
@@ -115,8 +114,8 @@ read_joystick_left_y(self)
 ```python
 read_joystick_right_x(self)
 
-参数:无
-返回值：返回0~255的模拟值
+# 参数:无
+# 返回值：返回0~255的模拟值
 
 ```
 
@@ -127,8 +126,8 @@ read_joystick_right_x(self)
 ```python
 read_joystick_right_y(self)
 
-参数:无
-返回值：返回0~255的模拟值
+# 参数:无
+# 返回值：返回0~255的模拟值
 
 ```
 
@@ -139,14 +138,14 @@ read_joystick_right_y(self)
 ```python
 read_button_status(self, button)
 
-参数:
-button: 按钮类型，取值范围为BUTTON_LEFT_REG、BUTTON_RIGHT_REG、JOYSTICK_BUTTON_RIGHT、JOYSTICK_BUTTON_LEFT，分别表示左侧按键、右侧按键、左摇杆按键、右摇杆按键。
-返回值：返回Button_Status类成员变量，表示按钮的按下状态，取值范围为
-    JOYSTICK_PRESS_DOWN = 0  //按下
-    JOYSTICK_PRESS_UP = 1    //释放
-    JOYSTICK_SINGLE_CLICK = 3//单击
-    JOYSTICK_DOUBLE_CLICK = 4//双击
-    JOYSTICK_LONG_PRESS_HOLD = 6//长按
-    JOYSTICK_NONE_PRESS = 8  //无
+# 参数:
+# button: 按钮类型，取值范围为BUTTON_LEFT_REG、BUTTON_RIGHT_REG、JOYSTICK_BUTTON_RIGHT、JOYSTICK_BUTTON_LEFT，分别表示左侧按键、右侧按键、左摇杆按键、右摇杆按键。
+# 返回值：返回Button_Status类成员变量，表示按钮的按下状态，取值范围为
+#     JOYSTICK_PRESS_DOWN = 0  //按下
+#     JOYSTICK_PRESS_UP = 1    //释放
+#     JOYSTICK_SINGLE_CLICK = 3//单击
+#     JOYSTICK_DOUBLE_CLICK = 4//双击
+#     JOYSTICK_LONG_PRESS_HOLD = 6//长按
+#     JOYSTICK_NONE_PRESS = 8  //无
 
 ```

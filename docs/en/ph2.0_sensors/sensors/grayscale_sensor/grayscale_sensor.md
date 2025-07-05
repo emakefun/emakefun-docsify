@@ -2,11 +2,7 @@
 
 ## Physical picture
 
-
-
-![Physical picture](http://localhost:3000/en/ph2.0_sensors/sensors/grayscale_sensor/picture/grayscale_sensor.png)
-
-
+![Physical picture](picture/grayscale_sensor.png)
 
 ## Overview
 
@@ -14,13 +10,9 @@ Grayscale sensor is an analog sensor, which has a light-emitting diode and a pho
 
 ## Schematic
 
-[View Schematic](en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor_schematic.pdf)
+<a href="en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor_schematic.pdf" target="_blank">View Schematic</a>
 
-
-
-![Schematic](http://localhost:3000/en/ph2.0_sensors/sensors/grayscale_sensor/picture/grayscale_sensor_schematic.png)
-
-
+![Schematic](picture/grayscale_sensor_schematic.png)
 
 ## Module parameters
 
@@ -37,26 +29,22 @@ Grayscale sensor is an analog sensor, which has a light-emitting diode and a pho
 
 ## Mechanical Dimensions
 
-
-
-![Mechanical Dimensions](http://localhost:3000/en/ph2.0_sensors/sensors/grayscale_sensor/picture/grayscale_sensor_assembly.png)
-
-
+![Mechanical Dimensions](picture/grayscale_sensor_assembly.png)
 
 ## Arduino Example Program
 
-[Download the sample program](en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.zip)
+<a href="en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.zip" download>Download the sample program</a>
 
 ```c
-void setup(){
-Serial.begin(9600); // Set the serial port baud rate to 9600
-pinMode(A3, INPUT); // Set A3 as an input pin
+void setup() {
+  Serial.begin(9600);  // Set the serial port baud rate to 9600
+  pinMode(A3, INPUT);  // Set A3 as an input pin
 }
 
-void loop(){
-Serial.println(analogRead(A3)); // Print the data obtained by A3 pin
-delay(200); // Delay 200ms
-}Copy to clipboardErrorCopied
+void loop() {
+  Serial.println(analogRead(A3));  // Print the data obtained by A3 pin
+  delay(200);                      // Delay 200ms
+}
 ```
 
 ## MicroPython Example Program
@@ -64,17 +52,17 @@ delay(200); // Delay 200ms
 ### Esp32 MicroPython Example Program
 
 ```python
-from machine import ADC,Pin
+from machine import ADC, Pin
 import time
 
-AnalogPin = 2 # Define grayscale sensor analog interface pin
+analog_pin = 2 # Define grayscale sensor analog interface pin
 
-p = ADC(AnalogPin)
+p = ADC(analog_pin)
 
 while True:
-AnalogValue = p.read_u16() # Read grayscale sensor analog value
-print(AnalogValue) # Print grayscale sensor analog value
-time.sleep_ms(200)Copy to clipboardErrorCopied
+    analog_value = p.read_u16() # Read grayscale sensor analog value
+    print(analog_value) # Print grayscale sensor analog value
+    time.sleep_ms(200)
 ```
 
 ### Micro:bit MicroPython Example Program
@@ -83,9 +71,9 @@ time.sleep_ms(200)Copy to clipboardErrorCopied
 from microbit import *
 
 while True:
-p = pin1.read_analog() # Read grayscale sensor analog value
-print( p) # Print grayscale sensor analog value
-sleep(200)Copy to clipboardErrorCopied
+    p = pin1.read_analog() # Read grayscale sensor analog value
+    print( p) # Print grayscale sensor analog value
+    sleep(200)
 ```
 
 ## MakeCode Example Programs

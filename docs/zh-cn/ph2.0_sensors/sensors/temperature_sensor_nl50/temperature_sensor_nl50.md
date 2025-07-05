@@ -12,7 +12,7 @@ NL50是由我司自主研发的温度传感器，该温度传感器是利用二�
 
 ### 原理图
 
-[点击下载NL50原理图](zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50.pdf" target="_blank">点击下载NL50原理图</a>
 
 ### 芯片规格书
 

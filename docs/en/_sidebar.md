@@ -73,7 +73,7 @@
     - [Single motor driver](/zh-cn/ph2.0_sensors/actuators/)
     - [Dule motor driver](/zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel.md)
     - [4line encoder motor driver](/zh-cn/ph2.0_sensors/actuators/4line_encoder_motor_driver.md)
-    - [I2S Audio amp ](/zh-cn/ph2.0_sensors/I2S_audio_amp.md)
+    - [I2S Audio amp](/zh-cn/ph2.0_sensors/I2S_audio_amp.md)
     - [Small atomizer](/zh-cn/ph2.0_sensors/amall_atomizer.md)
     - [Serial bus servo driver](/zh-cn/ph2.0_sensors/serial_bus_servo_driver.md)
 
@@ -116,15 +116,15 @@
     - [GPS module]()
 
 - Power Module
-    - [5V电源]()
-    - [升降压舵机电源]()
-    - [MPPT太阳能充电板]()
-    - [3.7V Boost Charging Battery Module](/en/power_module/3.7v_battery_module/3.7v_battery_module.md)
-    - [7.4V Rechargeable Battery Module](/en/power_module/16340_2s_li_battery_module/16340_2s_li_battery_module.md)
-    - [Two 18650 Lithium Battery Modules](en/power_module/18650_2s_li_battery_module/18650_2s_li_battery_module.md)
-    - [三节18650锂电池充电模块](/zh-cn//power_module/18650_3s_li_battery_module.md)
+  - [5V电源]()
+  - [升降压舵机电源]()
+  - [MPPT太阳能充电板]()
+  - [3.7V Boost Charging Battery Module](/en/power_module/3.7v_battery_module/3.7v_battery_module.md)
+  - [7.4V Rechargeable Battery Module](/en/power_module/16340_2s_li_battery_module/16340_2s_li_battery_module.md)
+  - [Two 18650 Lithium Battery Modules](en/power_module/18650_2s_li_battery_module/18650_2s_li_battery_module.md)
+  - [三节18650锂电池充电模块](/zh-cn//power_module/18650_3s_li_battery_module.md)
 
-- Arduino 
+- Arduino
   - Nano
     - [nano-v3.0](/general/algorithm/data-structures/stack/README.zh-CN.md)
     - [ble-nano](/general/algorithm/data-structures/queue/README.zh-CN.md)(/zh-cn/arduino_products/nano/ble-nano/README.md)
@@ -142,25 +142,25 @@
     - [传感器套件介绍]()
 
 - micro:bit
-    - [microbit主板介绍](https://microbit.org/zh-cn/get-started/features/overview/)
-    - [makecode介绍](/zh-cn/microbit/makecode/MakeCode使用介绍.md)
-    - [microbit micropython介绍](/zh-cn/micro_bit/microbit_micropython/microbit_micropython.md)
-    - [io:bit](/zh-cn/micro_bit/iot_bit.md)
-    - [sensor:bit](/zh-cn/micro_bit/sensorbit.md)
-    - [motor:bit](/zh-cn/micro_bit/motorbit.md)
-    - [joysitck:bit](/zh-cn/micro_bit/joystickbit.md)
+  - [microbit主板介绍](https://microbit.org/zh-cn/get-started/features/overview/)
+  - [makecode介绍](/zh-cn/microbit/makecode/MakeCode使用介绍.md)
+  - [microbit micropython介绍](/zh-cn/micro_bit/microbit_micropython/microbit_micropython.md)
+  - [io:bit](/zh-cn/micro_bit/iot_bit.md)
+  - [sensor:bit](/zh-cn/micro_bit/sensorbit.md)
+  - [motor:bit](/zh-cn/micro_bit/motorbit.md)
+  - [joysitck:bit](/zh-cn/micro_bit/joystickbit.md)
 
 - esp serial
-    - [esp32-software](en/esp32/esp32_software_instructions/esp32_software_instructions.md)
-    - [esp32-devkit-32e](en/esp32/esp32_devkit_32e/esp32_devkit_32e.md)
-    - [esp32-uno](en/esp32/esp32-uno/esp32-uno.md)
-    - [esp32-iot-board](en/esp32/esp32_iot_board/esp32_iot_board.md)
-    - [maker-esp32](en/esp32/maker_esp32/maker_esp32.md)
-    - [maker-esp32-pro](en/esp32/maker_esp32_pro/maker_esp32_pro.md)
-    - [esp32-cam V2](en/esp32/ESP32_CAM/ESP32_CAM.md)
+  - [esp32-software](en/esp32/esp32_software_instructions/esp32_software_instructions.md)
+  - [esp32-devkit-32e](en/esp32/esp32_devkit_32e/esp32_devkit_32e.md)
+  - [esp32-uno](en/esp32/esp32-uno/esp32-uno.md)
+  - [esp32-iot-board](en/esp32/esp32_iot_board/esp32_iot_board.md)
+  - [maker-esp32](en/esp32/maker_esp32/maker_esp32.md)
+  - [maker-esp32-pro](en/esp32/maker_esp32_pro/maker_esp32_pro.md)
+  - [esp32-cam V2](en/esp32/ESP32_CAM/ESP32_CAM.md)
 - RaspberryPi
-    - [RaspberryPi Sensor Expansion Board](en/raspberrypi/raspberrypi_sensor_board/raspberrypi_sensor_board.md)
-    - [RaspberryPi Motor Driver Board](en/raspberrypi/raspberrypi_motordriver_board/raspberrypi_motordriver_board.md)
+  - [RaspberryPi Sensor Expansion Board](en/raspberrypi/raspberrypi_sensor_board/raspberrypi_sensor_board.md)
+  - [RaspberryPi Motor Driver Board](en/raspberrypi/raspberrypi_motordriver_board/raspberrypi_motordriver_board.md)
 
 - [open source hardware](/zh-cn/)
   - [robot driver board]()
@@ -173,6 +173,3 @@
   - [encoder]()
 
 - [About me](/zh-cn/about.md)
-
-
-

@@ -13,20 +13,19 @@
 ## Arduino示例程序
 
 ```c++
-#define DigitalPin  7//定义模块数字引脚
+#define DIGITAL_PIN 7  // 定义模块数字引脚
 
-int  DigitalValue = 0 ;//定义数字变量,读取红外避障模块数字值
+int digital_value = 0;  // 定义数字变量,读取红外避障模块数字值
 
-void setup()
-{
-  Serial.begin(9600);//设置串口波特率
-  pinMode(DigitalPin, INPUT);//设置模块数字引脚为输入
+void setup() {
+  Serial.begin(9600);          // 设置串口波特率
+  pinMode(DIGITAL_PIN, INPUT);  // 设置模块数字引脚为输入
 }
-void loop()
-{
-  DigitalValue = digitalRead(DigitalPin);//读取模块数字值
+
+void loop() {
+  digital_value = digitalRead(DIGITAL_PIN);  // 读取模块数字值
   Serial.print("InfraredObstacleAvoidanceModuleDigital Data:");
-  Serial.println(DigitalValue);//打印模块数字值
+  Serial.println(digital_value);  // 打印模块数字值
   delay(200);
 }
 ```
@@ -39,12 +38,12 @@ void loop()
 from machine import Pin
 import time
 
-DigitalPin = 14  # 定义模块数字接口引脚
+digital_pin = 14  # 定义模块数字接口引脚
 
-p2 = Pin(DigitalPin, Pin.IN)  
+p2 = Pin(digital_pin, Pin.IN)  
         
 while True:
-    AnalogValue = p1.read_u16()  # 读取模块模拟值
+    analog_value = p1.read_u16()  # 读取模块模拟值
     print("InfraredObstacleAvoidanceModuleDigital Data:", p2.value())  # 打印模块数字值
     time.sleep_ms(200)
 ```
@@ -54,11 +53,11 @@ while True:
 ```python
 from microbit import *
 
-DigitalPin = pin0  # 定义模块数字接口引脚
+digital_pin = pin0  # 定义模块数字接口引脚
 
 while True:
-    AnalogValue = AnalogPin.read_analog()  # 读取模块模拟值
-    print("Digital Data:", DigitalPin.read_digital())  # 打印模块数字值
+    analog_value = AnalogPin.read_analog()  # 读取模块模拟值
+    print("Digital Data:", digital_pin.read_digital())  # 打印模块数字值
     sleep(0.2)
 ```
 

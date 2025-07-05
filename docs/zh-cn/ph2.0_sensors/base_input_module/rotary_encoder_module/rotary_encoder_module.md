@@ -12,7 +12,7 @@
 
 ![原理图](picture/rotary_encoder_module_schematic.png)
 
-[点击查看原理图](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_module_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_module_schematic.pdf" target="_blank">点击查看原理图</a>
 
 ## 模块参数
 

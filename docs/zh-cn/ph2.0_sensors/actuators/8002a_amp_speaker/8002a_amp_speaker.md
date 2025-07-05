@@ -12,7 +12,7 @@
 
 ![原理图](picture/schematic_diagram.jpg)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/8002A_AMP_Speaker.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/8002A_AMP_Speaker.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 通过ESP32播放自定义音频文件
 
@@ -77,7 +77,7 @@ xxd -i -C ./pcm.raw pcm.h
 
 #include <cstdint>
 
-constexpr uint8_t kPcmData[]  /*数组名修改成该变量名*/ 
+constexpr uint8_t kPcmData[] /*数组名修改成该变量名*/
 
 ```
 
@@ -111,12 +111,12 @@ constexpr uint8_t kPcmData[]  /*数组名修改成该变量名*/
 #include "BluetoothA2DPSink.h"
 
 AnalogAudioStream out;
-//由于库文件原因，功放喇叭默认接25号端口；
+// 由于库文件原因，功放喇叭默认接25号端口；
 BluetoothA2DPSink a2dp_sink(out);
 
 void setup() {
-  //在此修改蓝牙设备名称
-  a2dp_sink.start("EmakeFun DAC");  
+  // 在此修改蓝牙设备名称
+  a2dp_sink.start("EmakeFun DAC");
 }
 
 void loop() {

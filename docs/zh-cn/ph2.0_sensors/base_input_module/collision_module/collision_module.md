@@ -12,7 +12,7 @@
 
 ![原理图](picture/collision_module_schematic.png)
 
-[原理图下载](zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module_schematic.pdf" target="_blank">原理图下载</a>
 
 ## 模块参数
 
@@ -39,24 +39,20 @@
 <a href="zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module.zip" download>下载示例程序</a>
 
 ```c
-int led_out = 4;//定义LED引脚
-int keypad_pin = 3; //定义碰触开关引脚
-int collision_value;
-void setup()
-{
-  pinMode(led_out,OUTPUT); //初始化LED连接的引脚为输出引脚
-  pinMode(keypad_pin,INPUT); //初始化碰触开关连接的引脚为输入引脚
+int led_out = 4;     // 定义LED引脚
+int keypad_pin = 3;  // 定义碰触开关引脚
+int collision_value = 0;
+
+void setup() {
+  pinMode(led_out, OUTPUT);    // 初始化LED连接的引脚为输出引脚
+  pinMode(keypad_pin, INPUT);  // 初始化碰触开关连接的引脚为输入引脚
 }
-void loop()
-{
-  collision_value = digitalRead(keypad_pin); //读取碰触开关输入引脚的值
-  if (collision_value == LOW) 
-  {
-      digitalWrite(led_out,HIGH); //如果读取值为低，即碰触开关被按下去，LED亮
-  }
-  else
-  {
-      digitalWrite(led_out,LOW); //如果读取值为低即碰触开关没有被按下，LED灭
+void loop() {
+  collision_value = digitalRead(keypad_pin);  // 读取碰触开关输入引脚的值
+  if (collision_value == LOW) {
+    digitalWrite(led_out, HIGH);  // 如果读取值为低，即碰触开关被按下去，LED亮
+  } else {
+    digitalWrite(led_out, LOW);  // 如果读取值为低即碰触开关没有被按下，LED灭
   }
 }
 ```

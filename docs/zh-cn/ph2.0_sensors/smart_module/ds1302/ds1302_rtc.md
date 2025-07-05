@@ -52,7 +52,7 @@ DS1302是一款低功耗的实时时钟（RTC）模块，具备计时、日历�
 
 ![tupian6](picture/tupian6.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/smart_module/ds1302/DS1302.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/ds1302/DS1302.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 机械安装图
 
@@ -90,6 +90,6 @@ DS1302有关日历、时间的寄存器共有12个，其中有7个寄存器（�
 
 ### micro:bit MakeCode示例程序
 
-[点击查看示例程序](https://makecode.microbit.org/S63587-43847-56920-65953)
+<a href="https://makecode.microbit.org/S63587-43847-56920-65953" target="_blank">点击查看示例程序</a>
 
-[点击查看用户库](https://github.com/zhuning239/DS1302)
+<a href="https://github.com/zhuning239/DS1302" target="_blank">点击查看用户库</a>

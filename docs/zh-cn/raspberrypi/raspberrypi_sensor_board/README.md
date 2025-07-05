@@ -1,4 +1,5 @@
 # RaspberryPi-Sensor-Board
+
 [中文版](README_zh.md)
 
  [Emakefun](http://www.emakefun.com)
@@ -15,6 +16,7 @@
 - On-board DC-DC step-down chip Wide voltage input: 5 ~ 36V Voltage output: 5V Maximum current output: 3A
 
 ## MCU specifications
+
 - Operating voltage: 3.3V and 5V, selected via jumper cap, ADC checks voltage
 - MCU: STM32
 - IO: 8-channel ADC detection
@@ -31,13 +33,13 @@
 
 ![picture9-1.jpg](./picture/picture9—1.jpg)
 
-  - 0x10 ~ 0x17: read ADC raw data
+- 0x10 ~ 0x17: read ADC raw data
 
-  - 0x20 ~ 0x27: read input voltage(mv)
+- 0x20 ~ 0x27: read input voltage(mv)
 
-  - 0x30 ~ 0x37: Read the ratio of input voltage to output voltage, Input voltage / output voltage(0~100)
+- 0x30 ~ 0x37: Read the ratio of input voltage to output voltage, Input voltage / output voltage(0~100)
 
-##    Raspberry Pi I2C library installation
+## Raspberry Pi I2C library installation
 
 &ensp;&ensp;&ensp;&ensp;Open the Raspberry Pi terminal and enter the "sudo raspi-config" command, then follow the sequence shown below.
 
@@ -80,68 +82,73 @@ Reboot the Raspberry Pi to make the new Settings take effect:
 &ensp;&ensp;&ensp;&ensp;The analog sensor inputs the analog voltage into the 10-bit analog-to-digital converter. After the analog-to-digital converter converts the analog data into digital data, it transmits the digital data to the Raspberry Pi via I2C.
 
 ### Python Demo
-[Demo](https://gitee.com/jiexinjx/sensor_expansion_board/repository/archive/master.zip)
+
+<a href="https://gitee.com/jiexinjx/sensor_expansion_board/repository/archive/master.zip" download>Demo</a>
+
 ### Python code
 
-```
-     from sensor_expansion_board_i2c import IoExpansionBoardI2c
-     from smbus2 import SMBus
-     import time
-     
-     # 初始化I2C总线
-     i2c_bus = 1  # 树莓派上的I2C总线号，通常是1
-     i2c_address = 0x24  # I2C设备地址
-     
-     # 创建IoExpansionBoardI2c对象
-     io_expansion_board_i2c = IoExpansionBoardI2c(i2c_bus, i2c_address)
-     
-     # 设置引脚7为ADC模式
-     io_expansion_board_i2c[7].mode = IoExpansionBoardI2c.ADC_MODE
-     
-     # 循环读取ADC值
-     try:
-         while True:
-             adc_value = io_expansion_board_i2c[7].adc_value
-             print(adc_value)
-             time.sleep(1)  # 延时1秒
-     except KeyboardInterrupt:
-         # print("程序已停止")
-         pass
+```python
+from sensor_expansion_board_i2c import IoExpansionBoardI2c
+from smbus2 import SMBus
+import time
+
+# 初始化I2C总线
+i2c_bus = 1  # 树莓派上的I2C总线号，通常是1
+i2c_address = 0x24  # I2C设备地址
+
+# 创建IoExpansionBoardI2c对象
+io_expansion_board_i2c = IoExpansionBoardI2c(i2c_bus, i2c_address)
+
+# 设置引脚7为ADC模式
+io_expansion_board_i2c[7].mode = IoExpansionBoardI2c.ADC_MODE
+
+# 循环读取ADC值
+try:
+    while True:
+        adc_value = io_expansion_board_i2c[7].adc_value
+        print(adc_value)
+        time.sleep(1)  # 延时1秒
+except KeyboardInterrupt:
+    # print("程序已停止")
+    pass
 ```
 
 ### C++ Demo
-[Demo](https://gitee.com/jiexinjx/sensor_board/repository/archive/master.zip)
+
+<a href="https://gitee.com/jiexinjx/sensor_board/repository/archive/master.zip" download>Demo</a>
+
 ### C++ code
 
-```
-    #include <iostream>
-    #include <chrono>
-    #include <thread>
-    #include "gpio_expansion_board.h"
-    
-    // 创建 GpioExpansionBoard 实例
-    GpioExpansionBoard gpio_expansion_board;
-    
-    int main() {
-      std::cout << "Setup" << std::endl;
-    
-      // 配置E0为ADC模式
-      if (!gpio_expansion_board.SetGpioMode(GpioExpansionBoard::kGpioPinE0, GpioExpansionBoard::kAdc)) {
-        std::cerr << "Failed to set GPIO mode for E0" << std::endl;
-        return -1;
-      }
-    
-      while (true) {
-        // 读取E0的ADC值并打印
-        uint16_t adc_value = gpio_expansion_board.GetGpioAdcValue(GpioExpansionBoard::kGpioPinE0);
-        std::cout << "ADC value: " << adc_value << std::endl;
-    
-        // 延时100毫秒
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
-      }
-    
-      return 0;
-    }
+```c++
+#include <chrono>
+#include <iostream>
+#include <thread>
+
+#include "gpio_expansion_board.h"
+
+// 创建 GpioExpansionBoard 实例
+GpioExpansionBoard gpio_expansion_board;
+
+int main() {
+  std::cout << "Setup" << std::endl;
+
+  // 配置E0为ADC模式
+  if (!gpio_expansion_board.SetGpioMode(GpioExpansionBoard::kGpioPinE0, GpioExpansionBoard::kAdc)) {
+    std::cerr << "Failed to set GPIO mode for E0" << std::endl;
+    return -1;
+  }
+
+  while (true) {
+    // 读取E0的ADC值并打印
+    uint16_t adc_value = gpio_expansion_board.GetGpioAdcValue(GpioExpansionBoard::kGpioPinE0);
+    std::cout << "ADC value: " << adc_value << std::endl;
+
+    // 延时100毫秒
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+  }
+
+  return 0;
+}
 ```
 
 &ensp;&ensp;&ensp;&ensp;If the following error occurs while generating the current file：

@@ -63,4 +63,4 @@ Mixly2.0只介绍云端导入，离线导入请自行研究。
 
 <a href="zh-cn/software/mixly/emakefun_sensor.zip" download>点击下载ESP32的Arduino示例代码</a>
 
-[点击下载ESP32米思齐传感器离线库](zh-cn/software/mixly/emakefun_sensors_esp32.zip ':ignore')
+<a href="zh-cn/software/mixly/emakefun_sensors_esp32.zip" download>点击下载ESP32米思齐传感器离线库</a>

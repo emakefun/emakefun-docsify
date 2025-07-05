@@ -12,7 +12,7 @@
 
 ![原理图](picture/slide_potentiometer_schematic.png)
 
-[点击查看原理图](zh-cn/ph2.0_sensors/base_input_module/slide_potentiometer/slide_potentiometer_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/slide_potentiometer/slide_potentiometer_schematic.pdf" target="_blank">点击查看原理图</a>
 
 ## 模块参数
 
@@ -39,23 +39,25 @@
 <a href="zh-cn/ph2.0_sensors/base_input_module/slide_potentiometer/slide_potentiometer.zip" download>下载示例程序</a>
 
 ``` c
-float Voltage = 0, data; //定义刚获取的模拟值 data 模数转化后的数值 i 实际的电阻大小 j
-int Position = 0;
-int analogPin = A3; //定义滑动变阻器接口
-void setup()
-{
-  pinMode(analogPin, INPUT); //设置端口输入
-  Serial.begin(9600); // 设置串口波特率
+float voltage = 0;
+int data = 0;  // 定义刚获取的模拟值 data 模数转化后的数值 i 实际的电阻大小 j
+int position = 0;
+int analog_pin = A3;  // 定义滑动变阻器接口
+
+void setup() {
+  pinMode(analog_pin, INPUT);  // 设置端口输入
+  Serial.begin(9600);         // 设置串口波特率
 }
+
 void loop() {
-  data = analogRead(analogPin); // 获取端口的模拟值
-  Voltage = (data / 1023) * 5; //模拟值和数字值转换 * 电压 得到当前电压
-  Position = (data / 1023) * 100; //模拟值和数字值转换 * 100 得到滑杆位置
-  Serial.print("Voltage is:");
-  Serial.println(Voltage); // 打印获取到的电压值
+  data = analogRead(analog_pin);    // 获取端口的模拟值
+  voltage = (data / 1023) * 5;     // 模拟值和数字值转换 * 电压 得到当前电压
+  position = (data / 1023) * 100;  // 模拟值和数字值转换 * 100 得到滑杆位置
+  Serial.print("voltage is:");
+  Serial.println(voltage);  // 打印获取到的电压值
   Serial.print("V");
   Serial.print("Slider position(0~100): ");
-  Serial.println(Position); //打印获取到的滑杆位置
+  Serial.println(position);  // 打印获取到的滑杆位置
   delay(200);
 }
 ```

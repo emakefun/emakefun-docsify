@@ -14,11 +14,11 @@ MPPT_Module无需外部控制，即插即用。使用非常便利。除此之外
 
 ### 原理图
 
-[点击下载MPPT_Module原理图](zh-cn/ph2.0_sensors/smart_module/MPPT_Module/MPPT_Module.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/MPPT_Module/MPPT_Module.pdf" target="_blank">点击下载MPPT_Module原理图</a>
 
 ### 芯片规格书
 
-[点击下载MPPT_Chip规格书](zh-cn/ph2.0_sensors/smart_module/MPPT_Module/MPPT_Chip.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/MPPT_Module/MPPT_Chip.pdf" target="_blank">点击下载MPPT_Chip规格书</a>
 
 ### 尺寸图
 

@@ -30,4 +30,4 @@ MAX7219驱动的8x32点阵屏由4个8x8 LED模块级联组成，通过SPI接口�
 
 ## micro:bit 示例程序
 
-[动手试一试](https://makecode.microbit.org/S47114-53129-37900-76795)
+<a href="https://makecode.microbit.org/S47114-53129-37900-76795" target="_blank">动手试一试</a>

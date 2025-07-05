@@ -101,8 +101,6 @@ Thonny是一个免费、开源的软件平台，体积小，界面简单，操�
 
 参考[CH340驱动说明](https://docs.emakefun.com/CH340/CH340/)文档进行安装。
 
-
-
 ## 四、烧录固件
 
 要在ESP32主板上运行Python程序，我们需要先将固件烧入到ESP32主板。
@@ -234,10 +232,6 @@ ESP32复位后，首先运行根目录下的boot.py文件，然后运行你的�
 
 ![image75 ](pictures/image75 .jpeg)
 
-
-
-
-
 ![image76](pictures/image76.jpeg)
 
 ## 六、Thonny常见的操作
@@ -252,7 +246,7 @@ ESP32复位后，首先运行根目录下的boot.py文件，然后运行你的�
 
 ### 6.2 下载代码到电脑
 
-在“**MicroPython 设备**”内选中“**boot.py**”，右键选择“**下载到 D:\代码**”把代码下载到你的电脑里。
+在“**MicroPython 设备**”内选中“**boot.py**”，右键选择“**下载到 D:/代码**”把代码下载到你的电脑里。
 
 ![image79](pictures/image79.jpeg)
 
@@ -272,7 +266,7 @@ ESP32复位后，首先运行根目录下的boot.py文件，然后运行你的�
 
 ![image83](pictures/image83.jpeg)
 
-单击菜单栏上的![image84](pictures\image84.jpeg) ,可以将代码保存到你的电脑或ESP32上。这里选择保存到“MicroPython 设备”。
+单击菜单栏上的![image84](pictures/image84.jpeg) ,可以将代码保存到你的电脑或ESP32上。这里选择保存到“MicroPython 设备”。
 
 ![image85](pictures/image85.jpeg)
 
