@@ -12,7 +12,7 @@
 
 ![5](picture/3pinMotorModule.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/motorModule2/motor3pin.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/motorModule2/motor3pin.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -34,19 +34,17 @@ TODO
 ## Arduino IDE示例程序
 
 ```c
-void setup()
-{
-    pinMode(5, OUTPUT);  //设置电机5端口为输出模式
+void setup() {
+  pinMode(5, OUTPUT);  // 设置电机5端口为输出模式
 }
 
-void loop()
-{         
-    analogWrite(5, 255);  // 设置电机速度为255
- delay(2000);               //2s之后电机调速
-    analogWrite(5, 100);  //设置电机速度为100
- delay(2000);                //2s之后电机停
-    analogWrite(5, 0);  //设置电机速度为0
- delay(2000);               
+void loop() {
+  analogWrite(5, 255);  // 设置电机速度为255
+  delay(2000);          // 2s之后电机调速
+  analogWrite(5, 100);  // 设置电机速度为100
+  delay(2000);          // 2s之后电机停
+  analogWrite(5, 0);    // 设置电机速度为0
+  delay(2000);
 }
 ```
 
@@ -54,7 +52,7 @@ void loop()
 
 ![3pinMotorMixly](./picture/3pinMotorMixly.png)
 
-[点击下载Mixly案例](zh-cn/ph2.0_sensors/motorModule2/3pinMotorMixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/motorModule2/3pinMotorMixly.zip" download>点击下载Mixly案例</a>
 
 ## microbit示例程序
 

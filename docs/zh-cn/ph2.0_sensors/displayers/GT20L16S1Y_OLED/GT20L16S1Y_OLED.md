@@ -15,9 +15,9 @@ SSD1306是一款用于有机/聚合物发光二极管点阵图形显示系统的
 - 通信方式：IIC (SSD1306 地址0x3C，MCU地址0x51)
 - 接口类型：PH2.0-4Pin (G V SDA SCL)
 
-- [点击下载SSD1306数据手册](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/SSD1306.pdf ':ignore')
+- <a href="zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/SSD1306.pdf" target="_blank">点击下载SSD1306数据手册</a>
 
-- [点击下载字库芯片GT20L16S1Y数据手册](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED/GT20L16S1Ydatasheet.pdf ':ignore')
+- <a href="zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Ydatasheet.pdf" target="_blank">点击下载字库芯片GT20L16S1Y数据手册</a>
 
 ## 模块特点
 
@@ -54,26 +54,27 @@ void setup() {
 
 void loop() {
   u8g2.firstPage();
-  do
-  {    
+  do {
     u8g2.ShowFont(0, 0, "EMAKEFUN易创空间www.emakefun.com");
-  }while(u8g2.nextPage());
+  } while (u8g2.nextPage());
 }
 ```
 
 ### Arduino函数介绍
 
 ```c++
+/*
 显示字体
 输入参数：
 （x,y）起始坐标，显示字符的左上角坐标 
 *str：要显示的UTF8字符数据可直接写汉字和字符
+*/
 uint8_t ShowFont(uint8_t x, uint8_t y, uint8_t *str);
 ```
 
 ### Arduino示例程序
 
-[下载最新库程序](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED.zip" download>下载最新库程序</a>
 
 ### MagicBlock图形化编程块
 
@@ -81,8 +82,8 @@ uint8_t ShowFont(uint8_t x, uint8_t y, uint8_t *str);
 
 ![oled_mixly](picture/oled.png)
 
-[点击下载Mixly示例程序](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/oled_mixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/oled_mixly.zip" download>点击下载Mixly示例程序</a>
 
 ### micro:bit MakeCode块
 
-[点击查看micro:bit示例程序](https://makecode.microbit.org/_1xP2br2C10zX)
+<a href="https://makecode.microbit.org/_1xP2br2C10zX" target="_blank">点击查看micro:bit示例程序</a>

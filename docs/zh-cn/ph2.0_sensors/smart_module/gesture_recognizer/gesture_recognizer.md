@@ -62,13 +62,13 @@
 
 即将手势识别模块插入I2C接口即可。
 
-![接线图](picture\wire_diagram.jpg)
+![接线图](picture/wire_diagram.jpg)
 
 ### 测试
 
 Arduino 程序示例说明以及下载链接如下：
 
-- Arduino库和示例程序：[点击此处链接下载](zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/emakefun_gesture_recognizer-latest.zip ':ignore')
+- Arduino库和示例程序：<a href="zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/emakefun_gesture_recognizer-latest.zip" download>点击此处链接下载</a>
 
 - 主类和接口说明：[点击此处链接查看](https://emakefun-arduino-library.github.io/emakefun_gesture_recognizer/classemakefun_1_1_gesture_recognizer.html)
 
@@ -76,46 +76,46 @@ Arduino 程序示例说明以及下载链接如下：
 
 下载好上述的Arduino库，打开Arduino IDE，点击项目->导入库->添加.ZIP库，选择下载好的库文件，点击打开，然后点击确定。
 
-![添加zip包](picture\104.png)
+![添加zip包](picture/104.png)
 
-![加入zip包](picture\105.png)
+![加入zip包](picture/105.png)
 
 等待库文件安装完即可。
 
 选择主板型号，比如我的是Arduino Uno，然后点击确定。
 
-![选择主板型号](picture\6.png)
+![选择主板型号](picture/6.png)
 
 #### 打开示例程序
 
 打开Arduino IDE，点击文件->示例->Emakefun Gesture Recognizer->get_gesture然后点击打开。
 
-![打开示例程序](picture\106.png)
+![打开示例程序](picture/106.png)
 
 选择COM口，然后点击上传。
 
-![上传程序](picture\107.png)
+![上传程序](picture/107.png)
 
 打开串口监视器，选择波特率为115200.
 
-![串口监视器](picture\108.png)
+![串口监视器](picture/108.png)
 
 可以从串口监视器观察到，对传感器做不同手势会输出不同的数据。
 
-![串口输出](picture\109.png)
+![串口输出](picture/109.png)
 
 ## Mixly示例程序
 
-[点击此处下载Mixly库以及示例程序](zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer_8_8_matrix_mixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer_8_8_matrix_mixly.zip" download>点击此处下载Mixly库以及示例程序</a>
 
 ## MicroPython示例程序
 
-[点击此处下载ESP32 MicroPython库以及示例程序](zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer_esp32_micropython.zip" download>点击此处下载ESP32 MicroPython库以及示例程序</a>
 
-[点击此处下载micro:bit MicroPython库以及示例程序](zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer_microbit_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer_microbit_micropython.zip" download>点击此处下载micro:bit MicroPython库以及示例程序</a>
 
 ## micro:bit MakeCode示例程序
 
 MakeCode用户库链接: <https://github.com/emakefun-makecode-extensions/emakefun_gesture_recognizer>
 
-- 示例程序: 识别手势并显示图标和串口打印 [点击此处链接查看](https://makecode.microbit.org/_8wKYfX8z6KJA)
+- 示例程序: 识别手势并显示图标和串口打印 <a href="https://makecode.microbit.org/_8wKYfX8z6KJA" target="_blank">点击此处链接查看</a>

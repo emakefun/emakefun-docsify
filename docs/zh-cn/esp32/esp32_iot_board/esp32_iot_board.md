@@ -6,7 +6,7 @@
 
 ## 二、产品介绍
 
-ESP32 IOT BOARD是基于乐鑫科技的 [ESP32-WROOM-32](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf) 原装模组基础上开发的一款适用于创客教育的产品。Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。本主板板载2路AT8833电机驱动芯片，电流最大可达1.2A。支持DC头供电，所有可用引脚全部PH2.0接口的方式引出，方便外接传感器，搭建应用场景。
+ESP32 IOT BOARD是基于乐鑫科技的 <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf" target="_blank">ESP32-WROOM-32</a> 原装模组基础上开发的一款适用于创客教育的产品。Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。本主板板载2路AT8833电机驱动芯片，电流最大可达1.2A。支持DC头供电，所有可用引脚全部PH2.0接口的方式引出，方便外接传感器，搭建应用场景。
 
 ### 2.1 模组参数
 
@@ -40,7 +40,7 @@ ESP32 IOT BOARD是基于乐鑫科技的 [ESP32-WROOM-32](https://www.espressif.c
 
 ![原理图](picture/schematic_diagram.png)
 
-[点击此处查看原理图](zh-cn/esp32/esp32_iot_board/esp32_ph2.0_mainboard.pdf ':ignore')
+<a href="zh-cn/esp32/esp32_iot_board/esp32_ph2.0_mainboard.pdf" target="_blank">点击此处查看原理图</a>
 
 ### 2.4 尺寸说明
 

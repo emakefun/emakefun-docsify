@@ -54,7 +54,7 @@ ESP32 AI小智聊天机器人模块是一款基于ESP32芯片的AI聊天机器�
 
 ### 烧录固件
 
-[点击下载ESP32 Flash下载工具](zh-cn/ph2.0_sensors/smart_module/esp32_ai_xiaozhi/flash_download_tool.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/esp32_ai_xiaozhi/flash_download_tool.zip" target="_blank">点击下载ESP32 Flash下载工具</a>
 
 将下载后的文件进行解压后打开'flash_download_tool_3.9.8_6.exe'文件.
 
@@ -64,7 +64,7 @@ chip type选择ESP32，点击OK。
 
 ![选择chip type](picture/3.jpg)
 
-下载[ESP32 AI小智聊天机器人模块固件](zh-cn/ph2.0_sensors/smart_module/esp32_ai_xiaozhi/nulllab_esp32_xiaozhi.bin ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/esp32_ai_xiaozhi/nulllab_esp32_xiaozhi.bin" target="_blank">ESP32 AI小智聊天机器人模块固件</a>
 
 选择刚刚下载的固件文件。
 
@@ -114,8 +114,8 @@ chip type选择ESP32，点击OK。
 
 打开语音交互模式，按下语音按钮即GPIO口34处的按键，即可进行语音交互。
 
-[更多信息可以参考小智 AI 聊天机器人百科全书](https://ccnphfhqs21z.feishu.cn/wiki/F5krwD16viZoF0kKkvDcrZNYnhb)
+<a href="https://ccnphfhqs21z.feishu.cn/wiki/F5krwD16viZoF0kKkvDcrZNYnhb" target="_blank">更多信息可以参考小智 AI 聊天机器人百科全书</a>
 
 ## 源码
 
-本项目为开源项目，你可以[点击此处查看源码](https://github.com/nulllab-org/xiaozhi-esp32/tree/nulllab_esp32)
+本项目为开源项目，你可以<a href="https://github.com/nulllab-org/xiaozhi-esp32/tree/nulllab_esp32" target="_blank">点击此处查看源码</a>

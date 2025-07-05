@@ -12,7 +12,7 @@
 
 ![原理图](picture/rotary_encoder_module_schematic.png)
 
-[点击查看原理图](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_module_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_module_schematic.pdf" target="_blank">点击查看原理图</a>
 
 ## 模块参数
 
@@ -70,7 +70,7 @@
 | IO 3    | B          |
 | IO 4    | D          |
 
-[点击此处下载zip库](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/a21-master.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/a21-master.zip" download>点击此处下载zip库</a>
 
 下载好上述zip库后，打开Arduino IDE，选择项目->导入库->添加.ZIP库，选择刚下载的zip库，等待安装完成。
 
@@ -90,17 +90,17 @@
 
 ## Mixly示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_Mixly_demo.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_Mixly_demo.zip" download>下载示例程序</a>
 
 ## ESP32 MicroPython示例程序
 
-[点击此处下载ESP32 MicroPython示例程序](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/ec11_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/ec11_esp32_micropython.zip" download>点击此处下载ESP32 MicroPython示例程序</a>
 
 ## micro:bit示例程序
 
 ### micro:bit Python 示例程序
 
-[点击此处下载micro:bit Python示例程序](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/ec11_microbit_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/ec11_microbit_micropython.zip" download>点击此处下载micro:bit Python示例程序</a>
 
 ### micro:bit MakeCode 示例程序
 

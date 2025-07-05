@@ -10,7 +10,7 @@
 
 ## 芯片规格书
 
-[芯片规格书点击此处查看](zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/mfrc522_chip_manual.PDF ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/mfrc522_chip_manual.PDF" target="_blank">芯片规格书点击此处查看</a>
 
 ## 尺寸图
 
@@ -87,4 +87,4 @@ RFID模块接在拓展板I2C端口上即可。
 | Mixly示例程序                                  |
 | Mind+库和示例程序                                                      |
 
-<span id="jump">[上述资料点击此处下载](zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/data_collection.zip ':ignore')</span>
+<span id="jump"><a href="zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/data_collection.zip" download>上述资料点击此处下载</a></span>

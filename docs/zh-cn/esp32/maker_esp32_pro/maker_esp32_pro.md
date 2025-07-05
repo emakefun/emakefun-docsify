@@ -6,7 +6,7 @@
 
 ## 概述
 
-   MAKER-ESP32-PRO是基于乐鑫科技的 [ESP32-WROOM-32](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf) 模组基础上开发的一款适用于创客教育的标志性产品，Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。板载4路编码电机和直流电机，最大驱动电流3A，编码电机和直流电机复用驱动引脚，即同一个端口，不能同时驱动编码电机和直流电机。
+   MAKER-ESP32-PRO是基于乐鑫科技的 <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf" target="_blank">ESP32-WROOM-32</a> 模组基础上开发的一款适用于创客教育的标志性产品，Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。板载4路编码电机和直流电机，最大驱动电流3A，编码电机和直流电机复用驱动引脚，即同一个端口，不能同时驱动编码电机和直流电机。
 
 ## ESP32模组参数
 
@@ -26,7 +26,7 @@
 
 ## 原理图
 
-[点击查看原理图](zh-cn/esp32/maker_esp32_pro/maker-esp32_pro.pdf  ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/maker-esp32_pro.pdf" target="_blank">点击查看原理图</a>
 
 ## 产品参数
 
@@ -56,25 +56,25 @@
 
 ## Mixly示例程序
 
-[点击下载编码电机库](zh-cn/esp32/maker_esp32_pro/maker-esp32-pro-mixly.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/maker-esp32-pro-mixly.zip" download>点击下载编码电机库</a>
 
-[点击下载电机舵机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_motor_servo_test.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_motor_servo_test.zip" download>点击下载电机舵机示例程序</a>
 
-[点击下载舵机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_servo_test.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_servo_test.zip" download>点击下载舵机示例程序</a>
 
-[点击下载OLED示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_oled_test.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_oled_test.zip" download>点击下载OLED示例程序</a>
 
 ## Mind+示例程序
 
-   [点击下载电机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/esp32MindplusMotor.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/esp32MindplusMotor.zip" download>点击下载电机示例程序</a>
 
-   [点击下载Maker-esp32Mind+库文件](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext" download>点击下载Maker-esp32Mind+库文件</a>
 
 ## Arduino示例程序
 
-[点击下载舵机示例程序](zh-cn/esp32/maker_esp32_pro/esp32_arduino/servoTest.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/servoTest.zip" download>点击下载舵机示例程序</a>
 
-[点击下载OLED示例程序](zh-cn/esp32/maker_esp32_pro/esp32_arduino/oledTest.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/oledTest.zip" download>点击下载OLED示例程序</a>
 
 ### 驱动编码电机与直流电机
 
@@ -174,15 +174,15 @@
 
 [点击查看ESP32系列连接使用PS3蓝牙无线手柄](zh-cn/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
 
-[点击下载PS3控制电机舵机案例](zh-cn/esp32/maker_esp32_pro/esp32_arduino/esp32PS3ControlTest.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/esp32PS3ControlTest.zip" download>点击下载PS3控制电机舵机案例</a>
 
-[点击下载Mixly库PS3手柄](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_emakefun_sensors_mixly.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_emakefun_sensors_mixly.zip" download>点击下载Mixly库PS3手柄</a>
 
-[点击下载PS3手柄Mixly示例](zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_ps3_rock_test.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_ps3_rock_test.zip" download>点击下载PS3手柄Mixly示例</a>
 
-[点击下载PS3手柄 Mind+库](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-ps3.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-ps3.zip" download>点击下载PS3手柄 Mind+库</a>
 
-[点击下载PS3手柄 Mind+示例](zh-cn/esp32/maker_esp32_pro/esp32_mindplus/ps3_test.zip ':ignore')
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/ps3_test.zip" download>点击下载PS3手柄 Mind+示例</a>
 
 ## FAQ
 

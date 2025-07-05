@@ -60,7 +60,7 @@ arduino uno, ble-uno 3.0,  ble-uno4.2  ble-uno5.3 四款产品对比表格
 
 ### 原理图
 
-[原理图下载](zh-cn/arduino_products/uno/ble-uno/schematic/ble-uno4.2.pdf ':ignore')
+<a href="zh-cn/arduino_products/uno/ble-uno/schematic/ble-uno4.2.pdf" target="_blank">原理图下载</a>
 
 ![Ble_Uno_sch](./image/Ble_Uno_sch.png)
 
@@ -95,7 +95,7 @@ ble-uno烧写的为最新Arduino Uno官方Bootloader所以需要使用IDE 1.8.8�
 
 ## ble-uno和安卓手机连接
 
-1) 打开ble控制程序[ble_control_led.ino](zh-cn/arduino_products/uno/ble-uno/example/ble_contorl_led/ble_contorl_led.ino ':ignore')主板上Link（引脚13）上的LED灯程序
+1) 打开ble控制程序<a href="zh-cn/arduino_products/uno/ble-uno/example/ble_contorl_led/ble_contorl_led.ino" download>ble_control_led.ino</a>主板上Link（引脚13）上的LED灯程序
 
 ```c
 String ble_data;
@@ -108,10 +108,9 @@ void setup() {
 }
 
 void loop() {
-  while (Serial.available() > 0)  
-  {
-      ble_data += char(Serial.read());
-      delay(2);
+  while (Serial.available() > 0) {
+    ble_data += char(Serial.read());
+    delay(2);
   }
   if (ble_data.compareTo("on") == 0) {
     Serial.println("turn on led");
@@ -120,7 +119,7 @@ void loop() {
   if (ble_data.compareTo("off") == 0) {
     Serial.println("turn off led");
     digitalWrite(led_pin, LOW);
-  }   
+  }
   ble_data = "";
 }
 ```
@@ -183,7 +182,7 @@ void loop() {
 
 ## AT指令集
 
-ble-uno的AT指令可通过Arduino自带的硬件串口0（RX)、1 (TX）控制，波特率支持9600、19200、38400、57600、115200。ble-uno串口默认波特率为115200bps。
+ble-uno的AT指令可通过Arduino自带的硬件串口0（RX）、1 (TX）控制，波特率支持9600、19200、38400、57600、115200。ble-uno串口默认波特率为115200bps。
 
 AT指令还可以通过直连TypeC数据线直连控制和APP的为0xFFE2的characteristics来控制。
 
@@ -396,7 +395,7 @@ ble-uno最核心的功能就是蓝牙转串口透传功能，所以所谓Arduino
 ```c
 auto data = "123456789abcdefghjk\n";
 Serial.write(data.c_str(), 20);
-delay(100);  //必须要延时 100ms以上
+delay(100);  // 必须要延时 100ms以上
 ```
 
 ## AT指令测试
@@ -422,22 +421,21 @@ int led_pin = 13;
 void setup() {
   Serial.begin(115200);
   pinMode(led_pin, OUTPUT);
-  Serial.println("AT+ROLE=0");  // 设置蓝牙为主机
-  delay(50);  // AT指令设置后需要延时50ms
-  Serial.println("AT+CON=83:46:8c:e4:c2:84");  //连接mac地址的蓝牙从机
+  Serial.println("AT+ROLE=0");                 // 设置蓝牙为主机
+  delay(50);                                   // AT指令设置后需要延时50ms
+  Serial.println("AT+CON=83:46:8c:e4:c2:84");  // 连接mac地址的蓝牙从机
 }
 
 void loop() {
-  while (Serial.available() > 0)  
-  {
-      ble_data += char(Serial.read());
-      delay(2);
+  while (Serial.available() > 0) {
+    ble_data += char(Serial.read());
+    delay(2);
   }
-  if (ble_data.endsWith("OK\r\n") > 0) {   //判断AT返回结果为OK
+  if (ble_data.endsWith("OK\r\n") > 0) {  // 判断AT返回结果为OK
     Serial.println("connect success");
     digitalWrite(led_pin, HIGH);
   }
-  if (ble_data.endsWith("ERROR\r\n") > 0) { //判断AT返回结果为ERROR
+  if (ble_data.endsWith("ERROR\r\n") > 0) {  // 判断AT返回结果为ERROR
     Serial.println("connect fail");
     digitalWrite(led_pin, LOW);
   }
@@ -461,18 +459,19 @@ void loop() {
 
 ![AT+BLEUSB](image/AT+BLEUSB.png)
 
-从机烧录[ble_control_led.ino](zh-cn/arduino_products/uno/ble-uno/example/ble_contorl_led/ble_contorl_led.ino ':ignore')
+从机烧录<a href="zh-cn/arduino_products/uno/ble-uno/example/ble_contorl_led/ble_contorl_led.ino" download>ble_control_led.ino</a>
 
 主机usb串口发送on后可以看到从机的L灯亮起，usb串口发送off后我们可以看到从机的L灯熄灭。
 
 二、我们可以分别对主机和从机ble-uno分别编程来控制从机ble-uno的L灯亮和灭。
 
-主机程序如下[master](zh-cn/arduino_products/uno/ble-uno/example/ble-uno_communication/master/master.ino ':ignore')
+主机程序如下<a href="zh-cn/arduino_products/uno/ble-uno/example/ble-uno_communication/master/master.ino" download>master</a>
 
 ```c
 String ble_data;
 int led_pin = 13;
 int ble_status = 0;
+
 void setup() {
   Serial.begin(115200);
   pinMode(led_pin, OUTPUT);
@@ -480,39 +479,36 @@ void setup() {
   delay(50);
   Serial.println("AT+BLEUSB=0");  // 设置数据通信模式为0
   delay(50);
-  Serial.println("AT+CON=83:46:8c:e4:c2:84");  //连接mac地址的蓝牙从机
+  Serial.println("AT+CON=83:46:8c:e4:c2:84");  // 连接mac地址的蓝牙从机
   delay(100);
   ble_data = "";
-  while (Serial.available() > 0)  
-  {
-      ble_data += char(Serial.read());
-      delay(2);
+  while (Serial.available() > 0) {
+    ble_data += char(Serial.read());
+    delay(2);
   }
   if (ble_data.endsWith("OK\r\n") > 0) {
     Serial.println("connect success");
     digitalWrite(led_pin, HIGH);
- ble_status = 1;
+    ble_status = 1;
   }
   if (ble_data.endsWith("ERROR\r\n") > 0) {
     Serial.println("connect fail");
     digitalWrite(led_pin, LOW);
- ble_status = 0;
+    ble_status = 0;
   }
 }
 
 void loop() {
-
-  if (ble_status)
-  {
-   Serial.write("on");
-   delay(1000);
-   Serial.write("off");
-   delay(1000);
+  if (ble_status) {
+    Serial.write("on");
+    delay(1000);
+    Serial.write("off");
+    delay(1000);
   }
 }
 ```
 
-2) 从机程序如下[slave](zh-cn/arduino_products/uno/ble-uno/example/ble-uno_communication/slave/slave.ino ':ignore')
+2) 从机程序如下<a href="zh-cn/arduino_products/uno/ble-uno/example/ble-uno_communication/slave/slave.ino" download>slave</a>
 
 ```c
 String ble_data;
@@ -523,15 +519,14 @@ void setup() {
   pinMode(led_pin, OUTPUT);
   Serial.println("AT+ROLE=1");  // 设置蓝牙为从机
   delay(50);
-  Serial.println("AT+BLEUSB=0");  //设置数据通信模式为0
-  //delay(10);
+  Serial.println("AT+BLEUSB=0");  // 设置数据通信模式为0
+  // delay(10);
 }
 
 void loop() {
-  while (Serial.available() > 0)  
-  {
-      ble_data += char(Serial.read());
-      delay(2);
+  while (Serial.available() > 0) {
+    ble_data += char(Serial.read());
+    delay(2);
   }
   if (ble_data.compareTo("on") == 0) {
     Serial.println("turn on led");
@@ -540,7 +535,7 @@ void loop() {
   if (ble_data.compareTo("off") == 0) {
     Serial.println("turn off led");
     digitalWrite(led_pin, LOW);
-  }   
+  }
   ble_data = "";
 }
 ```

@@ -12,7 +12,7 @@
 
 ![06](picture/06.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/sensors/irReceiver/红外接收.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/irReceiver/红外接收.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -33,4 +33,4 @@
 
 ## micro:bit示例程序
 
-[点击打开micro:bit示例](https://makecode.microbit.org/_eAv9yiUC2VV3)
+<a href="https://makecode.microbit.org/_eAv9yiUC2VV3" target="_blank">点击打开micro:bit示例</a>

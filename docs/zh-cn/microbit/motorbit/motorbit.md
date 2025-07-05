@@ -28,9 +28,9 @@
 
 # 使用该扩展板时，先导入扩展板Makecode链接
 
-<https://github.com/emakefun/pxt-picture.git，具体操作请查看下方的“导入软件包”>
+[https://github.com/emakefun/pxt-picture.git，具体操作请查看下方的“导入软件包”](https://github.com/emakefun/pxt-picture.git)
 
-Motor:Bit是[易创空间](https://www.emakefun.com/) 专门针对Micro:Bit而开发的驱动电机，舵机，步进电机的一款多功能电机驱动扩展板。Micro:Bit V2.0解决了市面上同类驱动板支持单节3.7V电池驱动力严重不够问题。本驱动板采用控制电路电源和舵机电源分开，单独供电方案，使用大电 流输出的电源芯片对舵机独立供电，支持DC(6~15V)电压输入，驱动芯片采用4颗大电流驱动芯片，最大驱动电流达4A，轻松同时驱动4个24V直流马达或者30暴力高速马达。舵机也可以通过外部电源独立供电，同时可以支持8个舵机同时控制。板子采用可选择直插和卧插两种方式，直插可以兼容掌控板。安装孔兼容乐高，可以非常方便安装在自己创意设计中。完善的库支持，配套开发有MakeCode、Scratch3.0、MicroPython库和教程。
+Motor:Bit是[易创空间](<https://www.emakefun.com/>) 专门针对Micro:Bit而开发的驱动电机，舵机，步进电机的一款多功能电机驱动扩展板。Micro:Bit V2.0解决了市面上同类驱动板支持单节3.7V电池驱动力严重不够问题。本驱动板采用控制电路电源和舵机电源分开，单独供电方案，使用大电 流输出的电源芯片对舵机独立供电，支持DC(6~15V)电压输入，驱动芯片采用4颗大电流驱动芯片，最大驱动电流达4A，轻松同时驱动4个24V直流马达或者30暴力高速马达。舵机也可以通过外部电源独立供电，同时可以支持8个舵机同时控制。板子采用可选择直插和卧插两种方式，直插可以兼容掌控板。安装孔兼容乐高，可以非常方便安装在自己创意设计中。完善的库支持，配套开发有MakeCode、Scratch3.0、MicroPython库和教程。
 
 ## 产品特色
 
@@ -273,11 +273,11 @@ Motor:Bit是[易创空间](https://www.emakefun.com/) 专门针对Micro:Bit而�
 
 ### micro:bit MicroPython示例程序
 
- [点击下载motorbit micro:bit MicroPython库](zh-cn/microbit/motorbit/motorbit_microbit_micropython_library.zip ':ignore')
+<a href="zh-cn/microbit/motorbit/motorbit_microbit_micropython_library.zip" download>点击下载motorbit micro:bit MicroPython库</a>
 
 ### ESP32 MicroPython示例程序
 
- [点击下载moborbit ESP32 MicroPython库](zh-cn/microbit/motorbit/moborbit_esp32_micropython_library.zip ':ignore')
+<a href="zh-cn/microbit/motorbit/moborbit_esp32_micropython_library.zip" download>点击下载moborbit ESP32 MicroPython库</a>
 
 - 直流电机控制：
 

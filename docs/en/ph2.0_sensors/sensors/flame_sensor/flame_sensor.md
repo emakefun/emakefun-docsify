@@ -2,11 +2,7 @@
 
 ## Physical picture
 
-
-
 ![Physical picture](picture/flame_sensor.png)
-
-
 
 ## Overview
 
@@ -14,13 +10,9 @@ In public places, such as hotels, buildings and other places, fire alarms are eq
 
 ## Schematic
 
-[View Schematic](en/ph2.0_sensors/sensors/flame_sensor/flame_sensor_schematic.pdf ':ignore')
-
-
+<a href="en/ph2.0_sensors/sensors/flame_sensor/flame_sensor_schematic.pdf" target="_blank">View Schematic</a>
 
 ![Schematic](picture/flame_sensor_schematic.png)
-
-
 
 ## Module parameters
 
@@ -38,39 +30,33 @@ In public places, such as hotels, buildings and other places, fire alarms are eq
 
 ## Mechanical Dimensions
 
-
-
-![Mechanical Dimensions](http://localhost:3000/en/ph2.0_sensors/sensors/flame_sensor/picture/flame_sensor_assembly.png)
-
-
+![Mechanical Dimensions](picture/flame_sensor_assembly.png)
 
 ## Arduino Example Program
 
-[Download the sample program](en/ph2.0_sensors/sensors/flame_sensor/flame_sensor.rar)
+<a href="en/ph2.0_sensors/sensors/flame_sensor/flame_sensor.rar" downloaad>Download the sample program</a>
 
 ```c
-#define FlamelDigitalPin 7 // Define the digital pin of the flame sensor
-#define FlamelAnalogPin A0 // Define the analog pin of the flame sensor
+#define FLAMEL_DIGITAL_PIN 7  // Define the digital pin of the flame sensor
+#define FLAMEL_ANALOG_PIN A0  // Define the analog pin of the flame sensor
 
-int FlamelAnalogValue = 0 ; // Define digital variables, read the flame analog value
-int FlamelDigitalValue = 0 ; // Define digital variables, read the flame digital value
+int flamel_analog_value = 0;   // Define digital variables, read the flame analog value
+int flamel_digital_value = 0;  // Define digital variables, read the flame digital value
 
-void setup()
-{
-Serial.begin(9600); // Set the serial port baud rate
-pinMode(FlamelDigitalPin, INPUT); // Set the flame sensor digital pin as input
-pinMode(FlamelAnalogPin, INPUT); // Set the flame sensor analog pin as input
+void setup() {
+  Serial.begin(9600);                // Set the serial port baud rate
+  pinMode(FLAMEL_DIGITAL_PIN, INPUT);  // Set the flame sensor digital pin as input
+  pinMode(FLAMEL_ANALOG_PIN, INPUT);   // Set the flame sensor analog pin as input
 }
-void loop()
-{
-FlamelAnalogValue = analogRead(FlamelAnalogPin); // Read the flame sensor analog value
-FlamelDigitalValue = digitalRead(FlamelDigitalPin); // Read the flame sensor digital value
-Serial.print("FlamelAnalog Data: ");
-Serial.print(FlamelAnalogValue);//Print the flame sensor analog value
-Serial.print("FlamelDigital Data: ");
-Serial.println(FlamelDigitalValue);//Print the flame sensor digital value
-delay(200);
-}Copy to clipboardErrorCopied
+void loop() {
+  flamel_analog_value = analogRead(FLAMEL_ANALOG_PIN);     // Read the flame sensor analog value
+  flamel_digital_value = digitalRead(FLAMEL_DIGITAL_PIN);  // Read the flame sensor digital value
+  Serial.print("FlamelAnalog Data: ");
+  Serial.print(flamel_analog_value);  // Print the flame sensor analog value
+  Serial.print("FlamelDigital Data: ");
+  Serial.println(flamel_digital_value);  // Print the flame sensor digital value
+  delay(200);
+}
 ```
 
 ## MicroPython Example Program
@@ -78,20 +64,20 @@ delay(200);
 ### Esp32 MicroPython Example Program
 
 ```python
-from machine import ADC,Pin
+from machine import ADC, Pin
 import time
 
-AnalogPin = 15 # Define the flame sensor analog interface pin
-DigitalPin = 14 # Define the flame sensor digital interface pin
+analog_pin = 15 # Define the flame sensor analog interface pin
+digital_pin = 14 # Define the flame sensor digital interface pin
 
-p1 = ADC(AnalogPin)
-p2 = Pin(DigitalPin, Pin.IN)
+p1 = ADC(analog_pin)
+p2 = Pin(digital_pin, Pin.IN)
 
 while True:
-AnalogValue = p1.read_u16() # Read the flame sensor analog value
-print("Analog Data:", AnalogValue) # Print the flame sensor analog value
-print("Digital Data:", p2.value()) # Print the flame sensor digital value
-time.sleep_ms(200)Copy to clipboardErrorCopied
+    analog_value = p1.read_u16(2) # Read the flame sensor analog value222
+    print("Analog Data:", analog_value) # Print the flame sensor analog value
+    print("Digital Data:", p2.value()) # Print the flame sensor digital value
+    time.sleep_ms(200)
 ```
 
 ### Micro:bit MicroPython Example Program
@@ -99,14 +85,14 @@ time.sleep_ms(200)Copy to clipboardErrorCopied
 ```python
 from microbit import *
 
-AnalogPin = pin1 # Define the flame sensor analog interface pin
-DigitalPin = pin0 # Define the flame sensor digital interface pin
+analog_pin = pin1 # Define the flame sensor analog interface pin
+digital_pin = pin0 # Define the flame sensor digital interface pin
 
 while True:
-AnalogValue = AnalogPin.read_analog() # Read the flame sensor analog value
-print("Analog Data:", AnalogValue) # Print the flame sensor analog value
-print("Digital Data:", DigitalPin.read_digital()) # Print the flame sensor digital value
-sleep(0.2)Copy to clipboardErrorCopied
+    analog_value = analog_pin.read_analog() # Read the flame sensor analog value
+    print("Analog Data:", analog_value) # Print the flame sensor analog value
+    print("Digital Data:", digital_pin.read_digital()) # Print the flame sensor digital value
+    sleep(0.2)
 ```
 
 ## MakeCode Example Programs

@@ -12,7 +12,7 @@ NL50是由我司自主研发的温度传感器，该温度传感器是利用二�
 
 ### 原理图
 
-[点击下载NL50原理图](zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50.pdf" target="_blank">点击下载NL50原理图</a>
 
 ### 芯片规格书
 
@@ -51,11 +51,11 @@ NL50是由我司自主研发的温度传感器，该温度传感器是利用二�
 | Arduino Mega 2560 |
 | ESP32             |
 
-[点击下载Arduino库以及示例程序](zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/emakefun_temperature_sensor_nl50.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/emakefun_temperature_sensor_nl50.zip" download>点击下载Arduino库以及示例程序</a>
 
 ## Microython示例程序
 
-[点击下载Micropython库和示例程序](zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50_py.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50_py.zip" download>点击下载Micropython库和示例程序</a>
 
 ## Mixly图形化示例
 

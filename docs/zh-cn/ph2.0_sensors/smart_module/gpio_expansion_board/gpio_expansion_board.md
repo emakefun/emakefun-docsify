@@ -52,7 +52,7 @@
 
 ### MicroBit库和示例程序
 
-[Micropython库和示例程序](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/io_expansion_board_i2c_microbit_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/io_expansion_board_i2c_microbit_micropython.zip" download>Micropython库和示例程序</a>
 
 [Microbit MakeCode库链接](https://github.com/emakefun-makecode-extensions/emakefun_io_extension_board)
 
@@ -62,7 +62,7 @@ https://github.com/emakefun-makecode-extensions/emakefun_io_extension_board
 
 ### ESP32 MicroPython示例程序
 
-[库和示例程序](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/io_expansion_board_i2c_esp32_micropython ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/io_expansion_board_i2c_esp32_micropython.zip" download>库和示例程序</a>
 
 ### Mixly图形化库
 
@@ -70,9 +70,8 @@ https://github.com/emakefun-makecode-extensions/emakefun_io_extension_board
 
 ![Mixly示例程序](picture/gpio_expansion_board_mixly.png)
 
-[下载mixly库和示例程序](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/gpio_expansion_board_mixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/gpio_expansion_board_mixly.zip" download>下载mixly库和示例程序</a>
 
 ### Mind+图形化库
 
-[下载Mind+库和示例程序](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/emakefun-ext-i2c-expansion-thirdex-V2.0.0.mpext ':ignore')
-
+<a href="zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/emakefun-ext-i2c-expansion-thirdex-V2.0.0.mpext" download>下载Mind+库和示例程序</a>

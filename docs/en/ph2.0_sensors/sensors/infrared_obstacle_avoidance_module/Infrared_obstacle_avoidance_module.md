@@ -2,11 +2,7 @@
 
 ## Physical picture
 
-
-
-![Obstacle Avoidance](http://localhost:3000/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/picture/infrared_obstacle_avoidance_module.png)
-
-
+![Obstacle Avoidance](picture/infrared_obstacle_avoidance_module.png)
 
 ## Overview
 
@@ -14,7 +10,7 @@ The infrared obstacle avoidance sensor is a sensor device that is widely used in
 
 ## Schematic
 
-[View Schematic](en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/InfraredObstacleAvoidance_schematic.pdf) ![1](http://localhost:3000/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/picture/infrared_obstacle_avoidance_module_schematic.png)
+<a href="en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/InfraredObstacleAvoidance_schematic.pdf" target="_blank">View Schematic</a> ![1](picture/infrared_obstacle_avoidance_module_schematic.png)
 
 ## Module parameters
 
@@ -32,61 +28,54 @@ The infrared obstacle avoidance sensor is a sensor device that is widely used in
 
 ## Mechanical Dimensions
 
-![2](http://localhost:3000/en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/picture/infrared_obstacle_avoidance_module_assembly.png)
-
-
+![2](picture/infrared_obstacle_avoidance_module_assembly.png)
 
 ## Arduino Example Program
 
-[Download the sample program](en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/InfraredObstacleAvoidanceModule.zip)
+<a href="en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/InfraredObstacleAvoidanceModule.zip" download>Download the sample program</a>
 
 ```c++
-#define DigitalPin 7 // Define the digital pin of the infrared obstacle avoidance module
-#define AnalogPin A0 // Define the analog pin of the infrared obstacle avoidance module
+#define DIGITAL_PIN 7  // Define the digital pin of the infrared obstacle avoidance module
+#define ANALOG_PIN A0  // Define the analog pin of the infrared obstacle avoidance module
 
-int AnalogValue = 0 ; // Define digital variables, read the analog value of the infrared obstacle avoidance module
+int analog_value = 0;  // Define digital variables, read the analog value of the infrared obstacle avoidance module
+int digital_value = 0;  // Define digital variables, read the digital value of the infrared obstacle avoidance module
 
-int DigitalValue = 0 ; // Define digital variables, read the digital value of the infrared obstacle avoidance module
-
-void setup()
-{
-Serial.begin(9600); // Set the serial port baud rate
-pinMode(DigitalPin, INPUT); // Set the digital pin of the infrared obstacle avoidance module as input
-pinMode(AnalogPin, INPUT); // Set the analog pin of the infrared obstacle avoidance module as input
+void setup() {
+  Serial.begin(9600);          // Set the serial port baud rate
+  pinMode(DIGITAL_PIN, INPUT);  // Set the digital pin of the infrared obstacle avoidance module as input
+  pinMode(ANALOG_PIN, INPUT);   // Set the analog pin of the infrared obstacle avoidance module as input
 }
-void loop()
-{
-AnalogValue = analogRead(AnalogPin); // Read the analog value of the infrared obstacle avoidance module
-DigitalValue = digitalRead(DigitalPin); // Read the digital value of the infrared obstacle avoidance module
-Serial.print("InfraredObstacleAvoidanceModuleAnalog Data:");
-Serial.print(AnalogValue);//Print infrared obstacle avoidance module analog value
-Serial.print("InfraredObstacleAvoidanceModuleDigital Data:");
-Serial.println(DigitalValue);//Print infrared obstacle avoidance module digital value
-delay(200);
-}Copy to clipboardErrorCopied
+void loop() {
+  analog_value = analogRead(ANALOG_PIN);     // Read the analog value of the infrared obstacle avoidance module
+  digital_value = digitalRead(DIGITAL_PIN);  // Read the digital value of the infrared obstacle avoidance module
+  Serial.print("InfraredObstacleAvoidanceModuleAnalog Data:");
+  Serial.print(analog_value);  // Print infrared obstacle avoidance module analog value
+  Serial.print("InfraredObstacleAvoidanceModuleDigital Data:");
+  Serial.println(digital_value);  // Print infrared obstacle avoidance module digital value
+  delay(200);
+}
 ```
 
 ## MicroPython Example Program
 
-### [Esp32 MicroPython Example Program](en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=esp32-micropython示例程序)
-
-
+### <a href="en/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_module?id=esp32-micropython示例程序" download>Esp32 MicroPython Example Program</a>
 
 ```python
-from machine import ADC,Pin
+from machine import ADC, Pin
 import time
 
-AnalogPin = 15 # Define infrared obstacle avoidance module analog interface pin
-DigitalPin = 14 # Define infrared obstacle avoidance module digital interface pin
+analog_pin = 15 # Define infrared obstacle avoidance module analog interface pin
+digital_pin = 14 # Define infrared obstacle avoidance module digital interface pin
 
-p1 = ADC(AnalogPin)
-p2 = Pin(DigitalPin, Pin.IN)
+p1 = ADC(analog_pin)
+p2 = Pin(digital_pin, Pin.IN)
 
 while True:
-AnalogValue = p1.read_u16() # Read infrared obstacle avoidance module analog value
-print("InfraredObstacleAvoidanceModuleAnalog Data:", AnalogValue) # Print infrared obstacle avoidance module analog value
-print("InfraredObstacleAvoidanceModuleDigital Data:", p2.value()) # Print infrared obstacle avoidance module digital value
-time.sleep_ms(200)Copy to clipboardErrorCopied
+    analog_value = p1.read_u16() # Read infrared obstacle avoidance module analog value
+    print("InfraredObstacleAvoidanceModuleAnalog Data:", analog_value) # Print infrared obstacle avoidance module analog value
+    print("InfraredObstacleAvoidanceModuleDigital Data:", p2.value()) # Print infrared obstacle avoidance module digital value
+    time.sleep_ms(200)
 ```
 
 ### Micro:bit MicroPython Example Program
@@ -94,14 +83,14 @@ time.sleep_ms(200)Copy to clipboardErrorCopied
 ```python
 from microbit import *
 
-AnalogPin = pin1 # Define the infrared obstacle avoidance module analog interface pin
-DigitalPin = pin0 # Define the infrared obstacle avoidance module digital interface pin
+analog_pin = pin1 # Define the infrared obstacle avoidance module analog interface pin
+digital_pin = pin0 # Define the infrared obstacle avoidance module digital interface pin
 
 while True:
-AnalogValue = AnalogPin.read_analog() # Read the infrared obstacle avoidance module analog value
-print("Analog Data:", AnalogValue) # Print the infrared obstacle avoidance module analog value
-print("Digital Data:", DigitalPin.read_digital()) # Print the infrared obstacle avoidance module digital value
-sleep(0.2)Copy to clipboardErrorCopied
+    analog_value = analog_pin.read_analog() # Read the infrared obstacle avoidance module analog value
+    print("Analog Data:", analog_value) # Print the infrared obstacle avoidance module analog value
+    print("Digital Data:", digital_pin.read_digital()) # Print the infrared obstacle avoidance module digital value
+    sleep(0.2)
 ```
 
 ## MakeCode Example Programs

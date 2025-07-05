@@ -47,7 +47,7 @@ joystick:bit是一款针对类似micro:bit的金手指插卡式开发板而开�
 - 同理，下面两个模块也是对按键的单击双击或者长按为真则显示显示相应信息
 
    注意如果使用单机、双击、长按的时候，无线循环里面不能有延时，否则有可能主板捕获不到这个事件
-   
+
    ![image](picture/4.jpg)
 
 ### 震动电机编程图形块
@@ -70,19 +70,17 @@ joystick:bit是一款针对类似micro:bit的金手指插卡式开发板而开�
 
   ![image](picture/43.jpg)
 
-microbit makecode测试程序https://makecode.microbit.org/_aFpi2fPow8Tk
+microbit makecode测试程序<https://makecode.microbit.org/_aFpi2fPow8Tk>
 
 如果要传看查看结果请直接点击microbit串口监听窗口查看
 
 ![joystickbit_test](./picture/joystickbit_test.png)
 
-[点击下载microbit MicroPython扩展库以及示例程序](zh-cn/microbit/joystickbit/joystickbit_microbit_micropython_demo.zip ':ignore')
-
-
+<a href="zh-cn/microbit/joystickbit/joystickbit_microbit_micropython_demo.zip" download>点击下载microbit MicroPython扩展库以及示例程序</a>
 
 ## 掌控板/物联板IOT:BIT（ESP32主控）MicroPython扩展库
 
-[点击下载掌控板/物联板IOT:BIT（ESP32） MicroPython扩展库以及示例程序](zh-cn/microbit/joystickbit/iobit_joystick_test.zip ':ignore')
+<a href="zh-cn/microbit/joystickbit/iobit_joystick_test.zip" download>点击下载掌控板/物联板IOT:BIT（ESP32） MicroPython扩展库以及示例程序</a>
 
 ### MicroPython API详细说明
 
@@ -93,9 +91,8 @@ microbit makecode测试程序https://makecode.microbit.org/_aFpi2fPow8Tk
 ```python
 read_joystick_left_x(self)
 
-参数:无
-返回值：返回0~255的模拟值
-
+# 参数:无
+# 返回值：返回0~255的模拟值
 ```
 
 #### 2.read_joystick_left_y(self)
@@ -105,8 +102,8 @@ read_joystick_left_x(self)
 ```python
 read_joystick_left_y(self)
 
-参数:无
-返回值：返回0~255的模拟值
+# 参数:无
+# 返回值：返回0~255的模拟值
 
 ```
 
@@ -117,8 +114,8 @@ read_joystick_left_y(self)
 ```python
 read_joystick_right_x(self)
 
-参数:无
-返回值：返回0~255的模拟值
+# 参数:无
+# 返回值：返回0~255的模拟值
 
 ```
 
@@ -129,8 +126,8 @@ read_joystick_right_x(self)
 ```python
 read_joystick_right_y(self)
 
-参数:无
-返回值：返回0~255的模拟值
+# 参数:无
+# 返回值：返回0~255的模拟值
 
 ```
 
@@ -141,14 +138,14 @@ read_joystick_right_y(self)
 ```python
 read_button_status(self, button)
 
-参数:
-button: 按钮类型，取值范围为BUTTON_LEFT_REG、BUTTON_RIGHT_REG、JOYSTICK_BUTTON_RIGHT、JOYSTICK_BUTTON_LEFT，分别表示左侧按键、右侧按键、左摇杆按键、右摇杆按键。
-返回值：返回Button_Status类成员变量，表示按钮的按下状态，取值范围为
-    JOYSTICK_PRESS_DOWN = 0  //按下
-    JOYSTICK_PRESS_UP = 1    //释放
-    JOYSTICK_SINGLE_CLICK = 3//单击
-    JOYSTICK_DOUBLE_CLICK = 4//双击
-    JOYSTICK_LONG_PRESS_HOLD = 6//长按
-    JOYSTICK_NONE_PRESS = 8  //无
+# 参数:
+# button: 按钮类型，取值范围为BUTTON_LEFT_REG、BUTTON_RIGHT_REG、JOYSTICK_BUTTON_RIGHT、JOYSTICK_BUTTON_LEFT，分别表示左侧按键、右侧按键、左摇杆按键、右摇杆按键。
+# 返回值：返回Button_Status类成员变量，表示按钮的按下状态，取值范围为
+#     JOYSTICK_PRESS_DOWN = 0  //按下
+#     JOYSTICK_PRESS_UP = 1    //释放
+#     JOYSTICK_SINGLE_CLICK = 3//单击
+#     JOYSTICK_DOUBLE_CLICK = 4//双击
+#     JOYSTICK_LONG_PRESS_HOLD = 6//长按
+#     JOYSTICK_NONE_PRESS = 8  //无
 
 ```

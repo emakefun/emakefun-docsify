@@ -42,26 +42,24 @@ TCS34725是一款低成本，高性价比的RGB全彩颜色识别传感器，传
 EM_TCS34725 tcs34725;  // 初始化颜色识别 I2C地址为 0x29
 
 void setup() {
-
-tcs34725.begin();  
+  tcs34725.begin();
   Serial.begin(115200);
 }
 
-void loop()  {
-  int  R = tcs34725.getRedToGamma();                   // 颜色识别传感器读取颜色 并获取Red色值
-  int  G = tcs34725.getGreenToGamma();                 // 颜色识别传感器读取颜色 并获取Green色值
-  int  B = tcs34725.getBlueToGamma();                  // 颜色识别传感器读取颜色 并获取Blue色值
-  Serial.print(String("R:") + String(R));         // 串口打印三原色
+void loop() {
+  int r = tcs34725.getRedToGamma();        // 颜色识别传感器读取颜色 并获取Red色值
+  int g = tcs34725.getGreenToGamma();      // 颜色识别传感器读取颜色 并获取Green色值
+  int b = tcs34725.getBlueToGamma();       // 颜色识别传感器读取颜色 并获取Blue色值
+  Serial.print(String("R:") + String(r));  // 串口打印三原色
   Serial.print(",");
-  Serial.print(String("G:") + String(G));
+  Serial.print(String("G:") + String(g));
   Serial.print(",");
-  Serial.println(String("B:") + String(B));
+  Serial.println(String("B:") + String(b));
   delay(500);
 }
-
 ```
 
-  [点击下载Arduino示例](color_recognition/Experiment_of_color_recognition_sensor.zip)
+<a href="zh-cn/ph2.0_sensors/smart_module/color_recognition//Experiment_of_color_recognition_sensor.zip" download>点击下载Arduino示例</a>
 
 ## Mixly图形化示例
 
@@ -69,8 +67,8 @@ void loop()  {
 
 程序解析：颜色识别模块为I2C通信，将模块与Arduino Uno主板的I2C接口相连，将程序上传到主板中，就可以读取颜色的三色值。
 
-[点击下载Mixly示例](zh-cn/ph2.0_sensors/smart_module/color_recognition/color_recognition_mixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/color_recognition/color_recognition_mixly.zip" download>点击下载Mixly示例</a>
 
 ## Micro:Bit示例程序
 
-  [点击打开MicroBit示例](https://makecode.microbit.org/_9Rk2LufUED6j)
+<a href="https://makecode.microbit.org/_9Rk2LufUED6j" target="_blank">点击打开MicroBit示例</a>

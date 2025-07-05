@@ -28,7 +28,7 @@ Maker-Uno是基于Arduino Uno R3基础上开发的一款适用于创客的标志
 
 ## Maker Uno原理图
 
- [原理图点击此处下载](zh-cn/arduino_products/uno/maker-uno/Maker_Uno.pdf ':ignore')
+<a href="zh-cn/arduino_products/uno/maker-uno/Maker_Uno.pdf" target="_blank">原理图点击此处下载</a>
 
 ## 电机功能说明
 
@@ -48,7 +48,7 @@ DIR1：控制 M1电机方向  DIR2：控制M2电机方向  PWM1：控制M1电机
 
 **注：** L :低电平   H：高电平  —：无
 
-**Arduino 电机测试案例** 
+**Arduino 电机测试案例**
 
 ```c
 #define DIR1 4  // define direction 4 port
@@ -86,8 +86,6 @@ void loop() {
 }
 ```
 
-
-
 **Mixly 电机测试案例**
 
 在Mixly 2.0平台选择板卡Arduino AVR
@@ -117,8 +115,6 @@ void loop() {
 参考代码
 
 ![1723687860610](picture/13.png)
-
-
 
 ## 指示灯说明
 

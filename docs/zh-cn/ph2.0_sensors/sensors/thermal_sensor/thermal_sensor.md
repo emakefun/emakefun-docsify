@@ -9,7 +9,9 @@
 热敏电阻器是敏感元件的一类，按照温度系数不同分为正温度系数热敏电阻器(PTC)和负温度系数热敏电阻器(NTC)。热敏电阻器的典型特点是对温度敏感，不同的温度下表现出不同的电阻值。正温度系数热敏电阻器(PTC)在温度越高时电阻值越大，负温度系数热敏电阻器(NTC)在温度越高时电阻值越低，它们同属于半导体器件。  
 
 ## 原理图
-[查看原理图](zh-cn\ph2.0_sensors\sensors\thermal_sensor\thermal_sensor_schematic.pdf ':ignore') 
+
+<a href="zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor_schematic.pdf" target="_blank">查看原理图</a>
+
 ![原理图](picture/thermal_sensor_schematic.png)
 
 ## 模块参数
@@ -28,30 +30,28 @@
 
 - 安装方式:M4螺钉兼容乐高插孔固定
 
-
 ## 机械尺寸图
 
 ![机械尺寸图](picture/thermal_sensor_assembly.png)
 
 ## Arduino示例程序
 
- [下载示例程序](zh-cn\ph2.0_sensors\sensors\thermal_sensor\thermal_sensor.zip ':ignore') 
+<a href="zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor.zip" download>下载示例程序</a>
 
 ```c++
-#define ThermalePin  A3//定义热敏传感器模块引脚
+#define THERMALE_PIN A3  // 定义热敏传感器模块引脚
 
-int  ThermalValue = 0 ;//定义变量,读取热敏值
+int thermal_value = 0;  // 定义变量,读取热敏值
 
-void setup()
-{
-  Serial.begin(9600);//设置串口波特率
-  pinMode(ThermalePin, INPUT);//设置热敏传感器模块引脚为输入
+void setup() {
+  Serial.begin(9600);           // 设置串口波特率
+  pinMode(THERMALE_PIN, INPUT);  // 设置热敏传感器模块引脚为输入
 }
-void loop()
-{
-  ThermalValue = analogRead(ThermalePin);//读取热敏值，并赋值给ThermalValue
+
+void loop() {
+  thermal_value = analogRead(THERMALE_PIN);  // 读取热敏值，并赋值给ThermalValue
   Serial.print("Thermal Data:  ");
-  Serial.println(ThermalValue);//打印热敏值
+  Serial.println(thermal_value);  // 打印热敏值
   delay(200);
 }
 ```
@@ -64,13 +64,13 @@ void loop()
 from machine import ADC,Pin
 import time
 
-AnalogPin = 15  # 定义热敏传感器模拟接口引脚
+analog_pin = 15  # 定义热敏传感器模拟接口引脚
 
-p1 = ADC(AnalogPin)
+p1 = ADC(analog_pin)
     
 while True:
-    AnalogValue = p1.read_u16()  # 读取热敏传感器模拟值
-    print(AnalogValue)  # 打印热敏传感器模拟值
+    analog_value = p1.read_u16()  # 读取热敏传感器模拟值
+    print(analog_value)  # 打印热敏传感器模拟值
     time.sleep_ms(200)
 ```
 
@@ -79,14 +79,14 @@ while True:
 ```python
 from microbit import *
 
-AnalogPin = pin1  # 定义热敏传感器模拟接口引脚
+analog_pin = pin1  # 定义热敏传感器模拟接口引脚
 
 while True:
-    AnalogValue = AnalogPin.read_analog()  # 读取热敏传感器模拟值
-    print("Analog Data:", AnalogValue)  # 打印热敏传感器模拟值
+    analog_value = AnalogPin.read_analog()  # 读取热敏传感器模拟值
+    print("Analog Data:", analog_value)  # 打印热敏传感器模拟值
     sleep(0.2)
 ```
 
 ## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_LTdekc9H3b9u">动手试一试</a>
+<a href="https://makecode.microbit.org/_LTdekc9H3b9u" target="_blank">动手试一试</a>

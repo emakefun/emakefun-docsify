@@ -6,7 +6,7 @@
 
 ## 2. Product introduction
 
-The new product is being produced urgently, please wait. It is expected to be launched for sale in mid February 2025. The ESP32 IOT BOARD is based on Lexin Technology [ESP32-WROOM-32](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf )A product developed based on the original module for maker education. The Flash is 4MB in size and integrates a single-chip solution with 2.4 GHz, Wi-Fi, and Bluetooth dual-mode. This motherboard is equipped with 2 AT8833 motor driver chips, with a maximum current of 1.2A. Supports DC head power supply, and all available pins are led out through PH2.0 interface, making it convenient to connect external sensors and build application scenarios.
+The new product is being produced urgently, please wait. It is expected to be launched for sale in mid February 2025. The ESP32 IOT BOARD is based on Lexin Technology <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf" target="_blank">ESP32-WROOM-32</a> A product developed based on the original module for maker education. The Flash is 4MB in size and integrates a single-chip solution with 2.4 GHz, Wi-Fi, and Bluetooth dual-mode. This motherboard is equipped with 2 AT8833 motor driver chips, with a maximum current of 1.2A. Supports DC head power supply, and all available pins are led out through PH2.0 interface, making it convenient to connect external sensors and build application scenarios.
 
 ### 2.1 Module Parameters
 
@@ -64,7 +64,7 @@ This motherboard supports code programming using Arduino IDE, MicroPython, and o
 
 Please refer to [esp32 series upload program method](en/esp32/esp32_software_instructions/esp32_software_instructions.md) for the upload methods of programs on various platforms
 
-**Note **: when developing with Arduino IDE, please update esp32 to the latest version.
+**Note**: when developing with Arduino IDE, please update esp32 to the latest version.
 
 ### FAQ
 

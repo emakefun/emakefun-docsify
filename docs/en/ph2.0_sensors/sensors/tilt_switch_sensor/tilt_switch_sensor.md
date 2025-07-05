@@ -2,11 +2,7 @@
 
 ## Physical picture
 
-
-
-![Physical picture](http://localhost:3000/en/ph2.0_sensors/sensors/tilt_switch_sensor/picture/tilt_switch_sensor.png)
-
-
+![Physical picture](picture/tilt_switch_sensor.png)
 
 ## Overview
 
@@ -14,7 +10,7 @@ The tilt switch module is also called a bead switch, steel ball switch, and is a
 
 ## Schematic
 
-[View Schematic](en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor_schematic.pdf) ![Schematic](http://localhost:3000/en/ph2.0_sensors/sensors/tilt_switch_sensor/picture/tilt_switch_sensor_schematic.png)
+<a href="en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor_schematic.pdf" target="_blank">View Schematic</a> ![Schematic](picture/tilt_switch_sensor_schematic.png)
 
 ## Module parameters
 
@@ -32,38 +28,33 @@ The tilt switch module is also called a bead switch, steel ball switch, and is a
 
 ## Mechanical Dimensions
 
-![Mechanical Dimensions](http://localhost:3000/en/ph2.0_sensors/sensors/tilt_switch_sensor/picture/tilt_switch_sensor_assembly.png)
-
-
+![Mechanical Dimensions](picture/tilt_switch_sensor_assembly.png)
 
 ## Arduino Example Program
 
-[Download the sample program](en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor.zip)
+<a href="en/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor.zip" download>Download the sample program</a>
 
 ```c++
-#define DigitalPin 7 // Define the digital pin of the tilt sensor
-#define AnalogPin A0 // Define the analog pin of the tilt sensor
+#define DIGITAL_PIN 7  // Define the digital pin of the tilt sensor
+#define ANALOG_PIN A0  // Define the analog pin of the tilt sensor
 
-int AnalogValue = 0 ; // Define a digital variable to read the analog value of the tilt sensor
+int analog_value = 0;  // Define a digital variable to read the analog value of the tilt sensor
+int digital_value = 0;  // Define a digital variable to read the digital value of the tilt sensor
 
-int DigitalValue = 0 ; // Define a digital variable to read the digital value of the tilt sensor
-
-void setup()
-{
-Serial.begin(9600); // Set the serial port baud rate
-pinMode(DigitalPin, INPUT); // Set the digital pin of the tilt sensor as input
-pinMode(AnalogPin, INPUT); // Set the analog pin of the tilt sensor as input
+void setup() {
+  Serial.begin(9600);          // Set the serial port baud rate
+  pinMode(DIGITAL_PIN, INPUT);  // Set the digital pin of the tilt sensor as input
+  pinMode(ANALOG_PIN, INPUT);   // Set the analog pin of the tilt sensor as input
 }
-void loop()
-{
-FlamelAnalogValue = analogRead(AnalogPin); // Read the analog value of the tilt sensor
-FlamelDigitalValue = digitalRead(DigitalPin); // Read the digital value of the tilt sensor
-Serial.print("Analog Data: ");
-Serial.print(AnalogValue); // Print the analog value of the tilt sensor
-Serial.print("Digital Data: ");
-Serial.println(DigitalValue);//Print the digital value of the tilt sensor
-delay(200);
-}Copy to clipboardErrorCopied
+void loop() {
+  analog_value = analogRead(ANALOG_PIN);     // Read the analog value of the tilt sensor
+  digital_value = digitalRead(DIGITAL_PIN);  // Read the digital value of the tilt sensor
+  Serial.print("Analog Data: ");
+  Serial.print(analog_value);  // Print the analog value of the tilt sensor
+  Serial.print("Digital Data: ");
+  Serial.println(digital_value);  // Print the digital value of the tilt sensor
+  delay(200);
+}
 ```
 
 ## MicroPython Example Program
@@ -74,17 +65,17 @@ delay(200);
 from machine import ADC, Pin
 import time
 
-AnalogPin = 15 # Define analog pin
-DigitalPin = 14 # Define digital pin
+analog_pin = 15 # Define analog pin
+digital_pin = 14 # Define digital pin
 
-p1 = ADC(AnalogPin)
-p2 = Pin(DigitalPin, Pin.IN)
+p1 = ADC(analog_pin)
+p2 = Pin(digital_pin, Pin.IN)
 
 while True:
-AnalogValue = p1.read_u16()
-print("Analog Data:", AnalogValue) # Print analog value
-print("Digital Data:", p2.value()) # Print digital value
-time.sleep_ms(200)Copy to clipboardErrorCopied
+    analog_value = p1.read_u16()
+    print("Analog Data:", analog_value) # Print analog value
+    print("Digital Data:", p2.value()) # Print digital value
+    time.sleep_ms(200)
 ```
 
 ### Micro:bit MicroPython Example Program
@@ -93,11 +84,11 @@ time.sleep_ms(200)Copy to clipboardErrorCopied
 from microbit import *
 
 while True:
-p1 = pin1.read_analog()
-p2 = pin2.read_digital()
-print("Analog Data:", p1) # Print analog data
-print("Digital Data:", p2) # Print digital data
-sleep(1000)Copy to clipboardErrorCopied
+    p1 = pin1.read_analog()
+    p2 = pin2.read_digital()
+    print("Analog Data:", p1) # Print analog data
+    print("Digital Data:", p2) # Print digital data
+    sleep(1000)
 ```
 
 ## MakeCode Example Programs

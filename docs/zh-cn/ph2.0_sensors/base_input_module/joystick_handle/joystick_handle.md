@@ -12,7 +12,7 @@
 
 ![原理图](picture/joystick_handle_schematic.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/base_input_module/joystick_handle/joystick_handle_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/joystick_handle/joystick_handle_schematic.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -34,44 +34,44 @@
 
 ### Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/joystick_handle/joystick_handle.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/joystick_handle/joystick_handle.zip" download>下载示例程序</a>
 
 ```c
 #include "JoystickHandle.h"
 
-JoystickHandle myJoystickHandle(JOYSTICK_I2C_ADDR);
+JoystickHandle myJoystick_handle(JOYSTICK_I2C_ADDR);
 
-void setup(){
+void setup() {
   Serial.begin(9600);
 }
 
-void loop(){
-  if (myJoystickHandle.Get_Button_Status(BUTOON_UP)==PRESS_DOWN) {  // 判断按键A是否按下
+void loop() {
+  if (myJoystick_handle.Get_Button_Status(BUTOON_UP) == PRESS_DOWN) {  // 判断按键A是否按下
     Serial.println("Button_A Pressed");
   }
-  if (myJoystickHandle.Get_Button_Status(BUTOON_RIGHT)==PRESS_DOWN) {  // 判断按键B是否按下
+  if (myJoystick_handle.Get_Button_Status(BUTOON_RIGHT) == PRESS_DOWN) {  // 判断按键B是否按下
     Serial.println("Button_B Pressed");
   }
-  if (myJoystickHandle.Get_Button_Status(BUTOON_DOWN)==PRESS_DOWN) {  // 判断按键C是否按下
+  if (myJoystick_handle.Get_Button_Status(BUTOON_DOWN) == PRESS_DOWN) {  // 判断按键C是否按下
     Serial.println("Button_C Pressed");
   }
-  if (myJoystickHandle.Get_Button_Status(BUTOON_LEFT)==PRESS_DOWN) {  // 判断按键D是否按下
+  if (myJoystick_handle.Get_Button_Status(BUTOON_LEFT) == PRESS_DOWN) {  // 判断按键D是否按下
     Serial.println("Button_D Pressed");
   }
-  if (myJoystickHandle.Get_Button_Status(JOYSTICK_BUTTON)==PRESS_DOWN) {  // 判断遥感按键是否按下
+  if (myJoystick_handle.Get_Button_Status(JOYSTICK_BUTTON) == PRESS_DOWN) {  // 判断遥感按键是否按下
     Serial.println("Joystick_Button Pressed");
   }
   Serial.print("Value_X:");
-  Serial.println(myJoystickHandle.AnalogRead_X()); // 读取摇杆X轴的模拟值打印出来
+  Serial.println(myJoystick_handle.AnalogRead_X());  // 读取摇杆X轴的模拟值打印出来
   Serial.print("Value_Y:");
-  Serial.println(myJoystickHandle.AnalogRead_Y());// 读取摇杆Y轴的模拟值打印出来
+  Serial.println(myJoystick_handle.AnalogRead_Y());  // 读取摇杆Y轴的模拟值打印出来
   delay(500);
 }
 ```
 
 ## Mixly示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/joystick_handle/joystick_handle_Mixly_demo.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/joystick_handle/joystick_handle_Mixly_demo.zip" download>下载示例程序</a>
 
 ## micro:bit示例程序
 

@@ -278,4 +278,4 @@ SPI 兼容设备的一些示例：
 
 ![schematic_diagram.png](picture/schematic_diagram.png)
 
-[点击此处查看原理图](zh-cn/arduino_products/nano/nano/Arduino_nano_V3.0_typec.pdf ':ignore')
+<a href="zh-cn/arduino_products/nano/nano/Arduino_nano_V3.0_typec.pdf" target="_blank">点击此处查看原理图</a>

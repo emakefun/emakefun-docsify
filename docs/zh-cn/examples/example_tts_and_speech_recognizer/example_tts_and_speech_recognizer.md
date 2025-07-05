@@ -35,9 +35,9 @@ void setup() {
   g_speech_recognizer.Initialize();                                                     // 语音识别模块初始化
   g_speech_recognizer.SetRecognitionMode(emakefun::SpeechRecognizer::kKeywordTrigger);  // 设置为关键词唤醒模式
   g_speech_recognizer.SetTimeout(5000);                                                 // 设置超时时间为5s
-  g_speech_recognizer.AddKeyword(0, F("xiao yi xiao yi"));  // 添加小易小易词条为关键词，index为0
-  g_speech_recognizer.AddKeyword(1, F("qing kai deng"));    // 添加"请开灯"词条
-  g_speech_recognizer.AddKeyword(2, F("qing guan deng"));   // 添加"请关灯"词条
+  g_speech_recognizer.AddKeyword(0, F("xiao yi xiao yi"));                              // 添加小易小易词条为关键词，index为0
+  g_speech_recognizer.AddKeyword(1, F("qing kai deng"));                                // 添加"请开灯"词条
+  g_speech_recognizer.AddKeyword(2, F("qing guan deng"));                               // 添加"请关灯"词条
   pinMode(g_led_pin, OUTPUT);
   digitalWrite(g_led_pin, 0);  // 默认关闭led灯
   Serial.println("setup done");

@@ -2,11 +2,7 @@
 
 ## Physical picture
 
-
-
-![Physical picture](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/sound_sensor/picture/sound_sensor.png)
-
-
+![Physical picture](picture/sound_sensor.png)
 
 ## Overview
 
@@ -14,7 +10,7 @@ The function of the sound sensor module is equivalent to a microphone. It is use
 
 ## Schematic
 
-[View Schematic](en/ph2.0_sensors/sensors/sound_sensor/sound_sensor_schematic.pdf) ![Schematic](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/sound_sensor/picture/sound_sensor_schematic.png)
+<a href="en/ph2.0_sensors/sensors/sound_sensor/sound_sensor_schematic.pdf" target="_blank">View Schematic</a> ![Schematic](picture/sound_sensor_schematic.png)
 
 ## Module parameters
 
@@ -32,34 +28,34 @@ The function of the sound sensor module is equivalent to a microphone. It is use
 
 ## Mechanical Dimensions
 
-![Mechanical Dimensions](http://localhost:3000/zh-cn/ph2.0_sensors/sensors/sound_sensor/picture/sound_sensor_assembly.png)
+![Mechanical Dimensions](picture/sound_sensor_assembly.png)
 
 ## Arduino Example Program
 
-[Download the sample program](en/ph2.0_sensors/sensors/sound_sensor/sound_sensor.zip)
+<a href="en/ph2.0_sensors/sensors/sound_sensor/sound_sensor.zip" download>Download the sample program</a>
 
 ```c++
-#define AnalogPin 15//Define the analog interface pin of the sound sensor
-#define DigitalPin 14//Define the digital interface pin of the sound sensor
-int AnalogValue=0;
-byte DigitalValue=0;
+#define ANALOG_PIN 15   // Define the analog interface pin of the sound sensor
+#define DIGITAL_PIN 14  // Define the digital interface pin of the sound sensor
 
-void setup()
-{
-Serial.begin(9600);//Set the serial port baud rate
-pinMode(AnalogPin, INPUT);//Set the analog interface pin of the sound sensor to input
-pinMode(DigitalPin, INPUT);//Set the digital interface pin of the sound sensor to input
+int analog_value = 0;
+byte digital_value = 0;
+
+void setup() {
+  Serial.begin(9600);          // Set the serial port baud rate
+  pinMode(ANALOG_PIN, INPUT);   // Set the analog interface pin of the sound sensor to input
+  pinMode(DIGITAL_PIN, INPUT);  // Set the digital interface pin of the sound sensor to input
 }
 
 void loop() {
-AnalogValue= analogRead(AnalogPin);//Read the analog value of the sound sensor
-DigitalValue=digitalRead(DigitalPin);//Read the digital value of the sound sensor
-Serial.print("Analog Data:");
-Serial.println(AnalogValue);//Print the analog value of the sound sensor
-Serial.print("Digital Data:");
-Serial.println(DigitalValue);//Print the digital value of the sound sensor
-delay(200);
-}Click Copymistakecopy
+  analog_value = analogRead(ANALOG_PIN);     // Read the analog value of the sound sensor
+  digital_value = digitalRead(DIGITAL_PIN);  // Read the digital value of the sound sensor
+  Serial.print("Analog Data:");
+  Serial.println(analog_value);  // Print the analog value of the sound sensor
+  Serial.print("Digital Data:");
+  Serial.println(digital_value);  // Print the digital value of the sound sensor
+  delay(200);
+}
 ```
 
 The sensor threshold can be adjusted by adjusting the resistance value on the sound sensor.
@@ -69,21 +65,20 @@ The sensor threshold can be adjusted by adjusting the resistance value on the so
 ### Esp32 MicroPython Example Program
 
 ```python
-from machine import ADC,Pin
+from machine import ADC, Pin
 import time
 
-AnalogPin = 15 # Define the analog interface pin of the sound sensor
-DigitalPin = 14 # Define the digital interface pin of the sound sensor
+analog_pin = 15 # Define the analog interface pin of the sound sensor
+digital_pin = 14 # Define the digital interface pin of the sound sensor
 
-p1 = ADC(AnalogPin)
-p2 = Pin(DigitalPin, Pin.IN) # create input pin on GPIO2
+p1 = ADC(analog_pin)
+p2 = Pin(digital_pin, Pin.IN) # create input pin on GPIO2
 
 while True:
-AnalogValue = p1.read_u16() # Read the analog value of the sound sensor
-print("Analog Data:", AnalogValue) # Print the analog value of the sound sensor
-print("Digital Data:", p2.value()) # Print the digital value of the sound sensor
-time.sleep_ms(200)
-Click Copymistakecopy
+    analog_value = p1.read_u16() # Read the analog value of the sound sensor
+    print("Analog Data:", analog_value) # Print the analog value of the sound sensor
+    print("Digital Data:", p2.value()) # Print the digital value of the sound sensor
+    time.sleep_ms(200)
 ```
 
 ### Micro:bit MicroPython Example Program
@@ -92,11 +87,11 @@ Click Copymistakecopy
 from microbit import *
 
 while True:
-p1 = pin1.read_analog() # Read the analog value of the sound sensor
-p2 = pin2.read_digital() # Read the digital value of the sound sensor
-print("Analog Data:", p1) # Print the analog value of the sound sensor
-print("Digital Data:", p2) # Print the digital value of the sound sensor
-sleep(1000)Click Copymistakecopy
+    p1 = pin1.read_analog() # Read the analog value of the sound sensor
+    p2 = pin2.read_digital() # Read the digital value of the sound sensor
+    print("Analog Data:", p1) # Print the analog value of the sound sensor
+    print("Digital Data:", p2) # Print the digital value of the sound sensor
+    sleep(1000)
 ```
 
 ## MakeCode Example Programs

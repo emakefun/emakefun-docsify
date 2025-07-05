@@ -2,11 +2,7 @@
 
 ## Module physical picture
 
-
-
-![NL50 module physical picture](http://localhost:3000/en/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50.png)
-
-
+![NL50 module physical picture](nl50.png)
 
 ## Overview
 
@@ -16,7 +12,7 @@ Therefore, the NL50 sensor has the advantages of high accuracy and simple connec
 
 ### Schematic
 
-[Click to download NL50 schematic diagram](en/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50.pdf)
+<a href="en/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50.pdf" target="_blank">Click to download NL50 schematic diagram</a>
 
 ### Chip Specifications
 
@@ -51,11 +47,11 @@ To be supplemented
 | Arduino Mega 2560                  |
 | ESP32                              |
 
-[Click to download Arduino library and sample program](en/ph2.0_sensors/sensors/temperature_sensor_nl50/emakefun_temperature_sensor_nl50.zip)
+<a href="en/ph2.0_sensors/sensors/temperature_sensor_nl50/emakefun_temperature_sensor_nl50.zip" download>Click to download Arduino library and sample program</a>
 
 ## Microython sample programs
 
-[Click to download Micropython library and sample programs](en/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50_py.zip)
+<a href="en/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50_py.zip" download>Click to download Micropython library and sample programs</a>
 
 ## Mixly graphical example
 

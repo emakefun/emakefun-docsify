@@ -159,26 +159,27 @@ MX1616L可驱动2个电机，OUTA1、OUTB1和OUTA2、OUB2之间分别接2个电�
 测试程序代码
 
 ```c
-const int LeftAvoidancePin = 12;
-const int RightAvoidancePin = A5;
-const int LeftLightPin = A3;
-const int RightLightPin = A4;
+const int kLeftAvoidancePin = 12;
+const int kRightAvoidancePin = A5;
+const int kLeftLightPin = A3;
+const int kRightLightPin = A4;
 
 int dl, dr, LL, LR;
+
 void setup() {
   Serial.begin(9600);
-  pinMode(LeftAvoidancePin, INPUT);
-  pinMode(RightAvoidancePin, INPUT);
-  pinMode(LeftLightPin, INPUT);
-  pinMode(RightLightPin, INPUT);
+  pinMode(kLeftAvoidancePin, INPUT);
+  pinMode(kRightAvoidancePin, INPUT);
+  pinMode(kLeftLightPin, INPUT);
+  pinMode(kRightLightPin, INPUT);
   delay(1000);
 }
 
 void loop() {
-  dl = digitalRead(LeftAvoidancePin);
-  dr = digitalRead(RightAvoidancePin);
-  LL = analogRead(LeftLightPin);
-  LR = analogRead(RightLightPin);
+  dl = digitalRead(kLeftAvoidancePin);
+  dr = digitalRead(kRightAvoidancePin);
+  LL = analogRead(kLeftLightPin);
+  LR = analogRead(kRightLightPin);
   Serial.print("LeftAvoidance:");
   Serial.print(dl);
   Serial.print("   ");
@@ -191,7 +192,6 @@ void loop() {
   Serial.println(LR);
   delay(1000);
 }
-
 ```
 
 无障碍物、环境光线较暗时数据示意图
@@ -449,47 +449,42 @@ ESP-M2 Wifi透传模块是基于TCP/IP 协议标准，工作频段为 2.4GHZ 范
 在上面8个字段，在程序中我们用一个结构体来表示
 
 ```c
-typedef struct
-{
-    unsigned char start_code;      // 8bit 0xAA
-unsigned char len;
-unsigned char type;
-    unsigned char addr;
-    unsigned char function;   // 16 bit
-    unsigned char *data;            // n bit
-    unsigned short int sum;         // check sum
-    unsigned char end_code;         // 8bit 0x55
-}ST_protocol;
-
-
+typedef struct {
+  unsigned char start_code;  // 8bit 0xAA
+  unsigned char len;
+  unsigned char type;
+  unsigned char addr;
+  unsigned char function;  // 16 bit
+  unsigned char *data;     // n bit
+  unsigned short int sum;  // check sum
+  unsigned char end_code;  // 8bit 0x55
+} ST_protocol;
 ```
 
 功能码定义如下：
 
 ```c
-typedef enum
-{
-    E_BATTERY = 1,
-    E_LED = 2,
-    E_BUZZER = 3,
-    E_INFO = 4,
-    E_ROBOT_CONTROL_DIRECTION = 5,
-    E_ROBOT_CONTROL_SPEED = 6,
-    E_TEMPERATURE = 7,
-    E_INFRARED_TRACKING = 8,
-    E_ULTRASONIC = 9,
-    E_INFRARED_REMOTE = 10,
-    E_INFRARED_AVOIDANCE = 11,
-    E_CONTROL_MODE = 12,
-    E_BUTTON = 13,
-    E_LED_MAXTRIX = 14,
-    E_CMD_LINE = 15,
-    E_VERSION = 16,
-    E_UPGRADE = 17,
-    E_PHOTORESISTOR = 18,
-    E_CONTOROL_CODE_MAX,
+typedef enum {
+  E_BATTERY = 1,
+  E_LED = 2,
+  E_BUZZER = 3,
+  E_INFO = 4,
+  E_ROBOT_CONTROL_DIRECTION = 5,
+  E_ROBOT_CONTROL_SPEED = 6,
+  E_TEMPERATURE = 7,
+  E_INFRARED_TRACKING = 8,
+  E_ULTRASONIC = 9,
+  E_INFRARED_REMOTE = 10,
+  E_INFRARED_AVOIDANCE = 11,
+  E_CONTROL_MODE = 12,
+  E_BUTTON = 13,
+  E_LED_MAXTRIX = 14,
+  E_CMD_LINE = 15,
+  E_VERSION = 16,
+  E_UPGRADE = 17,
+  E_PHOTORESISTOR = 18,
+  E_CONTOROL_CODE_MAX,
 } E_CONTOROL_FUNC;
-
 ```
 
 例如：一个完整的数据包可以是这样的“AA 07 01 01 06 50 00 5F 55”，其中：

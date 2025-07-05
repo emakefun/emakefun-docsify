@@ -2,7 +2,7 @@
 
 ## 模块实物图
 
-![实物图](picture\1dddd2949c07109526a5430053e81f1.jpg)
+![实物图](picture/1dddd2949c07109526a5430053e81f1.jpg)
 
 ## 概述
 
@@ -47,7 +47,7 @@ QMC5883L是一款三轴磁传感器电子指南针模块，基于霍尔效应，
 
 ![tu5](picture/tu5.png)
 
-[点击查看原理图](zh-cn/ph2.0_sensors/smart_module/compass/指南针.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/compass/指南针.pdf" target="_blank">点击查看原理图</a>
 
 ## 机械图
 
@@ -93,22 +93,22 @@ SOFT_RST被置“1”时对QMC5883L进行软复位，软复位可以发生于任
 
 按照下图所示安装相应库文件：
 
-![安装库文件](picture\1.png)
+![安装库文件](picture/1.png)
 
 2. 打开示例程序
 
-![选择相应示例文件](picture\2.png)
+![选择相应示例文件](picture/2.png)
 
 3. 上传程序至Arduino，打开串口监视器，可以看到如下信息：
 
-![串口助手](picture\3.png)
+![串口助手](picture/3.png)
 
 ## Mixly示例程序
 
-[点击mixly示例程序下载](zh-cn/ph2.0_sensors/smart_module/compass/compass_Mixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/compass/compass_Mixly.zip" download>点击mixly示例程序下载</a>
 
 ## Esp32 MicroPython示例程序
 
-[点击esp32示例程序下载](zh-cn/ph2.0_sensors/smart_module/compass/ESP32--CompassModule-GY-271-QMC5883L-main.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/compass/ESP32--CompassModule-GY-271-QMC5883L-main.zip" download>点击esp32示例程序下载</a>
 
 由于micro:bit 自带指南针模块，所以此处不再提供示例程序。

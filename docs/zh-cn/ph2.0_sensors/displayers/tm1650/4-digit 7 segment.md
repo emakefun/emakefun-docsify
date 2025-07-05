@@ -2,13 +2,13 @@
 
 ## 模块图
 
-## ![02](E:\emakefun-docs\docs\sensors\shows\4-digit 7 segment\02.jpg)
+## ![02](E:/emakefun-docs/docs/sensors/shows/4-digit 7 segment/02.jpg)
 
  4位7段数码管由一个12管脚的4位7段共阳极数码管和一个控制芯片TM1637构成。该模块采用沉金工艺，外观更加美观，同时采用防插反接口，操作更加安全，插口一边有大写字母I表示该模块采用IIC协议通信，另一边是数码管的图标标志。此产品可以应用在时间显示，跑表显示以及其他需要显示数字的设备上。
 
 ## 原理图
 
-## ![15](E:\emakefun-docs\docs\sensors\shows\4-digit 7 segment\15.png)模块参数
+## ![15](E:/emakefun-docs/docs/sensors/shows/4-digit 7 segment/15.png)模块参数
 
 | 引脚名称 | 描述       |
 | -------- | ---------- |
@@ -24,8 +24,8 @@
 
 ## 详细原理图
 
-[TM1637.pdf](https://emakefun-docs.readthedocs.io/zh_CN/latest/sensors/shows/TM1637/4位带时钟7段数码管模块图片/TM1637.pdf)
+<a href="https://emakefun-docs.readthedocs.io/zh_CN/latest/sensors/shows/TM1637/4位带时钟7段数码管模块图片/TM1637.pdf" target="_blank">TM1637.pdf</a>
 
 ## 机械尺寸
 
-![2](E:\emakefun-docs\docs\sensors\shows\4-digit 7 segment\2.png)
+![2](E:/emakefun-docs/docs/sensors/shows/4-digit 7 segment/2.png)

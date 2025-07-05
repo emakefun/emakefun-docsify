@@ -10,7 +10,8 @@
 
 ## 原理图
 
- [查看原理图](zh-cn\ph2.0_sensors\sensors\shock_sensor\shock_sensor_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor_schematic.pdf" target="_blank">查看原理图</a>
+
 ![原理图](picture/shock_sensor_schematic.png)
 
 ## 模块参数
@@ -36,25 +37,24 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn\ph2.0_sensors\sensors\shock_sensor\shock_sensor.rar ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/shock_sensor/shock_sensor.rar" download>下载示例程序</a>
 
 ```c++
-#define ShockAnalogPin A0  // 定义震动传感器模拟引脚
-#define ShockDigitalPin 7  // 定义震动传感器数字引脚
+#define SHOCK_ANALOG_PIN A0  // 定义震动传感器模拟引脚
+#define SHOCK_DIGITAL_PIN 7  // 定义震动传感器数字引脚
 
-void setup()
-{
-    Serial.begin(9600);  // 初始化串口通信
-    pinMode(ShockAnalogPin, INPUT);  // 设置震动传感器模拟引脚为输入
-    pinMode(ShockDigitalPin, INPUT);  // 设置震动传感器数字引脚为输入
+void setup() {
+  Serial.begin(9600);               // 初始化串口通信
+  pinMode(SHOCK_ANALOG_PIN, INPUT);   // 设置震动传感器模拟引脚为输入
+  pinMode(SHOCK_DIGITAL_PIN, INPUT);  // 设置震动传感器数字引脚为输入
 }
 
-void loop()
-{
-    Serial.println("Shock Analog Data: ");
-    Serial.println(analogRead(ShockAnalogPin));  // 打印震动传感器模拟数据
-    Serial.println(digitalRead(ShockDigitalPin));  // 打印震动传感器数字数据
-    delay(1000);  // 延时1秒
+void loop() {
+  Serial.println("Shock Analog Data: ");
+  Serial.println(analogRead(SHOCK_ANALOG_PIN));    // 打印震动传感器模拟数据
+  Serial.println("Shock Digital Data: ");
+  Serial.println(digitalRead(SHOCK_DIGITAL_PIN));  // 打印震动传感器数字数据
+  delay(1000);                                   // 延时1秒
 }
 ```
 
@@ -66,15 +66,15 @@ void loop()
 from machine import ADC,Pin
 import time
 
-AnalogPin = 15  # 定义震动传感器模拟接口引脚
-DigitalPin = 14  # 定义震动传感器数字接口引脚
+analog_pin = 15  # 定义震动传感器模拟接口引脚
+digital_pin = 14  # 定义震动传感器数字接口引脚
 
-p1 = ADC(AnalogPin)
-p2 = Pin(DigitalPin, Pin.IN)  
+p1 = ADC(analog_pin)
+p2 = Pin(digital_pin, Pin.IN)  
        
 while True:
-    AnalogValue = p1.read_u16()  # 读取震动传感器模拟值
-    print("Analog Data:", AnalogValue)  # 打印震动传感器模拟值
+    analog_value = p1.read_u16()  # 读取震动传感器模拟值
+    print("Analog Data:", analog_value)  # 打印震动传感器模拟值
     print("Digital Data:", p2.value())  # 打印震动传感器数字值
     time.sleep_ms(200)
 
@@ -85,13 +85,13 @@ while True:
 ```python
 from microbit import *
 
-AnalogPin = pin1  # 定义震动传感器模拟接口引脚
-DigitalPin = pin0  # 定义震动传感器数字接口引脚
+analog_pin = pin1  # 定义震动传感器模拟接口引脚
+digital_pin = pin0  # 定义震动传感器数字接口引脚
 
 while True:
-    AnalogValue = AnalogPin.read_analog()  # 读取震动传感器模拟值
-    print("Analog Data:", AnalogValue)  # 打印震动传感器模拟值
-    print("Digital Data:", DigitalPin.read_digital())  # 打印震动传感器数字值
+    analog_value = analog_pin.read_analog()  # 读取震动传感器模拟值
+    print("Analog Data:", analog_value)  # 打印震动传感器模拟值
+    print("Digital Data:", digital_pin.read_digital())  # 打印震动传感器数字值
     sleep(0.2)
 ```
 

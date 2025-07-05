@@ -4,9 +4,9 @@
 
 <br>
 
-[1.下载Microbit驱动](/zh-cn/driver/microbit_daplink_driver.md)
+[1.下载Microbit驱动](/zh-cn/driver/microbit_daplink_driver/microbit_daplink_driver.md)
 
-[2.其他相关资料](相关资料.zip)
+<a href="zh-cn/microbit/makecode/information.zip" download>2.其他相关资料</a>
 
 ## 1. 安装 Makecode IDE
 

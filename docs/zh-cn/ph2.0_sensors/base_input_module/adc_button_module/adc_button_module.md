@@ -12,7 +12,7 @@ ADC按键模块是一种利用模数转换技术（ADC）实现按键检测的�
 
 ![ADC按键模块原理图](picture/schematic_diagram.jpg)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/base_input_module/adc_button_module/ADC_keyboard.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/adc_button_module/ADC_keyboard.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -30,7 +30,7 @@ ADC按键模块是一种利用模数转换技术（ADC）实现按键检测的�
 
 ### Arduino IDE 使用方法
 
-[点击此处下载Arduino库](zh-cn/ph2.0_sensors/base_input_module/adc_button_module/Adc_Button_v1.0.0.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/adc_button_module/Adc_Button_v1.0.0.zip" download>点击此处下载Arduino库</a>
 
 [点击此处查看API文档](https://emakefun-arduino-library.github.io/em_adc_button/html/zh-CN/functions_func.html)
 
@@ -42,4 +42,4 @@ ADC按键模块是一种利用模数转换技术（ADC）实现按键检测的�
 
 ### ESP32 MicroPython 示例程序
 
-[点击此处下载ESP32 MicroPython示例程序](zh-cn/ph2.0_sensors/base_input_module/adc_button_module/adc_button_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/adc_button_module/adc_button_esp32_micropython.zip" download>点击此处下载ESP32 MicroPython示例程序</a>

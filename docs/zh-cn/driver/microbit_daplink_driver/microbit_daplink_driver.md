@@ -6,4 +6,4 @@
 
 ## Windows 7
 
-需要[下载microbit驱动程序](zh-cn/driver/microbit_daplink_driver/mbedWinSerial_16466.exe ':ignore')，然后点击安装即可。
+<a href="zh-cn/driver/microbit_daplink_driver/mbedWinSerial_16466.exe" download>下载microbit驱动程序</a>

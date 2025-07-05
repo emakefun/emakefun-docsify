@@ -12,7 +12,7 @@
 
 ![原理图](picture/rocker_module_schematic.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_module_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_module_schematic.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -38,30 +38,31 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_module.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_module.zip" download>下载示例程序</a>
 
 ```c
-#define JOYSTICK_X    A5  //定义X输入引脚
-#define JOYSTICK_Y    A4  //定义Y输入引脚
-#define JOYSTICK_B    2   //定义按键输入引脚
+#define JOYSTICK_X A5  // 定义X输入引脚
+#define JOYSTICK_Y A4  // 定义Y输入引脚
+#define JOYSTICK_B 2   // 定义按键输入引脚
 
-int value_x, value_y, value_b; //定义记录模拟输入的变量
-void setup()
-{
-  pinMode(JOYSTICK_X, INPUT);  //初始化X引脚
-  pinMode(JOYSTICK_Y, INPUT);  //初始化Y引脚
-  pinMode(JOYSTICK_B, INPUT_PULLUP);  //初始化按键引脚
-  Serial.begin(9600);  //设置波特率
+int value_x = 0;
+int value_y = 0;
+int value_b = 0;  // 定义记录模拟输入的变量
+
+void setup() {
+  pinMode(JOYSTICK_X, INPUT);         // 初始化X引脚
+  pinMode(JOYSTICK_Y, INPUT);         // 初始化Y引脚
+  pinMode(JOYSTICK_B, INPUT_PULLUP);  // 初始化按键引脚
+  Serial.begin(9600);                 // 设置波特率
 }
 
-void loop()
-{
+void loop() {
   Serial.print("X Value:");
-  Serial.println(analogRead(JOYSTICK_X));//读取摇杆X轴值并打印出来
+  Serial.println(analogRead(JOYSTICK_X));  // 读取摇杆X轴值并打印出来
   Serial.print("Y Value:");
-  Serial.println(analogRead(JOYSTICK_Y));//读取摇杆Y轴值并打印出来
-  if (digitalRead(JOYSTICK_B) == LOW) {  //如果按键按下则打印enter
-    Serial.println("enter");//打印enter 
+  Serial.println(analogRead(JOYSTICK_Y));  // 读取摇杆Y轴值并打印出来
+  if (digitalRead(JOYSTICK_B) == LOW) {    // 如果按键按下则打印enter
+    Serial.println("enter");               // 打印enter
   }
   delay(100);
 }
@@ -69,7 +70,7 @@ void loop()
 
 ## Mixly示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_Mixly_demo.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_Mixly_demo.zip" download>下载示例程序</a>
 
 ## micro:bit示例程序
 

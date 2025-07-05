@@ -4,7 +4,7 @@
 
 ## 一、概述
 
-esp8266-mqtt无线模块是emakefun公司基于乐鑫科技的wifi芯片ESP8266基础上重新研发的串口转wifi的物联网模块，该模块采用AT配置方式来支持wifi无线通信，AT指令全面兼容[乐鑫官方指令库（V3.0.0）](https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_cn.pdf)，在此基础上添加了MQTT指令，并且全部封装成scratch，mixly，Makecode图形化编程块支持arduino，micro:bit。 总而言之，这个模块就像一个无线网卡，但它不仅仅能连接Wi-Fi，还能理解和使用物联网中常用的通信方式，让您的设备轻松接入互联网，实现**远程控制和数据交换**。
+esp8266-mqtt无线模块是emakefun公司基于乐鑫科技的wifi芯片ESP8266基础上重新研发的串口转wifi的物联网模块，该模块采用AT配置方式来支持wifi无线通信，AT指令全面兼容<a href="https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_cn.pdf" target="_blank">乐鑫官方指令库（V3.0.0）</a>，在此基础上添加了MQTT指令，并且全部封装成scratch，mixly，Makecode图形化编程块支持arduino，micro:bit。 总而言之，这个模块就像一个无线网卡，但它不仅仅能连接Wi-Fi，还能理解和使用物联网中常用的通信方式，让您的设备轻松接入互联网，实现**远程控制和数据交换**。
 
 ## 二、模块特点及参数
 
@@ -341,39 +341,34 @@ esp8266-mqtt无线模块是emakefun公司基于乐鑫科技的wifi芯片ESP8266�
 
 ### **6.1 AT串口测试**
 
-[下载最新示例程序](zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/AT_test.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/AT_test.zip" download>下载最新示例程序</a>
 
 ```c++
 #include "Arduino.h"
 #include "SoftwareSerial.h"
-SoftwareSerial Serial1(5, 6); // TX-5，RX-6
 
-void setup()
-{
-  Serial.begin(115200); // 用于调试的串口
-  Serial1.begin(9600);  // 设备 ESP 的波特率可能不同
+SoftwareSerial serial1(5, 6);  // TX-5，RX-6
+
+void setup() {
+  Serial.begin(115200);  // 用于调试的串口
+  serial1.begin(9600);   // 设备 ESP 的波特率可能不同
 }
 
-void loop()
-{
-  if(Serial1.available())  // 检查 ESP 是否在发送消息
-  {
-    while(Serial1.available())
-    {
-      int c = Serial1.read(); // 读取下一个字符
-      Serial.write((char)c);  // 将数据写入串口监视器
+void loop() {
+  if (serial1.available()) {  // 检查 ESP 是否在发送消息
+    while (serial1.available()) {
+      int c = serial1.read();  // 读取下一个字符
+      Serial.write((char)c);   // 将数据写入串口监视器
     }
   }
 
-  if(Serial.available())
-  {
+  if (Serial.available()) {
     // 等待让所有输入命令在串口缓冲区中
     delay(10);
 
     // 以字符串形式读取输入命令
     String cmd = "";
-    while(Serial.available())
-    {
+    while (Serial.available()) {
       cmd += (char)Serial.read();
     }
 
@@ -383,14 +378,14 @@ void loop()
     Serial.println(cmd);
 
     // 将读取的字符发送到 ESP
-    Serial1.print(cmd);
+    serial1.print(cmd);
   }
 }
 ```
 
-如果 Serial1 (连接 MQTT 模块) 接收到数据，程序会将这些数据读取出来并通过 Serial (调试监视器) 打印出来。
+如果 serial1 (连接 MQTT 模块) 接收到数据，程序会将这些数据读取出来并通过 Serial (调试监视器) 打印出来。
 
-如果 Serial (调试监视器) 接收到数据，程序会将这些数据读取出来并通过 Serial1 发送给 MQTT 模块。
+如果 Serial (调试监视器) 接收到数据，程序会将这些数据读取出来并通过 serial1 发送给 MQTT 模块。
 
 总的来说，AT串口测试程序允许用户通过 Arduino 的串口监视器与 ESP8266 MQTT 模块进行 AT 指令交互。
 
@@ -413,7 +408,7 @@ void loop()
 
 **Mixly示例程序**
 
-在Mixly编程界面右上角点击设置——导入库，选择EmakeFun的库文件从云端导入。[示例程序下载](zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/uno-mixly示例程序.zip ':ignore')
+在Mixly编程界面右上角点击设置——导入库，选择EmakeFun的库文件从云端导入。<a href="zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/uno-mixly示例程序.zip" download>示例程序下载</a>
 
 ![mixly_importing_library](./esp8266_mqtt_pic/mixly_importing_library.png)
 
@@ -441,39 +436,39 @@ void loop()
 
 **Arduino IDE示例程序**
 
-[Arduino IDE示例程序下载](zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/uno-IDE示例程序.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/uno-IDE示例程序.zip" download>Arduino IDE示例程序下载</a>
 
 硬件接收服务器信息示例。
 
 ```c++
-#include "WiFiEsp.h"  // 引入 WiFiEsp 库
-
 #include <SoftwareSerial.h>
-SoftwareSerial esp8266_serial(5, 6);  // MQTT模块接口，TX对应5，RX对应6
 
+#include "WiFiEsp.h"                  // 引入 WiFiEsp 库
 #include "WifiEspMqtt.h"
 
+SoftwareSerial esp8266_serial(5, 6);  // MQTT模块接口，TX对应5，RX对应6
+
 WiFiEspMqtt esp8266;
-char ssid[] = "K30";    // wifi名称
-char passwd[] = "12345678";  // wifi密码
+char ssid[] = "K30";                  // wifi名称
+char passwd[] = "12345678";           // wifi密码
 char mqtt_host[] = "broker.emqx.io";  // 服务器地址
-uint16_t mqtt_port = 1883;                      // 端口，固定值1883
-char mqtt_client_id[] = "emakefun";              // 客户端ID，随意填
-char mqtt_username[] = "kxmqttp1";               // 账号和密码
+uint16_t mqtt_port = 1883;            // 端口，固定值1883
+char mqtt_client_id[] = "emakefun";   // 客户端ID，随意填
+char mqtt_username[] = "kxmqttp1";    // 账号和密码
 char mqtt_password[] = "public985";
 
-void setup(){
-  esp8266_serial.begin(9600);  // 初始化串口通信
-  WiFi.init(&esp8266_serial);   // 初始化 WiFi 模块
-  WiFi.begin(ssid, passwd);   // 连接 WiFi 网络
+void setup() {
+  esp8266_serial.begin(9600);                                          // 初始化串口通信
+  WiFi.init(&esp8266_serial);                                          // 初始化 WiFi 模块
+  WiFi.begin(ssid, passwd);                                            // 连接 WiFi 网络
   esp8266.mqtt_usercfg(mqtt_client_id, mqtt_username, mqtt_password);  // 配置 MQTT 用户信息
-  esp8266.mqtt_connect(mqtt_host, mqtt_port, 0);      // 连接到 MQTT 服务器
-  Serial.begin(115200);  // 初始化串口通信
-  esp8266.mqtt_sub(String("/emakefun/topic_1").c_str(), 0);  // 订阅指定主题
+  esp8266.mqtt_connect(mqtt_host, mqtt_port, 0);                       // 连接到 MQTT 服务器
+  Serial.begin(115200);                                                // 初始化串口通信
+  esp8266.mqtt_sub(String("/emakefun/topic_1").c_str(), 0);            // 订阅指定主题
 }
 
-void loop(){
-  if (esp8266.mqtt_receive()) {   // 如果接收到 MQTT 信息
+void loop() {
+  if (esp8266.mqtt_receive()) {            // 如果接收到 MQTT 信息
     Serial.println(esp8266.mqtt_message);  // 打印接收到的信息
   }
 }
@@ -482,31 +477,32 @@ void loop(){
 硬件发送信息到服务器示例。
 
 ```c++
-#include "WiFiEsp.h"
 #include <SoftwareSerial.h>
-SoftwareSerial esp8266_serial(5, 6);  //MQTT模块接口，TX对应5，RX对应6
+
+#include "WiFiEsp.h"
 #include "WifiEspMqtt.h"
+
+SoftwareSerial esp8266_serial(5, 6);  // MQTT模块接口，TX对应5，RX对应6
 WiFiEspMqtt esp8266;
 
-char ssid[] = "K30";    //wifi名称
-char passwd[] = "12345678";  //wifi密码
-char mqtt_host[] = "broker.emqx.io";  //服务器地址
-uint16_t mqtt_port = 1883;                      //端口，固定值1883
-char mqtt_client_id[] = "emakefun";              //客户端ID，随意填
-char mqtt_username[] = "kxmqttp1";               //账号和密码，必须为提供的2选1
+char ssid[] = "K30";                  // wifi名称
+char passwd[] = "12345678";           // wifi密码
+char mqtt_host[] = "broker.emqx.io";  // 服务器地址
+uint16_t mqtt_port = 1883;            // 端口，固定值1883
+char mqtt_client_id[] = "emakefun";   // 客户端ID，随意填
+char mqtt_username[] = "kxmqttp1";    // 账号和密码，必须为提供的2选1
 char mqtt_password[] = "public985";
 
-void setup(){
+void setup() {
   esp8266_serial.begin(9600);
   WiFi.init(&esp8266_serial);
   WiFi.begin(ssid, passwd);
   esp8266.mqtt_usercfg(mqtt_client_id, mqtt_username, mqtt_password);
   esp8266.mqtt_connect(mqtt_host, mqtt_port, 0);
-
 }
 
-void loop(){
-  esp8266.mqtt_public("test/a", String("你好").c_str(), 0);  //要发送的信息，test/a为主题，“你好”为内容
+void loop() {
+  esp8266.mqtt_public("test/a", String("你好").c_str(), 0);  // 要发送的信息，test/a为主题，“你好”为内容
   delay(1000);
   esp8266.mqtt_public("test/a", String("Emakefun").c_str(), 0);
   delay(1000);
@@ -578,15 +574,15 @@ Username和Password可以任意填写。注意：MQTTX工具中Client ID与硬�
 
 连接成功后，点击“添加订阅”。
 
-![MQTTX_new_topic](esp8266_mqtt_pic\MQTTX_new_topic.png)
+![MQTTX_new_topic](esp8266_mqtt_pic/MQTTX_new_topic.png)
 
 MQTTX工具订阅硬件发布的主题。添加topic; 这里需填写硬件程序中发布的主题。（本示例命名为test/a）
 
-![MQTTX_configure_topic](esp8266_mqtt_pic\MQTTX_configure_topic.jpg)
+![MQTTX_configure_topic](esp8266_mqtt_pic/MQTTX_configure_topic.jpg)
 
 MQTTX工具给硬件发送数据：上面填写硬件程序中订阅的主题（本示例命名为/emakefun/topic_1）
 
-![MQTTX_configure_sending_tocpic](esp8266_mqtt_pic\MQTTX_configure_sending_tocpic.png)
+![MQTTX_configure_sending_tocpic](esp8266_mqtt_pic/MQTTX_configure_sending_tocpic.png)
 
 #### 6.2.4 实验现象
 

@@ -12,7 +12,7 @@
 
 ![7](picture/14.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/actuators/laserEmissionModule/laser.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/actuators/laserEmissionModule/laser.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -34,13 +34,14 @@
 ## 示例程序
 
 ```c
-#define laser_pin A3  // Set the laser port to A3
-void setup(){
-  pinMode(laser_pin, OUTPUT);  // Set the laser port to output mode
+#define LASER_PIN A3  // Set the laser port to A3
+
+void setup() {
+  pinMode(LASER_PIN, OUTPUT);  // Set the laser port to output mode
 }
 
-void loop(){
-  digitalWrite(laser_pin,HIGH); // Set the laser port to high level
+void loop() {
+  digitalWrite(LASER_PIN, HIGH);  // Set the laser port to high level
 }
 ```
 
