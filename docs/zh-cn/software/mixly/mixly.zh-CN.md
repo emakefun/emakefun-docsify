@@ -16,7 +16,7 @@
 
 ![mixlyDownloadPackage](./picture/mixlyDownloadPackage.png)
 
-下载完之后，将文件解压，解压的目录最好不要有中文、空格等，目录最好放到每个电脑盘的根目录.
+下载完之后，将文件解压，解压的目录不要有中文、空格等；安装目录不要太长，目录最好放到每个电脑盘的根目录。
 
 打开解压后的文件夹，请双击"一键更新.bat"文件，按照提示安装，在此不做详细描述。等安装完成，双击“Mixly.exe”打开Mixly软件，如下图：
 
@@ -26,7 +26,11 @@
 
 ![mixlyArduino](./picture/mixlyArduino.png)
 
-当主板为Maker-ESP32时，板卡可以选择Python ESP32,也可选择Arduino ESP32.
+当主板为ESP32芯片时，板卡可以选择Python ESP32,也可选择Arduino ESP32。如下图
+
+![](./picture/mixlyArduinoESP32.png)
+
+![](./picture/mixlyPythonESP32.png)
 
 ## 二、Mixly界面介绍
 
@@ -61,8 +65,8 @@ Mixly2.0只介绍云端导入，离线导入请自行研究。
 
 该库的分类和我们传感器的分类一一匹配。可以按照文档目录索引找到相应的传感器。
 
-[点击下载Arduino米思齐传感器离线库](./emakefun_sensor.zip)
+[点击下载Arduino米思齐传感器离线库](zh-cn/software/mixly/emakefun_sensor.zip)
 
-[点击下载ESP32米思齐传感器离线库](./emakefun_sensors_esp32.zip)
+[点击下载ESP32米思齐传感器离线库](zh-cn/software/mixly/emakefun_sensors_esp32.zip)
 
 
