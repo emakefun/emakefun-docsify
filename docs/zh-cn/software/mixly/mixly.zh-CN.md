@@ -16,7 +16,7 @@
 
 ![mixlyDownloadPackage](./picture/mixlyDownloadPackage.png)
 
-下载完之后，将文件解压，解压的目录最好不要有中文、空格等，目录最好放到每个电脑盘的根目录.
+下载完之后，将文件解压，解压的目录不要有中文、空格等；安装目录不要太长，目录最好放到每个电脑盘的根目录。
 
 打开解压后的文件夹，请双击"一键更新.bat"文件，按照提示安装，在此不做详细描述。等安装完成，双击“Mixly.exe”打开Mixly软件，如下图：
 
@@ -26,7 +26,11 @@
 
 ![mixlyArduino](./picture/mixlyArduino.png)
 
-当主板为Maker-ESP32时，板卡可以选择Python ESP32,也可选择Arduino ESP32.
+当主板为ESP32芯片时，板卡可以选择Python ESP32,也可选择Arduino ESP32。如下图
+
+![](./picture/mixlyArduinoESP32.png)
+
+![](./picture/mixlyPythonESP32.png)
 
 ## 二、Mixly界面介绍
 
