@@ -20,7 +20,7 @@ TODO
 
 ## 芯片规格书
 
-[点击查看芯片规格书](zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/VK16K33.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/VK16K33.pdf" target="_blank">点击查看芯片规格书</a>
 
 ## 模块参数
 
@@ -63,14 +63,14 @@ TODO
 
 ### ESP32 MicroPython示例程序
 
-[点击下载ESP32 MicroPython示例程序](zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/vk16k33_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/vk16k33_esp32_micropython.zip" download>点击下载ESP32 MicroPython示例程序</a>
 
 ### micro:bit MicroPython示例程序
 
-[点击下载micro:bit MicroPython示例程序](zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/vk16k33_microbit_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/4_digit_7_segment_v2.0/vk16k33_microbit_micropython.zip" download>点击下载micro:bit MicroPython示例程序</a>
 
 ## micro:bit MakeCode 示例程序
 
-[点击查看micro:bit MakeCode示例程序](https://makecode.microbit.org/S02939-66350-35638-80078)
+<a href="https://makecode.microbit.org/S02939-66350-35638-80078" target="_blank">点击查看micro:bit MakeCode示例程序</a>
 
-[点击查看用户库链接](https://github.com/emakefun-makecode-extensions/emakefun_vk16k33)
+<a href="https://github.com/emakefun-makecode-extensions/emakefun_vk16k33" target="_blank">点击查看用户库链接</a>

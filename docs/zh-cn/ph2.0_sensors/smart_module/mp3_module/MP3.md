@@ -141,24 +141,23 @@ para1 para2: 00 0E 表示音量大小<br>
 ## Arduino示例程序
 
 ```c++
+#include "GD5800_Serial.h"
 
-include "GD5800_Serial.h"
-
-GD5800_Serial mp345(5, 6);                           // 初始化MP3
+GD5800_Serial mp345(5, 6);  // 初始化MP3
 
 void setup() {
   mp345.begin(9600);
-  mp345.setVolume(50);                                   // 设置音量为50
-  mp345.setLoopMode(MP3_LOOP_ALL);      // 设置循环模式为全部循环
-  mp345.setEqualizer(MP3_EQ_NORMAL);    // 设置音效为普通
+  mp345.setVolume(50);                // 设置音量为50
+  mp345.setLoopMode(MP3_LOOP_ALL);    // 设置循环模式为全部循环
+  mp345.setEqualizer(MP3_EQ_NORMAL);  // 设置音效为普通
 }
-void loop()  {
-   mp345.play();                                                  //  播放音乐
+void loop() {
+  mp345.play();  //  播放音乐
 }
 
 ```
 
-[Arduino程序下载](zh-cn/ph2.0_sensors/smart_module/mp3_module/Mp3_experiment.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/mp3_module/Mp3_experiment.zip" download>Arduino程序下载</a>
 
 ### Mixly图形化块示例
 
@@ -166,7 +165,7 @@ void loop()  {
 
 程序解析：MP3模块的TX管脚接Arduino的D5引脚，RX管脚接Arduino的D6引脚，并且音量设置为50；设置音乐的循环模式为全部循环(循环模式分为：全部循环、文件夹内循环、单曲循环、随机循环)，并且音效为普通(音效分为：普通、流行、摇滚、爵士、古典、低音)，然后播放文件。
 
-[点击下载Mixly示例](zh-cn/ph2.0_sensors/smart_module/mp3_module/MP3.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/mp3_module/MP3.zip" download>点击下载Mixly示例</a>
 
 ## micro:bit示例程序
 
@@ -176,8 +175,8 @@ micro:bit扩展链接：<https://github.com/emakefun/pxt-mp3>
 
 ### Mind+示例程序
 
-[点击下载Mind+库](zh-cn/ph2.0_sensors/smart_module/mp3_module/eamkefun-em_mp3-thirdex-V0.0.1.mpext ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/mp3_module/eamkefun-em_mp3-thirdex-V0.0.1.mpext" download>点击下载Mind+库</a>
 
-[点击下载Mind+示例](zh-cn/ph2.0_sensors/smart_module/mp3_module/mp3_test.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/mp3_module/mp3_test.zip" download>点击下载Mind+示例</a>
 
 ![MP3_mindplus](picture/mp3_mindplus.png)

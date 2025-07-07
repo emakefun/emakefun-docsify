@@ -59,7 +59,7 @@ arduino nano , ble-nano3.0,  ble-nano4.2  ble-nano5.3 四款产品对比表格
 
 ### 原理图
 
-[原理图下载](zh-cn/arduino_products/nano/ble-nano/schematic/ble-nano_v4.2.pdf ':ignore')
+<a href="zh-cn/arduino_products/nano/ble-nano/schematic/ble-nano_v4.2.pdf" target="_blank">原理图下载</a>
 
 ![ble-name_sch](./image/ble-name_sch.png)
 
@@ -94,7 +94,7 @@ ble-nano烧写的为最新Arduino Nano官方Bootloader所以需要使用IDE 1.8.
 
 ## ble-nano和安卓手机连接
 
-1、打开ble控制程序[ble_control_led.ino](zh-cn/arduino_products/nano/ble-nano/example/ble_contorl_led/ble_contorl_led.ino ':ignore')，将代码烧写到ble-nano的(ATmega328P-MU)主板上Link（引脚13）上的LED灯程序
+1、打开ble控制程序<a href="zh-cn/arduino_products/nano/ble-nano/example/ble_contorl_led/ble_contorl_led.ino" download>ble_contorl_led.ino</a>，将代码烧写到ble-nano的(ATmega328P-MU)主板上Link（引脚13）上的LED灯程序
 
 ```c
 String ble_data;
@@ -107,10 +107,9 @@ void setup() {
 }
 
 void loop() {
-  while (Serial.available() > 0)  
-  {
-      ble_data += char(Serial.read());
-      delay(2);
+  while (Serial.available() > 0) {
+    ble_data += char(Serial.read());
+    delay(2);
   }
   if (ble_data.compareTo("on") == 0) {
     Serial.println("turn on led");
@@ -119,7 +118,7 @@ void loop() {
   if (ble_data.compareTo("off") == 0) {
     Serial.println("turn off led");
     digitalWrite(led_pin, LOW);
-  }   
+  }
   ble_data = "";
 }
 ```
@@ -182,7 +181,7 @@ void loop() {
 
 ## AT指令集
 
-ble-nano的AT指令可通过Arduino自带的硬件串口0（RX)、1 (TX）控制，波特率支持9600、19200、38400、57600、115200。ble-nano串口默认波特率为115200bps。
+ble-nano的AT指令可通过Arduino自带的硬件串口0（RX）、1 (TX）控制，波特率支持9600、19200、38400、57600、115200。ble-nano串口默认波特率为115200bps。
 
 AT指令还可以通过直连TypeC数据线直连控制或者APP里面为0xFFE2的characteristics来控制。
 
@@ -395,7 +394,7 @@ ble-nano最核心的功能就是蓝牙转串口透传功能，所以所谓Arduin
 ```c
 auto data = "123456789abcdefghjk\n";
 Serial.write(data.c_str(), 20);
-delay(10);  //必须要延时 10ms以上
+delay(10);  // 必须要延时 10ms以上
 ```
 
 ## AT指令测试
@@ -421,23 +420,22 @@ int led_pin = 13;
 void setup() {
   Serial.begin(115200);
   pinMode(led_pin, OUTPUT);
-  Serial.println("AT+ROLE=0");  // 设置蓝牙为主机
-  delay(50);  // AT指令设置后需要延时50ms
-  Serial.println("AT+CON=83:46:8c:e4:c2:84");  //连接mac地址的蓝牙从机
-  delay(100);  // 等待连接成功
+  Serial.println("AT+ROLE=0");                 // 设置蓝牙为主机
+  delay(50);                                   // AT指令设置后需要延时50ms
+  Serial.println("AT+CON=83:46:8c:e4:c2:84");  // 连接mac地址的蓝牙从机
+  delay(100);                                  // 等待连接成功
 }
 
 void loop() {
-  while (Serial.available() > 0)  
-  {
-      ble_data += char(Serial.read());
-      delay(2);
+  while (Serial.available() > 0) {
+    ble_data += char(Serial.read());
+    delay(2);
   }
-  if (ble_data.endsWith("OK\r\n") > 0) {   //判断AT返回结果为OK
+  if (ble_data.endsWith("OK\r\n") > 0) {  // 判断AT返回结果为OK
     Serial.println("connect success");
     digitalWrite(led_pin, HIGH);
   }
-  if (ble_data.endsWith("ERROR\r\n") > 0) { //判断AT返回结果为ERROR
+  if (ble_data.endsWith("ERROR\r\n") > 0) {  // 判断AT返回结果为ERROR
     Serial.println("connect fail");
     digitalWrite(led_pin, LOW);
   }
@@ -461,18 +459,19 @@ void loop() {
 
 ![AT+BLEUSB](image/AT+BLEUSB.png)
 
-从机烧录[ble_control_led.ino](zh-cn/arduino_products/nano/ble-nano/example/ble_contorl_led/ble_contorl_led.ino ':ignore')
+从机烧录<a href="zh-cn/arduino_products/nano/ble-nano/example/ble_contorl_led/ble_contorl_led.ino" download>ble_control_led.ino</a>
 
 主机usb串口发送on后可以看到从机的L灯亮起，usb串口发送off后我们可以看到从机的L灯熄灭。
 
 二、我们可以分别对主机和从机ble-nano分别编程来控制从机ble-nano的L灯亮和灭。
 
-主机程序如下[master](zh-cn/arduino_products/nano/ble-nano/example/ble-nano_communication/master/master.ino ':ignore')
+主机程序如下<a href="zh-cn/arduino_products/nano/ble-nano/example/ble-nano_communication/master/master.ino" download>master</a>
 
 ```c
 String ble_data;
 int led_pin = 13;
 int ble_status = 0;
+
 void setup() {
   Serial.begin(115200);
   pinMode(led_pin, OUTPUT);
@@ -480,39 +479,36 @@ void setup() {
   delay(50);
   Serial.println("AT+BLEUSB=0");  // 设置数据通信模式为0
   delay(50);
-  Serial.println("AT+CON=83:46:8c:e4:c2:84");  //连接mac地址的蓝牙从机
-  //delay(50);
+  Serial.println("AT+CON=83:46:8c:e4:c2:84");  // 连接mac地址的蓝牙从机
+  // delay(50);
   ble_data = "";
-  while (Serial.available() > 0)  
-  {
-      ble_data += char(Serial.read());
-      delay(2);
+  while (Serial.available() > 0) {
+    ble_data += char(Serial.read());
+    delay(2);
   }
   if (ble_data.endsWith("OK\r\n") > 0) {
     Serial.println("connect success");
     digitalWrite(led_pin, HIGH);
- ble_status = 1;
+    ble_status = 1;
   }
   if (ble_data.endsWith("ERROR\r\n") > 0) {
     Serial.println("connect fail");
     digitalWrite(led_pin, LOW);
- ble_status = 0;
+    ble_status = 0;
   }
 }
 
 void loop() {
-
-  if (ble_status)
-  {
-   Serial.print("on");
-   delay(1000);
-   Serial.print("off");
-   delay(1000);
+  if (ble_status) {
+    Serial.print("on");
+    delay(1000);
+    Serial.print("off");
+    delay(1000);
   }
 }
 ```
 
-从机程序如下[slave](zh-cn/arduino_products/nano/ble-nano/example/ble-nano_communication/slave/slave.ino ':ignore')
+从机程序如下<a href="zh-cn/arduino_products/nano/ble-nano/example/ble-nano_communication/slave/slave.ino" download>slave</a>
 
 ```c
 String ble_data;
@@ -523,15 +519,14 @@ void setup() {
   pinMode(led_pin, OUTPUT);
   Serial.println("AT+ROLE=1");  // 设置蓝牙为从机
   delay(50);
-  Serial.println("AT+BLEUSB=0");  //设置数据通信模式为0
-  //delay(10);
+  Serial.println("AT+BLEUSB=0");  // 设置数据通信模式为0
+  // delay(10);
 }
 
 void loop() {
-  while (Serial.available() > 0)  
-  {
-      ble_data += char(Serial.read());
-      delay(2);
+  while (Serial.available() > 0) {
+    ble_data += char(Serial.read());
+    delay(2);
   }
   if (ble_data.compareTo("on") == 0) {
     Serial.println("turn on led");
@@ -540,7 +535,7 @@ void loop() {
   if (ble_data.compareTo("off") == 0) {
     Serial.println("turn off led");
     digitalWrite(led_pin, LOW);
-  }   
+  }
   ble_data = "";
 }
 ```
@@ -553,7 +548,7 @@ void loop() {
 
 答： ble-nano是在原来官方arduino nano v3.0的基础上将ch340G串口芯片更换成带usb接口的蓝牙芯片。它的驱动兼容arduino官方驱动，接口由Mini-Usb升级成Type-C接口，引脚和功能完全兼容普通NanoV3.0。如果没有用到蓝牙功能，那么使用方法完全和arduino nano V3.0一样，要使用蓝牙请看前面详细介绍。
 
-**2) 问：蓝牙如何手机电脑连接**
+**2）问：蓝牙如何手机电脑连接**
 答： ble-nano为低功耗蓝牙设备，不能直接在手机设置里面蓝牙连接，需要通过Android手机的话BLETestTools.apk (IOS LightBlue)连接，如要开发参考源代码二次开发，windows的设置里面也是经典蓝牙连接方式，需要微软官网参考BLE SDK开发。
 
 **3） 问：为什么我的手机连不上ble-nano，即使可以连上，但也不能通信？**
@@ -568,11 +563,11 @@ void loop() {
 
 答：ble-nano暂时不支持多联，但是可以通过不断地切换绑定从机，实现多联的思想。
 
-**6)  问：为什么ble-nano系列的蓝牙4.2产品无法连接蓝牙2.0的设备？**
+**6）问：为什么ble-nano系列的蓝牙4.2产品无法连接蓝牙2.0的设备？**
 
 答：由于我们的ble-nano系列为了实现极低的功耗，采用了单模蓝牙低功耗（Bluetooth Smart），硬件和软件上都做了优化，只能支持BLE，不支持连接蓝牙2.0设备。
 
-**7) 问：为什么ble-nano是否支持手机编程？**
+**7）问：为什么ble-nano是否支持手机编程？**
 
 答：支持手机端编程，但需要手机这边参考<https://github.com/nulllab-org/arduino_ble_flash_demo二次开发。>
 

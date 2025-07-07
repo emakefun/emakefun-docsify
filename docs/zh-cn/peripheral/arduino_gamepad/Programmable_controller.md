@@ -14,7 +14,7 @@
 
 ## Arduino可编程手柄原理图
 
-[原理图点击此链接进行下载](zh-cn/peripheral/arduino_gamepad/wirelesshandle.pdf ':ignore')
+<a href="zh-cn/peripheral/arduino_gamepad/wirelesshandle.pdf" target="_blank">原理图点击此链接进行下载</a>
 
 ![1723605437575](picture/3.png)
 
@@ -58,8 +58,7 @@ void loop() {
     Serial.println(F("new button state"));
   }
 
-  for (uint8_t button_type = emakefun::GamepadModel::kButtonJoystick; button_type < emakefun::GamepadModel::kButtonMax;
-       button_type++) {
+  for (uint8_t button_type = emakefun::GamepadModel::kButtonJoystick; button_type < emakefun::GamepadModel::kButtonMax; button_type++) {
     if (g_gamepad_model.NewButtonState(button_type)) {
       Serial.print(F("new button state:"));
       Serial.println(button_type);
@@ -155,8 +154,7 @@ void loop() {
     Serial.println(F("new button state"));
   }
 
-  for (uint8_t button_type = emakefun::GamepadModel::kButtonJoystick; button_type < emakefun::GamepadModel::kButtonMax;
-       button_type++) {
+  for (uint8_t button_type = emakefun::GamepadModel::kButtonJoystick; button_type < emakefun::GamepadModel::kButtonMax; button_type++) {
     if (g_gamepad_model.NewButtonState(button_type)) {
       Serial.print(F("new button state:"));
       Serial.println(button_type);
@@ -255,8 +253,7 @@ void loop() {
     Serial.println(F("new button state"));
   }
 
-  for (uint8_t button_type = emakefun::GamepadModel::kButtonJoystick; button_type < emakefun::GamepadModel::kButtonMax;
-       button_type++) {
+  for (uint8_t button_type = emakefun::GamepadModel::kButtonJoystick; button_type < emakefun::GamepadModel::kButtonMax; button_type++) {
     if (g_gamepad_model.NewButtonState(button_type)) {
       Serial.print(F("new button state:"));
       Serial.println(button_type);
@@ -331,7 +328,9 @@ void setup() {
   g_gamepad_model.AddObserver(&g_gamepad_publisher);
 }
 
-void loop() { g_gamepad.Tick(); }
+void loop() {
+  g_gamepad.Tick();
+}
 ```
 
 示例代码中`Serial.println("AT+CON=75:8B:8C:E4:C2:84");`中的`75:8B:8C:E4:C2:84`是接收端(从机)的蓝牙MAC地址, 请自行替换。
@@ -360,8 +359,7 @@ void loop() {
     Serial.println(F("new button state"));
   }
 
-  for (uint8_t button_type = emakefun::GamepadModel::kButtonJoystick; button_type < emakefun::GamepadModel::kButtonMax;
-       button_type++) {
+  for (uint8_t button_type = emakefun::GamepadModel::kButtonJoystick; button_type < emakefun::GamepadModel::kButtonMax; button_type++) {
     if (g_gamepad_model.NewButtonState(button_type)) {
       Serial.print(F("new button state:"));
       Serial.println(button_type);
@@ -428,7 +426,9 @@ void setup() {
   g_gamepad_model.AddObserver(&g_gamepad_publisher);
 }
 
-void loop() { g_gamepad.Tick(); }
+void loop() {
+  g_gamepad.Tick();
+}
 ```
 
 这里面setup函数里面时设置蓝牙的主从模式以及蓝牙的配对码，这里我们只需要对里面的蓝牙配对码进行修改即可。其中`g_gamepad.Tick();`这个函数是用来按键软件消抖的，我们需要在loop里面不断调用这个函数，这里也是不需要修改的。
@@ -441,33 +441,35 @@ void loop() { g_gamepad.Tick(); }
 
 ```c
 bool NewButtonState() const {
-    return (button_state_ ^ last_button_state_) != 0;
-  }
+  return (button_state_ ^ last_button_state_) != 0;
+}
 
 bool NewButtonState(const ButtonType button_type) const {
-    return ((button_state_ ^ last_button_state_) & (static_cast<uint16_t>(1) << button_type)) != 0;
-  }
+  return ((button_state_ ^ last_button_state_) & (static_cast<uint16_t>(1) << button_type)) != 0;
+}
 
+/*
 参数：none或者ButtonType类型的参数
 填写参数示例 emakefun::GamepadModel::ButtonType
 返回值：按键状态发生改变就返回1，反之返回0.
+*/
 ```
 
 ```c
-ButtonType类型的参数有
+// ButtonType类型的参数有 
 enum ButtonType : uint8_t {
-    kButtonJoystick = 0,
-    kButtonL = 1,
-    kButtonR = 2,
-    kButtonSelect = 3,
-    kButtonMode = 4,
-    kButtonA = 5,
-    kButtonB = 6,
-    kButtonC = 7,
-    kButtonD = 8,
-    kButtonMax,
-  };
-//这里只用直接调用你需要判断的按键类型，即可。比如说判断手柄端的A键是否按下，就只用输入emakefun::GamepadModel::kButtonA就行，其他按键的判断按照这样的参数修改ButtonType类型即可。
+  kButtonJoystick = 0,
+  kButtonL = 1,
+  kButtonR = 2,
+  kButtonSelect = 3,
+  kButtonMode = 4,
+  kButtonA = 5,
+  kButtonB = 6,
+  kButtonC = 7,
+  kButtonD = 8,
+  kButtonMax,
+};
+// 这里只用直接调用你需要判断的按键类型，即可。比如说判断手柄端的A键是否按下，就只用输入emakefun::GamepadModel::kButtonA就行，其他按键的判断按照这样的参数修改ButtonType类型即可。
 ```
 
 #### g_gamepad_model.Tick()
@@ -476,13 +478,10 @@ enum ButtonType : uint8_t {
 
 ```c
 void Tick() {
-    last_button_state_ = button_state_;
-    last_joystick_coordinate_ = joystick_coordinate_;
-    last_gravity_acceleration_ = gravity_acceleration_;
-  }
-
-参数：none
-返回值：none
+  last_button_state_ = button_state_;
+  last_joystick_coordinate_ = joystick_coordinate_;
+  last_gravity_acceleration_ = gravity_acceleration_;
+}
 ```
 
 #### g_gamepad_model.ButtonPressed()
@@ -491,12 +490,14 @@ void Tick() {
 
 ```c
 bool ButtonPressed(const ButtonType button_type) const {
-    return NewButtonState(button_type) && GetButtonState(button_type);
-  }
+  return NewButtonState(button_type) && GetButtonState(button_type);
+}
 
+/*
 调用函数示例：g_gamepad_model.ButtonPressed(emakefun::GamepadModel::kButtonA)
 参数：ButtonType类型的参数
 返回值：按键按下返回1，否则为0
+*/
 ```
 
 #### g_gamepad_model.ButtonReleased()
@@ -505,12 +506,12 @@ bool ButtonPressed(const ButtonType button_type) const {
 
 ```c
 bool ButtonReleased(const ButtonType button_type) const {
-    return NewButtonState(button_type) && !GetButtonState(button_type);
-  }
+  return NewButtonState(button_type) && !GetButtonState(button_type);
+}
 
-调用函数示例：g_gamepad_model.ButtonReleased(emakefun::GamepadModel::kButtonA)
-参数：ButtonType类型的参数
-返回值：按键释放返回1，否则为0
+// 调用函数示例：g_gamepad_model.ButtonReleased(emakefun::GamepadModel::kButtonA)
+// 参数：ButtonType类型的参数
+// 返回值：按键释放返回1，否则为0
 ```
 
 #### 获取摇杆和重力加速度的值
@@ -543,4 +544,4 @@ bool ButtonReleased(const ButtonType button_type) const {
 
 ### Mixly示例程序
 
-[点击下载Mixly库](zh-cn/peripheral/arduino_gamepad/arduinoGamePadMlxly.zip ":ignore")
+<a href="zh-cn/peripheral/arduino_gamepad/arduinoGamePadMlxly.zip" download>点击下载Mixly库</a>

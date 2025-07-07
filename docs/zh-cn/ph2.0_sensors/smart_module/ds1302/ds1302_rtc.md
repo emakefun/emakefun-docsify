@@ -52,7 +52,7 @@ DS1302是一款低功耗的实时时钟（RTC）模块，具备计时、日历�
 
 ![tupian6](picture/tupian6.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/smart_module/ds1302/DS1302.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/ds1302/DS1302.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 机械安装图
 
@@ -72,7 +72,7 @@ DS1302有关日历、时间的寄存器共有12个，其中有7个寄存器（�
 
 ### Arduino IDE示例程序
 
-[点击下载Arduino示例程序](zh-cn/ph2.0_sensors/smart_module/ds1302/DS1302_Clock.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/ds1302/DS1302_Clock.zip" download>点击下载Arduino示例程序</a>
 
 ### Mixly示例程序
 
@@ -80,16 +80,16 @@ DS1302有关日历、时间的寄存器共有12个，其中有7个寄存器（�
 
 程序解析：从EEPROM里面获取是否为DS1302时钟模块设置过时间的标记，如果没有设置过则重新设置，否则不再设置时间，再通过获取时钟模块的时分到数码管上显示出来。
 
-[Mixly示例下载](zh-cn/ph2.0_sensors/smart_module/ds1302/DS1302_Mixly.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/ds1302/DS1302_Mixly.zip" download>Mixly示例下载</a>
 
 ### MicroPython示例程序
 
-[点击下载ESP32 MicroPython示例程序](zh-cn/ph2.0_sensors/smart_module/ds1302/ds1302_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/ds1302/ds1302_esp32_micropython.zip" download>点击下载ESP32 MicroPython示例程序</a>
 
-[点击下载micro:bit MicroPython示例程序](zh-cn/ph2.0_sensors/smart_module/ds1302/ds1302_microbit_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/ds1302/ds1302_microbit_micropython.zip" download>点击下载micro:bit MicroPython示例程序</a>
 
 ### micro:bit MakeCode示例程序
 
-[点击查看示例程序](https://makecode.microbit.org/S63587-43847-56920-65953)
+<a href="https://makecode.microbit.org/S63587-43847-56920-65953" target="_blank">点击查看示例程序</a>
 
-[点击查看用户库](https://github.com/zhuning239/DS1302)
+<a href="https://github.com/zhuning239/DS1302" target="_blank">点击查看用户库</a>

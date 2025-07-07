@@ -12,18 +12,19 @@ ESP32-CAM V2是基于乐鑫ESP32-DOWD-V3芯片而开发的一款小尺寸的摄�
 
 - 采用乐鑫原装 ESP32-DOWD-V3芯片，板载天线和IPEX天线座
 - 芯片内置448 KB ROM，520 KB SRAM，外挂4M SPI FLASH，2M PSRAM
-- Type-C接口，usb转串口芯片为沁恒的CH343P 
+- Type-C接口，usb转串口芯片为沁恒的CH343P
 - 输入电压：5V 1A
 - 板载复位按键
 - 板载micro-SD卡插槽
-- 支持2百万像素的OV2640摄像头， 内置 LED 闪光灯 
+- 支持2百万像素的OV2640摄像头， 内置 LED 闪光灯
 
 - 尺寸27mmx40mmx4.5mm
 
 ## 板子尺寸标注
+
 ![尺寸标注](picture/esp32_cam_size_mark.jpg)
 
-###  [原理图](zh-cn/esp32/ESP32_CAM/esp32-cam2.0.pdf ':ignore')
+### <a href="zh-cn/esp32/ESP32_CAM/esp32-cam2.0.pdf" target="_blank">原理图</a>
 
 ![esp32-cam2.0_sch](./esp32-cam2.0_sch.png)
 
@@ -31,7 +32,7 @@ ESP32-CAM V2是基于乐鑫ESP32-DOWD-V3芯片而开发的一款小尺寸的摄�
 
 [点击此处下载CH343P驱动](https://www.wch.cn/downloads/CH343SER_EXE.html)
 
-[安装驱动方法点击此处查看]([CH343芯片应用—Windows驱动安装与使用_ch343驱动-CSDN博客](https://blog.csdn.net/wch_techgroup/article/details/124801135))
+[安装驱动方法点击此处查看](https://blog.csdn.net/wch_techgroup/article/details/124801135)
 
 ### 配置Arduino中的开发板
 
@@ -75,11 +76,9 @@ Arduino IDE上传方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/e
 
 ![调参](picture/11.png)
 
-
-
 ## micropython应用
 
-直接访问esp32-cam的开源项目https://github.com/lemariva/micropython-camera-driver
+直接访问esp32-cam的开源项目<https://github.com/lemariva/micropython-camera-driver>
 
 ## Edge Impuls AI教程
 

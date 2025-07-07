@@ -18,7 +18,7 @@ WS2812是一个集控制电路与发光电路于一体的智能外控LED光源�
 
 ![原理图](picture/1.png)
 
-[点击查看原理图](zh-cn/ph2.0_sensors/displayers/12-bit_RGB_lamp_ring/RGB-ring.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/12-bit_RGB_lamp_ring/RGB-ring.pdf" target="_blank">点击查看原理图</a>
 
 ## 模块参数
 
@@ -36,28 +36,30 @@ WS2812是一个集控制电路与发光电路于一体的智能外控LED光源�
 ## Arduino示例
 
 ```c++
-#include "RGBLed.h"                 // 引入RGB灯的库
-#define RgbPin 6                    // 定义Rgb信号引脚
-#define RgbNum 12                   // 设置Rgb灯环 或灯带的灯珠个数
-RGBLed mRgb(RgbPin, RgbNum);        // 初始化灯带或灯环 将灯带的IN脚接RgbPin引脚
-                                    // 或者灯环的RGB引脚接RgbPin引脚,12为灯环或灯带的灯珠个数
+#include "RGBLed.h"           // 引入RGB灯的库
+#define RGB_PIN 6              // 定义Rgb信号引脚
+#define RGB_NUM 12             // 设置Rgb灯环 或灯带的灯珠个数
+
+RGBLed m_rgb(RGB_PIN, RGB_NUM);  // 初始化灯带或灯环 将灯带的IN脚接RgbPin引脚
+                              // 或者灯环的RGB引脚接RgbPin引脚,12为灯环或灯带的灯珠个数
 void setup() {
-  mRgb.setBrightness(50);           // 设置灯珠的亮度
+  m_rgb.setBrightness(50);  // 设置灯珠的亮度
 }
 
 void loop() {
-  for(int i=1-1; i<RgbNum; i++){    // 通过for循环点亮每一个灯珠
-    mRgb.setColorAt(i, 255, 255, 0);// 设置灯珠的颜色 第一个参数为灯珠的序号 第二个参数为三原色红色R的值 第三个参数为三原色绿色G的值 第二个参数为三原色蓝色B的值
-    delay(50);                      // 延时50ms点亮下一个灯珠
-    mRgb.show();                    // 点亮灯珠
+  for (int i = 1 - 1; i < RGB_NUM; i++) {  // 通过for循环点亮每一个灯珠
+    m_rgb.setColorAt(
+        i, 255, 255, 0);  // 设置灯珠的颜色 第一个参数为灯珠的序号 第二个参数为三原色红色R的值 第三个参数为三原色绿色G的值 第二个参数为三原色蓝色B的值
+    delay(50);            // 延时50ms点亮下一个灯珠
+    m_rgb.show();          // 点亮灯珠
   }
 }
 ```
 
-[Arduino程序下载](zh-cn/ph2.0_sensors/displayers/12-bit_RGB_lamp_ring/WS2812B.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/12-bit_RGB_lamp_ring/WS2812B.zip" download>Arduino程序下载</a>
 
 ## micro:bit示例
 
 MicroBit灯环/灯带扩展链接：<https://github.com/microsoft/pxt-neopixel>
 
-[点击查看示例](https://makecode.microbit.org/_ETYcpDRmPdFt)
+<a href="https://makecode.microbit.org/_ETYcpDRmPdFt" target="_blank">点击查看示例</a>

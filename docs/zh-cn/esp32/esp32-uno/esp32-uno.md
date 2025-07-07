@@ -2,7 +2,7 @@
 
 ## 实物图
 
-![实物图](picture\634fbf46abc9f8ceb363f8ce6ab26d4.jpg)
+![实物图](picture/634fbf46abc9f8ceb363f8ce6ab26d4.jpg)
 
 ## 概述
 
@@ -26,9 +26,9 @@ ESP32-Uno是基于乐鑫科技的ESP32-DOWD-V3 芯片基础上开发的一款尺
 
 ## 原理图
 
-![原理图](picture\86512d3c5e12ad7351a493dcddfb0961.png)
+![原理图](picture/86512d3c5e12ad7351a493dcddfb0961.png)
 
-[点击查看原理图](zh-cn/esp32/esp32-uno/esp32-uno.pdf ':ignore')
+<a href="zh-cn/esp32/esp32-uno/esp32-uno.pdf" target="_blank">点击查看原理图</a>
 
 ## 开发板参数
 
@@ -43,7 +43,7 @@ ESP32-Uno是基于乐鑫科技的ESP32-DOWD-V3 芯片基础上开发的一款尺
 
 ## 引脚说明
 
-![引脚说明图](picture\Esp32_UNO_标注图.png)
+![引脚说明图](picture/Esp32_UNO_标注图.png)
 
 ## 在Arduino IDE中驱动编码电机和直流电机
 

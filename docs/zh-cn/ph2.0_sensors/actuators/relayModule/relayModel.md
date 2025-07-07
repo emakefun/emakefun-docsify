@@ -16,7 +16,7 @@
 
 ![07](picture/07.png)
 
-[点击查看原理图](zh-cn/ph2.0_sensors/actuators/relayModule/relay.pdf   ':ignore')
+<a href="zh-cn/ph2.0_sensors/actuators/relayModule/relay.pdf" target="_blank">点击查看原理图</a>
 
 ## 模块参数
 
@@ -38,15 +38,16 @@
 ## 示例程序
 
 ```c
-#define relay_pin A3  //设置继电器端口为A3
-void setup(){
-    pinMode(relay_pin, OUTPUT);  //设置继电器端口为输出模式
+#define RELAY_PIN A3  // 设置继电器端口为A3
+
+void setup() {
+  pinMode(RELAY_PIN, OUTPUT);  // 设置继电器端口为输出模式
 }
-void loop(){
-digitalWrite(relay_pin, HIGH); //设置继电器端口为高电平
-delay(1000);
-digitalWrite(relay_pin, LOW);
-delay(1000);
+void loop() {
+  digitalWrite(RELAY_PIN, HIGH);  // 设置继电器端口为高电平
+  delay(1000);
+  digitalWrite(RELAY_PIN, LOW);
+  delay(1000);
 }
 ```
 

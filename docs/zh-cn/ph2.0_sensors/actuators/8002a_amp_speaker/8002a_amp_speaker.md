@@ -12,7 +12,7 @@
 
 ![原理图](picture/schematic_diagram.jpg)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/8002A_AMP_Speaker.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/8002A_AMP_Speaker.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 通过ESP32播放自定义音频文件
 
@@ -22,7 +22,7 @@
 
 [下载方法可参考此链接](https://blog.csdn.net/m0_47449768/article/details/130102406)
 
-按照上述安装好ffmpeg后，将示例音频文件[易创空间](zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/易创空间.zip ':ignore')解码出PCM格式的音频文件。
+按照上述安装好ffmpeg后，将示例音频文件<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/易创空间.zip" download>易创空间</a>解码出PCM格式的音频文件。
 
 通过win+R打开cmd，输入ffmpeg命令，将示例音频文件转换为PCM格式：
 
@@ -66,7 +66,7 @@ xxd -i -C ./pcm.raw pcm.h
 
 ##### 代码实现
 
-1.先下载[ESP32示例程序](zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/esp32_dac_8002a.zip ':ignore')，将其烧录到ESP32开发板上。可以听到播放的易创空间音频。
+1.先下载<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/esp32_dac_8002a.zip" download>ESP32示例程序</a>，将其烧录到ESP32开发板上。可以听到播放的易创空间音频。
 
 2.若想要播放其他音频文件，则需要修改播放程序，将示例文件中的'pcm.h'文件替换为自己的音频文件，并按如下格式修改，注意音频文件尽可能小，以便减少RAM占用。
 
@@ -77,7 +77,7 @@ xxd -i -C ./pcm.raw pcm.h
 
 #include <cstdint>
 
-constexpr uint8_t kPcmData[]  /*数组名修改成该变量名*/ 
+constexpr uint8_t kPcmData[] /*数组名修改成该变量名*/
 
 ```
 
@@ -96,7 +96,7 @@ constexpr uint8_t kPcmData[]  /*数组名修改成该变量名*/
 
 ## 蓝牙音响实验
 
-[点击出下载示例代码以及zip库文件](zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/music.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/music.zip" download>点击出下载示例代码以及zip库文件</a>
 
 在本次实验中，我们在Arduino IDE中运行。
 
@@ -111,12 +111,12 @@ constexpr uint8_t kPcmData[]  /*数组名修改成该变量名*/
 #include "BluetoothA2DPSink.h"
 
 AnalogAudioStream out;
-//由于库文件原因，功放喇叭默认接25号端口；
+// 由于库文件原因，功放喇叭默认接25号端口；
 BluetoothA2DPSink a2dp_sink(out);
 
 void setup() {
-  //在此修改蓝牙设备名称
-  a2dp_sink.start("EmakeFun DAC");  
+  // 在此修改蓝牙设备名称
+  a2dp_sink.start("EmakeFun DAC");
 }
 
 void loop() {

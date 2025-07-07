@@ -27,7 +27,7 @@ ESP32 DevKit 32E开发板是基于乐鑫科技的 ESP32-DOWD-V3芯片开发的�
 
 - 采用乐鑫原装 ESP32-DOWD-V3芯片，板载天线
 - 芯片内置448 KB ROM，520 KB SRAM，外挂4M SPI FLASH
-- Type-C接口，usb转串口芯片为沁恒的CH340G 
+- Type-C接口，usb转串口芯片为沁恒的CH340G
 - 输入电压：5V 1A
 - M3定位孔直径：3mm
 - 板载复位按键和BOOT按键
@@ -61,7 +61,7 @@ ESP32 DevKit 32E开发板是基于乐鑫科技的 ESP32-DOWD-V3芯片开发的�
 - 使用 Wi-Fi 时不能使用 ADC2 管脚。因此，如果您使用 Wi-Fi，并且无 法从 ADC2 GPIO 获取值，则可以考虑改用 ADC1 GPIO。
 - 启用（EN）是 3.3V 调节器的启用引脚。它被拉起来了，所以接地使 3.3V 调节器失效。这意味着您可以使用连接到按钮的该管脚来重新启动 ESP32。
 
-### 2.4 [原理图](zh-cn/esp32/esp32_devkit_32e/ch340G_esp32.pdf ':ignore')
+### 2.4 <a href="zh-cn/esp32/esp32_devkit_32e/ch340G_esp32.pdf" target="_blank">原理图</a>
 
 ![ch340G_esp32](ch340G_esp32.png)
 
@@ -69,7 +69,7 @@ ESP32 DevKit 32E开发板是基于乐鑫科技的 ESP32-DOWD-V3芯片开发的�
 
 ![尺寸图](picture/4.png)
 
-### 2.5 [产品三维图](zh-cn/esp32/esp32_devkit_32e/ch340G_esp32_pico.step ':ignore')
+### 2.5 <a href="zh-cn/esp32/esp32_devkit_32e/ch340G_esp32_pico.step" target="_blank">产品三维图</a>
 
 ## 三、ESP32 DevKit 32E 驱动安装
 

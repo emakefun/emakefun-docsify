@@ -27,7 +27,7 @@ Click the upload button to write the program and wait for the program to be uplo
 
 ![download](picture/download.png)
 
-Click on the serial port tool to see the printing of the serial port. 
+Click on the serial port tool to see the printing of the serial port.
 
 ![print](picture/print.png)
 

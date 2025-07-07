@@ -2,11 +2,7 @@
 
 ## Physical picture
 
-
-
-![Physical picture](http://localhost:3000/en/ph2.0_sensors/sensors/human_body_sensor/picture/human_body_sensor.png)
-
-
+![Physical picture](picture/human_body_sensor.png)
 
 ## Overview
 
@@ -14,13 +10,9 @@ The human body sensing module is an automatic control product based on infrared 
 
 ## Schematic
 
-[View Schematic](en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor_schematic.pdf)
+<a href="en/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor_schematic.pdf" target="_blank">View Schematic</a>
 
-
-
-![Schematic](http://localhost:3000/en/ph2.0_sensors/sensors/human_body_sensor/picture/human_body_sensor_schematic.png)
-
-
+![Schematic](picture/human_body_sensor_schematic.png)
 
 ## Module parameters
 
@@ -37,47 +29,39 @@ The human body sensing module is an automatic control product based on infrared 
 
 ## Mechanical Dimensions
 
-
-
-![Mechanical Dimensions](http://localhost:3000/en/ph2.0_sensors/sensors/human_body_sensor/picture/human_body_sensor_assembly.png)
-
-
+![Mechanical Dimensions](picture/human_body_sensor_assembly.png)
 
 ## Arduino Example Program
 
-[Download the sample program](en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.zip)
+<a href="en/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.zip" download>Download the sample program</a>
 
 ```c
-void setup()
-{
-Serial.begin(9600);
-pinMode(A3, INPUT);
+void setup() {
+  Serial.begin(9600);
+  pinMode(A3, INPUT);
 }
 
-void loop()
-{
-Serial.println(digitalRead(A3)); // Print the digital value of the human body pyroelectric sensor
-delay(200);
-}Copy to clipboardErrorCopied
+void loop() {
+  Serial.println(digitalRead(A3));  // Print the digital value of the human body pyroelectric sensor
+  delay(200);
+}
 ```
 
 ## MicroPython Example Program
 
 ### Esp32 MicroPython Example Program
 
-
-
 ```python
-from machine import ADC,Pin
+from machine import ADC, Pin
 import time
 
-DigitalPin = 2 # Define the human body pyroelectric sensor digital value pin
-p2 = Pin(DigitalPin, Pin.IN)
+digital_pin = 2 # Define the human body pyroelectric sensor digital value pin
+p2 = Pin(digital_pin, Pin.IN)
 
 while True:
-Value = p2.value() # Read the human body pyroelectric sensor digital value
-print(Value) # Print the human body pyroelectric sensor digital value
-time.sleep_ms(200)Copy to clipboardErrorCopied
+    digital_value = p2.value() # Read the human body pyroelectric sensor digital value
+    print(digital_value) # Print the human body pyroelectric sensor digital value
+    time.sleep_ms(200)
 ```
 
 ### Micro:bit MicroPython Example Program
@@ -86,9 +70,9 @@ time.sleep_ms(200)Copy to clipboardErrorCopied
 from microbit import *
 
 while True:
-p = pin8.read_digital() # Read the digital value of the sensor
-print(p) # Print the digital value of the sensor
-sleep(1000)Copy to clipboardErrorCopied
+    p = pin8.read_digital() # Read the digital value of the sensor
+    print(p) # Print the digital value of the sensor
+    sleep(1000)
 ```
 
 ## MakeCode Example Programs

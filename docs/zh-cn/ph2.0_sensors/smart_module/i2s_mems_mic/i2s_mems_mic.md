@@ -13,11 +13,11 @@
 
 ![原理图](picture/schematic_diagram.png)
 
-[原理图点击此处查看](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/MSM261S4030H0_MEMS_MIC.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/MSM261S4030H0_MEMS_MIC.pdf" target="_blank">原理图点击此处查看</a>
 
 ## 芯片规格书
 
-[点击查看I2S麦克风规格书](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/MSM261S4030H0.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/MSM261S4030H0.pdf" target="_blank">点击查看I2S麦克风规格书</a>
 
 ## 模块参数
 
@@ -60,7 +60,7 @@
 
 ### ESP32 Arduino使用示例
 
-[点击下载ESP32的Arduino示例代码](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/esp32_i2s_rw.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/esp32_i2s_rw.zip" download>点击下载ESP32的Arduino示例代码</a>
 
 下载后解压打开test.ino文件，通过ArduinoIDE上传到ESP32主板中。
 

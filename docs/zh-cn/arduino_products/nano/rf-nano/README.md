@@ -1,24 +1,25 @@
 # rf-nano  [中文版](./README_ZH.md)
+
 [**AliExpress purchase link**](https://www.aliexpress.com/item/1005005472547279.html?pdp_npi=3%40dis%21USD%21US%20%245.25%21US%20%244.93%21%21%21%21%21%4021038dc816846695615375838d035d%2112000033220158732%21sh01%21CN%212613261194&spm=a2g0o.store_pc_home.productList_2005072051256.subject_1&gatewayAdapt=4itemAdapt )
 
 ![rf-nano](./image/rf-nano.png)
 
 # Introduction
 
-​		rf-nano is a 2.4G wireless development board developed by emakefun company, integrating the nrf24L01+ wireless chip based on the official standard Arduino Nano V3.0 motherboard. Its size and pins are fully compatible with the standard Nano V3.0 development board, directly compatible with the[RF24 open source library](https://github.com/maniacbug/RF24),can be set for power consumption, transmission rate, channel, etc., and supports Mixly, Mblock5, Magicblock visual programming. The onboard antenna is optimized for transmission distance up to 30m, with a onboard IPEX patch antenna socket, and an external antenna can achieve a transmission distance of up to 100m.
+​  rf-nano is a 2.4G wireless development board developed by emakefun company, integrating the nrf24L01+ wireless chip based on the official standard Arduino Nano V3.0 motherboard. Its size and pins are fully compatible with the standard Nano V3.0 development board, directly compatible with the[RF24 open source library](https://github.com/maniacbug/RF24),can be set for power consumption, transmission rate, channel, etc., and supports Mixly, Mblock5, Magicblock visual programming. The onboard antenna is optimized for transmission distance up to 30m, with a onboard IPEX patch antenna socket, and an external antenna can achieve a transmission distance of up to 100m.
 
 ![rf-nano_nrf24L01+](./image/rf-nano_nrf24L01+.png)
 
 ### Main Technical Parameters
 
-- Processor:ATmega328P-AU 
+- Processor:ATmega328P-AU
 - Operating Voltage: 5V recommended, VIN Input Voltage: 6V ~ 15V
 - Digital I/O Pins: 22 (6 of which are used for PWM output)
 - Analog Input Pins: 8 (A0~A7).
-- DC Current of I/O Pin:40mA 
+- DC Current of I/O Pin:40mA
 - Current of 5V Pin: 1000mA when VIN is connected.
 - Current of by 3.3V Pin: 50mA.
-- Flash Memory: 32KB (with 0.5KB dedicated to bootloading program). 
+- Flash Memory: 32KB (with 0.5KB dedicated to bootloading program).
 - SRAM: 2KB
 - EEPROM: 1KB
 - USB to Serial Chip: CH340G with external crystal.
@@ -45,11 +46,9 @@ rf-nano V1.0 has long been discontinued, but there are still many V1.0-shaped bo
 
 ![arduino_rf-nano_lib](./image/RF-Nano_Antenna2.png)                                                           ![arduino_rf-nano_lib](./image/RF-Nano_Antenna1.png)
 
-​						On-board antenna																						External Antenna
+​      On-board antenna                      External Antenna
 
 **Note: If the capacitor in the blue area in the picture is horizontally soldered, the on-board antenna is being used. If it is vertically soldered, the external antenna is being used. To switch the antenna, simply modify the direction of the soldering of the capacitor in the blue area of the picture.**
-
-
 
 ## Pin diagram
 
@@ -57,16 +56,13 @@ rf-nano V1.0 has long been discontinued, but there are still many V1.0-shaped bo
 
 ## Schematic diagram
 
-[schematic diagram download ](schematic/rf-nano_sch_v3.0.pdf)
+<a href="schematic/rf-nano_sch_v3.0.pdf" target="_blank">schematic diagram download</a>
 
 ![RF-Nano-schematic](./image/RF-Nano-schematic.png)
-
 
 ## Mechanical dimensions labeling
 
 ![arduino_rf-nano_lib](./image/RF-Nano_Dimensional_drawing.png)
-
-  
 
 ## Arduino和nRF24L01+The chip pin connection is as below
 
@@ -80,10 +76,9 @@ rf-nano V1.0 has long been discontinued, but there are still many V1.0-shaped bo
 
 **Note: The D7, D8, D11, D12, and D13 pins that have already been occupied by the RF-Nano cannot be reused.**
 
-
 ## CH340G Driver Installation
 
-[CH340G Driver Download Link](https://www.wch.cn/downloads/CH341SER_ZIP.html)
+<a href="https://www.wch.cn/downloads/CH341SER_ZIP.html" target="_blank">CH340G Driver Download Link</a>
 
 ## RF24 Library Installation
 
@@ -95,18 +90,17 @@ rf-nano V1.0 has long been discontinued, but there are still many V1.0-shaped bo
 
 ![ide_downloard](./image/ide_downloard.png)
 
-
 ## Explanation of Key Functions
 
 ### Basic Functions
 
 | Function Name                                                      | Description                            |
 | ------------------------------------------------------------ | ------------------------------- |
-| **[RF24](http://maniacbug.github.io/RF24/classRF24.html#a8cd165a822c8f77e10782c6729c5b088)** (uint8_t _cepin, uint8_t _cspin) | The default values for CE pin and CSN pin are 9 and 10 |
+| **[RF24](http://maniacbug.github.io/RF24/classRF24.html#a8cd165a822c8f77e10782c6729c5b088)** (uint8_t_cepin, uint8_t_cspin) | The default values for CE pin and CSN pin are 9 and 10 |
 | void **[begin](http://maniacbug.github.io/RF24/classRF24.html#a9e720d303ad594de611a813c69244517)** (void) | Start wireless send-receive                   |
 | void **[startListening](http://maniacbug.github.io/RF24/classRF24.html#a30a2733a3889bdc331fe2d2f4f0f7b39)** (void) | Begin listening on the specified channel              |
 | void **[stopListening](http://maniacbug.github.io/RF24/classRF24.html#a6f144d73fc447c8ac2d1a4166210fd88)** (void) | Stop listening.                        |
-| bool **[ write](http://maniacbug.github.io/RF24/classRF24.html#a4cd4c198a47704db20b6b5cf0731cd58)** (const void *buf, uint8_t len) | Send data to the specified channel              |
+| bool **[write](http://maniacbug.github.io/RF24/classRF24.html#a4cd4c198a47704db20b6b5cf0731cd58)** (const void *buf, uint8_t len) | Send data to the specified channel              |
 | bool **[available](http://maniacbug.github.io/RF24/classRF24.html#a127105eb7a3b351cfe777c1cec50627a)** (void) | Check if data has been received            |
 | bool **[read](http://maniacbug.github.io/RF24/classRF24.html#a391eb0016877ec7486936795aed3b5ee)** (void *buf, uint8_t len) | Read data into a buffer                  |
 | void **[openWritingPipe](http://maniacbug.github.io/RF24/classRF24.html#a50c8e68ee840e1860a31dbdc83afbd77)** (uint64_t address) | Open a sending channel to the address         |
@@ -128,7 +122,7 @@ rf-nano V1.0 has long been discontinued, but there are still many V1.0-shaped bo
 | void **[setAutoAck](http://maniacbug.github.io/RF24/classRF24.html#a60dba9e558f3620ab489af68ea3dea9c)** (uint8_t pipe, bool enable) | Enable or disable auto-acknowlede packets on a per pipeline basis |
 | void **[setPALevel](http://maniacbug.github.io/RF24/classRF24.html#ae14164610ab5af94cf44b2743daa8dc9)** (**[rf24_pa_dbm_e](http://maniacbug.github.io/RF24/RF24_8h.html#a1e4cd0bea93e6b43422855fb0120aace)** level) | Set the transmission power level 0,1,2,3db                                   |
 | **[rf24_pa_dbm_e](http://maniacbug.github.io/RF24/RF24_8h.html#a1e4cd0bea93e6b43422855fb0120aace)** **[getPALevel](http://maniacbug.github.io/RF24/classRF24.html#ac53facef9c62aa82589cf9cc48913267)** (void) | Get the transmission power                                                 |
-| bool **[ setDataRate](http://maniacbug.github.io/RF24/classRF24.html#aeb9920e7a95699748b003c4a839b0814)** (**[rf24_datarate_e](http://maniacbug.github.io/RF24/RF24_8h.html#a82745de4aa1251b7561564b3ed1d6522)** speed) | Set the data transmission rate                                            |
+| bool **[setDataRate](http://maniacbug.github.io/RF24/classRF24.html#aeb9920e7a95699748b003c4a839b0814)** (**[rf24_datarate_e](http://maniacbug.github.io/RF24/RF24_8h.html#a82745de4aa1251b7561564b3ed1d6522)** speed) | Set the data transmission rate                                            |
 | void **[setCRCLength](http://maniacbug.github.io/RF24/classRF24.html#a89f626fc4a58dd997153bcc0f8198b9e)** (**[rf24_crclength_e](http://maniacbug.github.io/RF24/RF24_8h.html#adbe00719f3f835c82bd007081d040a7e)** length) | Set the length of CRC check                                              |
 | **[rf24_crclength_e](http://maniacbug.github.io/RF24/RF24_8h.html#adbe00719f3f835c82bd007081d040a7e)** **[getCRCLength](http://maniacbug.github.io/RF24/classRF24.html#aba4ca91b829afcd94a4c11e0343e3796)** (void) | Get the length of CRC check                                              |
 | void **[disableCRC](http://maniacbug.github.io/RF24/classRF24.html#a5eacd9ecfbc19864801d714c292cf8be)** (void) | Disable CRC check.                                                  |
@@ -138,7 +132,7 @@ rf-nano V1.0 has long been discontinued, but there are still many V1.0-shaped bo
 | Function Name                                                       | Description                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | void **[printDetails](http://maniacbug.github.io/RF24/classRF24.html#adc95213ed4c8569a90eb33122e16cea6)** (void) | Print all parameter configurations                                             |
-| void **[powerDown](http://maniacbug.github.io/RF24/classRF24.html#aa0a51923a09ba4f3478aba9be0f8a6a1) **(void) | Enter power-down low-power mode                                           |
+| void **[powerDown](http://maniacbug.github.io/RF24/classRF24.html#aa0a51923a09ba4f3478aba9be0f8a6a1)**(void) | Enter power-down low-power mode                                           |
 | void **[[powerUp](http://maniacbug.github.io/RF24/classRF24.html#a5cdaf47aa0edd6dca1b9a8bb7972a1a3)**(void) | Exit low-power mode                                               |
 | uint8_t **[getPayloadSize](http://maniacbug.github.io/RF24/classRF24.html#a0aa0c7cbe3d38fef4722f3f1d2d6c5f1)** (void) | Get the static payload length for transmission and reception                                     |
 | uint8_t **[getDynamicPayloadSize](http://maniacbug.github.io/RF24/classRF24.html#a65963ed8d8fd45f847e2f673995b85e1)** (void) | Set the dynamic payload length for transmission and reception                                     |
@@ -149,12 +143,10 @@ rf-nano V1.0 has long been discontinued, but there are still many V1.0-shaped bo
 | void **[setAutoAck](http://maniacbug.github.io/RF24/classRF24.html#a60dba9e558f3620ab489af68ea3dea9c)** (uint8_t pipe, bool enable) | Enable or disable auto-acknowlede packets on a per pipeline basis |
 | void **[setPALevel](http://maniacbug.github.io/RF24/classRF24.html#ae14164610ab5af94cf44b2743daa8dc9)** (**[rf24_pa_dbm_e](http://maniacbug.github.io/RF24/RF24_8h.html#a1e4cd0bea93e6b43422855fb0120aace)** level) | Set the transmission power level 0,1,2,3db                                   |
 | **[rf24_pa_dbm_e](http://maniacbug.github.io/RF24/RF24_8h.html#a1e4cd0bea93e6b43422855fb0120aace)** **[getPALevel](http://maniacbug.github.io/RF24/classRF24.html#ac53facef9c62aa82589cf9cc48913267)** (void) | Get the transmission power                                                 |
-| bool **[ setDataRate](http://maniacbug.github.io/RF24/classRF24.html#aeb9920e7a95699748b003c4a839b0814)** (**[rf24_datarate_e](http://maniacbug.github.io/RF24/RF24_8h.html#a82745de4aa1251b7561564b3ed1d6522)** speed) | Set the data transmission rate                                             |
+| bool **[setDataRate](http://maniacbug.github.io/RF24/classRF24.html#aeb9920e7a95699748b003c4a839b0814)** (**[rf24_datarate_e](http://maniacbug.github.io/RF24/RF24_8h.html#a82745de4aa1251b7561564b3ed1d6522)** speed) | Set the data transmission rate                                             |
 | void **[setCRCLength](http://maniacbug.github.io/RF24/classRF24.html#a89f626fc4a58dd997153bcc0f8198b9e)** (**[rf24_crclength_e](http://maniacbug.github.io/RF24/RF24_8h.html#adbe00719f3f835c82bd007081d040a7e)** length) | Set the length of CRC check                                              |
 | **[rf24_crclength_e](http://maniacbug.github.io/RF24/RF24_8h.html#adbe00719f3f835c82bd007081d040a7e)** **[getCRCLength](http://maniacbug.github.io/RF24/classRF24.html#aba4ca91b829afcd94a4c11e0343e3796)** (void) | Get the length of CRC check                                              |
 | void **[disableCRC](http://maniacbug.github.io/RF24/classRF24.html#a5eacd9ecfbc19864801d714c292cf8be)** (void) | Disable CRC check                                                  |
-
-
 
 ### nRF24L01/Si24R1 chip wireless communication notes
 
@@ -166,7 +158,7 @@ The frequency interval of RF Channels is 1MHz. If the bandwidth exceeds 1MHz, ad
 
 When the baud rate of nRF2401 is 250Kbps or 1Mbps, the bandwidth can be less than 1MHz, which ensures that the 126 RF Channels do not interfere with each other. This means we have a total of 126 channels to use, which is perfect. However, when the baud rate is 2Mbps, the bandwidth cannot be less than 1MHz, so we can only make the bandwidth less than 2MHz, which means that we can only use half of the channels
 
-**Address length** 
+**Address length**
 
 The address length of nRF24L01 is 3-5 bytes, and we can choose one among the 3/4/5-byte options
 
@@ -185,7 +177,6 @@ If two PTXs transmit data to the same PRX at the same time, even if their addres
 
 **Transmitter section**
 
-
 Now let's talk about the PTX side. As mentioned earlier, when the PTX receives response data, it also needs to check the address，The PTX uses the data channel pipe0 to receive data, which is fixed and cannot be changed，Therefore, we must【enable】the pipe0 channel and【configure its address and address width】，Once again, it is important to emphasize that this address is not strictly the address of the PTX, but the address of the target PRX! In fact, the PTX does not have its own address.
 
 Don't forget that when the PTX starts to send data, it also needs an address. According to common sense, since the address for pipe0 is configured, the PTX should know where to send the data when it transmits. However, it's not that simple: before sending data, the nRF2401 must be given a separate transmission address (TX_ADDR). In other words, in order for the PTX to correctly send and receive data, the target address must be configured twice for the PTX (i.e. write the address to two different places). One is for pipe0 and the other is for TX_ADDR, and the values at these two places must be the same.
@@ -198,7 +189,8 @@ Don't forget that when the PTX starts to send data, it also needs an address. Ac
 #include <RF24.h>
 #include <printf.h>
 
-RF24 Radio(7,8);
+RF24 radio(7,8);
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
@@ -208,23 +200,21 @@ void setup() {
   //
   // Setup and configure rf radio
   //
-  Radio.begin();
-  Radio.setAddressWidth(5);
-  Radio.openReadingPipe(0, 0x1212121212LL);
-  Radio.openReadingPipe(1, 0x3434343431LL);
-  Radio.openReadingPipe(2, 0x3434343432LL);
-  Radio.openReadingPipe(3, 0x3434343433LL);
-  Radio.openReadingPipe(4, 0x3434343434LL);
-  Radio.openReadingPipe(5, 0x3434343435LL);
-  Radio.setChannel(115);            //115 band above WIFI signals
-  Radio.setPALevel(RF24_PA_MAX);    //MIN power low rage
-  Radio.setDataRate(RF24_1MBPS) ;   //Minimum speed
+  radio.begin();
+  radio.setAddressWidth(5);
+  radio.openReadingPipe(0, 0x1212121212LL);
+  radio.openReadingPipe(1, 0x3434343431LL);
+  radio.openReadingPipe(2, 0x3434343432LL);
+  radio.openReadingPipe(3, 0x3434343433LL);
+  radio.openReadingPipe(4, 0x3434343434LL);
+  radio.openReadingPipe(5, 0x3434343435LL);
+  radio.setChannel(115);            //115 band above WIFI signals
+  radio.setPALevel(RF24_PA_MAX);    //MIN power low rage
+  radio.setDataRate(RF24_1MBPS) ;   //Minimum speed
   Serial.println("Setup Initialized");
-  Radio.printDetails();
+  radio.printDetails();
 }
 ```
-
-
 
 ## Point-to-point transmission test
 
@@ -235,15 +225,16 @@ void setup() {
 #include <Wire.h>
 #include <RF24.h>
 #include <printf.h>
-RF24 SendRadio(7,8);
 
-int value;
+RF24 send_radio(7,8);
+
+int value = 0;
 
 void WriteData()
 {
   value = random(255); //随机一个0-255的值，并赋给value
-  SendRadio.openWritingPipe(0xF0F0F0F066);//Sends data on this 40-bit address
-  SendRadio.write(&value, sizeof(value));//发送value的值
+  send_radio.openWritingPipe(0xF0F0F0F066);//Sends data on this 40-bit address
+  send_radio.write(&value, sizeof(value));//发送value的值
   Serial.print("WriteData");
   Serial.print(".........");
   Serial.println(value);
@@ -260,15 +251,15 @@ void setup() {
   //
   // Get into standby mode
 
-  SendRadio.begin();
-  SendRadio.setAddressWidth(5);
-  SendRadio.openWritingPipe(0xF0F0F0F066LL);
-  SendRadio.setChannel(115);           //115 band above WIFI signals
-  SendRadio.setPALevel(RF24_PA_MAX);   //MIN power low rage
-  SendRadio.setDataRate(RF24_1MBPS) ;  //Minimum speed
-  SendRadio.stopListening(); //Stop Receiving and start transminitng
+  send_radio.begin();
+  send_radio.setAddressWidth(5);
+  send_radio.openWritingPipe(0xF0F0F0F066LL);
+  send_radio.setChannel(115);           //115 band above WIFI signals
+  send_radio.setPALevel(RF24_PA_MAX);   //MIN power low rage
+  send_radio.setDataRate(RF24_1MBPS) ;  //Minimum speed
+  send_radio.stopListening(); //Stop Receiving and start transminitng
   Serial.print("Send Setup Initialized");
-  SendRadio.printDetails();
+  send_radio.printDetails();
   delay(500);
 }
 
@@ -286,19 +277,19 @@ void loop() {
 #include <RF24.h>
 #include <printf.h>
 
-RF24 ReceiveRadio (7, 8);
+RF24 receive_radio (7, 8);
 
 byte value[32];
 
 void ReadData()
 {
   uint8_t bytes;
-  if (ReceiveRadio.available())
+  if (receive_radio.available())
   {
-    while (ReceiveRadio.available())
+    while (receive_radio.available())
     { 
-      bytes = ReceiveRadio.getPayloadSize();
-      ReceiveRadio.read(value, bytes);//接收数据，并将数据赋值给value
+      bytes = receive_radio.getPayloadSize();
+      receive_radio.read(value, bytes);//接收数据，并将数据赋值给value
     }
     Serial.print("ReadData");
     Serial.print(".........");
@@ -312,18 +303,18 @@ void setup() {
   printf_begin();
   Serial.println(F("RF-NANO v4.0 Receive Test"));
 
-  //
+  
   // Setup and configure rf radio
-  //
-  ReceiveRadio.begin();
-  ReceiveRadio.setAddressWidth(5);
-  ReceiveRadio.openReadingPipe(1, 0xF0F0F0F066LL);
-  ReceiveRadio.setChannel(115);  //115 band above WIFI signals
-  ReceiveRadio.setPALevel(RF24_PA_MAX); //MIN power low rage
-  ReceiveRadio.setDataRate(RF24_1MBPS) ;  //Minimum speed
-  ReceiveRadio.startListening();
+  
+  receive_radio.begin();
+  receive_radio.setAddressWidth(5);
+  receive_radio.openReadingPipe(1, 0xF0F0F0F066LL);
+  receive_radio.setChannel(115);  //115 band above WIFI signals
+  receive_radio.setPALevel(RF24_PA_MAX); //MIN power low rage
+  receive_radio.setDataRate(RF24_1MBPS) ;  //Minimum speed
+  receive_radio.startListening();
   Serial.println("Receive Setup Initialized");
-  ReceiveRadio.printDetails();
+  receive_radio.printDetails();
   delay(500);
 }
 
@@ -332,23 +323,18 @@ void loop() {
 }
 ```
 
-
-
 ## one-to-many test
 
 ![muilt_demo](./image/muilt_demo.png)
 
 Method 1: Same channel, different address
 
-
-
 Method 2: Same address, different channel
 
-### Support for visual programming software.
+### Support for visual programming software
 
 In development......
 
 ## Contact us
 
-**Technology + cooperation**  wechat: jundi0808(ken@emakefun.com)
-
+**Technology + cooperation**  wechat: jundi0808(<ken@emakefun.com>)

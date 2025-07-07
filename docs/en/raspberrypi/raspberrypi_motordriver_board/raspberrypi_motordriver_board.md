@@ -1,16 +1,14 @@
 # Raspberry Pi Driver Board
 
-RaspberryPi Multi-function Motor Driver Expansion Board is a full-featured robot motor driver expansion board produced by [Shenzhen Yichuang Space Technology Co., Ltd. It has been upgraded to ](http://www.emakefun.com/)**V4.0** ( [**see the old version of V3.0**](https://github.com/emakefun/RaspberryPi-MotorDriverBoard/tree/V3.0) ). This motor driver board is suitable for Raspberry Pi Zero/Zero W/Zero WH/A+/B+/2B/3B/3B+/4B. It can support multiple motors/stepper motors/servos/encoder motors (Stepper/Motor/Servo/Encoder) at the same time, leaving the camera and DIP display cable interface free, and can be stacked with multiple boards to expand more control interfaces, especially suitable for players to DIY robots, smart cars, mechanical arms, smart pan-tilts and other applications.
+RaspberryPi Multi-function Motor Driver Expansion Board is a full-featured robot motor driver expansion board produced by [Shenzhen Yichuang Space Technology Co., Ltd. It has been upgraded to](http://www.emakefun.com/)**V4.0** ( [**see the old version of V3.0**](https://github.com/emakefun/RaspberryPi-MotorDriverBoard/tree/V3.0) ). This motor driver board is suitable for Raspberry Pi Zero/Zero W/Zero WH/A+/B+/2B/3B/3B+/4B. It can support multiple motors/stepper motors/servos/encoder motors (Stepper/Motor/Servo/Encoder) at the same time, leaving the camera and DIP display cable interface free, and can be stacked with multiple boards to expand more control interfaces, especially suitable for players to DIY robots, smart cars, mechanical arms, smart pan-tilts and other applications.
 
 ![RaspberryPi-MotorDriverBoard](picture/RaspberryPi-MotorDriverBoard.jpg)
-
-
 
 ## Schematic
 
 Since our driver board uses I2C to control the PCA9685 chip to output 16-channel PWM, all driving DC motors or servos, there is no so-called correspondence between the Raspberry Pi IO port and the controlled motor.
 
-For details, please see [the Raspberry Pi driver board circuit diagram](raspberrypi/raspberrypi_motordriver_board/schematic/RaspBerryDriverBoardV4.0.pdf)
+For details, please see <a href="raspberrypi/raspberrypi_motordriver_board/schematic/RaspBerryDriverBoardV4.0.pdf" target="_blank">the Raspberry Pi driver board circuit diagram</a>
 
 You can also check the silkscreen markings on the front and back of the driver board.
 
@@ -39,25 +37,15 @@ Open the Raspberry Pi terminal and enter `sudo raspi-config`the command, then fo
 
 ![Enter the raspi-config command](picture/picture4.png)
 
-
-
 The above is to enable I2C on the Raspberry Pi. Next, we install the Raspberry I2C library and enter it in the terminal `sudo apt-get install i2c-tools`. After the input is completed, you can see that the I2C library is being downloaded. After the installation is complete, you can enter in the terminal `sudo i2cdetect -l`to check whether it is installed correctly. If a message similar to the following appears, it means that the installation is normal.
 
-
-
 ![Check if I2C installation is successful](picture/picture5.png)
-
-
 
 Enter the command in the terminal `sudo i2cdetect -y 1`to scan all I2C devices connected to the I2C bus and print out the I2C bus address of the device. The I2C address of our expansion board is 0x60, as shown in the figure below.
 
 In addition, i2cdetect detected that there is still an address of 0x70, which is a universal address that can issue instructions to all slaves.
 
-
-
-![Detect I2C address](/picture/picture6.png)
-
-
+![Detect I2C address](picture/picture6.png)
 
 Restart the Raspberry Pi to make the new settings take effect:
 
@@ -75,24 +63,24 @@ sudo reboot
 #include "Emakefun_MotorShield.h"
 
 int main() {
-  Emakefun_MotorShield Pwm = Emakefun_MotorShield();
-  Pwm.begin(50);
+  Emakefun_MotorShield pwm = Emakefun_MotorShield();
+  pwm.begin(50);
 
   // demo这里只操作舵机1, 其他舵机操作相同
-  Emakefun_Servo *myServo1 = Pwm.getServo(1);
+  Emakefun_Servo *my_servo_1 = pwm.getServo(1);
 
   // 速度值是 1 ~ 10 的正整数, 数值越大速度越快
   int speed = 9;
   while (true) {
     // demo这里只操作舵机1, 其他舵机操作相同
-    myServo1->writeServo(0, speed);
+    my_servo_1->writeServo(0, speed);
     delay(2000);
-    myServo1->writeServo(90, speed);
+    my_servo_1->writeServo(90, speed);
     delay(2000);
-    myServo1->writeServo(180, speed);
+    my_servo_1->writeServo(180, speed);
     delay(2000);
   }
-}Click Copymistakecopy
+}
 ```
 
 #### Python code
@@ -102,22 +90,22 @@ int main() {
 
 from Emakefun_MotorHAT import Emakefun_MotorHAT, Emakefun_Servo
 import time
-mh = Emakefun_MotorHAT(addr=0x60)
 
-myServo = mh.getServo(1)
+mh = Emakefun_MotorHAT(addr=0x60)
+my_servo = mh.getServo(1)
 
 # 速度值是 1 ~ 10 的正整数, 数值越大速度越快
 speed = 9
 while (True):
     # demo这里只操作舵机1, 其他舵机操作相同
-    myServo.writeServoWithSpeed(0, speed)
+    my_servo.writeServoWithSpeed(0, speed)
     time.sleep(1)
 
-    myServo.writeServoWithSpeed(90, speed)
+    my_servo.writeServoWithSpeed(90, speed)
     time.sleep(1)
 
-    myServo.writeServoWithSpeed(180, speed)
-    time.sleep(1)Click Copymistakecopy
+    my_servo.writeServoWithSpeed(180, speed)
+    time.sleep(1)
 ```
 
 ### Driving DC motor
@@ -128,31 +116,31 @@ while (True):
 #include "Emakefun_MotorShield.h"
 
 int main() {
-  Emakefun_MotorShield Pwm = Emakefun_MotorShield();
-  Pwm.begin(50);
-  Emakefun_DCMotor *DCmotor1 = Pwm.getMotor(1);
-  Emakefun_DCMotor *DCmotor2 = Pwm.getMotor(2);
-  Emakefun_DCMotor *DCmotor3 = Pwm.getMotor(3);
-  Emakefun_DCMotor *DCmotor4 = Pwm.getMotor(4);
+  Emakefun_MotorShield pwm = Emakefun_MotorShield();
+  pwm.begin(50);
+  Emakefun_DCMotor *dc_motor_1 = pwm.getMotor(1);
+  Emakefun_DCMotor *dc_motor_2 = pwm.getMotor(2);
+  Emakefun_DCMotor *dc_motor_3 = pwm.getMotor(3);
+  Emakefun_DCMotor *dc_motor_4 = pwm.getMotor(4);
 
-  DCmotor1->setSpeed(255);
-  DCmotor2->setSpeed(255);
-  DCmotor3->setSpeed(255);
-  DCmotor4->setSpeed(255);
+  dc_motor_1->setSpeed(255);
+  dc_motor_2->setSpeed(255);
+  dc_motor_3->setSpeed(255);
+  dc_motor_4->setSpeed(255);
 
   while (1) {
-    DCmotor1->run(FORWARD);
-    DCmotor2->run(FORWARD);
-    DCmotor3->run(FORWARD);
-    DCmotor4->run(FORWARD);
+    dc_motor_1->run(FORWARD);
+    dc_motor_2->run(FORWARD);
+    dc_motor_3->run(FORWARD);
+    dc_motor_4->run(FORWARD);
     delay(1000);
-    DCmotor1->run(BACKWARD);
-    DCmotor2->run(BACKWARD);
-    DCmotor3->run(BACKWARD);
-    DCmotor4->run(BACKWARD);
+    dc_motor_1->run(BACKWARD);
+    dc_motor_2->run(BACKWARD);
+    dc_motor_3->run(BACKWARD);
+    dc_motor_4->run(BACKWARD);
     delay(1000);
   }
-}Click Copymistakecopy
+}
 ```
 
 #### Python code
@@ -169,55 +157,55 @@ mh = Emakefun_MotorHAT(addr=0x60)
 
 # recommended for auto-disabling motors on shutdown!
 def turnOffMotors():
- mh.getMotor(1).run(Emakefun_MotorHAT.RELEASE)
- mh.getMotor(2).run(Emakefun_MotorHAT.RELEASE)
- mh.getMotor(3).run(Emakefun_MotorHAT.RELEASE)
- mh.getMotor(4).run(Emakefun_MotorHAT.RELEASE)
+    mh.getMotor(1).run(Emakefun_MotorHAT.RELEASE)
+    mh.getMotor(2).run(Emakefun_MotorHAT.RELEASE)
+    mh.getMotor(3).run(Emakefun_MotorHAT.RELEASE)
+    mh.getMotor(4).run(Emakefun_MotorHAT.RELEASE)
 
 atexit.register(turnOffMotors)
 
 ################################# DC motor test!
-myMotor = mh.getMotor(4)
+my_motor = mh.getMotor(4)
 
 # set the speed to start, from 0 (off) to 255 (max speed)
-myMotor.setSpeed(150)
-myMotor.run(Emakefun_MotorHAT.FORWARD);
+my_motor.setSpeed(150)
+my_motor.run(Emakefun_MotorHAT.FORWARD)
 # turn on motor
-myMotor.run(Emakefun_MotorHAT.RELEASE);
+my_motor.run(Emakefun_MotorHAT.RELEASE)
 
 
 while (True):
- print ("Forward! ")
+    print ("Forward! ")
 
- print ("\tSpeed up...")
- for i in range(255):
-  myMotor.setSpeed(i)
-  myMotor.run(Emakefun_MotorHAT.FORWARD)
-  time.sleep(0.01)
+    print ("\tSpeed up...")
+    for i in range(255):
+        my_motor.setSpeed(i)
+        my_motor.run(Emakefun_MotorHAT.FORWARD)
+        time.sleep(0.01)
 
- print ("\tSlow down...")
- for i in reversed(range(255)):
-  myMotor.setSpeed(i)
-  myMotor.run(Emakefun_MotorHAT.FORWARD)
-  time.sleep(0.01)
+    print ("\tSlow down...")
+    for i in reversed(range(255)):
+        my_motor.setSpeed(i)
+        my_motor.run(Emakefun_MotorHAT.FORWARD)
+        time.sleep(0.01)
 
- print ("Backward! ")
-    
- print ("\tSpeed up...")
- for i in range(255):
-  myMotor.setSpeed(i)
-  myMotor.run(Emakefun_MotorHAT.BACKWARD)
-  time.sleep(0.01)
+    print ("Backward! ")
 
- print ("\tSlow down...")
- for i in reversed(range(255)):
-  myMotor.setSpeed(i)
-  myMotor.run(Emakefun_MotorHAT.BACKWARD)
-  time.sleep(0.01)
+    print ("\tSpeed up...")
+    for i in range(255):
+        my_motor.setSpeed(i)
+        my_motor.run(Emakefun_MotorHAT.BACKWARD)
+        time.sleep(0.01)
 
- print ("Release")
- myMotor.run(Emakefun_MotorHAT.RELEASE)
- time.sleep(1.0)Click Copymistakecopy
+    print ("\tSlow down...")
+    for i in reversed(range(255)):
+        my_motor.setSpeed(i)
+        my_motor.run(Emakefun_MotorHAT.BACKWARD)
+        time.sleep(0.01)
+
+    print ("Release")
+        my_motor.run(Emakefun_MotorHAT.RELEASE)
+        time.sleep(1.0)
 ```
 
 ### Driving stepper motor
@@ -225,8 +213,6 @@ while (True):
 This driver board only supports 42 stepper motors. The wiring method is as follows:
 
 ![Wiring sequence](picture/stepper_connect.png)
-
-
 
 To drive the stepper motor smoothly without lag, the Raspberry Pi I2C speed must be set to 400K. The specific steps are as follows:
 
@@ -251,16 +237,16 @@ To drive the stepper motor smoothly without lag, the Raspberry Pi I2C speed must
 ```c++
 #include "Emakefun_MotorShield.h"
 
-int main () {
- Emakefun_MotorShield Pwm = Emakefun_MotorShield();
- Pwm.begin(50);
- Emakefun_StepperMotor *StepperMotor1 = Pwm.getStepper(200, 1);
+int main() {
+  Emakefun_MotorShield pwm = Emakefun_MotorShield();
+  pwm.begin(50);
+  Emakefun_StepperMotor *stepper_motor_1 = pwm.getStepper(200, 1);
 
- while(1) {
-  StepperMotor1->setSpeed(30);
-  StepperMotor1->step(100, BACKWARD,SINGLE);
- }
-}Click Copymistakecopy
+  while (1) {
+    stepper_motor_1->setSpeed(30);
+    stepper_motor_1->step(100, BACKWARD, SINGLE);
+  }
+}
 ```
 
 #### Python code
@@ -278,40 +264,39 @@ mh = Emakefun_MotorHAT(0x60)
 
 # recommended for auto-disabling motors on shutdown!
 def turnOffMotors():
- mh.getMotor(1).run(Emakefun_MotorHAT.RELEASE)
- mh.getMotor(2).run(Emakefun_MotorHAT.RELEASE)
- mh.getMotor(3).run(Emakefun_MotorHAT.RELEASE)
- mh.getMotor(4).run(Emakefun_MotorHAT.RELEASE)
+    mh.getMotor(1).run(Emakefun_MotorHAT.RELEASE)
+    mh.getMotor(2).run(Emakefun_MotorHAT.RELEASE)
+    mh.getMotor(3).run(Emakefun_MotorHAT.RELEASE)
+    mh.getMotor(4).run(Emakefun_MotorHAT.RELEASE)
 
 atexit.register(turnOffMotors)
 
-myStepper = mh.getStepper(200, 1)   # 200 steps/rev, motor port #1
-myStepper.setSpeed(30)    # 30 RPM
+my_stepper = mh.getStepper(200, 1)   # 200 steps/rev, motor port #1
+my_stepper.setSpeed(30)    # 30 RPM
 
 while (True):
- print("Single coil steps")
- myStepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.SINGLE)
- myStepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.SINGLE)
+    print("Single coil steps")
+    my_stepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.SINGLE)
+    my_stepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.SINGLE)
 
- print("Double coil steps")
- myStepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.DOUBLE)
- myStepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.DOUBLE)
+    print("Double coil steps")
+    my_stepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.DOUBLE)
+    my_stepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.DOUBLE)
 
- print("Interleaved coil steps")
- myStepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.INTERLEAVE)
- myStepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.INTERLEAVE)
+    print("Interleaved coil steps")
+    my_stepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.INTERLEAVE)
+    my_stepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.INTERLEAVE)
 
- print("Microsteps")
- myStepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.MICROSTEP)
- myStepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.MICROSTEP)
-Click Copymistakecopy
+    print("Microsteps")
+    my_stepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.MICROSTEP)
+    my_stepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.MICROSTEP)
 ```
 
 ## C# code
 
 A C# demo is provided. You can study it if you are interested. No technical support is provided.
 
-[Click to download the above code](raspberrypi/raspberrypi_motordriver_board/Demo.zip)
+<a href="raspberrypi/raspberrypi_motordriver_board/Demo.zip" download>Click to download the above code</a>
 
 ### Precautions
 

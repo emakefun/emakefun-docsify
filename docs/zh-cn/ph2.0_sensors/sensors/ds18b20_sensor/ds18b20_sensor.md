@@ -12,7 +12,7 @@
 
 ![实物图](picture/ds18b20_sensor_schematic.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_sensor_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_sensor_schematic.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -33,26 +33,26 @@
 
 ### Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_sensor.rar ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_sensor.rar" download>下载示例程序</a>
 
 ```c++
-#include "OneWire.h"
 #include "DallasTemperature.h"
-#define ONE_WIRE_BUS 4            
-OneWire oneWire(ONE_WIRE_BUS);    
-DallasTemperature sensors(&oneWire);
- 
-void setup()
-{
-  Serial.begin(9600);            
-  sensors.begin();                
+#include "OneWire.h"
+
+#define ONE_WIRE_BUS 4
+
+OneWire one_wire(ONE_WIRE_BUS);
+DallasTemperature sensors(&one_wire);
+
+void setup() {
+  Serial.begin(9600);
+  sensors.begin();
 }
- 
-void loop(void)
-{ 
-  sensors.requestTemperatures();  
-  Serial.print("The temperature is:");         
-  Serial.print(sensors.getTempCByIndex(0)); 
+
+void loop(void) {
+  sensors.requestTemperatures();
+  Serial.print("The temperature is:");
+  Serial.print(sensors.getTempCByIndex(0));
   Serial.println("℃");
   delay(200);
 }
@@ -62,8 +62,8 @@ void loop(void)
 
 ### ESP32 MicroPython示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_esp32_micropython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_esp32_micropython.zip" download>下载示例程序</a>
 
 ## micro:bit MakeCode 示例程序
 
-[动手试一试](https://makecode.microbit.org/S67450-72708-82945-37048)
+<a href="https://makecode.microbit.org/S67450-72708-82945-37048" target="_blank">动手试一试</a>

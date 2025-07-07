@@ -6,7 +6,7 @@
 
 ## 概述
 
-触摸键盘模块是通过 [VK36N16I](zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/16键触摸键盘_VK36N16I规格书_V12.pdf ':ignore') 芯片驱动，共16个触摸键。VK36N16I芯片是一款使用电容感应式原理设计的触摸芯片,可用来检测外部触摸按键上人手的触摸动作。该系列的芯片具有较高的集成度，仅需极少的外部组件便可实现触摸按键的检测。模块使用IIC通讯，可方便与外部 MCU 之间的通讯，实现设备安装及触摸引脚监测目的。
+触摸键盘模块是通过 <a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/16键触摸键盘_VK36N16I规格书_V12.pdf" target="_blank">VK36N16I</a> 芯片驱动，共16个触摸键。VK36N16I芯片是一款使用电容感应式原理设计的触摸芯片,可用来检测外部触摸按键上人手的触摸动作。该系列的芯片具有较高的集成度，仅需极少的外部组件便可实现触摸按键的检测。模块使用IIC通讯，可方便与外部 MCU 之间的通讯，实现设备安装及触摸引脚监测目的。
 
 ## 原理图
 
@@ -70,7 +70,7 @@
 
 通过连接线连接矩阵键盘的I2C接口，将程序下载到Arduino主板，触摸键盘Arduino串口打印相对应的键盘值。
 
-[点击下载mixly案例](zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/mixly_example.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/mixly_example.zip" download>点击下载mixly案例</a>
 
 ### MicroPython
 

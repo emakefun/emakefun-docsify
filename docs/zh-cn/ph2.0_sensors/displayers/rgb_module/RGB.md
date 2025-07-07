@@ -12,7 +12,7 @@
 
 ![原理图](picture/4.png)
 
-[点击查看原理图](zh-cn/ph2.0_sensors/displayers/rgb_module/RGB三色灯.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/displayers/rgb_module/RGB三色灯.pdf" target="_blank">点击查看原理图</a>
 
 ## 模块参数
 

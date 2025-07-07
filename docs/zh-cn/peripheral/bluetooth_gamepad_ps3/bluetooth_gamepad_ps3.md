@@ -53,7 +53,7 @@
 
 然后点击下方链接下载安装库`emakefun_esp32_ps3`
 
-[emakefun_esp32_ps3库安装下载](zh-cn/peripheral/bluetooth_gamepad_ps3/emakefun_esp32_ps3-main.zip ':ignore')
+<a href="zh-cn/peripheral/bluetooth_gamepad_ps3/emakefun_esp32_ps3-2.0.1.zip" download>emakefun_esp32_ps3库安装下载</a>
 
 下在完压缩包后，再在Arduino IED上导入该库：**项目->导入库->添加zip库**，再将上方下载的zip包导入即可。
 
@@ -129,7 +129,7 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 
 #### 4.2.2 输入蓝牙配对码并运行示例代码
 
-点击此处链接查看[mixly示例程序下载](zh-cn/peripheral/bluetooth_gamepad_ps3/ps3按键测试.zip ':ignore')
+点击此处链接查看<a href="zh-cn/peripheral/bluetooth_gamepad_ps3/ps3按键测试.zip" download>mixly示例程序下载</a>
 
 参照示例编写程序或使用示例程序，注意输入手柄背面的蓝牙配对码，每个手柄在出厂时已设置不同的配对码。
 
@@ -146,7 +146,7 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 
 #### 4.2.4 按键测试
 
-点击点击此处链接查看[mixly示例程序下载](zh-cn/peripheral/bluetooth_gamepad_ps3/ps3按键测试.zip ':ignore')
+点击此处链接查看<a href="zh-cn/peripheral/bluetooth_gamepad_ps3/ps3按键测试.zip" download>mixly示例程序下载</a>
 
 经测试，所有按键在按下时反馈数字1，未按下为0；
 
@@ -160,7 +160,7 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 
 #### 4.3.1 安装库
 
-点击点击此处链接查看[Mind+示例程序和库文件下载](zh-cn/peripheral/bluetooth_gamepad_ps3/mind+库和示例程序.zip ':ignore')
+点击此处链接查看<a href="zh-cn/peripheral/bluetooth_gamepad_ps3/mind+库和示例程序.zip" download>Mind+示例程序和库文件下载</a>
 
 打开Mind+，选择FireBeetle ESP32-E 为主板模式，将ESP32主板与电脑连接。
 

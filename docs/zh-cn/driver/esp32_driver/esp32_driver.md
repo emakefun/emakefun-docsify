@@ -22,11 +22,11 @@
 
 1、 先按住ESP32S3 boot按键，然后按一下复位按键，让ESP32S3进入，连接电脑ESP32S3自带USB接口，系统会尝试自动检测并安装驱动。如果未能成功，可以通过设备管理器，右键选择”扫描检测硬件改动“。查看如下感叹号设备。
 
-![win7](picture\win7_installdriver_1.png)
+![win7](./picture/win7_installdriver_1.png)
 
-2、需要[下载ESP32S3官方驱动程序](zh-cn/driver/esp32_driver/idf-driver-esp32-usb-jtag-2021-07-15.zip ':ignore')，然后解压。按如下步骤浏览我的电脑选择，下载驱动程序文件夹
+2、需要<a href="zh-cn/driver/esp32_driver/idf-driver-esp32-usb-jtag-2021-07-15.zip" download>下载ESP32S3官方驱动程序</a>，然后解压。按如下步骤浏览我的电脑选择，下载驱动程序文件夹
 
-<img src="./picture/win7_installdriver_2.png" style="zoom: 50%;" />           <img src="./picture\win7_installdriver_3.png" style="zoom: 50%;" />
+<img src="./picture/win7_installdriver_2.png" style="zoom: 50%;" />           <img src="./picture/win7_installdriver_3.png" style="zoom: 50%;" />
 
 3、点击下一步，勾选信任，点击安装
 
@@ -40,7 +40,7 @@
 
 不管你是win7还是win10都可以尝试。
 
-如果没有出现上面安装成功的截图，提示失败，或者任意一个有黄色感叹号，那就代表安装还是不成功，则说明win7缺乏系统文件，或者驱动被误识别，就需要用终极大招-------大名鼎鼎的[下载zadig](zh-cn/driver/esp32_driver/zadig-2.9.exe ':ignore') 来修复驱动
+如果没有出现上面安装成功的截图，提示失败，或者任意一个有黄色感叹号，那就代表安装还是不成功，则说明win7缺乏系统文件，或者驱动被误识别，就需要用终极大招-------大名鼎鼎的<a href="zh-cn/driver/esp32_driver/zadig-2.9.exe" download>下载zadig</a> 来修复驱动
 
 到这里 我和大家理一下，ESP32S3 USB其实是有三种用法和驱动
 
@@ -75,4 +75,3 @@
 ![zadig_5](./picture/zadig_5.png)
 
 这样ESP32S3在工作代码打开usb转串口（CDC）功能驱动也可以使用了。
-

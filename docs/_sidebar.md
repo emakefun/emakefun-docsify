@@ -184,6 +184,6 @@
   - [PS3蓝牙手柄](zh-cn/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
   - [gamepad](zh-cn/peripheral/arduino_gamepad/Programmable_controller.md)
   - [makeymakey]()
-  - [编码电机](zh-cn/ph2.0_sensors\actuators/hall_encoder_sensor/hall_encoder_sensor.md)
+  - [编码电机](zh-cn/ph2.0_sensors/actuators/hall_encoder_sensor/hall_encoder_sensor.md)
 
 - [关于我们](/zh-cn/about.md)

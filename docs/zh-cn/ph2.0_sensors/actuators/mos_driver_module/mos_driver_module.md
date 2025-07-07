@@ -12,7 +12,7 @@
 
 ![schematic_diagram](picture/schematic_diagram.jpg)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module.pdf" target="_blank">点击此处查看原理图</a>
 
 ### 尺寸图
 
@@ -35,22 +35,22 @@
 ### 示例程序
 
 ```c
-const int motor = A0;
-void setup()
-{
+const int kMotor = A0;
+
+void setup() {
   Serial.begin(115200);
-  pinMode(motor,OUTPUT);
+  pinMode(kMotor, OUTPUT);
 }
 
-void loop(){
-//发射水弹枪
-    digitalWrite(motor,HIGH);
-    Serial.println("Fire the water cannon!");
-    delay(3000);
-    digitalWrite(motor,LOW);
-    Serial.println("Turn off the water bomb gun!");
-    delay(3000);
+void loop() {
+  // 发射水弹枪
+  digitalWrite(kMotor, HIGH);
+  Serial.println("Fire the water cannon!");
+  delay(3000);
+  digitalWrite(kMotor, LOW);
+  Serial.println("Turn off the water bomb gun!");
+  delay(3000);
 }
 ```
 
-[点击此处下载 Arduino 驱动电机示例程序](zh-cn/ph2.0_sensors/actuators/mos_driver_module/motor_driver.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/actuators/mos_driver_module/motor_driver.zip" download>点击此处下载 Arduino 驱动电机示例程序</a>

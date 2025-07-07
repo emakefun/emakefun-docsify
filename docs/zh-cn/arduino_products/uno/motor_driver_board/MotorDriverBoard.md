@@ -3,7 +3,8 @@
 
 ### [淘宝购买链接](https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-22376313182.2.6330bc63YWvWxB&id=591988262536)
 
-MotorDriverBoard是由 [深圳市易创空间科技有限公司](www.emakefun.com)，专门针对Arduino Uno(兼容Mega2560)机器人，电机驱动，多路舵机控制而研发的一款多功能电机驱动扩展板。本驱动板采用I2C方式控制[PCA9685](zh-cn/arduino_products/uno/motor_driver_board/PCA9685.pdf ':ignore')(16路PWM输出芯片)。所以本驱动板电机或者舵机和arduino主板IO口不存在对应关系，是通过I2C扩展PWM控制，详情请见[**驱动板原理图**](zh-cn/arduino_products/uno/motor_driver_board/MotorDriverBoard_V5.2.pdf ':ignore')。
+MotorDriverBoard是由 [深圳市易创空间科技有限公司](https://www.emakefun.com/)，专门针对Arduino Uno(兼容Mega2560)机器人，电机驱动，多路舵机控制而研发的一款多功能电机驱动扩展板。本驱动板采用I2C方式控制<a href="zh-cn/arduino_products/uno/motor_driver_board/PCA9685.pdf" target="_blank">PCA9685</a>(16路PWM输出芯片)。所以本驱动板电机或者舵机和arduino主板IO口不存在对应关系，是通过I2C扩展PWM控制，详情请见<a href="zh-cn/arduino_products/uno/motor_driver_board/MotorDriverBoard_V5.2.pdf" target="_blank">**驱动板原理图**</a>
+。
 
 **MotorDriverBoard for Arduino  Uno(Arduino Mega2560)**
 
@@ -104,27 +105,27 @@ MotorDriverBoard是由 [深圳市易创空间科技有限公司](www.emakefun.co
 
 ## 基础示例程序
 
-[**Gpio_test**](zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/gpio_test.zip ':ignore')
+<a href="zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/gpio_test.zip" download>**Gpio_test**</a>
 
 这个示例程序为控制Uno主板的IO口输出高低电平, 控制PCA9685输出口当作普通IO口输出高低电平
 
 ```c++
 Emakefun_MotorDriver gpio = Emakefun_MotorDriver(0x60);
 
-gpio.begin(1000);    /*初始化io口的输出频率为1KHz*/
-gpio.setPin(S1, HIGH);  /*引脚S1(S1~S8)输出高电平*/
-gpio.setPin(S1, LOW);   /*引脚S1(S1~S8)输出低电平*/
+gpio.begin(1000);      /*初始化io口的输出频率为1KHz*/
+gpio.setPin(S1, HIGH); /*引脚S1(S1~S8)输出高电平*/
+gpio.setPin(S1, LOW);  /*引脚S1(S1~S8)输出低电平*/
 ```
 
-[**PWM_test**](zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/pwm_test.zip ':ignore') 这个示例程序为控制PCA9685输出口输出PWM波形
+<a href="zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/pwm_test.zip" download>**PWM_test**</a> 这个示例程序为控制PCA9685输出口输出PWM波形
 
 ```c++
 Emakefun_MotorDriver pwm = Emakefun_MotorDriver(0x60);
-pwm.begin(1500);     /*初始化io口的输出频率为1500Hz*/
-pwm.setPin(S1, 1024);   /*引脚1输出占空比为 1024/4096 的PWM波（0~4096）*/
+pwm.begin(1500);      /*初始化io口的输出频率为1500Hz*/
+pwm.setPin(S1, 1024); /*引脚1输出占空比为 1024/4096 的PWM波（0~4096）*/
 ```
 
-[**PS2_test**](zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/ps2_test.zip ':ignore')
+<a href="zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/ps2_test.zip" download>**PS2_test**</a>
 
 PS2手柄测试程序
 
@@ -141,53 +142,51 @@ PS2安装请勿接反，左边是正确安装，右边为PS2接收器接反
 
 ## 电机测试示例
 
-### [**DC**](zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/dc.zip ':ignore')
+### <a href="zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/dc.zip" download>**DC**</a>
 
 四路直流电机测试程序
 
 ```c++
-Emakefun_MotorDriver mMotor = Emakefun_MotorDriver(0x60);
-Emakefun_DCMotor *DCMotor_1 = mMotor.getMotor(M1);
+Emakefun_MotorDriver m_motor = Emakefun_MotorDriver(0x60);
+Emakefun_DCMotor *dc_motor_1 = m_motor.getMotor(M1);
 
-void setup()
-{
-    Serial.begin(9600);
-    mMotor.begin(50);   /*初始化io口的输出频率为50Hz*/
+void setup() {
+  Serial.begin(9600);
+  m_motor.begin(50); /*初始化io口的输出频率为50Hz*/
 }
 
-void loop()
-{
+void loop() {
   // 前进
-  DCMotor_1->setSpeed(200);  /*设置速度为200 范围0~255 */
-  DCMotor_1->run(FORWARD);   // 总共FORWARD前进，BACKWARD后退，BRAKE刹车 RELEASE释放四个状态
+  dc_motor_1->setSpeed(200); /*设置速度为200 范围0~255 */
+  dc_motor_1->run(FORWARD);  // 总共FORWARD前进，BACKWARD后退，BRAKE刹车 RELEASE释放四个状态
 }
 ```
 
 **接线图**![MotorDriverBoard_dc](picture/dc.png)
 
-#### [**Servo**](zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/servo.zip ':ignore')八路舵机测试程序
+#### <a href="zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/servo.zip" download>**Servo**</a>八路舵机测试程序
 
 ```c++
-Emakefun_MotorDriver mMotorDriver = Emakefun_MotorDriver(0x60);
-Emakefun_Servo *mServo1 = mMotorDriver.getServo(1);
-mMotorDriver.begin(50);   /*初始化io口的输出频率为50Hz*/
-mServo1->writeServo(90, 10);   /*设置舵机角度为0~180，速度为0~100*/
+Emakefun_MotorDriver m_motor_driver = Emakefun_MotorDriver(0x60);
+Emakefun_Servo *m_servo_1 = m_motor_driver.getServo(1);
+m_motor_driver.begin(50);      /*初始化io口的输出频率为50Hz*/
+m_servo_1->writeServo(90, 10); /*设置舵机角度为0~180，速度为0~100*/
 ```
 
 **接线图**![MotorDriverBoard_servo](picture/servo.png)
 
-#### [**Stepper**](zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/stepper.zip ':ignore') 步进电机测试程序
+#### <a href="zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/stepper.zip" download>**Stepper**</a>步进电机测试程序
 
 ```c++
-Emakefun_MotorDriver mMotorDriver = Emakefun_MotorDriver(0x60);
-Emakefun_StepperMotor *StepperMotor_1 = mMotorDriver.getStepper(1, 200);  
+Emakefun_MotorDriver m_motor_driver = Emakefun_MotorDriver(0x60);
+Emakefun_StepperMotor *stepper_motor_1 = m_motor_driver.getStepper(1, 200);
 /*初始化步进电机1，42步进电机走一步是1.8度，所以一圈的步数为200*/
 
-mMotorDriver.begin(1600);   /*设置频率为最大 1600*/
+m_motor_driver.begin(1600); /*设置频率为最大 1600*/
 
-StepperMotor_1->setSpeed(400);  /*设置步进电机每分钟转的圈数为400圈, 速度越快力矩越小，这个速度不能太低，否则会抖动严重*/
+stepper_motor_1->setSpeed(400); /*设置步进电机每分钟转的圈数为400圈, 速度越快力矩越小，这个速度不能太低，否则会抖动严重*/
 
-StepperMotor_1->step(200, FORWARD, SINGLE); 
+stepper_motor_1->step(200, FORWARD, SINGLE);
 /*驱动步进电机按 SINGLE(单步)的方式，FORWARD（前进）200步。*/
 
 /*步进电机的驱动方式 全步DOUBLE、单步SINGLE、1/2步进INTERLEAVE这三种驱动方式（步进电机的驱动原理请查阅相关资料）*/
@@ -201,7 +200,7 @@ StepperMotor_1->step(200, FORWARD, SINGLE);
 
 ![MotorDriverBoard_stepper](picture/stepper.png)
 
-#### [**Encoder**](zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/encoder.zip ':ignore')四路编码电机测试程序
+#### <a href="zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/encoder.zip" download>**Encoder**</a>四路编码电机测试程序
 
 编码器关键参数如下：
 
@@ -215,9 +214,9 @@ StepperMotor_1->step(200, FORWARD, SINGLE);
 通过上面参数可知，轮子旋转一圈，总共需要计数90x12=1080个脉冲
 
 ```c++
-mMotorDriver.begin();     /*初始化io口的输出频率默认为最大*/
-EncodeMotor_1->setSpeed(100);   /*设置速度为100*/
-EncodeMotor_1->run(BACKWARD);
+m_motor_driver.begin();     /*初始化io口的输出频率默认为最大*/
+encode_motor_1->setSpeed(100);   /*设置速度为100*/
+encode_motor_1->run(BACKWARD);
 /*控制电机运行状态（FORWARD(前)、BACKWARD(后)、BRAKE(停止)）*/
 ```
 
@@ -234,10 +233,10 @@ Encoder2Pulse:2
 Encoder1Pulse:3
 ```
 
-[**Encoder_pid**](./motor_driver_board_encoder_motor/encoder_pid.zip)编码电机PID控制电机速度
+<a href="zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/encoder_pid.zip" download>**Encoder_pid**</a>编码电机PID控制电机速度
 
 ```c++
-PID myPID(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);
+PID my_pid(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);
 ```
 
 - Input：PID的输入(编码电机速度)
@@ -250,16 +249,16 @@ PID myPID(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);
 - REVERSE：方向参数，编码电机反转
 
 ```c++
-myPID.SetSampleTime(100);    /*设置PID采样时间为100ms*/
-myPID.SetMode(AUTOMATIC);     /*设置PID模式为AUTOMATIC*/
+my_pid.SetSampleTime(100);    /*设置PID采样时间为100ms*/
+my_pid.SetMode(AUTOMATIC);     /*设置PID模式为AUTOMATIC*/
 ```
 
 ```c++
-Emakefun_EncoderMotor *EncodeMotor_1 = mMotorDriver.getEncoderMotor(1); /*获取编码电机1*/
-mMotorDriver.begin();     /*初始化io口的输出频率默认为最大*/
-EncodeMotor_1->init(encoder1);   /*初始化encoder1为编码电机1的回调函数(计算编码盘的脉冲)*/
-MsTimer2::set(100, EncoderSpeed);   /*定时器2定时获取编码电机速度*/
-MsTimer2::start();      /*启动定时器2*/
+Emakefun_EncoderMotor *encode_motor_1 = m_motor_driver.getEncoderMotor(1); /*获取编码电机1*/
+m_motor_driver.begin();                                                   /*初始化io口的输出频率默认为最大*/
+encode_motor_1->init(encoder1);                                          /*初始化encoder1为编码电机1的回调函数(计算编码盘的脉冲)*/
+MsTimer2::set(100, EncoderSpeed);                                       /*定时器2定时获取编码电机速度*/
+MsTimer2::start();                                                      /*启动定时器2*/
 ```
 
 **注意**
@@ -289,13 +288,13 @@ MsTimer2::start();      /*启动定时器2*/
 
 ## 综合应用
 
-[PS2控制四驱小车](zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/ps2_control_4wd.zip ':ignore')
+<a href="zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/ps2_control_4wd.zip" download>PS2控制四驱小车</a>
 
-[PS2控制四驱麦克纳姆轮小车](zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/ps2_control_mecanum_wheel_car.zip ':ignore')
+<a href="zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/ps2_control_mecanum_wheel_car.zip" download>PS2控制四驱麦克纳姆轮小车</a>
 
-[PS2控制四驱小车加机械臂](zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/ps2_control_4wd_with_robotic_arm.zip ':ignore')
+<a href="zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/ps2_control_4wd_with_robotic_arm.zip" download>PS2控制四驱小车加机械臂</a>
 
-[蓝牙(WIFI)控制四驱小车](zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/bluetooth_wifi_control.zip ':ignore')
+<a href="zh-cn/arduino_products/uno/motor_driver_board_encoder_motor/bluetooth_wifi_control.zip" download>蓝牙(WIFI)控制四驱小车</a>
 
 蓝牙或者wifi模块请使用数据透传模块，连接到arduino的硬件串口引脚上（0-RXD，1-TXD）
 
@@ -460,7 +459,7 @@ MsTimer2::start();      /*启动定时器2*/
 
 #### Q：驱动板arduino IO对应关系?
 
-##### A ：本驱动板采用I2C方式控制[PCA9685](zh-cn/arduino_products/uno/motor_driver_board/PCA9685.pdf ':ignore)(16路PWM输出芯片)。所以本驱动板电机或者舵机和arduino主板IO口不存在对应关系，是通过I2C扩展PWM控制
+##### A ：本驱动板采用I2C方式控制<a href="zh-cn/arduino_products/uno/motor_driver_board/PCA9685.pdf" target="_blank">PCA9685</a>(16路PWM输出芯片)。所以本驱动板电机或者舵机和arduino主板IO口不存在对应关系，是通过I2C扩展PWM控制
 
 #### Q：驱动板该如何接电?
 
@@ -481,7 +480,7 @@ d、前面正确后下载PS2控制四驱小车程序，并按按键控制电机
 
 #### Q：驱动板是否有原理图?
 
-##### A ：有，点击这里[**驱动板原理图**](./doc/MotorDriverBoard_V5.2.pdf)
+##### A ：有，点击这里<a href="zh-cn/arduino_products/uno/motor_driver_board/MotorDriverBoard_V5.2.pdf" target="_blank">**驱动板原理图**</a>
 
 #### Q：如何分析并判断驱动板是否损坏?
 

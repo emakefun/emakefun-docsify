@@ -2,7 +2,7 @@
 
 ## 实物图
 
-![实物图](picture\ld3320.jpg)
+![实物图](picture/ld3320.jpg)
 
 ## 概述
 
@@ -20,7 +20,7 @@
 - 该模块采用MCU+`LD3320`设计，和应用主控采用I2C通讯，大大简化了用户接线和编程难度。
 - 支持多种工作模式：自动识别、按键触发识别、关键词触发识别、按键或关键词触发识别，让用户可以在不同工作场景中使用。
 
-- [点击查看芯片手册](zh-cn/ph2.0_sensors/smart_module/speech_recognizer/LD3320DataSheet.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/speech_recognizer/LD3320DataSheet.pdf" target="_blank">点击查看芯片手册</a>
 
 ## 模块参数
 
@@ -113,7 +113,7 @@ TODO
 | Arduino Mega 2560 |
 | ESP32 |
 
-- Arduino库和示例程序：[点击此处链接下载](zh-cn/ph2.0_sensors/smart_module/speech_recognizer/emakefun_speech_recognizer-latest.zip ':ignore')
+- Arduino库和示例程序：<a href="zh-cn/ph2.0_sensors/smart_module/speech_recognizer/emakefun_speech_recognizer-latest.zip" download>点击此处链接下载</a>
 
 - 主类和接口说明：[点击此处链接查看](https://emakefun-arduino-library.github.io/emakefun_speech_recognizer/classemakefun_1_1_speech_recognizer.html)
 
@@ -141,11 +141,11 @@ TODO
 
 **程序解析：** 语音识别模块接Arduino Uno R3主板的I2C接口，当对语音识别模块说“xiao yi xiao yi”时，语音合成模块播报“你好，我在，请问有什么可以帮您？”，当对语音识别模块说“qing kai deng”时，主板上的13引脚指示灯亮，并且语音合成模块播报“灯已打开”，当对语音识别模块说“qing guan deng”时，主板上的13引脚指示灯熄灭，并且语音合成模块播报“灯已关闭”。当对语音识别模块说“qing kai men”时，连接主板3引脚的舵机转到0°，并且语音合成模块播报“门已打开”，当对语音识别模块说“qing guan men”时，主板上的3引脚的舵机转到180°，并且语音合成模块播报“门已关闭”。
 
-[**点击下载米思齐案例**](zh-cn/ph2.0_sensors/smart_module/speech_recognizer/ld3320_mixly_example.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/smart_module/speech_recognizer/ld3320_mixly_example.zip" download>**点击下载米思齐案例**</a>
 
 ## Mind+示例程序
 
-[**点击下载Mind+用户库**](zh-cn/ph2.0_sensors/smart_module/speech_recognizer/ld3320_mindplus.zip ':ignore')  用户库包含需要导入的Mind+的用户库和语音识别的案例，如下图。
+<a href="zh-cn/ph2.0_sensors/smart_module/speech_recognizer/ld3320_mindplus.zip" download>**点击下载Mind+用户库**</a>  用户库包含需要导入的Mind+的用户库和语音识别的案例，如下图。
 
 ![mindplus_example](picture/mindplus_example.png)
 

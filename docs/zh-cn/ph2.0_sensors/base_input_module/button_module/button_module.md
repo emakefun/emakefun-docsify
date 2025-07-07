@@ -14,7 +14,7 @@
 
 ![原理图](picture/button_module_schematic.png)
 
-[点击查看原理图](zh-cn/ph2.0_sensors/base_input_module/button_module/button_module_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/button_module/button_module_schematic.pdf" target="_blank">点击查看原理图</a>
 
 ## 机械尺寸图
 
@@ -50,27 +50,24 @@
 
 #### Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/button_module/button_module.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/button_module/button_module.zip" download>下载示例程序</a>
 
 ```c
-int led_out = 3;//定义LED引脚
-int keypad_pin = A3; //定义按键引脚
-int Button_value;
-void setup()
-{
-  pinMode(led_out,OUTPUT); //初始化LED连接的引脚为输出引脚
-  pinMode(keypad_pin,INPUT); //初始化按键连接的引脚为输入
+int led_out = 3;      // 定义LED引脚
+int keypad_pin = A3;  // 定义按键引脚
+int button_value = 0;
+
+void setup() {
+  pinMode(led_out, OUTPUT);    // 初始化LED连接的引脚为输出引脚
+  pinMode(keypad_pin, INPUT);  // 初始化按键连接的引脚为输入
 }
-void loop()
-{
-  Button_value = digitalRead(keypad_pin); //读取按键输入引脚的值
-  if (Button_value == LOW) 
-  {
-      digitalWrite(led_out,HIGH); //如果读取值为低即按键按下去了，LED亮
-  }
-  else
-  {
-      digitalWrite(led_out,LOW); //如果读取值为低即按键没有按下，LED灭
+
+void loop() {
+  button_value = digitalRead(keypad_pin);  // 读取按键输入引脚的值
+  if (button_value == LOW) {
+    digitalWrite(led_out, HIGH);  // 如果读取值为低即按键按下去了，LED亮
+  } else {
+    digitalWrite(led_out, LOW);  // 如果读取值为低即按键没有按下，LED灭
   }
 }
 ```
@@ -79,7 +76,7 @@ void loop()
 
 ![1719974799216](picture/1719974799216.png)
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/button_module/Button_Mixly_demo.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/button_module/Button_Mixly_demo.zip" download>下载示例程序</a>
 
 ### micro:bit示例程序
 
@@ -95,7 +92,7 @@ LED模块通过3Pin线接在主板P2（2号）口；
 
 ![all](picture/all.png)
 
-[示例程序下载](zh-cn/ph2.0_sensors/base_input_module/button_module/MicroPython.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/button_module/MicroPython.zip" download>示例程序下载</a>
 
 ```
 from machine import Pin
@@ -103,9 +100,9 @@ button = Pin(5, Pin.IN)  #按键端口
 led = Pin(2, Pin.OUT)  #LED端口
 while True:
     if button.value() == 0:
-        led.value(1)  
+       led.value(1)  
     else:
-        led.value(0)
+       led.value(0)
 ```
 
 ## 实验结果

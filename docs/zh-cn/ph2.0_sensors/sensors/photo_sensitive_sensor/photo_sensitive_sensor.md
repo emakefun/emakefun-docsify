@@ -10,7 +10,8 @@
 
 ## 原理图
 
- [查看原理图](zh-cn\ph2.0_sensors\sensors\photo_sensitive_sensor\photo_sensitive_sensor_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor_schematic.pdf" target="_blank">查看原理图</a>
+
 ![原理图](picture/photo_sensitive_sensor_schematic.png)
 
 ## 模块参数
@@ -32,22 +33,21 @@
 
 ## Arduino示例程序
 
- [下载示例程序](zh-cn\ph2.0_sensors\sensors\photo_sensitive_sensor\photo_sensitive_sensor.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor.zip" download>下载示例程序</a>
 
 ```c++
-#define PhotosensitivePin  A3//定义光敏传感器模块引脚
-int  PhotosensitiveValue = 0 ;//定义变量,读取光敏值
+#define PHOTOSENSITIVE_PIN A3  // 定义光敏传感器模块引脚
 
-void setup()
-{
-  Serial.begin(9600);//设置串口波特率
-  pinMode(PhotosensitivePin, INPUT);//设置光敏传感器模块引脚为输入
+int photosensitive_value = 0;  // 定义变量,读取光敏值
+
+void setup() {
+  Serial.begin(9600);                 // 设置串口波特率
+  pinMode(PHOTOSENSITIVE_PIN, INPUT);  // 设置光敏传感器模块引脚为输入
 }
-void loop()
-{
-  PhotosensitiveValue = analogRead(PhotosensitivePin);//读取光敏值
+void loop() {
+  photosensitive_value = analogRead(PHOTOSENSITIVE_PIN);  // 读取光敏值
   Serial.print("Photosensitive Data:  ");
-  Serial.println(PhotosensitiveValue);//打印光敏值
+  Serial.println(photosensitive_value);  // 打印光敏值
 }
 ```
 
@@ -59,13 +59,13 @@ void loop()
 from machine import ADC,Pin
 import time
 
-AnalogPin = 2  # 定义光敏传感器模拟接口引脚
+analog_pin = 2  # 定义光敏传感器模拟接口引脚
 
-p = ADC(AnalogPin)
+p = ADC(analog_pin)
 
 while True:
-    AnalogValue = p.read_u16()  # 读取光敏传感器模拟值
-    print("Photosensitive Data:", AnalogValue)  # 打印光敏传感器模拟值
+    analog_value = p.read_u16()  # 读取光敏传感器模拟值
+    print("Photosensitive Data:", analog_value)  # 打印光敏传感器模拟值
     time.sleep_ms(200)
 ```
 
@@ -82,4 +82,4 @@ while True:
 
 ## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_ePdgoM28qVgV">动手试一试</a>
+<a href="https://makecode.microbit.org/_ePdgoM28qVgV" target="_blank">动手试一试</a>

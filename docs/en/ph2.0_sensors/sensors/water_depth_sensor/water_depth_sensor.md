@@ -1,10 +1,6 @@
 # Water Depth Sensor
 
-
-
-![Physical picture](http://localhost:3000/en/ph2.0_sensors/sensors/water_depth_sensor/picture/water_depth_sensor.png)
-
-
+![Physical picture](picture/water_depth_sensor.png)
 
 ## Overview
 
@@ -12,7 +8,7 @@ The water depth sensor is designed for water quality detection and can be widely
 
 ## Schematic
 
-[View Schematic](en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor_schematic.pdf) ![Schematic](http://localhost:3000/en/ph2.0_sensors/sensors/water_depth_sensor/picture/water_depth_sensor_schematic.png)
+<a href="en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor_schematic.pdf" target="_blank">View Schematic</a> ![Schematic](picture/water_depth_sensor_schematic.png)
 
 ## Module parameters
 
@@ -29,22 +25,22 @@ The water depth sensor is designed for water quality detection and can be widely
 
 ## Mechanical Dimensions
 
-![Mechanical Dimensions](http://localhost:3000/en/ph2.0_sensors/sensors/water_depth_sensor/picture/water_depth_sensor_assembly.png)
+![Mechanical Dimensions](picture/water_depth_sensor_assembly.png)
 
 ## Arduino Example Program
 
-[Download the sample program](en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor.zip)
+<a href="en/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor.zip" download>Download the sample program</a>
 
 ```c++
 void setup() {
-Serial.begin(9600); // Initialize serial communication
-pinMode(A3, INPUT); // Set the water depth sensor pin to input
+  Serial.begin(9600);  // Initialize serial communication
+  pinMode(A3, INPUT);  // Set the water depth sensor pin to input
 }
 
 void loop() {
-Serial.print(analogRead(A3));//Print water depth sensor analog value
-delay(200); // Delay 200 milliseconds
-}Copy to clipboardErrorCopied
+  Serial.print(analogRead(A3));  // Print water depth sensor analog value
+  delay(200);                    // Delay 200 milliseconds
+}
 ```
 
 ## MicroPython Example Program
@@ -52,17 +48,17 @@ delay(200); // Delay 200 milliseconds
 ### Esp32 MicroPython Example Program
 
 ```python
-from machine import ADC,Pin
+from machine import ADC, Pin
 import time
 
-AnalogPin = 15 # Define the analog interface pin of the water depth sensor
+analog_pin = 15 # Define the analog interface pin of the water depth sensor
 
-p1 = ADC(AnalogPin)
+p1 = ADC(analog_pin)
 
 while True:
-AnalogValue = p1.read_u16() # Read the analog value of the water depth sensor
-print("Analog Data:", AnalogValue) # Print the analog value of the water depth sensor
-time.sleep_ms(200)Copy to clipboardErrorCopied
+    analog_value = p1.read_u16() # Read the analog value of the water depth sensor
+    print("Analog Data:", analog_value) # Print the analog value of the water depth sensor
+    time.sleep_ms(200)
 ```
 
 ### Micro:bit MicroPython Example Program
@@ -70,12 +66,12 @@ time.sleep_ms(200)Copy to clipboardErrorCopied
 ```python
 from microbit import *
 
-AnalogPin = pin1 # Define the analog interface pin of the water depth sensor
+analog_pin = pin1 # Define the analog interface pin of the water depth sensor
 
 while True:
-AnalogValue = AnalogPin.read_analog() # Read the analog value of the water depth sensor
-print(AnalogValue) # Print the analog value of the water depth sensor
-sleep(0.2)Copy to clipboardErrorCopied
+    analog_value = analog_pin.read_analog() # Read the analog value of the water depth sensor
+    print(analog_value) # Print the analog value of the water depth sensor
+    sleep(0.2)
 ```
 
 ## MakeCode Example Programs

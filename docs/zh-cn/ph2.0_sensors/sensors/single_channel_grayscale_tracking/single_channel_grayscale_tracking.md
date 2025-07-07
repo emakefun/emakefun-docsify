@@ -18,17 +18,17 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn\ph2.0_sensors\sensors\water_depth_sensor\water_depth_sensor.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor.zip" download>下载示例程序</a>
 
 ```c++
 void setup() {
-    Serial.begin(9600);  // 初始化串口通信
-    pinMode(A3, INPUT);  // 设置水深传感器引脚为输入
+  Serial.begin(9600);  // 初始化串口通信
+  pinMode(A3, INPUT);  // 设置水深传感器引脚为输入
 }
 
 void loop() {
-  Serial.print(analogRead(A3));//打印水深传感器模拟值
-    delay(200);  // 延时200毫秒
+  Serial.print(analogRead(A3));  // 打印水深传感器模拟值
+  delay(200);                    // 延时200毫秒
 }
 ```
 
@@ -40,13 +40,13 @@ void loop() {
 from machine import ADC,Pin
 import time
 
-AnalogPin = 15  # 定义水深传感器模拟接口引脚
+analog_pin = 15  # 定义水深传感器模拟接口引脚
 
-p1 = ADC(AnalogPin)
+p1 = ADC(analog_pin)
       
 while True:
-    AnalogValue = p1.read_u16()  # 读取水深传感器模拟值
-    print("Analog Data:", AnalogValue)  # 打印水深传感器模拟值
+    analog_value = p1.read_u16()  # 读取水深传感器模拟值
+    print("Analog Data:", analog_value)  # 打印水深传感器模拟值
     time.sleep_ms(200)
 ```
 
@@ -55,14 +55,14 @@ while True:
 ```python
 from microbit import *
 
-AnalogPin = pin1  # 定义水深传感器模拟接口引脚
+analog_pin = pin1  # 定义水深传感器模拟接口引脚
 
 while True:
-    AnalogValue = AnalogPin.read_analog()  # 读取水深传感器模拟值
-    print( AnalogValue)  # 打印水深传感器模拟值
+    analog_value = analog_pin.read_analog()  # 读取水深传感器模拟值
+    print( analog_value)  # 打印水深传感器模拟值
     sleep(0.2)
 ```
 
 ## MakeCode示例程序
 
-<a href="https://makecode.microbit.org/_e1XeY08vy2kx">动手试一试</a>
+<a href="https://makecode.microbit.org/_e1XeY08vy2kx" target="_blank">动手试一试</a>

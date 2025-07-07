@@ -16,7 +16,7 @@
 
 ![原理图](picture/rotary_potentiometer_schematic.png)
 
-[点击此处查看原理图](zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer_schematic.pdf ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer_schematic.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -40,29 +40,31 @@
 
 ## Arduino示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer.zip" download>下载示例程序</a>
 
 ```c
-float Voltage = 0,data; //定义电压和模拟值变量
-int analogPin = A3; //定义电位器接口接收电压模拟值
-void setup()
-{
- pinMode(analogPin, INPUT); //电压输出接口
- Serial.begin(9600); //设置串口波特率
+float voltage = 0,;
+int data = 0;  // 定义电压和模拟值变量
+int analog_pin = A3;       // 定义电位器接口接收电压模拟值
+
+void setup() {
+  pinMode(analog_pin, INPUT);  // 电压输出接口
+  Serial.begin(9600);         // 设置串口波特率
 }
+
 void loop() {
- data = analogRead(analogPin); //获取电压模拟值
- Voltage = (data/1023)*5; //模拟值和数字值转换 * 电压 得到当前电压
- Serial.print("Voltage is: ");
- Serial.print(Voltage); //打印获取到的电压
- Serial.println("V");
- delay(200);
+  data = analogRead(analog_pin);  // 获取电压模拟值
+  voltage = (data / 1023) * 5;   // 模拟值和数字值转换 * 电压 得到当前电压
+  Serial.print("voltage is: ");
+  Serial.print(voltage);  // 打印获取到的电压
+  Serial.println("V");
+  delay(200);
 }
 ```
 
 ## Mixly示例程序
 
-[下载示例程序](zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer_Mixly_demo.zip ':ignore')
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer_Mixly_demo.zip" download>下载示例程序</a>
 
 ## micro:bit示例程序
 

@@ -6,21 +6,21 @@
 
 **易创编程**是深圳市易创空间科技有限公司出品的一款blockly开发、面向STEAM教育领域的积木式编程和代码编程手机软件，**易创编程**在blockly的基础上增加了各种开源硬件的图形化编程方法，通过图形块的搭建为电子硬件编写程序，是一款可以让青少年在展现创意，发挥创造力的过程中学习编程的软件。
 
-![1](pictures\1.png)
+![1](pictures/1.png)
 
 ### 1.2 软件安装(以安卓手机为例)
 
-1. 请在我们的官网下载，下载地址： 
+1. 请在我们的官网下载，下载地址：
 
-https://emakefun-docs.readthedocs.io/zh-cn/latest/arduino/Emakefun_app/WN_EMakeFun.apk
+<https://emakefun-docs.readthedocs.io/zh-cn/latest/arduino/Emakefun_app/WN_EMakeFun.apk>
 
 2. 下载后用数据线将app拷贝到手机或用QQ传送到手机（不能使用微信传送，会修改文件导致打不开！）然后点击安装。
 
-   ![2](pictures\2.png)
+   ![2](pictures/2.png)
 
 3. 安装完成后点击打开，请信任app弹出的权限提醒！（手机自带的管理软件可能拦截app权限导致app无法正常使用，请找到相关设置开放全部权限后再打开）
 
-   ![3](pictures\3.png)![4](pictures\4.png)![5](pictures\5.png)
+   ![3](pictures/3.png)![4](pictures/4.png)![5](pictures/5.png)
 
 4. 主界面介绍：
 
@@ -33,13 +33,13 @@ https://emakefun-docs.readthedocs.io/zh-cn/latest/arduino/Emakefun_app/WN_EMakeF
    | 5   | 图片编程游戏 | 11  | 数字游戏 |
    | 6   | 遥控设置 | 12  | 其他编程模型（开发中） |
 
-![6](pictures\6.jpg)
+![6](pictures/6.jpg)
 
 ### 1.3编译环境介绍
 
   打开app，点击Arduino图标（②），进入如下编程界面。
 
-![7](pictures\7.jpg)
+![7](pictures/7.jpg)
 
 - **指令栏：**同种类型的积木被分在同个模块中并赋予同种颜色，每块积木代表一条控制指令。
 - **下拉框：**下拉后可选择不同示例程序或高级编程示例。
@@ -54,25 +54,24 @@ App准备：
 
 在编程界面，点击左上角—新建，会自动清空编程界面的程序。
 
-![8](pictures\8.png)  ![9](pictures\9.png)
+![8](pictures/8.png)  ![9](pictures/9.png)
 
 主板准备：
 
 将BLE-UNO主板通电（数据线连电脑或电池供电），主板在出厂时已刷固件，蓝牙连接成功后Link灯（蓝色）常亮。（若连接后不常亮请联系客服更换主板）！
 
-![10](pictures\10.png)
+![10](pictures/10.png)
 
 点击连接，会出现当前主板蓝牙地址，点击该蓝色地址。
 
-![11](pictures\11.png)
+![11](pictures/11.png)
 
 与主板连接成功后，app界面上“连接”栏变为黑色字体（未连接时为灰色），主板Link灯常亮（蓝色）。
 
-![12](pictures\12.png)
+![12](pictures/12.png)
 
 然后点击运行
 
- ![13](pictures\13.png)![14](pictures\14.png)
+ ![13](pictures/13.png)![14](pictures/14.png)
 
 运行时会先编译程序再下载到主板，下载时主板RXTX灯闪烁（黄色）。
-
