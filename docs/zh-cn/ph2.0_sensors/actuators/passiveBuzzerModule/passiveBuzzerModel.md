@@ -18,7 +18,7 @@
 
 * 1.供电电压:5V
 * 2.连接方式:3PIN防反接杜邦线
-* 3.模块尺寸:4*2.1cm
+* 3.模块尺寸38.4*22.4mm
 * 4.安装方式:M4螺钉兼容乐高插孔固定
 
 | 引脚名称 | 描述       |
@@ -27,9 +27,17 @@
 | G        | GND 地线   |
 | S        | 信号引脚   |
 
-## 机械尺寸
+## 尺寸图
 
 ![14](picture/14.png)
+
+
+## 3D图纸
+<a href="zh-cn/ph2.0_sensors/actuators/passiveBuzzerModule/Drawing/Passive_Buzzer_Module.step" download>点击下载STEP文件</a>
+
+<a href="zh-cn/ph2.0_sensors/actuators/passiveBuzzerModule/Drawing/Passive_Buzzer_Module.wrl" download>点击下载WRL文件</a>
+
+<a href="zh-cn/ph2.0_sensors/actuators/passiveBuzzerModule/Drawing/Passive_Buzzer_Module.dxf" download>点击下载DXF文件</a>
 
 ## Arduino IDE示例程序
 
