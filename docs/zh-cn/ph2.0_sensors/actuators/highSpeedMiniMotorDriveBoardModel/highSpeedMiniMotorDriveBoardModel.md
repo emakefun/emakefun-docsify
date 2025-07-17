@@ -1,18 +1,22 @@
 # 双路电机驱动模块
 
+
+## 实物图
+
+![模块图](picture/highSpeedMiniMotorDriveBoardModel.png)
+
+## 概述
 这个示例程序为使用双路电机驱动模块控制四路直流电机实现正转与反转，两个信号引脚控制两个电机，电机的正转与反转与两路PWM的高低电平有关，两者的电平一高一低就可以控制电机的转动方向。
 
 ## 注意事项
 
 - 需要额外供电驱动四路直流电机
 
-## 模块图
-
-![模块图](highSpeedMiniMotorDriveBoardModel.png)
-
 ## 原理图
 
-TODO
+![原理图](picture/2.png)
+
+<a href="zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel/Dual_Motor_Driver.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -29,6 +33,18 @@ TODO
 | IN2   | 电机控制信号引脚2|
 | IN3   | 电机控制信号引脚3|
 | IN4   | 电机控制信号引脚4|
+
+
+## 机械尺寸
+
+![5](picture/3.png)
+
+## 3D图纸
+<a href="zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel/Drawing/Dual_Motor_Driver.step" download>点击下载STEP文件</a>
+
+<a href="zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel/Drawing/Dual_Motor_Driver.wrl" download>点击下载WRL文件</a>
+
+<a href="zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel/Drawing/Dual_Motor_Driver.dxf" download>点击下载DXF文件</a>
 
 ## 完整测试程序
 

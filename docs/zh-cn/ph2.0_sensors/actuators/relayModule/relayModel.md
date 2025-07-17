@@ -22,7 +22,7 @@
 
 * 1.供电电压:5V
 * 2.连接方式:3PIN防反接杜邦线
-* 3.模块尺寸:4*2.1cm
+* 3.模块尺寸:38.4*22.4mm
 * 4.安装方式:M4螺钉兼容乐高插孔固定
 
 | 引脚名称 | 描述       |
@@ -34,6 +34,13 @@
 ## 机械尺寸
 
 ![02](picture/02.png)
+
+## 3D图纸
+<a href="zh-cn/ph2.0_sensors/actuators/relayModule/Drawing/Relay_Module.step" download>点击下载STEP文件</a>
+
+<a href="zh-cn/ph2.0_sensors/actuators/relayModule/Drawing/Relay_Module.wrl" download>点击下载WRL文件</a>
+
+<a href="zh-cn/ph2.0_sensors/actuators/relayModule/Drawing/Relay_Module.dxf" download>点击下载DXF文件</a>
 
 ## 示例程序
 

@@ -2,7 +2,7 @@
 
 ## 模块实物图
 
-![](small_atomizer.png)
+![](picture\small_atomizer.png)
 
 ## 概述
 
@@ -14,15 +14,13 @@ Atomizer_5V_module可通过单片机I/O口控制，也可通过板上自带的�
 
 ### 原理图
 
+![](picture\3.png)
+
 <a href="zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer_sch.pdf" target="_blank">点击下载原理图</a>
 
 ### 芯片规格书
 
 <a href="zh-cn/ph2.0_sensors/smart_module/Atomizer_5V_Module/Atomizer_chip.pdf" target="_blank">点击下载Atomizer_chip规格书</a>
-
-### 尺寸图
-
-待补充
 
 ## 模块参数
 
@@ -45,6 +43,16 @@ Atomizer_5V_module可通过单片机I/O口控制，也可通过板上自带的�
 | + | 电池供电正极 |
 | - | 电池供电负极 |
 
+## 尺寸图
+
+![机械图](picture/2.png)
+
+## 3D图纸
+<a href="zh-cn/ph2.0_sensors/actuators/small_atomizer/Drawing/Atomizer.step" download>点击下载STEP文件</a>
+
+<a href="zh-cn/ph2.0_sensors/actuators/small_atomizer/Drawing/Atomizer.wrl" download>点击下载WRL文件</a>
+
+<a href="zh-cn/ph2.0_sensors/actuators/small_atomizer/Drawing/Atomizer.dxf" download>点击下载DXF文件</a>
 ## Arduino示例程序（C/C++）
 
 待补充

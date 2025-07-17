@@ -1,0 +1,89 @@
+# 温湿度传感器
+
+## 实物图
+
+![实物图](picture/temperature_humidity_sensor.jpg)
+
+## 概述
+
+DHT11数字温度 - 湿度传感器是一种包含校准数字信号输出的复合传感器。它采用特殊的数字模块采集技术和湿度 - 温度传感器技术，确保高可靠性和出色的长期稳定性。传感器由电阻式湿度元件和NTC温度测量元件组成 。DHT11通过单总线与微处理器通信。 它只需要一个线程，一次发送40个数据  。
+
+​        数据格式：  8位湿度整数数据+ 8位湿度十进制数据+ 8位温度整数数据+ 8位温度十进制数据+ 8位奇偶校验位。
+
+​        数据发送过程：主控发送启动信号 - > DHT响应信号 - > DHT通知主控它已准备好接受信号 - > DHT发送准备好的数据 - > DHT结束信号 - > DHT内部重新测试环境温度和湿度，记录下一个数据 从主控开始发出信号。
+
+​        通过该过程获得，每次收集的数据主控始终是最后一次DHT数据。如果我们想获得实时数据，那么主控可以收集两个连续的数据，但是，正式地，不建议连续多次读取DHT。如果每次读取的间隔时间超过5秒，则足以获得准确的数据。DHT在通电时需要1秒才能稳定。  
+
+## 原理图
+
+![原理图](picture/temperature_humidity_sensor_schematic.png)
+
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/temperature_humidity_sensor_schematic.pdf" target="_blank">点击此处查看原理图</a>
+
+## 模块参数
+
+| 引脚名称 |         描述         |
+| :------: | :------------------: |
+|    G     |         GND          |
+|    V     |         VCC          |
+|    S     | DATA串行数据，单总线 |
+
+- 供电电压:3v3/5V
+
+- 连接方式:4PIN防反接杜邦线
+
+- 模块尺寸:40 x 22.5 mm
+
+- 安装方式:M4螺钉兼容乐高插孔固定
+
+## 机械尺寸图
+
+![机械尺寸图](picture/temperature_humidity_sensor_assembly.png)
+
+## 规格书
+
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/DHT11.doc" download>点击此处查看规格书</a>
+
+## Arduino示例程序
+
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/temperature_humidity_sensor.zip" download>下载示例程序</a>
+
+```c++
+#include <Wire.h>  //导入通信库
+
+#include "dht11.h"  //导入DHT11库
+
+
+#define DHT11_PIN 3  // 定义温湿度传感器引脚
+
+dht11 dht;  // 创建DHT11对象
+
+void setup() {
+  Serial.begin(9600);  // 设置串口波特率
+}
+
+void loop() {
+  dht.read(DHT11_PIN);  // 初始化温湿度引脚
+  Serial.print("Tep: ");
+  Serial.print((float)dht.temperature);  // 打印温度
+  Serial.print("C");
+  Serial.print("     Hum: ");
+  Serial.print((float)dht.humidity);  // 打印湿度
+  Serial.println("%");
+  delay(200);
+}
+```
+
+## MicroPython示例程序
+
+### ESP32 MicroPython
+
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/dht11_esp32_micropython.zip" download>点击下载ESP32 MicroPython示例程序</a>
+
+### micro:bit MicroPython
+
+<a href="zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/dht11_microbit_micropython.zip" download>点击下载micro:bit MicroPython示例程序</a>
+
+## micro:bit MakeCode示例程序
+
+<a href="https://makecode.microbit.org/_YiMV02Ksuc73" target="_blank">动手试一试</a>
