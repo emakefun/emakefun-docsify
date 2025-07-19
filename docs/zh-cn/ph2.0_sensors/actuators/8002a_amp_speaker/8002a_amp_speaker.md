@@ -14,6 +14,31 @@
 
 <a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/8002A_AMP_Speaker.pdf" target="_blank">点击此处查看原理图</a>
 
+
+## 模块参数
+
+* 1.供电电压:5V
+* 2.连接方式:3PIN防反接杜邦线
+* 3.模块尺寸:38.4*30.4mm
+* 4.安装方式:M4螺钉兼容乐高插孔固定
+
+| 引脚名称 | 描述       |
+| -------- | ---------- |
+| G        | GND 地线 |
+| V        | 5V电源引脚   |
+| S        | 音频输入引脚 |
+
+## 尺寸图
+
+![机械图](picture/机械图.png)
+
+## 3D图纸
+<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/Drawing/8002A_AMP_Speaker.step" download>点击下载STEP文件</a>
+
+<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/Drawing/8002A_AMP_Speaker.wrl" download>点击下载WRL文件</a>
+
+<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/Drawing/8002A_AMP_Speaker.dxf" download>点击下载DXF文件</a>
+
 ## 通过ESP32播放自定义音频文件
 
 ### 快速上手

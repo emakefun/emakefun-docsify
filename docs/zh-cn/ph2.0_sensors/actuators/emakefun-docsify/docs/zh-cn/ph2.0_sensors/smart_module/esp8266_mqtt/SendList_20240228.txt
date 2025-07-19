@@ -1,0 +1,5 @@
+1|0|AT+CWMODE=1
+2|0|AT+RST
+3|0|AT+CWJAP_DEF="K30","12345678"
+4|0|AT+MQTTUSERCFG=0,1,"ESP8266","kxmqttp1","public985",0,0,""
+5|0|AT+MQTTCONN=0,"remote.microprinttech.com",19824,0
