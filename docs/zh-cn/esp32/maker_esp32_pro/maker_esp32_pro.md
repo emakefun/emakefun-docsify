@@ -64,6 +64,8 @@
 
 <a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_oled_test.zip" download>点击下载OLED示例程序</a>
 
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_encoder_motor_test.zip" download>点击下载编码电机示例程序</a>
+
 ## Mind+示例程序
 
 <a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/esp32MindplusMotor.zip" download>点击下载电机示例程序</a>
@@ -193,6 +195,7 @@
 1. Mixly的安装路径不要包含中文、空格等特殊字符；放在电脑的根目录下，层级目录不要太深；比如                          D:\mixly2.0-win32-x64就是根目录安装；  
 
 2. 查看串口是否选择正确，如果没有串口，请先安装CH340G驱动；串口不要被其他应用占用；
+
 3. 检查程序是否有错误；
 
 **Q**: 电机程序上传成功，但是电机不转？
@@ -202,4 +205,5 @@
 1. 电机需要DC头供电，6-24V，建议使用两节3.7V锂电池，电源开关是否打到ON；
 
 2. 第一步已经完成的话，还出现问题，请检查Motor and IO Switch开关是否拨到电机方向(即标有ON的方向)；
+
 3. 检测程序设置的电机引脚是否和电机实际引脚一一对应；
