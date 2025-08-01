@@ -38,7 +38,7 @@ Arduino IDE 1.8.19版本
 
 ## 三、Mixly下载
 
- <http://mixly.org/bnu-maker/mixl2.0rc>
+ <http://mixly.cn/bnu-maker/mixl2.0rc>
 
 ## 四、Mblock5下载
 
@@ -46,7 +46,11 @@ Arduino IDE 1.8.19版本
 
 [Mac](https://dl.makeblock.com/mblock5/darwin/V5.4.0.pkg): <https://dl.makeblock.com/mblock5/darwin/V5.4.0.pkg>
 
-## 五、Micro:Bit
+## 五、Mind+下载
+
+https://mindplus.cc/download.html
+
+## 六、Micro:Bit
 
 MicroBit [MakeCode在线编程链接]( https://makecode.microbit.org/ ):  <https://makecode.microbit.org/>
 
