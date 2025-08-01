@@ -21,3 +21,5 @@
 2、问题：“Windows无法验证此设备所需的驱动程序的数字签名”。
 
 原因：win7及以上版本系统安装驱动需要签名。
+
+3、如果再安装不成功可以尝试使用zadig直接安装cdc，可以参考[ESP32S3 USB驱动最后部分](https://emakefun.github.io/emakefun-docsify/#/zh-cn/driver/esp32_driver/esp32_driver)
