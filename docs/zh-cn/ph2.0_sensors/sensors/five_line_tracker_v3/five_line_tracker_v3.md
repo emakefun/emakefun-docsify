@@ -75,10 +75,8 @@
 
 ## micro:bit MakeCode示例程序
 
-Makecode扩展链接：https://github.com/emakefun-makecode-extensions/emakefun_five_line_tracker
+Makecode扩展链接：<https://github.com/emakefun-makecode-extensions/emakefun_five_line_tracker_v3>
 
-<a href="https://github.com/emakefun-makecode-extensions/emakefun_five_line_tracker" target="_blank">点击查看用户库</a>
+<a href="https://github.com/emakefun-makecode-extensions/emakefun_five_line_tracker_v3" target="_blank">点击查看用户库</a>
 
-<a href="https://makecode.microbit.org/_8PsgrehRXdtY" target="_blank">点击查看示例程序</a>
-
-
+<a href="https://makecode.microbit.org/S37408-03822-66167-16953" target="_blank">点击查看示例程序</a>
