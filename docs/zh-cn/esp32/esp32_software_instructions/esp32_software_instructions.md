@@ -7,16 +7,15 @@
 请前往 [Arduino官网](https://www.arduino.cc/en/Main/Software) 下载最新IDE2.0版本
 
 1. 打开Ardunio IDE2.0;
+
 2. 安装ESP32库；
+1) 点击Arduino IDE菜单栏：【文件】-->【首选项】
 
-1)  点击Arduino IDE菜单栏：【文件】-->【首选项】
-
-*将<https://dl.espressif.com/dl/package_esp32_index.json> 这个网址复制到附加管理器地址*
+*将<https://jihulab.com/esp-mirror/espressif/arduino-esp32/-/raw/gh-pages/package_esp32_index_cn.json> 这个网址复制到附加管理器地址*
 
 ![add_esp](picture/add_esp.png)
 
 2. 菜单栏点击 【工具】->【开发板】->【开发板管理器】搜索esp32，然后安装，如下图：
-
    ![find_esp](picture/find_esp.png)
 
 **注：**
@@ -44,7 +43,6 @@
 [Mixly2.0基础使用教程](/zh-cn/software/mixly/mixly.zh-CN.md) 请直接查看前面的介绍，这里只说明ESP32主板在mixly里面如何选择
 
 1. 板卡选择
-
    若是Arduino则选择
 
 ![Mixly_Board](picture/Mixly_Board.png)
