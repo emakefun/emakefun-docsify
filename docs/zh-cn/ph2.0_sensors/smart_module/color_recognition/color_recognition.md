@@ -2,7 +2,7 @@
 
 ## 模块图
 
-![实物图](picture/2.png)
+![实物图](picture/color_recognition.png)
 
 ## 概述
 
@@ -12,7 +12,7 @@ TCS34725是一款低成本，高性价比的RGB全彩颜色识别传感器，传
 
 ## 原理图
 
-![原理图](picture/1.png)
+![原理图](picture/color_recognition_schematic_diagram.png)
 
 ## 模块参数
 
@@ -27,12 +27,12 @@ TCS34725是一款低成本，高性价比的RGB全彩颜色识别传感器，传
 
 ## 引脚定义
 
-| 引脚名称 | 描述        |
-| -------- | ----------- |
-| G        | GND地线     |
-| V        | 5V电源引脚  |
-| SDA      | I2C数据引脚 |
-| SCL      | I2C时钟引脚 |
+| 引脚名称 | 描述      |
+| ---- | ------- |
+| G    | GND地线   |
+| V    | 5V电源引脚  |
+| SDA  | I2C数据引脚 |
+| SCL  | I2C时钟引脚 |
 
 ### Arduino函数介绍
 
@@ -68,6 +68,12 @@ void loop() {
 程序解析：颜色识别模块为I2C通信，将模块与Arduino Uno主板的I2C接口相连，将程序上传到主板中，就可以读取颜色的三色值。
 
 <a href="zh-cn/ph2.0_sensors/smart_module/color_recognition/color_recognition_mixly.zip" download>点击下载Mixly示例</a>
+
+## Mind+图形化示例
+
+<a href="zh-cn/ph2.0_sensors/smart_module/color_recognition/emakefun-em_color_sensor_tcs34725-thirdex-V0.0.1.mpext" download>点击下载Mind+库</a>
+
+<a href="zh-cn/ph2.0_sensors/smart_module/color_recognition/color_sensor_TCS34725_get_color.mp" download>点击下载Mind+示例</a>
 
 ## Micro:Bit示例程序
 
