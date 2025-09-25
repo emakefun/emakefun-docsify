@@ -22,7 +22,7 @@
 
 [下载方法可参考此链接](https://blog.csdn.net/m0_47449768/article/details/130102406)
 
-按照上述安装好ffmpeg后，将示例音频文件<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/易创空间.zip" download>易创空间</a>解码出PCM格式的音频文件。
+按照上述安装好ffmpeg后，将示例音频文件<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/8002a_amp_speaker.zip" download>易创空间</a>解码出PCM格式的音频文件。
 
 通过win+R打开cmd，输入ffmpeg命令，将示例音频文件转换为PCM格式：
 
@@ -58,17 +58,15 @@ xxd -i -C ./pcm.raw pcm.h
 
 ##### 接线
 
-按照下图所示接线
-
-将音频放大器模块插入ESP32的GPIO25引脚即可。
+按照下图所示接线，将音频放大器模块插入ESP32的GPIO25引脚即可。
 
 ![接线图](picture/功放喇叭_接线图.jpg)
 
 ##### 代码实现
 
-1.先下载<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/esp32_dac_8002a.zip" download>ESP32示例程序</a>，将其烧录到ESP32开发板上。可以听到播放的易创空间音频。
+1、先下载<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/8002a_amp_speaker.zip" download>ESP32示例程序</a>，用ArduinoIDE打开esp32_dac_8002a.ino文件，上传到ESP32开发板上。可以听到播放的易创空间音频。
 
-2.若想要播放其他音频文件，则需要修改播放程序，将示例文件中的'pcm.h'文件替换为自己的音频文件，并按如下格式修改，注意音频文件尽可能小，以便减少RAM占用。
+2、若想要播放其他音频文件，则需要修改播放程序，将示例文件中的'pcm.h'文件替换为自己的音频文件，并按如下格式修改，注意音频文件尽可能小，以便减少RAM占用。
 
 在自定义的`pcm.h`文件中的头部添加和修改如下代码：
 
@@ -83,7 +81,7 @@ constexpr uint8_t kPcmData[] /*数组名修改成该变量名*/
 
 也可以参考示例代码的`pcm.h`文件格式进行修改。
 
-3.再将示例程序烧录到ESP32开发板上，可以听到播放的自定义音频。
+3、再将示例程序烧录到ESP32开发板上，可以听到播放的自定义音频。
 
 ## 相关资料
 
@@ -91,39 +89,19 @@ constexpr uint8_t kPcmData[] /*数组名修改成该变量名*/
 
 ## 注意事项
 
-- DAC只支持8位数据
-- 不能和I2S同时使用
+- DAC只支持 8 位数模转换器，数字值 0 ~ 255 转换成模拟电压 0 ~ Vref ；
+- ESP32只有两个通道DAC，分布为 GPIO25（通道 1）和 GPIO26（通道 2） ；
+- 不能和I2S同时使用。
 
 ## 蓝牙音响实验
 
-<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/music.zip" download>点击出下载示例代码以及zip库文件</a>
+<a href="zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/ESP32-A2DP.zip" download>点击出下载示例代码以及zip库文件</a>
 
 在本次实验中，我们在Arduino IDE中运行。
 
 在编写程序之前，先选择相应主板型号。
 
 ![up_esp32](picture/up_esp32.png)
-
-源代码：
-
-```c
-#include "AudioTools.h"
-#include "BluetoothA2DPSink.h"
-
-AnalogAudioStream out;
-// 由于库文件原因，功放喇叭默认接25号端口；
-BluetoothA2DPSink a2dp_sink(out);
-
-void setup() {
-  // 在此修改蓝牙设备名称
-  a2dp_sink.start("EmakeFun DAC");
-}
-
-void loop() {
-}
-```
-
-![选择板型号](picture/IDE.png)
 
 在上传此程序之前，需要先导入相关库文件，步骤如下：
 
@@ -136,6 +114,30 @@ void loop() {
 再按如下选择内存选项以免编译时报内存溢出错误。
 
 ![选择内存](picture/option.jpg)
+
+打开示例程序ESP32-A2DP\examples\bt_music_receiver_to_internal_dac.ino
+
+```
+#include "AudioTools.h"
+#include "BluetoothA2DPSink.h"
+
+AnalogAudioStream out;
+
+//库文件，DAC默认接口25号端口；
+BluetoothA2DPSink a2dp_sink(out);
+
+void setup() {
+//在此修改蓝牙设备名称
+  a2dp_sink.start("EmakeFun DAC");  
+  LOGI("analog left output pin: %d", 25);
+  LOGI("analog right output pin: %d", 26);
+}
+
+void loop() {
+}
+```
+
+
 
 ### 实验结果
 
