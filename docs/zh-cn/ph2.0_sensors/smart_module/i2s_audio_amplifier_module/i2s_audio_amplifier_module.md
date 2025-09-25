@@ -6,7 +6,9 @@
 
 ## 概述
 
-本模块是以NS4168为主控芯片，是一款高效、低噪声、高集成度的 D 类音频功放模块，特别适合对功耗和抗干扰要求高的便携式音频设备。其 I2S 数字输入、防失真功能和丰富的保护机制使其在消费类电子产品中具有广泛的应用前景。
+​	NS4168是一款支持I2S数字音频信号输入，输出具有防失真功能，2.5W单声道D 类音频功放模块，特别适合对功耗和抗干扰要求高的便携式音频设备。比如蓝牙音响，wifi音响，平板电脑，而本模块主要是介绍如何在ESP32系类主控上如何使用。
+
+
 
 ## 主要特性
 
@@ -27,31 +29,29 @@
 
 ## 原理图
 
-![原理图原理图](schematic_diagram.png)
+![原理图](./picture/NS4168_schematic_diagram.png)
 
-<a href="zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/MAX98375_i2s_dac_amp.pdf" target="_blank">点击此处查看原理图</a>
+<a href="zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/NS4168_SCH.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 芯片规格书
 
-<a href="http://www.szczkjgs.com/UploadFiles/fujian/3725/NS4168.pdf" target="_blank">点击此处查看芯片规格书</a>
+<a href="zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/NS4168_datasheet.pdf" target="_blank">点击查看NS4168规格书</a>
 
 ## 使用示例
 
-本模块可搭配I2S麦克风模块使用。
-
-[点击查看使用示例](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/i2s_mems_mic.md#Arduino使用示例)
+[点击查看本模块搭配I2S麦克风模块的示例](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/i2s_mems_mic.md#Arduino使用示例)
 
 ## 蓝牙音响实验
 
 示例接线图：
 
-| ESP32 | MAX98375 |
+| ESP32 | NS468 |
 | ----- | -------- |
 | 3.3V  | VCC      |
 | GND   | GND      |
-| IO14  | BCLK      |
-| IO15  | LRCK      |
-| IO22  | DIN      |
+| IO33 | BCLK      |
+| IO32 | LRCLK     |
+| IO23 | DIN      |
 
 <a href="zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/ESP32-A2DP.zip" download>点击出下载示例代码以及zip库文件</a>
 
