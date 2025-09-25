@@ -1,4 +1,4 @@
-# I2S MEMS麦克风模块
+# I2S MEMS数字麦克风模块
 
 ## 实物图
 
@@ -6,32 +6,36 @@
 
 ## 概述
 
-该款MEMS数字I2S麦克风模块是以MSM261S4030H0声音传感器为核心，内置一个对声音敏感的电容式驻极体话筒。声波使话筒内的驻极体薄膜振动导致电容的变化，而产生与之对应变化的微小电压。这一电压随后被转化成0-5V的电压，经过A/D转换被数据采集器接收通过I2S协议和主控通讯。
+​	该I2S MEMS数字麦克风模块是以ZTS6631声音传感器为核心，内置一个对声音敏感的电容式驻极体话筒。声波使话筒内的驻极体薄膜振动导致电容的变化，而产生与之对应变化的微小电压。这一电压随后被转化成0-3.3V的电压，经过A/D转换被数据采集器接收通过I2S协议和主控通讯。
 该模块不仅具有小巧的体积，还具有高灵敏度和低噪音特性，非常适合用于各种需要高质量音频输入的应用场景。结合ESP32等主控设备的强大处理能力，用户可以轻松实现语音识别、录音、AI学习等功能。
+
+本模块从功能上可以兼容替代 MSM261S4030H0，INMP441，ICS-43434 。
 
 ## 原理图
 
 ![原理图](picture/schematic_diagram.png)
 
-<a href="zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/MSM261S4030H0_MEMS_MIC.pdf" target="_blank">原理图点击此处查看</a>
+<a href="zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/ZTS663_I2S_MEMS_MIC_SCH.pdf" target="_blank">原理图点击此处查看</a>
 
 ## 芯片规格书
 
-<a href="zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/MSM261S4030H0.pdf" target="_blank">点击查看I2S麦克风规格书</a>
+<a href="zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/ZTS6631_datasheet.pdf" target="_blank">点击查看I2S麦克风规格书</a>
 
 ## 模块参数
 
-- 工作电压：3.3~5V
+- 工作电压：模块为3.3~5V，芯片工作电压（1.6V-3.6V)
 - 麦克风封装工艺：MEMS
 - 方向性：全向 顶进音
 - 数据接口：I2S
-- 灵敏度：-26dB
-- 声压等级：124dB
-- 信噪比：61dB
+- 灵敏度：-26dBFS
+- 信噪比：64dB
+- 输出采样率：4kHZ~96k HZ
+- 有效数据位宽：24bit
+- 尺寸：38.4x22.4mm 重量3.6g
 
 ## ESP32 Arduino 使用示例
 
-### 接线图
+测试麦克风的时候需要搭配一个I2S音频放大器才可以完成测试
 
 [I2S音频放大模块使用说明点击此处查看](zh-cn/ph2.0_sensors/smart_module/i2s_audio_amplifier_module/i2s_audio_amplifier_module.md)
 
@@ -40,30 +44,34 @@
 |  ESP32-IOT_BOARD  |  1   |
 | I2S音频放大器模块 |  1   |
 |   I2S麦克风模块   |  1   |
-|     喇叭模块      |  1   |
+| PH2.0接口喇叭模块 |  1   |
 |  5PinPH2.0杜邦线  |  2   |
 |    TypeC数据线    |  1   |
 
-| 麦克风模块 | ESP32 |
-| ---------- | ----- |
-| SD         | 27    |
-| WS         | 26    |
-| SCK        | 25    |
+### 接线如下
+
+| I2S麦克风模块 | ESP32 |
+| ------------- | ----- |
+| SD            | 27    |
+| WS            | 26    |
+| SCK           | 25    |
 
 | 音频放大器模块 | ESP32 |
 | -------------- | ----- |
 | BCLK           | 33    |
-| LRLCK          | 32    |
+| LRCLK          | 32    |
 | DIN            | 23    |
 
 ![接线图](picture/circuit_diagram.png)
 
 ### ESP32 Arduino使用示例
 
-<a href="zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/esp32_i2s_rw.zip" download>点击下载ESP32的Arduino示例代码</a>
+<a href="zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/esp32_i2s_mic_test.zip" download>点击下载ESP32的Arduino示例代码</a>
 
-下载后解压打开test.ino文件，通过ArduinoIDE上传到ESP32主板中。
+下载后解压用ArduinoIDE打开esp32_i2s_mic_test.ino文件，主板选择ESP32，通过ArduinoIDE上传。
 
-![alt text](picture/test.jpg)
+测试现象：
 
-上传后，对准麦克风说话，即可在喇叭模块上实时听到麦克风录制的声音。
+1、上传成功后，首先会听到喇叭播放“易创空间”，正面喇叭是正常工作的。
+
+2、对准麦克风说话，即可在喇叭模块上实时听到麦克风录制的声音。
