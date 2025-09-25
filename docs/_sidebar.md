@@ -121,6 +121,7 @@
     - [I2C级联扩展器](/zh-cn/)
     - [RFID-I2C模块](/zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/rfid_mfrc522.md)
     - [I2S-MEMS麦克风模块](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/i2s_mems_mic.md)
+    - [PDM麦克风模块](zh-cn/ph2.0_sensors/smart_module/pdm_mic/pdm_mic.md)
     <!-- - [ESP32 小智AI聊天机器人](zh-cn/ph2.0_sensors/smart_module/esp32_ai_xiaozhi/esp32_ai_xiaozhi.md) -->
     - [指纹识别模块]()
     - [毫米波雷达模块]()
