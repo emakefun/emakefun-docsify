@@ -6,7 +6,7 @@
 
 ## 概述
 
-esp-c2-mqtt无线模块是emakefun公司基于乐鑫科技的wifi芯片ESP8684基础上重新研发的串口转wifi的物联网模块，该模块采用AT配置方式来支持wifi无线通信，AT指令全面兼容[乐鑫官方AT指令库](https://docs.espressif.com/projects/esp-at/zh_CN/latest/esp32c2/AT_Command_Set/)，全部封装成scratch，mixly，Makecode图形化编程块支持arduino，micro:bit。 总而言之，这个模块就像一个无线网卡，但它不仅仅能连接Wi-Fi，还能理解和使用物联网中常用的通信方式，让您的设备轻松接入互联网，实现**远程控制和数据交换**。
+esp32-c2-mqtt无线模块是emakefun公司基于乐鑫科技的wifi芯片ESP8684基础上重新研发的串口转wifi的物联网模块，该模块采用AT配置方式来支持wifi无线通信，AT指令全面兼容[乐鑫官方AT指令库](https://docs.espressif.com/projects/esp-at/zh_CN/latest/esp32c2/AT_Command_Set/)，全部封装成scratch，mixly，Makecode图形化编程块支持arduino，micro:bit。 总而言之，这个模块就像一个无线网卡，但它不仅仅能连接Wi-Fi，还能理解和使用物联网中常用的通信方式，让您的设备轻松接入互联网，实现**远程控制和数据交换**。
 
 ## 模块特点及参数
 
@@ -71,7 +71,7 @@ esp-c2-mqtt无线模块是emakefun公司基于乐鑫科技的wifi芯片ESP8684�
 
 发送/接收传感器数据或控制指令
 
-- **ESP C2-MQTT模块**：
+- **ESP32 C2-MQTT模块**：
 
 执行AT指令配置网络连接
 
