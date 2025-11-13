@@ -115,6 +115,7 @@
     - [ESP32 C2 MQTT模块](zh-cn/ph2.0_sensors/smart_module/esp32_c2_mqtt/esp32_c2_mqtt.md)
     - [LD3320语音识别V2.1](zh-cn/ph2.0_sensors/smart_module/speech_recognizer/speech_recognizer.md)
     - [离线特定语音识别ASR-V2](zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/asr_speech_recognition.md)
+    - [TTS20语音合成模块](zh-cn/ph2.0_sensors/smart_module/tts20_module/tts20_module.md)
     - [TTS语音合成V2.1](zh-cn/ph2.0_sensors/smart_module/tts_module/text_to_speech_synthesizer.md)
     - [TTS语音合成V3.0](/zh-cn/gallery.md)
     - [I2C-IO扩展模块](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/gpio_expansion_board.md)
