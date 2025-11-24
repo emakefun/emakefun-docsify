@@ -172,7 +172,9 @@
   - [maker-esp32-pro](zh-cn/esp32/maker_esp32_pro/maker_esp32_pro.md)
   - [esp32-cam V2](zh-cn/esp32/ESP32_CAM/ESP32_CAM.md)
   - [物联板iot:bit](zh-cn/esp32/iotbit/iotbit.md)
+  - [nl-esp32-s3-devkitc](zh-cn/esp32/nl-esp32-s3-devkitc/README_zh.md)
   - [scratch arcade](https://arcade.blockcode.fun/#/zh-cn/intro)
+
 - 树莓派
   - [树莓派传感器扩展板](zh-cn/raspberrypi/raspberrypi_sensor_board/raspberrypi_sensor_board.md)
   - [树莓派电机驱动板](zh-cn/raspberrypi/raspberrypi_motordriver_board/raspberrypi_motordriver_board.md)
