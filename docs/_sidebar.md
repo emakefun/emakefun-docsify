@@ -173,6 +173,7 @@
   - [esp32-cam V2](zh-cn/esp32/ESP32_CAM/ESP32_CAM.md)
   - [物联板iot:bit](zh-cn/esp32/iotbit/iotbit.md)
   - [nl-esp32-s3-devkitc](zh-cn/esp32/nl-esp32-s3-devkitc/README_zh.md)
+  - [esp32s3-cam](zh-cn/esp32/esp32s3-cam/README_zh.md)
   - [scratch arcade](https://arcade.blockcode.fun/#/zh-cn/intro)
 
 - 树莓派
