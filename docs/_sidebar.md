@@ -82,7 +82,7 @@
     - [单路电机驱动](zh-cn/ph2.0_sensors/actuators/motor_module/motor_module.md)
     - [双路电机驱动](zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel/highSpeedMiniMotorDriveBoardModel.md)
     - [DM11两路电机驱动模块](/zh-cn/ph2.0_sensors/actuators/dm11/dm11.md)
-    - [四路编码驱动模块](zh-cn/ph2.0_sensors/actuators/md40/md40.md)
+    - [MD40 四路编码驱动模块](zh-cn/ph2.0_sensors/actuators/md40/md40.md)
     - [小型雾化器](/zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer.md)
     - [MOS管驱动模块](zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module.md)
     - [串行总线舵机驱动板]()
@@ -99,6 +99,8 @@
     - [RGB全彩灯](zh-cn/ph2.0_sensors/displayers/rgb_module/RGB.md)
     - [WS2812B RGB灯环](zh-cn/ph2.0_sensors/displayers/12-bit_RGB_lamp_ring/RGBRing.md)
     - [中文字库0.96OLED](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED.md)
+    - [SWIFT-LCD-13显示屏模块](zh-cn/ph2.0_sensors/displayers/swift_lcd_13/swift_lcd_13.md)
+    - [SWIFT-LCD-20显示屏模块](zh-cn/ph2.0_sensors/displayers/swift_lcd_20/swift_lcd_20.md)
 
   - 智能模块
     - [BMP280大气压传感器](zh-cn/ph2.0_sensors/smart_module/atmospheric_pressure_sensor/atmospheric_pressure_sensor.md)
@@ -115,7 +117,7 @@
     - [ESP32 C2 MQTT模块](zh-cn/ph2.0_sensors/smart_module/esp32_c2_mqtt/esp32_c2_mqtt.md)
     - [LD3320语音识别V2.1](zh-cn/ph2.0_sensors/smart_module/speech_recognizer/speech_recognizer.md)
     - [离线特定语音识别ASR-V2](zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/asr_speech_recognition.md)
-    - [TTS20语音合成模块](zh-cn/ph2.0_sensors/smart_module/tts20_module/tts20_module.md)
+    - [TTS20 语音合成模块](zh-cn/ph2.0_sensors/smart_module/tts20_module/tts20_module.md)
     - [TTS语音合成V2.1](zh-cn/ph2.0_sensors/smart_module/tts_module/text_to_speech_synthesizer.md)
     - [TTS语音合成V3.0](/zh-cn/gallery.md)
     - [I2C-IO扩展模块](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/gpio_expansion_board.md)
