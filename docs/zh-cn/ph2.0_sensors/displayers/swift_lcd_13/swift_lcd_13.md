@@ -48,7 +48,7 @@ SWIFT-LCD-13显示屏模块是一款**1.3英寸**全彩TFT LCD显示屏模块，
 
 ## ESP32 Arduino 使用示例
 
-**接线**
+### 接线
 
 | 显示屏模块  | ESP32  |
 | ---------- | ------ |
@@ -59,94 +59,16 @@ SWIFT-LCD-13显示屏模块是一款**1.3英寸**全彩TFT LCD显示屏模块，
 | V          | 5V     |
 | G          | GND    |
 
-**依赖库安装**
+### 下载示例程序
 
-1. 打开管理库：Arduino IDE → 项目 → 导入库 → 管理库
-2. 安装**lvgl** by kisvegabor，版本**9.2.2**
-3. 安装**GFX Library for Arduino** by Moon On，版本**1.6.3**
+下载后解压用ArduinoIDE打开swift_lcd_13_example.ino文件，主板选择ESP32
 
 <a href="zh-cn/ph2.0_sensors/displayers/swift_lcd_13/swift_lcd_13_example.zip" download>示例程序下载</a>
 
-```c++
-#include <lvgl.h>
-#include <memory>
+### 依赖库安装
 
-#include "Arduino_GFX_Library.h"
-#include "lv_conf.h"
+1. 打开库管理，安装相应库文件
+2. 安装**lvgl** by kisvegabor，版本**9.2.2**
+3. 安装**GFX Library for Arduino** by Moon On，版本**1.6.3**
 
-namespace {
-constexpr gpio_num_t kDisplaySclk = GPIO_NUM_17;
-constexpr gpio_num_t kDisplayMosi = GPIO_NUM_16;
-constexpr gpio_num_t kDisplayDc = GPIO_NUM_15;
-constexpr gpio_num_t kDisplayCs = GPIO_NUM_14;
-
-constexpr uint32_t kExampleLvglTickPeriodMs = 2;
-
-constexpr uint16_t kScreenWidth = 240;
-constexpr uint16_t kScreenHeight = 240;
-
-lv_display_t *g_display = nullptr;
-lv_color_t g_display_buffer[kScreenWidth * kScreenHeight / 10] = {0};
-
-std::unique_ptr<Arduino_DataBus> g_bus;
-std::unique_ptr<Arduino_GFX> g_gfx;
-
-lv_style_t g_large_white_font_style;
-
-void OnDisplayFlush(lv_display_t *display, const lv_area_t *area, uint8_t *pixel_map) {
-  const uint32_t width = area->x2 - area->x1 + 1;
-  const uint32_t height = area->y2 - area->y1 + 1;
-
-  g_gfx->draw16bitRGBBitmap(area->x1, area->y1, reinterpret_cast<uint16_t *>(pixel_map), width, height);
-
-  lv_display_flush_ready(display);
-}
-
-void OnLvglTickTimer(void *arg) {
-  lv_tick_inc(kExampleLvglTickPeriodMs);
-}
-}  // namespace
-
-void setup() {
-  g_bus = std::make_unique<Arduino_ESP32SPI>(kDisplayDc, kDisplayCs, kDisplaySclk, kDisplayMosi);
-
-  g_gfx = std::make_unique<Arduino_ST7789>(g_bus.get(), -1, 0, true, kScreenWidth, kScreenHeight, 0, 0, 0, 0);
-
-  if (!g_gfx->begin()) {
-    printf("Error: Failed to initialize g_gfx.\n");
-    return;
-  }
-
-  lv_init();
-
-  const esp_timer_create_args_t lvgl_tick_timer_args = {.callback = &OnLvglTickTimer, .name = "lvgl_tick"};
-  esp_timer_handle_t lvgl_tick_timer = NULL;
-  esp_timer_create(&lvgl_tick_timer_args, &lvgl_tick_timer);
-  esp_timer_start_periodic(lvgl_tick_timer, kExampleLvglTickPeriodMs * 1000);
-
-  g_display = lv_display_create(kScreenWidth, kScreenHeight);
-  if (g_display == nullptr) {
-    printf("Error: Failed to create g_display.\n");
-    return;
-  }
-
-  lv_display_set_flush_cb(g_display, OnDisplayFlush);
-  lv_display_set_buffers(g_display, g_display_buffer, NULL, sizeof(g_display_buffer), LV_DISPLAY_RENDER_MODE_PARTIAL);
-
-  lv_style_init(&g_large_white_font_style);
-  lv_style_set_text_font(&g_large_white_font_style, &lv_font_montserrat_24);
-  lv_style_set_text_color(&g_large_white_font_style, lv_color_white());
-
-  lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x003a57), LV_PART_MAIN);
-
-  lv_obj_t *label = lv_label_create(lv_screen_active());
-  lv_label_set_text(label, "Hello World!");
-  lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
-  lv_obj_add_style(label, &g_large_white_font_style, 0);
-}
-
-void loop() {
-  lv_timer_handler();
-  delay(5);
-}
-```
+![依赖库安装](picture/4.png)
