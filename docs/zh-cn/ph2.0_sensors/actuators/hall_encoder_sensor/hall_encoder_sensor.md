@@ -8,9 +8,9 @@
 
 编码电机是一款可通过霍尔传感器丶磁盘及减速电机组成的可精准控制的减速直流电机。它通过内置的编码器将机械运动转换为数字信号，从而实现对位置、速度和加速度等参数的精确测量。
 
-编码电机模块1：90的减速比，拥有更高大的扭矩，载重能力大幅提升。3 -12V的宽输入电压适应更多不同系统，减速钱空载转速达10000RPM，减速后空在转速达113RPM，扭矩达1.0kg*cm，堵转扭矩1.8kg，更有全金属轴和半金属轴，全金属轴载重能力更强，半金属轴噪音更小，其余参数基本相同。AB相霍尔编码器可输出两路90°正交正弦波，既可以用于测速（读取AB相脉冲个数），也可用于读取编码电机的状态（读取AB相位差）。红色LED灯指示编码器工作状态，PH2.0防反接接口。
+编码电机模块采用1:90的减速比，拥有更大的扭矩，载重能力大幅提升。3-12V的宽输入电压适应更多不同系统，减速前空载转速达10000RPM，减速后空载转速达113RPM，扭矩达1.0kg·cm，堵转扭矩1.8kg。提供全金属轴和半金属轴两种选择：全金属轴载重能力更强，半金属轴噪音更小，其余参数基本相同。AB相霍尔编码器可输出两路90°正交正弦波，既可以用于测速（读取AB相脉冲个数），也可用于读取编码电机的状态（读取AB相位差）。红色LED灯指示编码器工作状态，PH2.0防反接接口。
 
-此设备可以应用于机器人技术、智能小车、医疗设备、和数控机床等多个领域等。
+此设备可以应用于机器人技术、智能小车、医疗设备、数控机床等多个领域。
 
 ### 原理图
 
@@ -26,14 +26,14 @@
 
 ## 模块参数
 
-- 工作电压：DC 3 - 12V
+- 工作电压：DC 3-12V
 - 空载电流：100mA
 - 空载转速：113RPM
 - 额定负载电流：500mA
 - 额定负载转速：59RPM
-- 额定负载转速：1.0KG
+- 额定负载扭矩：1.0kg·cm
 - 堵转电流：0.82A
-- 堵转扭矩：1.8KG
+- 堵转扭矩：1.8kg·cm
 - 接 口：PH2.0间距接口。
 - 编码器供电：3.3-5V
 - 减速比：1：90
@@ -52,7 +52,7 @@
 
 ## 编码器原理说明
 
-编码器，是一种用来测量机械旋转或位移的传感器。它能够测量机械部件在旋转或直线运动时的位移位置或速度等信息，并将其转换成一系列电信号。
+编码器是一种用来测量机械旋转或位移的传感器。是一种用来测量机械旋转或位移的传感器。它能够测量机械部件在旋转或直线运动时的位移位置或速度等信息，并将其转换成一系列电信号。
 
 ### 编码器主要分类
 
@@ -130,7 +130,7 @@ M法通过测量固定时间间隔内的脉冲数量来计算速度。这种方�
 
 #### T法（周期法）速度测量
 
-法通过测量单个脉冲或固定数量脉冲的时间周期来计算速度。这种方法基于另一个基本原理：转速与脉冲周期成反比。控制器使用高精度计时器测量相邻两个脉冲上升沿之间的时间间隔，或测量固定数量脉冲（如10个）的总时间。
+T法通过测量单个脉冲或固定数量脉冲的时间周期来计算速度。这种方法基于另一个基本原理：转速与脉冲周期成反比。控制器使用高精度计时器测量相邻两个脉冲上升沿之间的时间间隔，或测量固定数量脉冲（如10个）的总时间。
 
 速度计算公式为：转速(RPM) = 60 ÷ (脉冲周期 × PPR × 倍频数)。
 
@@ -142,58 +142,94 @@ M/T法结合了M法和T法的优点，实现了全速度范围内的高精度测
 
 具体实现通常采用两个计数器：一个用于脉冲计数，一个用于高频时钟计数。测量开始时同时启动两个计数器，当脉冲计数器达到预设值时停止两个计数器。通过脉冲数和实际时间计算速度，公式为：转速(RPM) = (脉冲数 × 60 × 时钟频率) ÷ (时钟计数值 × PPR × 倍频数)。
 
-### 编码器脉冲计数读取示例
+### Arduino 编码器脉冲计数读取示例程序
+
+#### 接线如下
+
+| ESP32   | 编码器      |
+| ------- | ---------- |
+| VCC     | V          |
+| GND     | G          |
+| 15      | A          |
+| 17      | B          |
+
+#### 示例程序如下
 
 ```c++
 namespace {
-const uint8_t kEncoderPinA = 5;
-const uint8_t kEncoderPinB = 6;
+const uint8_t kEncoderPinA = 15;  // 编码器A相信号输入引脚
+const uint8_t kEncoderPinB = 17;  // 编码器B相信号输入引脚
 
-volatile int32_t g_count = 0;
+volatile int32_t g_encoder_count = 0;
 
-void OnInterrupt() {
+// 中断服务函数 - 处理A相信号上升沿，当A相信号出现上升沿时，会执行此函数
+void handleEncoderInterrupt() {
+  // 读取B相信号电平并判断方向
   if (digitalRead(kEncoderPinB) == LOW) {
-    ++g_count;
+    // B相为低电平，正转方向，计数增加
+    ++g_encoder_count;
   } else {
-    --g_count;
+    // B相为高电平，反转方向，计数减少
+    --g_encoder_count;
   }
 }
-}
+}  // namespace
 
 void setup() {
   Serial.begin(115200);
+
+  // 配置编码器输入引脚，启用内部上拉电阻
   pinMode(kEncoderPinA, INPUT_PULLUP);
   pinMode(kEncoderPinB, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(kEncoderPinA), OnInterrupt, FALLING);
+
+  // 设置中断，检测A相信号的上升沿
+  attachInterrupt(digitalPinToInterrupt(kEncoderPinA), handleEncoderInterrupt, RISING);
+
+  Serial.println("开始读取脉冲...");
 }
 
 void loop() {
-  Serial.println(g_count);
-  delay(100);
+  Serial.print("脉冲计数: ");
+  Serial.println(g_encoder_count);
+  Serial.print("编码器转动角度: ");
+  Serial.print(g_encoder_count * 360.0 / 12);
+  Serial.println(" 度");
+
+  delay(1000);
 }
 ```
 
-## ESP32 Arduino示例程序（C/C++）
+#### 程序功能说明
 
-<a href="https://gh-proxy.org/https://github.com/emakefun-arduino-library/em_esp32_encoder_motor/archive/refs/tags/v1.1.1.zip" download>点击此处下载Arduino示例程序</a>
+此示例程序演示了如何读取增量式编码器的脉冲信号，并通过串口监视器显示脉冲计数值。程序使用中断方式检测编码器A相信号的变化，根据B相信号的状态判断旋转方向，实现正转计数增加、反转计数减少。
 
-### Arduino 库使用文档
+#### 程序运行说明
 
-<a href="https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/" target="_blank">点击此处查看API说明文档</a>
+烧录完成后，打开串口助手，设置波特率为115200，点击“打开串口”按钮，等待程序运行。
 
-### Arduino 库示例程序
+手动转动编码器，串口显示当前的脉冲计数以及转动角度。
 
-<a href="https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/drive_dc_motor_8ino-example.html" target="_blank">PWM驱动直流电机正反转</a>
+顺时针转动编码器，脉冲计数和转动角度增加。
 
-<a href="https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/detect_phase_relation_8ino-example.html" target="_blank">根据电机正转时判断编码器AB相的实际相位关系</a>
+逆时针转动编码器，脉冲计数和转动角度减少。
 
-<a href="https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/forward_stop_backward_8ino-example.html" target="_blank">电机前进后退停止</a>
+**注意：脉冲计数和转动角度的正负仅代表转动方向。**
 
-<a href="https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/run_pwm_8ino-example.html" target="_blank">以指定的PMW占空比转动电机</a>
+#### 程序原理
 
-<a href="https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/run_rpm_with_analog_input_8ino-example.html" target="_blank">依据特定 IO 口的模拟值动态设定电机转动速度</a>
+程序使用中断检测A相信号的上升沿（从低电平变为高电平的瞬间）。每当检测到A相上升沿时，中断服务函数会立即检查B相信号的电平状态：
 
-<a href="https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/run_speed_8ino-example.html" target="_blank">以指定的速度（单位RPM）驱动电机</a>
+- 当B相为低电平时：判断为正转（顺时针），计数器增加
+- 当B相为高电平时：判断为反转（逆时针），计数器减少
+
+这种判断基于增量式编码器正交信号的相位关系。在正交编码中，A、B两相信号有90°相位差，正转和反转时两者的相位关系相反。具体到检测A相上升沿的情况：
+
+- 正转时：A相上升沿时刻，B相为低电平
+- 反转时：A相上升沿时刻，B相为高电平
+
+## Arduino示例程序（C/C++）
+
+待补充
 
 ## Micropython示例程序
 
