@@ -17,7 +17,7 @@
 ## 主板参数
 
 - 采用乐鑫原装ESP32-S3R8芯片，板载天线和IPEX天线座；
-- 芯片内置384 KB ROM，520 KB SRAM，内置8M SPIRAM，外挂8M SPI FLASH；
+- 芯片内置384 KB ROM，520 KB SRAM，内置8M PSRAM，外挂8M SPI FLASH；
 - Type-C接口，usb直通ESP32S3芯片；
 - 输入电压：typeC 5V 1A，背面预留3.7V电池焊点，板载充电电路；
 - 背面预留PH2.0接口可以作为外设通信接口或者供电；
@@ -102,35 +102,35 @@ Arduino IDE上传方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/e
     | ------------------ | ------------------- |
     | `camera.JPEG`      | JPEG 格式（默认值） |
     | `camera.YUV422`    | YUV422              |
-    | `camera.GRAYSCALE` | GRAYSCALE           |
     | `camera.RGB565`    | RGB565              |
+    | `camera.GRAYSCALE` | 灰度                |
 
   - `framesize`, 分辨率（帧尺寸）
 
     | 分辨率（帧尺寸）       | 说明              |
     | ---------------------- | ----------------- |
-    | `camera.FRAME_96X96`   | 96X96             |
-    | `camera.FRAME_QQVGA`   | 160x120           |
-    | `camera.FRAME_QCIF`    | 176x144           |
-    | `camera.FRAME_HQVGA`   | 240x160           |
-    | `camera.FRAME_240X240` | 240X240           |
-    | `camera.FRAME_QVGA`    | 320x240           |
-    | `camera.FRAME_CIF`     | 352x288           |
-    | `camera.FRAME_HVGA`    | 480x320           |
-    | `camera.FRAME_VGA`     | 640x480（默认值） |
-    | `camera.FRAME_SVGA`    | 800x600           |
-    | `camera.FRAME_XGA`     | 1024x768          |
-    | `camera.FRAME_HD`      | 1280x720          |
-    | `camera.FRAME_SXGA`    | 1280x1024         |
-    | `camera.FRAME_UXGA`    | 1900x1200         |
-    | `camera.FRAME_FHD`     | 1920x1080         |
-    | `camera.FRAME_P_HD`    | 2560x1440         |
-    | `camera.FRAME_P_3MP`   | 2048x1536         |
-    | `camera.FRAME_QXGA`    | 2048x1536         |
-    | `camera.FRAME_QHD`     | 2560x1440         |
-    | `camera.FRAME_WQXGA`   | 2560x1600         |
-    | `camera.FRAME_P_FHD`   | 2560x1600         |
-    | `camera.FRAME_QSXGA`   | 2560x2048         |
+    | `camera.FRAME_96X96`   | 96×96             |
+    | `camera.FRAME_QQVGA`   | 160×120           |
+    | `camera.FRAME_QCIF`    | 176×144           |
+    | `camera.FRAME_HQVGA`   | 240×160           |
+    | `camera.FRAME_240X240` | 240×240           |
+    | `camera.FRAME_QVGA`    | 320×240           |
+    | `camera.FRAME_CIF`     | 352×288           |
+    | `camera.FRAME_HVGA`    | 480×320           |
+    | `camera.FRAME_VGA`     | 640×480（默认值） |
+    | `camera.FRAME_SVGA`    | 800×600           |
+    | `camera.FRAME_XGA`     | 1024×768          |
+    | `camera.FRAME_HD`      | 1280×720          |
+    | `camera.FRAME_SXGA`    | 1280×1024         |
+    | `camera.FRAME_UXGA`    | 1900×1200         |
+    | `camera.FRAME_FHD`     | 1920×1080         |
+    | `camera.FRAME_P_HD`    | 2560×1440         |
+    | `camera.FRAME_P_3MP`   | 2048×1536         |
+    | `camera.FRAME_QXGA`    | 2048×1536         |
+    | `camera.FRAME_QHD`     | 2560×1440         |
+    | `camera.FRAME_WQXGA`   | 2560×1600         |
+    | `camera.FRAME_P_FHD`   | 2560×1600         |
+    | `camera.FRAME_QSXGA`   | 2560×2048         |
 
   - `quality`，JPEG 质量，默认值：12，可选范围：0~63
 
@@ -192,7 +192,7 @@ Arduino IDE上传方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/e
 
 #### `camera.quality(quality)`
 
-重新设置 JPEG 质量，可选范围：0~63
+重新设置 JPEG 质量，可选范围：0~63（低质量）。
 
 #### `camera.flip(enable)`
 
@@ -221,19 +221,19 @@ Arduino IDE上传方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/e
 | 特效                       | 说明           |
 | -------------------------- | -------------- |
 | `camera.EFFECT_NONE`       | 原图（默认值） |
-| `camera.EFFECT_NEGATIVE`   |                |
-| `camera.EFFECT_GRAYSCALE`  |                |
-| `camera.EFFECT_SEPIA`      |                |
-| `camera.EFFECT_RED`        |                |
-| `camera.EFFECT_GREEN`      |                |
-| `camera.EFFECT_BLUE`       |                |
-| `camera.EFFECT_ANTIQUE`    |                |
-| `camera.EFFECT_SKETCH`     |                |
-| `camera.EFFECT_SOLARIZE`   |                |
-| `camera.EFFECT_POSTERIZE`  |                |
-| `camera.EFFECT_WHITEBOARD` |                |
-| `camera.EFFECT_BLACKBOARD` |                |
-| `camera.EFFECT_AQUA`       |                |
+| `camera.EFFECT_NEGATIVE`   | 负片           |
+| `camera.EFFECT_GRAYSCALE`  | 灰度           |
+| `camera.EFFECT_SEPIA`      | 棕褐色         |
+| `camera.EFFECT_RED`        | 红色           |
+| `camera.EFFECT_GREEN`      | 绿色           |
+| `camera.EFFECT_BLUE`       | 蓝色           |
+| `camera.EFFECT_ANTIQUE`    | 复古           |
+| `camera.EFFECT_SKETCH`     | 素描           |
+| `camera.EFFECT_SOLARIZE`   | 日光           |
+| `camera.EFFECT_POSTERIZE`  | 海报           |
+| `camera.EFFECT_WHITEBOARD` | 白板           |
+| `camera.EFFECT_BLACKBOARD` | 黑板           |
+| `camera.EFFECT_AQUA`       | 水晶           |
 
 #### `camera.whitebalance(whitebalance)`
 
@@ -241,10 +241,10 @@ Arduino IDE上传方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/e
 
 | 白平衡             | 说明           |
 | ------------------ | -------------- |
-| `camera.WB_NONE`   | 原图（默认值） |
+| `camera.WB_NONE`   | 原始（默认值） |
 | `camera.WB_SUNNY`  | 晴天           |
 | `camera.WB_CLOUDY` | 阴天           |
 | `camera.WB_OFFICE` | 办公室         |
 | `camera.WB_HOME`   | 家中           |
 
-更详细的案例请购买后咨询客服。
+#### 更详细的案例请购买后咨询客服。
