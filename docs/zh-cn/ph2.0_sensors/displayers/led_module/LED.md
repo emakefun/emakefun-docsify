@@ -49,6 +49,6 @@ void loop() {
 }
 ```
 
-接入Arduino Uno主板上的13号引脚将控制LED灯 1S亮起 ，1S熄灭。
+接入Arduino Uno R3主板上的13号引脚将控制LED灯 1S亮起 ，1S熄灭。
 
 
