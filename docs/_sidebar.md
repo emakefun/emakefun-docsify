@@ -64,13 +64,13 @@
     - [单路灰度循迹模块](zh-cn/ph2.0_sensors/sensors/single_channel_grayscale_tracking/single_channel_grayscale_tracking.md)
     - [五路灰度循迹模块](zh-cn/ph2.0_sensors/sensors/five_channel_grayscale_tracking/five_channel_grayscale_tracking.md)
     - [HX711称重模块](/zh-cn/)
-    - [LTR553]()
+    - [LTR553](/zh-cn/)
     - [VL53L1X FOV激光测距](zh-cn/ph2.0_sensors/sensors/laser_ranging_sensor/laser_ranging_sensor.md)
     - [PM2.5粉尘传感器](zh-cn/ph2.0_sensors/sensors/PM2.5_dust_sensor/PM2.5_dust_sensor.md)
 
   - 执行器
-    - [有源蜂鸣器模块](zh-cn/ph2.0_sensors/actuators/buzzerModule/buzzerModel.md)
-    - [无源蜂鸣器模块](zh-cn/ph2.0_sensors/actuators/passiveBuzzerModule/passiveBuzzerModel.md)
+    - [有源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/active_buzzer/active_buzzer_zh-cn.md)
+    - [无源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/passive_buzzer/passive_buzzer_zh-cn.md)
     - [空心杯610电机风扇](zh-cn/ph2.0_sensors/motorModule2/motorModelV2.md)
     - [SA8302步进电机模块](/zh-cn/ph2.0_sensors/actuators/SA8302/SA8302.md)
     - [R300C电机风扇](zh-cn/ph2.0_sensors/actuators/highPowerMotorModule/highPowerMotorModule.md)
@@ -85,7 +85,7 @@
     - [MD40 四路编码驱动模块](zh-cn/ph2.0_sensors/actuators/md40/md40.md)
     - [小型雾化器](/zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer.md)
     - [MOS管驱动模块](zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module.md)
-    - [串行总线舵机驱动板]()
+    - [串行总线舵机驱动板](/zh-cn/)
 
   - 显示器
     - [LED灯](zh-cn/ph2.0_sensors/displayers/led_module/LED.md)
