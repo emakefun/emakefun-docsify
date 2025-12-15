@@ -163,7 +163,7 @@ const uint8_t kEncoderPinB = 17;  // 编码器B相信号输入引脚
 volatile int32_t g_encoder_count = 0;
 
 // 中断服务函数 - 处理A相信号上升沿，当A相信号出现上升沿时，会执行此函数
-void handleEncoderInterrupt() {
+void HandleEncoderInterrupt() {
   // 读取B相信号电平并判断方向
   if (digitalRead(kEncoderPinB) == LOW) {
     // B相为低电平，正转方向，计数增加
@@ -183,7 +183,7 @@ void setup() {
   pinMode(kEncoderPinB, INPUT_PULLUP);
 
   // 设置中断，检测A相信号的上升沿
-  attachInterrupt(digitalPinToInterrupt(kEncoderPinA), handleEncoderInterrupt, RISING);
+  attachInterrupt(digitalPinToInterrupt(kEncoderPinA), HandleEncoderInterrupt, RISING);
 
   Serial.println("开始读取脉冲...");
 }
@@ -195,13 +195,13 @@ void loop() {
   Serial.print(g_encoder_count * 360.0 / 12);
   Serial.println(" 度");
 
-  delay(1000);
+  delay(500);
 }
 ```
 
 #### 程序功能说明
 
-此示例程序演示了如何读取增量式编码器的脉冲信号，并通过串口监视器显示脉冲计数值。程序使用中断方式检测编码器A相信号的变化，根据B相信号的状态判断旋转方向，实现正转计数增加、反转计数减少。
+此示例程序演示了如何读取增量式编码器的脉冲信号，并通过串口监视器显示脉冲计数值以及编码器转动角度。程序使用中断方式检测编码器A相信号的变化，根据B相信号的状态判断旋转方向，实现正转计数增加、反转计数减少。
 
 #### 程序运行说明
 
@@ -213,7 +213,7 @@ void loop() {
 
 逆时针转动编码器，脉冲计数和转动角度减少。
 
-**注意：脉冲计数和转动角度的正负仅代表转动方向。**
+**注意：脉冲计数和转动角度的正负仅代表转动方向，正数代表正转，负数代表反转。**
 
 #### 程序原理
 
