@@ -120,6 +120,7 @@
     - [TTS20 语音合成模块](zh-cn/ph2.0_sensors/smart_module/tts20_module/tts20_module.md)
     - [TTS语音合成V2.1](zh-cn/ph2.0_sensors/smart_module/tts_module/text_to_speech_synthesizer.md)
     - [TTS语音合成V3.0](/zh-cn/gallery.md)
+    - [SAM2695 MIDI音源模块](zh-cn/ph2.0_sensors/smart_module/sam2695_midi/sam2695_midi.md)
     - [I2C-IO扩展模块](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/gpio_expansion_board.md)
     - [I2C级联扩展器](/zh-cn/)
     - [RFID-I2C模块](/zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/rfid_mfrc522.md)
