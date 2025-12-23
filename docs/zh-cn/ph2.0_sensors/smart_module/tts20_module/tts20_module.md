@@ -14,9 +14,7 @@ TTS20语音合成模块基于SNR9816高性能语音合成处理器芯片开发�
 
 ## 原理图
 
-![原理图](picture/schematic_diagram.png)
-
-<a href="zh-cn/ph2.0_sensors/smart_module/tts20_module/TTS20-MCU&SKP.pdf" target="_blank">点击此处查看原理图</a>
+<a href="zh-cn/ph2.0_sensors/smart_module/tts20_module/tts20_mcu&skp.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
@@ -30,12 +28,12 @@ TTS20语音合成模块基于SNR9816高性能语音合成处理器芯片开发�
 
 - 尺 寸：38.4*30.4mm，兼容乐高积木和M4螺丝固定孔
 
-| 引脚名称  | 描述         |
-| -------- | ------------ |
-| G        | GND地线       |
-| V        | 5v电源引脚    |
-| SDA      | I2C数据引脚   |
-| SCL      | I2C时钟引脚   |
+| 引脚名称  | 描述        |
+| -------- | ----------- |
+| G        | GND地线      |
+| V        | 5v电源引脚   |
+| SDA      | I2C数据引脚  |
+| SCL      | I2C时钟引脚  |
 
 ## 机械尺寸图
 
