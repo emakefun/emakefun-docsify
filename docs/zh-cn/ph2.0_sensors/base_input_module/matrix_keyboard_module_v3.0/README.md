@@ -1,12 +1,10 @@
 # 矩阵键盘模块V3.0
 
-## 实物图
-
-![实物图](picture/01.jpg)
+![矩阵键盘](picture/matrix_keyboard.png)
 
 ## 概述
 
-触摸键盘模块是通过 <a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/16键触摸键盘_VK36N16I规格书_V12.pdf" target="_blank">VK36N16I</a> 芯片驱动，共16个触摸键。VK36N16I芯片是一款使用电容感应式原理设计的触摸芯片,可用来检测外部触摸按键上人手的触摸动作。该系列的芯片具有较高的集成度，仅需极少的外部组件便可实现触摸按键的检测。模块使用IIC通讯，可方便与外部 MCU 之间的通讯，实现设备安装及触摸引脚监测目的。
+触摸键盘模块是通过 <a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/VK36N16I_datasheet.pdf" target="_blank">VK36N16I</a> 芯片驱动，共16个触摸键。VK36N16I芯片是一款使用电容感应式原理设计的触摸芯片，可用来检测外部触摸按键上人手的触摸动作。该系列的芯片具有较高的集成度，仅需极少的外部组件便可实现触摸按键的检测。模块使用IIC通讯，可方便与外部 MCU 之间的通讯，实现检测触摸引脚是否被触摸的目的。
 
 ## 原理图
 
@@ -15,7 +13,7 @@
 ## 模块参数
 
 - 供电电压:3.3V ~ 5V
-- 两线串行接口
+- 协议：I2C 地址 0x65
 - 连接方式：PH2.0 4PIN防反接线
 - 模块尺寸:56*70mm
 - 安装方式:M4螺钉兼容乐高插孔固定
@@ -24,8 +22,8 @@
 | G      | GND地线|
 | :----- | :---: |
 | V    | 3~5.5V |
-| SCL   | 时钟引脚|
-| SDA   | 数据引脚|
+| SCL   | I2C时钟引脚 |
+| SDA   | I2C数据引脚 |
 
 ## 模块尺寸
 
@@ -52,13 +50,13 @@
 
 [点击此处查看API说明文档](https://emakefun-arduino-library.github.io/emakefun_matrix_keyboard_v3/class_matrix_keyboard.html)
 
-#### Arduino示例程序
+#### Arduino IDE的示例程序
 
-[点击此处查看示例程序](https://emakefun-arduino-library.github.io/emakefun_matrix_keyboard_v3/get_touched_key_8ino-example.html)
+[点击此处查看Uno、Esp32 Arduino IDE示例程序](https://emakefun-arduino-library.github.io/emakefun_matrix_keyboard_v3/get_touched_key_8ino-example.html)
 
 #### Mixly示例程序
 
- 用Mixly2.0通过云端导入PH2.0 Sensors库，导入成功后，点击EmakefunSensors库，选择基础输入模块，找到
+ [Mixly2.0云端导入PH2.0 Sensors库](/zh-cn/software/mixly/mixly)，导入成功后，点击EmakefunSensors库，选择基础输入模块，找到
 
 矩阵键盘V3.0块，如下图：
 
@@ -70,7 +68,11 @@
 
 通过连接线连接矩阵键盘的I2C接口，将程序下载到Arduino主板，触摸键盘Arduino串口打印相对应的键盘值。
 
-<a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/mixly_example.zip" download>点击下载mixly案例</a>
+<a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/matrix_keyboard_v3_mixly_example.zip" download>点击下载mixly uno/ep32案例</a>
+
+#### mind+示例程序
+
+mind+ 软件arduino uno、esp32库为同一个， <a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/matrix_keyboard_v3_mind_plus.zip" download>点击下载mind+案例</a>
 
 ### MicroPython
 
@@ -96,7 +98,7 @@
 
 | 支持开发板系列 |
 | --- |
-| Microbit |
+| Microbit V2 |
 
 #### MakeCode扩展包
 
@@ -114,4 +116,4 @@ https://github.com/emakefun-makecode-extensions/emakefun_matrix_keyboard_v3
 
 **请注意，由于该示例程序中有使用点阵屏显示块，然而Microbit的点阵屏显示块会有500毫秒的阻塞，所以在显示过程中按下新的按键不会马上显示新的值，会有不太灵敏的效果，但是这并不是由矩阵键盘硬件或者软件引起的**
 
-如果将点阵屏显示换成串口输出显示，效果会好很多，[点击查看按键串口显示程序](https://makecode.microbit.org/_54m4wjYdUX6e)
+如果将点阵屏显示换成串口输出显示，效果会好很多，[点击查看串口打印矩阵键盘值额程序](https://makecode.microbit.org/_54m4wjYdUX6e)
