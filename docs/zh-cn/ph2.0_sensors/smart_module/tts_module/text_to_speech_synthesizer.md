@@ -2,7 +2,7 @@
 
 ## 实物图
 
-![实物图](picture/17583e3722a3da5fb675f0b799d5564.jpg)
+![实物图](picture/tts.jpg)
 
 ## 概述
 
@@ -18,16 +18,16 @@
 | UTF16LE |
 | UTF8 |
 
-<a href="zh-cn/ph2.0_sensors/smart_module/tts_module/ttsDataSheet.pdf" target="_blank">点击查看芯片手册</a>
+<a href="zh-cn/ph2.0_sensors/smart_module/tts_module/tts_data_sheet.pdf" target="_blank">点击查看芯片手册</a>
 
 ## 模块参数
 
-| 引脚名称 | 描述 | Arduino Uno
-| --- | --- | --- |
-| G | GND | |
-| V | 5V电源| |
-| SDA | I2C SDA引脚 | A4 |
-| SCL | I2C SCL引脚 | A5 |
+| 引脚 | 描述          | Arduino Uno  |
+| ---- | ------------ | ------------ |
+| G    | GND          |              |
+| V    | 5V电源       |              |
+| SDA  | I2C SDA引脚  | A4           |
+| SCL  | I2C SCL引脚  | A5           |
 
 - 供电电压：5V，**注意：供电电压必须是5V**
 - 连接方式：PH2.0 4PIN防反接线
@@ -36,7 +36,7 @@
 
 ## 机械尺寸图
 
-![机械尺寸图](picture/tts_assembly.png)
+![机械尺寸图](picture/dimension_drawing.png)
 
 ## 合成文本播放详细参数设置
 
