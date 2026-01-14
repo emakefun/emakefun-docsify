@@ -113,7 +113,7 @@ TODO
 | Arduino Mega 2560 |
 | ESP32 |
 
-- Arduino库和示例程序：<a href="zh-cn/ph2.0_sensors/smart_module/speech_recognizer/emakefun_speech_recognizer-latest.zip" download>点击此处链接下载</a>
+- Arduino库和示例程序：<a href="https://github.com/emakefun-arduino-library/emakefun_speech_recognizer/archive/refs/tags/latest.zip" download>点击此处链接下载</a>
 
 - 主类和接口说明：[点击此处链接查看](https://emakefun-arduino-library.github.io/emakefun_speech_recognizer/classemakefun_1_1_speech_recognizer.html)
 
