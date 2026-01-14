@@ -2,9 +2,9 @@
 
 ## 概述
 
-![实物图](picture/nl-esp32-s3-devkitc.jpg)
+![实物图](picture/nl_esp32_s3_devkitc.png)
 
-​	NL-ESP32-S3-DevKitC开发板是基于乐鑫科技的[ESP32-S3-WROOM-1-N16N8模组](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_cn.pdf)开发的引脚功能兼容乐鑫官方[ESP32-S3-DevKitC-1开发板](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s3/esp32-s3-devkitc-1/index.html)。本开发板最大特点是采用一颗USB HUB芯片（CH334P），直连ESP32S3 usb口（19D-，20D+），同时也连接到USB转串口芯片（CH343P）的usb接口上，通过CH343P在连接到ESP32S3 UART0(44RX，43TX)，这样只需要一个TypeC接口即可实现下载和调试同时进行。
+​ NL-ESP32-S3-DevKitC开发板是基于乐鑫科技的[ESP32-S3-WROOM-1-N16N8模组](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_cn.pdf)开发的引脚功能兼容乐鑫官方[ESP32-S3-DevKitC-1开发板](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s3/esp32-s3-devkitc-1/index.html)。本开发板最大特点是采用一颗USB HUB芯片（CH334P），直连ESP32S3 usb口（19D-，20D+），同时也连接到USB转串口芯片（CH343P）的usb接口上，通过CH343P在连接到ESP32S3 UART0(44RX，43TX)，这样只需要一个TypeC接口即可实现下载和调试同时进行。
 
 ### 模组参数
 
@@ -42,8 +42,6 @@
 
 ![pinout](picture/esp32-s3-devkitc_pinout.png)
 
-
-
 下表显示了哪些管脚最适合用作输入和输出，哪些管脚需要谨慎使用。
 
 | 端口名字 | 输入      | 输出 | 备注信息                              |
@@ -62,7 +60,7 @@
 - 注意0号引脚外接设备的电平，防止主板进入下载模式而无法正常工作。
 - RST是主控芯片的引脚。它是高电平的时候（3.3V）ESP32S3才可以正常工作，如果接地使主控芯片不能启动。这意味着您可以使用连接到按钮的该管脚来重新启动ESP32S3。
 
-###  <a href="zh-cn/esp32/nl-esp32-s3-devkitc/NL-ESP32-S3-DevKitC_sch.pdf" target="_blank">下载原理图</a>
+### <a href="zh-cn/esp32/nl-esp32-s3-devkitc/NL-ESP32-S3-DevKitC_sch.pdf" target="_blank">下载原理图</a>
 
 ![schematic diagram](./picture/esp32-s3-devkitc_sch.png)
 
@@ -80,7 +78,7 @@
 
 请参考：[ESP32系列上传程序方法](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
 
-开发板->选择**ESP32S3 Dev Module** 
+开发板->选择**ESP32S3 Dev Module**
 
 Flash Size-> **16M**
 
