@@ -35,8 +35,9 @@
 
   - 传感器
     - [声音传感器](zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor.md)
-    - [DHT11温湿度](zh-cn/ph2.0_sensors/sensors/temperature_humidity_sensor/temperature_humidity_sensor.md)
-    - [AT20温湿度](/zh-cn/gallery.md)
+    - [DHT11温湿度](/zh-cn/ph2.0_sensors/sensors/dht11/dht11_zh-cn.md)
+    - [DHT22温湿度](/zh-cn/ph2.0_sensors/sensors/dht22/dht22_zh-cn.md)
+    - [AHT20温湿度](/zh-cn/ph2.0_sensors/sensors/aht20/aht20_zh-cn.md)
     - [光敏传感器](/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor.md)
     - [NTC热敏传感器](/zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor.md)
     - [LM35温度传感器](zh-cn/ph2.0_sensors/sensors/lm35/lm35.md)
@@ -71,21 +72,20 @@
   - 执行器
     - [有源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/active_buzzer/active_buzzer_zh-cn.md)
     - [无源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/passive_buzzer/passive_buzzer_zh-cn.md)
-    - [空心杯610电机风扇](zh-cn/ph2.0_sensors/motorModule2/motorModelV2.md)
     - [SA8302步进电机模块](/zh-cn/ph2.0_sensors/actuators/SA8302/SA8302.md)
-    - [R300C电机风扇](zh-cn/ph2.0_sensors/actuators/highPowerMotorModule/highPowerMotorModule.md)
+    - [空心杯610电机风扇](/zh-cn/ph2.0_sensors/actuators/610_coreless_motor_fan/610_coreless_motor_fan_zh-cn.md)
+    - [R300C电机风扇](/zh-cn/ph2.0_sensors/actuators/R300C/R300C_zh-cn.md)
     - [继电器模块](zh-cn/ph2.0_sensors/actuators/relayModule/relayModel.md)
     - [激光发射模块](zh-cn/ph2.0_sensors/actuators/laserEmissionModule/laserEmissionModel.md)
     - [振动马达](zh-cn/ph2.0_sensors/actuators/vibrationMotorModule/vibrationMotorModule.md)
     - [8002A音频放大器](zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/8002a_amp_speaker.md)
     - [舵机扩展](/zh-cn/ph2.0_sensors/actuators/servoModel.md)
-    - [单路电机驱动](zh-cn/ph2.0_sensors/actuators/motor_module/motor_module.md)
-    - [双路电机驱动](zh-cn/ph2.0_sensors/actuators/highSpeedMiniMotorDriveBoardModel/highSpeedMiniMotorDriveBoardModel.md)
+    - [MD01单路电机驱动](zh-cn/ph2.0_sensors/actuators/md01/md01_zh-cn.md)
+    - [MD02双路电机驱动](zh-cn/ph2.0_sensors/actuators/md02/md02_zh-cn.md)
     - [DM11两路电机驱动模块](/zh-cn/ph2.0_sensors/actuators/dm11/dm11.md)
-    - [MD40 四路编码驱动模块](zh-cn/ph2.0_sensors/actuators/md40/md40.md)
+    - [MD40四路编码驱动模块](zh-cn/ph2.0_sensors/actuators/md40/md40.md)
     - [小型雾化器](/zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer.md)
     - [MOS管驱动模块](zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module.md)
-    - [串行总线舵机驱动板](/zh-cn/)
 
   - 显示器
     - [LED灯](zh-cn/ph2.0_sensors/displayers/led_module/LED.md)
@@ -97,7 +97,7 @@
     - [MAX7289_8x32点阵屏](zh-cn/ph2.0_sensors/displayers/8x32_dot_matrix/8x32_dot_matrix.md)
     - [交通信号灯](zh-cn/ph2.0_sensors/displayers/trafficlight_module/trafficLights.md)
     - [RGB全彩灯](zh-cn/ph2.0_sensors/displayers/rgb_module/RGB.md)
-    - [WS2812B RGB灯环](zh-cn/ph2.0_sensors/displayers/12-bit_RGB_lamp_ring/RGBRing.md)
+    - [WS2812B RGB灯环](zh-cn/ph2.0_sensors/displayers/ws2812b/ws2812b_zh-cn.md)
     - [中文字库0.96OLED](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED.md)
     - [SWIFT-LCD-13显示屏模块](zh-cn/ph2.0_sensors/displayers/swift_lcd_13/swift_lcd_13.md)
     - [SWIFT-LCD-20显示屏模块](zh-cn/ph2.0_sensors/displayers/swift_lcd_20/swift_lcd_20.md)
@@ -126,7 +126,6 @@
     - [RFID-I2C模块](/zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/rfid_mfrc522.md)
     - [I2S-MEMS麦克风模块](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/i2s_mems_mic.md)
     - [PDM麦克风模块](zh-cn/ph2.0_sensors/smart_module/pdm_mic/pdm_mic.md)
-    <!-- - [ESP32 小智AI聊天机器人](zh-cn/ph2.0_sensors/smart_module/esp32_ai_xiaozhi/esp32_ai_xiaozhi.md) -->
     - [指纹识别模块]()
     - [毫米波雷达模块]()
     - [GPS模块]()
@@ -178,6 +177,8 @@
   - [nl-esp32-s3-devkitc](zh-cn/esp32/nl-esp32-s3-devkitc/README_zh.md)
   - [esp32s3-cam](zh-cn/esp32/esp32s3-cam/README_zh.md)
   - [scratch arcade](https://arcade.blockcode.fun/#/zh-cn/intro)
+  - [AI-VOX3](https://dcnmu33qx4fc.feishu.cn/docx/VXHzdBYH0ohpNAxw2ifc3P2InBe)
+  - [AI-VOX3扩展板](https://dcnmu33qx4fc.feishu.cn/docx/Cf49d141voj8JAxNyTJcW5zTned)
 
 - 树莓派
   - [树莓派传感器扩展板](zh-cn/raspberrypi/raspberrypi_sensor_board/raspberrypi_sensor_board.md)
@@ -189,10 +190,10 @@
   - [机器人驱动板]()
 
 - 外设/配件
-  - [PS2手柄]()
+  - [PS2手柄](zh-cn/peripheral/ps2/ps2.md)
   - [PS3蓝牙手柄](zh-cn/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
   - [gamepad](zh-cn/peripheral/arduino_gamepad/Programmable_controller.md)
-  - [makeymakey]()
   - [编码电机](zh-cn/ph2.0_sensors/actuators/hall_encoder_sensor/hall_encoder_sensor.md)
+  - [舵机](/zh-cn/peripheral/servo/servo.md)
 
 - [关于我们](/zh-cn/about.md)
