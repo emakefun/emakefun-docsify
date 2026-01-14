@@ -96,7 +96,7 @@ TTS20语音合成模块基于SNR9816高性能语音合成处理器芯片开发�
 
 ## Arduino 应用
 
-<a href="https://gh-proxy.com/https://github.com/emakefun-arduino-library/em_tts20/archive/refs/tags/v1.0.0.zip" download>点击此处下载Arduino示例程序</a>
+<a href="https://gh-proxy.com/https://github.com/emakefun-arduino-library/em_tts20/archive/refs/tags/v1.0.1.zip" download>点击此处下载Arduino示例程序</a>
 
 ### Arduino 库使用文档
 
@@ -111,6 +111,10 @@ TTS20语音合成模块基于SNR9816高性能语音合成处理器芯片开发�
 <a href="https://emakefun-arduino-library.github.io/em_tts20/html/zh-CN/play_flow_control_8ino-example.html" target="_blank">播放流程控制</a>
 
 <a href="https://emakefun-arduino-library.github.io/em_tts20/html/zh-CN/play_with_parameters_8ino-example.html" target="_blank">设置播放参数</a>
+
+## LD3320语音识别模块和TTS20语音合成模块的综合示例程序(Arduino)
+
+[点击查看示例程序说明](zh-cn/examples/example_tts20_and_speech_recognizer/example_tts20_and_speech_recognizer.md)
 
 ## MicroPython 示例程序
 
