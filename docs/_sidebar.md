@@ -22,7 +22,7 @@
   - 基础输入模块
     - [按键模块](zh-cn/ph2.0_sensors/base_input_module/button_module/button_module.md)
     - [ADC按键模块](zh-cn/ph2.0_sensors/base_input_module/adc_button_module/adc_button_module.md)
-    - [触摸模块](zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module.md)
+    - [触摸模块](zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module_zh-cn.md)
     - [碰撞开关](zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module.md)
     - [旋转电位器](zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer.md)
     - [滑动变阻器](zh-cn/ph2.0_sensors/base_input_module/slide_potentiometer/slide_potentiometer.md)
