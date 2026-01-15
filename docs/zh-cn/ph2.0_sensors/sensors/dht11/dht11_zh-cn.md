@@ -18,7 +18,7 @@ DHT11数字温湿度传感器是一款含有已校准数字信号输出的温湿
 
 数据格式：8bit湿度整数数据+8bit湿度小数数据+8bit温度整数数据+8bit温度小数数据+8bit校验和数据传送正确时，校验和数据等于 ”湿度高位 + 湿度低位 + 温度高位 + 温度低位“ 所得结果的末8位。
 
-更多原理细节请<a href="zh-cn/ph2.0_sensors/sensors/dht11/DHT11_datesheet.pdf" download>**点击查看DHT11规格书**</a>
+更多原理细节请<a href="zh-cn/ph2.0_sensors/sensors/dht11/DHT11_datesheet.pdf" target="_blank">**点击查看DHT11规格书**</a>
 
 ## 原理图
 
