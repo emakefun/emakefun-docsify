@@ -35,6 +35,8 @@
 
 ![机械尺寸图](picture/keyboard_cad.png)
 
+[**3D文件**](./matrix_keyboard_3D.zip)
+
 ## Arduino 应用
 
 <a href="https://gh-proxy.com/https://github.com/emakefun-arduino-library/emakefun_matrix_keyboard_v3/archive/refs/tags/v1.0.1.zip" download>点击此处下载Arduino示例程序</a>
@@ -69,11 +71,17 @@
 
 通过连接线连接矩阵键盘的I2C接口，将程序下载到Arduino主板，触摸键盘Arduino串口打印相对应的键盘值。
 
-<a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/matrix_keyboard_v3_mixly_example.zip" download>点击下载mixly uno/ep32案例</a>
+[](https://dcnmu33qx4fc.feishu.cn/docx/K7XEdVSw4otBf5xf1JJcF9RsnEc?302from=wiki)<a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/matrix_keyboard_v3_mixly_example.zip" download>点击下载mixly uno/ep32案例</a>
 
-## mind+示例程序
+## Mind+示例程序
 
-mind+ 软件arduino uno、esp32库为同一个， <a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/matrix_keyboard_v3_mind_plus.zip" download>点击下载mind+案例</a>
+mind+ 软件arduino uno、esp32库为同一个，使用时，在用户库输入以下链接：https://gitee.com/emakefun_midplus_lib/matrix_keyboard_v3
+
+导入方法如下：
+
+![matirxKeypadV3Module](https://img.dfrobot.com.cn/wiki/none/2669316b6e6a371674cfd0a5e2244e99)
+
+[点击下载Mind+案例](https://gitee.com/emakefun_midplus_lib/matrix_keyboard_v3/releases/download/v0.0.1/mindplusExample.zip)
 
 ## micro:bit MakeCode示例程序
 
