@@ -129,6 +129,7 @@
     - [指纹识别模块]()
     - [毫米波雷达模块]()
     - [GPS模块]()
+    - [AI语音助手](zh-cn/ph2.0_sensors/smart_module/ai_voice_assistant/ai_voice_assistant.md)
 
 - 电源模块
   - [5V5A电源模块(PM01)](/zh-cn/power_module/PM01/PM01.md)
@@ -195,5 +196,6 @@
   - [gamepad](zh-cn/peripheral/arduino_gamepad/Programmable_controller.md)
   - [编码电机](zh-cn/ph2.0_sensors/actuators/hall_encoder_sensor/hall_encoder_sensor.md)
   - [舵机](/zh-cn/peripheral/servo/servo.md)
+  - [CodexPad-C10](/zh-cn/peripheral/codexpad_c10/codexpad_c10.md)
 
 - [关于我们](/zh-cn/about.md)
