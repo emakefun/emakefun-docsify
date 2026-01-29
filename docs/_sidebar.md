@@ -76,7 +76,7 @@
     - [空心杯610电机风扇](/zh-cn/ph2.0_sensors/actuators/610_coreless_motor_fan/610_coreless_motor_fan_zh-cn.md)
     - [R300C电机风扇](/zh-cn/ph2.0_sensors/actuators/R300C/R300C_zh-cn.md)
     - [继电器模块](zh-cn/ph2.0_sensors/actuators/relayModule/relayModel.md)
-    - [激光发射模块](zh-cn/ph2.0_sensors/actuators/laserEmissionModule/laserEmissionModel.md)
+    - [激光发射模块](/zh-cn/ph2.0_sensors/actuators/laser_emitter/laser_emitter_zh-cn.md)
     - [振动马达](zh-cn/ph2.0_sensors/actuators/vibrationMotorModule/vibrationMotorModule.md)
     - [8002A音频放大器](zh-cn/ph2.0_sensors/actuators/8002a_amp_speaker/8002a_amp_speaker.md)
     - [舵机扩展](/zh-cn/ph2.0_sensors/actuators/servoModel.md)
@@ -85,7 +85,7 @@
     - [DM11两路电机驱动模块](/zh-cn/ph2.0_sensors/actuators/dm11/dm11.md)
     - [MD40四路编码驱动模块](zh-cn/ph2.0_sensors/actuators/md40/md40.md)
     - [小型雾化器](/zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer.md)
-    - [MOS管驱动模块](zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module.md)
+    - [MOS管驱动模块](/zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module_zh-cn.md)
 
   - 显示器
     - [LED灯](zh-cn/ph2.0_sensors/displayers/led_module/LED.md)
