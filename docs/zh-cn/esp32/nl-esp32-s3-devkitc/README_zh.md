@@ -4,7 +4,7 @@
 
 ![实物图](picture/nl_esp32_s3_devkitc.png)
 
-​ NL-ESP32-S3-DevKitC开发板是基于乐鑫科技的[ESP32-S3-WROOM-1-N16N8模组](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_cn.pdf)开发的引脚功能兼容乐鑫官方[ESP32-S3-DevKitC-1开发板](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s3/esp32-s3-devkitc-1/index.html)。本开发板最大特点是采用一颗USB HUB芯片（CH334P），直连ESP32S3 usb口（19D-，20D+），同时也连接到USB转串口芯片（CH343P）的usb接口上，通过CH343P在连接到ESP32S3 UART0(44RX，43TX)，这样只需要一个TypeC接口即可实现下载和调试同时进行。
+ NL-ESP32-S3-DevKitC开发板是基于乐鑫科技的[ESP32-S3-WROOM-1-N16R8模组](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_cn.pdf)开发的引脚功能兼容乐鑫官方[ESP32-S3-DevKitC-1开发板](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s3/esp32-s3-devkitc-1/index.html)。本开发板最大特点是采用一颗USB HUB芯片（CH334P），直连ESP32S3 usb口（19D-，20D+），同时也连接到USB转串口芯片（CH343P）的usb接口上，通过CH343P在连接到ESP32S3 UART0(44RX，43TX)，这样只需要一个TypeC接口即可实现下载和调试同时进行。
 
 ### 模组参数
 
@@ -76,7 +76,7 @@
 
 ## ArduinoIDE下载程序
 
-请参考：[ESP32系列上传程序方法](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
+请参考：[ESP32系列上传程序方法](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)先安装开发环境
 
 开发板->选择**ESP32S3 Dev Module**
 

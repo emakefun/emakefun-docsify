@@ -52,6 +52,33 @@
 | CS/SEL | 10           |
 | DAT    | 12           |
 
+### PS2按键说明
+
+![ps2_mark](./picture/ps2_mark.png)
+
+| PS2按键名字    | PS2X_lib库对应名字     |
+| -------------- | ---------------------- |
+| 上             | PSB_PAD_UP             |
+| 下             | PSB_PAD_DOWN           |
+| 左             | PSB_PAD_LEFT           |
+| 右             | PSB_PAD_RIGHT          |
+| 绿色三角符号   | PSB_GREEN/PSB_TRIANGLE |
+| 蓝色X符号      | PSB_BLUE/PSB_CROSS     |
+| 紫色正方形     | PSB_PINK/PSB_SQUARE    |
+| 红色圆圈       | PSB_RED/PSB_CIRCLE     |
+| L1             | PSB_L1                 |
+| L2             | PSB_L2                 |
+| R1             | PSB_R1                 |
+| R2             | PSB_R2                 |
+| select选择按键 | PSB_SELECT             |
+| start开始按键  | PSB_START              |
+| 左摇杆按下     | PSB_L3                 |
+| 左摇杆X        | PSS_LX                 |
+| 左摇杆Y        | PSS_LY                 |
+| 右摇杆按下     | PSB_R3                 |
+| 右摇杆X        | PSS_RX                 |
+| 右摇杆Y        | PSS_RY                 |
+
 <a href="zh-cn/peripheral/ps2/ArduinoUno_PS2X_Test.zip" download>点击下载Arduino Uno PS2按键测试程序</a>
 
 **测试结果：**
