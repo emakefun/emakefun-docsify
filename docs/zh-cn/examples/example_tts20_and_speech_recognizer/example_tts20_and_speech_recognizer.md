@@ -28,6 +28,10 @@
 | LD3320模块  | I2C(A5,A4)    |
 | TTS20模块   | I2C(A5,A4)    |
 
+### 接线图
+
+![接线图](picture/wiring_diagram.png)
+
 ## 程序下载
 
 点击下方链接下载示例程序，下载后解压用Arduino IDE打开示例文件，主板选择Arduino uno。
