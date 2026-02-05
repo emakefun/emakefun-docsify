@@ -196,5 +196,7 @@
   - [gamepad](zh-cn/peripheral/arduino_gamepad/Programmable_controller.md)
   - [编码电机](zh-cn/ph2.0_sensors/actuators/hall_encoder_sensor/hall_encoder_sensor.md)
   - [舵机](/zh-cn/peripheral/servo/servo.md)
+  - CodexPad
+    - [CodexPad-C10](/zh-cn/peripheral/codexpad/codexpad_c10/codexpad_c10.md)
 
 - [关于我们](/zh-cn/about.md)
