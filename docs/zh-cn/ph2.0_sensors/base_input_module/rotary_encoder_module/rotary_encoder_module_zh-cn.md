@@ -1,10 +1,6 @@
 # 旋转编码器
 
-## 实物图
-
 ![实物图](picture/rotary_encoder_module_assembly.png)
-
-## 概述
 
   编码器是一种将旋转位移转换为一连串数字脉冲信号的旋转式传感器，旋转编码器可通过旋转可以计数正方向和反方向转动过程中输出脉冲的次数，旋转计数不像电位计，这种转动计数是没有限制的。配合旋转编码器上的按键，可以实现某些特定功能。读数系统通常采用差分方式，即将两个波形一样但相位差为180°的不同信号进行比较，以便提高输出信号的质量和稳定性。编码器广泛用于汽车音量、空调调节等应用场景。
 
@@ -12,25 +8,26 @@
 
 ![原理图](picture/rotary_encoder_module_schematic.png)
 
-<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_module_schematic.pdf" target="_blank">点击查看原理图</a>
-
 ## 模块参数
 
 | 引脚名称 |              描述              |
 | :------: | :----------------------------: |
 |    G     |              GND               |
-|    V     |               5V               |
+|    V     |             3 ~ 5V             |
 |    A     |   A端口输出引脚，对应A相输出   |
 |    B     |   B端口输出引脚，对应B相输出   |
 |    D     | D端口输出引脚,对应带的按键输出 |
 
-- 供电电压：5V
+- 供电电压：3 ~ 5V
+- 连接方式：PH2.0 5pin
+- 模块尺寸：38.4x22.4mm
+- 安装方式：M4螺钉兼容乐高插孔
 
-- 连接方式：PH2.0 5PIN防反接线
+## 尺寸图
 
-- 模块尺寸：40x22.5mm
+![rotary_encoder_assembly](./picture/rotary_encoder_assembly.png)
 
-- 安装方式：M4螺钉兼容乐高插孔固定
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_module_3d.zip" download>下载旋转编码器模块3D文件</a>
 
 ## 旋转编码器工作原理
 
@@ -90,6 +87,8 @@
 
 ## Mixly示例程序
 
+![Mixly_demo](./picture/Mixly_demo.png)
+
 <a href="zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_Mixly_demo.zip" download>下载示例程序</a>
 
 ## ESP32 MicroPython示例程序
@@ -106,4 +105,4 @@
 
 <a href="https://makecode.microbit.org/_Aspg3ah3sXL0" target="_blank">动手试一试</a>
 
-将旋转编码器A引脚接MicrobitP1引脚，B引脚接P2引脚，D引脚接P8引脚,通过往一个方向旋转旋转编码器时，Microbit显示屏显示1，当按下按钮往一个方向旋转Microbit显示屏显示2；往逆方向旋转Microbit显示屏显示-1，按下按钮往逆方向旋转Microbit显示屏显示-2，按下松开不旋转Microbit显示屏显示3
+将旋转编码器A引脚接Microbit P1引脚，B引脚接P2引脚，D引脚接P8引脚，通过往一个方向旋转旋转编码器时，Microbit显示屏显示1，当按下按钮往一个方向旋转Microbit显示屏显示2；往逆方向旋转Microbit显示屏显示-1，按下按钮往逆方向旋转Microbit显示屏显示-2，按下松开不旋转Microbit显示屏显示3
