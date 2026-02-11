@@ -21,16 +21,16 @@
 - PH2.0模块
   - 基础输入模块
     - [按键模块](zh-cn/ph2.0_sensors/base_input_module/button_module/button_module.md)
-    - [ADC按键模块](/zh-cn/ph2.0_sensors/base_input_module/adc_button_module/adc_button_module_zh-cn.md)
+    - [ADC按键模块](zh-cn/ph2.0_sensors/base_input_module/adc_button_module/adc_button_module.md)
     - [触摸模块](zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module_zh-cn.md)
-    - [碰撞开关](/zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module_zh-cn.md)
+    - [碰撞开关](zh-cn/ph2.0_sensors/base_input_module/collision_module/collision_module.md)
     - [旋转电位器](zh-cn/ph2.0_sensors/base_input_module/rotary_potentiometer/rotary_potentiometer.md)
-    - [滑动变阻器](zh-cn/ph2.0_sensors/base_input_module/slide_potentiometer/slide_potentiometer_zh-cn.md)
-    - [旋转编码器](/zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_module_zh-cn.md)
+    - [滑动变阻器](zh-cn/ph2.0_sensors/base_input_module/slide_potentiometer/slide_potentiometer.md)
+    - [旋转编码器](zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/rotary_encoder_module.md)
     - [摇杆模块](/zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_module_zh-cn.md)
     - [触摸矩阵键盘V3.0](zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3/matrix_keyboard_module_v3.md)
     - [触摸钢琴V2.0](/zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano.md)
-    - [mini-joystick手柄](/zh-cn/ph2.0_sensors/base_input_module/mini-joystick/mini-joystick_zh-cn.md)
+    - [PH2.0小手柄](/zh-cn/ph2.0_sensors/base_input_module/mini-joystick/mini-joystick_zh-cn.md)
     - [自发电无线开关](/zh-cn/gallery.md)
 
   - 传感器
@@ -108,6 +108,7 @@
     - [NLCS11颜色识别](/zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
     - [QMC5883L电子指南针罗盘模块](zh-cn/ph2.0_sensors/smart_module/compass/compass.md)
     - [DS1302时钟模块](zh-cn/ph2.0_sensors/smart_module/ds1302/ds1302_rtc.md)
+    - [DS1307时钟模块](zh-cn/ph2.0_sensors/smart_module/ds1307/ds1307_rtc.md)
     - [MPU6050六轴陀螺仪](zh-cn/ph2.0_sensors/smart_module/mpu6050/mpu6050.md)
     - [计步传感器](/zh-cn/gallery.md)
     - [GS20手势识别传感器](/zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer.md)
@@ -122,7 +123,7 @@
     - [TTS语音合成V3.0](/zh-cn/gallery.md)
     - [MIDI数字音乐模块](zh-cn/ph2.0_sensors/smart_module/midi/midi.md)
     - [I2C-IO扩展模块](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/gpio_expansion_board.md)
-    - [I2C级联扩展器](/zh-cn/)
+    - [I2C级联扩展器](/zh-cn/ph2.0_sensors/smart_module/i2c_cascade_extender/i2c_cascade_extender.md)
     - [RFID-I2C模块](/zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/rfid_mfrc522.md)
     - [I2S-MEMS麦克风模块](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/i2s_mems_mic.md)
     - [PDM麦克风模块](zh-cn/ph2.0_sensors/smart_module/pdm_mic/pdm_mic.md)
