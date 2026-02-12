@@ -2,7 +2,7 @@
 
 ## 模块实物图
 
-![PM2.5_sensor](picture/PM2.5_sensor.jpg)
+![PM2.5_sensor](picture/pm2.5_sensor.jpg)
 
 ## 概述
 
