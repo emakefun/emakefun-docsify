@@ -35,9 +35,7 @@
 
 ![机械尺寸图](picture/keyboard_cad.png)
 
-
-
-<a href="ph2.0_sensors/base_input_module/matrix_keyboard_module_v3/matrix_keyboard_3D.zip" download>3D文件</a>
+<a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3/matrix_keyboard_3D.zip" download>3D文件</a>
 
 ## Arduino 应用
 
