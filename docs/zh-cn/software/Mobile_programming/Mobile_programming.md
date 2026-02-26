@@ -10,7 +10,7 @@
 
 ### 1.2 软件安装(以安卓手机为例)
 
-1. [点击下载易创APP](./WN_EMakefun.apk)
+1. <a href="zh-cn/software/Mobile_programming/WN_EMakefun.apk" download>点击下载易创APP</a>
 
 2. 下载后用数据线将app拷贝到手机或用QQ传送到手机（微信传送时，在手机上需要将下载后的文件修改文件后缀为.apk）然后点击安装。
    ![2](pictures/2.png)
