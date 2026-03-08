@@ -1,5 +1,7 @@
 # Arduino官方驱动安装
 
+<a href="zh-cn/driver/arduino_official_driver/driver.zip" download>下载Arduino Uno官方驱动程序</a>，
+
 打开解压后的文件，打开**“drivers”**文件夹如果你的电脑是32位系统，就运行dpinst-x86.exe如果是64位系统，就运行dpinst-amd64.exe然后在弹出的对话框中点击“下一步”，即可完成安装，如下图：
 
 ![](picture/1.gif)
@@ -22,4 +24,4 @@
 
 原因：win7及以上版本系统安装驱动需要签名。
 
-3、如果再安装不成功可以尝试使用zadig直接安装cdc，可以参考[ESP32S3 USB驱动最后部分](https://emakefun.github.io/emakefun-docsify/#/zh-cn/driver/esp32_driver/esp32_driver)
+3、如果再安装不成功可以尝试使用zadig直接安装cdc，可以参考[ESP32S3 USB驱动最后部分](zh-cn/driver/esp32_driver/esp32_driver.md)
