@@ -56,6 +56,7 @@
     - [四向倾斜开关](/zh-cn/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor_zh-cn.md)
     - [压力传感器](zh-cn/ph2.0_sensors/sensors/pressure_sensor/pressure_sensor.md)
     - [RGB超声波传感器](zh-cn/ph2.0_sensors/sensors/rus_04/rus_04.md)
+    - [普通超声波传感器](zh-cn/ph2.0_sensors/sensors/us04_us03/us04_us03.md)
     - [红外接收模块](/zh-cn/ph2.0_sensors/sensors/infrared_receiver/infrared_receiver_zh-cn.md.md)
     - [红外避障](/zh-cn/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_zh-cn.md)
     - [红外寻光避障](/zh-cn/gallery.md)
