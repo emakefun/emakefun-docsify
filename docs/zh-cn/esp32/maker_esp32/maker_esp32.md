@@ -88,12 +88,12 @@
 
 电机舵机一起用时，不要用Mixly自带的电机驱动块，需使用操作引脚来控制，因为舵机电机一起使用时，mixly自带的驱动块PWM管道冲突，属于mixly软件库本身的问题。
 
-<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_stepper_test.zip" download>点击下载28BYJ-48步进电机示例程序</a>
+<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_stepper_test.zip" download>点击下载步进电机示例程序</a>
 
-接Stepper1接口为例,接线方式如下表格：
+以28BYJ-48步进电机，接Stepper1接口为例,接线方式如下表格：
 
 | 步进电机线的颜色 | 引脚(主板背面丝印) |
-|:--------:|:----------:|
+|---------- |------------ |
 | 橙色       | A01 (27)   |
 | 粉色       | A02 (13)   |
 | 红色       | VIN        |
@@ -112,12 +112,12 @@
 
 <a href="zh-cn/esp32/maker_esp32/esp32_arduino/motorServotTest.zip" download>点击下载电机舵机综合示例程序</a>
 
-<a href="zh-cn/esp32/maker_esp32/esp32_arduino/stepperTest.zip" download>点击下载28BYJ-48步进电机示例程序</a>
+<a href="zh-cn/esp32/maker_esp32/esp32_arduino/stepperTest.zip" download>点击下载步进电机示例程序</a>
 
-接Stepper1接口为例,接线方式如下表格：
+以28BYJ-48步进电机，接Stepper1接口为例,接线方式如下表格：
 
 | 步进电机线的颜色 | 引脚(主板背面丝印) |
-|:--------:|:----------:|
+|---------- |------------ |
 | 橙色       | A01 (27)   |
 | 粉色       | A02 (13)   |
 | 红色       | VIN        |
