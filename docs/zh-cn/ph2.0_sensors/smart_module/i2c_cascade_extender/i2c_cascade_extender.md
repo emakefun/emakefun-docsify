@@ -221,7 +221,10 @@ void loop(void) {
 
 ### 依赖库安装
 
-安装**Adafruit SSD1306**  by Adafruitby，版本**2.5.16**。
+- 安装**Adafruit SSD1306** by Adafruitby，版本**2.5.16**。
+- 安装**DFRobot_I2C_Multiplexer** by DFRobot，版本**1.0.2**。
+
+安装步骤，以安装**Adafruit SSD1306**  by Adafruitby为例：
 
 1. 启动Arduino IDE
 2. 点击打开库管理
