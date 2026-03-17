@@ -49,6 +49,15 @@ Arduino需要控制探头的发光，需要专门的RGB库支持。
 
 ### Arduino示例程序
 
+示例接线表
+
+| RGB超声波传感器 | Arduino Uno R3主板 |
+| --------- | ---------------- |
+| G         | G                |
+| V         | 5V               |
+| IO        | D6               |
+| RGB       | D5               |
+
 <a href="zh-cn/ph2.0_sensors/sensors/rus_04/RGBUltrasonicModule.zip" download>点击下载Arduino系列示例</a>
 
 <a href="zh-cn/ph2.0_sensors/sensors/rus_04/ESP32_RGBUltrasonicModule.zip" download>点击下载ESP32系列示例</a>
