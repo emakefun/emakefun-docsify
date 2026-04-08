@@ -32,14 +32,14 @@
 
 - 支持的芯片系列：
 
-| 芯片系列      | 是否支持  |
-| ------------ | --------- |
-| ESP32系列    | 是        |
-| ESP32-P系列  | 否        |
-| ESP32-S系列  | 否        |
-| ESP32-C系列  | 否        |
-| ESP32-H系列  | 否        |
-| ESP8266系列  | 否        |
+| 芯片系列      | 是否支持 |
+| --------- | ---- |
+| ESP32系列   | 是    |
+| ESP32-P系列 | 否    |
+| ESP32-S系列 | 否    |
+| ESP32-C系列 | 否    |
+| ESP32-H系列 | 否    |
+| ESP8266系列 | 否    |
 
 **请前往乐鑫官网（链接：<https://www.espressif.com.cn/zh-hans/products/socs>）确认你的开发板或者模组对应的芯片系列，此款手柄不能用于ESP32芯片系列以外的芯片。**
 
@@ -64,6 +64,8 @@
 <a href="zh-cn/peripheral/bluetooth_gamepad_ps3/emakefun_esp32_ps3-2.0.1.zip" download>emakefun_esp32_ps3库安装下载</a>
 
 下在完压缩包后，再在Arduino IED上导入该库：**项目->导入库->添加zip库**，再将上方下载的zip包导入即可。
+
+**注：** **ESP32主板的版本推荐使用3.3.2或3.3.2-cn版本。**
 
 ![导入该库](picture/29.png)
 
@@ -96,13 +98,11 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 3. **单击**一下手柄中间的`单圆键`，手柄的**4个指示灯**会同时**快闪**，这时手柄会自动查询连接ESP32，如果是第一次连接可能要再按一下ESP32的复位键，或多次，不同的主板可能反应速度不一样
 
 4. 连接到ESP32后，ESP32串口会循环打印Connected，这样就代表连接成功，如下所示：
-
    ![打印信息](picture/7.png)
 
 5. 连接成功后1灯会常亮，断线后约10秒会自动关机
 
 6. 可以使用`setPlayer(int player)`函数来控制连接成功后4个指示灯的亮灭。例如：若是想要led1常亮则给参数1，led2常亮则给参数2等等（支持参数1~4）。
-
    ![setPlayer函数](picture/30.png)
 
 #### 5.1.4 按键测试
@@ -116,6 +116,8 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 - 测试手柄所有按键的测试代码：**Arduino IDE -> 文件 -> 示例 -> PS3 Controller Host -> Ps3Demo**
 
 - **注意**，运行这些测试代码，都需要将手柄背部的`蓝牙配对码`输入到`setup`函数中`Ps3.begin("xx:xx:xx:xx:xx:xx")`函数中，如`Ps3.begin("02:00:01:23:45:67");`
+
+- <a href="zh-cn/esp32/maker_esp32/esp32_arduino/esp32PS3ControlTest.zip" download>点击下载PS3使用Arduino IDE控制电机舵机案例</a>
 
 ### 5.2 Mixly
 
@@ -168,7 +170,7 @@ Arduino IDE打开`PS3 Controller Host`的**连接**，示例代码：**Arduino I
 
 #### 5.3.1 安装库
 
-点击此处链接查看<a href="zh-cn/peripheral/bluetooth_gamepad_ps3/mind+库和示例程序.zip" download>Mind+示例程序和库文件下载</a>
+点击此处链接查看<a href="zh-cn/peripheral/bluetooth_gamepad_ps3/mind+库和示例程序.zip" download>Mind+示例程序和Mind+库文件下载</a>
 
 打开Mind+，选择FireBeetle ESP32-E 为主板模式，将ESP32主板与电脑连接。
 
