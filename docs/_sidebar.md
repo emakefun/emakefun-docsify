@@ -192,6 +192,7 @@
   - [机器人驱动板]()
 
 - 外设/配件
+  - [NL-16](/zh-cn/peripheral/nl-16/nl-16_zh-cn.md)
   - [PS2手柄](zh-cn/peripheral/ps2/ps2.md)
   - [PS3蓝牙手柄](zh-cn/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
   - [gamepad](zh-cn/peripheral/arduino_gamepad/Programmable_controller.md)

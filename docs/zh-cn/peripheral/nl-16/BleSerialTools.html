@@ -1,0 +1,1490 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>BLE Serial Debug</title>
+
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/codemirror/5.65.16/codemirror.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/codemirror/5.65.16/theme/idea.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/5.65.16/addon/selection/active-line.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/ansi_up@5.1.0/ansi_up.js"></script>
+
+    <style>
+      :root {
+        --top-height: 63px;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-size: 0.875rem;
+      }
+      #main {
+        height: calc(100% - var(--top-height));
+      }
+      #log-main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      #serial-logs {
+        overflow-y: scroll;
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
+      #serial-logs.ansi {
+        background-color: #000;
+        color: #fff;
+      }
+      #serial-options,
+      #serial-tools {
+        position: relative;
+      }
+      .toggle-button {
+        align-items: center;
+        background: none;
+        border: 0;
+        display: flex;
+        flex: none;
+        font-size: 20px;
+        height: 100%;
+        justify-content: center;
+        width: 20px;
+        z-index: 1;
+        background-color: #f8f9fa;
+      }
+      .toggle-button:hover {
+        background: rgba(228, 231, 242, 0.4);
+      }
+      #serial-tools {
+        height: 100%;
+      }
+      #nav-tabContent {
+        overflow: hidden;
+      }
+      #serial-tools .collapse.show,
+      #nav-quick-send.show {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      #nav-code {
+        height: 100%;
+      }
+      #serial-code-editor .CodeMirror {
+        height: 100%;
+      }
+      .CodeMirror-readonly {
+        background-color: var(--bs-light-rgb);
+        cursor: not-allowed;
+      }
+      .ble-device-name {
+        font-weight: bold;
+        color: #0a58ca;
+      }
+      .upload-progress {
+        font-size: 0.8rem;
+        color: #0d6efd;
+      }
+      .at-log-prefix {
+        color: #6f42c1;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+      <div class="container-fluid d-flex align-items-center">
+        <h1 class="d-flex align-items-center fs-4 text-white mb-0">BLE Serial Debug</h1>
+      </div>
+    </header>
+
+    <div
+      id="main"
+      class="d-flex"
+    >
+      <!-- 中间串口日志 -->
+      <div
+        id="log-main"
+        class="flex-fill px-md-2"
+      >
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-1 flex-shrink-0"
+        >
+          <h1 class="h3">串口日志</h1>
+          <div class="btn-toolbar">
+            <div class="input-group input-group-sm me-2">
+              <span class="input-group-text">分包超时</span>
+              <input
+                type="number"
+                id="serial-timer-out"
+                class="form-control"
+                placeholder="0不分包"
+                value="50"
+                style="width: 100px"
+              />
+            </div>
+            <div class="input-group input-group-sm me-2">
+              <span class="input-group-text">日志类型</span>
+              <select
+                class="form-select"
+                id="serial-log-type"
+                style="width: 120px"
+              >
+                <option value="text">Text</option>
+                <option value="hex">Hex</option>
+                <option value="hex&text">Hex和Text</option>
+                <option value="ansi">彩色Ansi</option>
+              </select>
+            </div>
+            <div class="btn-group">
+              <button
+                class="btn btn-sm btn-outline-secondary"
+                id="serial-auto-scroll"
+              >
+                自动滚动
+              </button>
+              <button
+                class="btn btn-sm btn-outline-secondary"
+                id="serial-clear"
+              >
+                清空
+              </button>
+              <button
+                class="btn btn-sm btn-outline-secondary"
+                id="serial-copy"
+              >
+                复制
+              </button>
+              <button
+                class="btn btn-sm btn-outline-secondary"
+                id="serial-save"
+              >
+                导出
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          id="serial-logs"
+          class="flex-grow-1 border border-2 rounded mb-2"
+        ></div>
+        <div class="flex-shrink-0 mb-2">
+          <textarea
+            class="form-control"
+            rows="3"
+            id="serial-send-content"
+            style="resize: none"
+            placeholder="在此输入要发送的内容,可以是字符串(如:你好,世界!),也可以是HEX(如:49544c4447)"
+          ></textarea>
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-1 flex-shrink-0"
+          >
+            <div class="btn-toolbar">
+              <div class="form-check align-self-center me-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="serial-add-crlf"
+                />
+                <label
+                  class="form-check-label"
+                  for="serial-add-crlf"
+                  >末尾加回车换行</label
+                >
+              </div>
+              <div class="form-check align-self-center me-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="serial-hex-send"
+                />
+                <label
+                  class="form-check-label"
+                  for="serial-hex-send"
+                  >HEX发送</label
+                >
+              </div>
+              <div class="form-check align-self-center me-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="serial-loop-send"
+                />
+                <label
+                  class="form-check-label"
+                  for="serial-loop-send"
+                  >循环发送</label
+                >
+              </div>
+              <div class="input-group input-group-sm">
+                <span class="input-group-text">发送间隔(MS)</span>
+                <input
+                  type="number"
+                  id="serial-loop-send-time"
+                  class="form-control"
+                  min="1"
+                  value="1000"
+                  style="width: 100px"
+                />
+              </div>
+            </div>
+            <button
+              id="serial-send"
+              class="btn btn-primary h-10 px-5"
+            >
+              <i class="bi bi-send"></i> 发送
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+
+      <!-- 右侧工具 -->
+      <div
+        id="serial-tools"
+        class="col-auto m-0 bg-light sidebar"
+      >
+        <button
+          class="toggle-button float-start"
+          title="隐藏/打开边栏"
+        >
+          <i class="bi bi-chevron-compact-right"></i>
+        </button>
+        <div
+          class="collapse show p-1 float-start overflow-hidden"
+          style="width: 428px"
+        >
+          <div class="d-flex mt-2">
+            <button
+              class="btn btn-secondary me-3"
+              id="ble-connect-toggle"
+            >
+              连接BLE设备
+            </button>
+            <button
+              class="btn btn-success flex-grow-1"
+              id="upload-arduino-btn"
+            >
+              <i class="bi bi-cloud-upload"></i> 上传Arduino程序
+            </button>
+          </div>
+          <div
+            id="serial-status"
+            class="mt-2"
+          >
+            <div
+              class="alert alert-info"
+              role="alert"
+            >
+              未连接BLE设备，请先点击「连接BLE设备」
+            </div>
+          </div>
+
+          <nav>
+            <div
+              class="nav nav-tabs"
+              id="nav-tab"
+              role="tablist"
+            >
+              <button
+                class="nav-link active"
+                id="nav-quick-send-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-quick-send"
+                type="button"
+                role="tab"
+              >
+                快捷发送
+              </button>
+              <button
+                class="nav-link"
+                id="nav-options-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-options"
+                type="button"
+                role="tab"
+              >
+                系统选项
+              </button>
+              <button
+                class="nav-link"
+                id="nav-code-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-code"
+                type="button"
+                role="tab"
+              >
+                代码脚本
+              </button>
+            </div>
+          </nav>
+          <div
+            class="tab-content pt-2 flex-fill"
+            id="nav-tabContent"
+          >
+            <div
+              class="tab-pane fade show active"
+              id="nav-quick-send"
+              role="tabpanel"
+            >
+              <div class="btn-toolbar">
+                <div class="flex-grow-1 input-group input-group-sm me-2">
+                  <span class="input-group-text">选择分组</span>
+                  <select
+                    class="form-select"
+                    id="serial-quick-send"
+                  ></select>
+                </div>
+                <div class="btn-group">
+                  <button
+                    class="btn btn-sm btn-outline-secondary"
+                    id="serial-quick-send-add-group"
+                  >
+                    新增
+                  </button>
+                  <button
+                    class="btn btn-sm btn-outline-secondary"
+                    id="serial-quick-send-rename-group"
+                  >
+                    改名
+                  </button>
+                  <button
+                    class="btn btn-sm btn-outline-secondary"
+                    id="serial-quick-send-remove-group"
+                  >
+                    删除
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex mt-2">
+                <button
+                  id="serial-quick-send-add"
+                  class="btn btn-sm btn-outline-secondary me-5"
+                >
+                  <i class="bi bi-plus-square"></i> 增加一条
+                </button>
+                <button
+                  class="btn btn-sm btn-outline-secondary me-2 flex-grow-1"
+                  id="serial-quick-send-import-btn"
+                >
+                  <i class="bi bi-folder-plus"></i> 导入
+                </button>
+                <input
+                  type="file"
+                  id="serial-quick-send-import"
+                  style="display: none"
+                  accept="application/json"
+                />
+                <button
+                  class="btn btn-sm btn-outline-secondary flex-grow-1"
+                  id="serial-quick-send-export"
+                >
+                  <i class="bi bi-folder-symlink"></i> 导出
+                </button>
+              </div>
+              <div class="mt-2">
+                <div class="d-flex">
+                  <span class="me-2 ms-3">移除</span><span class="flex-grow-1 me-1">发送内容（点击修改，双击改名）</span
+                  ><span class="flex-shrink-0 me-3">显示名称</span>
+                </div>
+              </div>
+              <div
+                id="serial-quick-send-content"
+                class="flex-grow-1 border border-2 p-2 rounded overflow-auto"
+              ></div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="nav-options"
+              role="tabpanel"
+            >
+              <h5>系统配置</h5>
+              <button
+                class="btn btn-sm btn-outline-secondary me-2"
+                id="serial-reset"
+              >
+                <i class="bi bi-arrow-repeat"></i> 重置参数
+              </button>
+              <button
+                class="btn btn-sm btn-outline-secondary me-2"
+                id="serial-export"
+              >
+                <i class="bi bi-folder-symlink"></i> 导出配置
+              </button>
+              <button
+                class="btn btn-sm btn-outline-secondary me-2"
+                id="serial-import"
+              >
+                <i class="bi bi-folder-plus"></i> 导入配置
+              </button>
+              <input
+                type="file"
+                id="serial-import-file"
+                style="display: none"
+                accept="application/json"
+              />
+              <hr />
+              <div class="alert alert-secondary small mt-2">
+                ⚡ 蓝牙透传 (服务: ffe0, 数据特征: ffe1, AT指令特征: ffe2)<br />上传固件需要设备支持STK500协议及AT指令集。
+              </div>
+            </div>
+            <div
+              class="tab-pane d-flex flex-column fade"
+              id="nav-code"
+              role="tabpanel"
+            >
+              <div
+                class="flex-grow-1 overflow-hidden"
+                id="serial-code-editor"
+              >
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  id="serial-code-content"
+                  style="resize: none"
+                  placeholder="在此输入要执行的代码脚本"
+                >
+addEventListener('message', function ({data}) {
+    if(data.type=='uart_receive')
+    {
+        postMessage({type:'log',data:'消息长度:'+data.data.length});
+        postMessage({type:'uart_send',data:data.data});
+    }
+})
+setInterval(function(){
+    postMessage({type:'uart_send_txt',data:'hello world'});
+},1000);</textarea
+                >
+              </div>
+              <div class="mt-2">
+                <input
+                  id="serial-code-select"
+                  type="file"
+                  class="d-none"
+                />
+                <button
+                  class="btn btn-sm btn-outline-secondary me-2"
+                  id="serial-code-load"
+                >
+                  <i class="bi bi-folder2-open"></i> 打开文件
+                </button>
+                <button
+                  id="serial-code-run"
+                  class="btn btn-primary btn-sm float-end"
+                >
+                  <i class="bi bi-play"></i> 运行
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 文件选择器 (上传固件) -->
+    <input
+      type="file"
+      id="hex-file-input"
+      style="display: none"
+      accept=".hex,.ino,.bin"
+    />
+
+    <div
+      class="modal fade"
+      id="model-tip"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title fs-5"
+              id="modal-title"
+            ></h1>
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div
+            class="modal-body"
+            id="modal-message"
+          ></div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              好的
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="model-change-name"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">名称</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label
+                  for="model-new-name"
+                  class="col-form-label"
+                  >请输入新的名字:</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  id="model-new-name"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              取消</button
+            ><button
+              type="button"
+              class="btn btn-primary"
+              id="model-save-name"
+            >
+              保存
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        // ======================= BLE 配置 =======================
+        const SERVICE_UUID = '0000ffe0-0000-1000-8000-00805f9b34fb';
+        const SERIAL_CHAR_UUID = '0000ffe1-0000-1000-8000-00805f9b34fb'; // 数据透传通道 (串口)
+        const AT_CHAR_UUID = '0000ffe2-0000-1000-8000-00805f9b34fb'; // AT指令通道
+
+        let bleDevice = null;
+        let bleSerialChar = null; // ffe1 数据收发
+        let bleAtChar = null; // ffe2 AT指令
+        let bleConnected = false;
+
+        // UI 元素
+        const connectToggleBtn = document.getElementById('ble-connect-toggle');
+        const uploadBtn = document.getElementById('upload-arduino-btn');
+        const statusDiv = document.getElementById('serial-status');
+
+        // 原串口相关全局变量
+        let serialTimer = null;
+        let serialloopSendTimer = null;
+        let serialData = [];
+        let textdecoder = new TextDecoder();
+        let currQuickSend = [];
+        let quickSendList = [];
+        let worker = null;
+
+        // 工具配置
+        let toolOptions = {
+          autoScroll: true,
+          showTime: true,
+          logType: 'text',
+          timeOut: 50,
+          addCRLF: false,
+          hexSend: false,
+          loopSend: false,
+          loopSendTime: 1000,
+          sendContent: '',
+          quickSendIndex: 0,
+        };
+
+        // ========== 默认 AT 指令集 ==========
+        const DEFAULT_AT_COMMANDS = [
+          { name: '测试', content: 'AT' },
+          { name: '打印所有配置', content: 'AT+ALL' },
+          { name: '软件复位蓝牙', content: 'AT+RESET' },
+          { name: '复位Arduino', content: 'AT+TARGE_RESET' },
+          { name: '查看固件版本', content: 'AT+VER' },
+          { name: '配置波特率', content: 'AT+BAUD' },
+          { name: '查看/设置蓝牙名', content: 'AT+NAME=' },
+          { name: '查看/设置MAC', content: 'AT+MAC=' },
+          { name: '设置鉴权', content: 'AT+AUTH=' },
+          { name: '设置密码', content: 'AT+PASS=' },
+          { name: '主从模式', content: 'AT+ROLE=' },
+          { name: '扫描蓝牙设备', content: 'AT+SCAN' },
+          { name: '连接扫描结果', content: 'AT+CONN=' },
+          { name: '连接MAC地址', content: 'AT+CON=' },
+          { name: '自动重连', content: 'AT+AUTOCON=' },
+          { name: '断开连接', content: 'AT+DISCON' },
+          { name: '设置USB/蓝牙模式', content: 'AT+BLEUSB=' },
+          { name: '发射功率', content: 'AT+TXPOWER=' },
+          { name: '最小通信间隔', content: 'AT+MINI_INTERVAL=' },
+          { name: '最大通信间隔', content: 'AT+MAX_INTERVAL=' },
+          { name: '获取服务UUID', content: 'AT+SERVUUID' },
+          { name: '获取特征UUID', content: 'AT+CHARUUID' },
+          { name: '恢复出厂设置', content: 'AT+SETTING=' },
+        ];
+
+        // 判断分组是否为 AT 专用分组 (不显示 HEX 复选框，且强制走 AT 通道)
+        function isAtGroup(group) {
+          return group && group.name === 'BLE-UNO AT指令集';
+        }
+
+        // ========== STK500 协议常量 (固件上传) ==========
+        const Resp_STK_INSYNC = 0x14;
+        const Resp_STK_OK = 0x10;
+        const Cmnd_STK_GET_SYNC = 0x30;
+        const Cmnd_STK_SET_DEVICE = 0x42;
+        const Cmnd_STK_ENTER_PROGMODE = 0x50;
+        const Cmnd_STK_LOAD_ADDRESS = 0x55;
+        const Cmnd_STK_PROG_PAGE = 0x64;
+        const Cmnd_STK_LEAVE_PROGMODE = 0x51;
+        const Sync_CRC_EOP = 0x20;
+        const OK_RESPONSE = [Resp_STK_INSYNC, Resp_STK_OK];
+        let respQueue = [];
+
+        // ========== 辅助函数 ==========
+        function addLogErr(msg) {
+          addSystemMsg(msg, 'danger');
+        }
+        function addSystemMsg(msg, type = 'danger') {
+          let time = toolOptions.showTime ? formatDate(new Date()) + '&nbsp;' : '';
+          const template = `<div><span class="text-${type}">${time} 系统消息</span><br>${escapeHtml(msg)}</div>`;
+          const serialLogs = document.getElementById('serial-logs');
+          let tempNode = document.createElement('div');
+          tempNode.innerHTML = template;
+          serialLogs.appendChild(tempNode);
+          if (toolOptions.autoScroll) serialLogs.scrollTop = serialLogs.scrollHeight;
+        }
+        function escapeHtml(str) {
+          return str.replace(/[&<>]/g, function (m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+          });
+        }
+        function formatDate(now) {
+          const h = now.getHours().toString().padStart(2, '0'),
+            m = now.getMinutes().toString().padStart(2, '0'),
+            s = now.getSeconds().toString().padStart(2, '0'),
+            ms = now.getMilliseconds().toString().padStart(3, '0');
+          return `${h}:${m}:${s}.${ms}`;
+        }
+        function showMsg(msg, title = '提示') {
+          document.getElementById('modal-title').innerHTML = title;
+          document.getElementById('modal-message').innerHTML = msg;
+          new bootstrap.Modal('#model-tip').show();
+        }
+
+        // ---------- AT 指令专用日志显示 (带[AT]前缀) ----------
+        function addAtLog(dataBytes, isReceive = true) {
+          let direction = isReceive ? '←' : '→';
+          let colorClass = isReceive ? 'text-info' : 'text-primary';
+          let prefix = '<span class="at-log-prefix">[AT]</span> ';
+          let newmsg = prefix;
+          if (toolOptions.logType.includes('hex')) {
+            let dataHex = [];
+            for (const d of dataBytes) dataHex.push(('0' + d.toString(16).toUpperCase()).slice(-2));
+            if (toolOptions.logType.includes('&')) newmsg += 'HEX:';
+            newmsg += dataHex.join(' ') + '<br/>' + prefix;
+          }
+          if (toolOptions.logType.includes('text')) {
+            let dataText = textdecoder.decode(Uint8Array.from(dataBytes));
+            if (toolOptions.logType.includes('&')) newmsg += 'TEXT:';
+            newmsg += escapeHtml(dataText);
+          }
+          if (toolOptions.logType.includes('ansi')) {
+            let dataText = textdecoder.decode(Uint8Array.from(dataBytes));
+            newmsg += ansi_up.ansi_to_html(dataText);
+          }
+          let time = toolOptions.showTime ? formatDate(new Date()) + '&nbsp;' : '';
+          const template = `<div><span class="${colorClass}">${time}${direction}</span> ${newmsg}</div>`;
+          const serialLogs = document.getElementById('serial-logs');
+          let tempNode = document.createElement('div');
+          tempNode.innerHTML = template;
+          serialLogs.appendChild(tempNode);
+          if (toolOptions.autoScroll) serialLogs.scrollTop = serialLogs.scrollHeight;
+        }
+
+        // 发送AT消息 (通过AT特征，自动加\r\n，并显示发送日志)
+        async function sendATMessage(message) {
+          if (!bleConnected || !bleAtChar) {
+            addLogErr('AT通道未就绪');
+            return false;
+          }
+          let data = message;
+          if (!data.endsWith('\r\n')) data += '\r\n';
+          const encoded = new TextEncoder().encode(data);
+          let displayStr = message;
+          addAtLog(Array.from(new TextEncoder().encode(displayStr)), false);
+          try {
+            await bleAtChar.writeValueWithResponse(encoded);
+            return true;
+          } catch (e) {
+            addLogErr(`AT发送失败: ${e.message}`);
+            return false;
+          }
+        }
+
+        // AT特征通知回调 (显示回显)
+        function onAtReceive(event) {
+          if (!bleConnected) return;
+          const dataView = event.target.value;
+          const bytes = new Uint8Array(dataView.buffer, dataView.byteOffset, dataView.byteLength);
+          if (bytes.length === 0) return;
+          addAtLog(Array.from(bytes), true);
+        }
+
+        // 等待串口特征返回特定数据 (用于STK500握手)
+        function waitForResponse(characteristic, expectedResp, timeout = 5000) {
+          return new Promise((resolve, reject) => {
+            let timeoutId;
+            const onResponse = (event) => {
+              const dataView = event.target.value;
+              for (let i = 0; i < dataView.byteLength; i++) respQueue.push(dataView.getUint8(i));
+              if (bufferEqual(expectedResp, new Uint8Array(respQueue))) {
+                clearTimeout(timeoutId);
+                characteristic.removeEventListener('characteristicvaluechanged', onResponse);
+                resolve(respQueue);
+              }
+            };
+            timeoutId = setTimeout(() => {
+              characteristic.removeEventListener('characteristicvaluechanged', onResponse);
+              reject(new Error('等待响应超时'));
+            }, timeout);
+            respQueue = [];
+            characteristic.addEventListener('characteristicvaluechanged', onResponse);
+          });
+        }
+
+        function bufferEqual(a, b) {
+          if (a.length !== b.length) return false;
+          for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return false;
+          return true;
+        }
+
+        async function sendSerialAndTestRet(req_data, resp_data) {
+          const waitPromise = waitForResponse(bleSerialChar, new Uint8Array(resp_data));
+          await bleSerialChar.writeValueWithResponse(req_data);
+          await waitPromise;
+          return true;
+        }
+
+        async function setDeviceOptions() {
+          const cmd = new Uint8Array([
+            Cmnd_STK_SET_DEVICE,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            Sync_CRC_EOP,
+          ]);
+          await sendSerialAndTestRet(cmd, OK_RESPONSE);
+        }
+
+        async function loadAddress(addr) {
+          const addr_low = addr & 0xff;
+          const addr_high = (addr >> 8) & 0xff;
+          const cmd = new Uint8Array([Cmnd_STK_LOAD_ADDRESS, addr_low, addr_high, Sync_CRC_EOP]);
+          await sendSerialAndTestRet(cmd, OK_RESPONSE);
+        }
+
+        async function loadPage(writeBytes) {
+          const bytes_low = writeBytes.length & 0xff;
+          const bytes_high = writeBytes.length >> 8;
+          const cmd1 = new Uint8Array([Cmnd_STK_PROG_PAGE, bytes_high, bytes_low, 0x46]);
+          await bleSerialChar.writeValueWithResponse(cmd1);
+          let i = 0;
+          while (i < writeBytes.length) {
+            const chunk = writeBytes.slice(i, i + 60);
+            await bleSerialChar.writeValueWithResponse(new Uint8Array(chunk));
+            i += chunk.length;
+          }
+          const eop = new Uint8Array([Sync_CRC_EOP]);
+          await sendSerialAndTestRet(eop, OK_RESPONSE);
+        }
+
+        async function uploadHex(hexData) {
+          const pageSize = 128;
+          let pageaddr = 0;
+          while (pageaddr < hexData.length) {
+            const useaddr = pageaddr >> 1;
+            await loadAddress(useaddr);
+            const writeBytes = hexData.slice(pageaddr, Math.min(pageaddr + pageSize, hexData.length));
+            await loadPage(writeBytes);
+            pageaddr += writeBytes.length;
+            addSystemMsg(`烧录进度: ${Math.min(100, Math.floor((pageaddr * 100) / hexData.length))}%`, 'primary');
+          }
+        }
+
+        async function performFirmwareUpload(hexBuffer, retry = true) {
+          if (!bleConnected || !bleSerialChar || !bleAtChar) {
+            addLogErr('蓝牙未连接或特征缺失，无法上传');
+            return false;
+          }
+          addSystemMsg('开始固件上传流程...', 'info');
+          try {
+            await sendATMessage('AT+BAUD=4');
+            await new Promise((r) => setTimeout(r, 100));
+            await sendATMessage('AT+TARGE_RESET');
+            await new Promise((r) => setTimeout(r, 100));
+
+            const syncReq = new Uint8Array([Cmnd_STK_GET_SYNC, Sync_CRC_EOP]);
+            const okResp = new Uint8Array(OK_RESPONSE);
+            await sendSerialAndTestRet(syncReq, okResp);
+            await sendSerialAndTestRet(syncReq, okResp);
+            await sendSerialAndTestRet(syncReq, okResp);
+
+            await setDeviceOptions();
+            const enterReq = new Uint8Array([Cmnd_STK_ENTER_PROGMODE, Sync_CRC_EOP]);
+            await sendSerialAndTestRet(enterReq, okResp);
+
+            const hexStr = new TextDecoder().decode(hexBuffer);
+            const parsed = parseIntelHex(hexStr);
+            if (!parsed || !parsed.data) throw new Error('HEX文件解析失败');
+            const programData = parsed.data;
+            addSystemMsg(`HEX解析成功, 数据长度: ${programData.length} 字节`, 'success');
+
+            await uploadHex(programData);
+
+            const leaveReq = new Uint8Array([Cmnd_STK_LEAVE_PROGMODE, Sync_CRC_EOP]);
+            await sendSerialAndTestRet(leaveReq, okResp);
+
+            addSystemMsg('✅ 固件烧录完成！设备已重启', 'success');
+            return true;
+          } catch (err) {
+            if (retry) {
+              return performFirmwareUpload(hexBuffer, false);
+            }
+            addLogErr(`烧录失败: ${err.message}`);
+            return false;
+          }
+        }
+
+        // Intel HEX 解析器
+        function parseIntelHex(data, bufferSize = 8192) {
+          let buf = new Uint8Array(bufferSize);
+          let bufLength = 0,
+            highAddress = 0,
+            lineNum = 0,
+            pos = 0;
+          const SMALLEST_LINE = 11;
+          while (pos + SMALLEST_LINE <= data.length) {
+            if (data.charAt(pos++) !== ':') throw new Error(`Line ${lineNum + 1} 缺少冒号`);
+            lineNum++;
+            const dataLength = parseInt(data.substr(pos, 2), 16);
+            pos += 2;
+            const lowAddress = parseInt(data.substr(pos, 4), 16);
+            pos += 4;
+            const recordType = parseInt(data.substr(pos, 2), 16);
+            pos += 2;
+            const dataField = data.substr(pos, dataLength * 2);
+            const dataFieldBuf = new Uint8Array(dataLength);
+            for (let i = 0; i < dataLength; i++) dataFieldBuf[i] = parseInt(dataField.substr(i * 2, 2), 16);
+            pos += dataLength * 2;
+            const checksum = parseInt(data.substr(pos, 2), 16);
+            pos += 2;
+            let calc = (dataLength + (lowAddress >> 8) + lowAddress + recordType) & 0xff;
+            for (let i = 0; i < dataLength; i++) calc = (calc + dataFieldBuf[i]) & 0xff;
+            if (((0x100 - calc) & 0xff) !== checksum) throw new Error(`校验和错误 line ${lineNum}`);
+            if (recordType === 0) {
+              const absAddr = highAddress + lowAddress;
+              if (absAddr + dataLength >= buf.length) {
+                let tmp = new Uint8Array((absAddr + dataLength) * 2);
+                tmp.set(buf);
+                buf = tmp;
+              }
+              if (absAddr > bufLength) buf.fill(0xff, bufLength, absAddr);
+              buf.set(dataFieldBuf, absAddr);
+              bufLength = Math.max(bufLength, absAddr + dataLength);
+            } else if (recordType === 4) {
+              if (dataLength !== 2 || lowAddress !== 0) throw new Error('无效扩展线性地址');
+              highAddress = parseInt(dataField, 16) << 16;
+            } else if (recordType === 1) {
+              return { data: buf.slice(0, bufLength) };
+            }
+            if (data.charAt(pos) === '\r') pos++;
+            if (data.charAt(pos) === '\n') pos++;
+          }
+          throw new Error('未找到EOF记录');
+        }
+
+        // ========== BLE 连接与数据收发 ==========
+        async function connectBLEDevice(device) {
+          try {
+            const server = await device.gatt.connect();
+            const service = await server.getPrimaryService(SERVICE_UUID);
+            const serialChar = await service.getCharacteristic(SERIAL_CHAR_UUID);
+            const atChar = await service.getCharacteristic(AT_CHAR_UUID);
+            await serialChar.startNotifications();
+            await atChar.startNotifications();
+            serialChar.addEventListener('characteristicvaluechanged', onBLEReceive);
+            atChar.addEventListener('characteristicvaluechanged', onAtReceive);
+            bleSerialChar = serialChar;
+            bleAtChar = atChar;
+            bleDevice = device;
+            bleConnected = true;
+            device.addEventListener('gattserverdisconnected', () => {
+              addSystemMsg(`设备 ${device.name || '未知'} 断开`, 'warning');
+              bleConnected = false;
+              bleSerialChar = null;
+              bleAtChar = null;
+              updateConnectionUI();
+            });
+            updateConnectionUI();
+            addSystemMsg(`成功连接设备: ${device.name || '未命名'}`, 'success');
+          } catch (err) {
+            addLogErr(`连接失败: ${err.message}`);
+            throw err;
+          }
+        }
+
+        async function scanAndConnect() {
+          if (bleConnected) {
+            await disconnectBLE();
+            return;
+          }
+          try {
+            const device = await navigator.bluetooth.requestDevice({
+              filters: [{ services: [SERVICE_UUID] }],
+              optionalServices: [SERVICE_UUID],
+            });
+            await connectBLEDevice(device);
+          } catch (err) {
+            if (err.name !== 'NotFoundError') addLogErr('扫描取消或失败: ' + err.message);
+          }
+        }
+
+        function onBLEReceive(event) {
+          if (!bleConnected) return;
+          const dataView = event.target.value;
+          const bytes = new Uint8Array(dataView.buffer, dataView.byteOffset, dataView.byteLength);
+          dataReceived(Array.from(bytes));
+        }
+
+        function dataReceived(data) {
+          serialData.push(...data);
+          if (toolOptions.timeOut == 0) {
+            if (worker) worker.postMessage({ type: 'uart_receive', data: serialData });
+            addLog(serialData, true);
+            serialData = [];
+            return;
+          }
+          clearTimeout(serialTimer);
+          serialTimer = setTimeout(() => {
+            if (worker) worker.postMessage({ type: 'uart_receive', data: serialData });
+            addLog(serialData, true);
+            serialData = [];
+          }, toolOptions.timeOut);
+        }
+
+        async function writeData(data) {
+          if (!bleConnected || !bleSerialChar) {
+            addLogErr('蓝牙未连接');
+            return false;
+          }
+          let finalData = data;
+          if (toolOptions.addCRLF) finalData = new Uint8Array([...data, 0x0d, 0x0a]);
+          try {
+            await bleSerialChar.writeValueWithResponse(finalData);
+            addLog(finalData, false);
+            return true;
+          } catch (e) {
+            addLogErr(`发送失败: ${e.message}`);
+            return false;
+          }
+        }
+
+        async function sendText(text) {
+          const encoder = new TextEncoder();
+          await writeData(encoder.encode(text));
+        }
+        async function sendHex(hex) {
+          const value = hex.replace(/\s+/g, '');
+          if (!/^[0-9A-Fa-f]+$/.test(value) || value.length % 2 !== 0) {
+            addLogErr('HEX格式错误');
+            return;
+          }
+          let data = [];
+          for (let i = 0; i < value.length; i += 2) data.push(parseInt(value.substring(i, i + 2), 16));
+          await writeData(Uint8Array.from(data));
+        }
+        async function send() {
+          let content = document.getElementById('serial-send-content').value;
+          if (!content) {
+            addLogErr('发送内容为空');
+            return;
+          }
+          if (toolOptions.hexSend) await sendHex(content);
+          else await sendText(content);
+        }
+
+        let ansi_up = new AnsiUp();
+        function addLog(data, isReceive = true) {
+          let classname = isReceive ? 'text-success' : 'text-primary';
+          let form = isReceive ? '←' : '→';
+          let newmsg = '';
+          if (toolOptions.logType.includes('hex')) {
+            let dataHex = [];
+            for (const d of data) dataHex.push(('0' + d.toString(16).toUpperCase()).slice(-2));
+            if (toolOptions.logType.includes('&')) newmsg += 'HEX:';
+            newmsg += dataHex.join(' ') + '<br/>';
+          }
+          if (toolOptions.logType.includes('text')) {
+            let dataText = textdecoder.decode(Uint8Array.from(data));
+            if (toolOptions.logType.includes('&')) newmsg += 'TEXT:';
+            newmsg += escapeHtml(dataText);
+          }
+          if (toolOptions.logType.includes('ansi'))
+            newmsg += ansi_up.ansi_to_html(textdecoder.decode(Uint8Array.from(data)));
+          let time = toolOptions.showTime ? formatDate(new Date()) + '&nbsp;' : '';
+          const template = `<div><span class="${classname}">${time}${form}</span><br>${newmsg}</div>`;
+          const serialLogs = document.getElementById('serial-logs');
+          let tempNode = document.createElement('div');
+          tempNode.innerHTML = template;
+          serialLogs.appendChild(tempNode);
+          if (toolOptions.autoScroll) serialLogs.scrollTop = serialLogs.scrollHeight;
+        }
+
+        function updateConnectionUI() {
+          if (bleConnected && bleDevice) {
+            const devName = bleDevice.name || '未知设备';
+            statusDiv.innerHTML = `<div class="alert alert-success" role="alert">✅ 已连接: <span class="ble-device-name">${escapeHtml(devName)}</span><br>数据特征: ffe1 | AT特征: ffe2</div>`;
+            connectToggleBtn.textContent = '断开BLE设备';
+            connectToggleBtn.classList.remove('btn-primary');
+            connectToggleBtn.classList.add('btn-danger');
+            uploadBtn.disabled = false;
+          } else {
+            statusDiv.innerHTML = `<div class="alert alert-secondary" role="alert">⚡ 未连接BLE设备，请点击「连接BLE设备」扫描并连接。</div>`;
+            connectToggleBtn.textContent = '连接BLE设备';
+            connectToggleBtn.classList.remove('btn-danger');
+            connectToggleBtn.classList.add('btn-primary');
+            uploadBtn.disabled = true;
+          }
+        }
+
+        async function disconnectBLE() {
+          if (bleDevice && bleDevice.gatt.connected) {
+            try {
+              bleDevice.gatt.disconnect();
+            } catch (e) {}
+          }
+          bleSerialChar = null;
+          bleAtChar = null;
+          bleConnected = false;
+          if (serialTimer) clearTimeout(serialTimer);
+          updateConnectionUI();
+          addSystemMsg('蓝牙设备已断开', 'warning');
+        }
+
+        // ========== 快捷发送面板 (AT分组强制无HEX复选框) ==========
+        function loadQuickSendList() {
+          let saved = localStorage.getItem('quickSendList');
+          if (saved) quickSendList = JSON.parse(saved);
+          else quickSendList = [{ name: 'BLE-UNO AT指令集', list: DEFAULT_AT_COMMANDS.map((cmd) => ({ ...cmd })) }];
+          const quickSelect = document.getElementById('serial-quick-send');
+          quickSelect.innerHTML = '';
+          quickSendList.forEach((item, idx) => {
+            let opt = document.createElement('option');
+            opt.innerText = item.name;
+            opt.value = idx;
+            quickSelect.appendChild(opt);
+          });
+          if (quickSendList.length) {
+            quickSelect.value = toolOptions.quickSendIndex || 0;
+            quickSelect.dispatchEvent(new Event('change'));
+          }
+        }
+
+        function refreshQuickSendPanel() {
+          let idx = document.getElementById('serial-quick-send').value;
+          if (!quickSendList[idx]) return;
+          currQuickSend = quickSendList[idx];
+          const isAt = isAtGroup(currQuickSend);
+          const container = document.getElementById('serial-quick-send-content');
+          container.innerHTML = '';
+          currQuickSend.list.forEach((item) => {
+            // AT 分组不显示 HEX 复选框，且强制 hex = false
+            const hexCheckboxHtml = isAt
+              ? ''
+              : `<input class="form-check-input flex-shrink-0 align-self-center" type="checkbox" ${item.hex ? 'checked' : ''}>`;
+            container.innerHTML += `<div class="d-flex p-1 border-bottom quick-item">
+              <button type="button" class="btn btn-sm btn-outline-secondary me-1 quick-remove"><i class="bi bi-x"></i></button>
+              <input class="form-control form-control-sm me-1" placeholder="发送内容,双击改名" value="${escapeHtml(item.content)}">
+              <button class="flex-shrink-0 me-1 align-self-center btn btn-secondary btn-sm quick-send" title="${escapeHtml(item.name)}">${escapeHtml(item.name)}</button>
+              ${hexCheckboxHtml}
+            </div>`;
+          });
+        }
+
+        function saveQuickList() {
+          localStorage.setItem('quickSendList', JSON.stringify(quickSendList));
+        }
+
+        function bindQuickSendEvents() {
+          const container = document.getElementById('serial-quick-send-content');
+          container.addEventListener('click', async (e) => {
+            let curr = e.target;
+            if (curr.tagName !== 'BUTTON') curr = curr.parentNode;
+            if (curr.tagName !== 'BUTTON') return;
+            const parentDiv = curr.closest('.quick-item');
+            if (!parentDiv) return;
+            const index = Array.from(parentDiv.parentNode.children).indexOf(parentDiv);
+            if (curr.classList.contains('quick-remove')) {
+              currQuickSend.list.splice(index, 1);
+              parentDiv.remove();
+              saveQuickList();
+              return;
+            }
+            if (curr.classList.contains('quick-send')) {
+              let item = currQuickSend.list[index];
+              const isAt = isAtGroup(currQuickSend);
+              if (isAt) {
+                // AT 分组：强制文本模式，走 AT 通道
+                await sendATMessage(item.content);
+              } else {
+                // 普通分组：根据 HEX 复选框决定格式，走 SERIAL 通道
+                if (item.hex) {
+                  await sendHex(item.content);
+                } else {
+                  let contentWithCRLF = item.content;
+                  if (!contentWithCRLF.endsWith('\r\n')) contentWithCRLF += '\r\n';
+                  await writeData(new TextEncoder().encode(contentWithCRLF));
+                }
+              }
+            }
+          });
+          container.addEventListener('dblclick', (e) => {
+            let curr = e.target;
+            if (curr.tagName !== 'INPUT' || curr.type !== 'text') return;
+            const parentDiv = curr.closest('.quick-item');
+            if (!parentDiv) return;
+            const index = Array.from(parentDiv.parentNode.children).indexOf(parentDiv);
+            changeName((name) => {
+              currQuickSend.list[index].name = name;
+              refreshQuickSendPanel();
+              saveQuickList();
+            }, currQuickSend.list[index].name);
+          });
+          container.addEventListener('change', (e) => {
+            let curr = e.target;
+            if (curr.tagName !== 'INPUT') return;
+            const parentDiv = curr.closest('.quick-item');
+            if (!parentDiv) return;
+            const index = Array.from(parentDiv.parentNode.children).indexOf(parentDiv);
+            if (curr.type === 'text') currQuickSend.list[index].content = curr.value;
+            if (curr.type === 'checkbox') currQuickSend.list[index].hex = curr.checked;
+            saveQuickList();
+          });
+        }
+
+        function changeName(callback, oldName = '') {
+          document.getElementById('model-new-name').value = oldName;
+          let modal = new bootstrap.Modal('#model-change-name');
+          modal.show();
+          document.getElementById('model-save-name').onclick = () => {
+            callback(document.getElementById('model-new-name').value);
+            modal.hide();
+          };
+        }
+        function handleUploadClick() {
+          if (!bleConnected) {
+            showMsg('请先连接BLE设备');
+            return;
+          }
+          const fileInput = document.getElementById('hex-file-input');
+          fileInput.value = '';
+          fileInput.onchange = async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = async (ev) => {
+              await performFirmwareUpload(ev.target.result);
+            };
+            reader.readAsArrayBuffer(file);
+          };
+          fileInput.click();
+        }
+
+        function bindUI() {
+          connectToggleBtn.addEventListener('click', scanAndConnect);
+          uploadBtn.addEventListener('click', handleUploadClick);
+          document.getElementById('serial-send').addEventListener('click', send);
+          document.getElementById('serial-clear').addEventListener('click', () => {
+            document.getElementById('serial-logs').innerHTML = '';
+          });
+          document.getElementById('serial-auto-scroll').addEventListener('click', function () {
+            let auto = this.innerText !== '自动滚动';
+            this.innerText = auto ? '自动滚动' : '暂停滚动';
+            toolOptions.autoScroll = auto;
+          });
+          document
+            .getElementById('serial-hex-send')
+            .addEventListener('change', (e) => (toolOptions.hexSend = e.target.checked));
+          document
+            .getElementById('serial-add-crlf')
+            .addEventListener('change', (e) => (toolOptions.addCRLF = e.target.checked));
+          document.getElementById('serial-loop-send').addEventListener('change', (e) => {
+            toolOptions.loopSend = e.target.checked;
+            if (e.target.checked) serialloopSendTimer = setInterval(() => send(), toolOptions.loopSendTime);
+            else clearInterval(serialloopSendTimer);
+          });
+          document.getElementById('serial-loop-send-time').addEventListener('change', (e) => {
+            toolOptions.loopSendTime = parseInt(e.target.value);
+            if (toolOptions.loopSend) {
+              clearInterval(serialloopSendTimer);
+              serialloopSendTimer = setInterval(() => send(), toolOptions.loopSendTime);
+            }
+          });
+          document
+            .getElementById('serial-timer-out')
+            .addEventListener('change', (e) => (toolOptions.timeOut = parseInt(e.target.value)));
+          document.getElementById('serial-log-type').addEventListener('change', (e) => {
+            toolOptions.logType = e.target.value;
+            if (e.target.value.includes('ansi')) document.getElementById('serial-logs').classList.add('ansi');
+            else document.getElementById('serial-logs').classList.remove('ansi');
+          });
+          const quickSelect = document.getElementById('serial-quick-send');
+          quickSelect.addEventListener('change', () => {
+            toolOptions.quickSendIndex = quickSelect.value;
+            refreshQuickSendPanel();
+          });
+          document.getElementById('serial-quick-send-add-group').addEventListener('click', () =>
+            changeName((name) => {
+              quickSendList.push({ name, list: [] });
+              saveQuickList();
+              const opt = document.createElement('option');
+              opt.innerText = name;
+              opt.value = quickSendList.length - 1;
+              quickSelect.appendChild(opt);
+              quickSelect.value = quickSelect.options.length - 1;
+              quickSelect.dispatchEvent(new Event('change'));
+            }, '新分组'),
+          );
+          document.getElementById('serial-quick-send-rename-group').addEventListener('click', () => {
+            let idx = quickSelect.value;
+            if (quickSendList[idx])
+              changeName((name) => {
+                quickSendList[idx].name = name;
+                quickSelect.options[idx].innerText = name;
+                saveQuickList();
+              }, quickSendList[idx].name);
+          });
+          document.getElementById('serial-quick-send-remove-group').addEventListener('click', () => {
+            if (quickSendList.length <= 1) {
+              showMsg('至少保留一个分组');
+              return;
+            }
+            if (confirm('删除分组？')) {
+              quickSendList.splice(quickSelect.value, 1);
+              quickSelect.options[quickSelect.value].remove();
+              quickSelect.value = 0;
+              quickSelect.dispatchEvent(new Event('change'));
+              saveQuickList();
+            }
+          });
+          document.getElementById('serial-quick-send-add').addEventListener('click', () => {
+            if (currQuickSend) {
+              currQuickSend.list.push({ name: '新指令', content: '', hex: false });
+              refreshQuickSendPanel();
+              saveQuickList();
+            }
+          });
+          document.getElementById('serial-quick-send-export').addEventListener('click', () => {
+            if (currQuickSend) {
+              let blob = new Blob([JSON.stringify(currQuickSend.list)], { type: 'application/json' });
+              let a = document.createElement('a');
+              a.href = URL.createObjectURL(blob);
+              a.download = currQuickSend.name + '.json';
+              a.click();
+              URL.revokeObjectURL(a.href);
+            }
+          });
+          document
+            .getElementById('serial-quick-send-import-btn')
+            .addEventListener('click', () => document.getElementById('serial-quick-send-import').click());
+          document.getElementById('serial-quick-send-import').addEventListener('change', (e) => {
+            let file = e.target.files[0];
+            if (!file) return;
+            let reader = new FileReader();
+            reader.onload = (ev) => {
+              try {
+                let list = JSON.parse(ev.target.result);
+                currQuickSend.list.push(...list);
+                refreshQuickSendPanel();
+                saveQuickList();
+              } catch (ex) {
+                showMsg('导入失败');
+              }
+            };
+            reader.readAsText(file);
+            e.target.value = '';
+          });
+          document.getElementById('serial-reset').addEventListener('click', () => {
+            if (confirm('重置所有参数？')) {
+              localStorage.clear();
+              location.reload();
+            }
+          });
+          document.getElementById('serial-export').addEventListener('click', () => {
+            let data = {
+              toolOptions: localStorage.getItem('toolOptions'),
+              quickSendList: localStorage.getItem('quickSendList'),
+              code: localStorage.getItem('code'),
+            };
+            let blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+            let a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'ble-serial-config.json';
+            a.click();
+            URL.revokeObjectURL(a.href);
+          });
+          document
+            .getElementById('serial-import')
+            .addEventListener('click', () => document.getElementById('serial-import-file').click());
+          document.getElementById('serial-import-file').addEventListener('change', (e) => {
+            let file = e.target.files[0];
+            if (!file) return;
+            let reader = new FileReader();
+            reader.onload = (ev) => {
+              try {
+                let obj = JSON.parse(ev.target.result);
+                if (obj.toolOptions) localStorage.setItem('toolOptions', obj.toolOptions);
+                if (obj.quickSendList) localStorage.setItem('quickSendList', obj.quickSendList);
+                if (obj.code) localStorage.setItem('code', obj.code);
+                location.reload();
+              } catch (ex) {
+                showMsg('配置导入失败');
+              }
+            };
+            reader.readAsText(file);
+          });
+        }
+
+        function initCodeEditor() {
+          const textarea = document.getElementById('serial-code-content');
+          let savedCode = localStorage.getItem('code');
+          if (savedCode) textarea.value = savedCode;
+          let editor = CodeMirror.fromTextArea(textarea, {
+            lineNumbers: true,
+            indentUnit: 4,
+            styleActiveLine: true,
+            matchBrackets: true,
+            mode: 'javascript',
+            theme: 'idea',
+          });
+          document.getElementById('serial-code-load').onclick = () =>
+            document.getElementById('serial-code-select').click();
+          document.getElementById('serial-code-select').onchange = (e) => {
+            let fr = new FileReader();
+            fr.onload = () => editor.setValue(fr.result);
+            fr.readAsText(e.target.files[0]);
+          };
+          const runBtn = document.getElementById('serial-code-run');
+          runBtn.addEventListener('click', () => {
+            if (worker) {
+              worker.terminate();
+              worker = null;
+              runBtn.innerHTML = '<i class="bi bi-play"></i> 运行';
+              editor.setOption('readOnly', false);
+              editor.getWrapperElement().classList.remove('CodeMirror-readonly');
+              return;
+            }
+            localStorage.setItem('code', editor.getValue());
+            let blob = new Blob([editor.getValue()], { type: 'text/javascript' });
+            worker = new Worker(URL.createObjectURL(blob));
+            worker.onmessage = (e) => {
+              if (e.data.type === 'uart_send') writeData(new Uint8Array(e.data.data));
+              else if (e.data.type === 'uart_send_hex') sendHex(e.data.data);
+              else if (e.data.type === 'uart_send_txt') sendText(e.data.data);
+              else if (e.data.type === 'log') addLogErr(e.data.data);
+            };
+            runBtn.innerHTML = '<i class="bi bi-stop"></i> 停止';
+            editor.setOption('readOnly', 'nocursor');
+            editor.getWrapperElement().classList.add('CodeMirror-readonly');
+          });
+        }
+
+        // 折叠
+        document.querySelectorAll('.toggle-button').forEach((element) => {
+          element.addEventListener('click', (e) => {
+            e.currentTarget.parentElement.querySelector('.collapse').classList.toggle('show');
+            e.currentTarget.querySelector('i').classList.toggle('bi-chevron-compact-right');
+            e.currentTarget.querySelector('i').classList.toggle('bi-chevron-compact-left');
+          });
+        });
+
+        // 启动
+        loadQuickSendList();
+        refreshQuickSendPanel();
+        bindQuickSendEvents();
+        bindUI();
+        initCodeEditor();
+        updateConnectionUI();
+        if (!navigator.bluetooth) alert('当前浏览器不支持 Web Bluetooth，请使用 Chrome/Edge');
+      })();
+    </script>
+  </body>
+</html>
