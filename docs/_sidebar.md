@@ -1,9 +1,11 @@
 <!-- docs/_sidebar.md -->
+
 ![emakefun](zh-cn/_media/favicon.jpg)
 
 - [首页](/zh-cn/homepage.md)
 
 - 软件介绍
+  
   - [软件下载](/zh-cn/software/software_download.zh-CN.md)
   - [ArduinoIDE2.0介绍](/zh-cn/software/arduino_ide/arduino_ide.zh-CN.md)
   - [Mixly2.0使用介绍](/zh-cn/software/mixly/mixly.md)
@@ -13,13 +15,16 @@
   - [手机编程软件介绍](/zh-cn/software/Mobile_programming/Mobile_programming.md)
 
 - 驱动安装
+  
   - [arduino官方驱动安装](/zh-cn/driver/arduino_official_driver/arduino_official_driver.md)
   - [ch340驱动安装方法](/zh-cn/driver/ch340_driver/ch340_driver.md)
   - [microbit daplink驱动安装](/zh-cn/driver/microbit_daplink_driver/microbit_daplink_driver.md)
   - [esp32 usb驱动安装](/zh-cn/driver/esp32_driver/esp32_driver.md)
 
 - PH2.0模块
+  
   - 基础输入模块
+    
     - [按键模块](zh-cn/ph2.0_sensors/base_input_module/button_module/button_module.md)
     - [ADC按键模块](/zh-cn/ph2.0_sensors/base_input_module/adc_button_module/adc_button_module_zh-cn.md)
     - [触摸模块](zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module_zh-cn.md)
@@ -32,8 +37,9 @@
     - [触摸钢琴V2.0](/zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano.md)
     - [mini-joystick手柄](/zh-cn/ph2.0_sensors/base_input_module/mini-joystick/mini-joystick_zh-cn.md)
     - [自发电无线开关](/zh-cn/gallery.md)
-
+  
   - 传感器
+    
     - [声音传感器](zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor.md)
     - [DHT11温湿度](/zh-cn/ph2.0_sensors/sensors/dht11/dht11_zh-cn.md)
     - [DHT22温湿度](/zh-cn/ph2.0_sensors/sensors/dht22/dht22_zh-cn.md)
@@ -56,6 +62,7 @@
     - [四向倾斜开关](/zh-cn/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor_zh-cn.md)
     - [压力传感器](zh-cn/ph2.0_sensors/sensors/pressure_sensor/pressure_sensor.md)
     - [RGB超声波传感器](zh-cn/ph2.0_sensors/sensors/rus_04/rus_04.md)
+    - [普通超声波传感器](zh-cn/ph2.0_sensors/sensors/us04_us03/us04_us03.md)
     - [红外接收模块](/zh-cn/ph2.0_sensors/sensors/infrared_receiver/infrared_receiver_zh-cn.md.md)
     - [红外避障](/zh-cn/ph2.0_sensors/sensors/infrared_obstacle_avoidance_module/infrared_obstacle_avoidance_zh-cn.md)
     - [红外寻光避障](/zh-cn/gallery.md)
@@ -67,9 +74,10 @@
     - [HX711称重模块](/zh-cn/)
     - [LTR553](/zh-cn/)
     - [VL53L1X FOV激光测距](zh-cn/ph2.0_sensors/sensors/laser_ranging_sensor/laser_ranging_sensor.md)
-    - [PM2.5粉尘传感器](zh-cn/ph2.0_sensors/sensors/PM2.5_dust_sensor/PM2.5_dust_sensor.md)
-
+    - [PM2.5粉尘传感器](zh-cn/ph2.0_sensors/sensors/pm2.5_dust_sensor/pm2.5_dust_sensor.md)
+  
   - 执行器
+    
     - [有源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/active_buzzer/active_buzzer_zh-cn.md)
     - [无源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/passive_buzzer/passive_buzzer_zh-cn.md)
     - [SA8302步进电机模块](/zh-cn/ph2.0_sensors/actuators/SA8302/SA8302.md)
@@ -87,8 +95,9 @@
     - [MD40四路编码驱动模块](zh-cn/ph2.0_sensors/actuators/md40/md40.md)
     - [小型雾化器](/zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer.md)
     - [MOS管驱动模块](/zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module_zh-cn.md)
-
+  
   - 显示器
+    
     - [LED灯](zh-cn/ph2.0_sensors/displayers/led_module/LED.md)
     - [LCD1602显示屏](zh-cn/ph2.0_sensors/displayers/lcd1602/LCD1602.md)
     - [TM1650四位数码管](zh-cn/ph2.0_sensors/displayers/tm1650/TM1650.md)
@@ -102,13 +111,15 @@
     - [中文字库0.96OLED](zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED.md)
     - [SWIFT-LCD-13显示屏模块](zh-cn/ph2.0_sensors/displayers/swift_lcd_13/swift_lcd_13.md)
     - [SWIFT-LCD-20显示屏模块](zh-cn/ph2.0_sensors/displayers/swift_lcd_20/swift_lcd_20.md)
-
+  
   - 智能模块
+    
     - [BMP280大气压传感器](zh-cn/ph2.0_sensors/smart_module/atmospheric_pressure_sensor/atmospheric_pressure_sensor.md)
     - [TCS34725颜色识别](zh-cn/ph2.0_sensors/smart_module/color_recognition/color_recognition.md)
     - [NLCS11颜色识别](/zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
     - [QMC5883L电子指南针罗盘模块](zh-cn/ph2.0_sensors/smart_module/compass/compass.md)
     - [DS1302时钟模块](zh-cn/ph2.0_sensors/smart_module/ds1302/ds1302_rtc.md)
+    - [DS1307时钟模块](zh-cn/ph2.0_sensors/smart_module/ds1307/ds1307_rtc.md)
     - [MPU6050六轴陀螺仪](zh-cn/ph2.0_sensors/smart_module/mpu6050/mpu6050.md)
     - [计步传感器](/zh-cn/gallery.md)
     - [GS20手势识别传感器](/zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer.md)
@@ -123,16 +134,17 @@
     - [TTS语音合成V3.0](/zh-cn/gallery.md)
     - [MIDI数字音乐模块](zh-cn/ph2.0_sensors/smart_module/midi/midi.md)
     - [I2C-IO扩展模块](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/gpio_expansion_board.md)
-    - [I2C级联扩展器](/zh-cn/)
+    - [I2C级联扩展器](/zh-cn/ph2.0_sensors/smart_module/i2c_cascade_extender/i2c_cascade_extender.md)
     - [RFID-I2C模块](/zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/rfid_mfrc522.md)
     - [I2S-MEMS麦克风模块](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/i2s_mems_mic.md)
     - [PDM麦克风模块](zh-cn/ph2.0_sensors/smart_module/pdm_mic/pdm_mic.md)
-    - [指纹识别模块]()
-    - [毫米波雷达模块]()
-    - [GPS模块]()
+    - [指纹识别模块](/zh-cn/)
+    - [毫米波雷达模块](/zh-cn/)
+    - [GPS模块](/zh-cn/)
     - [AI语音助手](zh-cn/ph2.0_sensors/smart_module/ai_voice_assistant/ai_voice_assistant.md)
 
 - 电源模块
+  
   - [5V5A电源模块(PM01)](/zh-cn/power_module/PM01/PM01.md)
   - [升降压5V电源(PM02)](/zh-cn/power_module/PM02/PM02.md)
   - [MPPT太阳能充电板](/zh-cn/power_module/MPPT/MPPT.md)
@@ -143,11 +155,12 @@
   - [三节18650锂电池充电模块](/zh-cn//power_module/18650_3s_li_battery_module.md)
 
 - Arduino产品
+  
   - Nano
     - [nano-v3.0](zh-cn/arduino_products/nano/nano/nano.md)
     - [ble-nano](zh-cn/arduino_products/nano/ble-nano/README_zh.md)
     - [rf-nano](zh-cn/arduino_products/nano/rf-nano/README_zh.md)
-    - [nano开发者套件]()
+    - [nano开发者套件](/zh-cn/)
   - Uno系列
     - [arduino_uno_r3](zh-cn/arduino_products/uno/arduino_uno_r3/arduino_uno_r3.md)
     - [ble-uno](zh-cn/arduino_products/uno/ble-uno/ble_uno.md)
@@ -156,9 +169,10 @@
     - [motor_driver_board](zh-cn/arduino_products/uno/motor_driver_board/MotorDriverBoard.md)
     - [hummer-bot](zh-cn/arduino_products/uno/hummer-bot/hummer-bot.md)
     - [panther-tank](zh-cn/arduino_products/uno/panther_tank/panther_tank.md)
-    - [传感器套件介绍]()
+    - [传感器套件介绍](/zh-cn/)
 
 - micro:bit
+  
   - [microbit主板介绍](https://microbit.org/zh-cn/get-started/features/overview/)
   - [makecode介绍](/zh-cn/microbit/makecode/MakeCode使用介绍.md)
   - [microbit micropython介绍](zh-cn/microbit/microbit_micropython/microbit_micropython.md)
@@ -168,6 +182,7 @@
   - [joysitck:bit](zh-cn/microbit/joystickbit/joystickbit.md)
 
 - 乐鑫esp系类
+  
   - [esp32软件使用](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
   - [esp32-devkit-32e](zh-cn/esp32/esp32_devkit_32e/esp32_devkit_32e.md)
   - [esp32-uno](zh-cn/esp32/esp32-uno/esp32-uno.md)
@@ -183,15 +198,18 @@
   - [AI-VOX3扩展板](https://dcnmu33qx4fc.feishu.cn/docx/Cf49d141voj8JAxNyTJcW5zTned)
 
 - 树莓派
+  
   - [树莓派传感器扩展板](zh-cn/raspberrypi/raspberrypi_sensor_board/raspberrypi_sensor_board.md)
   - [树莓派电机驱动板](zh-cn/raspberrypi/raspberrypi_motordriver_board/raspberrypi_motordriver_board.md)
 
 - k210产品
 
 - 开源硬件
-  - [机器人驱动板]()
+  
+  - [机器人驱动板](/zh-cn/)
 
 - 外设/配件
+
   - [NL-16](/zh-cn/peripheral/nl-16/nl-16_zh-cn.md)
   - [PS2手柄](zh-cn/peripheral/ps2/ps2.md)
   - [PS3蓝牙手柄](zh-cn/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
@@ -200,5 +218,7 @@
   - [舵机](/zh-cn/peripheral/servo/servo.md)
   - CodexPad
     - [CodexPad-C10](/zh-cn/peripheral/codexpad/codexpad_c10/codexpad_c10.md)
+      
+      <!-- - [CodexPad-C10](https://gitee.com/CodexPad/codex_pad_c10) -->
 
 - [关于我们](/zh-cn/about.md)

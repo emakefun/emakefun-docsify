@@ -38,7 +38,7 @@
 * 输入电压： 6-16V
 * 产品尺寸：80mm×57mm；PCB厚度：1.6mm；净重：35g
 * M4定位孔直径：4.6mm，兼容乐高
-* 软件支持Mixly、Arduino IDE、Python
+* 软件支持Mixly、Arduino IDE、MicroPython
 
 ## 引脚说明
 
@@ -70,7 +70,7 @@
 
 <a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/esp32MindplusMotor.zip" download>点击下载电机示例程序</a>
 
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext" download>点击下载Maker-esp32Mind+库文件</a>
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext" download>点击下载Maker-ESP32-Pro Mind+库文件</a>
 
 ## Arduino示例程序
 
@@ -174,17 +174,7 @@
 
 ## ESP32系列连接使用PS3蓝牙无线手柄
 
-[点击查看ESP32系列连接使用PS3蓝牙无线手柄](zh-cn/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
-
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/esp32PS3ControlTest.zip" download>点击下载PS3控制电机舵机案例</a>
-
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_emakefun_sensors_mixly.zip" download>点击下载Mixly库PS3手柄</a>
-
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_ps3_rock_test.zip" download>点击下载PS3手柄Mixly示例</a>
-
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-ps3.zip" download>点击下载PS3手柄 Mind+库</a>
-
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/ps3_test.zip" download>点击下载PS3手柄 Mind+示例</a>
+[点击查看Maker-ESP32-Pro与PS3手柄的连接使用说明](zh-cn/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
 
 ## FAQ
 
@@ -202,8 +192,8 @@
 
 **A**:
 
-1. 电机需要DC头供电，6-24V，建议使用两节3.7V锂电池，电源开关是否打到ON；
+1. 电机需要DC头供电，6-16V，建议使用两节3.7V锂电池，电源开关是否打到ON；
 
-2. 第一步已经完成的话，还出现问题，请检查Motor and IO Switch开关是否拨到电机方向(即标有ON的方向)；
+2. 第一步已经完成的话，还出现问题，请检查Motor and IO Switch开关是否拨到电机方向(即标有M2A、M2B、M3A、M3B的方向)；
 
 3. 检测程序设置的电机引脚是否和电机实际引脚一一对应；

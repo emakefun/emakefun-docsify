@@ -24,18 +24,18 @@
 
 - 安装方式：M4螺钉兼容乐高插孔固定
 
-| 引脚名称  | 描述        |
-| -------- | ----------- |
-| G        | GND地线      |
-| V        | 电源引脚     |
-| SDA      | I2C数据引脚  |
-| SCL      | I2C时钟引脚  |
+| 引脚名称 | 描述      |
+| ---- | ------- |
+| G    | GND地线   |
+| V    | 电源引脚    |
+| SDA  | I2C数据引脚 |
+| SCL  | I2C时钟引脚 |
 
 ## 机械尺寸图
 
 ![机械尺寸图](picture/keyboard_cad.png)
 
-[**3D文件**](zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/matrix_keyboard_3D.zip)
+<a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3/matrix_keyboard_3D.zip" download>3D文件</a>
 
 ## Arduino 应用
 
