@@ -4,7 +4,7 @@
 
 
 
-![nl-16](./pic./nl-16.png)
+![nl-16](./pic/nl-16.png)
 
 **修改历史**
 
@@ -78,6 +78,8 @@ ios手机和mac电脑我们测试方法是一样的，应用商店下载lightblu
 ### NL-16和PC设备
 
 windows电脑我们用网页版本来测试
+
+<a href="zh-cn/peripheral/nl-16/BleSerialTools.html" target="_blank">PC端BLE测试网页</a>
 
 ## AT指令一览表
 
@@ -298,7 +300,7 @@ NL-16模块可以给Arduino Uno（nano）主板蓝牙下载程序，接线图如
 
 [安卓源码](https://github.com/nulllaborg/arduino_ble_flash_demo) 
 
-<a href="/zh-cn/peripheral/BleSerialTools.html" target="_blank">PC端BLE测试网页</a>
+<a href="zh-cn/peripheral/nl-16/BleSerialTools.html" download>下载PC端BLE测试网页</a>
 
 **第三方支持蓝牙下载平台**
 
