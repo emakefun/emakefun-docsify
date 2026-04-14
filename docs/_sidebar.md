@@ -24,7 +24,7 @@
 - PH2.0模块
   
   - 基础输入模块
-    
+
     - [按键模块](zh-cn/ph2.0_sensors/base_input_module/button_module/button_module.md)
     - [ADC按键模块](/zh-cn/ph2.0_sensors/base_input_module/adc_button_module/adc_button_module_zh-cn.md)
     - [触摸模块](zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module_zh-cn.md)
@@ -35,11 +35,11 @@
     - [摇杆模块](/zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_module_zh-cn.md)
     - [触摸矩阵键盘V3.0](zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3/matrix_keyboard_module_v3.md)
     - [触摸钢琴V2.0](/zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano.md)
-    - [mini-joystick手柄](/zh-cn/ph2.0_sensors/base_input_module/mini-joystick/mini-joystick_zh-cn.md)
+    - [mini-joystick手柄](/zh-cn/ph2.0_sensors/base_input_module/mini_joystick/mini_joystick_zh-cn.md)
     - [自发电无线开关](/zh-cn/gallery.md)
   
   - 传感器
-    
+
     - [声音传感器](zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor.md)
     - [DHT11温湿度](/zh-cn/ph2.0_sensors/sensors/dht11/dht11_zh-cn.md)
     - [DHT22温湿度](/zh-cn/ph2.0_sensors/sensors/dht22/dht22_zh-cn.md)
@@ -77,7 +77,7 @@
     - [PM2.5粉尘传感器](zh-cn/ph2.0_sensors/sensors/pm2.5_dust_sensor/pm2.5_dust_sensor.md)
   
   - 执行器
-    
+
     - [有源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/active_buzzer/active_buzzer_zh-cn.md)
     - [无源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/passive_buzzer/passive_buzzer_zh-cn.md)
     - [SA8302步进电机模块](/zh-cn/ph2.0_sensors/actuators/SA8302/SA8302.md)
@@ -97,7 +97,7 @@
     - [MOS管驱动模块](/zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module_zh-cn.md)
   
   - 显示器
-    
+
     - [LED灯](zh-cn/ph2.0_sensors/displayers/led_module/LED.md)
     - [LCD1602显示屏](zh-cn/ph2.0_sensors/displayers/lcd1602/LCD1602.md)
     - [TM1650四位数码管](zh-cn/ph2.0_sensors/displayers/tm1650/TM1650.md)
@@ -113,7 +113,7 @@
     - [SWIFT-LCD-20显示屏模块](zh-cn/ph2.0_sensors/displayers/swift_lcd_20/swift_lcd_20.md)
   
   - 智能模块
-    
+
     - [BMP280大气压传感器](zh-cn/ph2.0_sensors/smart_module/atmospheric_pressure_sensor/atmospheric_pressure_sensor.md)
     - [TCS34725颜色识别](zh-cn/ph2.0_sensors/smart_module/color_recognition/color_recognition.md)
     - [NLCS11颜色识别](/zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
@@ -218,7 +218,7 @@
   - [舵机](/zh-cn/peripheral/servo/servo.md)
   - CodexPad
     - [CodexPad-C10](/zh-cn/peripheral/codexpad/codexpad_c10/codexpad_c10.md)
-      
+
       <!-- - [CodexPad-C10](https://gitee.com/CodexPad/codex_pad_c10) -->
 
 - [关于我们](/zh-cn/about.md)

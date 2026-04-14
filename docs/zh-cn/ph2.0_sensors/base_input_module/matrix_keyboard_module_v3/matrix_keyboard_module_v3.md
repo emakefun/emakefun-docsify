@@ -4,7 +4,7 @@
 
 ## 概述
 
-触摸键盘模块是通过 <a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/VK36N16I_datasheet.pdf" target="_blank">VK36N16I</a> 芯片驱动，共16个触摸键。VK36N16I芯片是一款使用电容感应式原理设计的触摸芯片，可用来检测外部触摸按键上人手的触摸动作。该系列的芯片具有较高的集成度，仅需极少的外部组件便可实现触摸按键的检测。模块使用IIC通讯，可方便与外部 MCU 之间的通讯，实现检测触摸引脚是否被触摸的目的。
+触摸键盘模块是通过 <a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3/vk36n16i_datesheet.pdf" target="_blank">VK36N16I</a> 芯片驱动，共16个触摸键。VK36N16I芯片是一款使用电容感应式原理设计的触摸芯片，可用来检测外部触摸按键上人手的触摸动作。该系列的芯片具有较高的集成度，仅需极少的外部组件便可实现触摸按键的检测。模块使用IIC通讯，可方便与外部 MCU 之间的通讯，实现检测触摸引脚是否被触摸的目的。
 
 ## 原理图
 
@@ -12,7 +12,7 @@
 
 ## 模块参数
 
-- 供电电压：3.3V ~ 5V
+- 供电电压：3.3~5V
 
 - 接 口：I2C接口和PH2.0间距接口
 
@@ -24,18 +24,18 @@
 
 - 安装方式：M4螺钉兼容乐高插孔固定
 
-| 引脚名称 | 描述      |
-| ---- | ------- |
-| G    | GND地线   |
-| V    | 电源引脚    |
-| SDA  | I2C数据引脚 |
-| SCL  | I2C时钟引脚 |
+| 引脚名称 | 描述       |
+| :------ | :--------- |
+| G       | GND地线     |
+| V       | 电源引脚    |
+| SDA     | I2C数据引脚 |
+| SCL     | I2C时钟引脚 |
 
 ## 机械尺寸图
 
 ![机械尺寸图](picture/keyboard_cad.png)
 
-<a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3/matrix_keyboard_3D.zip" download>3D文件</a>
+<a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3/matrix_keyboard_3d.zip" download>3D文件</a>
 
 ## Arduino 应用
 
@@ -59,7 +59,7 @@
 
 ## Mixly示例程序
 
- [Mixly2.0云端导入PH2.0 Sensors库](/zh-cn/software/mixly/mixly)，导入成功后，点击EmakefunSensors库，选择基础输入模块，找到
+[Mixly2.0云端导入PH2.0 Sensors库](/zh-cn/software/mixly/mixly)，导入成功后，点击EmakefunSensors库，选择基础输入模块，找到
 
 矩阵键盘V3.0块，如下图：
 
@@ -71,11 +71,11 @@
 
 通过连接线连接矩阵键盘的I2C接口，将程序下载到Arduino主板，触摸键盘Arduino串口打印相对应的键盘值。
 
-[](https://dcnmu33qx4fc.feishu.cn/docx/K7XEdVSw4otBf5xf1JJcF9RsnEc?302from=wiki)<a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/matrix_keyboard_v3_mixly_example.zip" download>点击下载Mixly Arduino/ESP32案例</a>
+<a href="zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3.0/matrix_keyboard_v3_mixly_example.zip" download>点击下载Mixly Arduino/ESP32案例</a>
 
 ## Mind+示例程序
 
-mind+ 软件arduino uno、esp32库为同一个，使用时，在用户库输入以下链接：https://gitee.com/emakefun_midplus_lib/matrix_keyboard_v3
+mind+ 软件arduino uno、esp32库为同一个，使用时，在用户库输入以下链接：<https://gitee.com/emakefun_midplus_lib/matrix_keyboard_v3>
 
 [点击查看导入方法](https://mindplus.dfrobot.com.cn/extensions-user-libraries)
 
