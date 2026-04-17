@@ -1,8 +1,12 @@
 # 带中文字库OLED模块
 
-## 实物图
+## 0.96寸OLED实物图
 
-![实物图](picture\3a163ad37b03118028591609304835f.jpg)
+![0.96寸OLED](D:/yichuang/emakefun-docsify/docs/zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/picture/0.96OLED-Front%20view.jpg)
+
+## 1.3寸OLED实物图
+
+![loading-ag-321](D:/yichuang/emakefun-docsify/docs/zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/picture/1.3OLED-Front%20view.jpg)
 
 ## 概述
 
@@ -11,8 +15,11 @@ SSD1306是一款用于有机/聚合物发光二极管点阵图形显示系统的
 ## 硬件参数
 
 - 工作电压：5V
+
 - 接口支持最大速率：400k
+
 - 通信方式：IIC (SSD1306 地址0x3C，MCU地址0x51)
+
 - 接口类型：PH2.0-4Pin (G V SDA SCL)
 
 - <a href="zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/SSD1306.pdf" target="_blank">点击下载SSD1306数据手册</a>
@@ -27,16 +34,25 @@ SSD1306是一款用于有机/聚合物发光二极管点阵图形显示系统的
 
 ## 引脚定义
 
-| 引脚名称 | 描述       |
-| -------- | ---------- |
-| SCL       | IIC时钟引脚 |
-| SDA       | IIC数据引脚 |
-| V        | 5V电源引脚 |
-| G        | GND 地线   |
+| 引脚名称 | 描述      |
+| ---- | ------- |
+| SCL  | IIC时钟引脚 |
+| SDA  | IIC数据引脚 |
+| V    | 5V电源引脚  |
+| G    | GND 地线  |
 
 ## 模块尺寸
 
+![loading-ag-218](file:///D:/yichuang/emakefun-docsify/docs/zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/picture/Module%20size.png)
+
 ## 接线示例
+
+| 显示屏模块 | Arduino |
+| ----- | ------- |
+| SDA   |         |
+| SCL   |         |
+| GND   | GND     |
+| VCC   | 5V      |
 
 ## Arduino 应用场景
 
