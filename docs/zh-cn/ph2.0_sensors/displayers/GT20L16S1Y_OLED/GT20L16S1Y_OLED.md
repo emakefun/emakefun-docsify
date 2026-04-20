@@ -2,19 +2,21 @@
 
 ## 0.96寸OLED实物图
 
-![0.96寸OLED](D:/yichuang/emakefun-docsify/docs/zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/picture/0.96OLED-Front%20view.jpg)
+![0.96寸OLED](./picture/0.96OLED-Front-view.jpg)
 
 ## 1.3寸OLED实物图
 
-![loading-ag-321](D:/yichuang/emakefun-docsify/docs/zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/picture/1.3OLED-Front%20view.jpg)
+![loading-ag-321](picture/1.3OLED-Front-view.jpg)
 
 ## 概述
 
-SSD1306是一款用于有机/聚合物发光二极管点阵图形显示系统的带控制器的单片CMOS OLED/PLED驱动器。它由128个段和64个公共区组成。这种集成电路是为普通阴极型OLED面板设计的。作为一款常用的显示器，深受电子爱好者的青睐，但使用 时总少不了一些辅助软件去显示自己想要显示的信息，且有时会因为数据太多太占内存，本产品集成了一块GT20L16S1Y字库芯片和一款MCU，从根本上解决了这两方面的问题，使用更加方便。
+0.96oled使用SSD1306，SSD1306是一款用于有机/聚合物发光二极管点阵图形显示系统的带控制器的单片CMOS OLED/PLED驱动器。它由128个段和64个公共区组成。这种集成电路是为普通阴极型OLED面板设计的。作为一款常用的显示器，深受电子爱好者的青睐，但使用 时总少不了一些辅助软件去显示自己想要显示的信息，且有时会因为数据太多太占内存，本产品集成了一块GT20L16S1Y字库芯片和一款MCU，从根本上解决了这两方面的问题，使用更加方便。
+
+1.3寸oled使用SH1106，SH1106是一款单芯片CMOSOLED/PLED驱动器,带有控制器,用于有机/聚合物发光二极管点阵图形显示系统。SH1106由132个段组成,64个公共端可支持132×64的最大显示分辨率。它专为共阴极型OLED面板而设计。SH1106嵌入了对比度控制,显示RAM振荡器和高效的DC-DC转换器,减少了外部元件的数量和功耗。
 
 ## 硬件参数
 
-- 工作电压：5V
+- 工作电压：5V/3.3v
 
 - 接口支持最大速率：400k
 
@@ -22,15 +24,17 @@ SSD1306是一款用于有机/聚合物发光二极管点阵图形显示系统的
 
 - 接口类型：PH2.0-4Pin (G V SDA SCL)
 
-- <a href="zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/SSD1306.pdf" target="_blank">点击下载SSD1306数据手册</a>
+- [点击下载SSD1306数据手册](./SSD1306.pdf)
 
-- <a href="zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Ydatasheet.pdf" target="_blank">点击下载字库芯片GT20L16S1Y数据手册</a>
+- [点击下载SH1106数据手册](./SH1106.pdf)
+
+- [点击下载字库芯片GT20L16S1Y数据手册](./GT20L16S1Ydatasheet.pdf)
 
 ## 模块特点
 
 - 内置低功率 32 位 MCU：可以兼作应用处理器
 - 内置字库：GT20L16S1Y字库芯片
-- 显示器类型：SSD1306
+- 显示器类型：SSD1306、SH1106
 
 ## 引脚定义
 
@@ -41,16 +45,26 @@ SSD1306是一款用于有机/聚合物发光二极管点阵图形显示系统的
 | V    | 5V电源引脚  |
 | G    | GND 地线  |
 
+## 原理图
+
+### 0.96寸OLED
+
+![](picture/1.jpg)
+
+### 1.3寸OLED
+
+<img title="" src="picture/2.png" alt="" style="zoom:50%;">
+
 ## 模块尺寸
 
-![loading-ag-218](file:///D:/yichuang/emakefun-docsify/docs/zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/picture/Module%20size.png)
+![loading-ag-218](picture/Module-size.png)
 
 ## 接线示例
 
 | 显示屏模块 | Arduino |
 | ----- | ------- |
-| SDA   |         |
-| SCL   |         |
+| SDA   | A4/18   |
+| SCL   | A5/19   |
 | GND   | GND     |
 | VCC   | 5V      |
 
@@ -91,8 +105,6 @@ uint8_t ShowFont(uint8_t x, uint8_t y, uint8_t *str);
 ### Arduino示例程序
 
 <a href="zh-cn/ph2.0_sensors/displayers/GT20L16S1Y_OLED/GT20L16S1Y_OLED.zip" download>下载最新库程序</a>
-
-### MagicBlock图形化编程块
 
 ### Mixly图形化块
 
