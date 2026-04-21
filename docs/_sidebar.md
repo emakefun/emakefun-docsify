@@ -82,7 +82,7 @@
     - [无源蜂鸣器模块](/zh-cn/ph2.0_sensors/actuators/passive_buzzer/passive_buzzer_zh-cn.md)
     - [SA8302步进电机模块](/zh-cn/ph2.0_sensors/actuators/SA8302/SA8302.md)
     - [空心杯610电机风扇](/zh-cn/ph2.0_sensors/actuators/610_coreless_motor_fan/610_coreless_motor_fan_zh-cn.md)
-    - [R300C电机风扇](/zh-cn/ph2.0_sensors/actuators/R300C/R300C_zh-cn.md)
+    - [R300C电机风扇](/zh-cn/ph2.0_sensors/actuators/r300c/r300c_zh-cn.md)
     - [继电器模块](/zh-cn/ph2.0_sensors/actuators/relayModule/relayModel.md)
     - [红外发射模块](/zh-cn/ph2.0_sensors/actuators/infrared_emitter/infrared_emitter_zh-cn.md)
     - [激光发射模块](/zh-cn/ph2.0_sensors/actuators/laser_emitter/laser_emitter_zh-cn.md)
