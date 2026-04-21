@@ -4,10 +4,12 @@
 
 ## 概述
 
-​	众所周知，走廊中的语音控制灯除了语音控制外还有一个传感器，即光敏传感器（Photovaristor），能检测光变化的感光元器件常见的有光敏电阻Light-Dependent Resistor（缩写为LDR）、光敏二极管、光敏三极管，本光敏传感器模块采用的是光敏三极管作为感光元器件。它们的工作原理都类似，当入射光上升时，电阻阻值会降低；入射光减弱，阻值会增加。光敏传感器常用于光测量，控制和转换（光与电之间的变化）会发生变化（光变为电），它也可广泛应用于各种光控电路，比如控制和调节灯以及光开关。 光敏传感器模块对环境光线最敏感，一般用来检测周围环境的光线的亮度，触发单片机或继电器模块等。
+​众所周知，走廊中的语音控制灯除了语音控制外还有一个传感器，即光敏传感器（Photovaristor），能检测光变化的感光元器件常见的有光敏电阻Light-Dependent Resistor（缩写为LDR）、光敏二极管、光敏三极管，本光敏传感器模块采用的是光敏三极管作为感光元器件。它们的工作原理都类似，当入射光上升时，电阻阻值会降低；入射光减弱，阻值会增加。光敏传感器常用于光测量，控制和转换（光与电之间的变化）会发生变化（光变为电），它也可广泛应用于各种光控电路，比如控制和调节灯以及光开关。 光敏传感器模块对环境光线最敏感，一般用来检测周围环境的光线的亮度，触发单片机或继电器模块等。
 
 **光敏电阻 Photoresistor**
-![LDR](./picture/LDR.png)
+
+![LDR](./picture/ldr.png)
+
 ```
 光敏电阻是一种对光敏感的电阻器，当光线照射到它时，其电阻会发生变化,光敏电阻的电阻值随光线强度变化。光强度越强，电阻值越小；光强度越弱，电阻值越大。它的主要作用包括：
 
@@ -19,7 +21,9 @@
 优点：结构简单、成本低、使用方便。
 缺点：响应速度较慢，线性度差，对温度敏感
 ```
+
 **光敏二极管Photodiode**
+
 ![light_diode](./picture/light_diode.png)
 
 ```
@@ -35,6 +39,7 @@
 ```
 
 **光敏三极管Phototransistor**
+
 ![light_transistor](./picture/light_transistor.png)
 
 ```
@@ -52,6 +57,7 @@
 **符号图：**
 
 ![LDR_symbol](./picture/light_sensor.png)
+
 ```
 工作原理：
 光敏电阻依赖光照改变电阻值。
@@ -68,7 +74,6 @@
 光敏电阻多用于简单的光检测和光控电路。
 光敏三极管多用于需要高灵敏度和快速响应的光电开关和光通信中。
 光敏二极管广泛应用于光检测和高速光通信中。
-
 ```
 
 ### 主要特性
@@ -76,55 +81,62 @@
 - 感光器件：模块感光器件为光敏三极管作
 
 - 光谱响应：通常对可见光和红外光敏感
+
 - 暗电阻：无光照时的测量ADC值接近0
+
 - 亮电阻：强光照射时测量ADC值接近单片机量程满值
+
 - 响应时间：从暗到亮或从亮到暗的变化需要一定时间（通常毫秒级）
+
 - 温度系数：温度变化会影响其灵敏度
 
 ## 原理图
 
 ![photo_sensitive_sensor_sch](./picture/photo_sensitive_sensor_sch.png)
 
-
+<a href="zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photosensitive_sensor_sch.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块参数
 
-| 引脚名称 |            描述             |
-| :------: | :-------------------------: |
-|    G     |             GND             |
-|    V     |        3~5V电源输入         |
-|    S     | 光线强时,读取的模拟值则越大 |
-
 - 供电电压：3~5V
+
 - 连接方式：3Pin-PH2.0接口
+
 - 模块尺寸：38.4 x 22.4mm
+
 - 安装方式：M4螺钉兼容乐高插孔
+
+| 引脚名称 | 描述                      |
+| :------- | :----------------------- |
+| G        | GND                       |
+| V        | 3~5V电源输入              |
+| S        | 光线强时,读取的模拟值则越大 |
 
 ## 机械尺寸图
 
 ![机械尺寸图](picture/photo_sensitive_sensor_assembly.png)
 
-
-
 <a href="zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor_3d.zip" target="_blank">点击下载2D和3D文件</a>
 
 ## Arduino示例程序
 
-<a href="zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor.zip" download>下载示例程序</a>
-
 ```c++
-#define PHOTOSENSITIVE_PIN A3  // 定义光敏传感器模块引脚
+namespace {
+constexpr uint8_t kPhotosensitivePin = A3;  // 定义光敏传感器模块引脚
 
-int photosensitive_value = 0;  // 定义变量,读取光敏值
+}  // namespace
 
 void setup() {
-  Serial.begin(9600);                 // 设置串口波特率
-  pinMode(PHOTOSENSITIVE_PIN, INPUT);  // 设置光敏传感器模块引脚为输入
+  Serial.begin(115200);  // 设置串口波特率
+
+  pinMode(kPhotosensitivePin, INPUT);  // 设置光敏传感器模块引脚为输入
 }
+
 void loop() {
-  photosensitive_value = analogRead(PHOTOSENSITIVE_PIN);  // 读取光敏值
   Serial.print("Photosensitive Data:  ");
-  Serial.println(photosensitive_value);  // 打印光敏值
+  Serial.println(analogRead(kPhotosensitivePin));  // 读取并打印光敏值
+
+  delay(200);
 }
 ```
 
