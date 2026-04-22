@@ -122,15 +122,19 @@ Mind+ TTS20模块用户库链接：https://gitee.com/emakefun_midplus_lib/tts20
 
 [点击查看Mind+导入用户库方法](https://mindplus.dfrobot.com.cn/extensions-user-libraries)
 
+[点击下载Mind+示例程序](https://gitee.com/emakefun_midplus_lib/tts20/releases/download/V1.0.0/tts20%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E6%A8%A1%E5%9D%97%E7%A4%BA%E4%BE%8B%E7%A8%8B%E5%BA%8F.zip)
+
 ## Mixly库和示例程序
 
 [点击下载TTS20模块Mixly库](https://gitee.com/emakefun_mixly_lib/tts20/releases/download/v0.1.0/tts20-mixly%E5%BA%93.zip)
+
+[点击下载MixlyTT20模块示例](./tts20_mixly_example.zip)
 
 ## MicroPython 示例程序
 
 ### ESP32 MicroPython示例程序
 
-待补充
+[点击下载Micropython库和示例](./tts20_library.zip)
 
 ### micro:bit MicroPython示例程序
 
