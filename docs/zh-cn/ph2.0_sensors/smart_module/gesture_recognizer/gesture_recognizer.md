@@ -108,6 +108,14 @@ Arduino 程序示例说明以及下载链接如下：
 
 <a href="zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer_8_8_matrix_mixly.zip" download>点击此处下载Mixly库以及示例程序</a>
 
+## Mind+示例程序
+
+mind+ 软件arduino uno、esp32库为同一个，使用时，在用户库输入以下链接：https://gitee.com/emakefun_midplus_lib/gs20
+
+[点击查看导入方法](https://mindplus.dfrobot.com.cn/extensions-user-libraries)
+
+[点击下载Mind+示例程序](https://gitee.com/emakefun_midplus_lib/gs20/releases/download/V0.0.1/GS20%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB%E4%BC%A0%E6%84%9F%E5%99%A8%E6%B5%8B%E8%AF%95%E7%A4%BA%E4%BE%8B.zip)
+
 ## MicroPython示例程序
 
 <a href="zh-cn/ph2.0_sensors/smart_module/gesture_recognizer/gesture_recognizer_esp32_micropython.zip" download>点击此处下载ESP32 MicroPython库以及示例程序</a>
