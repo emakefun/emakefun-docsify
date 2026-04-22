@@ -128,13 +128,13 @@ Mind+ TTS20模块用户库链接：https://gitee.com/emakefun_midplus_lib/tts20
 
 [点击下载TTS20模块Mixly库](https://gitee.com/emakefun_mixly_lib/tts20/releases/download/v0.1.0/tts20-mixly%E5%BA%93.zip)
 
-[点击下载MixlyTT20模块示例](./tts20_mixly_example.zip)
+<a href="zh-cn/ph2.0_sensors/smart_module/tts20_module/tts20_mixly_example.zip" download>点击下载MixlyTT20模块示例</a>
 
 ## MicroPython 示例程序
 
 ### ESP32 MicroPython示例程序
 
-[点击下载Micropython库和示例](./tts20_library.zip)
+<a href="zh-cn/ph2.0_sensors/smart_module/tts20_module/tts20_micropython_library.zip" download>点击下载Micropython库和示例</a>
 
 ### micro:bit MicroPython示例程序
 
