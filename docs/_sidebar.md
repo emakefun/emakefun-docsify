@@ -218,7 +218,6 @@
   - [舵机](/zh-cn/peripheral/servo/servo.md)
   - CodexPad
     - [CodexPad-C10](/zh-cn/peripheral/codexpad/codexpad_c10/codexpad_c10.md)
-
-      <!-- - [CodexPad-C10](https://gitee.com/CodexPad/codex_pad_c10) -->
+    - [CodexPad-S10](/zh-cn/peripheral/codexpad/codexpad_s10/codexpad_s10.md)
 
 - [关于我们](/zh-cn/about.md)
