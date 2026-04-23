@@ -2,7 +2,7 @@
 
 ## 0.96寸OLED实物图
 
-![0.96寸OLED](./picture/0.96OLED-Front-view.jpg)
+![](picture/0.96OLED-Front-view.jpg)
 
 ## 1.3寸OLED实物图
 
@@ -10,21 +10,19 @@
 
 ## 概述
 
-0.96oled使用SSD1306，SSD1306是一款用于有机/聚合物发光二极管点阵图形显示系统的带控制器的单片CMOS OLED/PLED驱动器。它由128个段和64个公共区组成。这种集成电路是为普通阴极型OLED面板设计的。作为一款常用的显示器，深受电子爱好者的青睐，但使用 时总少不了一些辅助软件去显示自己想要显示的信息，且有时会因为数据太多太占内存，本产品集成了一块GT20L16S1Y字库芯片和一款MCU，从根本上解决了这两方面的问题，使用更加方便。
+SSD1315-0.96-OLED与SH1106-0.96-OLED驱动方式兼容。
 
-1.3寸oled使用SH1106，SH1106是一款单芯片CMOSOLED/PLED驱动器,带有控制器,用于有机/聚合物发光二极管点阵图形显示系统。SH1106由132个段组成,64个公共端可支持132×64的最大显示分辨率。它专为共阴极型OLED面板而设计。SH1106嵌入了对比度控制,显示RAM振荡器和高效的DC-DC转换器,减少了外部元件的数量和功耗。
+0.96寸oled和1.3寸oled使用SH1106，SH1106是一款单芯片CMOSOLED/PLED驱动器,带有控制器,用于有机/聚合物发光二极管点阵图形显示系统。SH1106由132个段组成,64个公共端可支持132×64的最大显示分辨率。它专为共阴极型OLED面板而设计。SH1106嵌入了对比度控制,显示RAM振荡器和高效的DC-DC转换器,减少了外部元件的数量和功耗。
 
 ## 硬件参数
 
-- 工作电压：5V/3.3v
+- 工作电压：5V/3.3V
 
 - 接口支持最大速率：400k
 
 - 通信方式：IIC (SSD1306 地址0x3C，MCU地址0x51)
 
 - 接口类型：PH2.0-4Pin (G V SDA SCL)
-
-- [点击下载SSD1306数据手册](./SSD1306.pdf)
 
 - [点击下载SH1106数据手册](./SH1106.pdf)
 
@@ -34,7 +32,7 @@
 
 - 内置低功率 32 位 MCU：可以兼作应用处理器
 - 内置字库：GT20L16S1Y字库芯片
-- 显示器类型：SSD1306、SH1106
+- 显示器类型：SH1106
 
 ## 引脚定义
 
@@ -49,22 +47,32 @@
 
 ### 0.96寸OLED
 
-![](picture/1.jpg)
+[点击此处下载原理图](./SH1106_0.96_inch_OLED.pdf)
+
+![](picture/0.96OLED-SH1106.png)
 
 ### 1.3寸OLED
 
-<img title="" src="picture/2.png" alt="" style="zoom:50%;">
+[点击此处下载原理图](./SH1106_1.3_inch_OLED.pdf)
+
+![](picture/1.3OLED-SH1106.png)
 
 ## 模块尺寸
 
-![loading-ag-218](picture/Module-size.png)
+### 0.96寸OLED
+
+<img title="" src="picture/0.96OLED.png" alt="" style="zoom:80%;">
+
+### 1.3寸OLED
+
+<img title="" src="picture/1.3OLED.png" alt="" style="zoom:50%;">
 
 ## 接线示例
 
 | 显示屏模块 | Arduino |
 | ----- | ------- |
-| SDA   | A4/18   |
-| SCL   | A5/19   |
+| SDA   | A4      |
+| SCL   | A5      |
 | GND   | GND     |
 | VCC   | 5V      |
 
