@@ -2,11 +2,11 @@
 
 ## 0.96寸OLED实物图
 
-![](picture/0.96OLED-Front-view.jpg)
+<img title="" src="picture/0.96OLED-Front-view.png" alt="" style="zoom:150%;">
 
 ## 1.3寸OLED实物图
 
-![loading-ag-321](picture/1.3OLED-Front-view.jpg)
+<img src="picture/1.3OLED-Front-view.jpg" title="" alt="loading-ag-321" style="zoom:80%;">
 
 ## 概述
 
@@ -31,7 +31,6 @@ SSD1315-0.96-OLED与SH1106-0.96-OLED驱动方式兼容。
 ## 模块特点
 
 - 内置低功率 32 位 MCU：可以兼作应用处理器
-- 内置字库：GT20L16S1Y字库芯片
 - 显示器类型：SH1106
 
 ## 引脚定义
