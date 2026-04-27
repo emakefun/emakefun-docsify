@@ -194,7 +194,7 @@
   - [nl-esp32-s3-devkitc](zh-cn/esp32/nl-esp32-s3-devkitc/README_zh.md)
   - [esp32s3-cam](zh-cn/esp32/esp32s3-cam/README_zh.md)
   - [scratch arcade](https://arcade.blockcode.fun/#/zh-cn/intro)
-  - [AI-VOX3](https://dcnmu33qx4fc.feishu.cn/docx/VXHzdBYH0ohpNAxw2ifc3P2InBe)
+  - [AI-VOX3](/zh-cn/esp32/ai-vox3/ai-vox3_zh-cn.md)
   - [AI-VOX3扩展板](https://dcnmu33qx4fc.feishu.cn/docx/Cf49d141voj8JAxNyTJcW5zTned)
   - [ESP32-S3-EXPANSION BOARD](zh-cn/esp32/esp32-s3-expansion_board/esp32-s3-expansion_board.md)
 
@@ -218,6 +218,7 @@
   - [编码电机](zh-cn/ph2.0_sensors/actuators/hall_encoder_sensor/hall_encoder_sensor.md)
   - [舵机](/zh-cn/peripheral/servo/servo.md)
   - CodexPad
+    - [常见遥控器对比](/zh-cn/peripheral/codexpad/wireless_controller_diffrent.md)
     - [CodexPad-C10](/zh-cn/peripheral/codexpad/codexpad_c10/codexpad_c10.md)
     - [CodexPad-S10](/zh-cn/peripheral/codexpad/codexpad_s10/codexpad_s10.md)
 
