@@ -262,7 +262,7 @@
               id="serial-send"
               class="btn btn-primary h-10 px-5"
             >
-              <i class="bi bi-send"></i> 发送
+              <i class="bi bi-send"></i> FFE1 发送
             </button>
           </div>
         </div>
@@ -414,8 +414,8 @@
               </div>
               <div class="mt-2">
                 <div class="d-flex">
-                  <span class="me-2 ms-3">移除</span><span class="flex-grow-1 me-1">发送内容（点击修改，双击改名）</span
-                  ><span class="flex-shrink-0 me-3">显示名称</span>
+                  <span class="me-2 ms-3">移除</span><span class="flex-grow-1 me-1">发送内容（点击修改，双击改名）</span>
+                  <span class="flex-shrink-0 me-3">显示名称</span><span class="flex-shrink-0 me-3">HEX</span>
                 </div>
               </div>
               <div
@@ -455,7 +455,7 @@
               />
               <hr />
               <div class="alert alert-secondary small mt-2">
-                ⚡ 蓝牙透传 (服务: ffe0, 数据特征: ffe1, AT指令特征: ffe2)<br />上传固件需要设备支持STK500协议及AT指令集。
+                ⚡ 蓝牙透传 (服务: FFE0, 数据通道: FFE1, AT指令通道: FFE2)<br />上传固件需要设备支持STK500协议及AT指令集。
               </div>
             </div>
             <div
@@ -650,7 +650,8 @@ setInterval(function(){
           { name: '软件复位蓝牙', content: 'AT+RESET' },
           { name: '复位Arduino', content: 'AT+TARGE_RESET' },
           { name: '查看固件版本', content: 'AT+VER' },
-          { name: '配置波特率', content: 'AT+BAUD' },
+          { name: '查看/设置AT指令回显', content: 'AT+ECHO=' },
+          { name: '查看/设置波特率', content: 'AT+BAUD=' },
           { name: '查看/设置蓝牙名', content: 'AT+NAME=' },
           { name: '查看/设置MAC', content: 'AT+MAC=' },
           { name: '设置鉴权', content: 'AT+AUTH=' },
@@ -665,14 +666,15 @@ setInterval(function(){
           { name: '发射功率', content: 'AT+TXPOWER=' },
           { name: '最小通信间隔', content: 'AT+MINI_INTERVAL=' },
           { name: '最大通信间隔', content: 'AT+MAX_INTERVAL=' },
-          { name: '获取服务UUID', content: 'AT+SERVUUID' },
-          { name: '获取特征UUID', content: 'AT+CHARUUID' },
+          { name: '查看服务UUID', content: 'AT+SERVUUID' },
+          { name: '查看特征UUID', content: 'AT+CHARUUID' },
           { name: '恢复出厂设置', content: 'AT+SETTING=' },
         ];
 
-        // 判断分组是否为 AT 专用分组 (不显示 HEX 复选框，且强制走 AT 通道)
-        function isAtGroup(group) {
-          return group && group.name === 'BLE-UNO AT指令集';
+        // 判断是否为 AT 指令 (不允许 HEX 复选框，且强制走 AT 通道)
+        function isAt(item) {
+          const content = item && (item.content || item.value);
+          return content && (content === 'AT' || content.startsWith('AT+'));
         }
 
         // ========== STK500 协议常量 (固件上传) ==========
@@ -726,7 +728,7 @@ setInterval(function(){
         function addAtLog(dataBytes, isReceive = true) {
           let direction = isReceive ? '←' : '→';
           let colorClass = isReceive ? 'text-info' : 'text-primary';
-          let prefix = '<span class="at-log-prefix">[AT]</span> ';
+          let prefix = '<span class="at-log-prefix">FFE2[AT]</span> ';
           let newmsg = prefix;
           if (toolOptions.logType.includes('hex')) {
             let dataHex = [];
@@ -1085,6 +1087,7 @@ setInterval(function(){
         function addLog(data, isReceive = true) {
           let classname = isReceive ? 'text-success' : 'text-primary';
           let form = isReceive ? '←' : '→';
+          let prefix = '<span class="at-log-prefix">FFE1</span> ';
           let newmsg = '';
           if (toolOptions.logType.includes('hex')) {
             let dataHex = [];
@@ -1100,7 +1103,7 @@ setInterval(function(){
           if (toolOptions.logType.includes('ansi'))
             newmsg += ansi_up.ansi_to_html(textdecoder.decode(Uint8Array.from(data)));
           let time = toolOptions.showTime ? formatDate(new Date()) + '&nbsp;' : '';
-          const template = `<div><span class="${classname}">${time}${form}</span><br>${newmsg}</div>`;
+          const template = `<div><span class="${classname}">${time}${form}</span> ${prefix}<br>${newmsg}</div>`;
           const serialLogs = document.getElementById('serial-logs');
           let tempNode = document.createElement('div');
           tempNode.innerHTML = template;
@@ -1111,7 +1114,7 @@ setInterval(function(){
         function updateConnectionUI() {
           if (bleConnected && bleDevice) {
             const devName = bleDevice.name || '未知设备';
-            statusDiv.innerHTML = `<div class="alert alert-success" role="alert">✅ 已连接: <span class="ble-device-name">${escapeHtml(devName)}</span><br>数据特征: ffe1 | AT特征: ffe2</div>`;
+            statusDiv.innerHTML = `<div class="alert alert-success" role="alert">✅ 已连接: <span class="ble-device-name">${escapeHtml(devName)}</span><br>数据通道: FFE1 | AT指令通道: FFE2</div>`;
             connectToggleBtn.textContent = '断开BLE设备';
             connectToggleBtn.classList.remove('btn-primary');
             connectToggleBtn.classList.add('btn-danger');
@@ -1143,7 +1146,7 @@ setInterval(function(){
         function loadQuickSendList() {
           let saved = localStorage.getItem('quickSendList');
           if (saved) quickSendList = JSON.parse(saved);
-          else quickSendList = [{ name: 'BLE-UNO AT指令集', list: DEFAULT_AT_COMMANDS.map((cmd) => ({ ...cmd })) }];
+          else quickSendList = [{ name: 'BLE-UNO/BLENANO/NL-16', list: DEFAULT_AT_COMMANDS.map((cmd) => ({ ...cmd })) }];
           const quickSelect = document.getElementById('serial-quick-send');
           quickSelect.innerHTML = '';
           quickSendList.forEach((item, idx) => {
@@ -1162,19 +1165,18 @@ setInterval(function(){
           let idx = document.getElementById('serial-quick-send').value;
           if (!quickSendList[idx]) return;
           currQuickSend = quickSendList[idx];
-          const isAt = isAtGroup(currQuickSend);
           const container = document.getElementById('serial-quick-send-content');
           container.innerHTML = '';
           currQuickSend.list.forEach((item) => {
             // AT 分组不显示 HEX 复选框，且强制 hex = false
-            const hexCheckboxHtml = isAt
-              ? ''
-              : `<input class="form-check-input flex-shrink-0 align-self-center" type="checkbox" ${item.hex ? 'checked' : ''}>`;
+            const hexCheckboxHtml = isAt(item)
+              ? 'style="display: none;"'
+              : item.hex ? 'checked' : '';
             container.innerHTML += `<div class="d-flex p-1 border-bottom quick-item">
               <button type="button" class="btn btn-sm btn-outline-secondary me-1 quick-remove"><i class="bi bi-x"></i></button>
               <input class="form-control form-control-sm me-1" placeholder="发送内容,双击改名" value="${escapeHtml(item.content)}">
               <button class="flex-shrink-0 me-1 align-self-center btn btn-secondary btn-sm quick-send" title="${escapeHtml(item.name)}">${escapeHtml(item.name)}</button>
-              ${hexCheckboxHtml}
+              <input class="form-check-input flex-shrink-0 align-self-center" type="checkbox" ${hexCheckboxHtml}>
             </div>`;
           });
         }
@@ -1200,8 +1202,7 @@ setInterval(function(){
             }
             if (curr.classList.contains('quick-send')) {
               let item = currQuickSend.list[index];
-              const isAt = isAtGroup(currQuickSend);
-              if (isAt) {
+              if (isAt(item)) {
                 // AT 分组：强制文本模式，走 AT 通道
                 await sendATMessage(item.content);
               } else {
@@ -1234,7 +1235,14 @@ setInterval(function(){
             const parentDiv = curr.closest('.quick-item');
             if (!parentDiv) return;
             const index = Array.from(parentDiv.parentNode.children).indexOf(parentDiv);
-            if (curr.type === 'text') currQuickSend.list[index].content = curr.value;
+            if (curr.type === 'text') {
+              currQuickSend.list[index].content = curr.value;
+              const checkbox = curr.nextElementSibling.nextElementSibling;
+              if (checkbox && checkbox.tagName === 'INPUT' && checkbox.type === 'checkbox') {
+                checkbox.style.display = isAt(curr) ? 'none' : '';
+                currQuickSend.list[index].hex = false;
+              }
+            }
             if (curr.type === 'checkbox') currQuickSend.list[index].hex = curr.checked;
             saveQuickList();
           });

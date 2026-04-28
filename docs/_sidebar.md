@@ -35,7 +35,7 @@
     - [摇杆模块](/zh-cn/ph2.0_sensors/base_input_module/rocker_module/rocker_module_zh-cn.md)
     - [触摸矩阵键盘V3.0](zh-cn/ph2.0_sensors/base_input_module/matrix_keyboard_module_v3/matrix_keyboard_module_v3.md)
     - [触摸钢琴V2.0](/zh-cn/ph2.0_sensors/base_input_module/touch_piano/touch_piano.md)
-    - [mini-joystick手柄](/zh-cn/ph2.0_sensors/base_input_module/mini_joystick/mini_joystick_zh-cn.md)
+    - [mini-joystick手柄](/zh-cn/ph2.0_sensors/base_input_module/mini-joystick/mini-joystick_zh-cn.md)
     - [自发电无线开关](/zh-cn/gallery.md)
   
   - 传感器
