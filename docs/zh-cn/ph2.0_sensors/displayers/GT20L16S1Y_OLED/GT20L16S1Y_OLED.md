@@ -2,15 +2,13 @@
 
 ## 0.96寸OLED实物图
 
-<img title="" src="picture/0.96OLED-Front-view.png" alt="" style="zoom:150%;">
+![](./picture/0.96OLED-Front-view.jpg)
 
 ## 1.3寸OLED实物图
 
-<img src="picture/1.3OLED-Front-view.jpg" title="" alt="loading-ag-321" style="zoom:80%;">
+![](picture/1.3OLED-Front-view.jpg)
 
 ## 概述
-
-SSD1315-0.96-OLED与SH1106-0.96-OLED驱动方式兼容。
 
 0.96寸oled和1.3寸oled使用SH1106，SH1106是一款单芯片CMOSOLED/PLED驱动器,带有控制器,用于有机/聚合物发光二极管点阵图形显示系统。SH1106由132个段组成,64个公共端可支持132×64的最大显示分辨率。它专为共阴极型OLED面板而设计。SH1106嵌入了对比度控制,显示RAM振荡器和高效的DC-DC转换器,减少了外部元件的数量和功耗。
 
@@ -60,11 +58,12 @@ SSD1315-0.96-OLED与SH1106-0.96-OLED驱动方式兼容。
 
 ### 0.96寸OLED
 
-<img title="" src="picture/0.96OLED.png" alt="" style="zoom:80%;">
+![](picture/0.96OLED.png)
 
 ### 1.3寸OLED
 
-<img title="" src="picture/1.3OLED.png" alt="" style="zoom:50%;">
+![](picture/0.96OLED.png)
+<img title="" src="picture/1.3OLED.png">
 
 ## 接线示例
 
