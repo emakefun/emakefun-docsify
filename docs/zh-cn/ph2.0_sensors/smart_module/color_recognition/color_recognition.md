@@ -71,9 +71,11 @@ void loop() {
 
 ## Mind+图形化示例
 
-<a href="zh-cn/ph2.0_sensors/smart_module/color_recognition/emakefun-em_color_sensor_tcs34725-thirdex-V0.0.1.mpext" download>点击下载Mind+库</a>
+mind+ 软件arduino、esp32库为同一个，使用时，在用户库输入以下链接：https://gitee.com/emakefun_midplus_lib/color-sensor
 
-<a href="zh-cn/ph2.0_sensors/smart_module/color_recognition/color_sensor_TCS34725_get_color.mp" download>点击下载Mind+示例</a>
+[点击查看导入方法](https://mindplus.dfrobot.com.cn/extensions-user-libraries)
+
+[点击下载Mind+案例](https://gitee.com/emakefun_midplus_lib/color-sensor/releases/download/V1.0.0/TCS34725-NLCS11%E9%A2%9C%E8%89%B2%E8%AF%86%E5%88%AB%E4%BC%A0%E6%84%9F%E5%99%A8Mind%20%E7%A4%BA%E4%BE%8B.zip)
 
 ## Micro:Bit示例程序
 
