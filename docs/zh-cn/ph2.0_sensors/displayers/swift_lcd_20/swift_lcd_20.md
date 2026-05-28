@@ -48,7 +48,73 @@ SWIFT-LCD-20显示屏模块是一款**2.0英寸**全彩TFT LCD显示屏模块，
 
 ![机械尺寸图](picture/dimension_drawing.png)
 
-## ESP32 Arduino 使用示例
+## Arduino 基础示例程序
+
+### Arduino uno 示例
+
+#### 接线
+
+| 显示屏模块  | Arduino uno引脚  |
+| ---------- | ---------------- |
+| CS         | 10               |
+| DC         | 9                |
+| SDA        | 11               |
+| SCL        | 13               |
+| V          | 5V               |
+| G          | GND              |
+
+> 注意：Arduino Uno 的硬件 SPI 引脚是固定的，SCK（时钟）必须接 13，MOSI（数据）必须接 11，无法通过软件修改。本示例采用硬件 SPI 模式，因此 SCL 接 D13、SDA 接 D11。
+
+#### 示例程序
+
+<a href="zh-cn/ph2.0_sensors/displayers/swift_lcd_20/swift_lcd_20_arduino_uno_example.zip" download>点击下载Arduino uno示例程序</a>
+
+### ESP32 示例
+
+#### 接线
+
+| 显示屏模块  | ESP32引脚  |
+| ---------- | ---------- |
+| CS         | 14         |
+| DC         | 15         |
+| SDA        | 16         |
+| SCL        | 17         |
+| V          | 5V         |
+| G          | GND        |
+
+#### 示例程序
+
+<a href="zh-cn/ph2.0_sensors/displayers/swift_lcd_20/swift_lcd_20_esp32_example.zip" download>点击下载ESP32示例程序</a>
+
+### 依赖库安装
+
+1. **打开 Arduino IDE 库管理器**
+
+   - 菜单栏：**工具** → **管理库...**
+   - 快捷键：`Ctrl+Shift+I`（Windows/Linux）或 `Cmd+Shift+I`（Mac）
+
+2. **搜索并安装**
+
+   - 在搜索框中输入：`Adafruit ST7789`
+   - 找到`Adafruit ST7735 and ST7789 Library by Adafruit` 库
+   - 选择版本 `1.11.0`
+   - 点击 **安装** 按钮
+
+    ![在库管理中搜索 Adafruit ST7789](picture/install_adaftuit_st7789_library.png)
+
+3. **安装依赖库**
+
+   - 当出现依赖库安装对话框时，选择 **全部安装**
+
+    ![安装依赖确认对话框](picture/install_dependencies_dialog.png)
+
+### 示例显示效果
+
+将示例程序烧录到主板之后，给主板通电，等待几秒后，可以看到SWIFT-LCD-20显示屏模块上会显示"Hello World!"字样，如下图
+
+![示例显示效果图](picture/operational_effect1.png)
+
+## ESP32 Arduino LVGL库使用示例
 
 ### 接线
 
@@ -61,19 +127,34 @@ SWIFT-LCD-20显示屏模块是一款**2.0英寸**全彩TFT LCD显示屏模块，
 | V          | 5V     |
 | G          | GND    |
 
-### 下载程序
+### 示例程序
 
-下载后解压用ArduinoIDE打开swift_lcd_20_example.ino文件，主板选择ESP32
-
-<a href="zh-cn/ph2.0_sensors/displayers/swift_lcd_20/swift_lcd_20_example.zip" download>示例程序下载</a>
+<a href="zh-cn/ph2.0_sensors/displayers/swift_lcd_20/swift_lcd_20_esp32_lvgl_example.zip" download>示例程序下载</a>
 
 ### 依赖库安装
 
-1. 打开库管理，安装相应库文件
-2. 安装**lvgl** by kisvegabor，版本**9.2.2**
-3. 安装**GFX Library for Arduino** by Moon On，版本**1.6.3**
+1. **打开 Arduino IDE 库管理器**
 
-![依赖库安装](picture/dependency_library_installation.png)
+   - 菜单栏：**工具** → **管理库...**
+   - 快捷键：`Ctrl+Shift+I`（Windows/Linux）或 `Cmd+Shift+I`（Mac）
+
+2. **搜索并安装**
+
+    - 安装 **lvgl** 库
+
+        - 在搜索框中输入：`lvgl`
+        - 找到`lvgl by kisvegabor` 库
+        - 选择版本 `9.2.2`
+        - 点击 **安装** 按钮
+
+    - 安装 **GFX** 库
+
+        - 在搜索框中输入：`GFX Library for Arduino`
+        - 找到`GFX Library for Arduino by Moon On` 库
+        - 选择版本 `1.6.3`
+        - 点击 **安装** 按钮
+
+    ![依赖库安装](picture/dependency_library_installation.png)
 
 ### 示例显示效果
 
