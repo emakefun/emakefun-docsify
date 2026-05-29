@@ -85,30 +85,31 @@ SWIFT-LCD-20显示屏模块是一款**2.0英寸**全彩TFT LCD显示屏模块，
 #### 示例程序
 
 ```c++
-#include <Adafruit_ST7789.h>
-#include <SPI.h>
+#include <Adafruit_ST7789.h>  // ST7789 显示屏驱动库
+#include <SPI.h>              // SPI 通信库
 
 namespace {
-constexpr uint8_t kDisplayDcPin = 9;
-constexpr uint8_t kDisplayCsPin = 10;
+constexpr uint8_t kDisplayDcPin = 9;   // 数据/命令选择引脚 DC
+constexpr uint8_t kDisplayCsPin = 10;  // 片选引脚 CS
 
-constexpr uint32_t kTextSize = 3;
+constexpr uint32_t kTextSize = 3;  // 文字大小
 
-constexpr uint16_t kScreenWidth = 240;
-constexpr uint16_t kScreenHeight = 320;
+constexpr uint16_t kScreenWidth = 240;   // 屏幕宽度（像素）
+constexpr uint16_t kScreenHeight = 320;  // 屏幕高度（像素）
 
+// 创建显示对象，参数依次为 硬件SPI指针、CS引脚、DC引脚、复位引脚(-1表示不使用)
 Adafruit_ST7789 g_display(&SPI, kDisplayCsPin, kDisplayDcPin, -1);
 }  // namespace
 
 void setup() {
-  SPI.begin();
+  SPI.begin();  // 初始化硬件 SPI（Uno 引脚 SCK=13, MOSI=11 固定）
 
-  g_display.init(kScreenWidth, kScreenHeight);
-  g_display.setRotation(2);
-  g_display.fillScreen(ST77XX_BLACK);
-  g_display.setTextSize(kTextSize);
-  g_display.setTextColor(ST77XX_WHITE);
-  g_display.print("Hello World!");
+  g_display.init(kScreenWidth, kScreenHeight);  // 初始化显示屏（宽240，高320）
+  g_display.setRotation(2);                     // 旋转显示方向（2=180°）
+  g_display.fillScreen(ST77XX_BLACK);           // 屏幕背景填充为黑色
+  g_display.setTextSize(kTextSize);             // 设置文字大小
+  g_display.setTextColor(ST77XX_WHITE);         // 设置文字颜色为白色
+  g_display.print("Hello World!");              // 在默认光标(0,0)处显示文字
 }
 
 void loop() {
@@ -159,32 +160,34 @@ void loop() {
 #### 示例程序
 
 ```c++
-#include <Adafruit_ST7789.h>
-#include <SPI.h>
+#include <Adafruit_ST7789.h>  // ST7789 驱动库
+#include <SPI.h>              // SPI 通信库
 
 namespace {
-constexpr auto kDisplaySclkPin = GPIO_NUM_17;
-constexpr auto kDisplayMosiPin = GPIO_NUM_15;
-constexpr auto kDisplayDcPin = GPIO_NUM_14;
-constexpr auto kDisplayCsPin = GPIO_NUM_12;
+constexpr auto kDisplaySclkPin = GPIO_NUM_17;  // SPI时钟引脚 SCK
+constexpr auto kDisplayMosiPin = GPIO_NUM_15;  // SPI数据引脚 MOSI(SDA)
+constexpr auto kDisplayDcPin = GPIO_NUM_14;    // 数据/命令选择引脚 DC
+constexpr auto kDisplayCsPin = GPIO_NUM_12;    // 片选引脚 CS
 
-constexpr uint32_t kTextSize = 3;
+constexpr uint32_t kTextSize = 3;  // 文字大小
 
-constexpr uint16_t kScreenWidth = 240;
-constexpr uint16_t kScreenHeight = 320;
+constexpr uint16_t kScreenWidth = 240;   // 屏幕宽度（像素）
+constexpr uint16_t kScreenHeight = 320;  // 屏幕高度（像素）
 
+// 创建显示对象，参数依次为 硬件SPI指针、CS引脚、DC引脚、复位引脚(-1表示不使用)
 Adafruit_ST7789 g_display(&SPI, kDisplayCsPin, kDisplayDcPin, -1);
 }  // namespace
 
 void setup() {
+  // 初始化SPI总线，参数依次为 SCK引脚、MISO引脚(-1未用)、MOSI引脚、SS引脚(-1未用)
   SPI.begin(kDisplaySclkPin, -1, kDisplayMosiPin, -1);
 
-  g_display.init(kScreenWidth, kScreenHeight);
-  g_display.setRotation(2);
-  g_display.fillScreen(ST77XX_BLACK);
-  g_display.setTextSize(kTextSize);
-  g_display.setTextColor(ST77XX_WHITE);
-  g_display.print("Hello World!");
+  g_display.init(kScreenWidth, kScreenHeight);  // 初始化显示屏（宽240，高320）
+  g_display.setRotation(2);                     // 旋转显示方向（2=180°）
+  g_display.fillScreen(ST77XX_BLACK);           // 屏幕背景填充为黑色
+  g_display.setTextSize(kTextSize);             // 设置文字大小
+  g_display.setTextColor(ST77XX_WHITE);         // 设置文字颜色为白色
+  g_display.print("Hello World!");              // 在默认光标(0,0)处显示文字
 }
 
 void loop() {
