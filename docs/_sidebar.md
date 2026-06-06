@@ -166,7 +166,7 @@
     - [ble-uno](zh-cn/arduino_products/uno/ble-uno/ble_uno.md)
     - [maker-uno](zh-cn/arduino_products/uno/maker-uno/maker_uno.md)
     - [PH2.0传感器扩展板](zh-cn/arduino_products/uno/sensorkit/SensorKit.md)
-    - [motor_driver_board](zh-cn/arduino_products/uno/motor_driver_board/MotorDriverBoard.md)
+    - [motor_driver_board](zh-cn/arduino_products/uno/motor_driver_board/motor_driver_board.md)
     - [hummer-bot](zh-cn/arduino_products/uno/hummer-bot/hummer-bot.md)
     - [panther-tank](zh-cn/arduino_products/uno/panther_tank/panther_tank.md)
     - [传感器套件介绍](/zh-cn/)

@@ -74,11 +74,11 @@ arduino uno, ble-uno 3.0,  ble-uno4.2  ble-uno5.3 四款产品对比表格
 * RX TX: 串口收据收发指示灯
 * L 为 arduino的13引脚blink灯
 
-# ble-uno驱动安装
+## ble-uno驱动安装
 
 ble-uno的usb采用的是兼容Arduino的官方串口驱动，所以安装驱动的方法和官方Arduino Uno驱动是一致的.
 
-## ble-uno通过Arduion IDE上传程序
+### ble-uno通过Arduion IDE上传程序
 
 ble-uno烧写的为最新Arduino Uno官方Bootloader所以需要使用IDE 1.8.8版本以上来烧写程序
 请前往 [Arduino官网](https://www.arduino.cc/en/Main/Software) 载最新IDE
@@ -91,9 +91,9 @@ ble-uno烧写的为最新Arduino Uno官方Bootloader所以需要使用IDE 1.8.8�
 
 [**手机上传程序**](https://github.com/nulllab-org/arduino_ble_flash_demo)
 
-# ble-uno和电子设备连接
+### ble-uno和电子设备连接
 
-## ble-uno和安卓手机连接
+#### ble-uno和安卓手机连接
 
 1) 打开ble控制程序<a href="zh-cn/arduino_products/uno/ble-uno/example/ble_contorl_led/ble_contorl_led.ino" download>ble_control_led.ino</a>主板上Link（引脚13）上的LED灯程序
 
@@ -124,7 +124,7 @@ void loop() {
 }
 ```
 
-2) 安卓或则IOS从设置中是无法连接使用的，因为手机设置都是只能连接经典蓝牙兼容蓝牙耳机，蓝牙麦克风等外设，不能连接低功耗蓝牙。安卓手机（android4.2系统版本以上）安装[BleToolsTest](https://github.com/nulllaborg/BleTools/raw/master/NulllabBlutooth/app/release/BleToolsTest.apk) 可以参考开源[Android源代码](https://github.com/nulllaborg/BleTools)  (注意需要打开蓝牙，和定位权限)如下图操作）
+1) 安卓或则IOS从设置中是无法连接使用的，因为手机设置都是只能连接经典蓝牙兼容蓝牙耳机，蓝牙麦克风等外设，不能连接低功耗蓝牙。安卓手机（android4.2系统版本以上）安装[BleToolsTest](https://github.com/nulllaborg/BleTools/raw/master/NulllabBlutooth/app/release/BleToolsTest.apk) 可以参考开源[Android源代码](https://github.com/nulllaborg/BleTools)  (注意需要打开蓝牙，和定位权限)如下图操作）
 
 | 打开手机定位                                              | 允许BLE测试工具定位权限                                   |
 | --------------------------------------------------------- | --------------------------------------------------------- |
@@ -136,15 +136,15 @@ void loop() {
 | ------------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
 | ![android_app_test1](image/android_app_test1.jpg) | ![android_app_test2](image/android_app_test2.jpg) | ![android_app_test1-1](image/android_app_test1-1.jpg) |
 
-4) 我们选择“SK-KEYPRESSED”,点击后如图3.1.9我们可以看到有一个“写入”按键，点击即可进入，我们点击“红色框”即可输入想发送的数据，输入完成后点击“发送”即可将数据发出去
+1) 我们选择“SK-KEYPRESSED”,点击后如图3.1.9我们可以看到有一个“写入”按键，点击即可进入，我们点击“红色框”即可输入想发送的数据，输入完成后点击“发送”即可将数据发出去
 
 |                                                   |                                                   |
 | ------------------------------------------------- | ------------------------------------------------- |
 | ![android_app_test3](image/android_app_test3.jpg) | ![android_app_test4](image/android_app_test4.jpg) |
 
-5) 点击发送字符串"on"后，打开ArduinoIDE的串口监视器上打印 turn on led，同时观察ble-uno上的L灯点亮，代表app蓝牙控制主板上的L灯成功，同样的方法发送字符串“off”后，ble-uno上的L灯会熄灭。到此我们安卓手机蓝牙测试完成。
+1) 点击发送字符串"on"后，打开ArduinoIDE的串口监视器上打印 turn on led，同时观察ble-uno上的L灯点亮，代表app蓝牙控制主板上的L灯成功，同样的方法发送字符串“off”后，ble-uno上的L灯会熄灭。到此我们安卓手机蓝牙测试完成。
 
-## ble-uno和苹果手机/电脑/平板连接
+#### ble-uno和苹果手机/电脑/平板连接
 
 1) 在APP store 中搜索LightBlue,下载软件LightBlue RExplorer，并打开。
 
@@ -152,21 +152,21 @@ void loop() {
 | ----------------------------------------- | ----------------------------------------- |
 | ![ios_app_test1](image/ios_app_test1.png) | ![ios_app_test2](image/ios_app_test2.png) |
 
-2) 安装APP后，打开APP扫描到ble-uno,并连接
+1) 安装APP后，打开APP扫描到ble-uno,并连接
 
 |                                           |                                           |
 | ----------------------------------------- | ----------------------------------------- |
 | ![ios_app_test3](image/ios_app_test3.jpg) | ![ios_app_test4](image\ios_app_test4.jpg) |
 
-4) 选择字符类型，并点击Write  new value，输入字符即可给ble-uno发送数据。
+1) 选择字符类型，并点击Write  new value，输入字符即可给ble-uno发送数据。
 
 |                                           |                                           |                                           |
 | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
 | ![ios_app_test5](image/ios_app_test5.jpg) | ![ios_app_test6](image/ios_app_test6.jpg) | ![ios_app_test7](image/ios_app_test7.jpg) |
 
-5) 点击done后会发送字符串"on"后，打开ArduinoIDE的串口监视器上打印 turn on led，同时观察ble-uno上的L灯点亮，代表app蓝牙控制主板上的L灯成功，同样的方法发送字符串“off”后，ble-uno上的L灯会熄灭。到此我们IOS蓝牙测试完成。
+1) 点击done后会发送字符串"on"后，打开ArduinoIDE的串口监视器上打印 turn on led，同时观察ble-uno上的L灯点亮，代表app蓝牙控制主板上的L灯成功，同样的方法发送字符串“off”后，ble-uno上的L灯会熄灭。到此我们IOS蓝牙测试完成。
 
-## ble-uno和win10蓝牙连接
+#### ble-uno和win10蓝牙连接
 
 笔记本电脑win10的设置里面蓝牙也无法在设置里面直接和ble-uno连接的，它只能连接经典蓝牙，去微软官方应用商城下载Bluetooth LE Explorer
 
@@ -178,9 +178,9 @@ void loop() {
 <https://github.com/Microsoft/BluetoothLEExplorer>
 当然这是一个非常麻烦的事情，假如不是必要的话，强烈建议使用2块ble-uno设备来完成你的想法，详细参考后面章节。
 
-# AT指令介绍
+## AT指令介绍
 
-## AT指令集
+### AT指令集
 
 ble-uno的AT指令可通过Arduino自带的硬件串口0（RX）、1 (TX）控制，波特率支持9600、19200、38400、57600、115200。ble-uno串口默认波特率为115200bps。
 
@@ -215,7 +215,7 @@ AT指令还可以通过直连TypeC数据线直连控制和APP的为0xFFE2的char
 |23 | AT+SETTING | 恢复出厂系统设置,带参数 | M/S |  |
 | 24 | AT+SLEEP（暂未实现） | 设置睡眠模式 | M/S |  |
 
-## AT指令集详细说明
+### AT指令集详细说明
 
 1、测试指令
 
@@ -385,7 +385,7 @@ AT+CON=d0:44:7a:9e:e4:e4直接连接Mac地址为d0:44:7a:9e:e4:e4的设备
 | -------------------- | -------------------------- | ----------------------------------------------------------- |
 | AT+SETTING=< Param > | +SETTING=< Param ><br />OK | DEFAULT恢复出厂设置 <br> PARI_DEFAULT清除配对信息，密码信息 |
 
-## 开发说明
+### 开发说明
 
 ble-uno最核心的功能就是蓝牙转串口透传功能，所以所谓Arduino蓝牙编程，其实就是对arduino的串口(Serial)进行读写操作我们编程时需要注意两点
 1、ble-nano的MTU为67即单包蓝牙数据最带为64Byte，所以超过64个字节的时候，arudino发送时需要分包发送。
@@ -398,7 +398,7 @@ Serial.write(data.c_str(), 20);
 delay(100);  // 必须要延时 100ms以上
 ```
 
-## AT指令测试
+### AT指令测试
 
 ble-uno支持三种AT指令配置方式：
 
@@ -443,13 +443,13 @@ void loop() {
 }
 ```
 
-3) 手机App配置AT指令步骤
+1) 手机App配置AT指令步骤
 
 | 选择AT命令的characterisitics                       | 点击开始通知                                       | 勾选增加新行                                       |
 | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
 | ![location_permissions1](./image/app_at_cmd_1.jpg) | ![location_permissions1](./image/app_at_cmd_2.jpg) | ![location_permissions1](./image/app_at_cmd_3.jpg) |
 
-## 两个ble-uno主从通讯测试
+### 两个ble-uno主从通讯测试
 
 在很多应用我们需要两个ble-uno和来完成自己构想。如下有两种经典的方式来完成两个ble-uno之间的通信。
 
@@ -508,7 +508,7 @@ void loop() {
 }
 ```
 
-2) 从机程序如下<a href="zh-cn/arduino_products/uno/ble-uno/example/ble-uno_communication/slave/slave.ino" download>slave</a>
+1) 从机程序如下<a href="zh-cn/arduino_products/uno/ble-uno/example/ble-uno_communication/slave/slave.ino" download>slave</a>
 
 ```c
 String ble_data;
@@ -541,6 +541,10 @@ void loop() {
 ```
 
 成功后，我们可以看到从机的L灯每一秒闪烁一次。(如果显示不出效果，请主、从机都断下电)
+
+## 使用CodexPad-S10手柄控制外设
+
+演示如何使用CodexPad-S10手柄进行控制直流电机、编码电机、舵机等外设，您可以点此链接查看详细说明：[点击查看详细说明](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ble_uno.zh-CN.md#codexpad-s10手柄控制示例ble-uno开发板示例说明)。
 
 ## 常见问题FAQ
 

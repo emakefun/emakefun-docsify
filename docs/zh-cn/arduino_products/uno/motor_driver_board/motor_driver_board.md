@@ -298,6 +298,10 @@ MsTimer2::start();                                                      /*启动
 
 蓝牙或者wifi模块请使用数据透传模块，连接到arduino的硬件串口引脚上（0-RXD，1-TXD）
 
+### 使用CodexPad-S10手柄控制外设
+
+演示如何使用CodexPad-S10手柄控制直流电机、编码电机、舵机等外设，您可以点此链接查看详细说明：[点击查看详细说明](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ble_uno.zh-CN.md#codexpad-s10手柄控制示例ble-uno开发板示例说明)。
+
 ## 图像化编程块说明
 
 ### MotorDriverBoard 编程图形块
@@ -386,7 +390,7 @@ MsTimer2::start();                                                      /*启动
 
 ![download](mblock/download.png)
 
-3. 积木描述
+1. 积木描述
 
 | 序号  | 积木                                                        | 说明                                                       |
 |-----|:----------------------------------------------------------|----------------------------------------------------------|
