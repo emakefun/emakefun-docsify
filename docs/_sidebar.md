@@ -187,6 +187,7 @@
   - [esp32-devkit-32e](zh-cn/esp32/esp32_devkit_32e/esp32_devkit_32e.md)
   - [esp32-uno](zh-cn/esp32/esp32-uno/esp32-uno.md)
   - [esp32-iot-board](zh-cn/esp32/esp32_iot_board/esp32_iot_board.md)
+  - [maker-esp32-mini](zh-cn/esp32/maker-esp32-mini/maker-esp32-mini.md)
   - [maker-esp32](zh-cn/esp32/maker_esp32/maker_esp32.md)
   - [maker-esp32-pro](zh-cn/esp32/maker_esp32_pro/maker_esp32_pro.md)
   - [esp32-cam V2](zh-cn/esp32/ESP32_CAM/ESP32_CAM.md)
@@ -197,7 +198,7 @@
   - [AI-VOX3](/zh-cn/esp32/ai-vox3/ai-vox3_zh-cn.md)
   - [AI-VOX3扩展板](https://dcnmu33qx4fc.feishu.cn/docx/Cf49d141voj8JAxNyTJcW5zTned)
   - [ESP32-S3-EXPANSION BOARD](zh-cn/esp32/esp32-s3-expansion_board/esp32-s3-expansion_board.md)
-  - [maker-esp32_mini](zh-cn/esp32/maker_esp32_mini/maker_esp32_mini.md)
+
 - 树莓派
   
   - [树莓派传感器扩展板](zh-cn/raspberrypi/raspberrypi_sensor_board/raspberrypi_sensor_board.md)

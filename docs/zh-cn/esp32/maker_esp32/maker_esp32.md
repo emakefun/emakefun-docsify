@@ -50,7 +50,7 @@
 
 ## 引脚说明
 
-![引脚图](picture/esp32_pic.png)
+![引脚图](C:\Users\陈庭佩\Pictures\Screenshots\esp32_pic.png)
 
 <font color="red" size="5">**注:**</font>  
 
@@ -220,5 +220,4 @@ Maker-ESP32 可直接驱动双极性步进电机，将 42 步进电机的四根�
 [适用于 VS Code 的 ESP-IDF 扩展 - - — ESP-IDF Extension for VSCode latest 文档](https://docs.espressif.com/projects/vscode-esp-idf-extension/zh_CN/latest/index.html#)
 
 [Getting Started - - — Arduino ESP32 latest documentation](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html)
-
 
