@@ -300,7 +300,13 @@ MsTimer2::start();                                                      /*启动
 
 ### 使用CodexPad-S10手柄控制外设
 
-演示如何使用CodexPad-S10手柄控制直流电机、编码电机、舵机等外设，您可以点此链接查看详细说明：[点击查看详细说明](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ble_uno.zh-CN.md#codexpad-s10手柄控制示例ble-uno开发板示例说明)。
+#### 基础示例
+
+演示了如何使用CodexPad-S10手柄单独控制某一类外设，覆盖直流电机、编码电机和舵机的控制演示。您可以点此链接查看详细说明：[点击查看详细说明](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ble_uno_base.zh-CN.md#codexpad-s10手柄控制示例ble-uno开发板基础示例说明)。
+
+#### 麦克纳姆轮小车示例
+
+麦克纳姆轮小车示例演示如何使用CodexPad-S10手柄遥控麦克纳姆轮小车，包含全向移动、速度调节、云台俯仰和夹子开合等完整功能。您可以点此链接查看详细说明：[点击查看详细说明](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ble_uno_car.zh-CN.md#codexpad-s10手柄控制示例ble-uno开发板驱动麦克纳姆轮小车示例说明)。
 
 ## 图像化编程块说明
 
