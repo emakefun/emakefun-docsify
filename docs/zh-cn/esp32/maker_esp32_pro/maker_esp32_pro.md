@@ -174,7 +174,7 @@
 
 ### 使用CodexPad-S10手柄控制外设
 
-演示如何使用CodexPad-S10手柄进行控制直流电机、编码电机、舵机等外设，您可以点此链接查看详细说明：[点击查看详细说明](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_maker_esp32_pro.zh-CN.md#codexpad-s10手柄控制示例maker-esp32-pro开发板示例说明)。
+演示如何使用CodexPad-S10手柄进行控制直流电机、编码电机、舵机等外设，您可以点此链接查看详细说明：[点击查看详细说明](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_maker_esp32_pro_base.zh-CN.md#codexpad-s10手柄控制示例maker-esp32-pro开发板基础示例说明)。
 
 ## ESP32系列连接使用PS3蓝牙无线手柄
 
