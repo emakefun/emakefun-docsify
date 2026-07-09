@@ -76,6 +76,7 @@
     - [LTR553](/zh-cn/)
     - [VL53L1X FOV激光测距](zh-cn/ph2.0_sensors/sensors/laser_ranging_sensor/laser_ranging_sensor.md)
     - [PM2.5粉尘传感器](zh-cn/ph2.0_sensors/sensors/pm2.5_dust_sensor/pm2.5_dust_sensor.md)
+    - [AQ01空气质量传感器模块](zh-cn/ph2.0_sensors/sensors/aq01/aq01.md)
   
   - 执行器
 
@@ -97,7 +98,7 @@
     - [小型雾化器](/zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer_zh-cn.md)
     - [MOS管驱动模块](/zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module_zh-cn.md)
     - [A4988步进电机驱动模块](/zh-cn/ph2.0_sensors/actuators/A4988/A4988_zh-cn.md)
-    
+
   - 显示器
 
     - [LED灯](zh-cn/ph2.0_sensors/displayers/led_module/LED.md)
