@@ -86,6 +86,7 @@
     - [空心杯610电机风扇](/zh-cn/ph2.0_sensors/actuators/610_coreless_motor_fan/610_coreless_motor_fan_zh-cn.md)
     - [R300C电机风扇](/zh-cn/ph2.0_sensors/actuators/R300C/R300C_zh-cn.md)
     - [继电器模块](/zh-cn/ph2.0_sensors/actuators/relay_module/relay_model_zh-cn.md)
+    - [2路继电器模块](/zh-cn/ph2.0_sensors/actuators/2_relay_module/2_relay_model_zh-cn.md)
     - [红外发射模块](/zh-cn/ph2.0_sensors/actuators/infrared_emitter/infrared_emitter_zh-cn.md)
     - [激光发射模块](/zh-cn/ph2.0_sensors/actuators/laser_emitter/laser_emitter_zh-cn.md)
     - [振动马达](zh-cn/ph2.0_sensors/actuators/vibrationMotorModule/vibrationMotorModule.md)
@@ -98,9 +99,9 @@
     - [小型雾化器](/zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer_zh-cn.md)
     - [MOS管驱动模块](/zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module_zh-cn.md)
     - [A4988步进电机驱动模块](/zh-cn/ph2.0_sensors/actuators/A4988/A4988_zh-cn.md)
-
+  
   - 显示器
-
+  
     - [LED灯](zh-cn/ph2.0_sensors/displayers/led_module/LED.md)
     - [LCD1602显示屏](zh-cn/ph2.0_sensors/displayers/lcd1602/LCD1602.md)
     - [TM1650四位数码管](zh-cn/ph2.0_sensors/displayers/tm1650/TM1650.md)
@@ -116,7 +117,7 @@
     - [SWIFT-LCD-20显示屏模块](zh-cn/ph2.0_sensors/displayers/swift_lcd_20/swift_lcd_20.md)
   
   - 智能模块
-
+  
     - [BMP280大气压传感器](zh-cn/ph2.0_sensors/smart_module/atmospheric_pressure_sensor/atmospheric_pressure_sensor.md)
     - [TCS34725颜色识别](/zh-cn/ph2.0_sensors/smart_module/color_recognition/TCS34725_zh-cn.md)
     - [NLCS11颜色识别](/zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
@@ -144,7 +145,7 @@
     - [毫米波雷达模块](/zh-cn/)
     - [GPS模块](/zh-cn/)
     - [AI语音助手](zh-cn/ph2.0_sensors/smart_module/ai_voice_assistant/ai_voice_assistant.md)
-
+  
 - 电源模块
   
   - [5V5A电源模块(PM01)](/zh-cn/power_module/PM01/PM01.md)
