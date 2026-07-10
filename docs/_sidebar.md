@@ -96,7 +96,8 @@
     - [MD40四路编码驱动模块](zh-cn/ph2.0_sensors/actuators/md40/md40.md)
     - [小型雾化器](/zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer_zh-cn.md)
     - [MOS管驱动模块](/zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module_zh-cn.md)
-  
+    - [A4988步进电机驱动模块](/zh-cn/ph2.0_sensors/actuators/A4988/A4988.md)
+    
   - 显示器
 
     - [LED灯](zh-cn/ph2.0_sensors/displayers/led_module/LED.md)
