@@ -112,6 +112,20 @@
               }
             });
           },
+          function (hook, vm) {
+            hook.afterEach(function (html) {
+              var container = document.createElement('div');
+              container.innerHTML = html;
+              container.querySelectorAll('img').forEach(function (img) {
+                var src = img.getAttribute('src');
+                if (src && !src.startsWith('http') && !src.startsWith('/') && !src.startsWith('data:')) {
+                  var base = vm.route.file.replace(/[^\/]+$/, '');
+                  img.setAttribute('src', base + src);
+                }
+              });
+              return container.innerHTML;
+            });
+          },
         ],
       };
     </script>

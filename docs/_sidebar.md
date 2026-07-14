@@ -86,6 +86,7 @@
     - [空心杯610电机风扇](/zh-cn/ph2.0_sensors/actuators/610_coreless_motor_fan/610_coreless_motor_fan_zh-cn.md)
     - [R300C电机风扇](/zh-cn/ph2.0_sensors/actuators/R300C/R300C_zh-cn.md)
     - [继电器模块](/zh-cn/ph2.0_sensors/actuators/relay_module/relay_model_zh-cn.md)
+    - [2路继电器模块](/zh-cn/ph2.0_sensors/actuators/2_relay_module/2_relay_model_zh-cn.md)
     - [红外发射模块](/zh-cn/ph2.0_sensors/actuators/infrared_emitter/infrared_emitter_zh-cn.md)
     - [激光发射模块](/zh-cn/ph2.0_sensors/actuators/laser_emitter/laser_emitter_zh-cn.md)
     - [振动马达](zh-cn/ph2.0_sensors/actuators/vibrationMotorModule/vibrationMotorModule.md)

@@ -2,7 +2,7 @@
 
 ## 概述
 
-AI-VOX3是一款专为AI语音交互应用设计的高性能嵌入式开发板。 其核心采用ESP32-S3-R8芯片，并板载16MB Flash存储器 。集成了麦克风和功放喇叭、SD卡、电源管理等硬件资源，支持快速开发与灵活扩展。支持本地语音唤醒、指令识别和语音合成，可广泛应用于智能家居、教育设备和物联网终端等领域。同时配套AI-VOX3扩展板与MD40电机驱动板，助力开发者基于板载资源快速构建语音AI产品原型。
+AI-VOX3是一款专为AI语音交互应用设计的高性能嵌入式开发板。 其核心采用ESP32-S3-R8芯片，并板载16MB Flash存储器 。集成了麦克风和功放喇叭、SD卡、电源管理等硬件资源，支持快速开发与灵活扩展。支持本地语音唤醒、指令识别和语音合成，可广泛应用于智能家居、教育设备和物联网终端等领域。同时配套AI-VOX3扩展板与MD40电机驱动板，助力开发者基于板载资源快速构建语音产品原型。
 
 **核心特性：**
 
@@ -11,11 +11,11 @@ AI-VOX3是一款专为AI语音交互应用设计的高性能嵌入式开发板�
 - Wi-Fi + Bluetooth 5 (BLE)
 - 板载ES8311音频编解码器 + 3W功放
 - 支持LCD/OLED 显示扩展
-- Type-C供电支持锂电池充电
+- Type-C 供电支持锂电池充电
 
 **配套扩展：**
 
-- AI-VOX3扩展板：扩展更多功能接口
+- AI-VOX3 扩展板：扩展更多功能接口
 - MD40 电机驱动板：驱动4个电机
 
 ---
@@ -50,7 +50,7 @@ AI-VOX3是一款专为AI语音交互应用设计的高性能嵌入式开发板�
 - **主频：** 高达 240MHz
 - **内置存储：** 512KB SRAM + 384KB ROM
 - **无线：** Wi-Fi 802.11 b/g/n + Bluetooth 5 (BLE)
-- **数据手册：**<a href="https://documentation.espressif.com/esp32-s3_datasheet_cn.pdf" target="_blank">ESP32-S3规格书</a> | <a href="https://documentation.espressif.com/esp32-s3_technical_reference_manual_cn.pdf" target="_blank">ESP32-S3应用参考手册</a>
+- **数据手册：** <a href="zh-cn/esp32/ai-vox3/docs/esp32-s3_datasheet_cn.pdf" target="_blank">ESP32-S3 数据手册</a> | <a href="zh-cn/esp32/ai-vox3/docs/esp32-s3_technical_reference_manual_cn.pdf" target="_blank">应用参考手册</a>
 
 #### Flash 存储
 
@@ -403,7 +403,7 @@ void loop() {
 
 ### 供电方式
 
-#### Type-C接口
+#### Type-C 接口
 
 - **电压：** 5V
 - **电流：** 最高 1.2A
@@ -517,6 +517,7 @@ void loop() {
 
 </details>
 
+
 ---
 
 ## LED 指示灯
@@ -623,8 +624,8 @@ void loop() {
 
 **解决方案：**
 
-1. 检查供电：确认Type-C或锂电池已连接
-2. 检查电池电压：锂电池电压应 > 3.5V
+1. 检查供电：确认 Type-C 或锂电池已连接
+2. 检查电池电压：锂电池电压应 > 3.3V
 3. 长按 PWR 按键 3 秒强制开机
 4. 尝试更换 Type-C 线缆或充电器
 
@@ -690,35 +691,35 @@ void loop() {
 
 ### 芯片数据手册
 
-- <a href="https://documentation.espressif.com/esp32-s3_datasheet_cn.pdf" target="_blank">ESP32-S3规格书</a>
-- <a href="https://documentation.espressif.com/esp32-s3_technical_reference_manual_cn.pdf" target="_blank">ESP32-S3应用参考手册</a>
-- <a href="zh-cn/esp32/ai-vox3/docs/ES8311.PDF" target="_blank">ES8311音频编解码器</a>
+- <a href="https://documentation.espressif.com/esp32-s3_datasheet_cn.pdf" target="_blank">ESP32-S3 技术规格书</a>
+- <a href="https://documentation.espressif.com/esp32-s3_technical_reference_manual_cn.pdf" target="_blank">ESP32-S3 技术参考手册</a>
+- <a href="zh-cn/esp32/ai-vox3/docs/ES8311.PDF" target="_blank">ES8311 音频编解码器</a>
 - <a href="zh-cn/esp32/ai-vox3/docs/NS4150B.pdf" target="_blank">NS4150B D类功放</a>
 - <a href="zh-cn/esp32/ai-vox3/docs/ETA6093.pdf" target="_blank">ETA6093 充电管理芯片</a>
 - <a href="zh-cn/esp32/ai-vox3/docs/ST7789V.pdf" target="_blank">ST7789V LCD 驱动芯片</a>
 - <a href="zh-cn/esp32/ai-vox3/docs/WS2812B.pdf" target="_blank">WS2812B RGB LED</a>
 
-### 3D模型
+### 3D 模型
 
-<a href="zh-cn/esp32/ai-vox3/ai-vox3_3d.zip" download>点击下载3d模型文件</a>
+[下载 3D 模型 (ZIP)](./ai-vox3_3d.zip)
 
 ### 下载全部资料
 
-<a href="zh-cn/esp32/ai-vox3/ai-vox3_resource.zip" download>点击下载全部资料压缩包</a>
+[全套资料压缩包](Resource%20Package.zip)
 
 ---
 
 ## 应用案例
 
-### 小智AI
+### 小智 AI 语音助手
 
-AI-VOX3可用于制作小智AI语音助手，支持语音对话、音乐播放、智能家居控制等功能。
+AI-VOX3 可用于制作小智 AI 语音助手，支持语音对话、音乐播放、智能家居控制等功能。
 
-https://dcnmu33qx4vc.feishu.cn/docx/VXHzdBYH0ohpNAxw2ifc3P2InBe
+[查看教程](https://dcnmu33qx4vc.feishu.cn/docx/VXHzdBYH0ohpNAxw2ifc3P2InBe)
 
-### CodexPad-S10手柄控制
+### CodexPad-S10 手柄控制
 
-使用CodexPad-S10手柄控制AI-VOX3控制MD40来驱动，直流电机、编码电机、舵机等外设。
+使用 CodexPad-S10 手柄控制直流电机、编码电机、舵机等外设。
 
 [查看详细教程](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ai_vox3_base.zh-CN.md)
 
@@ -728,7 +729,6 @@ https://dcnmu33qx4vc.feishu.cn/docx/VXHzdBYH0ohpNAxw2ifc3P2InBe
 
 | 版本 | 日期 | 修改内容 |
 |------|------|---------|
-| V1.0 | 2026-06-25 | 初始版本 |
-| V1.1 | 2026-7-10 | 增加分模块详细介绍 |
+| V1.1 | 2026-06-25 | 当前版本 |
 
 ---
