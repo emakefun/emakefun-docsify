@@ -1,50 +1,38 @@
 # ESP32 C2 MQTT 物联网无线模块
 
-## 实物图
-
-![esp32_c2_mqtt](picture/ESP32_C4_MQTT_Module.jpg)
+![esp32_c2_mqtt](picture/ESP32_C2_MQTT.jpg)
 
 ## 概述
 
-esp32-c2-mqtt无线模块是emakefun公司基于乐鑫科技的wifi芯片ESP8684基础上重新研发的串口转wifi的物联网模块，该模块采用AT配置方式来支持wifi无线通信，AT指令全面兼容[乐鑫官方AT指令库](https://docs.espressif.com/projects/esp-at/zh_CN/latest/esp32c2/AT_Command_Set/)，全部封装成scratch，mixly，Makecode图形化编程块支持arduino，micro:bit。 总而言之，这个模块就像一个无线网卡，但它不仅仅能连接Wi-Fi，还能理解和使用物联网中常用的通信方式，让您的设备轻松接入互联网，实现**远程控制和数据交换**。
+esp32-c2-mqtt无线模块是emakefun公司基于乐鑫科技的wifi芯片ESP8684基础上重新研发的串口转wifi的物联网模块，该模块采用AT配置方式来支持wifi无线通信，AT指令全面兼容[乐鑫官方AT指令库](https://docs.espressif.com/projects/esp-at/zh_CN/latest/esp32c2/AT_Command_Set/)，全部封装成mind+，mixly，Makecode图形化编程块用来支持arduino uno，micro:bit。 总而言之，这个模块就像一个无线网卡，但它不仅能连接Wi-Fi，还能方便理解和使用物联网中常用的通信方式，让您的设备轻松接入互联网，实现**远程控制和数据交换**。
+
+![原理图](picture/esp32_c2_mqtt_schematic.png)
+
+<a href="zh-cn/ph2.0_sensors/smart_module/esp32_c2_mqtt/esp32_c2_mqtt_schematic.pdf" target="_blank">点击此处查看原理图</a>
 
 ## 模块特点及参数
 
 **特点**
 
-- 内置低功率 32 位 CPU：可以兼作应用处理器
-
+- 内置低功率32位RISC-V CPU：可以兼作应用处理器
 - 内置协议：TCP/IP 协议栈
-
 - 加密类型：WPA WPA2/WPA2–PSK
-
 - 支持乐鑫官方AT标准指令集
-
 - 支持连接标准MQTT协议和TTL串口到无线的应用
 
 **参数**
 
 - 工作电压：5V
-
 - 接口速率：115200 bps
-
 - 无线频率：2.4GHz
-
 - 接口类型：PH2.0-4Pin (G V TX RX)
-
 - 无线模式：IEEE802.11b/g/n
-
-- SRAM：160KB
-
-- 外置Flash：4MB
-
+- SRAM：272KB
+- 内置Flash：2MB
 - 支持低功耗：<240mA
-
-- 模块尺寸：4 * 2.1cm
-
+- 模块尺寸：38.4 * 22.4mm
 - 安装方式：M4螺钉螺母固定
-
-- LED指示灯：**Link网络连接指示灯（该灯常亮表示Wifi连接成功）和MQTT服务器连接指示灯（该灯常亮表示MQTT连接成功）**
+- LED指示灯：**Link网络连接指示灯（常亮表示Wifi连接成功）和MQTT服务器连接指示灯（常亮表示MQTT连接成功）**
 
 ## 硬件接口
 
@@ -59,7 +47,9 @@ esp32-c2-mqtt无线模块是emakefun公司基于乐鑫科技的wifi芯片ESP8684
 
 ### 机械尺寸图
 
-![尺寸图](picture/size.png)
+![尺寸图](picture/esp32_c2_mqtt_assembly.png)
+
+<a href="zh-cn/ph2.0_sensors/smart_module/TCS34725/esp32_c2_mqtt_3d.zip" download>点击下载3d文件</a>
 
 ## 功能说明
 

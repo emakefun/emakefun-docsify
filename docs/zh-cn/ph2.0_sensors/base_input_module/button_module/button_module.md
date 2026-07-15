@@ -71,7 +71,7 @@ void loop() {
 
 #### Mixly示例程序
 
-![mixly_demo](./picture/mixly_demo.png)
+![mixly_demo](./picture/button_mixly_demo.png)
 
 <a href="zh-cn/ph2.0_sensors/base_input_module/button_module/button_mixly_demo.zip" download>下载示例程序</a>
 

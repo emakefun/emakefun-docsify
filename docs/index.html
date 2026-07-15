@@ -100,14 +100,14 @@
           crossChapterText: true,
         },
         customPageFooter: {
-          copyrightYear: '2024',
+          copyrightYear: '2026',
           copyrightOwnerName: 'emakefun文档中心',
           copyrightOwnerLink: 'https://github.com/emakefun/emakefun-docsify/',
         },
         plugins: [
           function (hook, vm) {
             hook.ready(function () {
-              if (vm.route.path === '/emakefun-docsify/') {
+              if (vm.route.path === '/') {
                 location.href = '#/zh-cn/';
               }
             });

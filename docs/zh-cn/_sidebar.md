@@ -119,7 +119,7 @@
   - 智能模块
 
     - [BMP280大气压传感器](zh-cn/ph2.0_sensors/smart_module/atmospheric_pressure_sensor/atmospheric_pressure_sensor.md)
-    - [TCS34725颜色识别](/zh-cn/ph2.0_sensors/smart_module/color_recognition/TCS34725_zh-cn.md)
+    - [TCS34725颜色识别](/zh-cn/ph2.0_sensors/smart_module/TCS34725/TCS34725_zh-cn.md)
     - [NLCS11颜色识别](/zh-cn/ph2.0_sensors/smart_module/color_sensor_nlcs11/color_sensor_nlcs11.md)
     - [QMC5883L电子指南针罗盘模块](zh-cn/ph2.0_sensors/smart_module/compass/compass.md)
     - [DS1302时钟模块](zh-cn/ph2.0_sensors/smart_module/ds1302/ds1302_rtc.md)
