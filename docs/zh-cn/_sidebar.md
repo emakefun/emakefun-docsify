@@ -1,6 +1,10 @@
 <!-- docs/_sidebar.md -->
 
-![emakefun](/zh-cn/_media/favicon.jpg)
+<center>
+
+# [emakefun文档中心](/zh-cn/)
+
+</center>
 
 - [首页](/zh-cn/homepage.md)
 
