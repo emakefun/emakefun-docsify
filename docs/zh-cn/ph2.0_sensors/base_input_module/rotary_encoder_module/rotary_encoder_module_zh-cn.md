@@ -11,17 +11,14 @@
 ## 模块参数
 
 - 供电电压：3~5V
-
 - 连接方式：PH2.0 5pin
-
 - 模块尺寸：38.4x22.4mm
-
 - 安装方式：M4螺钉兼容乐高插孔
 
-| 引脚名称 | 描述                          |
-| :------- | :--------------------------- |
-| G        | GND                          |
-| V        | 3~5V                       |
+| 引脚名称 | 描述                           |
+| :------- | :----------------------------- |
+| G        | GND                            |
+| V        | 3~5V                           |
 | A        | A端口输出引脚，对应A相输出     |
 | B        | B端口输出引脚，对应B相输出     |
 | D        | D端口输出引脚,对应带的按键输出 |
@@ -66,19 +63,15 @@
 | :------ | :--------- |
 | VCC     | V          |
 | GND     | G          |
-| IO 2    | A          |
-| IO 3    | B          |
-| IO 4    | D          |
+| IO 5    | A          |
+| IO 6    | B          |
+| IO 7    | D          |
 
 <a href="zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/Key.zip" download>点击此处下载案例程序</a>
 
 打开Arduino IDE，下载所需要的库，**Encoder**。
 
 <img src="picture/burn_in_program.jpg" alt="picture/burn_in_program.jpg" style="zoom:50%;" />
-
-
-
-
 
 打开案例程序，烧录完成后，打开串口助手，设置波特率为9600，点击“打开串口”按钮，等待程序运行。
 
