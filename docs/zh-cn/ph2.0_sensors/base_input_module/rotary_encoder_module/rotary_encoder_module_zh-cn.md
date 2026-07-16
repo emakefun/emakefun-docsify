@@ -70,23 +70,23 @@
 | IO 3    | B          |
 | IO 4    | D          |
 
-<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/a21-master.zip" download>点击此处下载zip库</a>
+<a href="zh-cn/ph2.0_sensors/base_input_module/rotary_encoder_module/Key.zip" download>点击此处下载案例程序</a>
 
-下载好上述zip库后，打开Arduino IDE，选择项目->导入库->添加.ZIP库，选择刚下载的zip库，等待安装完成。
+打开Arduino IDE，下载所需要的库，**Encoder**。
 
-![picture/include_lib.jpg](picture/include_lib.jpg)
+<img src="picture/burn_in_program.jpg" alt="picture/burn_in_program.jpg" style="zoom:50%;" />
 
-导入库完成后，点击文件->示例->a21->a21-ec11-example，将示例程序烧录到Arduino上。
 
-![picture/burn_in_program.jpg](picture/burn_in_program.jpg)
 
-烧录完成后，打开串口助手，设置波特率为115200，点击“打开串口”按钮，等待程序运行。
 
-按下按钮则串口显示'Button pressed'，按下按钮后旋转编码器，串口显示旋转的次数。
+
+打开案例程序，烧录完成后，打开串口助手，设置波特率为9600，点击“打开串口”按钮，等待程序运行。
+
+串口显示旋转的次数。按下按键显示Key pressed, encoder reset to 0,并且计数值清0.
 
 顺时针转1级则加1，逆时针转1级则减1。一圈为15级。
 
-![picture/uart.jpg](picture/uart.jpg)
+<img src="picture/uart.jpg" alt="picture/uart.jpg" style="zoom:50%;" />
 
 ## Mixly示例程序
 
