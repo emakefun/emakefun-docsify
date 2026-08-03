@@ -34,7 +34,7 @@
 
 ### 开发板参数
 
-- 采用乐鑫原装 ESP32-S3-WROOM-1-N16N8模组
+- 采用乐鑫原装 ESP32-S3-WROOM-1-N16R8模组
 - 芯片内置384KB ROM，512KB SRAM，自带8M OPI PSRAM，外挂16M SPI FLASH
 - Type-C接口，usb hub芯片为CH334P， usb转串口芯片为沁恒的CH343P
 - 输入电压：5V 1A
