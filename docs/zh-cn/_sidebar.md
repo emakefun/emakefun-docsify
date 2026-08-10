@@ -12,7 +12,7 @@ emakefun文档中心
   
   - [软件下载](/zh-cn/software/software_download.zh-CN.md)
   - [ArduinoIDE2.0介绍](/zh-cn/software/arduino_ide/arduino_ide.zh-CN.md)
-  - [BlockCode编程](https://app.blockcode.fun/)
+  - [BlockCode编程](/zh-cn/software/arduino_ide/blockcode_zh-CN.md)
   - [Mixly2.0使用介绍](/zh-cn/software/mixly/mixly.md)
   - [Mind+使用介绍](/zh-cn/software/mind_plus/mindplus.zh-CN.md)
   - [Thonny使用介绍](/zh-cn/software/thonny/thonny.zh-CN.md)
