@@ -22,11 +22,11 @@ IO:bit扩展板是一款功能强大的microbit扩展板，其引出microbit主�
 
 IO:bit扩展板与microbit主板
 
-![IO:bit](picture/IObit.png)
+![IO:bit](picture/IObit.jpg)
 
 ## 硬件接口介绍
 
-![硬件接口](picture/Annotation_diagram.png)
+![硬件接口](picture/Annotation_diagram.jpg)
 
 ### IO:bit 引脚介绍
 
