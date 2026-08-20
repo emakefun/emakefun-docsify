@@ -33,7 +33,7 @@
 
 ![infrared_receiver](./picture/infrared_receiver_assembly.png)
 
-<a href="zh-cn/ph2.0_sensors/actuators/infrared_receiver/infrared_receiver_3d.zip" download>点击下载2D和3D文件</a>
+<a href="zh-cn/ph2.0_sensors/sensors/infrared_receiver/infrared_receiver_3d.zip" download>点击下载2D和3D文件</a>
 
 ## Arduino IDE实验
 
