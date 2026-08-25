@@ -33,6 +33,8 @@
 
 ![机械尺寸](picture/2.png)
 
+<a href="zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/8x8_dot_matrix_3d.zip" download>下载8x8点阵3D文件</a>
+
 ## Arduino IDE示例程序
 
 <a href="zh-cn/ph2.0_sensors/displayers/8x8_dot_matrix/dot_matrix_module.zip" download>点击下载Arduino IDE示例程序</a>

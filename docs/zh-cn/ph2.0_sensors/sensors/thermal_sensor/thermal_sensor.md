@@ -34,6 +34,8 @@
 
 ![机械尺寸图](picture/thermal_sensor_assembly.png)
 
+<a href="zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor_3d.zip" download>下载NTC热敏传感器3D文件</a>
+
 ## Arduino示例程序
 
 <a href="zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor.zip" download>下载示例程序</a>

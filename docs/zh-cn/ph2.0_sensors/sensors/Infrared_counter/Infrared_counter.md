@@ -20,6 +20,8 @@
 
 ## 尺寸图
 
+<a href="zh-cn/ph2.0_sensors/sensors/Infrared_counter/infrared_counter_3d.zip" download>下载红外计数传感器3D文件</a>
+
 ## Arduino示例程序
 
 ```c++

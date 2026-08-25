@@ -35,6 +35,8 @@
 
 ![机械尺寸图](picture/water_droplets_sensor_assembly.png)
 
+<a href="zh-cn/ph2.0_sensors/sensors/water_droplets_sensor/water_droplets_sensor_3d.zip" download>下载雨滴传感器3D文件</a>
+
 ## Arduino示例程序
 
 ```c++
