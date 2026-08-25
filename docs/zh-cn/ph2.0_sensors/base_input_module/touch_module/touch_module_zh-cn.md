@@ -32,7 +32,7 @@
 
 ![机械尺寸图](picture/touch_module_assembly.png)
 
-<a href="zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module_3d.zip" download>下载触摸模块3D文件</a>
+<a href="zh-cn/ph2.0_sensors/base_input_module/touch_module/touch_module_3D.zip" download>下载触摸模块3D文件</a>
 
 ## 示例
 

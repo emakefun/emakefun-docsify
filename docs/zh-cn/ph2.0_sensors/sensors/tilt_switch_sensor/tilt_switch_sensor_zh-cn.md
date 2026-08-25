@@ -33,7 +33,7 @@
 
 ![机械尺寸图](picture/tilt_switch_sensor_assembly.png)
 
-<a href="zh-cn/ph2.0_sensors/sensors/tilt_switch_sensor_3d.zip" download>下载倾斜开关3D文件</a>
+<a href="zh-cn/ph2.0_sensors/sensors/tilt_switch_sensor/tilt_switch_sensor_3d.zip" download>下载倾斜开关3D文件</a>
 
 ## Arduino示例程序
 

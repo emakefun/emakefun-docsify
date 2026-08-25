@@ -48,7 +48,7 @@
 
 ![原理图](picture/touch_piano_assembly.png)
 
-<a href="zh-cn/ph2.0_sensors/base_input_module/touch_piano/piano_module_3d.zip" download>**下载触摸钢琴模块平面和3D文件**</a>
+<a href="zh-cn/ph2.0_sensors/base_input_module/touch_piano/piano_module_3D.zip" download>**下载触摸钢琴模块平面和3D文件**</a>
 
 ## Arduino IDE示例程序
 
