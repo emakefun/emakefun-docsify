@@ -10,9 +10,9 @@
 
 ## 原理图
 
-<a href="zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor_schematic.pdf" target="_blank">查看原理图</a>
+<a href="zh-cn/ph2.0_sensors/sensors/thermal_sensor/NTC_Thermal_Sensor.pdf" target="_blank">查看原理图</a>
 
-![原理图](picture/thermal_sensor_schematic.png)
+![原理图](picture/thermal_sensor_schematic.jpg)
 
 ## 模块参数
 
