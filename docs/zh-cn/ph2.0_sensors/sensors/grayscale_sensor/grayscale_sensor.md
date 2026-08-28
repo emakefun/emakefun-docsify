@@ -34,6 +34,8 @@
 
 ![机械尺寸图](picture/grayscale_sensor_assembly.png)
 
+<a href="zh-cn/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor_3d.zip" download>下载灰度传感器3D文件</a>
+
 ## Arduino示例程序
 
 <a href="zh-cn/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.zip" download>下载示例程序</a>

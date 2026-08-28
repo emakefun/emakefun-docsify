@@ -28,6 +28,8 @@
 
 ![8](picture/8.png)
 
+<a href="zh-cn/ph2.0_sensors/displayers/rgb_module/rgb_module_3d.zip" download>下载RGB三色灯3D文件</a>
+
 ## micro:bit示例程序
 
 <a href="https://makecode.microbit.org/_XjfaiRCi5b5E" target="_blank">动手试一试</a>

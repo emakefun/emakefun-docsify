@@ -31,6 +31,8 @@
 
 ![机械尺寸图](picture/human_body_sensor_assembly.png)
 
+<a href="zh-cn/ph2.0_sensors/sensors/human_body_sensor/human_body_sensor_3d.zip" download>下载人体红外热释电传感器3D文件</a>
+
 ## Arduino示例程序
 
 <a href="zh-cn/ph2.0_sensors/sensors/grayscale_sensor/grayscale_sensor.zip" download>下载示例程序</a>

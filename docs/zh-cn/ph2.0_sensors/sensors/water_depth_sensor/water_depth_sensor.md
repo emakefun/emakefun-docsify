@@ -32,6 +32,8 @@
 
 ![机械尺寸图](picture/water_depth_sensor_assembly.png)
 
+<a href="zh-cn/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor_3d.zip" download>下载水位检测传感器3D文件</a>
+
 ## Arduino示例程序
 
 <a href="zh-cn/ph2.0_sensors/sensors/water_depth_sensor/water_depth_sensor.zip" download>下载示例程序</a>

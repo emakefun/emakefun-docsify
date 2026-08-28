@@ -37,6 +37,8 @@
 
 ![尺寸图](picture/rgb_light_ring_size.png)
 
+<a href="zh-cn/ph2.0_sensors/displayers/ws2812b/ws2812b_3d.zip" download>下载12位RGB灯环3D文件</a>
+
 ## Arduino Uno示例
 
 ```c++

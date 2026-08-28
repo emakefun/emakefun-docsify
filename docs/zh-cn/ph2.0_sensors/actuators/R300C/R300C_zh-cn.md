@@ -68,7 +68,7 @@
 
 ![picture/r300c_assembly.png](picture/r300c_assembly.png)
 
-<a href="zh-cn/ph2.0_sensors/actuators/r300c/r300c_3d.zip" download>下载R300C风扇模块3D文件</a>
+<a href="zh-cn/ph2.0_sensors/actuators/R300C/R300C_3d.zip" download>下载R300C风扇模块3D文件</a>
 
 ## Arduino Uno示例程序
 

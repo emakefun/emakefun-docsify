@@ -32,6 +32,8 @@
 
 ![机械尺寸图](picture/sound_sensor_assembly.png)
 
+<a href="zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor_3d.zip" download>下载声音传感器3D文件</a>
+
 ## Arduino示例程序
 
 <a href="zh-cn/ph2.0_sensors/sensors/sound_sensor/sound_sensor.zip" download>下载示例程序</a>
