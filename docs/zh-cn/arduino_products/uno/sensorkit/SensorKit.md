@@ -4,37 +4,21 @@
 
 ### 1.参数介绍
 
-PH2.0 Sensor Board V3.0 是一套为 Arduino Uno R3主板设计的全部PH2.0防反接扩展板，旨在为您的项目提供可靠防反接传感器接口。
+PH2.0 Sensor Board 是一套为 Arduino Uno R3主板设计的全部PH2.0防反接扩展板，旨在为您的项目提供可靠防反接传感器接口。
 
 - PCB厚度：2mm
-
 - 产品尺寸：58.4 * 53.3mm（裸板长宽）
-
 - 净        重：18.2g
-
 - 输出电压：5V
-
 - 引脚口类型：PH2.0 接口
-  ![picture](picture/sensorkit.png)
+
+![picture](picture/sensorkit.jpg)
 
 ### 2. 引脚介绍
 
-该扩展板包含八个 3pin 接口、四个 4pin 接口、三个 5pin 接口、一个 6pin 接口，两个舵机接口，一个UART接口，一个NRF24L01+接口，二个I2C接口。
+该扩展板包含八个 3pin 接口、四个 4pin 接口、三个 5pin 接口、一个 6pin 接口，两个舵机接口，两个UART接口，一个NRF24L01+接口，三个I2C接口。
 
-![picture2](picture/sensorkit2.png)
-
-| 描述     | 拓展板端口 | 对应端口 | 描述     | 拓展板端口 | 对应端口     |
-| ------ | ----- | ---- | ------ | ----- | -------- |
-| 3Pin接口 | P1    | A3   | 4Pin接口 | P5    | 7，A0     |
-| 3Pin接口 | P2    | A2   | 4Pin接口 | P6    | 8，A1     |
-| 3Pin接口 | P3    | A1   | 4Pin接口 | P7    | 13，12    |
-| 3Pin接口 | P4    | A0   | 4Pin接口 | P8    | 6，5      |
-| 3Pin接口 | P9    | 3    | 5Pin接口 | P14   | 7，A1，A0  |
-| 3Pin接口 | P10   | 4    | 5Pin接口 | P15   | 11，10，9  |
-| 3Pin接口 | P11   | 11   | 5Pin接口 | P16   | 11，2，3   |
-| 3Pin接口 | P12   | 2    | 6Pin接口 | P13   | 10，9，6，5 |
-| 舵机口    |       | 4，12 | I2C口   |       | A5，A4    |
-| UART口  |       |      | SPI口   |       |          |
+![picture2](picture/sensorkit2.jpg)
 
 ## 二：PH2.0 Motor Sensor Board驱动板
 
@@ -48,25 +32,41 @@ PH2.0 Motor Sensor Board是在兼容PH2.0 Sensor Board扩展板的基础上增�
 - 输出电压：5V
 - 引脚口类型：PH2.0 接口
 
-![Motor ](picture/ph20MotorDriverSensorBoard.png)
+![Motor ](picture/ph20MotorDriverSensorBoard.jpg)
 
 ### 2.引脚介绍
 
-该驱动板包含八个 3pin 接口、四个 4pin 接口、三个 5pin 接口、一个 6pin 接口，二个电机接口，四个I2C接口，一个UART接口，一个NRF24L01+接口，16个IO口插针引脚。
+该驱动板包含八个 3pin 接口、四个 4pin 接口、三个 5pin 接口、一个 6pin 接口，二个电机接口，四个I2C接口，两个UART接口，一个NRF24L01+接口，16个IO口插针引脚。
 
-![Motor 2](picture/ph20MotorDriverSensorBoard2.png)
+![Motor 2](picture/ph20MotorDriverSensorBoard2.jpg)
 
-- 8个3pin 接口, P1、P2、P3、P4、P9、P10、P11、P12。 分别为对应Arduino的A3、A2、A1、A0、3、4、11、2。
-- 4个4pin 接口, P5, P6, P7, P8。 分别为6和5, 13和12,8和A1, 7和A0。
-- 3个5pin 接口, P14, P15, P16。 分别为7、A1和A0,   11、10和9，  11、2和3。
-- 1个6pin 接口, P13。 分别为10、9、6和5。
-- 2个直流电机接口。 M1对应5和6，M2对应9和10。
-- 2个4pin I2C接口，2个插针I2C接口。 对应A5、A4。
-- 1个UART接口。
-- 1个SPI接口。
-- 16个IO口插针引脚。
+## 三：接口介绍
 
-## 三：参数对比
+**两板共有接口：**
+
+| 描述 | 拓展板端口 | 对应端口 | 描述 | 拓展板端口 | 对应端口 |
+| --- | --- | --- | --- | --- | --- |
+| 3Pin接口 | P1 | A3 | 4Pin接口 | P5 | 7，A0 |
+| 3Pin接口 | P2 | A2 | 4Pin接口 | P6 | 8，A1 |
+| 3Pin接口 | P3 | A1 | 4Pin接口 | P7 | 13，12 |
+| 3Pin接口 | P4 | A0 | 4Pin接口 | P8 | 6，5 |
+| 3Pin接口 | P9 | 3 | 5Pin接口 | P14 | 7，A1，A0 |
+| 3Pin接口 | P10 | 4 | 5Pin接口 | P15 | 11，10，9 |
+| 3Pin接口 | P11 | 11 | 5Pin接口 | P16 | 11，2，3 |
+| 3Pin接口 | P12 | 2 | 6Pin接口 | P13 | 10，9，6，5 |
+| UART口 | | | SPI口 | | |
+| NRF24L01+口 | | | | | |
+
+**两板差异接口：**
+
+| 接口 | PH2.0 Sensor Board | PH2.0 Motor Sensor Board |
+| --- | --- | --- |
+| 舵机接口 | 2个（4、12） | 无 |
+| 直流电机接口 | 无 | 2个：M1 (5、6) ，  M2 (9、10) |
+| I2C接口 | 3个（A5、A4） | 4个：2个4Pin + 2个插针（A5、A4） |
+| IO口插针引脚 | 无 | 16个 |
+
+## 四：参数对比
 
 | **产品名称**    | PH2.0 Sensor Board                    | PH2.0 Motor Sensor Board              |
 | ----------- | ------------------------------------- | ------------------------------------- |
@@ -81,7 +81,7 @@ PH2.0 Motor Sensor Board是在兼容PH2.0 Sensor Board扩展板的基础上增�
 
 ### 1.相同之处
 
-![1713968719225](./picture/compare.png)
+![1713968719225](./picture/compare.jpg)
 
 ### 2.不同之处
 
@@ -89,11 +89,17 @@ PH2.0 Motor Sensor Board是在兼容PH2.0 Sensor Board扩展板的基础上增�
 
 2. PH2.0 Motor Sensor Board为多功能款，在PH2.0 Sensor Board上增加：IO口排针引脚，I2C引脚，拨动开关，电源指示灯，两个单路1A电流电机接口。适用于连接更多不同传感器需求，同时需要电机驱动的场景。
 
-## 四：场景应用
+## 五：场景应用
 
-### 1.PH2.0 Sensor Board经典使用场景 / PH2.0 Motor Sensor Board小车使用场景
+### 1.PH2.0 Sensor Board经典使用场景 
 
-### 2.PH2.0 Sensor Board 跳线帽使用
+![111](./picture/sensorkit_scene.jpg)
+
+### 2.PH2.0 Motor Sensor Board小车使用场景
+
+![222](./picture/ph20MotorDriverSensorBoard_scene.jpg)
+
+### 3.PH2.0 Sensor Board 跳线帽使用
 
 #### 1.当使用大于5V的电机时，跳线帽短接VIN
 
