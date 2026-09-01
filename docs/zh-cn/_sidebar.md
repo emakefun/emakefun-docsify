@@ -206,7 +206,7 @@ emakefun文档中心
   - [scratch arcade](https://arcade.blockcode.fun/#/zh-cn/intro)
   - [AI-VOX3](/zh-cn/esp32/ai-vox3/ai-vox3_zh-cn.md)
   - [AI-VOX3扩展板](https://dcnmu33qx4fc.feishu.cn/docx/Cf49d141voj8JAxNyTJcW5zTned)
-  - [ESP32-S3-EXPANSION BOARD](zh-cn/esp32/esp32-s3-expansion_board/esp32-s3-expansion_board.md)
+  - [ESP32-S3 扩展板](zh-cn/esp32/esp32-s3-expansion_board/esp32-s3-expansion_board.md)
 
 - 树莓派
   
