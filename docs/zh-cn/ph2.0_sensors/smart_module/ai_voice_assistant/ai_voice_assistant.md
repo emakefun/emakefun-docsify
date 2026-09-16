@@ -22,6 +22,13 @@ AI 语音助手主板基于 **ESP32-S3** 芯片，板载麦克风、扬声器、
 
 > **📖 主板详情**：https://dcnmu33qx4fc.feishu.cn/docx/VXHzdBYH0ohpNAxw2ifc3P2InBe
 
+### 固件烧录
+
+1. 固件下载：[xiaozhi-ai-assistant.bin](https://github.com/nulllaborg/xiaozhi_ai_vox3_ai_smart/releases/download/v2.0.0/xiaozhi-ai-assistant.bin ":ignore")
+2. 打开[在线烧录工具](https://flashy.shenjingnan.com/ ":ignore")
+3. 点击**选择本地固件**，选择下载的 `xiaozhi-ai-assistant.bin` 文件
+4. 点击**开始烧录**，等待烧录完成
+
 ### 网络配置
 
 1.固件烧录完成后，按下 AI 语音助手的 **Power** 按键，进入配网模式。
@@ -38,7 +45,7 @@ AI 语音助手主板基于 **ESP32-S3** 芯片，板载麦克风、扬声器、
 
 ### 设备激活
 
-网络配置好后，登录小智平台 **https://xiaozhi.me/** 进行设备激活。
+网络配置好后，登录小智平台 [**xiaozhi.me**](https://xiaozhi.me/ ":ignore") 进行设备激活。
 
 1. 点击进入【控制台】页面
 2. 进入智能体控制页面，点击页面上的【添加设备】按钮
