@@ -1,6 +1,6 @@
 # AI 语音助手
 
-# 实物图
+## 实物图
 
 ![AI语音助手实物图](images/ai_voice_assistant.png)
 
@@ -13,6 +13,8 @@ AI 语音助手是一款基于虾哥开源项目**小智 AI** 进行二次开发
 用户只需通过简单配置，自定义"语音指令"与"串口指令"的映射关系，即可快速实现语音控制 LED、电机、舵机等多种外设功能，大幅降低智能语音交互的开发门槛。
 
 > **📦 源码仓库**：本产品基于虾哥开源项目小智 AI 进行二次开发，相关源码可访问：https://github.com/nulllaborg/xiaozhi_ai_vox3_ai_smart
+>
+> **💿 固件下载**：[xiaozhi-ai-assistant.bin](https://github.com/nulllaborg/xiaozhi_ai_vox3_ai_smart/releases/download/v2.0.0/xiaozhi-ai-assistant.bin ":ignore")
 
 ## AI-Vox3 主板详情
 
@@ -20,91 +22,20 @@ AI 语音助手主板基于 **ESP32-S3** 芯片，板载麦克风、扬声器、
 
 > **📖 主板详情**：https://dcnmu33qx4fc.feishu.cn/docx/VXHzdBYH0ohpNAxw2ifc3P2InBe
 
-## 编译教程
+### 固件烧录
 
-### 一.固件编译教程
+1. 固件下载：[xiaozhi-ai-assistant.bin](https://github.com/nulllaborg/xiaozhi_ai_vox3_ai_smart/releases/download/v2.0.0/xiaozhi-ai-assistant.bin ":ignore")
+2. 打开[在线烧录工具](https://flashy.shenjingnan.com/ ":ignore")
+3. 点击**选择本地固件**，选择下载的 `xiaozhi-ai-assistant.bin` 文件
+4. 点击**开始烧录**，等待烧录完成
 
-固件编译方法查看小智ai官方文档：https://my.feishu.cn/wiki/Zpz4wXBtdimBrLk25WdcXzxcnNS
+### 网络配置
 
-本教程提供AI-Vox3 主板的编译固件：
-
-### 二.源码编译教程
-
-> 如果你有更改配置的需要，推荐使用源码编译，源码编译需要你有一定的编程基础。以下的两种源码编译方法你都可以使用。
-
-### 编译环境安装
-
-### 1.1 windows 环境下载安装 ESP-IDF 环境，教程参考小智官方文档，要求下载IDF6版本。
-
-> **📖 编译教程**：https://icnynnzcwou8.feishu.cn/wiki/JEYDwTTALi5s2zkGlFGcDiRknXf
-
-### 1.2 下载完 ESP-IDF 环境后，打开桌面上的 ESP-IDF ，进入以下界面。
-
-|          IDF6 环境           | IDF6 PowerShell                                |
-| :--------------------------: | :--------------------------------------------- |
-| ![IDF6环境](images/IDF6.png) | ![IDF6-powershell](images/IDF6_powershell.png) |
-
-### 1.3 访问https://github.com/nulllaborg/xiaozhi_ai_vox3_ai_smart 项目目录，git clone最新版本的源码，在cmd中输入git clone命令，而后在ESP-IDF中输入命令 进入项目目录。
-
-> cd 解压的文件目录
-
-|              clone源码              | 克隆源码                  | 进入目录                             |
-| :---------------------------------: | :------------------------ | :----------------------------------- |
-| ![github](images/github-aivox3.png) | ![](images/git_clone.png) | ![进入目录](images/ai-vox3-IDF6.png) |
-
-## idf.py build编译方法
-
-### 2.1 设置芯片类型
-
-默认的编译芯片是ESP32的，所以一定要输入以下命令把芯片设置为S3
-
-> idf.py set-target esp32s3
-
-![设置芯片类型](images/set-target.png)
-
-### 2.2 更换编译板子类型
-
-默认编译出的固件是面包板的，我们需要更换为NullLab AI Vox3 V3主板,输入 idf.py menuconfig，进入Xiaozhi Assistant选项，选Target Board 进去选择NullLab AI Vox3 V3主板,按键盘的‘S’键保存 然后Esc退出menuconfig.
-
-|               编译选项               | assistant                                  | 选择板子                             |
-| :----------------------------------: | :----------------------------------------- | :----------------------------------- |
-| ![menuconfig](images/menuconfig.png) | ![assistant](images/xiaozhi-assistant.png) | ![assistant](images/targetboard.png) | !   |
-
-### 2.3 开始编译
-
-输入以下命令开始编译
-
-> idf.py build
-
-注意编译时，要先使主板进入下载模式
-
-> 每次给AI-VOX3 烧录程序的时候都需要让AI-VOX3进入到下载模式
->
-> 进入下载模式的操作步骤:
->
-> - 连接Type-C线至电脑 →按住Boot按键 → 短按一次PWR按键 → 继续按住Boot键约1秒后松开→ 板子自动进入下载模式。
->
-> 按键操作时机：确保在开机或复位前提前按住Boot键，并在开机/复位后保持1秒再松开。
-
-## 编译脚本方法（推荐）
-
-> 推荐使用编译脚本进行编译：python ./scripts/build.py nulllab-ai-vox-v3，省去切换开发板配置。 案例所需要的配置都写在了 config.json 文件中，如果你需要更改配置，直接在 config.json 文件中修改即可。
-
-### 3.1.输入编译脚本
-
-> 安装好编译环境后，进入项目，输入以下命令编译固件即可。
-
-> python ./scripts/build.py nulllab-ai-vox-v3、
-
-等待编译完成即可
-
-## 网络配置
-
-### 1.固件烧录完成后，按下 AI 语音助手的 **Power** 按键，进入配网模式。
+1.固件烧录完成后，按下 AI 语音助手的 **Power** 按键，进入配网模式。
 
 ![进入配网](images/in_connect_wifi.jpg)
 
-### 2. 打开手机 WiFi，连接 AI 语音助手发出的对应 WiFi, 在配网页面配置要连接的 WiFi 名称和密码
+2. 打开手机 WiFi，连接 AI 语音助手发出的对应 WiFi, 在配网页面配置要连接的 WiFi 名称和密码
 
 |           配置WIFI           | 连接成功                    |
 | :--------------------------: | :-------------------------- |
@@ -112,59 +43,32 @@ AI 语音助手主板基于 **ESP32-S3** 芯片，板载麦克风、扬声器、
 
 > **🔁 重新配网说明**：将 AI 语音助手重新上电 / 重启，在连接 WiFi 闪烁蓝灯时（即还未连上 WiFi 时），直接按下 **Boot** 按钮然后松开，听到提示音后重新进入 WiFi 配网模式。
 
-## 设备激活
+### 设备激活
 
-网络配置好后，登录小智平台 **https://xiaozhi.me/** 进行设备激活。
+网络配置好后，登录小智平台 [**xiaozhi.me**](https://xiaozhi.me/ ":ignore") 进行设备激活。
 
-### 1. 点击进入【控制台】页面
-
-### 2. 进入智能体控制页面，点击页面上的【添加设备】按钮
-
-### 3. 在弹窗中输入播报的 **6 位数验证码**，点击确定即可激活
-
-### 4. 添加设备后，按下 AI 语音助手的 **Power** 按键，进入语音交互模式。
+1. 点击进入【控制台】页面
+2. 进入智能体控制页面，点击页面上的【添加设备】按钮
+3. 在弹窗中输入播报的 **6 位数验证码**，点击确定即可激活
+4. 添加设备后，按下 AI 语音助手的 **Power** 按键，进入语音交互模式。
 
 |                 添加设备                  | 输入验证码                           |
 | :---------------------------------------: | :----------------------------------- |
 | ![添加设备](images/click_add_devices.png) | ![输入验证码](images/input_code.png) |
 
-## 修改唤醒词
-
-打开桌面上的 ESP-IDF，输入 idf.py menuconfig，进入 Xiaozhi Assistant 配置项进行配置修改，如下图示：选Wake Word Implementation Type, 进去选择Multinet model选项，退出修改下列选项。
-
-- Custom Wake Word：输入拼音，字与字之间用空格分隔，例如： xiao tu dou
-- Custom Wake Word Display：对应中文显示，如： 小土豆
-- Custom Wake Word Threshold (%)：识别阈值，建议15~25，值越小越敏感。
-
-按键盘的‘S’键保存 然后Esc退出menuconfig，重新编译即可。
-
-|            修改唤醒词①            | 修改唤醒词②                       | 修改唤醒词③                       |
-| :-------------------------------: | :-------------------------------- | :-------------------------------- |
-| ![](images/change_wake_word1.png) | ![](images/change_wake_word2.png) | ![](images/change_wake_word3.png) |
-
-## 如何关闭AEC打断功能
-
-ACE打断功能是指，在用户说话时，AI 语音助手会自动停下正在执行的指令，等待用户说话结束后再重新执行新的指令。
-
-### 关闭AEC打断功能步骤
-
-在idf.py menuconfig中进入Xiaozhi Assistant选项，点击Enable AFE Audio Processsing即可关闭，按键盘的‘S’键保存 然后Esc退出menuconfig，重新编译即可。
-
-![AEC打断功能](images/AFE.png)
-
 ## 利用MCP协议控制外设示例
 
 AI 语音助手支持利用 MCP 协议控制外设。
 
-## 知识库配置（重点）
+### 知识库配置（重点）
 
 使用时，需要在小智后台进行相应智能体的**知识库配置**，才能正常使用外设控制指令串口输出功能。
 
-### 关于知识库
+#### 关于知识库
 
 知识库用于存储 **"用户语音指令"** 与 **"串口输出指令"** 之间的映射关系。当小智 AI 识别到用户语音指令后，会查询知识库中是否匹配对应条目，若匹配则通过串口发送相应指令。
 
-### 创建外设控制指令表（Excel）
+#### 创建外设控制指令表（Excel）
 
 新建 Excel 文件，按照以下格式输入外设控制的相应指令，然后保存。
 
@@ -175,7 +79,7 @@ AI 语音助手支持利用 MCP 协议控制外设。
 | 设置电机速度     | dc run speed 100   | self.serial.send | x代表转动速度，其绝对值为速度大小，正负代表旋转方向，速度大小为 0~255，x 默认为 100 |
 | 设置舵机转动角度 | servo set angle 90 | self.serial.send |                                                                                     |
 
-### 新建知识库
+#### 新建知识库
 
 1. 登录小智平台 **xiaozhi.me**
 2. 点击进入【控制台】页面
@@ -197,7 +101,7 @@ AI 语音助手支持利用 MCP 协议控制外设。
 >
 > 本文档包含"外设控制的串口发送指令"内容，当用户提及外设控制时（如打开灯），我不能直接作答，必须在每次对话中调用该工具查询资料后，再调用相应 MCP 功能进行发送相应文本。注意，外设控制必须是在此资料中已有，如若在此资料中匹配不到相应外设控制，则应当回复暂时无法设置此功能。
 
-### 上传指令文档
+#### 上传指令文档
 
 1. 在知识库列表中，找到刚刚创建的知识库，点击【查看】按钮，进入文档上传页面
 2. 点击右上角的【新建文档】按钮
@@ -208,7 +112,7 @@ AI 语音助手支持利用 MCP 协议控制外设。
 | :-------------------------------------------: | :-------------------------------------: | :----------------------------------: | :--------------------------------------: |
 | ![查看知识库](images/knowledge_base_view.png) | ![新建文档](images/upload_document.png) | ![添加文档](images/add_document.png) | ![选择文档](images/add_document_two.png) |
 
-### 关联知识库
+#### 关联知识库
 
 1. 在"控制台 → 智能体"模块页面
 2. 选择 AI 语音助手所在的智能体，点击【配置角色】
@@ -221,7 +125,7 @@ AI 语音助手支持利用 MCP 协议控制外设。
 | :----------------------------------------: | :-------------------------------------: | :-------------------------------------------: |
 | ![配置角色](images/role_configuration.png) | ![添加知识库](images/knowledge_add.png) | ![添加成功](images/add_knowledge_success.png) |
 
-## 串口参数说明
+### 串口参数说明
 
 AI 语音助手通过 PH2.0 串口与外部 MCU（如 Arduino）通信，串口参数如下：
 
@@ -233,11 +137,11 @@ AI 语音助手通过 PH2.0 串口与外部 MCU（如 Arduino）通信，串口�
 
 > **⚠️ 接线注意**：串口接线需遵循 **"交叉连接"** 原则（本设备的 TX 接对端的 RX，本设备的 RX 接对端的 TX），接反会导致指令无法接收。
 
-## Arduino 使用示例
+### Arduino 使用示例
 
 下面通过一个完整的例子，演示如何用 Arduino Uno 接收 AI 语音助手的串口指令，控制 LED 灯、SG90 舵机和 R300C 电机风扇。
 
-### 硬件准备
+#### 硬件准备
 
 | 硬件                              | 数量 |
 | :-------------------------------- | :--- |
@@ -247,12 +151,14 @@ AI 语音助手通过 PH2.0 串口与外部 MCU（如 Arduino）通信，串口�
 | SG90 舵机                         | 1    |
 | R300C 电机风扇                    | 1    |
 
-### 硬件接线
+#### 硬件接线
 
 | 模块              | Arduino 开发板引脚 |
 | :---------------- | :----------------- |
 | AI 语音助手引脚 5 | 12                 |
 | AI 语音助手引脚 6 | 13                 |
+| AI 语音助手 GND   | GND                |
+| AI 语音助手 5V    | 5V                 |
 | LED 灯            | 3                  |
 | SG90 舵机         | 4                  |
 | R300C 电机 INA    | 5                  |
@@ -260,13 +166,13 @@ AI 语音助手通过 PH2.0 串口与外部 MCU（如 Arduino）通信，串口�
 
 ![接线图](images/wiring_diagram.jpg)
 
-### 程序下载与库安装
+#### Arduino 程序下载与库安装
 
-1. 下载并解压示例程序，用 Arduino IDE 打开示例文件
+1. 下载并解压[示例程序](example_ai_voice_assistant.zip ":ignore")，用 Arduino IDE 打开示例文件
 2. 主板选择 **Arduino Uno**
 3. 本程序使用了 `Servo.h`（舵机库）和 `SoftwareSerial.h`（软件串口库），二者均为 Arduino IDE **自带的官方库**，无需额外安装
 
-### Arduino IDE 代码
+#### Arduino IDE 代码
 
 ```cpp
 #include <Servo.h>
@@ -395,11 +301,113 @@ void loop() {
 }
 ```
 
-### 实验结果
+#### 实验结果
 
 > ✅ 配置好 AI 语音助手的知识库，并将示例程序烧录到 Arduino Uno 后，给主板通电，用户即可通过语音发出控制指令。语音助手识别到指令后，会通过串口向 Arduino Uno 发送对应的控制指令（如 `turn on led`），Arduino 接收到指令后进行解析和匹配，最终控制相应的外设执行动作。
 >
 > 例如，对语音助手说"舵机转到 150 度"，语音助手通过串口发送 `servo set angle 150` 指令，Arduino 识别后即控制舵机旋转至 150 度位置。
+
+## 固件编译教程
+
+固件编译方法查看小智ai官方文档：https://my.feishu.cn/wiki/Zpz4wXBtdimBrLk25WdcXzxcnNS
+
+### 编译环境安装
+
+1. windows 环境下载安装 ESP-IDF 环境，教程参考小智官方文档，要求下载IDF6版本。
+
+> **📖 编译教程**：https://icnynnzcwou8.feishu.cn/wiki/JEYDwTTALi5s2zkGlFGcDiRknXf
+
+2. 下载完 ESP-IDF 环境后，打开桌面上的 ESP-IDF ，进入以下界面。
+
+|          IDF6 环境           | IDF6 PowerShell                                |
+| :--------------------------: | :--------------------------------------------- |
+| ![IDF6环境](images/IDF6.png) | ![IDF6-powershell](images/IDF6_powershell.png) |
+
+3. 访问https://github.com/nulllaborg/xiaozhi_ai_vox3_ai_smart 项目目录，git clone最新版本的源码，在cmd中输入git clone命令，而后在ESP-IDF中输入命令 进入项目目录。
+
+> cd 解压的文件目录
+
+|              clone源码              | 克隆源码                  | 进入目录                             |
+| :---------------------------------: | :------------------------ | :----------------------------------- |
+| ![github](images/github-aivox3.png) | ![](images/git_clone.png) | ![进入目录](images/ai-vox3-IDF6.png) |
+
+### 编译脚本方法（推荐）
+
+> 推荐使用编译脚本进行编译：python ./scripts/build.py nulllab-ai-vox-v3，省去切换开发板配置。案例所需要的配置都写在了 main/boards/nulllab-ai-vox-v3/config.json 文件中，如果你需要更改配置，直接在 config.json 文件中修改即可。
+
+#### 输入编译脚本
+
+> 如果你有更改配置的需要，推荐使用源码编译，源码编译需要你有一定的编程基础。
+
+安装好编译环境后，进入项目，输入以下命令编译固件即可。
+
+```bash
+python ./scripts/build.py nulllab-ai-vox-v3
+```
+
+等待编译完成即可。
+
+### idf.py build编译方法
+
+1. 设置芯片类型
+
+默认的编译芯片是ESP32的，所以一定要输入以下命令把芯片设置为S3
+
+```bash
+idf.py set-target esp32s3
+```
+
+![设置芯片类型](images/set-target.png)
+
+2. 更换编译板子类型
+
+默认编译出的固件是面包板的，我们需要更换为NullLab AI Vox3 V3主板,输入 idf.py menuconfig，进入Xiaozhi Assistant选项，选Target Board 进去选择NullLab AI Vox3 V3主板,按键盘的‘S’键保存 然后Esc退出menuconfig.
+
+|               编译选项               | assistant                                  | 选择板子                             |
+| :----------------------------------: | :----------------------------------------- | :----------------------------------- |
+| ![menuconfig](images/menuconfig.png) | ![assistant](images/xiaozhi-assistant.png) | ![assistant](images/targetboard.png) | !   |
+
+3. 开始编译
+
+输入以下命令开始编译
+
+```bash
+idf.py build
+```
+
+注意编译时，要先使主板进入下载模式
+
+> 每次给AI-VOX3 烧录程序的时候都需要让AI-VOX3进入到下载模式
+>
+> 进入下载模式的操作步骤:
+>
+> - 连接Type-C线至电脑 →按住Boot按键 → 短按一次PWR按键 → 继续按住Boot键约1秒后松开→ 板子自动进入下载模式。
+>
+> 按键操作时机：确保在开机或复位前提前按住Boot键，并在开机/复位后保持1秒再松开。
+
+### 修改唤醒词
+
+打开桌面上的 ESP-IDF，输入 idf.py menuconfig，进入 Xiaozhi Assistant 配置项进行配置修改，如下图示：选Wake Word Implementation Type, 进去选择Multinet model选项，退出修改下列选项。
+
+- Custom Wake Word：输入拼音，字与字之间用空格分隔，例如： xiao tu dou
+- Custom Wake Word Display：对应中文显示，如： 小土豆
+- Custom Wake Word Threshold (%)：识别阈值，建议15~25，值越小越敏感。
+
+按键盘的‘S’键保存 然后Esc退出menuconfig，重新编译即可。
+
+|            修改唤醒词①            | 修改唤醒词②                       | 修改唤醒词③                       |
+| :-------------------------------: | :-------------------------------- | :-------------------------------- |
+| ![](images/change_wake_word1.png) | ![](images/change_wake_word2.png) | ![](images/change_wake_word3.png) |
+
+### 如何关闭AEC打断功能
+
+ACE打断功能是指，在用户说话时，AI 语音助手会自动停下正在执行的指令，等待用户说话结束后再重新执行新的指令。
+
+#### 关闭AEC打断功能步骤
+
+在idf.py menuconfig中进入Xiaozhi Assistant选项，点击Enable AFE Audio Processsing即可关闭，按键盘的‘S’键保存 然后Esc退出menuconfig，重新编译即可。
+
+![AEC打断功能](images/AFE.png)
 
 ## 常见问题排查
 
