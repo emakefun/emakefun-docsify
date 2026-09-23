@@ -356,7 +356,7 @@ esp32-c2-mqtt无线模块是emakefun公司基于乐鑫科技的wifi芯片ESP8684
 
 ## Arduino示例程序
 
-<a href="https://gh-proxy.com/https://github.com/emakefun-arduino-library/em_esp_at/archive/refs/tags/v1.0.1.zip" download>点击下载Arduino示例程序</a>
+<a href="https://gh-proxy.com/https://github.com/emakefun-arduino-library/em_esp_at/archive/refs/tags/v1.1.0.zip" download>点击下载Arduino示例程序</a>
 
 ## MicroPython示例程序
 
