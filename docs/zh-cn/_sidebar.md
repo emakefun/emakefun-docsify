@@ -143,6 +143,7 @@ emakefun文档中心
     - [I2C-IO扩展模块](zh-cn/ph2.0_sensors/smart_module/gpio_expansion_board/gpio_expansion_board.md)
     - [I2C级联扩展器](/zh-cn/ph2.0_sensors/smart_module/i2c_cascade_extender/i2c_cascade_extender.md)
     - [RFID-I2C模块](/zh-cn/ph2.0_sensors/smart_module/rfid_mfrc522/rfid_mfrc522.md)
+    - [NFC-PN532模块](/zh-cn/ph2.0_sensors/smart_module/nfc_pn532/nfc_pn532.md)
     - [I2S-MEMS麦克风模块](zh-cn/ph2.0_sensors/smart_module/i2s_mems_mic/i2s_mems_mic.md)
     - [PDM麦克风模块](zh-cn/ph2.0_sensors/smart_module/pdm_mic/pdm_mic.md)
     - [指纹识别模块](/zh-cn/)
