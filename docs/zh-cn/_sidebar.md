@@ -230,7 +230,7 @@ emakefun文档中心
   - [舵机](/zh-cn/peripheral/servo/servo.md)
   - CodexPad
     - [常见遥控器对比](/zh-cn/peripheral/codexpad/wireless_controller_diffrent.md)
-    - [CodexPad-C10](/zh-cn/peripheral/codexpad/codexpad_c10/codexpad_c10.md)
-    - [CodexPad-S10](/zh-cn/peripheral/codexpad/codexpad_s10/codexpad_s10.md)
+    - [CodexPad-C10](https://gitee.com/CodexPad/codex_pad_c10#codexpad-c10)
+    - [CodexPad-S10](https://gitee.com/CodexPad/codex_pad_s10#codexpad-s10)
 
 - [关于我们](/zh-cn/about.md)
