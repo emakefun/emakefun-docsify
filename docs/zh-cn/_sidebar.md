@@ -168,6 +168,7 @@ emakefun文档中心
     - [nano-v3.0](zh-cn/arduino_products/nano/nano/nano.md)
     - [ble-nano](zh-cn/arduino_products/nano/ble-nano/README_zh.md)
     - [rf-nano](zh-cn/arduino_products/nano/rf-nano/README_zh.md)
+    - [lora-nano](zh-cn/arduino_products/nano/lora-nano/README_zh.md)
     - [nano开发者套件](/zh-cn/)
   - Uno系列
     - [arduino_uno_r3](zh-cn/arduino_products/uno/arduino_uno_r3/arduino_uno_r3.md)
