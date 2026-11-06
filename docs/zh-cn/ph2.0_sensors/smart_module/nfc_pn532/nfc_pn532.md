@@ -60,7 +60,7 @@
 #### 软件（Mind+）
 
 步骤1：选择通信模式，在NFC模块上电前通过拨码开关选择通信模式，严禁上电后切换通信模式，此测试选择I2C通信(A4:SDA、A5:SCL)。<br>
-步骤2：[下载Mind+软件](https://mindplus.cc/)，由于在线版Mind+软件需要单独配置Mind+Link，所以本次测试采用离线版Mind+软件。<br>
+步骤2：<a href="https://mindplus.cc/" target="_blank">下载Mind+软件</a>[]()，由于在线版Mind+软件需要单独配置Mind+Link，所以本次测试采用离线版Mind+软件。<br>
 步骤3：软件切换到"上传模式"，在"扩展"中选择"主控扩展"中的"Arduino Uno"，在"模块扩展"中选择"通信模块"中的"NFC近场通讯Plus"。<br>
 步骤4：<span id="jump"><a href="zh-cn/ph2.0_sensors/smart_module/nfc_pn532/NFC-PN532_Mind+.zip" download>下载示例程序</a></span>，用户也可自行在软件编写相关程序，检查通讯模式为I2C后，通过TypeC数据线将主板连接至PC端。<br>
 步骤5：将卡片放到NFC模块上，按下面图示步骤上传程序后，打开串口监视器，查看读取到的卡片ID信息。
@@ -78,7 +78,7 @@
 ![手机接线图](picture/10.jpg)
 
 步骤1：选择通信模式，在NFC模块上电前通过拨码开关选择通信模式，严禁上电后切换通信模式，此测试选择HSU串口通信。<br>
-步骤2：<span id="jump"><a href="zh-cn/ph2.0_sensors/smart_module/nfc_pn532/NFC-PN532_App.zip" download>本地下载手机APP</a></span>或<span id="jump"><a href="https://learn.adafruit.com/adafruit-pn532-rfid-nfc/downloads">在线网页下载APP</a></span>，再通过双头TypeC数据线连接手机与NFC模块。<br>
+步骤2：<span id="jump"><a href="zh-cn/ph2.0_sensors/smart_module/nfc_pn532/NFC-PN532_App.zip" download>本地下载手机APP</a></span>或<span id="jump"><a href="https://learn.adafruit.com/adafruit-pn532-rfid-nfc/downloads" target="_blank">在线网页下载APP</a></span>，再通过双头TypeC数据线连接手机与NFC模块。<br>
 步骤3：打开手机APP软件，将卡片放到NFC模块上，按下面图示步骤读取卡片ID信息。
 
 ![步骤图](picture/11.jpg)
