@@ -1,8 +1,8 @@
-# 离线特定语音识别ASR-V2
+# ASR-V2离线特定语音识别
 
-## 模块实物图
+## 实物图
 
-![实物图](picture/asr_v2.jpg)
+![实物图](picture/1.jpg)
 
 ## 概述
 
@@ -19,118 +19,80 @@
 
 ## 原理图
 
-待补充
+![原理图](picture/2.png)
 
-## 功能说明图
-
-待补充
+点击查看：<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/ASR-V2_Schematic.pdf" target="_blank">原理图</a>、<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/ASR-V2_Datasheet（CI1302）.pdf" target="_blank">CI1302芯片规格书</a>
 
 ## 尺寸图
 
-待补充
+![尺寸图](picture/3.png)
 
-## 固件烧录方法
+点击下载：<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/ASR-V2_2D.zip" download>2D文件</a>、<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/ASR-V2_3D.zip" download>3D文件</a>
 
-小白玩家建议先看视频教程，理清固件烧录方法。[点击此处观看视频教程](https://document.chipintelli.com/%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/)
+## 在线制作固件
 
-### 快速开始
+点击查看：[官方制作教程](https://document.chipintelli.com/%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%AF%87/)<br>
+点击进入：[固件制作入口](https://aiplatform.chipintelli.com/begin)，或者<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/CI1302-Firmware.zip" download>点击直接下载示例固件</a>
 
-[点击此处开发固件](https://aiplatform.chipintelli.com/firmwareslave?rwId=0)
+步骤1：选择离线语音识别大模型应用。
 
-点击上述链接后，点击新建项目。
+![步骤1](picture/4.png)
 
-![新建项目](picture/1.png)
+步骤2：选择语音识别固件及SDK开发。
 
-按照下图所示，填写项目信息，点击创建。
+![步骤2](picture/5.png)
 
-![填写项目信息](picture/2.png)
+步骤3：点击新建项目。
 
-填写以下信息后，点击继续。
+![步骤3](picture/6.png)
 
-![image-20250122174305993](picture/3.png)
+步骤4：按图示依次填写内容，然后点击创建。
 
-按照下图所示，填写配置信息后，点击继续。
+![步骤4](picture/7.png)
 
-![image-20250122174813979](picture/4.png)
+步骤5：按图示依次填写内容，然后点击继续。
 
-按照下图所示选择自己需要的语音功能后，点击立即提交。
+![步骤5](picture/8.png)
 
-提交后等待编译完成，点击下载固件。
+步骤6：按图示依次选择内容，然后点击继续。
 
-![下载固件](picture/5.png)
+![步骤6](picture/9.png)
 
-也可以使用我们的示例固件进行测试。
+步骤7：<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/Voice_Protocol_Table.zip" download>点击下载语音词汇协议表</a>，用户可自定义修改命令，然后上传语音词汇协议表，点击保存后，再点击立即提交。
 
-<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/Asr_Speech_Recognition_v1.0.0.zip" download>点击此处下载示例固件</a>
+![步骤7](picture/10.png)
 
-下载后解压文件，打开烧录软件。
+步骤8：耐心等待片刻时间，然后点击下载文件，压缩包中的.bin文件就是所需固件，至此固件制作完成。
 
-![打开烧录软件](picture/6.png)
+![步骤8](picture/11.png)
 
-![烧录固件步骤](picture/7.png)
+## 离线烧录固件
 
-![烧录步骤](picture/8.png)
+点击查看：<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/firmware_flashing_procedure.pdf" target="_blank">官方烧录教程</a><br>
+点击下载：<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/PACK_UPDATE_TOOL.zip" download>离线烧录工具</a>
 
-打开软件后,选择CI1302芯片，再点击固件升级。
+步骤1：选择CI13X系列的CI1302芯片，然后点击固件升级。
 
-![点击固件升级](picture/9.jpg)
+![步骤1](picture/12.png)
 
-![选择固件](picture/10.png)
+步骤2：选择固件后，将语音模块通过USB连接到电脑，然后在对应COM行最后点击蓝色框，形成绿色对勾框，至此软件已做好烧录准备。
 
-将语音模块通过Type-C数据线连接电脑，选择对应的COM口。
+![步骤2](picture/13.png)
 
-![选择相应COM口](picture/11.png)
+步骤3：按下语音模块上的RST按键，开始自动烧录，图示展示烧录完成。
 
-按下复位按钮，等待固件烧录完成即可。烧录完成后取消勾选相应COM口。
+![步骤3](picture/14.png)
 
-现在，语音模块已经烧录完成，可以进行语音识别测试。对它呼叫“智能管家”，它就会回应你啦！
+步骤4：对着语音模块呼叫（小慧小慧）、回复（我在），至此固件烧录完成。
 
-## 通过Arduino获取语音识别模块数据
+![步骤4](picture/15.jpg)
 
-以示例固件为例，我们可以通过Arduino获取语音识别模块的数据。
+## 串口通信测试
 
-我们需要下载相应的Arduino库(兼容ESP32)。
+![接线图](picture/16.jpg)
 
-[点击查看Arduino库函数说明](https://emakefun-arduino-library.github.io/em_asr_speech_recognition/html/zh-CN/classem_1_1_asr_speech_recognition.html)
+点击下载：<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/示例程序.zip" download>Arduino IDE示例程序</a>
 
-<a href="zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/em_asr_speech_recognition-main.zip" download>点击下载Arduino库</a>
+呼叫小慧：程序上传到ESP32主板后，打开串口监视器，波特率选择115200，呼叫（小慧小慧），回复内容便会显示在串口页面。
 
-将相应的库添加至Arduino IDE中。软件使用方法可参照[Arduino IDE使用说明](zh-cn/software/arduino_ide/arduino_ide.zh-CN.md)
-
-### 接线图
-
-| 语音模块接口 | esp32接口 |
-| ------------ | --------- |
-| RX           | D14       |
-| TX           | D15       |
-
-| 语音模块接口 | Arduino接口 |
-| ------------ | --------- |
-| RX           | D13       |
-| TX           | D12       |
-
-按下图所示，将喇叭模块连接至语音模块相应接口，再将语音模块的TX端接D12，RX端接D13。
-
-![接线图](picture/12.png)
-
-### 测试
-
-1.打开Arduino IDE，打开示例文件。
-
-![打开示例程序](picture/13.png)
-
-2.将程序烧录至Arduino后，打开串口，选择波特率为9600。
-
-![选择波特率](picture/14.png)
-
-3.说出相应的命令，Arduino会返回相应的识别结果。
-
-![识别指令](picture/15.png)
-
-## micro:bit MakeCode示例程序
-
-<a href="https://makecode.microbit.org/S15398-86855-41727-87467" target="_blank">点击查看micro:bit MakeCode示例程序</a>
-
-<a href="https://github.com/emakefun-makecode-extensions/emakefun_asr_speech_recognition" target="_blank">点击查看用户库网址</a>
-
-**注意**: 普通的命令码为0x81，欢迎语的命令码为0x82。客户根据自己设计的命令码进行相应的识别。
+![结果图](picture/17.png)
