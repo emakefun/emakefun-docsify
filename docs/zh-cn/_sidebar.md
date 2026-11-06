@@ -136,7 +136,7 @@ emakefun文档中心
     - [ESP8266 MQTT模块](zh-cn/ph2.0_sensors/smart_module/esp8266_mqtt/esp8266_mqtt.md)
     - [ESP32 C2 MQTT模块](zh-cn/ph2.0_sensors/smart_module/esp32_c2_mqtt/esp32_c2_mqtt.md)
     - [LD3320语音识别V2.1](zh-cn/ph2.0_sensors/smart_module/speech_recognizer/speech_recognizer.md)
-    - [离线特定语音识别ASR-V2](zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/asr_speech_recognition.md)
+    - [ASR-V2离线特定语音识别](zh-cn/ph2.0_sensors/smart_module/asr_speech_recognition/asr_speech_recognition.md)
     - [TTS20 语音合成模块](zh-cn/ph2.0_sensors/smart_module/tts20_module/tts20_module.md)
     - [TTS语音合成V2.1](zh-cn/ph2.0_sensors/smart_module/tts_module/text_to_speech_synthesizer.md)
     - [MIDI数字音乐模块](zh-cn/ph2.0_sensors/smart_module/midi/midi.md)
