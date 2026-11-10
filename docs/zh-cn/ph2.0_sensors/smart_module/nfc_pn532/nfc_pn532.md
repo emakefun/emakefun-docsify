@@ -78,7 +78,7 @@
 ![手机接线图](picture/10.jpg)
 
 步骤1：选择通信模式，在NFC模块上电前通过拨码开关选择通信模式，严禁上电后切换通信模式，此测试选择HSU串口通信。<br>
-步骤2：<span id="jump"><a href="zh-cn/ph2.0_sensors/smart_module/nfc_pn532/NFC-PN532_App.zip" download>本地下载手机APP</a></span>或<span id="jump"><a href="https://learn.adafruit.com/adafruit-pn532-rfid-nfc/downloads" target="_blank">在线网页下载APP</a></span>，再通过双头TypeC数据线连接手机与NFC模块。<br>
+步骤2：<span id="jump"><a href="zh-cn/ph2.0_sensors/smart_module/nfc_pn532/NFC-PN532_App.zip" download>本地下载手机APP</a></span>或<span id="jump"><a href="https://github.com/RfidResearchGroup/RFIDtools" target="_blank">在线网页下载APP</a></span>，再通过双头TypeC数据线连接手机与NFC模块。<br>
 步骤3：打开手机APP软件，将卡片放到NFC模块上，按下面图示步骤读取卡片ID信息。
 
 ![步骤图](picture/11.jpg)
