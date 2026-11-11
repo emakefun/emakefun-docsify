@@ -1,60 +1,63 @@
+# RaspberryPi Motor Driver Board
 
-# 树莓派驱动板
+RaspberryPi 多功能电机驱动扩展板由[深圳市易创空间科技有限公司](http://www.emakefun.com)出品的一款全功能的机器人电机驱动扩展版，目前已经升级到**V5.0**（[**V3.0老版本资料查看**](https://github.com/emakefun/RaspberryPi-MotorDriverBoard/tree/V3.0) ） 本电机驱动板适用于Raspberry Pi Zero/Zero W/Zero WH/A+/B+/2B/3B/3B+/4B。能够同时支持多路电机/步进电机/舵机/编码电机(Stepper/Motor/Servo/Encoder)，空出摄像头和DIP显示屏排线接口，并且可以多板层叠使用扩展出更多的控制接口，特别适合玩家DIY机器人，智能小车，机械手臂等应用。
 
-RaspberryPi 多功能电机驱动扩展板由[深圳市易创空间科技有限公司](http://www.emakefun.com)出品的一款全功能的机器人电机驱动扩展版，目前已经升级到**V4.0**（[**V3.0老版本资料查看**](https://github.com/emakefun/RaspberryPi-MotorDriverBoard/tree/V3.0) ） 本电机驱动板适用于Raspberry Pi Zero/Zero W/Zero WH/A+/B+/2B/3B/3B+/4B。能够同时支持多路电机/步进电机/舵机/编码电机(Stepper/Motor/Servo/Encoder)，空出摄像头和DIP显示屏排线接口，并且可以多板层叠使用扩展出更多的控制接口，特别适合玩家DIY机器人,智能小车,机械手臂,智能云台等各种应用。
-
-![RaspberryPi-MotorDriverBoard](picture/RaspberryPi-MotorDriverBoard.jpg)
+![RaspberryPi-MotorDriverBoard](RaspberryPi-MotorDriverBoard.jpg)
 
 ## 原理图
 
-由于我们驱动板是使用I2C控制PCA9685芯片输出16路PWM，所有驱动直流电机或者舵机，不存在所谓的树莓派IO口和控制电机对应关系
+**⚠️ 驱动板使用I2C控制PCA9685芯片输出16路PWM来间接驱动电机或者舵机，不是树莓派IO口直接控制电机，所以不存在IO对应关系。**
 
-详情可以看 <a href="zh-cn/raspberrypi/raspberrypi_motordriver_board/schematic/RaspBerryDriverBoardV4.0.pdf" target="_blank">树莓派驱动板电路原理图</a>
-
+详情可以看 [树莓派驱动板电路原理图](./schematic/RaspBerryDriverBoardV4.0.pdf)
 还可以查看驱动板正反面的丝印标注。
 
 ## 特点
 
 - 5.5 ~ 2.1mmDC头 供电电压6 ~ 25V，内置DC-DC稳压电路，为Raspberry Pi供电3A以上 (建议使用7.4V航模电池)
-- 驱动板IIC地址为0x60，地址可以由背面6个电阻配置地址A0~A4
+- 驱动板I2C地址为0x60，地址可以由背面6个电阻配置地址A0~A5
 - 12位分辨率，可调PWM频率高达1.6KHz，可配置的推挽或开漏输出
 - 支持同时驱动8路舵，3Pin(黑红蓝GVS)标准接口接线，方便连接舵机，舵机电源可通过跳线帽切换到外部独立供电
 - 支持4路6~24V直流电机，PH2.0接口或者3.5mm接线柱，电机单路输出高达电流3A
 - 支持同时驱动2路4线步进电机
 - 板载无源蜂鸣器
-- 主板预留2个IIC扩展接口，1个串口接口
+- 主板预留2个I2C扩展接口，1个串口接口
 
 ## 安装I2C库并使能
 
 在使用驱动板之前，必须要先安装I2C库并使能。
+打开树莓派终端输入"sudo raspi-config"命令，然后按照下图顺序依次操作即可。
 
-打开树莓派终端输入`sudo raspi-config`命令，然后按照下图顺序依次操作即可。
+![本地图片](./picture/picture1.png)
 
-![输入raspi-config命令](picture/picture1.png)
+![本地图片](./picture/picture2.png)
 
-![输入raspi-config命令](picture/picture2.png)
+![本地图片](./picture/picture3.png)
 
-![输入raspi-config命令](picture/picture3.png)
+![本地图片](./picture/picture4.png)
 
-![输入raspi-config命令](picture/picture4.png)
+以上就是开启树莓派I2C，接下来我们安装树莓I2C库在终端输入“sudo apt-get install i2c-tools”，输入完成后就可以看到正在下载I2C库，安装完成之后可以在终端输入“sudo i2cdetect -l”检测是否安装正确，若出现类似于下面的信息就说明安装正常。
 
-以上就是开启树莓派I2C，接下来我们安装树莓I2C库在终端入`sudo apt-get install i2c-tools`，输入完成后就可以看到正在下载I2C库，安装完成之后可以在终端输入`sudo i2cdetect -l`检测是否安装正确，若出现类似于下面的信息就说明安装正常。
+![本地图片](./picture/picture5.png)
 
-![检测I2C安装是否成功](picture/picture5.png)
-
-在终端输入`sudo i2cdetect -y 1`命令即可扫描接在I2C总线上的所有I2C设备，并打印出该设备的I2C总线地址，且我们的扩展板的I2C地址为0x60，如下图。
-
-另外用i2cdetect检测出还有一个0x70地址一直存在，这是一个通用地址，可以给所有从机下达指令
-
-![检测I2C地址](picture/picture6.png)
+在终端输入“sudo i2cdetect -y 1”命令即可扫描接在I2C总线上的所有I2C设备，并打印出该设备的I2C总线地址，且我们的扩展板的I2C地址为0x60，如下图。
+另外用i2c detect检测出还有一个0x70地址一直存在，这是一个通用地址，可以给所有从机下达指令
+![picture6](./picture/picture6.png)
 
 重新启动树莓派，使新的设置生效:
 
-`sudo reboot`
+```
 
-## 功能介绍
+sudo reboot
 
-### 驱动舵机
+```
+
+## 示例程序
+
+<a href="zh-cn/raspberrypi/raspberrypi_motordriver_board/demo.zip" target="_blank">点击下载示例程序</a>
+
+### 舵机测试
+
+⚠️ 跳线帽连接5V和V时候，驱动板SG90，MG90等小功率舵机，如果驱动大电流舵机，请将跳线帽连接到EX引脚，接线柱为舵机单独供电。
 
 #### C++代码
 
@@ -62,21 +65,21 @@ RaspberryPi 多功能电机驱动扩展板由[深圳市易创空间科技有限�
 #include "Emakefun_MotorShield.h"
 
 int main() {
-  Emakefun_MotorShield pwm = Emakefun_MotorShield();
-  pwm.begin(50);
+  Emakefun_MotorShield Pwm = Emakefun_MotorShield();
+  Pwm.begin(50);
 
   // demo这里只操作舵机1, 其他舵机操作相同
-  Emakefun_Servo *my_servo_1 = pwm.getServo(1);
+  Emakefun_Servo *myServo1 = Pwm.getServo(1);
 
   // 速度值是 1 ~ 10 的正整数, 数值越大速度越快
-  int speed = 9;
+  int speed = 5;
   while (true) {
     // demo这里只操作舵机1, 其他舵机操作相同
-    my_servo_1->writeServo(0, speed);
+    myServo1->writeServo(0, speed);
     delay(2000);
-    my_servo_1->writeServo(90, speed);
+    myServo1->writeServo(90, speed);
     delay(2000);
-    my_servo_1->writeServo(180, speed);
+    myServo1->writeServo(180, speed);
     delay(2000);
   }
 }
@@ -84,31 +87,32 @@ int main() {
 
 #### Python代码
 
-```Python
+``` Python
 #!/usr/bin/python
 
 from Emakefun_MotorHAT import Emakefun_MotorHAT, Emakefun_Servo
 import time
-
 mh = Emakefun_MotorHAT(addr=0x60)
-my_servo = mh.getServo(1)
+
+myServo = mh.getServo(1)
 
 # 速度值是 1 ~ 10 的正整数, 数值越大速度越快
-speed = 9
-
+speed = 5
 while (True):
     # demo这里只操作舵机1, 其他舵机操作相同
-    my_servo.writeServoWithSpeed(0, speed)
+    myServo.writeServoWithSpeed(0, speed)
     time.sleep(1)
 
-    my_servo.writeServoWithSpeed(90, speed)
+    myServo.writeServoWithSpeed(90, speed)
     time.sleep(1)
 
-    my_servo.writeServoWithSpeed(180, speed)
+    myServo.writeServoWithSpeed(180, speed)
     time.sleep(1)
 ```
 
-### 驱动直流电机
+### 直流电机测试
+
+⚠️ 驱动板供电电压为6~24V，注意电源电压不要超过电机驱动电压。
 
 #### C++代码
 
@@ -116,28 +120,28 @@ while (True):
 #include "Emakefun_MotorShield.h"
 
 int main() {
-  Emakefun_MotorShield pwm = Emakefun_MotorShield();
-  pwm.begin(50);
-  Emakefun_DCMotor *dc_motor_1 = pwm.getMotor(1);
-  Emakefun_DCMotor *dc_motor_2 = pwm.getMotor(2);
-  Emakefun_DCMotor *dc_motor_3 = pwm.getMotor(3);
-  Emakefun_DCMotor *dc_motor_4 = pwm.getMotor(4);
+  Emakefun_MotorShield Pwm = Emakefun_MotorShield();
+  Pwm.begin(50);
+  Emakefun_DCMotor *DCmotor1 = Pwm.getMotor(1);
+  Emakefun_DCMotor *DCmotor2 = Pwm.getMotor(2);
+  Emakefun_DCMotor *DCmotor3 = Pwm.getMotor(3);
+  Emakefun_DCMotor *DCmotor4 = Pwm.getMotor(4);
 
-  dc_motor_1->setSpeed(255);
-  dc_motor_2->setSpeed(255);
-  dc_motor_3->setSpeed(255);
-  dc_motor_4->setSpeed(255);
+  DCmotor1->setSpeed(255);
+  DCmotor2->setSpeed(255);
+  DCmotor3->setSpeed(255);
+  DCmotor4->setSpeed(255);
 
   while (1) {
-    dc_motor_1->run(FORWARD);
-    dc_motor_2->run(FORWARD);
-    dc_motor_3->run(FORWARD);
-    dc_motor_4->run(FORWARD);
+    DCmotor1->run(FORWARD);
+    DCmotor2->run(FORWARD);
+    DCmotor3->run(FORWARD);
+    DCmotor4->run(FORWARD);
     delay(1000);
-    dc_motor_1->run(BACKWARD);
-    dc_motor_2->run(BACKWARD);
-    dc_motor_3->run(BACKWARD);
-    dc_motor_4->run(BACKWARD);
+    DCmotor1->run(BACKWARD);
+    DCmotor2->run(BACKWARD);
+    DCmotor3->run(BACKWARD);
+    DCmotor4->run(BACKWARD);
     delay(1000);
   }
 }
@@ -145,7 +149,7 @@ int main() {
 
 #### Python代码
 
-```Python
+``` Python
 #!/usr/bin/python
 from Emakefun_MotorHAT import Emakefun_MotorHAT, Emakefun_DCMotor, Emakefun_Servo
 
@@ -157,64 +161,55 @@ mh = Emakefun_MotorHAT(addr=0x60)
 
 # recommended for auto-disabling motors on shutdown!
 def turnOffMotors():
-    mh.getMotor(1).run(Emakefun_MotorHAT.RELEASE)
-    mh.getMotor(2).run(Emakefun_MotorHAT.RELEASE)
-    mh.getMotor(3).run(Emakefun_MotorHAT.RELEASE)
-    mh.getMotor(4).run(Emakefun_MotorHAT.RELEASE)
+ mh.getMotor(1).run(Emakefun_MotorHAT.RELEASE)
+ mh.getMotor(2).run(Emakefun_MotorHAT.RELEASE)
+ mh.getMotor(3).run(Emakefun_MotorHAT.RELEASE)
+ mh.getMotor(4).run(Emakefun_MotorHAT.RELEASE)
 
 atexit.register(turnOffMotors)
 
 ################################# DC motor test!
-my_motor = mh.getMotor(4)
+myMotor = mh.getMotor(4)
 
 # set the speed to start, from 0 (off) to 255 (max speed)
-my_motor.setSpeed(150)
-my_motor.run(Emakefun_MotorHAT.FORWARD);
+myMotor.setSpeed(150)
+myMotor.run(Emakefun_MotorHAT.FORWARD);
 # turn on motor
-my_motor.run(Emakefun_MotorHAT.RELEASE);
+myMotor.run(Emakefun_MotorHAT.RELEASE);
+
 
 while (True):
-    # demo这里只操作舵机1, 其他舵机操作相同
-    my_servo.writeServoWithSpeed(0, speed)
-    time.sleep(1)
+ print ("Forward! ")
 
-    my_servo.writeServoWithSpeed(90, speed)
-    time.sleep(1)
+ print ("\tSpeed up...")
+ for i in range(255):
+  myMotor.setSpeed(i)
+  myMotor.run(Emakefun_MotorHAT.FORWARD)
+  time.sleep(0.01)
 
-    my_servo.writeServoWithSpeed(180, speed)
-    time.sleep(1)
-while (True):
-    print ("Forward! ")
+ print ("\tSlow down...")
+ for i in reversed(range(255)):
+  myMotor.setSpeed(i)
+  myMotor.run(Emakefun_MotorHAT.FORWARD)
+  time.sleep(0.01)
 
-    print ("\tSpeed up...")
-    for i in range(255):
-        my_motor.setSpeed(i)
-        my_motor.run(Emakefun_MotorHAT.FORWARD)
-        time.sleep(0.01)
-
-    print ("\tSlow down...")
-    for i in reversed(range(255)):
-        my_motor.setSpeed(i)
-        my_motor.run(Emakefun_MotorHAT.FORWARD)
-        time.sleep(0.01)
-
-    print ("Backward! ")
+ print ("Backward! ")
     
-    print ("\tSpeed up...")
-    for i in range(255):
-    my_motor.setSpeed(i)
-    my_motor.run(Emakefun_MotorHAT.BACKWARD)
-    time.sleep(0.01)
+ print ("\tSpeed up...")
+ for i in range(255):
+  myMotor.setSpeed(i)
+  myMotor.run(Emakefun_MotorHAT.BACKWARD)
+  time.sleep(0.01)
 
-    print ("\tSlow down...")
-    for i in reversed(range(255)):
-    my_motor.setSpeed(i)
-    my_motor.run(Emakefun_MotorHAT.BACKWARD)
-    time.sleep(0.01)
+ print ("\tSlow down...")
+ for i in reversed(range(255)):
+  myMotor.setSpeed(i)
+  myMotor.run(Emakefun_MotorHAT.BACKWARD)
+  time.sleep(0.01)
 
-    print ("Release")
-    my_motor.run(Emakefun_MotorHAT.RELEASE)
-    time.sleep(1.0)
+ print ("Release")
+ myMotor.run(Emakefun_MotorHAT.RELEASE)
+ time.sleep(1.0)
 ```
 
 ### 驱动步进电机
@@ -229,38 +224,42 @@ while (True):
 
 - 找到以下行：
 
-  ```
+```
+
   #dtparam=i2c_arm=on
-  ```
+
+```
 
 - 将其取消注释并将其更改为：
 
-  ```
+```
+
   dtparam=i2c_arm=on,i2c_arm_baudrate=400000
-  ```
+
+```
 
 - 保存文件并重新启动树莓派
 
 #### C++代码
 
-```c++
+``` c++
 #include "Emakefun_MotorShield.h"
 
-int main() {
-  Emakefun_MotorShield pwm = Emakefun_MotorShield();
-  pwm.begin(50);
-  Emakefun_StepperMotor *stepper_motor_1 = pwm.getStepper(200, 1);
+int main () {
+ Emakefun_MotorShield Pwm = Emakefun_MotorShield();
+ Pwm.begin(50);
+ Emakefun_StepperMotor *StepperMotor1 = Pwm.getStepper(200, 1);
 
-  while (1) {
-    stepper_motor_1->setSpeed(30);
-    stepper_motor_1->step(100, BACKWARD, SINGLE);
-  }
+ while(1) {
+  StepperMotor1->setSpeed(30);
+  StepperMotor1->step(100, BACKWARD,SINGLE);
+ }
 }
 ```
 
 #### Python代码
 
-```python
+``` python
 #!/usr/bin/python
 #import Raspi_MotorHAT, Raspi_DCMotor, Raspi_Stepper 
 from Emakefun_MotorHAT import Emakefun_MotorHAT, Emakefun_DCMotor, Emakefun_StepperMotor
@@ -273,49 +272,102 @@ mh = Emakefun_MotorHAT(0x60)
 
 # recommended for auto-disabling motors on shutdown!
 def turnOffMotors():
-    mh.getMotor(1).run(Emakefun_MotorHAT.RELEASE)
-    mh.getMotor(2).run(Emakefun_MotorHAT.RELEASE)
-    mh.getMotor(3).run(Emakefun_MotorHAT.RELEASE)
-    mh.getMotor(4).run(Emakefun_MotorHAT.RELEASE)
+	mh.getMotor(1).run(Emakefun_MotorHAT.RELEASE)
+	mh.getMotor(2).run(Emakefun_MotorHAT.RELEASE)
+	mh.getMotor(3).run(Emakefun_MotorHAT.RELEASE)
+	mh.getMotor(4).run(Emakefun_MotorHAT.RELEASE)
 
 atexit.register(turnOffMotors)
 
-my_stepper = mh.getStepper(200, 1)   # 200 steps/rev, motor port #1
-my_stepper.setSpeed(30)    # 30 RPM
+myStepper = mh.getStepper(200, 1)  	# 200 steps/rev, motor port #1
+myStepper.setSpeed(30)  		# 30 RPM
 
 while (True):
-    print("Single coil steps")
-    my_stepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.SINGLE)
-    my_stepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.SINGLE)
+	print("Single coil steps")
+	myStepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.SINGLE)
+	myStepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.SINGLE)
 
-    print("Double coil steps")
-    my_stepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.DOUBLE)
-    my_stepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.DOUBLE)
+	print("Double coil steps")
+	myStepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.DOUBLE)
+	myStepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.DOUBLE)
 
-    print("Interleaved coil steps")
-    my_stepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.INTERLEAVE)
-    my_stepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.INTERLEAVE)
+	print("Interleaved coil steps")
+	myStepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.INTERLEAVE)
+	myStepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.INTERLEAVE)
 
-    print("Microsteps")
-    my_stepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.MICROSTEP)
-    my_stepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.MICROSTEP)
+	print("Microsteps")
+	myStepper.step(100, Emakefun_MotorHAT.FORWARD,  Emakefun_MotorHAT.MICROSTEP)
+	myStepper.step(100, Emakefun_MotorHAT.BACKWARD, Emakefun_MotorHAT.MICROSTEP)
 
 ```
 
-## C#代码
+## GPIO示例
 
-有提供一个C# demo，有兴趣可以研究，不提供技术支持
+驱动板上的引脚S1-S8也可以当作输出口使用，可以输出高电平和低电平两种状态
 
-<a href="zh-cn/raspberrypi/raspberrypi_motordriver_board/Demo.zip" download>点击下载上述代码</a>
+### C++示例
 
-### 注意事项
+```C++
+#include "Emakefun_MotorShield.h"
 
-1、连接驱动板后，检查树莓派IIC，看是否检测到驱动板地址。[链接](https://blog.csdn.net/qq_15807167/article/details/53435831)
+int S1 = 8;
+int S2 = 9;
+int S3 = 10;
+int S4 = 11;
+int S5 = 12;
+int S6 = 13;
+int S7 = 14;
+int S8 = 15;
 
-2、执行代码时，需将Github上代码下载到本地执行，上面只是部分示例。[Github链接](https://github.com/emakefun/RaspberryPi-MotorDriverBoard2)
+int main() {
+  Emakefun_MotorShield gpio = Emakefun_MotorShield();
+  gpio.begin(1000);
 
-3、树莓派用普通锂电池供电可能会出现树莓派重启的问题，建议使用7.4V航模电池。
+  while (1) {
+    gpio->setPin(S1, 1)
+    delay(1000);
+    gpio->setPin(S1, 0)
+    delay(1000);
+  }
+}
+```
 
-4、可用该驱动板可以驱动精度不高的42步进电机，驱动高精度步进电机时需接专用步进电机驱动。
+### python示例
 
-5、该驱动板可接编码电机，代码正在更新......
+```python
+#!/usr/bin/python
+from Emakefun_MotorHAT import Emakefun_MotorHAT, Emakefun_DCMotor, Emakefun_Servo
+
+import time
+import atexit
+
+# create a default object, no changes to I2C address or frequency
+mh = Emakefun_MotorHAT(addr=0x60, freq=1000)
+
+while (True):
+    print ("S1 HIGH! ")
+    mh.setPin(Emakefun_MotorHAT.S1, 1)
+    time.sleep(1)
+    print ("S1 LOW! ")
+    mh.setPin(Emakefun_MotorHAT.S1, 0)
+    time.sleep(1)
+```
+
+## 供电说明
+
+- 单独驱动低功率马达比如TT马达、N20电机、驱动板单独使用7.4V 3A以上锂电池供电即可
+- 需要同时驱动马达和舵机的场景，请树莓派TypeC接口务必需要接上专用树莓派电源。
+- 如果需要驱动9V以上大功率马达，建议树莓派背面FUSE处保险丝断开、树莓派上TypeC单独使用舒米厄普专用电源独立供电。
+
+## 注意事项
+
+- 连接驱动板后，检查树莓派是否能够扫描到IIC，看是否检测到驱动板地址。[链接](https://blog.csdn.net/qq_15807167/article/details/53435831)
+- 执行代码时，需将Github上代码下载树莓派主机上执行，上面只是部分示例。
+- 树莓派用普通锂电池供电可能会出现树莓派重启的问题，建议使用7.4V航模电池。
+- 该驱动板可以驱动精度不高的42步进电机，驱动高精度步进电机时需接专用步进电机驱动。
+- 该驱动板可接编码电机，编码电机作者：tcotuc，功能在完善中...
+
+## 其他
+
+额外提供了购买我司产品的热心客户编写的C#代码，编码电机的python代码给高手研究，但无法提供技术支持，有兴趣的可以自行研究<br>
+C#代码作者： [winter2048](https://github.com/winter2048)
