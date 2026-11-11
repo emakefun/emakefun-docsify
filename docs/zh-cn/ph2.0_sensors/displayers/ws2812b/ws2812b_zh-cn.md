@@ -66,7 +66,7 @@ void loop() {
 }
 ```
 
-<a href="zh-cn/ph2.0_sensors/displayers/ws2812b/WS2812B_arduino_demo.zip" download>Arduino uno程序下载</a>
+<a href="zh-cn/ph2.0_sensors/displayers/ws2812b/ws2812b_arduino_demo.zip" download>Arduino uno程序下载</a>
 
 为了方便大家更加清楚驱动WS2812B驱动原理图，我们提供了一个Uno R3精简库，如果主控是其他Arduino mega2560/ESP32/ESP8266等，推荐使用Arduino IDE自带库**Adafruit_NeoPixel**或者**FastLED**。
 
