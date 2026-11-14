@@ -50,7 +50,7 @@ emakefun文档中心
     - [DHT22温湿度](/zh-cn/ph2.0_sensors/sensors/dht22/dht22_zh-cn.md)
     - [AHT20温湿度](/zh-cn/ph2.0_sensors/sensors/aht20/aht20_zh-cn.md)
     - [光敏传感器](/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor.md)
-    - [NTC热敏传感器](/zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor.md)
+    - [NTC热敏电阻](/zh-cn/ph2.0_sensors/sensors/ntc_thermistor/ntc_thermistor.md)
     - [LM35温度传感器](zh-cn/ph2.0_sensors/sensors/lm35/lm35.md)
     - [NL50温度传感器](/zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50_zh-cn.md)
     - [DS18B20温度传感器](zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_sensor.md)
@@ -153,6 +153,7 @@ emakefun文档中心
 
 - 电源模块
   
+  - [面包板电源](/zh-cn/power_module/breadboard_power/breadboard_power.md)
   - [5V5A电源模块(PM01)](/zh-cn/power_module/PM01/PM01.md)
   - [升降压5V电源(PM02)](/zh-cn/power_module/PM02/PM02_zh-cn.md)
   - [MPPT太阳能充电板](/zh-cn/power_module/MPPT/MPPT_zh-cn.md)
