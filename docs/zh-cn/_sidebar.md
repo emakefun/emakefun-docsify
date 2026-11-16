@@ -181,6 +181,11 @@ emakefun文档中心
     - [panther-tank](zh-cn/arduino_products/uno/panther_tank/panther_tank.md)
     - [传感器套件介绍](/zh-cn/)
 
+- LGT-Arduino
+  
+  - [LGT-Mini-Nano](zh-cn/lgt_arduino/LGT-Mini-Nano/LGT-Mini-Nano.md)
+  - [LGT-Maker-Nano](zh-cn/lgt_arduino/LGT-Maker-Nano/LGT-Maker-Nano.md)
+
 - micro:bit
   
   - [microbit主板介绍](https://microbit.org/zh-cn/get-started/features/overview/)
