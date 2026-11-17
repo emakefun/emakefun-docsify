@@ -103,6 +103,7 @@ emakefun文档中心
     - [小型雾化器](/zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer_zh-cn.md)
     - [MOS管驱动模块](/zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module_zh-cn.md)
     - [A4988步进电机驱动模块](/zh-cn/ph2.0_sensors/actuators/A4988/A4988_zh-cn.md)
+    - [Geekservo积木舵机](/zh-cn/ph2.0_sensors/actuators/Geekservo/Geekservo.md)
 
   - 显示器
 
