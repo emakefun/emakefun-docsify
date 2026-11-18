@@ -185,6 +185,8 @@
 
 Thonny 的下载安装、驱动安装与固件烧录请参考：[Thonny开发环境配置](zh-cn/software/thonny/thonny.zh-CN.md)。
 
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_micropython/encoder_motor_micropython_v0.2.0.zip" download>点击下载 MicroPython 编码电机库与示例程序（v0.2.0）</a>
+
 #### 8.4.1 软件清单
 
 | 软件 | 用途 |
@@ -247,7 +249,7 @@ Type-C 线接电脑，Thonny 右下角能看到 `MicroPython (ESP32) · COMx` �
 ##### 8.4.4.1 方法一：Thonny 拖拽（推荐）
 
 1. 打开 Thonny，选择 `视图 → 文件`，左侧出现「本机」和「MicroPython 设备」两栏；
-2. 在本机找到 `lib/encoder_motor.py`；
+2. 解压下载的程序包，在本机找到 `lib/encoder_motor.py`；
 3. 右键 → `上传到 /`，或直接拖到右侧设备栏；
 4. 设备栏出现 `encoder_motor.py` 即成功。
 
