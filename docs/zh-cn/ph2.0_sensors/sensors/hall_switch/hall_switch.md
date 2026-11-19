@@ -4,7 +4,7 @@
 
 
 
-![](C:\Users\MR.Tang\Desktop\实习\days3\霍尔传感器模块\真图.png)
+![霍尔开关实物图](picture/hall_switch.png)
 
 ## 概述
 
@@ -12,11 +12,11 @@
 
 ## 原理图
 
-![](C:\Users\MR.Tang\Desktop\实习\days3\霍尔传感器模块\霍尔原理图.png)
+![霍尔开关原理图](picture/hall_switch_sch.png)
 
 ## 尺寸图
 
-![机械尺寸图](C:\Users\MR.Tang\Desktop\实习\days3\霍尔传感器模块\机械尺寸.png)
+![机械尺寸图](picture/hall_switch_size.png)
 
 ## Arduino示例程序
 
