@@ -18,7 +18,15 @@
 
 ![机械尺寸图](picture/hall_switch_size.png)
 
+<a href="zh-cn/ph2.0_sensors/sensors/hall_switch/hall_switch3d.zip" download>下载霍尔开关3D文件</a>
+
+## 接线图
+
+![霍尔开关接线图](picture/hall_swtich_connect.png)
+
 ## Arduino示例程序
+
+<a href="zh-cn/ph2.0_sensors/sensors/hall_switch/hall_swtich.zip" download>下载示例程序</a>
 
 ```c++
 #define DIGITAL_PIN 7  // 霍尔信号引脚
