@@ -185,9 +185,9 @@
 ### 8.6 MicroPython 使用方法
 
 > 运行环境：MicroPython ≥ 1.29（ESP32 端口）  
-> 配套库：`encoder_motor.py`（v0.2.0，emakefun em_esp32_encoder_motor 的 MicroPython 移植）
+> 配套库：encoder_motor.py（v0.2.0，emakefun em_esp32_encoder_motor 的 MicroPython 移植）
 
-本节以「第一次把电机转起来」为目标，从接线走到闭环调速，每一步都给出可观察的现象。如果你只想驱动一个不带编码器的直流电机，接线见下文 8.6.3.2「直流电机（可选）」，示例可运行程序包中的 `examples/drive_dc_motor/main.py`。
+本节以「第一次把电机转起来」为目标，从接线走到闭环调速，每一步都给出可观察的现象。如果你只想驱动一个不带编码器的直流电机，接线见下文 8.6.3.2「直流电机（可选）」，示例可运行程序包中的 examples/drive_dc_motor/main.py。
 
 Thonny 的下载安装、驱动安装与固件烧录请参考：[Thonny开发环境配置](zh-cn/software/thonny/thonny.zh-CN.md)。
 
@@ -198,7 +198,7 @@ Thonny 的下载安装、驱动安装与固件烧录请参考：[Thonny开发环
 | Thonny 4.x | 编辑、运行、看串口输出（推荐） |
 | 或 mpremote | 命令行上传与运行 |
 
-Thonny 首次连接需要选解释器：`运行 → 配置解释器 → MicroPython (ESP32) → 端口选 COMx → 安装官方固件`。
+Thonny 首次连接需要选解释器：运行 → 配置解释器 → MicroPython (ESP32) → 端口选 COMx → 安装官方固件。
 
 ![Thonny配置解释器](picture/mpy_thonny_interpreter.png)
 
@@ -211,9 +211,9 @@ import sys
 print(sys.implementation.version)
 ```
 
-输出应类似 `(1, 29, 0, '')`。
+输出应类似 (1, 29, 0, '')。
 
-**这个版本号很关键**：`1.29` 起才有 `machine.Encoder`（PCNT 硬件正交解码）。低于 1.29 时库会自动退回软件中断解码，功能能跑，但高速下方向判断不可靠。
+**这个版本号很关键**：1.29 起才有 machine.Encoder（PCNT 硬件正交解码）。低于 1.29 时库会自动退回软件中断解码，功能能跑，但高速下方向判断不可靠。
 
 如果版本过低，请按 [Thonny开发环境配置](zh-cn/software/thonny/thonny.zh-CN.md) 的「烧录固件」一节重刷固件后再继续。
 
@@ -223,14 +223,14 @@ print(sys.implementation.version)
 
 ##### 8.6.3.1 编码电机
 
-把编码电机的 **6 芯插头**插到板子上标有 `E0` 的插座：
+把编码电机的 **6 芯插头**插到板子上标有 E0 的插座：
 
 | 板上丝印 | 引脚 | 接到 |
 |---|---|---|
-| `+` | GPIO27 | 电机正极 |
-| `−` | GPIO13 | 电机负极 |
-| `A` | GPIO18 | 编码器 A 相 |
-| `B` | GPIO19 | 编码器 B 相 |
+| + | GPIO27 | 电机正极 |
+| − | GPIO13 | 电机负极 |
+| A | GPIO18 | 编码器 A 相 |
+| B | GPIO19 | 编码器 B 相 |
 
 ![E0插头接线](picture/mpy_e0_plug.jpeg)
 
@@ -238,24 +238,24 @@ print(sys.implementation.version)
 
 ##### 8.6.3.2 直流电机（可选）
 
-不带编码器的电机插到 `M1` 的 **2 芯**插座，引脚是 GPIO4(+) / GPIO2(−)。
+不带编码器的电机插到 M1 的 **2 芯**插座，引脚是 GPIO4(+) / GPIO2(−)。
 
-> `E1` 和 `M1` 是**同一路**驱动的两个插座，二选一，不能同时接。
+> E1 和 M1 是**同一路**驱动的两个插座，二选一，不能同时接。
 
 ##### 8.6.3.3 连接电脑
 
-Type-C 线接电脑，Thonny 右下角能看到 `MicroPython (ESP32) · COMx` 即为连接成功。
+Type-C 线接电脑，Thonny 右下角能看到 MicroPython (ESP32) · COMx 即为连接成功。
 
 #### 8.6.4 把库放到板子上
 
-库只有**一个文件**：`encoder_motor.py`。
+库只有**一个文件**：encoder_motor.py。
 
 ##### 8.6.4.1 方法一：Thonny 拖拽（推荐）
 
-1. 打开 Thonny，选择 `视图 → 文件`，左侧出现「本机」和「MicroPython 设备」两栏；
-2. 解压下载的程序包，在本机找到 `lib/encoder_motor.py`；
-3. 右键 → `上传到 /`，或直接拖到右侧设备栏；
-4. 设备栏出现 `encoder_motor.py` 即成功。
+1. 打开 Thonny，选择 视图 → 文件，左侧出现「本机」和「MicroPython 设备」两栏；
+2. 解压下载的程序包，在本机找到 lib/encoder_motor.py；
+3. 右键 → 上传到 /，或直接拖到右侧设备栏；
+4. 设备栏出现 encoder_motor.py 即成功。
 
 ![Thonny文件视图](picture/mpy_thonny_files_view.png)
 
@@ -276,7 +276,7 @@ import encoder_motor as em
 print(em.__version__)
 ```
 
-输出 `0.2.0` 即部署成功。
+输出 0.2.0 即部署成功。
 
 ![验证库版本](picture/mpy_lib_version.png)
 
@@ -286,7 +286,7 @@ print(em.__version__)
 
 ##### 8.6.5.1 打开示例
 
-在 Thonny 中打开 `examples/detect_phase_relation/main.py`，按 **F5** 运行。
+在 Thonny 中打开 examples/detect_phase_relation/main.py，按 **F5** 运行。
 
 （不用先把文件拷到板子上——Thonny 会把当前文件直接送到板子上执行，库已经在板子里。）
 
@@ -313,7 +313,7 @@ motor shut down
 ok = motor.set_phase(em.PHASE_RELATION_B_PHASE_LEADS)
 ```
 
-返回 `True` 表示切换成功，之后的读数立刻变正，**而且计数不会归零**。
+返回 True 表示切换成功，之后的读数立刻变正，**而且计数不会归零**。
 
 如果要在工程代码里固定下来，直接在构造函数里写：
 
@@ -324,12 +324,12 @@ m = em.EncoderMotor(27, 13, 18, 19, 12, 90,
 
 ![构造函数中固定相位参数](picture/mpy_phase_constructor.png)
 
-> 换电机、换通道后都需要重做这一步。库的默认值是 `A_PHASE_LEADS`（与 Arduino 原库一致），  
-> 这块板上的电机通常是 `B_PHASE_LEADS`。
+> 换电机、换通道后都需要重做这一步。库的默认值是 A_PHASE_LEADS（与 Arduino 原库一致），  
+> 这块板上的电机通常是 B_PHASE_LEADS。
 
 ##### 8.6.5.4 调速度：改 main.py 里的目标转速
 
-检测完相位后，把 `examples/motor_test/main.py` 拷到板子上运行（或在 Thonny 里直接按 F5）。要改速度，就改文件里 `run_speed()` 括号里的数字：
+检测完相位后，把 examples/motor_test/main.py 拷到板子上运行（或在 Thonny 里直接按 F5）。要改速度，就改文件里 run_speed() 括号里的数字：
 
 ```python
 motor.run_speed(50)      # 目标 50 RPM
@@ -345,7 +345,7 @@ motor.run_speed(-30)     # 负数 = 反转
 
 可用范围：约 10 ~ 110 RPM（7.4 V 供电）、10 ~ 190 RPM（12 V 供电）。设为 0 或绝对值小于 10 会直接停机。
 
-如果只想给固定电压、不要闭环，把 `run_speed()` 换成 `run_pwm_duty()`：
+如果只想给固定电压、不要闭环，把 run_speed() 换成 run_pwm_duty()：
 
 ```python
 motor.run_pwm_duty(600)  # 60% 占空比，开环
@@ -383,7 +383,7 @@ motor.run_pwm_duty(600)  # 60% 占空比，开环
 
 4. 编码电机的 6 芯插头是否插到位、有无插反（插头有防呆结构，插不进时换个方向，不要硬插）；
 
-**Q**: 电机转了，但 `pulses` 一直是 0？
+**Q**: 电机转了，但 pulses 一直是 0？
 
 **A**: 编码器信号没进来：
 
@@ -391,11 +391,11 @@ motor.run_pwm_duty(600)  # 60% 占空比，开环
 2. A/B 两根线是否接反（接反只会导致方向相反，不会导致 0）；
 3. 用万用表量一下编码器的 5 V 供电是否正常。
 
-如果 `pulses` 偶尔跳几个数但不连续，通常是插头接触不良。
+如果 pulses 偶尔跳几个数但不连续，通常是插头接触不良。
 
-**Q**: `ImportError: no module named 'encoder_motor'`？
+**Q**: ImportError: no module named 'encoder_motor'？
 
-**A**: 库没放到板子上，或者放到了子目录。**必须放在板子根目录**（`/encoder_motor.py`）。
+**A**: 库没放到板子上，或者放到了子目录。**必须放在板子根目录**（/encoder_motor.py）。
 
 **Q**: 闭环时电机猛转、占空比冲到 1023？
 
@@ -403,6 +403,6 @@ motor.run_pwm_duty(600)  # 60% 占空比，开环
 
 **这是最危险的一种**——轮子着地时会飞车，调试时务必架空。
 
-**Q**: `RuntimeError: no free hardware timer`？
+**Q**: RuntimeError: no free hardware timer？
 
-**A**: 板上有其他库也占用了硬件定时器。调用 `em.use_timer(False)` 关掉自动调度，改在主循环里手动调 `m.update()`。
+**A**: 板上有其他库也占用了硬件定时器。调用 em.use_timer(False) 关掉自动调度，改在主循环里手动调 m.update()。
