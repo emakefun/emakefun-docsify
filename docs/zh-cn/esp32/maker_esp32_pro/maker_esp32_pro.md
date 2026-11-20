@@ -179,14 +179,14 @@
 
 ### 3.4 MicroPython示例程序
 
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_micropython/encoder_motor_micropython_v0.2.0.zip" download>点击下载 MicroPython 编码电机库与示例程序（v0.2.0）</a>
+
 > 运行环境：MicroPython ≥ 1.29（ESP32 端口）  
 > 配套库：`encoder_motor.py`（v0.2.0，emakefun em_esp32_encoder_motor 的 MicroPython 移植）
 
 本节以「第一次把电机转起来」为目标，从接线走到闭环调速，每一步都给出可观察的现象。如果你只想驱动一个不带编码器的直流电机，接线见下文 3.4.3.2「直流电机（可选）」，示例可运行程序包中的 `examples/drive_dc_motor/main.py`。
 
 Thonny 的下载安装、驱动安装与固件烧录请参考：[Thonny开发环境配置](zh-cn/software/thonny/thonny.zh-CN.md)。
-
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_micropython/encoder_motor_micropython_v0.2.0.zip" download>点击下载 MicroPython 编码电机库与示例程序（v0.2.0）</a>
 
 #### 3.4.1 软件清单
 
