@@ -20,9 +20,26 @@
 
 <a href="zh-cn/ph2.0_sensors/sensors/hall_switch/hall_switch3d.zip" download>下载霍尔开关3D文件</a>
 
-## 接线图
+## 模块参数
 
-![霍尔开关接线图](picture/hall_swtich_connect.png)
+- 供电电压：3~5V
+- 连接方式：PH2.0-3PIN防反接线
+- 模块尺寸：38.4x22.4mm
+- 安装方式：M4螺钉兼容乐高插孔固定
+
+| 引脚名称 | 描述                                                     |
+| -------- | -------------------------------------------------------- |
+| G        | GND                                                      |
+| V        | 3~5V 电源输入                                            |
+| S        | 信号数字输出，无磁场时输出高电平，检测到磁场时输出低电平 |
+
+## Arduino Uno使用用例
+
+注意：模块 GND 必须与主控板 GND 共地；S 引脚接数字引脚 D7，通过 `digitalRead(7)` 读取磁场状态
+
+**接线端口可自行更改，只需注意编程时选择对应引脚，本教程时按照示例程序接口连接。**
+
+![霍尔开关接线图](picture/hall_switch_connect.jpg)
 
 ## Arduino示例程序
 
