@@ -78,9 +78,13 @@
 
 <a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/oledTest.zip" download>点击下载OLED示例程序</a>
 
+### 8.4 MicroPython示例程序
+
 <a href="zh-cn/esp32/maker_esp32_pro/esp32_micropython/encoder_motor_micropython_v0.2.0.zip" download>点击下载 MicroPython 编码电机库与示例程序（v0.2.0）</a>
 
-#### 8.3.1 驱动编码电机与直流电机
+### 8.5 Arduino 使用方法
+
+#### 8.5.1 驱动编码电机与直流电机
 
 [点击查看编码电机以及直流电机库和示例程序](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/index.html)
 
@@ -88,29 +92,29 @@
 
 ![下载库](picture/101.png)
 
-##### 8.3.1.1 驱动电机示例文件以及常用函数说明
+##### 8.5.1.1 驱动电机示例文件以及常用函数说明
 
-###### 8.3.1.1.1 示例文件说明( [Emakefun Encoder Motor: 示例文件](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/examples.html) )
+###### 8.5.1.1.1 示例文件说明( [Emakefun Encoder Motor: 示例文件](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/examples.html) )
 
 详情可查看上述链接的如下位置：
 
 ![示例文件说明](picture/102.png)
 
-###### 8.3.1.1.2 常用函数说明( [Emakefun Encoder Motor: 类成员 - 函数](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/classem_1_1_encoder_motor.html#a69db8b9fc364d4d8f2509473d759ed0f) )
+###### 8.5.1.1.2 常用函数说明( [Emakefun Encoder Motor: 类成员 - 函数](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/classem_1_1_encoder_motor.html#a69db8b9fc364d4d8f2509473d759ed0f) )
 
 更多函数可以参考上方链接的如下位置：
 
 ![常用函数说明](picture/103.png)
 
-##### 8.3.1.2 使用Arduino IDE调试编码电机
+##### 8.5.1.2 使用Arduino IDE调试编码电机
 
-###### 8.3.1.2.1 接线说明
+###### 8.5.1.2.1 接线说明
 
 将编码电机的信号线连接到电机驱动板的对应引脚，并外接DC电源，通过typeC接口连接电脑。如下图所示：
 
 ![接线说明](picture/Wiringdiagram.png)
 
-###### 8.3.1.2.2 添加库文件
+###### 8.5.1.2.2 添加库文件
 
 打开Arduino IDE，点击项目->导入库->添加.ZIP库，选择下载好的库文件，点击打开，然后点击确定。
 
@@ -124,7 +128,7 @@
 
 ![选择主板型号](picture/107.png)
 
-##### 8.3.1.3 打开示例程序
+##### 8.5.1.3 打开示例程序
 
 打开Arduino IDE，点击文件->示例->Emakefun Encoder Motor->detect_phase_relation，然后点击打开。
 
@@ -174,20 +178,20 @@
 
 至此我们编码电机已经调试结束。若发现与我们的预期不符，请再次检查电机连接是否正确，电机驱动板是否有问题，以及电机是否有问题。
 
-#### 8.3.2 使用CodexPad-S10手柄控制外设
+#### 8.5.2 使用CodexPad-S10手柄控制外设
 
 演示如何使用CodexPad-S10手柄进行控制直流电机、编码电机、舵机等外设，您可以点此链接查看详细说明：[点击查看详细说明](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_maker_esp32_pro_base.zh-CN.md#codexpad-s10手柄控制示例maker-esp32-pro开发板基础示例说明)。
 
-### 8.4 MicroPython示例程序
+### 8.6 MicroPython 使用方法
 
 > 运行环境：MicroPython ≥ 1.29（ESP32 端口）  
 > 配套库：`encoder_motor.py`（v0.2.0，emakefun em_esp32_encoder_motor 的 MicroPython 移植）
 
-本节以「第一次把电机转起来」为目标，从接线走到闭环调速，每一步都给出可观察的现象。如果你只想驱动一个不带编码器的直流电机，接线见下文 8.4.3.2「直流电机（可选）」，示例可运行程序包中的 `examples/drive_dc_motor/main.py`。
+本节以「第一次把电机转起来」为目标，从接线走到闭环调速，每一步都给出可观察的现象。如果你只想驱动一个不带编码器的直流电机，接线见下文 8.6.3.2「直流电机（可选）」，示例可运行程序包中的 `examples/drive_dc_motor/main.py`。
 
 Thonny 的下载安装、驱动安装与固件烧录请参考：[Thonny开发环境配置](zh-cn/software/thonny/thonny.zh-CN.md)。
 
-#### 8.4.1 软件清单
+#### 8.6.1 软件清单
 
 | 软件 | 用途 |
 |---|---|
@@ -198,7 +202,7 @@ Thonny 首次连接需要选解释器：`运行 → 配置解释器 → MicroPyt
 
 ![Thonny配置解释器](picture/mpy_thonny_interpreter.png)
 
-#### 8.4.2 确认固件版本
+#### 8.6.2 确认固件版本
 
 在 Thonny 的 Shell 里输入：
 
@@ -213,11 +217,11 @@ print(sys.implementation.version)
 
 如果版本过低，请按 [Thonny开发环境配置](zh-cn/software/thonny/thonny.zh-CN.md) 的「烧录固件」一节重刷固件后再继续。
 
-#### 8.4.3 接线
+#### 8.6.3 接线
 
 ![MicroPython接线图](picture/mpy_wiring.jpeg)
 
-##### 8.4.3.1 编码电机
+##### 8.6.3.1 编码电机
 
 把编码电机的 **6 芯插头**插到板子上标有 `E0` 的插座：
 
@@ -232,21 +236,21 @@ print(sys.implementation.version)
 
 插头有防呆结构，插不进时**换个方向**，不要硬插。
 
-##### 8.4.3.2 直流电机（可选）
+##### 8.6.3.2 直流电机（可选）
 
 不带编码器的电机插到 `M1` 的 **2 芯**插座，引脚是 GPIO4(+) / GPIO2(−)。
 
 > `E1` 和 `M1` 是**同一路**驱动的两个插座，二选一，不能同时接。
 
-##### 8.4.3.3 连接电脑
+##### 8.6.3.3 连接电脑
 
 Type-C 线接电脑，Thonny 右下角能看到 `MicroPython (ESP32) · COMx` 即为连接成功。
 
-#### 8.4.4 把库放到板子上
+#### 8.6.4 把库放到板子上
 
 库只有**一个文件**：`encoder_motor.py`。
 
-##### 8.4.4.1 方法一：Thonny 拖拽（推荐）
+##### 8.6.4.1 方法一：Thonny 拖拽（推荐）
 
 1. 打开 Thonny，选择 `视图 → 文件`，左侧出现「本机」和「MicroPython 设备」两栏；
 2. 解压下载的程序包，在本机找到 `lib/encoder_motor.py`；
@@ -257,13 +261,13 @@ Type-C 线接电脑，Thonny 右下角能看到 `MicroPython (ESP32) · COMx` �
 
 ![上传库文件到设备](picture/mpy_thonny_upload.png)
 
-##### 8.4.4.2 方法二：mpremote
+##### 8.6.4.2 方法二：mpremote
 
 ```bash
 mpremote fs cp lib/encoder_motor.py :encoder_motor.py
 ```
 
-##### 8.4.4.3 验证
+##### 8.6.4.3 验证
 
 在 Shell 里：
 
@@ -276,17 +280,17 @@ print(em.__version__)
 
 ![验证库版本](picture/mpy_lib_version.png)
 
-#### 8.4.5 示例一：检测相位关系
+#### 8.6.5 示例一：检测相位关系
 
 编码器的 A、B 两相谁领先谁，取决于电机型号和接线方式。**这一步不做，后面的闭环可能会飞车。**
 
-##### 8.4.5.1 打开示例
+##### 8.6.5.1 打开示例
 
 在 Thonny 中打开 `examples/detect_phase_relation/main.py`，按 **F5** 运行。
 
 （不用先把文件拷到板子上——Thonny 会把当前文件直接送到板子上执行，库已经在板子里。）
 
-##### 8.4.5.2 第一次运行：看到负值
+##### 8.6.5.2 第一次运行：看到负值
 
 ```text
 example version: 1.0.0 lib version: 0.2.0
@@ -301,7 +305,7 @@ motor shut down
 
 **现象解读**：我们给的是正占空比，电机在正转，但转速读数是负的——说明相位参数填反了。
 
-##### 8.4.5.3 让参数生效
+##### 8.6.5.3 让参数生效
 
 示例里已经演示了运行期切换：
 
@@ -323,7 +327,7 @@ m = em.EncoderMotor(27, 13, 18, 19, 12, 90,
 > 换电机、换通道后都需要重做这一步。库的默认值是 `A_PHASE_LEADS`（与 Arduino 原库一致），  
 > 这块板上的电机通常是 `B_PHASE_LEADS`。
 
-##### 8.4.5.4 调速度：改 main.py 里的目标转速
+##### 8.6.5.4 调速度：改 main.py 里的目标转速
 
 检测完相位后，把 `examples/motor_test/main.py` 拷到板子上运行（或在 Thonny 里直接按 F5）。要改速度，就改文件里 `run_speed()` 括号里的数字：
 
@@ -351,7 +355,7 @@ motor.run_pwm_duty(600)  # 60% 占空比，开环
 
 调试中的常见问题（pulses 一直为 0、库导入失败、闭环飞车等）见文末 FAQ。
 
-### 8.5 ESP32系列连接使用PS3蓝牙无线手柄
+### 8.7 ESP32系列连接使用PS3蓝牙无线手柄
 
 [点击查看Maker-ESP32-Pro与PS3手柄的连接使用说明](zh-cn/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
 
@@ -395,7 +399,7 @@ motor.run_pwm_duty(600)  # 60% 占空比，开环
 
 **Q**: 闭环时电机猛转、占空比冲到 1023？
 
-**A**: 相位参数配反了，PID 变成正反馈。回到 8.4.5「示例一：检测相位关系」一节重新检测相位。
+**A**: 相位参数配反了，PID 变成正反馈。回到 8.6.5「示例一：检测相位关系」一节重新检测相位。
 
 **这是最危险的一种**——轮子着地时会飞车，调试时务必架空。
 
