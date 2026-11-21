@@ -161,7 +161,7 @@ emakefun文档中心
   - [3.7V升压充电模块(PM1S-16340)](/zh-cn/power_module/PM1S-16340/PM1S-16340.md)
   - [3.7V锂电池包模块(PM11)](/zh-cn/power_module/PM11/PM11.md)
   - [7.4V充电电池模块(PM2S-16340)](/zh-cn/power_module/PM2S-16340/PM2S-16340.md)
-  - [双节18650锂电池充电模块](/zh-cn/power_module/18650_2s_li_battery_module/18650_2s_li_battery_module.md)
+  - [双节18650锂电池充电模块](/zh-cn/power_module/PM2S-18650/PM2S-18650_zh-cn.md)
   - [三节18650锂电池充电模块](/zh-cn//power_module/18650_3s_li_battery_module.md)
 
 - Arduino产品
