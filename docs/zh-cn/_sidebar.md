@@ -50,7 +50,7 @@ emakefun文档中心
     - [DHT22温湿度](/zh-cn/ph2.0_sensors/sensors/dht22/dht22_zh-cn.md)
     - [AHT20温湿度](/zh-cn/ph2.0_sensors/sensors/aht20/aht20_zh-cn.md)
     - [光敏传感器](/zh-cn/ph2.0_sensors/sensors/photo_sensitive_sensor/photo_sensitive_sensor.md)
-    - [NTC热敏传感器](/zh-cn/ph2.0_sensors/sensors/thermal_sensor/thermal_sensor.md)
+    - [NTC热敏电阻](/zh-cn/ph2.0_sensors/sensors/ntc_thermistor/ntc_thermistor.md)
     - [LM35温度传感器](zh-cn/ph2.0_sensors/sensors/lm35/lm35.md)
     - [NL50温度传感器](/zh-cn/ph2.0_sensors/sensors/temperature_sensor_nl50/nl50_zh-cn.md)
     - [DS18B20温度传感器](zh-cn/ph2.0_sensors/sensors/ds18b20_sensor/ds18b20_sensor.md)
@@ -103,6 +103,7 @@ emakefun文档中心
     - [小型雾化器](/zh-cn/ph2.0_sensors/actuators/small_atomizer/small_atomizer_zh-cn.md)
     - [MOS管驱动模块](/zh-cn/ph2.0_sensors/actuators/mos_driver_module/mos_driver_module_zh-cn.md)
     - [A4988步进电机驱动模块](/zh-cn/ph2.0_sensors/actuators/A4988/A4988_zh-cn.md)
+    - [Geekservo积木舵机](/zh-cn/ph2.0_sensors/actuators/Geekservo/Geekservo.md)
 
   - 显示器
 
@@ -153,13 +154,14 @@ emakefun文档中心
 
 - 电源模块
   
+  - [面包板电源](/zh-cn/power_module/breadboard_power/breadboard_power.md)
   - [5V5A电源模块(PM01)](/zh-cn/power_module/PM01/PM01.md)
   - [升降压5V电源(PM02)](/zh-cn/power_module/PM02/PM02_zh-cn.md)
   - [MPPT太阳能充电板](/zh-cn/power_module/MPPT/MPPT_zh-cn.md)
   - [3.7V升压充电模块(PM1S-16340)](/zh-cn/power_module/PM1S-16340/PM1S-16340.md)
   - [3.7V锂电池包模块(PM11)](/zh-cn/power_module/PM11/PM11.md)
   - [7.4V充电电池模块(PM2S-16340)](/zh-cn/power_module/PM2S-16340/PM2S-16340.md)
-  - [双节18650锂电池充电模块](/zh-cn/power_module/18650_2s_li_battery_module/18650_2s_li_battery_module.md)
+  - [双节18650锂电池充电模块](/zh-cn/power_module/PM2S-18650/PM2S-18650_zh-cn.md)
   - [三节18650锂电池充电模块](/zh-cn//power_module/18650_3s_li_battery_module.md)
 
 - Arduino产品
@@ -179,6 +181,11 @@ emakefun文档中心
     - [hummer-bot](zh-cn/arduino_products/uno/hummer-bot/hummer-bot.md)
     - [panther-tank](zh-cn/arduino_products/uno/panther_tank/panther_tank.md)
     - [传感器套件介绍](/zh-cn/)
+
+- LGT-Arduino
+  
+  - [LGT-Mini-Nano](zh-cn/lgt-arduino/LGT-Mini-Nano/LGT-Mini-Nano.md)
+  - [LGT-Maker-Nano](zh-cn/lgt-arduino/LGT-Maker-Nano/LGT-Maker-Nano.md)
 
 - micro:bit
   
