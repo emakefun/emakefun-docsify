@@ -80,7 +80,7 @@
 Mixly云端导入易创空间Maker-ESP32-Pro库和PS3蓝牙手柄库，
 ![Mixly云端导入库](picture/mixly_lib_install.png)
 或者
-<a href="https://gitee.com/emakefun_mixly_lib/maker_esp32_pro/releases/download/V1.0.0/maker-esp32-pro-mixly.zip" download>点击下载编码电机Mixly库</a> <a href="https://gitee.com/emakefun_mixly_lib/ps3-bluetooth-handle/releases/download/V1.0.0/ps3-bluetooth-handle.zip" download>点击下载PS3蓝牙手柄Mixly库</a>
+<a href="https://gitee.com/emakefun_mixly_lib/maker_esp32_pro/releases/download/V1.0.0/maker-esp32-pro-mixly.zip" download>点击下载编码电机Mixly库</a></br> <a href="https://gitee.com/emakefun_mixly_lib/ps3-bluetooth-handle/releases/download/V1.0.0/ps3-bluetooth-handle.zip" download>点击下载PS3蓝牙手柄Mixly库</a>
 本地导入库。</br>
 ![Mixly云端导入库](picture/mixly_install_local_lib.png)
 米思齐示例如下，点击对应的案例就可以看到对应的程序。
