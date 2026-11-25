@@ -1,54 +1,75 @@
 # MAKER-ESP32-PRO 使用说明书
 
-## 模块实物图
+## 产品实物图
 
 ![Maker-esp32-pro正视图](picture/Maker-esp32-pro正视图.png)
 
 ## 概述
 
-   MAKER-ESP32-PRO是基于乐鑫科技的 <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf" target="_blank">ESP32-WROOM-32</a> 模组基础上开发的一款适用于创客教育的标志性产品，Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。板载4路编码电机和直流电机，最大驱动电流3A，编码电机和直流电机复用驱动引脚，即同一个端口，不能同时驱动编码电机和直流电机。
+   MAKER-ESP32-PRO是基于乐鑫科技的 <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf" target="_blank">ESP32-WROOM-32E</a> 模组基础上开发的一款适用于创客教育的标志性产品，Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。板载4路编码电机和直流电机，最大驱动电流3A，编码电机和直流电机复用驱动引脚，即同一个端口，不能同时驱动编码电机和直流电机。
 
-## ESP32模组参数
+## ESP32-WROOM-32E模组参数
+- 模组芯片：ESP32-D0WD-V3（双核 Xtensa® LX6，ECO V3 版本）
+- 处理器：双核，最高 240 MHz，600 DMIPS
+- 芯片存储: 448 KB ROM / 520 KB SRAM / 16 KB RTC SRAM
+- 模组Flash: 4 MB SPI Flash
+- 晶振: 40 MHz 主晶振
+- 无线：Wi-Fi 802.11 b/g/n 2.4 GHz + Bluetooth 4.2 (BR/EDR + BLE)
+- GPIO: 25 个可用（GPIO6–11 保留给 Flash）
+- PWM: 16 通道 LEDC
+- 工作电压: 3.0 – 3.6 V（推荐 3.3 V）
+- 封装尺寸: 25.5 × 18.0 × 3.1 mm，38 引脚，引脚间距 1.27 mm
+- 温度：-40 ℃ ~ +85 ℃
+- 天线：板载 PCB 天线，增益约 2 dBi
 
-* 448 KB ROM,520 KB SRAM,16 KB RTC SRAM
-* QSPI 支持多个 flash/SRAM
-* 内置 8 MHz 振荡器
-* 支持自校准
-* 内置 RC 振荡器，支持自校准
-* 支持外置 2 MHz 至 60 MHz 的主晶振（如果使用 Wi-Fi/蓝牙功能，则目前仅支持 40 MHz 晶振）
-* 支持外置 32 kHz 晶振，用于 RTC，支持自校准
-* 2 个定时器群组，每组包括 2 个 64-bit 通用定时器和 1 个主系统看门狗
-* 1 个 RTC 定时器
-* RTC 看门狗
-* 34 个 GPIO 口 • 12-bit SAR ADC，多达 18 个通道
-* 带有专用 DMA 的以太网 MAC 接口，支持 IEEE 1588
-* 双线汽车接口（TWAI®，兼容 ISO11898-1） • IR (TX/RX)
-
-## 原理图
-
-<a href="zh-cn/esp32/maker_esp32_pro/maker-esp32_pro.pdf" target="_blank">点击查看原理图</a>
+!> 注：使用WIFI时，请一定使用2.4G频段的WIFI
 
 ## 产品参数
-
-* 4个编码电机端口（E0、E1、E2、E3）；4个直流电机端口（M0、M1、M2、M3）端口与编码电机复用；电流最大达到3A
-* 其中E0(A:18 B:19 +:27 -:13)，E1(A:5 B:23 +:4 -:2)，E2(A:35 B:36 +:17 -:12)，E3(A:34 B:39 +:15 -:14)
-* 5个I2C插针接口,1个SPI插针接口
-* 4个舵机接口（25、26、32、33）
-* 13个IO引脚(5、12、14、15、16、17、18、19、23、34、35、36、39)
-* 输入电压： 6-16V
-* 产品尺寸：80mm×57mm；PCB厚度：1.6mm；净重：35g
-* M4定位孔直径：4.6mm，兼容乐高
-* 软件支持Mixly、Arduino IDE、MicroPython
+- 接口
+   - 电机： 4个, 电流最大达到3.5A
+   - 编码电机：4个
+   - 舵机：4个
+   - I2C：5个
+   - SPI: 1个
+   - IO: 8个
+- 驱动芯片：CH340G
+- 上传接口：Type C
+- DC头(5.5-2.1mm)输入电压： 6-16V
+- 产品尺寸：80 × 57mm；PCB厚度：1.6mm；净重：40g
+- M4定位孔直径：4.6mm，兼容乐高
+- 软件支持Arduino IDE、Mixly、Micropython、Mind+
 
 ## 引脚说明
 
-![引脚说明](picture/1bd20944ce3774a14fe19d55e94e8ad.png)
+![引脚说明](picture/pin_pic.png)
 
-## MAKER-ESP32-PRO驱动安装
+| 功能 | 引脚 |
+| -------- | ---------- |
+| 电机M1       | 27，13   |
+| 电机M2       | 4，2   |
+| 电机M3       | 17，12        |
+| 电机M4       | 14，15    |
+| 舵机       | 25，26，32，33    |
+| 编码电机E0       | 27(-)，13(+)，18(A)，19(B)   |
+| 编码电机E1       | 4(-)，2(+)，5(A)，23(B)   |
+| 编码电机E2       | 17(-)，12(+)，35(A)，36(B)   |
+| 编码电机E3       | 15(-)，14(+)，34(A)，39(B)   |
+| I2C       | SDA: 21, SCL: 22   |
+| SPI       | 5, 18, 19, 23    |
+| IO       | 12、14、15、17、34、35、36、39     |
+
+!> 注:
+1. Motor and IO Switch: 当拨码开关打到IO口端时，M3、M4电机端口不工作，不能驱动电机，引脚为普通端口；当拨码开关打到M3A/M3B/M4A/M4B时，M3、M4为电机端口，可以驱动电机/步进电机。</br>
+2. 因为ESP32芯片特性，主板的34、35、36、39引脚不能作为输出；并且34、35、36、39引脚做为输入时，不能设置上拉或下拉模式。</br>
+3. 在同时使用电机和舵机时，请保持PWM通道不要冲突。</br>
+<a href="zh-cn/esp32/maker_esp32_pro/maker-esp32_pro_sch.pdf" target="_blank">点击查看Maker-ESP32-Pro原理图</a></br>
+<a href="zh-cn/esp32/maker_esp32_pro/maker-esp32-pro_3D.zip" target="_blank">点击下载Maker-ESP32-Pro三维模型图</a>
+
+## Maker-ESP32-Pro驱动安装
 
 驱动安装请参考此文档：[CH340G驱动安装](zh-cn/driver/ch340_driver/ch340_driver.md)
 
-## MAKER-ESP32-PRO Arduino，mixly，mind+使用方法
+## Maker-ESP32-Pro Arduino，mixly，mind+使用方法
 
 各平台程序使用方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
 
@@ -56,32 +77,28 @@
 
 ## Mixly示例程序
 
-<a href="zh-cn/esp32/maker_esp32_pro/maker-esp32-pro-mixly.zip" download>点击下载编码电机库</a>
-
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_motor_servo_test.zip" download>点击下载电机舵机示例程序</a>
-
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_servo_test.zip" download>点击下载舵机示例程序</a>
-
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_oled_test.zip" download>点击下载OLED示例程序</a>
-
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_encoder_motor_test.zip" download>点击下载编码电机示例程序</a>
+Mixly云端导入易创空间Maker-ESP32-Pro库和PS3蓝牙手柄库，
+![Mixly云端导入库](picture/mixly_lib_install.png)
+或者
+<a href="https://gitee.com/emakefun_mixly_lib/maker_esp32_pro/releases/download/V1.0.0/maker-esp32-pro-mixly.zip" download>点击下载编码电机Mixly库</a> <a href="https://gitee.com/emakefun_mixly_lib/ps3-bluetooth-handle/releases/download/V1.0.0/ps3-bluetooth-handle.zip" download>点击下载PS3蓝牙手柄Mixly库</a>
+本地导入库。</br>
+![Mixly云端导入库](picture/mixly_install_local_lib.png)
+米思齐示例如下，点击对应的案例就可以看到对应的程序。
+![Mixly示例](picture/mixly_example_pic.png)
 
 ## Mind+示例程序
 
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/esp32MindplusMotor.zip" download>点击下载电机示例程序</a>
-
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/esp32MindplusMotor.zip" download>点击下载电机示例程序</a></br>
 <a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext" download>点击下载Maker-ESP32-Pro Mind+库文件</a>
 
 ## Arduino示例程序
 
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/servoTest.zip" download>点击下载舵机示例程序</a>
-
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/servoTest.zip" download>点击下载舵机示例程序</a></br>
 <a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/oledTest.zip" download>点击下载OLED示例程序</a>
 
 ### 驱动编码电机与直流电机
 
-[点击查看编码电机以及直流电机库和示例程序](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/index.html)
-
+[点击查看编码电机以及直流电机库和示例程序](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/index.html)</br>
 点击上述链接此处即可下载库文件
 
 ![下载库](picture/101.png)

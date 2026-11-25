@@ -8,67 +8,71 @@
 
    MAKER-ESP32是基于乐鑫科技的 <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf" target="_blank">ESP32-WROOM-32E</a> 模组基础上开发的一款适用于创客教育的标志性产品，Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。采用东芝的电机驱动芯片，单电机电流最大可达3.5A。
 
-## ESP32模组参数
+## ESP32-WROOM-32E模组参数
+- 模组芯片：ESP32-D0WD-V3（双核 Xtensa® LX6，ECO V3 版本）
+- 处理器：双核，最高 240 MHz，600 DMIPS
+- 芯片存储: 448 KB ROM / 520 KB SRAM / 16 KB RTC SRAM
+- 模组Flash: 4 MB SPI Flash
+- 晶振: 40 MHz 主晶振
+- 无线：Wi-Fi 802.11 b/g/n 2.4 GHz + Bluetooth 4.2 (BR/EDR + BLE)
+- GPIO: 25 个可用（GPIO6–11 保留给 Flash）
+- PWM: 16 通道 LEDC
+- 工作电压: 3.0 – 3.6 V（推荐 3.3 V）
+- 封装尺寸: 25.5 × 18.0 × 3.1 mm，38 引脚，引脚间距 1.27 mm
+- 温度：-40 ℃ ~ +85 ℃
+- 天线：板载 PCB 天线，增益约 2 dBi
 
-* 448 KB ROM,520 KB SRAM,16 KB RTC SRAM
-
-* QSPI 支持多个 flash/SRAM
-
-* 内置 8 MHz 振荡器
-
-* 支持自校准
-
-* 内置 RC 振荡器，支持自校准
-
-* 支持外置 2 MHz 至 60 MHz 的主晶振（如果使用 Wi-Fi/蓝牙功能，则目前仅支持 40 MHz 晶振）
-
-* 支持外置 32 kHz 晶振，用于 RTC，支持自校准
-
-* 2 个定时器群组，每组包括 2 个 64-bit 通用定时器和 1 个主系统看门狗
-
-* 1 个 RTC 定时器
-
-* RTC 看门狗
-
-* 34 个 GPIO 口 • 12-bit SAR ADC，多达 18 个通道
-
-* 带有专用 DMA 的以太网 MAC 接口，支持 IEEE 1588
-
-* 双线汽车接口（TWAI®，兼容 ISO11898-1） • IR (TX/RX)
+!> 注：使用WIFI时，请一定使用2.4G频段的WIFI
 
 ## 产品参数
-
-* 4个电机端口(M1: 27, 13; M2: 4, 2; M3: 17, 12; M4: 15, 14)；2个步进电机端口(Stepper1: 27, 13, 4, 2; Stepper2: 17, 12, 15, 14)；电流最大达到3.5A；步进电机和直流电机共用IO引脚，使用时注意引脚复用。
-* 板载4个RGB灯(16引脚)
-* 5个I2C插针接口,1个SPI插针接口
-* 4个舵机接口（25、26、32、33）
-* 8个IO引脚(12、14、15、17、34、35、36、39)
-* DC头(5.5-2.1mm)输入电压： 6-16V
-* 产品尺寸：80mm×57mm；PCB厚度：1.6mm；净重：35g
-* M4定位孔直径：4.6mm，兼容乐高
-* 软件支持Mixly、Arduino IDE、Micropython、Mind+
+- 接口
+   - 电机： 4个, 电流最大达到3.5A
+   - 步进电机：2个
+   - 舵机：4个
+   - I2C：5个
+   - SPI: 1个
+   - IO: 8个
+   - 5V插针接口：3个
+   - 3.3V插针接口：3个
+   - VIN插针接口：3个
+- RGB灯：4个
+- 驱动芯片：CH340G
+- 上传接口：Micro USB
+- DC头(5.5-2.1mm)输入电压： 6-16V
+- 产品尺寸：80 × 57mm；PCB厚度：1.6mm；净重：35g
+- M4定位孔直径：4.6mm，兼容乐高
+- 软件支持Arduino IDE、Mixly、Micropython、Mind+
 
 ## 引脚说明
 
 ![引脚图](picture/esp32_pic.png)
 
-<font color="red" size="5">**注:**</font>  
+| 功能 | 引脚 |
+| -------- | ---------- |
+| 电机M1       | 27，13   |
+| 电机M2       | 4，2   |
+| 电机M3       | 17，12        |
+| 电机M4       | 14，15    |
+| 舵机       | 25，26，32，33    |
+| 步进电机1       | 27，13，4，2   |
+| 步进电机2       | 17，12，15，14   |
+| I2C       | SDA:21, SCL: 22   |
+| RGB       | 16        |
+| SPI       | 5, 18, 19, 23    |
+| IO       | 12、14、15、17、34、35、36、39     |
 
-1. Motor and IO Switch: 当拨码开关打到IO口端时，M3、M4电机端口不工作，不能驱动电机，引脚为普通端口；当拨码开关打到M3A/M3B/M4A/M4B时，M3、M4为电机端口，可以驱动电机。
+!> 注:
+1. Motor and IO Switch: 当拨码开关打到IO口端时，M3、M4电机端口不工作，不能驱动电机，引脚为普通端口；当拨码开关打到M3A/M3B/M4A/M4B时，M3、M4为电机端口，可以驱动电机/步进电机。</br>
+2. 因为ESP32芯片特性，主板的34、35、36、39引脚不能作为输出；并且34、35、36、39引脚做为输入时，不能设置上拉或下拉模式。</br>
+3. 在同时使用电机和舵机时，请保持PWM通道不要冲突。</br>
+<a href="zh-cn/esp32/maker_esp32/Esp32_V1.5.pdf" target="_blank">点击查看Maker-ESP32原理图</a></br>
+<a href="zh-cn/esp32/maker_esp32/maker-esp32_3D.zip" target="_blank">点击下载Maker-ESP32三维模型图</a>
 
-2. 因为ESP32芯片特性，在Arduino框架下，主板的34、35、36、39引脚不能作为输出；并且34、35、36、39引脚做为输入时，不能设置上拉或下拉模式。
-
-3. 使用WIFI时，请使用2.4GHZ频段的网络，否则主板将无法连接上WIFI。
-
-<a href="zh-cn/esp32/maker_esp32/Esp32_V1.5.pdf" target="_blank">点击查看产品原理图</a>
-
-<a href="zh-cn/esp32/maker_esp32/maker-esp32.zip" target="_blank">点击下载三维模型图</a>
-
-## MAKER-ESP32驱动安装
+## Maker-ESP32驱动安装
 
 驱动安装请参考此文档：[CH340G驱动安装](zh-cn/driver/ch340_driver/ch340_driver.md)
 
-## MAKER-ESP32上传程序方法
+## Maker-ESP32上传程序方法
 
 各平台程序上传方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
 
@@ -76,22 +80,13 @@
 
 ## Mixly示例程序
 
-<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_motor_test.zip" download>点击下载电机示例程序</a>
-
-<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_rgb_test.zip" download>点击下载RGB灯示例程序</a>
-
-<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_servo_test.zip" download>点击下载舵机示例程序</a>
-
-<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_oled_test.zip" download>点击下载OLED示例程序</a>
-
-<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_motor_servo_test.zip" download>点击下载电机舵机综合示例程序</a>
-
-电机舵机一起用时，不要用Mixly自带的电机驱动块，需使用操作引脚来控制，因为舵机电机一起使用时，mixly自带的驱动块PWM管道冲突，属于mixly软件库本身的问题。
-
-<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_stepper_test.zip" download>点击下载步进电机示例程序</a>
-
+<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_motor_test.zip" download>点击下载电机示例程序</a></br>
+<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_rgb_test.zip" download>点击下载RGB灯示例程序</a></br>
+<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_servo_test.zip" download>点击下载舵机示例程序</a></br>
+<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_oled_test.zip" download>点击下载OLED示例程序</a></br>
+<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_motor_servo_test.zip" download>点击下载电机舵机综合示例程序</a></br>
+<a href="zh-cn/esp32/maker_esp32/esp32_mixly/esp32_stepper_test.zip" download>点击下载步进电机示例程序</a></br>
 以28BYJ-48步进电机，接Stepper1接口为例,接线方式如下表格：
-
 | 步进电机线的颜色 | 引脚(主板背面丝印) |
 | -------- | ---------- |
 | 橙色       | A01 (27)   |
@@ -100,22 +95,19 @@
 | 蓝色       | A03 (4)    |
 | 黄色       | A04 (2)    |
 
+<a href="zh-cn/esp32/maker_esp32/esp32_mixly/ps3_controller.zip" download>点击下载PS3控制电机舵机程序</a></br>
+使用PS3控制电机舵机程序时，需Mixly云端导入易创空间PS3蓝牙手柄库。PS3手柄左侧L1/L2按键控制26号引脚舵机，右侧R1/R2按键控制25号引脚舵机，叉和三角形按键控制33号引脚舵机，正方形按键和圆形按键控制32号引脚舵机；方向键控制四个电机正反转和左右转，左摇杆X轴控制M0电机，左摇杆Y轴控制M1电机，右摇杆X轴控制M2电机，右摇杆Y轴控制M3电机, SELECT/START键控制灯光</br>
+
 ## Arduino示例程序(ESP32版本>=3.0.0)
 
-<a href="zh-cn/esp32/maker_esp32/esp32_arduino/motorTest.zip" download>点击下载电机示例程序</a>
-
-<a href="zh-cn/esp32/maker_esp32/esp32_arduino/rgbTest.zip" download>点击下载RGB灯示例程序</a>
-
-<a href="zh-cn/esp32/maker_esp32/esp32_arduino/servoTest.zip" download>点击下载舵机示例程序</a>
-
-<a href="zh-cn/esp32/maker_esp32/esp32_arduino/oledTest.zip" download>点击下载OLED示例程序</a>
-
-<a href="zh-cn/esp32/maker_esp32/esp32_arduino/motorServotTest.zip" download>点击下载电机舵机综合示例程序</a>
-
-<a href="zh-cn/esp32/maker_esp32/esp32_arduino/stepperTest.zip" download>点击下载步进电机示例程序</a>
-
+<a href="zh-cn/esp32/maker_esp32/esp32_arduino/motorTest.zip" download>点击下载电机示例程序</a></br>
+<a href="zh-cn/esp32/maker_esp32/esp32_arduino/rgbTest.zip" download>点击下载RGB灯示例程序</a></br>
+<a href="zh-cn/esp32/maker_esp32/esp32_arduino/servoTest.zip" download>点击下载舵机示例程序</a></br>
+<a href="zh-cn/esp32/maker_esp32/esp32_arduino/oledTest.zip" download>点击下载OLED示例程序</a></br>
+<a href="zh-cn/esp32/maker_esp32/esp32_arduino/motorServotTest.zip" download>点击下载电机舵机综合示例程序</a></br>
+ <a href="zh-cn/esp32/maker_esp32/esp32_arduino/esp32PS3ControlTest.zip" download>点击下载PS3蓝牙手柄控制电机舵机案例</a></br>
+<a href="zh-cn/esp32/maker_esp32/esp32_arduino/stepperTest.zip" download>点击下载步进电机示例程序</a></br>
 以28BYJ-48步进电机，接Stepper1接口为例,接线方式如下表格：
-
 | 步进电机线的颜色 | 引脚(主板背面丝印) |
 | -------- | ---------- |
 | 橙色       | A01 (27)   |
@@ -126,8 +118,7 @@
 
 ### 驱动42步进电机（两相四线）示例（Arduino）
 
-<a href="zh-cn/esp32/maker_esp32/esp32_arduino/42stepper_test.zip" download>点击下载42步进电机示例程序</a>
-
+<a href="zh-cn/esp32/maker_esp32/esp32_arduino/42stepper_test.zip" download>点击下载42步进电机示例程序</a></br>
 **安装库**：在 Arduino IDE 中，通过“项目” → “加载库” → “管理库”，搜索并找到 **AccelStepper** ，版本选择**1.64**，然后点击安装。
 
 #### 1. 硬件接线
@@ -171,7 +162,7 @@ MAKER-ESP32 可直接驱动双极性步进电机，将 42 步进电机的四根�
 **工具**：数字万用表（电阻档或蜂鸣档）
 
 1. **找出同一相的两根线**  
-
+   
    * 将万用表调至电阻档（200Ω 量程）或蜂鸣档。  
    * 任意测量两根线之间的电阻：  
      * 如果阻值很小（通常几欧姆），说明这两根线属于**同一相线圈**。  
@@ -179,7 +170,7 @@ MAKER-ESP32 可直接驱动双极性步进电机，将 42 步进电机的四根�
    * 重复测量，直到找出**两组**相互导通的线对。每组即为一个线圈（如线圈1和线圈2）。
 
 2. **标记两相**  
-
+   
    * 将第一组两根线暂时标记为 **A 相**（暂称 A1、A2），第二组标记为 **B 相**（B1、B2）。  
    * **注意**：此时我们尚无法区分 A1 和 A2 哪个是 A+ 哪个是 A-，但对于双极性驱动，这并不重要。只要将同一相的两根线分别接到驱动器的 A+ 和 A- 端口（顺序可任意），另一相接到 B+ 和 B- 即可。如果电机转向相反，交换任意一相的两根线即可纠正。
 
@@ -193,8 +184,7 @@ MAKER-ESP32 可直接驱动双极性步进电机，将 42 步进电机的四根�
 
 ## Mind+示例程序
 
-<a href="zh-cn/esp32/maker_esp32/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext" download>点击下载MAKER-ESP32Mind+库文件</a>
-
+<a href="zh-cn/esp32/maker_esp32/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext" download>点击下载MAKER-ESP32Mind+库文件</a></br>
 <a href="zh-cn/esp32/maker_esp32/esp32_mindplus/esp32MindplusMotor.zip" download>点击下载电机示例程序</a>
 
 ## FAQ
@@ -217,10 +207,7 @@ MAKER-ESP32 可直接驱动双极性步进电机，将 42 步进电机的四根�
 
 ## 参考链接
 
-[ESP32 技术规格书](https://documentation.espressif.com/esp32_datasheet_cn.pdf)
-
-[快速入门 - ESP32 - — ESP-IDF 编程指南 latest 文档](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/index.html)
-
-[适用于 VS Code 的 ESP-IDF 扩展 - - — ESP-IDF Extension for VSCode latest 文档](https://docs.espressif.com/projects/vscode-esp-idf-extension/zh_CN/latest/index.html#)
-
-[Getting Started - - — Arduino ESP32 latest documentation](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html)
+[ESP32 技术规格书](https://documentation.espressif.com/esp32_datasheet_cn.pdf)</br>
+[快速入门 - ESP32 - — ESP-IDF 编程指南 latest 文档](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/index.html)</br>
+[适用于 VS Code 的 ESP-IDF 扩展 - - — ESP-IDF Extension for VSCode latest 文档](https://docs.espressif.com/projects/vscode-esp-idf-extension/zh_CN/latest/index.html#)</br>
+[Getting Started - - — Arduino ESP32 latest documentation](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html)</br>
