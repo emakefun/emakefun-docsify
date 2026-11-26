@@ -202,6 +202,7 @@ https://gitee.com/emakefun_midplus_lib/ps3-bluetooth-handle
 ![返回页面](./picture/21.png)
 
 <a href="https://gitee.com/emakefun_midplus_lib/ps3-bluetooth-handle/releases/download/V1.0.0/PS3_bluetooth_handle_example.zip" download>点击下载Mind+ PS3蓝牙手柄案例</a></br>
+<a href="https://gitee.com/emakefun_midplus_lib/ps3-bluetooth-handle/releases/download/V1.0.0/PS3_controller_motor_servo_example.zip" download>点击下载Mind+ PS3蓝牙手柄控制电机舵机案例</a></br>
 [点击查看Mind+导入用户库方法](https://mindplus.dfrobot.com.cn/extensions-user-libraries)
 
 ## 六、充电说明
