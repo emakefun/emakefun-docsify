@@ -67,10 +67,10 @@ Maker-ESP32-Mini是基于乐鑫科技的 <a href="https://documentation.espressi
 | IO       | 12、14、15、17、34、35、36、39     |
 | BOOT按键  |    0             |
 
-!> 注:
-!> 1. Motor and IO Switch: 当拨码开关打到IO口端时，M2、M3电机端口不工作，不能驱动电机，引脚为普通端口；当拨码开关打到M3A/M3B/M4A/M4B时，M2、M3为电机端口，可以驱动电机。</br>
-!> 2. 因为ESP32芯片特性，在Arduino框架下，主板的34、35、36、39引脚不能作为输出；并且34、35、36、39引脚做为输入时，不能设置上拉或下拉模式。</br>
-!> 3. 在同时使用电机和舵机时，请保持PWM通道不要冲突。</br>
+> ⚠️ **注意**  
+> 1. Motor and IO Switch: 当拨码开关打到IO口端时，M2、M3电机端口不工作，不能驱动电机，引脚为普通端口；当拨码开关打到M3A/M3B/M4A/M4B时，M2、M3为电机端口，可以驱动电机。</br>
+> 2. 因为ESP32芯片特性，在Arduino框架下，主板的34、35、36、39引脚不能作为输出；并且34、35、36、39引脚做为输入时，不能设置上拉或下拉模式。</br>
+> 3. 在同时使用电机和舵机时，请保持PWM通道不要冲突。</br>
 
 <a href="zh-cn\esp32\maker-esp32-mini\maker-esp32-mini_sch.pdf" target="_blank">点击查看Maker-ESP32-Mini原理图</a></br>
 <a href="zh-cn/esp32/maker_esp32_pro/maker-esp32-mini_3D.zip" target="_blank">点击下载Maker-ESP32-Mini三维模型图</a>
