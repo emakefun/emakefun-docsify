@@ -59,9 +59,10 @@
 | IO       | 12、14、15、17、34、35、36、39     |
 
 !> 注:
-1. Motor and IO Switch: 当拨码开关打到IO口端时，M3、M4电机端口不工作，不能驱动电机，引脚为普通端口；当拨码开关打到M3A/M3B/M4A/M4B时，M3、M4为电机端口，可以驱动电机/步进电机。</br>
-2. 因为ESP32芯片特性，主板的34、35、36、39引脚不能作为输出；并且34、35、36、39引脚做为输入时，不能设置上拉或下拉模式。</br>
-3. 在同时使用电机和舵机时，请保持PWM通道不要冲突。</br>
+!> 1. Motor and IO Switch: 当拨码开关打到IO口端时，M3、M4电机端口不工作，不能驱动电机，引脚为普通端口；当拨码开关打到M3A/M3B/M4A/M4B时，M3、M4为电机端口，可以驱动电机/步进电机。
+!> 2. 因为ESP32芯片特性，主板的34、35、36、39引脚不能作为输出；并且34、35、36、39引脚做为输入时，不能设置上拉或下拉模式。
+!> 3. 在同时使用电机和舵机时，请保持PWM通道不要冲突。
+
 <a href="zh-cn/esp32/maker_esp32_pro/maker-esp32_pro_sch.pdf" target="_blank">点击查看Maker-ESP32-Pro原理图</a></br>
 <a href="zh-cn/esp32/maker_esp32_pro/maker-esp32-pro_3D.zip" target="_blank">点击下载Maker-ESP32-Pro三维模型图</a>
 
@@ -77,12 +78,13 @@
 
 ## Mixly示例程序
 
-Mixly云端导入易创空间Maker-ESP32-Pro库和PS3蓝牙手柄库，
+Mixly云端导入易创空间Maker-ESP32-Pro库和PS3蓝牙手柄库，如下图
 ![Mixly云端导入库](picture/mixly_lib_install.png)
+
 或者
-<a href="https://gitee.com/emakefun_mixly_lib/maker_esp32_pro/releases/download/V1.0.0/maker-esp32-pro-mixly.zip" download>点击下载编码电机Mixly库</a></br> <a href="https://gitee.com/emakefun_mixly_lib/ps3-bluetooth-handle/releases/download/V1.0.0/ps3-bluetooth-handle.zip" download>点击下载PS3蓝牙手柄Mixly库</a>
-本地导入库。</br>
+<a href="https://gitee.com/emakefun_mixly_lib/maker_esp32_pro/releases/download/V1.0.0/maker-esp32-pro-mixly.zip" download>点击下载编码电机Mixly库</a>   <a href="https://gitee.com/emakefun_mixly_lib/ps3-bluetooth-handle/releases/download/V1.0.0/ps3-bluetooth-handle.zip" download>点击下载PS3蓝牙手柄Mixly库</a>再本地导入库，如下图</br>
 ![Mixly云端导入库](picture/mixly_install_local_lib.png)
+
 米思齐示例如下，点击对应的案例就可以看到对应的程序。
 ![Mixly示例](picture/mixly_example_pic.png)
 

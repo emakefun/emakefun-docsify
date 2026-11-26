@@ -165,13 +165,13 @@
 
     ![选择Arduino ESP32 为主板模式](picture/9.png)
 
-2. 点击软件左上角设置——管理库，添加Emakefun传感器库。
+2. 点击软件左上角设置——管理库，添加易创空间PS3蓝牙手柄库。
 
     ![添加Emakefun传感器库](picture/10.png)
 
     ![添加Emakefun传感器库](./picture/mixly_install_ps3_lib.png)
 
-3. 安装后，在EmakefunSensors—通信模块 类别中可找到PS3相关编程指令。
+3. 安装后，点击打开PS3蓝牙手柄就可以看到PS3相关编程图形化块。
 
     ![PS3相关编程指令](picture/12.png)
 
@@ -201,6 +201,7 @@ https://gitee.com/emakefun_midplus_lib/ps3-bluetooth-handle
 ![导入成功](./picture/25.png)
 库文件安装成功后，返回编程主界面，在“用户库”中可找到PS3相关编程指令。
 ![返回页面](./picture/21.png)
+
 <a href="https://gitee.com/emakefun_midplus_lib/ps3-bluetooth-handle/releases/download/V1.0.0/PS3_bluetooth_handle_example.zip" download>点击下载Mind+ PS3蓝牙手柄案例</a></br>
 [点击查看Mind+导入用户库方法](https://mindplus.dfrobot.com.cn/extensions-user-libraries)
 
