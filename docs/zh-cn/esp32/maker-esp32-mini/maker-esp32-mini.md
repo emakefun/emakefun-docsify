@@ -93,7 +93,7 @@ Maker-ESP32-Mini是基于乐鑫科技的 <a href="https://documentation.espressi
 
 ## 示例程序
 
-参考Maker-ESP32[点击此处跳转](https://docs.emakefun.com/#/zh-cn/esp32/maker_esp32/maker_esp32)
+参考Maker-ESP32[点击此处跳转](/zh-cn/esp32/maker_esp32/maker_esp32.md)
 
 ## 机械尺寸图
 
