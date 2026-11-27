@@ -1,115 +1,134 @@
 # MAKER-ESP32-PRO 使用说明书
 
-## 1. 产品说明
-### 1.1 模块实物图
+## 产品实物图
 
 ![Maker-esp32-pro正视图](picture/Maker-esp32-pro正视图.png)
 
-### 1.2 概述
+## 概述
 
-   MAKER-ESP32-PRO是基于乐鑫科技的 <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf" target="_blank">ESP32-WROOM-32</a> 模组基础上开发的一款适用于创客教育的标志性产品，Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。板载4路编码电机和直流电机，最大驱动电流3A，编码电机和直流电机复用驱动引脚，即同一个端口，不能同时驱动编码电机和直流电机。
+   MAKER-ESP32-PRO是基于乐鑫科技的 <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf" target="_blank">ESP32-WROOM-32E</a> 模组基础上开发的一款适用于创客教育的标志性产品，Flash大小4MB，集成 2.4 GHz、Wi-Fi 和蓝牙双模的单芯片方案。板载4路编码电机和直流电机，最大驱动电流3A，编码电机和直流电机复用驱动引脚，即同一个端口，不能同时驱动编码电机和直流电机。
 
-### 1.3 ESP32模组参数
+## ESP32-WROOM-32E模组参数
+- 模组芯片：ESP32-D0WD-V3（双核 Xtensa® LX6，ECO V3 版本）
+- 处理器：双核，最高 240 MHz，600 DMIPS
+- 芯片存储: 448 KB ROM / 520 KB SRAM / 16 KB RTC SRAM
+- 模组Flash: 4 MB SPI Flash
+- 晶振: 40 MHz 主晶振
+- 无线：Wi-Fi 802.11 b/g/n 2.4 GHz + Bluetooth 4.2 (BR/EDR + BLE)
+- GPIO: 25 个可用（GPIO6–11 保留给 Flash）
+- PWM: 16 通道 LEDC
+- 工作电压: 3.0 – 3.6 V（推荐 3.3 V）
+- 封装尺寸: 25.5 × 18.0 × 3.1 mm，38 引脚，引脚间距 1.27 mm
+- 温度：-40 ℃ ~ +85 ℃
+- 天线：板载 PCB 天线，增益约 2 dBi
 
-* 448 KB ROM,520 KB SRAM,16 KB RTC SRAM
-* QSPI 支持多个 flash/SRAM
-* 内置 8 MHz 振荡器
-* 支持自校准
-* 内置 RC 振荡器，支持自校准
-* 支持外置 2 MHz 至 60 MHz 的主晶振（如果使用 Wi-Fi/蓝牙功能，则目前仅支持 40 MHz 晶振）
-* 支持外置 32 kHz 晶振，用于 RTC，支持自校准
-* 2 个定时器群组，每组包括 2 个 64-bit 通用定时器和 1 个主系统看门狗
-* 1 个 RTC 定时器
-* RTC 看门狗
-* 34 个 GPIO 口 • 12-bit SAR ADC，多达 18 个通道
-* 带有专用 DMA 的以太网 MAC 接口，支持 IEEE 1588
-* 双线汽车接口（TWAI®，兼容 ISO11898-1） • IR (TX/RX)
+!> 注：使用WIFI时，请一定使用2.4G频段的WIFI
 
-### 1.4 原理图
+## 产品参数
+- 接口
+   - 电机： 4个, 电流最大达到3.5A
+   - 编码电机：4个
+   - 舵机：4个
+   - I2C：5个
+   - SPI: 1个
+   - IO: 8个
+- 驱动芯片：CH340G
+- 上传接口：Type C
+- DC头(5.5-2.1mm)输入电压： 6-16V
+- 产品尺寸：80 × 57mm；PCB厚度：1.6mm；净重：40g
+- M4定位孔直径：4.6mm，兼容乐高
+- 软件支持Arduino IDE、Mixly、Micropython、Mind+
 
-<a href="zh-cn/esp32/maker_esp32_pro/maker-esp32_pro.pdf" target="_blank">点击查看原理图</a>
+## 引脚说明
 
-### 1.5 产品参数
+![引脚说明](picture/pin_pic.png)
 
-* 4个编码电机端口（E0、E1、E2、E3）；4个直流电机端口（M0、M1、M2、M3）端口与编码电机复用；电流最大达到3A
-* 其中E0(A:18 B:19 +:27 -:13)，E1(A:5 B:23 +:4 -:2)，E2(A:35 B:36 +:17 -:12)，E3(A:34 B:39 +:15 -:14)
-* 5个I2C插针接口,1个SPI插针接口
-* 4个舵机接口（25、26、32、33）
-* 13个IO引脚(5、12、14、15、16、17、18、19、23、34、35、36、39)
-* 输入电压： 6-16V
-* 产品尺寸：80mm×57mm；PCB厚度：1.6mm；净重：35g
-* M4定位孔直径：4.6mm，兼容乐高
-* 软件支持Mixly、Arduino IDE、MicroPython
+| 功能 | 引脚 |
+| -------- | ---------- |
+| 电机M1       | 27，13   |
+| 电机M2       | 4，2   |
+| 电机M3       | 17，12        |
+| 电机M4       | 14，15    |
+| 舵机       | 25，26，32，33    |
+| 编码电机E0       | 27(-)，13(+)，18(A)，19(B)   |
+| 编码电机E1       | 4(-)，2(+)，5(A)，23(B)   |
+| 编码电机E2       | 17(-)，12(+)，35(A)，36(B)   |
+| 编码电机E3       | 15(-)，14(+)，34(A)，39(B)   |
+| I2C       | SDA: 21, SCL: 22   |
+| SPI       | 5, 18, 19, 23    |
+| IO       | 12、14、15、17、34、35、36、39     |
 
-### 1.6 引脚说明
+> ⚠️ **注意**  
+> 1. Motor and IO Switch: 当拨码开关打到IO口端时，M2、M3电机端口不工作，不能驱动电机，引脚为普通端口；当拨码开关打到M3A/M3B/M4A/M4B时，M2、M3为电机端口，可以驱动电机。</br>
+> 2. 因为ESP32芯片特性，在Arduino框架下，主板的34、35、36、39引脚不能作为输出；并且34、35、36、39引脚做为输入时，不能设置上拉或下拉模式。</br>
+> 3. 在同时使用电机和舵机时，请保持PWM通道不要冲突。</br>
 
-![引脚说明](picture/1bd20944ce3774a14fe19d55e94e8ad.png)
+<a href="zh-cn/esp32/maker_esp32_pro/maker-esp32_pro_sch.pdf" target="_blank">点击查看Maker-ESP32-Pro原理图</a></br>
+<a href="zh-cn/esp32/maker_esp32_pro/maker-esp32-pro_3D.zip" target="_blank">点击下载Maker-ESP32-Pro三维模型图</a>
 
-## 2. MAKER-ESP32-PRO Arduino，mixly，mind+使用方法
+## Maker-ESP32-Pro驱动安装
 
 驱动安装请参考此文档：[CH340G驱动安装](zh-cn/driver/ch340_driver/ch340_driver.md)
+
+## Maker-ESP32-Pro Arduino，mixly，mind+使用方法
 
 各平台程序使用方法请参考：[ESP32系列上传程序方法](zh-cn/esp32/esp32_software_instructions/esp32_software_instructions.md)
 
 **注意**：使用Arduino IDE开发时，请将esp32更新至最新版本。
 
-### 2.1 Mixly示例程序
+## Mixly示例程序
 
-<a href="zh-cn/esp32/maker_esp32_pro/maker-esp32-pro-mixly.zip" download>点击下载编码电机库</a>
+Mixly云端导入易创空间Maker-ESP32-Pro库和PS3蓝牙手柄库，如下图
+![Mixly云端导入库](picture/mixly_lib_install.png)
 
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_motor_servo_test.zip" download>点击下载电机舵机示例程序</a>
+或者
+<a href="https://gitee.com/emakefun_mixly_lib/maker_esp32_pro/releases/download/V1.0.0/maker-esp32-pro-mixly.zip" download>点击下载编码电机Mixly库</a>   <a href="https://gitee.com/emakefun_mixly_lib/ps3-bluetooth-handle/releases/download/V1.0.0/ps3-bluetooth-handle.zip" download>点击下载PS3蓝牙手柄Mixly库</a>再本地导入库，如下图</br>
+![Mixly云端导入库](picture/mixly_install_local_lib.png)
 
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_servo_test.zip" download>点击下载舵机示例程序</a>
+米思齐示例如下，点击对应的案例就可以看到示例程序。
 
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_oled_test.zip" download>点击下载OLED示例程序</a>
+![Mixly示例](picture/mixly_example_pic.png)
 
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mixly/esp32_encoder_motor_test.zip" download>点击下载编码电机示例程序</a>
+## Mind+示例程序
 
-### 2.2 Mind+示例程序
-
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/esp32MindplusMotor.zip" download>点击下载电机示例程序</a>
-
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/esp32MindplusMotor.zip" download>点击下载电机示例程序</a></br>
 <a href="zh-cn/esp32/maker_esp32_pro/esp32_mindplus/emakefun-em_maker_esp32-thirdex-V0.0.2.mpext" download>点击下载Maker-ESP32-Pro Mind+库文件</a>
 
-### 2.3 Arduino示例程序
+## Arduino示例程序
 
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/servoTest.zip" download>点击下载舵机示例程序</a>
-
+<a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/servoTest.zip" download>点击下载舵机示例程序</a></br>
 <a href="zh-cn/esp32/maker_esp32_pro/esp32_arduino/oledTest.zip" download>点击下载OLED示例程序</a>
 
-### 2.4 Arduino 使用方法
+### 驱动编码电机与直流电机
 
-#### 2.4.1 驱动编码电机与直流电机
-
-[点击查看编码电机以及直流电机库和示例程序](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/index.html)
-
+[点击查看编码电机以及直流电机库和示例程序](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/index.html)</br>
 点击上述链接此处即可下载库文件
 
 ![下载库](picture/101.png)
 
-##### 2.4.1.1 驱动电机示例文件以及常用函数说明
+#### 驱动电机示例文件以及常用函数说明
 
-###### 2.4.1.1.1 示例文件说明( [Emakefun Encoder Motor: 示例文件](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/examples.html) )
+##### 示例文件说明( [Emakefun Encoder Motor: 示例文件](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/examples.html) )
 
 详情可查看上述链接的如下位置：
 
 ![示例文件说明](picture/102.png)
 
-###### 2.4.1.1.2 常用函数说明( [Emakefun Encoder Motor: 类成员 - 函数](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/classem_1_1_encoder_motor.html#a69db8b9fc364d4d8f2509473d759ed0f) )
+##### 常用函数说明( [Emakefun Encoder Motor: 类成员 - 函数](https://emakefun-arduino-library.github.io/em_esp32_encoder_motor/html/zh-CN/classem_1_1_encoder_motor.html#a69db8b9fc364d4d8f2509473d759ed0f) )
 
 更多函数可以参考上方链接的如下位置：
 
 ![常用函数说明](picture/103.png)
 
-##### 2.4.1.2 使用Arduino IDE调试编码电机
+#### 使用Arduino IDE调试编码电机
 
-###### 2.4.1.2.1 接线说明
+##### 接线说明
 
 将编码电机的信号线连接到电机驱动板的对应引脚，并外接DC电源，通过typeC接口连接电脑。如下图所示：
 
 ![接线说明](picture/Wiringdiagram.png)
 
-###### 2.4.1.2.2 添加库文件
+##### 添加库文件
 
 打开Arduino IDE，点击项目->导入库->添加.ZIP库，选择下载好的库文件，点击打开，然后点击确定。
 
@@ -123,7 +142,7 @@
 
 ![选择主板型号](picture/107.png)
 
-##### 2.4.1.3 打开示例程序
+#### 打开示例程序
 
 打开Arduino IDE，点击文件->示例->Emakefun Encoder Motor->detect_phase_relation，然后点击打开。
 
@@ -173,190 +192,15 @@
 
 至此我们编码电机已经调试结束。若发现与我们的预期不符，请再次检查电机连接是否正确，电机驱动板是否有问题，以及电机是否有问题。
 
-#### 2.4.2 使用CodexPad-S10手柄控制外设
+### 使用CodexPad-S10手柄控制外设
 
 演示如何使用CodexPad-S10手柄进行控制直流电机、编码电机、舵机等外设，您可以点此链接查看详细说明：[点击查看详细说明](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_maker_esp32_pro_base.zh-CN.md#codexpad-s10手柄控制示例maker-esp32-pro开发板基础示例说明)。
 
-### 2.5 MicroPython 使用方法
-
-<a href="zh-cn/esp32/maker_esp32_pro/esp32_micropython/encoder_motor_micropython_v0.2.0.zip" download>点击下载 MicroPython 编码电机库与示例程序（v0.2.0）</a>
-
-> 运行环境：MicroPython ≥ 1.29（ESP32 端口）  
-> 配套库：encoder_motor.py（v0.2.0，emakefun em_esp32_encoder_motor 的 MicroPython 移植）
-
-本节以「第一次把电机转起来」为目标，从接线走到闭环调速，每一步都给出可观察的现象。如果你只想驱动一个不带编码器的直流电机，接线见下文 2.5.3.2「直流电机（可选）」，示例可运行程序包中的 examples/drive_dc_motor/main.py。
-
-Thonny 的下载安装、驱动安装与固件烧录请参考：[Thonny开发环境配置](zh-cn/software/thonny/thonny.zh-CN.md)。
-
-#### 2.5.1 软件清单
-
-| 软件 | 用途 |
-|---|---|
-| Thonny 4.x | 编辑、运行、看串口输出（推荐） |
-| 或 mpremote | 命令行上传与运行 |
-
-Thonny 首次连接需要选解释器：运行 → 配置解释器 → MicroPython (ESP32) → 端口选 COMx → 安装官方固件。
-
-![Thonny配置解释器](picture/mpy_thonny_interpreter.png)
-
-#### 2.5.2 确认固件版本
-
-在 Thonny 的 Shell 里输入：
-
-```python
-import sys
-print(sys.implementation.version)
-```
-
-输出应类似 (1, 29, 0, '')。
-
-**这个版本号很关键**：1.29 起才有 machine.Encoder（PCNT 硬件正交解码）。低于 1.29 时库会自动退回软件中断解码，功能能跑，但高速下方向判断不可靠。
-
-如果版本过低，请按 [Thonny开发环境配置](zh-cn/software/thonny/thonny.zh-CN.md) 的「烧录固件」一节重刷固件后再继续。
-
-#### 2.5.3 接线
-
-![MicroPython接线图](picture/mpy_wiring.jpeg)
-
-##### 2.5.3.1 编码电机
-
-把编码电机的 **6 芯插头**插到板子上标有 E0 的插座：
-
-| 板上丝印 | 引脚 | 接到 |
-|---|---|---|
-| + | GPIO27 | 电机正极 |
-| − | GPIO13 | 电机负极 |
-| A | GPIO18 | 编码器 A 相 |
-| B | GPIO19 | 编码器 B 相 |
-
-![E0插头接线](picture/mpy_e0_plug.jpeg)
-
-插头有防呆结构，插不进时**换个方向**，不要硬插。
-
-##### 2.5.3.2 直流电机（可选）
-
-不带编码器的电机插到 M1 的 **2 芯**插座，引脚是 GPIO4(+) / GPIO2(−)。
-
-> E1 和 M1 是**同一路**驱动的两个插座，二选一，不能同时接。
-
-##### 2.5.3.3 连接电脑
-
-Type-C 线接电脑，Thonny 右下角能看到 MicroPython (ESP32) · COMx 即为连接成功。
-
-#### 2.5.4 把库放到板子上
-
-库只有**一个文件**：encoder_motor.py。
-
-##### 2.5.4.1 方法一：Thonny 拖拽（推荐）
-
-1. 打开 Thonny，选择 视图 → 文件，左侧出现「本机」和「MicroPython 设备」两栏；
-2. 解压下载的程序包，在本机找到 lib/encoder_motor.py；
-3. 右键 → 上传到 /，或直接拖到右侧设备栏；
-4. 设备栏出现 encoder_motor.py 即成功。
-
-![Thonny文件视图](picture/mpy_thonny_files_view.png)
-
-![上传库文件到设备](picture/mpy_thonny_upload.png)
-
-##### 2.5.4.2 方法二：mpremote
-
-```bash
-mpremote fs cp lib/encoder_motor.py :encoder_motor.py
-```
-
-##### 2.5.4.3 验证
-
-在 Shell 里：
-
-```python
-import encoder_motor as em
-print(em.__version__)
-```
-
-输出 0.2.0 即部署成功。
-
-![验证库版本](picture/mpy_lib_version.png)
-
-#### 2.5.5 示例一：检测相位关系
-
-编码器的 A、B 两相谁领先谁，取决于电机型号和接线方式。**这一步不做，后面的闭环可能会飞车。**
-
-##### 2.5.5.1 打开示例
-
-在 Thonny 中打开 examples/detect_phase_relation/main.py，按 **F5** 运行。
-
-（不用先把文件拷到板子上——Thonny 会把当前文件直接送到板子上执行，库已经在板子里。）
-
-##### 2.5.5.2 第一次运行：看到负值
-
-```text
-example version: 1.0.0 lib version: 0.2.0
-pins: POS=27 NEG=13 A=18 B=19
-speed with +1023: -87 RPM, pulses: -2231
-PHASE: B_PHASE_LEADS is required, switching at runtime ...
-set_phase() -> True  speed now: 83 RPM (pulses keep counting, no reset)
-motor shut down
-```
-
-![检测相位关系运行结果](picture/mpy_phase_detect_run.png)
-
-**现象解读**：我们给的是正占空比，电机在正转，但转速读数是负的——说明相位参数填反了。
-
-##### 2.5.5.3 让参数生效
-
-示例里已经演示了运行期切换：
-
-```python
-ok = motor.set_phase(em.PHASE_RELATION_B_PHASE_LEADS)
-```
-
-返回 True 表示切换成功，之后的读数立刻变正，**而且计数不会归零**。
-
-如果要在工程代码里固定下来，直接在构造函数里写：
-
-```python
-m = em.EncoderMotor(27, 13, 18, 19, 12, 90,
-                    em.PHASE_RELATION_B_PHASE_LEADS)   # ← 这一项
-```
-
-![构造函数中固定相位参数](picture/mpy_phase_constructor.png)
-
-> 换电机、换通道后都需要重做这一步。库的默认值是 A_PHASE_LEADS（与 Arduino 原库一致），  
-> 这块板上的电机通常是 B_PHASE_LEADS。
-
-##### 2.5.5.4 调速度：改 main.py 里的目标转速
-
-检测完相位后，把 examples/motor_test/main.py 拷到板子上运行（或在 Thonny 里直接按 F5）。要改速度，就改文件里 run_speed() 括号里的数字：
-
-```python
-motor.run_speed(50)      # 目标 50 RPM
-motor.run_speed(80)      # 改成 80 RPM
-motor.run_speed(-30)     # 负数 = 反转
-```
-
-![将run_pwm_duty改为run_speed](picture/mpy_run_pwm_to_speed.png)
-
-![闭环调速输出](picture/mpy_run_speed_50.png)
-
-括号里填的是转速（RPM），不是占空比。控制器会自动调整占空比去逼近这个值，电压下降或负载变化时也会自动补回来。
-
-可用范围：约 10 ~ 110 RPM（7.4 V 供电）、10 ~ 190 RPM（12 V 供电）。设为 0 或绝对值小于 10 会直接停机。
-
-如果只想给固定电压、不要闭环，把 run_speed() 换成 run_pwm_duty()：
-
-```python
-motor.run_pwm_duty(600)  # 60% 占空比，开环
-```
-
-注意占空比低于约 150~200 时电机不会转（死区），调试时别设太小。
-
-调试中的常见问题（pulses 一直为 0、库导入失败、闭环飞车等）见文末 FAQ。
-
-### 2.6 ESP32系列连接使用PS3蓝牙无线手柄
+## ESP32系列连接使用PS3蓝牙无线手柄
 
 [点击查看Maker-ESP32-Pro与PS3手柄的连接使用说明](zh-cn/peripheral/bluetooth_gamepad_ps3/bluetooth_gamepad_ps3.md)
 
-## 3. FAQ
+## FAQ
 
 **Q**: Mixly下载程序不成功？
 
@@ -377,29 +221,3 @@ motor.run_pwm_duty(600)  # 60% 占空比，开环
 2. 第一步已经完成的话，还出现问题，请检查Motor and IO Switch开关是否拨到电机方向(即标有M2A、M2B、M3A、M3B的方向)；
 
 3. 检测程序设置的电机引脚是否和电机实际引脚一一对应；
-
-4. 编码电机的 6 芯插头是否插到位、有无插反（插头有防呆结构，插不进时换个方向，不要硬插）；
-
-**Q**: 电机转了，但 pulses 一直是 0？
-
-**A**: 编码器信号没进来：
-
-1. 插头是否插到底；
-2. A/B 两根线是否接反（接反只会导致方向相反，不会导致 0）；
-3. 用万用表量一下编码器的 5 V 供电是否正常。
-
-如果 pulses 偶尔跳几个数但不连续，通常是插头接触不良。
-
-**Q**: ImportError: no module named 'encoder_motor'？
-
-**A**: 库没放到板子上，或者放到了子目录。**必须放在板子根目录**（/encoder_motor.py）。
-
-**Q**: 闭环时电机猛转、占空比冲到 1023？
-
-**A**: 相位参数配反了，PID 变成正反馈。回到 2.5.5「示例一：检测相位关系」一节重新检测相位。
-
-**这是最危险的一种**——轮子着地时会飞车，调试时务必架空。
-
-**Q**: RuntimeError: no free hardware timer？
-
-**A**: 板上有其他库也占用了硬件定时器。调用 em.use_timer(False) 关掉自动调度，改在主循环里手动调 m.update()。
