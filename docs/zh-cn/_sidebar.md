@@ -76,7 +76,7 @@ emakefun文档中心
     - [五路红外循迹V3.0](zh-cn/ph2.0_sensors/sensors/five_line_tracker_v3/five_line_tracker_v3.md)
     - [单路灰度循迹模块](zh-cn/ph2.0_sensors/sensors/single_channel_grayscale_tracking/single_channel_grayscale_tracking.md)
     - [五路灰度循迹模块](zh-cn/ph2.0_sensors/sensors/five_channel_grayscale_tracking/five_channel_grayscale_tracking.md)
-    - [HX711称重模块](/zh-cn/)
+    - [HX711称重模块](zh-cn/ph2.0_sensors/sensors/hx711_weight_sensor/hx711_weight_sensor_zh-cn.md)
     - [LTR553](/zh-cn/)
     - [VL53L1X FOV激光测距](zh-cn/ph2.0_sensors/sensors/laser_ranging_sensor/laser_ranging_sensor.md)
     - [PM2.5粉尘传感器](zh-cn/ph2.0_sensors/sensors/pm2.5_dust_sensor/pm2.5_dust_sensor.md)
@@ -108,7 +108,7 @@ emakefun文档中心
   - 显示器
 
     - [LED灯](zh-cn/ph2.0_sensors/displayers/led_module/LED.md)
-    - [LCD1602显示屏](zh-cn/ph2.0_sensors/displayers/lcd1602/LCD1602.md)
+    - [LCD1602显示屏](zh-cn/ph2.0_sensors/displayers/lcd1602/lcd1602_zh-cn.md)
     - [TM1650四位数码管](zh-cn/ph2.0_sensors/displayers/tm1650/TM1650.md)
     - [TM1637四位时钟数码管](zh-cn/ph2.0_sensors/displayers/tm1637/TM1637.md)
     - [VK16K33四位数码管](zh-cn/ph2.0_sensors/displayers/vk16k33/vk16k33.md)
@@ -155,7 +155,7 @@ emakefun文档中心
 
 - 电源模块
   
-  - [面包板电源](/zh-cn/power_module/breadboard_power/breadboard_power.md)
+  - [面包板电源](/zh-cn/power_module/breadboard_power/breadboard_power_zh-cn.md)
   - [5V5A电源模块(PM01)](/zh-cn/power_module/PM01/PM01.md)
   - [升降压5V电源(PM02)](/zh-cn/power_module/PM02/PM02_zh-cn.md)
   - [MPPT太阳能充电板](/zh-cn/power_module/MPPT/MPPT_zh-cn.md)
